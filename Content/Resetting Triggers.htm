@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1197" MadCap:lastWidth="886">
+    <head>
+        <link href="Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Resetting Triggers</h1>
+        <p>You can reset a trigger when the event to which the trigger refers (such as the service) has been completed.  This prepares it to track the next occurrence of the event.</p>
+        <p>Resetting a trigger clears the Off tickbox (so the trigger is not expired) and resets the Expires field or the current value (depending on the definition of the trigger).</p>
+        <h2>To reset a trigger manually:</h2>
+        <ol>
+            <li>Open the asset.</li>
+            <li>On the Triggers tab, select the trigger(s) you want to reset.</li>
+            <li>From the action list, choose Reset Trigger and click .</li>
+        </ol>
+        <h2>Resetting triggers using workshop cost heads</h2>
+        <p><MadCap:variable name="General.ProductName" /> automatically resets triggers which are specified by cost head elements when a transaction is posted to the cost code. You can use the cost head elements in different ways to control which triggers <MadCap:variable name="General.ProductName" /> resets.</p>
+        <p>For example, you might want to reset triggers according to the reason for the work, so that the triggers for cam-belt change and filter change are reset for a 30,000 mile service, and oil change is set for all services. Assuming you have three elements set up as above, you could set up the trigger list on the first element (parts) to include the trigger for that item; the replace activity for the second element to reset all triggers, and the 30,000 mile service reason for the 3rd element to reset the triggers for cam-belt, filter change and oil change. The trigger list for other services would include oil change.</p>
+        <p>
+            <img src="Resources/Images_D-F/Fixed Assets/Reset_Trigger_1.png" />
+        </p>
+    </body>
+</html>

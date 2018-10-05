@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/IDVAR - Certificate item ID for variation order lines</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/IDVAR - </span> Certificate item ID for variation order lines
+</div>
+<div class="param_def">
+<p>The item ID in the certificate definition for variation order lines entered in <MadCap:variable name="Variables.Commercial Manager caps"/>. This can be the same as <span class="parameter">SC/IDORIG</span>.</p>
+<p><ul>
+<li>If an item ID is entered, breakdown items are automatically created for this certificate line for each item on variation orders.</li>
+<li>
+<p>To split the variations over different certificate lines, use the format:</p>
+<p><span class="userinput"><span class="wrap">&lt;ITEMID&gt;| &lt;Sub-ITEMID&gt;,&lt;SC VO Type Mask&gt;,&lt;SC VO Status Mask&gt;| </span>....repeat of other sub VO data.</span></p>
+<p>Where &lt;SC VO Type Mask&gt; is a single variation type code, or * for all, and &lt;SC VO Status Mask&gt; is a can-do list of variation status codes.</p>
+<p>An example format is:</p>
+<p><span class="userinput wrap">IDVAR=VOITEM| VOSUN,C,SUN| VOUNAPP,*,!APP,*</span></p>
+<p>This means the item VOITEM if it exists will be populated with the subcontract <MadCap:variable name="Variables.sv variation"/> value for all Approved <MadCap:variable name="Variables.sv variations"/>. The item VOSUN will be populated with all subcontract <MadCap:variable name="Variables.sv variations"/> with a <MadCap:variable name="Variables.sv variation"/> type of C and Status of SUN, and the item VOUNAPP will be populated with all subcontract <MadCap:variable name="Variables.sv variation"/> types with all statuses except APP.</p>
+</li>
+<li>If blank, the breakdown items are not automatically generated.</li>
+</ul></p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sc/sc_idorig.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

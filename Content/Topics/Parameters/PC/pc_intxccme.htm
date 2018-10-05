@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PC/INTXCCME - Exclude Cost Head Methods in Internal(Can-do list)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PC/INTXCCME - </span> Exclude Cost Head Methods in Internal(Can-do list)
+</div>
+<div class="param_def">
+<p>How COINS derives the <MadCap:variable name="Variables.jc contract"/> <MadCap:variable name="Variables.cost head"/> and category to cost to when posting <MadCap:variable name="Variables.pc plant"/> charges.  This is a can-do list of sources to exclude.</p>
+<p>The exclusions specified by <span class="parameter">INTXCCME </span>are used if there is no item type specific parameter setting. Item type specific parameters begin INTXCCM and then have the type character ? for example S for <MadCap:variable name="Variables.St Stock caps"/>.</p>
+<p>C15 and C19 are excluded by default so have to be un-excluded by having <span class="userinput">!C15</span> or <span class="userinput">!C19</span> listed.</p>
+<p><MadCap:variable name="Variables.Cost Head caps"/> and Category source codes are listed below in order of precedence:</p>
+<p style="color: green;">* Only checked for inter-<MadCap:variable name="Variables.kco company"/> charges</p>
+<p style="color: blue;">+ Specific to type X lines on <MadCap:variable name="Variables.pc rehires"/></p>
+<p><strong>C1</strong> Dispatch</p>
+<p style="color: green;">*<strong>C18</strong> Commodity from client?s PO</p>
+<p style="color: green;">*<strong>C14</strong> Use the <MadCap:variable name="Variables.st stock"/> item re-order commodity.  Specific to type X with a <MadCap:variable name="Variables.st stock"/> item that matches the commodity code. </p>
+<p style="color: green;">*<strong>C17</strong> Commodity in client <MadCap:variable name="Variables.kco company"/>: For <MadCap:variable name="Variables.sundry"/> charges we look for a commodity with the same code. For Assets we look for a commodity mapped.  For <MadCap:variable name="Variables.st stock"/> we look to the re-order commodity code taking it from the client if present, else from the current <MadCap:variable name="Variables.kco company"/>.</p>
+<p style="color: green;">*<strong>C2</strong> Group code in client <MadCap:variable name="Variables.kco company"/>.</p>
+<p style="color: green;">*<strong>C3</strong> Item code in client <MadCap:variable name="Variables.kco company"/>.     </p>
+<p style="color: green;">*<strong>C6</strong> <span class="parameter">JCCCCAT </span>parameter in client <MadCap:variable name="Variables.kco company"/>.</p>
+<p style="color: blue;"><strong>+C15</strong> <MadCap:variable name="Variables.Pc Rehire caps"/> PO commodity</p>
+<p style="color: blue;"><strong>+C19</strong> Item code</p>
+<p style="color: blue;">+ We then look to the original item type and code that was requested:   What was on the Sales Order, or if the item was added in Pending <MadCap:variable name="Variables.Pc Hires caps"/> we reverse map.</p>
+<p><strong>C20 </strong><MadCap:variable name="Variables.St Stock caps"/> Item <MadCap:variable name="Variables.Cost Head caps"/></p>
+<p><strong>C16</strong> <MadCap:variable name="Variables.St Stock caps"/> Re-order Commodity</p>
+<p><strong>C10</strong> <MadCap:variable name="Variables.St Stock caps"/> Group</p>
+<p><strong>C11</strong> <MadCap:variable name="Variables.Sundry caps"/> Charge</p>
+<p><strong>C9</strong> Asset Group</p>
+<p><strong>C12</strong> PC <span class="parameter">JCCCCAT </span>parameter</p>
+<p><strong>C13</strong> FA <span class="parameter">JOBCC </span>parameter</p>
+</div>
+</body>
+</html>

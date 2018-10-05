@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="836" MadCap:lastWidth="601">
+  <head>
+    <title>Converting to Multi-Currency</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Converting to Multi-Currency</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> is usually delivered with <MadCap:variable name="Variables.kco company" /> 1 as a multi-currency <MadCap:variable name="Variables.kco company" />, but if you have an earlier implementation, you may have <MadCap:variable name="Variables.kco company" /> 1 set up as single currency (that is, the currency field is blank).  In this case you will need to define the base currency before you can process multi-currency transactions.  Also, any new <MadCap:variable name="Variables.kco companies" /> you create on the system will have the base currency blank initially and will need to have the base currency set.</p>
+    <p> </p>
+    <p class="warningheader">WARNING</p>
+    <div class="warning">
+      <p>If you have any doubts about the currency set up process, we recommend you run through the procedures in a "copy of live" system, and/or request assistance from a <MadCap:variable name="General.ProductName" /> consultant, before performing the process on your main system.</p>
+    </div>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">To set up a <MadCap:variable name="Variables.kco company" /> to use multi-currency:</h2>
+      <ol>
+        <li>Configure the <MadCap:variable name="Variables.kco company" /> using <span class="function" title="Function:%WCO9000SCOC">CO Configuration</span>, but leave the <span class="field">Currency </span>field blank initially.</li>
+        <li>Set up the country codes -  use <span class="function" title="Function:%WSY2034CNT">Countries</span>.</li>
+        <li>Set up the <span class="module">General Ledger </span>account codes for the exchange gains and losses account, unreal<MadCap:variable name="Variables.is" />ed variance account and rounding account.  See <a href="WDGL0006_GL_Accounts.html">GL Accounts</a>.</li>
+        <li>Set up the codes for the currencies you will use in that <MadCap:variable name="Variables.kco company" />.  See <a href="WDSY0156_Currency_Codes.html">Currency Codes</a>.</li>
+        <li>Set up the exchange rates for each currency.  See <a href="WDSY0157_Exchange_Conversion_Rates.html">Exchange Rates and Conversion Rates</a>.</li>
+        <li>Set the base currency for the <MadCap:variable name="Variables.kco company" />:</li>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">To set the currency you MUST be logged in to <MadCap:variable name="General.ProductName" /> as SYSAdmin rather than your normal user login.  This ensures that only the system administrator is able to set the base currency for a <MadCap:variable name="Variables.kco company" />.</div>
+      <ol>
+        <ol>
+          <li>Ensure that no other users are accessing the <MadCap:variable name="Variables.kco company" /> during this process.</li>
+          <li>Change to the <MadCap:variable name="Variables.kco company" /> you want to set up.</li>
+          <li>Go to <span class="function" title="Function:%WCO9010RCOC">Set Currency</span>.</li>
+          <li>Enter the code for the base currency of the <MadCap:variable name="Variables.kco company" /> - this is the currency that the <MadCap:variable name="Variables.kco company" /> will work in.</li>
+        </ol>
+      </ol>
+      <p>If you are converting an existing single-currency <MadCap:variable name="Variables.kco company" />, and there are already transactions on the system, <MadCap:variable name="General.ProductName" /> sets all transactions and <MadCap:variable name="Variables.pl supplier" /> and customer records to the base currency. This may take several minutes.  The process works through every account and every transaction present on the <MadCap:variable name="Variables.kco company" /> and calculates the various currency fields required.</p>
+    </div>
+  </body>
+</html>

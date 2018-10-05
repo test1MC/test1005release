@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/WIP/Exchange Server 2013 Integration.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Old Branding/DonHTG_PDF-UK (old branding).flpgl"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly or COINS.v1105]exclude[COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly]"
+  conditions="COINS.UKOnly"
+  Medium="print"
+  OutputFile="[%=Document Variables.Document Reference%]_[%=Document Variables.File Name%]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Configure Exchange Server 2013 Integration</Variable>
+    <Variable
+      Name="Document Variables/Doc Version">0.4</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">LMDSY0065</Variable>
+    <Variable
+      Name="Document Variables/Document Title">Configure Exchange Server 2013 Integration</Variable>
+    <Variable
+      Name="Document Variables/File Name">HOW_TO_Configure_Exchange_Server_2013_Integration</Variable>
+    <Variable
+      Name="Document Variables/Modules">System</Variable>
+    <Variable
+      Name="Document Variables/Version">11.05</Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/Exchange UK CE Documents.fldes" />
+  </Destinations>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

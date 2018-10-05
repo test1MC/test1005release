@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="661" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types," MadCap:onlyLocalStylesheets="True">
+    <head>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Configuration and Setup</h1>
+        <h2 MadCap:autonum="1.1">JC&#160;Parameters</h2>
+        <p class="Body">The JC parameters listed below were added to <MadCap:variable name="Variables.Contract caps" /> Status to allow Owner Budget processing.</p>
+        <table style="width: 100%;">
+            <col style="width: 133px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td>
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>JC	USEOWNBD</p>
+                    </td>
+                    <td>
+                        <p>Use Owner Budgets (Y/N)</p>
+                        <p>This enables the facility to record owner budgets and allow a Rate Type to be associated with a <MadCap:variable name="Variables.Contract caps" />.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>JC	OWNRTYPE</p>
+                    </td>
+                    <td>
+                        <p>Owner Rate Default Type</p>
+                        <p>If set and valid and USEOWNBD=Y, then new <MadCap:variable name="Variables.Contracts caps" /> default to use this Rate Type.</p>
+                        <p>The Owner Rate Type on a <MadCap:variable name="Variables.Contract caps" /> is used if populated on the Owner Budget Status Report; otherwise, the standard Rate Type is used.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>JC	OWNPLNBD</p>
+                    </td>
+                    <td>
+                        <p>Owner Plan Budget Type</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>JC	OWNFORBD</p>
+                    </td>
+                    <td>
+                        <p>Owner Forecast Budget Type</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2">Rate Types Maintenance (via JC)</h2>
+        <p class="Body">When JC parameter <span class="parameter">USEOWNBD</span> = <strong>Y</strong>, a <span class="Function">Rate Maintenance </span>option appears on the<i> <MadCap:variable name="Variables.Contract caps" /> Status &gt; Setup &gt;&#160;Setup Maintenance </i>menu, as shown in <MadCap:xref href="#RateMaintMenu" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. This is a direct link to the <span class="Function">Rate Types Maintenance </span>function in <MadCap:variable name="Variables.Commercial Manager caps" />. It allows you to set up and maintain SV Rate Types directly within <MadCap:variable name="Variables.Contract caps" /> Status.</p>
+        <p class="Body">A sample JC&#160;Rate Types screen is shown in <MadCap:xref href="#RateMaintScreen" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="RateMaintMenu"></a>Rate Maintenance Menu Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC035_Images/JC035_RateMaintMenu.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="RateMaintScreen"></a>JC Rate Types Maintenance Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC035_Images/JC035_RateMaintViaJCScreen.png" class="MaxPrintWidth" />
+        </p>
+        <h1 MadCap:autonum="2"><MadCap:variable name="Variables.Contract caps" /> Changes</h1>
+        <h2 MadCap:autonum="2.1"><MadCap:variable name="Variables.Contracts caps" />
+        </h2>
+        <p class="Body">When <span class="parameter">JC/USEOWNBD</span> = <strong>Y</strong>, <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">an</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><span class="Field">Owner Rate Type </span>field is available on the <strong>Financial </strong>section of the Advanced Settings tab in JC <span class="Function"><MadCap:variable name="Variables.Contracts caps" /></span>, as shown in <MadCap:xref href="#OwnerRateTypeField" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. The value in this field depends on which of the following actions you perform:</p>
+        <ul>
+            <li class="ListBullet3">Select a Rate Type from the field lookup.</li>
+            <li class="ListBullet3">Enter a value in JC parameter <span class="parameter">OWNRTYPE</span>, which defaults into the field.</li>
+            <li class="ListBullet3">Leave the field blank so that the standard Rate Type applies.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="OwnerRateTypeField"></a>Owner Rate Type Field</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC035_Images/JC035_OwnerRateTypeField.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.2"><MadCap:variable name="Variables.Contracts caps" /> (Tab View)</h2>
+        <p class="Body">When <span class="parameter">JC/USEOWNBD</span> = <strong>Y</strong>, <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">an</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><span class="Field">Owner Rate Type </span>field is available on the <strong>Configuration </strong>tab of JC <span class="Function"><MadCap:variable name="Variables.Contracts caps" /> (Tab View)</span>, as shown in <MadCap:xref href="#OwnerRateTypeTabView" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>. The value in this field depends on which of the following actions you perform:</p>
+        <ul>
+            <li class="ListBullet3">Select a Rate Type from the field lookup.</li>
+            <li class="ListBullet3">Enter a value in JC parameter <span class="parameter">OWNRTYPE</span>, which defaults into the field.</li>
+            <li class="ListBullet3">Leave the field blank so that the standard Rate Type applies.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="OwnerRateTypeTabView"></a>Owner Rate Type Field (Tab View)</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC035_Images/JC035_OwnerRateTypeField_TabView.png" class="MaxPrintWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <h1 MadCap:autonum="3">Owner Changes</h1>
+        <h2 MadCap:autonum="3.1">Owner Plan</h2>
+        <p class="Body">When a value is set in parameter <span class="parameter">JC/OWNPLNBD</span>, <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><strong>Owner Plan </strong>screen is available in <i><MadCap:variable name="Variables.Contract caps" /> Status &gt; Input &gt; Memos,Budgets,Allowances &gt; Input Budgets by Period</i>, as shown in <MadCap:xref href="#OwnerPlan" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>. This is based on the existing Budget Input; the Budget Type value defaults in from parameter <span class="parameter">JC/OWNPLNBD</span> and cannot be changed.</p>
+        <ul>
+            <li class="ListBullet3">The Owner Plan Budget value defaults as blank if nothing has been entered in the cell. This allows for a zero value to be entered on some cells. The values show cumulative values to date, and zeroes are shown as blanks. You can override these values.</li>
+            <li class="ListBullet3">The Owner Plan Budget populates the Owner Forecast Budget Type when parameter <span class="parameter">JC/OWNFORBD</span> is set. The <span class="Function">Copy Budget </span>function can be used to set the Forecast Budget to be the same as the Owner Plan.</li>
+        </ul>
+        <div class="notelabel">NOTE:</div>
+        <div class="note">Since the Standard Budget Input <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>excludes Budget Types related to parameters <span class="parameter">JC/OWNPLNBD</span> and <span class="parameter">JC/OWNFORBD</span>, they can only be maintained via this input procedure.</div>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="OwnerPlan"></a>Owner Plan Screen</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/JC035_Images/JC035_OwnerPlan.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="3.2">Owner Forecasts</h2>
+        <p class="Body">When a value is set in parameter <span class="parameter">JC/OWNFORBD</span>, <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><strong>Owner Forecasts </strong>screen is available in <i><MadCap:variable name="Variables.Contract caps" /> Status &gt; Input &gt; Memos,Budgets,Allowances &gt; Input Budgets by Period</i>, as shown in <MadCap:xref href="#OwnerForecasts" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>. You can use this screen to enter override values as cumulative (similar to Owner Budgets).</p>
+        <ul>
+            <li class="ListBullet3">Each <span class="Field">Cost Category </span>field is blank unless you override it with a value or zero, which stores a period movement when the record is saved. Data are stored by Period and can be reported on, but the screen always shows as cumulative. A cumulative value can be entered for a Period (such as <strong>0117 </strong>for Jan 2017) and then left as blank in another Period (such as <strong>0217 </strong>for Feb 2017). Reporting still reports back the first value entered (such as in January).</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">If no override is entered for the month, the Forecasted value is calculated at the time the report is run.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">The Owner Plan Budget populates the Owner Forecast Budget Type when parameter <span class="parameter">JC/OWNFORBD</span> is set. The <span class="Function">Copy Budget </span>function can be used to set the Forecast Budget to be the same as the Owner Plan.</li>
+        </ul>
+        <div class="notelabel">NOTE:</div>
+        <div class="note">Since the Standard Budget Input <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>excludes Budget Types related to parameters <span class="parameter">JC/OWNPLNBD</span> and <span class="parameter">JC/OWNFORBD</span>, they can only be maintained via this input procedure.</div>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="OwnerForecasts"></a>Owner Forecasts Screen</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/JC035_Images/JC035_OwnerForecasts.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="3.3">Owner Costs</h2>
+        <p class="Body">When parameter <span class="parameter">JC/USEOWNBD</span> = <strong>Y</strong>, <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><strong>Owner Costs </strong>screen is available in <i><MadCap:variable name="Variables.Contract caps" /> Status &gt; Input &gt; Memos,Budgets,Allowances &gt; Input Budgets by Period</i>, as shown in <MadCap:xref href="#OwnerCosts" class="Figurenumberonly"><i>Figure 7</i></MadCap:xref>. You can use this screen to add/update/delete costs for a Budget Type and <MadCap:variable name="Variables.Financial Period caps" />.</p>
+        <p class="Caption" MadCap:autonum="Figure 7: "><a name="OwnerCosts"></a>Owner Costs Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC035_Images/JC035_OwnerCosts.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

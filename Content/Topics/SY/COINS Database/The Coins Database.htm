@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>The <MadCap:variable name="General.ProductName" /> Database</h1>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Location of Database</td>
+                    <td>
+                        <p>$BASE/data/db</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Location of Before Image Recovery file</td>
+                    <td>
+                        <p>$BASE/data/bi</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Location of After Image Recovery File</td>
+                    <td>
+                        <p>$BASE/data/ai</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>What is the Before Image Recovery File</h2>
+        <p>The Before Image file(s) stores information about every transaction which makes a change to the database.&#160;If the transaction is aborted / undone, this information will be read back from the BI file to restore original values of the database back into the database if necessary.<br />In addition when a database goes down unexpectedly, the crash recovery process reads back and undoes any transaction that was not completed.<br /><br />The information stored in the BI contains the transaction number, the user, the pre-modified value of block in binary form. After the transaction is complete it stores binary information on how to modify the blocks for records and indices.</p>
+        <h2>What is the After Image Recovery File</h2>
+        <p>The after-imaging feature lets you recover a database that was damaged when a failure caused the loss of the database or primary recovery (before image / BI) area. When you enable after-imaging, the database engine writes notes containing a description of all database changes to the after-image (AI) files. You can use the AI files with the roll-forward recovery process to restore the database to the condition it was in before you lost the database, without losing completed transactions that occurred since the last backup.</p>
+        <p>After Image Recover is not automatically set up automatically and should be requested at the time or the build.</p>
+        <h2>Typical files located under the database directory</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/COINSadmin-COINS-Database/The Coins Database.png" class="FullWidth" />
+        </p>
+        <p style="font-weight: bold;">Coins.st - Database structure file</p>
+        <p>A structure description (.st) file, which defines the structure of the database. The .st file is a text file with a .st filename extension. The administration utility PROSTRCT CREATE uses the information in the .st file to create the areas and extents of the database.</p>
+        <p style="font-weight: bold;">Coins.db - Database control area</p>
+        <p>The database (.db) control area, is a binary file containing a database structure extent. The control area and its .db file act as a table of contents for the database engine, listing the name and location of every area and extent in the database.</p>
+        <p style="font-weight: bold;">Coins.lk - Database lock file</p>
+        <p>The database lock file (.lk) is the only protection we have against multiple processes starting the database. If multiple processes are allowed to start the database, then crash recovery will not work.</p>
+        <p>The .lk file contains three pieces of information: </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>The mode in which the database was started. </li>
+            <li>The process id (pid) of the process that started the database. </li>
+            <li>The hostname where the process that started it is running.</li>
+        </ol>
+        <p style="font-weight: bold;">Coins.lic- -Database License file</p>
+        <p>The Database License file records license related information about Progress Database connections.</p>
+        <p style="font-weight: bold;">Coins.lg- -Database Log file</p>
+        <p>The log (.lg) file is a text file. The .lg file contains a history of significant database events, including server startup and shutdown, client login and logout, and maintenance activity.</p>
+        <p style="font-weight: bold;">Coins.d1 - Database Schema Area</p>
+        <p>The schema area contains the master and sequence blocks, as well as schema tables and indexes.</p>
+        <p style="font-weight: bold;">Coins_8.d1 - Transaction Application Data Area</p>
+        <p>Coins creates a transaction area 8 which contains all transcations within the database ie purchase ledger batches, general ledger batches etc.&#160; This area is write intensive and will be the main area that will grow in size.</p>
+        <p style="font-weight: bold;">Coins_7.d1 - Static Application Data Area</p>
+        <p>Coins creates a static area 7 which contains static data like supplier names and address and employees details etc.&#160; This area is read intensive.</p>
+    </body>
+</html>

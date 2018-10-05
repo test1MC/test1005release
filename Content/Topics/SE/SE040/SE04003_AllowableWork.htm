@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Allowable Work</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Allowable Work</h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>tab labelled <strong>G/L Accounts</strong> is available in Allowable Work records for entering/viewing G/L Accounts. It <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been added </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">is found </MadCap:conditionalText>in the following areas:</p>
+        <ul>
+            <li>Allowable Work Setup</li>
+            <li><MadCap:variable name="Variables.Se Agreement caps" /> Allowable Work</li>
+            <li>Nonagreement (Location/Customer) Allowable Work</li>
+            <li><MadCap:variable name="Variables.Se Service Order caps" /> Allowable Work</li>
+        </ul>
+        <h2 MadCap:autonum="1.1 "><a name="Setup"></a>Allowable Work Setup</h2>
+        <p class="Body" style="font-style: normal;">The <strong>G/L&#160;Accounts</strong> tab for setup is found in <i>Service Management &gt; Setup &gt;&#160;Company Setup &gt;&#160;Allowable Work</i>, as shown in <MadCap:xref href="#AllowWorkSetup" class="ImageRef"><i>Figure 1:  Setup - G/L&#160;Accounts</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="AllowWorkSetup"></a>Setup - G/L&#160;Accounts</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_S-U/SE/SE040_Images/AllowWork_Setup.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 "><a name="Agreemen"></a><MadCap:variable name="Variables.Se Agreement caps" /> Allowable Work</h2>
+        <p class="Body">When adding an <MadCap:variable name="Variables.Se Agreement caps" /> Allowable Work, the G/L Account Masking is combined in the <MadCap:variable name="Variables.Se Agreement caps" /> Type, Service Department, and Allowable Work Setup. The results are placed in the <MadCap:variable name="Variables.Se Agreement caps" /> Allowable Work in this order of preference: <MadCap:variable name="Variables.Se Agreement caps" /> Type, Service Department, Allowable Work Setup.</p>
+        <p class="Body"> All <MadCap:variable name="Variables.Se Service Orders caps" /> generated for the <MadCap:variable name="Variables.Se Agreement caps" /> inherit their G/L Account Masking from the final results entered on the <MadCap:variable name="Variables.Se Agreement caps" /> Allowable Work.</p>
+        <p class="Body">When adding an Allowable Work to the <MadCap:variable name="Variables.Se Agreement caps" />, its G/L Account mask is combined from the related settings only if this Allowable Work is PM (<MadCap:variable name="Variables.Pc Plant caps" /> Maintenance). If the added Allowable Work is non-PM, its G/L Accounts remain empty.</p>
+        <h2 MadCap:autonum="1.3 "><a name="Nonagree"></a>Nonagreement Allowable Work</h2>
+        <p class="Body">When adding a Nonagreement <MadCap:variable name="Variables.Se Service Order caps" /> (<MadCap:xref href="#AllowWorkNonAgmt" class="ImageRef"><i>Figure 2:  Allowable Work - Nonagreement (Location/Customer)</i></MadCap:xref>), the G/L Account Masking is combined in the Service Department and Location/Customer Allowable Work, placing the results in the <MadCap:variable name="Variables.Se Service Order caps" />’s Allowable Work.</p>
+        <p class="Body">   The <MadCap:variable name="Variables.Se Service Order caps" /> Department’s G/L Account Masking has priority over the Location/Customer Allowable Work.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="AllowWorkNonAgmt"></a>Allowable Work - Nonagreement (Location/Customer)</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_S-U/SE/SE040_Images/AllowWork_LocCust.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4 "><a name="Service"></a>Service Order Allowable Work</h2>
+        <p class="Body">The <strong>G/L Accounts</strong> fields on the <MadCap:variable name="Variables.Se Service Order caps" />’s Allowable Work are <strong>display only</strong>.   They are used when creating Cost Codes for a <MadCap:variable name="Variables.Se Service Order caps" />.   </p>
+        <p class="Body"><strong>Note: </strong>If changes must be made to a Cost Code’s G/L Accounts, they must be done manually in <MadCap:variable name="Variables.Jc Contract caps" /> Status.</p>
+    </body>
+</html>

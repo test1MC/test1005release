@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly or COINS.v1105 or Documents.NotReleaseOverview] exclude[COINS.Internal or COINS.Pre-v1105 or COINS.Redacted or COINS.ScreenOnly or &quot;COINS.Superseded in 1107&quot; or &quot;COINS.Superseded in 1108&quot; or COINS.SupersededIn1105 or COINS.USOnly or Documents.NotOA or Documents.ReleaseOverview] "
+  conditions="COINS.UKOnly"
+  Medium="print"
+  OutputFile="Pension Increase"
+  InjectEmptyPages="false"
+  InjectBookHeadings="true"
+  MasterToc="/Project/TOCs/PR/Pension Upload Document.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/PDF_Body_UK_2017.flpgl">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Navigate COINS OA</Variable>
+    <Variable
+      Name="Document Variables/Document Title">HOW TO ... Increase Minimum Contributions for Auto-Enrolment Pensions</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">LMDPR0008</Variable>
+    <Variable
+      Name="Document Variables/File Name">PensionIncrease</Variable>
+    <Variable
+      Name="Document Variables/Modules">Payroll</Variable>
+    <Variable
+      Name="Payroll YE/curr-short">18</Variable>
+    <Variable
+      Name="Payroll YE/curr-yr">2018</Variable>
+    <Variable
+      Name="Payroll YE/next-short">19</Variable>
+    <Variable
+      Name="Payroll YE/next-yr">2019</Variable>
+    <Variable
+      Name="Payroll YE/prev-yr">2017</Variable>
+    <Variable
+      Name="Document Variables/Version">11.04</Variable>
+    <Variable
+      Name="Document Variables/Region">UK</Variable>
+    <Variable
+      Name="Document Variables/Doc Version">1.0</Variable>
+    <Variable
+      Name="Document Variables/Draft?"> </Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/Exchange UK CE Documents.fldes" />
+  </Destinations>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

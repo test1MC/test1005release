@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>SC Ledger Basics - Subcontractor Warning Messages</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">SC Ledger Basics - Subcontractor Warning Messages</h1>
+    <p>Whenever you enter a subcontractor code, <MadCap:variable name="General.ProductName" /> checks various conditions and may display a warning message. You can choose to ignore the messages and continue.</p>
+    <p>Possible messages are:</p>
+    <ul>
+      <li>
+        <span class="sysmsg">Outstanding authenticated receipt from date</span>. If there are one or more authenticated receipts outstanding beyond a given date, the message shows the date of the oldest. The <span class="parameter">AGEAUTH </span>parameter controls how long authenticated receipts can remain outstanding before <MadCap:variable name="General.ProductName" /> produces a warning. The <span class="parameter">AUTHZERO </span>parameter determines whether authenticated receipts with zero <MadCap:variable name="Variables.vat" /> amounts are counted as outstanding.</li>
+      <li>
+        <span class="sysmsg">
+          <em>n</em> authenticated receipts outstanding</span>. The <span class="parameter">NOAUTH </span>parameter controls how many receipts may be outstanding before <MadCap:variable name="General.ProductName" /> issues this message.</li>
+      <li>
+        <span class="sysmsg">Subcontractor code is dormant.</span> The Dormant field (in <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span>) for this subcontractor is set to Y. <MadCap:variable name="General.ProductName" /> may prevent transactions to this subcontractor. See <a href="WDSC0825_Dormant_Subcontractor_Processing.html">Dormant Subcontractor Processing</a>, for more details.</li>
+      <li>
+        <span class="sysmsg">Unallocated cash exists for this subcontractor [...].</span>
+      </li>
+      <li>
+        <span class="sysmsg">This subcontractor [...] is on hold. </span>The subcontractor has been put on hold, to prevent payments being made to them (for example, if there is an unresolved legal problem between your company and the subcontractor).</li>
+      <li>Various <MadCap:variable name="Variables.sc insurance" /> conditions generate warnings or errors; see <a href="WDSC1301_Overview.html"><MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /> - Overview</a>.</li>
+      <li>
+        <span class="sysmsg">This subcontractor account is operated in a different currency.</span>  There are subcontracts with currency different from that of the subcontractor. </li>
+    </ul>
+    <p>To continue after any message, click <span class="key">OK</span>.</p>
+    <p>To produce a report on these and other conditions for subcontractors, use <span class="function" title="Function:%WSC3000RSCN">Defaulters Report</span> (see Defaulters report).</p>
+    <div class="configuration">
+      <h2 class="print">Subcontractor warning messages configuration</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/SC_DORMERR.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_AGEAUTH.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_AUTHZERO.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_NOAUTH.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

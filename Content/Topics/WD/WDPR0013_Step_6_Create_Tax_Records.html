@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.USOnly">
+  <head>
+    <title>Step 6 - Create Tax Records</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Step 6 - Create Tax Records</h1>
+    <p> </p>
+    <table class="SpecificTopic">
+      <tbody>
+        <tr>
+          <td class="Edge"> </td>
+          <td>
+            <span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+          <td class="Edge"> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Before using the <span class="module">Payroll</span> module, there are a number of steps that should be performed initially to set it up in effective working order. Step 6 is outlined below.</p>
+    <p>After you have performed these initial steps, you are ready to process Payroll (see <a href="WDPR0004_Processing_Payroll.html">Processing Payroll</a>).</p>
+    <div class="process">
+      <h2 class="print">How to create Federal/State/Local tax records:</h2>
+      <p>In <span class="function" title="Function:%WPR216BSTE">States</span>, add any State to be used in <span class="module">Payroll </span>for tax purposes. You must define a State here first before adding a related jurisdiction in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>.</p>
+      <ol>
+        <li>In <span class="function" title="Function:%WPR217BSTE">Localities</span>, add any localities to be used in <span class="module">Payroll </span>for Payroll processing. The State associated with the Locality must exist before adding the Locality here and in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>.</li>
+        <li>In <span class="function" title="Function:%WPR212BSTE">Comp Codes</span>, create a standard list of Workers Compensation Codes. These codes are associated with states in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>, given rates, limits, and other values. Not all codes must be used in all states.</li>
+        <li>In <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>, define Tax Authorities used in Payroll processing. Levels of Tax Authorities are Federal (Federal Gross and Withholding, Social Security Gross and Withholding, Medicare Gross and Withholding, FUTA Gross and Withholding), State (State Gross and Withholding, SUTA Gross and Withholding, Disability Gross and Withholding, Workers Compensation Gross and Withholding), and Local (City, County, and School District Gross and Withholding).</li>
+        <span class="function" title="Function:%WPR214BTAX"></span>
+      </ol>
+      <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+        <p>Multiple tax records may be created for the same jurisdiction with different effective dates. This allows rates or limits to be established in advance for calculations such as Social Security Tax or SUTA Tax. The <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Date in Period Maintenance is compared to the Effective Date in the Tax Authority Configuration record to determine which rates to use. The Tax Table Date displayed within individual tax records is compared against the <MadCap:variable name="Variables.cheque" /> date to determine which year's withholding tables to use in the calculation of withholding tax.</p>
+      </blockquote>
+    </div>
+  </body>
+</html>

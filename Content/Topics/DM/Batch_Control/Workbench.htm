@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:concept term="11.09" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Document Management </MadCap:conditionalText>Batch Control Workbench</h1>
+        <MadCap:snippetBlock src="Overview.flsnp" MadCap:conditions="COINS.ScreenOnly" />
+        <p><span class="function">Batch Control</span> is available on the <span class="module">Document Management</span> Input menu.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Batch Control Workbench </MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody>
+        <p>
+            <img src="../../../Resources/Images_D-F/DM/Batch_Control/Batch_Control.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>The workbench consists of three sections: a browse of documents in the batch, a document display of the highlighted row, and batch selection options. Batch selection allows you filter by batches that you created (either via the scan client, or by importing documents from a network scanner), or by date, so the required batch can be more easily located.</p>
+        <h2>Changing the Order of Documents</h2>
+        <p>The display order is the order in which the operator will see the documents in the index screen. You can change the order of the documents in the batch using the Up and Down <img src="../../../Resources/Images_D-F/DM/Batch_Control/Up_Down_Buttons.png" class="ReduceButtonSize" /> buttons; for example, to reorder documents that may not have been scanned in the correct order.</p>
+        <h2>Deleting Documents</h2>
+        <p>You can select one or many records, and delete them in one go. Deleting is permanent, but a warning message is shown to confirm the action.</p>
+        <h2>Changing the Document Category</h2>
+        <p>To make indexing the documents in the batch simpler, you can set the <span class="field">Document Category</span> for individual pages in the batch. All the documents in the batch could be a specific category (such as PL Invoice), or they could be a mixture of categories.</p>
+        <ul>
+            <li>To set the category for an individual record, update it using the <img src="../../../Resources/Images/COINS Graphics/SVG button PNGs/open.svg" class="icon24px" /> Open button.</li>
+            <li>To set different categories on several records, select the records to update, and use the <img src="../../../Resources/Images/COINS Graphics/SVG buttons/concurrent.svg" class="icon24px" /> Concurrent button. Choose the appropriate category for each record then click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="icon24px" /> Save. Selecting the row will still show the image on the right of the screen.</li>
+            <li>To set several records to the same category, select the records to update, and use the <img src="../../../Resources/Images/COINS Graphics/SVG buttons/multi.svg" class="icon24px" /> Multi button. Choose the category then click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="icon24px" /> Save.</li>
+        </ul>
+        <p>Once the categories have been set, it is possible to index the documents.</p>
+        <h2>Indexing Documents</h2>
+        <p>The workbench makes the processing of the batch simpler. You can view the documents before indexing, and Actions provide several ways to index some/all of the documents in the current batch.</p>
+        <h3>Index Batch</h3>
+        <p>
+            <img src="../../../Resources/Images_D-F/DM/Batch_Control/Index_Batch_Action.png" />
+        </p>
+        <p>This takes you to the index screen, to index all the documents in the selected batch. All the records in the batch must be set to the same Category, or an error will be displayed. The batch will then be indexed as usual.</p>
+        <h3>Index Category</h3>
+        <p>This option is useful if a batch contains a mix of document categories. This creates a new batch from the current batch, taking all the documents that are the same category as the selected record. This new batch will then be used in the index screen.</p>
+        <p>If all the documents in the batch are the same category, then a new batch will not be created, but the current batch (with all the same categories) will be passed to the index screen.</p>
+        <p>This process expects only one row to be selected, to indicate the category that you want to index. If more than one row is selected (even if they are all the same category), an error is displayed.</p>
+        <h3>Index Selected</h3>
+        <p>You can select specific records that you want to index; all the selected records must be the same category. This creates a new batch with the selected documents only and takes you to the Index screen. </p>
+        <p>If the selected records have different categories, an error is displayed. If the selected records include all the documents in the batch, then the current batch is used, and a new batch is not needed.</p>
+        <h2>Moving Documents </h2>
+        <p>You can move documents in a batch to other batches, and even into new batches. Select the documents in the current batch, then select the <span class="function">Move Document</span> action. This displays the <span class="function">Move Documents to this Batch</span> screen, from which you can create a new batch, or move the documents to an existing one.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Move Documents to Batch Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody>
+        <p>
+            <img src="../../../Resources/Images_D-F/DM/Batch_Control/Move_Documents.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h2>Splitting and Merging Documents</h2>
+        <p>It possible to split and merge documents (of the same type only).</p>
+        <h3>Split Document</h3>
+        <p>To split a multi-page PDF&#160;or TIFF document, select it and choose the <span class="function">Split Document</span> action to be selected. This extracts all the pages in the document into single-page documents.</p>
+        <h3>Merge Documents</h3>
+        <p>To merge documents, select two or more documents. They can be single-page or multi-page documents, but must be the same document type. Choose the <span class="function">Merge Documents</span> action. This combines the selected documents into a single multi-page document. If multiple document types are selected, the process will not complete, and an error will be displayed.</p>
+    </body>
+</html>

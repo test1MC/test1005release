@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="4226" MadCap:lastWidth="1178" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Fetch Call (fetchCall)</h1>
+        <p>&#160;</p>
+        <p>A sample XML message to fetch the details relating to a call into <MadCap:variable name="General.ProductName" /> is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswshcm1" method="fetchCall" id="test1234"&gt;</p>
+        <p class="code">&lt;Complaint reference="102672"&gt;</p>
+        <p class="code">&lt;/Complaint&gt;</p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code"> &lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>If the fetch of the call was successful this would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">  &#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">  &#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswshcm1" method="addCall" id="test1234"&gt;</p>
+        <p class="code"> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &lt;Complaint reference="102672"&gt;</p>
+        <p class="code">&lt;Type&gt;SALES&lt;/Type&gt; </p>
+        <p class="code">&lt;Site&gt;star7&lt;/Site&gt; </p>
+        <p class="code">&lt;Phase&gt;&lt;/Phase&gt; </p>
+        <p class="code">&lt;Plot&gt;4&lt;/Plot&gt; </p>
+        <p class="code">&lt;DateLogged&gt;2008-04-28&lt;/DateLogged&gt; </p>
+        <p class="code">&lt;TimeLogged&gt;0930&lt;/TimeLogged&gt; </p>
+        <p class="code">&lt;LoggedBy&gt;xxxxxx&lt;/LoggedBy&gt; </p>
+        <p class="code">&lt;CallType&gt;PHONE&lt;/CallType&gt; </p>
+        <p class="code">&lt;Employee&gt;satdha&lt;/Employee&gt; </p>
+        <p class="code"> &#160; &lt;Issues&gt;</p>
+        <p class="code">  &#160;&#160; &lt;Issue reference="102882"&gt;</p>
+        <p class="code"> &lt;DateRaised&gt;2007-11-20&lt;/DateRaised&gt; </p>
+        <p class="code"> &lt;TimeRaised&gt;0846&lt;/TimeRaised&gt; </p>
+        <p class="code"> &lt;LoggedBy&gt;xxxxxx&lt;/LoggedBy&gt; </p>
+        <p class="code"> &lt;Status&gt;NEW&lt;/Status&gt; </p>
+        <p class="code"> &#160;&#160;&#160;&#160;&#160; &lt;Priority&gt;HIGH&lt;/Priority&gt; </p>
+        <p class="code"> &lt;Category&gt;BATHFIT&lt;/Category&gt; </p>
+        <p class="code"> &lt;Link&gt;0&lt;/Link&gt; </p>
+        <p class="code">&lt;Employee&gt;satdha&lt;/Employee&gt; </p>
+        <p class="code"> &lt;Description&gt;Test issue for the test call&lt;/Description&gt; </p>
+        <p class="code">&lt;Subcontractor&gt;lon001&lt;/Subcontractor&gt; </p>
+        <p class="code">&lt;Supplier&gt;&lt;/Supplier&gt;</p>
+        <p class="code">&lt;Abstract&gt;Fix bathroom&lt;/Abstract&gt; </p>
+        <p class="code"> &lt;Notes&gt;Only look at ensuite bathroom&lt;/Notes&gt; </p>
+        <p class="code">&lt;Location&gt;KITCHEN&lt;/Location&gt; </p>
+        <p class="code"> &lt;SubLocation&gt;&lt;/SubLocation&gt;</p>
+        <p class="code"> &lt;Appliance&gt;&lt;/Appliance&gt;&#160; </p>
+        <p class="code"> &lt;NonFaultIssue&gt;no&lt;/NonFaultIssue&gt; </p>
+        <p class="code">&lt;/Issue&gt;</p>
+        <p class="code">  &#160;&#160; &#160;&#160; &lt;Issue reference="102883"&gt;</p>
+        <p class="code"> &lt;DateRaised&gt;2008-04-14&lt;/DateRaised&gt; </p>
+        <p class="code">&lt;TimeRaised&gt;0846&lt;/TimeRaised&gt; </p>
+        <p class="code"> &lt;LoggedBy&gt;xxxxxx&lt;/LoggedBy&gt; </p>
+        <p class="code"> &lt;Status&gt;NEW&lt;/Status&gt; </p>
+        <p class="code">&lt;Priority&gt;HIGH&lt;/Priority&gt; </p>
+        <p class="code">&lt;Category&gt;BATHFIT&lt;/Category&gt; </p>
+        <p class="code">&lt;Link&gt;0&lt;/Link&gt;&#160; </p>
+        <p class="code"> &lt;Employee&gt;xxxxxx&lt;/Employee&gt; </p>
+        <p class="code"> &lt;Description&gt;Test issue 2 for the test call&lt;/Description&gt; </p>
+        <p class="code"> &lt;Subcontractor&gt;lon001&lt;/Subcontractor&gt; </p>
+        <p class="code"> &lt;Supplier&gt;&lt;/Supplier&gt;</p>
+        <p class="code"> &lt;Abstract&gt;Test issue 2&lt;/Abstract&gt; </p>
+        <p class="code"> &lt;Notes&gt;Only look at ensuite bathroom&lt;/Notes&gt; </p>
+        <p class="code">&lt;Location&gt;BATHROOM&lt;/Location&gt; </p>
+        <p class="code"> &lt;SubLocation&gt;&lt;/SubLocation&gt;</p>
+        <p class="code"> &lt;Appliance&gt;&lt;/Appliance&gt;&#160; </p>
+        <p class="code">&lt;NonFaultIssue&gt;no&lt;/NonFaultIssue&gt; </p>
+        <p class="code"> &lt;/Issue&gt;</p>
+        <p class="code"> &lt;/Issues&gt;</p>
+        <p class="code">&lt;Tasks&gt;</p>
+        <p class="code"> &lt;/Tasks&gt;</p>
+        <p class="code">&lt;Event reference="48150"&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code"> &lt;Date&gt;2008-04-18&lt;/Date&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code"> &lt;UserCode&gt;LOGGED&lt;/UserCode&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code">&lt;Comments&gt;Call 102672 logged&lt;/Comments&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code">&lt;/Event&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code">&lt;Event reference="48151"&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code">&lt;Date&gt;2008-04-18&lt;/Date&gt;</p>
+        <p class="code"> &lt;UserCode&gt;NOTES&lt;/UserCode&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code"> &lt;Comments&gt;Test notes very exciting&lt;/Comments&gt; </p>
+        <p class="code">&lt;/Event&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="code">&lt;/Complaint&gt;</p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code"> &lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p class="code">&#160;</p>
+        <p class="code">&#160;</p>
+    </body>
+</html>

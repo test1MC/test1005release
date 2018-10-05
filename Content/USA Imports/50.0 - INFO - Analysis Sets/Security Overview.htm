@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Security Overview</h1>
+        <h2>Module: System</h2>
+        <p>There are many different types of security in the COINS operating system. This document will look to list out these types of security and give examples on how they work.</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>Function level security. Function Level security can be split into two types, Users and Group. Group level security is used to give multiple users access to the same functions in the COINS system. Groups can be added to users and all the access they grant will then be transferred to the user. This allows for faster maintenance to security settings when new functionality is released, or new workflows established. Users can be used to change one person’s security at a time, this allows you to be more granular. When updating group level security best practices are to set the function to either Yes (which gives access) or Group (which does not give or deny access). When the COINS system looks through security, the user starts without access to anything, for every “Yes” they gain access and for every “Group” they stay at their current access (which is no access). </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Group level security is set up in System &gt; User Maintenance &gt; Groups</li>
+        </ul>
+        <p class="caption">Figure 1: User Groups</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Hyperlink into the group that needs it’s functional access changed ( in this example it is OAGSMSA OA Prime – Service Management Schedule and Dispatch Board)</li>
+        </ul>
+        <p class="caption">Figure 2: Entering Group</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_1.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Group Function Access shows all of the functions in the system. Current Access shows all of the functions that are set to “YES” in the Group. Functions can be searched for in the search bar in the bottom right hand corner. Then use the access bar set the function to the access level needed.</li>
+        </ul>
+        <p class="caption">Figure 3: Access in Group</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_2.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>Batch level security. Batch level security sets up which batches created in modules you can&#160; work on. The highest level is 9, while the lowest is a 1. If someone has a security level of 9 they can access any batch in the system. If someone has a security level of 1 they can only access batches by other level 1 security users. A user at security level 2 could access all level 1’s and level 2’s but not level’s 3’s or higher. </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Batch security can be found in System &gt; User Maintenance &gt; Users</li>
+        </ul>
+        <p class="caption">Figure 4: System Users</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_3.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Open up the User that is having their Batch Security edited with the folder on the left side of the line</li>
+        </ul>
+        <p class="caption">Figure 5: Entering User</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_4.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 163px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Batch security is the 13<sup>th</sup> line on the Details page select the security level between 1 and 9 (explanation of security level is found in the above blurb). </li>
+        </ul>
+        <p class="caption">Figure 6: Setting Batch Security</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_5.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Save using the save button in the bottom right hand corner of the screen. </li>
+        </ul>
+        <p class="caption">Figure 7: Saving Changes</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_6.png" style="visibility: visible;mso-wrap-style: square;width: 221px;height: 125px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>Record Level Security. When you have security access to modules there are certain workbenches that may need you to have additional security found inside the module. For example even if you have access to every function in Service Management, if you do not have Service Order security found in the module you will not be able to access service orders. The following screenshots will be from the previous example but can be found in other modules of the system. </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Service Order Security can be found at Service Management &gt; Setup &gt; Company Setup &gt; Security &gt; Service Order Security</li>
+        </ul>
+        <p class="caption">Figure 8: Record Level Security</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_7.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Find the user ID that needs to have its record level security adjusted and open it with the folder on the left side of the line</li>
+        </ul>
+        <p class="caption">Figure 9: Entering User</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_8.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Under security list a “*” will allow you to see any type of service order. If you entered “1*” that would allow you to see any service orders that start with a 1. If you entered “1*,2*” that would allow you to see any service orders that start with a 1 or a 2.</li>
+        </ul>
+        <p class="caption">Figure 10: Adding Record Security</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_9.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Save the line.</li>
+        </ul>
+        <p class="caption">Figure 11: Saving Record Security</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Security Overview_10.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="305" MadCap:lastWidth="896">
+    <body>
+        <div MadCap:conditions="COINS.v1109">
+            <p>The document used to print an order is determined as follows. </p>
+            <ol>
+                <li>Project order form, if specified. </li>
+                <li>Document from the purchase order type, if specified. </li>
+                <li>Document specified by the relevant <span class="parameter">*FRM</span> parameter. </li>
+            </ol>
+        </div>
+        <p>When you raise an order, <MadCap:variable name="General.ProductName" /> 'stamps' the order with the <MadCap:conditionalText MadCap:conditions="COINS.v1109">relevant </MadCap:conditionalText>document name (or names)<MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1109"> from the relevant parameter</MadCap:conditionalText>, and when you print the order, <MadCap:variable name="General.ProductName" /> prints it using that document. This means that if you change the layout of your purchase orders, reprints of previous orders will use the earlier document and will still look like the original. (Note that if you do change your documents, you should copy the document definition and change the parameters, rather than modifying the existing document definition.)</p>
+    </body>
+</html>

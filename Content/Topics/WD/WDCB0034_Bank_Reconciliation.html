@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Bank Reconciliation</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Bank Reconciliation</h1>
+    <p>Before you run <span class="function" title="Function:%WCB1060FCBD">Bank Reconciliation</span>, you must enter a statement, either manually (see <a href="WDCB0017_Entering_Statements_Manually.html">Entering Statements Manually</a>) or automatically (see <a href="WDCB0018_Loading_Statements_Automatically.html">Loading Statements Automatically</a>). You can report on unreconciled statement items or <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span> transactions using the <span class="function" title="Function:%WCB3200RCBL">Bank Statement Report</span> or <span class="function" title="Function:%WCB3210RCBD">Unreconciled Report</span>.</p>
+    <p>There are two ways to run bank reconciliation:</p>
+    <ul>
+      <li>Manually using <span class="function" title="Function:%WCB1060FCBD">Bank Reconciliation</span>: For each transaction on your bank statement, you select the corresponding <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>transaction and include it in the batch. See <a href="WDCB0035_Manual_Reconciliation.html">Manual Reconciliation</a>.</li>
+      <li>Automatically using <span class="function" title="Function:%WCB1060RCBD">Auto Bank Reconciliation</span>: <MadCap:variable name="General.ProductName" /> runs a process that matches <MadCap:variable name="Variables.cheques" /> on your statement with <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span> transactions with the same <MadCap:variable name="Variables.cheque" /> number and amount, or which have a corresponding statement transaction type that is configured to reconcile automatically. Any other transactions remain unreconciled; you will need to reconcile them manually.</li>
+    </ul>
+    <p>You can combine both methods; for example, reconcile automatically, then match any un-reconciled items manually.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDCB0036_Marking_Items_Reconciled.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print">Configuration</h2>
+      <p>Use the Statement Transaction Types tab in <span class="function" title="Function:%WCB2011BBNK">Bank Accounts</span> to set up the transaction types used on statements for each bank account.  You can mark specific transaction types to be reconciled automatically (in which case during auto reconciliation, <MadCap:variable name="General.ProductName" /> creates <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span> and <span class="module">General Ledger</span> journals that correspond to transactions of this type).</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/CB/cb_sttydesc.htm" />
+          <MadCap:relatedTopic src="../Parameters/CB/cb_relabrec.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

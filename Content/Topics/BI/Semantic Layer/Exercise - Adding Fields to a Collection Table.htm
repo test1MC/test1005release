@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="5436" MadCap:lastWidth="1251" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Exercise - Adding Fields to a Collection Table</h1>
+        <p>In exercise 3 we added a field to a collection.&#160; It should be emphasised that only if the field is relative to another field, the value of which is not known until the collection; for instance a field which relies on the <MadCap:variable name="Variables.Financial Date caps" /> (as in the previous examples), should it be created on the collection.&#160; </p>
+        <p>If the field is relative to the table only then it should be created on the table as a field.&#160; In this way it will be available to any collection that uses that table in the query.&#160;&#160;&#160; By creating a field on the collection it is only available to that collection.</p>
+        <h2 class="Heading2">Add a new Token</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Adding Fields to a Collection.png" style="left: 0;text-align: left;z-index: -1;visibility: visible;mso-wrap-style: square;mso-width-percent: 0;mso-height-percent: 0;mso-wrap-distance-left: 9pt;mso-wrap-distance-top: 0;mso-wrap-distance-right: 9pt;mso-wrap-distance-bottom: 0;mso-position-horizontal: right;mso-position-horizontal-relative: margin;mso-position-vertical: absolute;mso-position-vertical-relative: text;mso-width-percent: 0;mso-height-percent: 0;mso-width-relative: margin;mso-height-relative: margin;margin-left: 44.25pt;width: 127px;height: 258px;" />
+            <br />Similar to RO fields, Tokens are Progress code subroutines that collect data.&#160; For this exercise we are going to create a token to check the hold code on supplier records and if a supplier is on-hold, we are going to generate a field that will contain the text “ON-HOLD” that we can use in a report. </p>
+        <p>Navigate to the OA Reporting and BI module and select the Semantic Layer folder. </p>
+        <p>Select the Collection Tables menu option</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Adding Fields to a Collection_1.png" class="FullWidth" />
+        </p>
+        <p>Select the hyperlink on the table %ap_vendor and select the Tokens tab.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Adding Fields to a Collection_2.png" class="FullWidth" />
+        </p>
+        <p>If we look through the available Tokens, we can find %AVM_HOLD which has a single field that returns the value of the Hold field on the supplier record.&#160; This will be a Logical Y or N value.&#160; We want to create a Token that will take this Y or N value and create a field that will contain either blank or “ON-HOLD”</p>
+        <p>Click Add</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Adding Fields to a Collection_3.png" class="FullWidth" />
+        </p>
+        <p>Give the Token a name of HOLD_TEXT, do not prefix with % as this is not a standard Token and we do not want it overwritten in future updates from <MadCap:variable name="General.ProductName" />.&#160; Token names should be named similarly to the fields they represent in the database.</p>
+        <p>The token name and description should mak it obvious to a designer what the token will do.</p>
+        <p>Add description of&#160; On Hold Report Text.&#160; </p>
+        <p>Add a field name of hold_text</p>
+        <p>Set Input to Optional</p>
+        <p>Set Type to Analysis, and Data Type to Character.</p>
+        <p>We now need to add some progress code that tells the Token how to generate field values.&#160; In the Code section add the code:&#160; </p>
+        <p>(IF avm_hold = TRUE THEN 'ON HOLD' ELSE '')</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Click Save.png" class="FullWidth" />
+        </p>
+        <p>Click Save.</p>
+        <p>Select the new field and on the Action Dropdown select Generate Fields &amp; Tokens and click Apply.</p>
+        <p>If there are any errors in the Progress code, these will be indicated in a dialog box.&#160; These errors will need to be corrected before the Token/field can be created.&#160; If there are no errors, the Token will be created and the Fields column will change from 0 to 1.</p>
+        <p>Navigate back to Collections and open the %AVM collection.</p>
+        <p>Create a new dataset called Exercise5xx where xx = your initials.&#160; E.g. Exercise5NL</p>
+        <p>Open the Main Tab and add the fields for Company number (KCO), Supplier Number (%AVM_NUM), Supplier Name (%AVM_NAME) and Supplier On Hold Report Text (HOLD_TEXT)</p>
+        <p>Click Save</p>
+        <p>Create a Summary called KCONUM, with Keys of Company Number (%KCO) and Supplier Number (%AVM_NUM)</p>
+        <p>Add the fields for Company Number(%KCO), Supplier Name (%AVM_NAME) and Supplier On Hold Report Text (HOLD_TEXT)</p>
+        <p>
+            <p>
+                <img src="../../../Resources/Images_A-C/BI/Semantic Layer/On the Data Tab enter the.png" class="FullWidth" />
+            </p>
+        </p>
+        <p>
+            <p>On the Data Tab, enter the Company Group TCQA (this is the company group in the <MadCap:variable name="General.ProductName" /> training environment – you system will have different Company Group names)</p>
+            <p>Set the Sum Type to Company-Supplier and click Run</p>
+        </p>
+        <p>
+            <p>
+                <img src="../../../Resources/Images_A-C/BI/Semantic Layer/On the Data Tab enter the_1.png" class="FullWidth" />
+            </p>
+        </p>
+    </body>
+</html>

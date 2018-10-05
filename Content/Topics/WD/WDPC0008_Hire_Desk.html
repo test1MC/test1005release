@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>[%=Variables.Pc Plant caps%] [%=Variables.Pc Hire Desk caps%]</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">
+      <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />
+      <MadCap:variable name="Variables.pc hire desk" style="text-transform: capitalize;" />
+    </h1>
+    <p>
+      <span class="function" title="Function:%WPC1300HXXX">
+        <MadCap:variable name="Variables.pc hire desk" style="text-transform: capitalize;" />
+      </span> allows you to manage <MadCap:variable name="Variables.pc plant" /> <MadCap:variable name="Variables.pc hire" /> requests.  You can:</p>
+    <ul>
+      <li>Process incoming <MadCap:variable name="Variables.pc plant" /> <MadCap:variable name="Variables.pc hire" /> requests (which have been submitted using <span class="function" title="Function:%WPCX"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Requests</span>).</li>
+      <li>Process <MadCap:variable name="Variables.pc offhire" /> requests.</li>
+      <li>Process returns.</li>
+      <li>Process <MadCap:variable name="Variables.pc plant" /> orders.</li>
+      <li>
+        <MadCap:variable name="Variables.enquire" style="text-transform: capitalize;" /> on current and completed <MadCap:variable name="Variables.pc hires" />.</li>
+    </ul>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDPC0001_Requests.html" />
+        <MadCap:relatedTopic src="WDPC0011_Returning_to_Site.html" />
+        <MadCap:relatedTopic src="WDPC0012_Deleting_a_Request_Line.html" />
+        <MadCap:relatedTopic src="WDPC0013_Reassigning_a_Request.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To process a request:</h2>
+      <p>Typically you will process all the lines on a request together, although you can process individual items separately.</p>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WPC1300HXXX"><MadCap:variable name="Variables.pc hire desk" style="text-transform: capitalize;" /></span>.</li>
+        <li>Click the Pending Hires tab.</li>
+        <li>Either:
+<ul><li>If you have already begun to process the request, click the link in the <span class="Field">Txn No </span>column.</li><li>If you have not begun to process the request:</li></ul></li>
+        <ol>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the request (or the lines on the request) you want to process.</li>
+          <li>From the Choose Action menu, select:</li>
+          <ol>
+            <li>
+              <span class="userinput">Process Entire Requisition/Order</span> to process all remaining lines on any of the requests you tagged.</li>
+            <li>
+              <span class="userinput">Process Selected Lines &amp; Associated Items</span> to process the lines you tagged, plus any associated items that are associated with any of the tagged lines.</li>
+            <li>
+              <span class="userinput">Process Selected Lines only</span> to only process the lines you tagged.</li>
+          </ol>
+          <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+        </ol>
+      </ol>
+      <p>
+        <MadCap:variable name="General.ProductName" /> assigns a transaction number to the request and displays the <span class="function" title="Function:%WPC1301BCXC">Process Pending <MadCap:variable name="Variables.pc hires" style="text-transform: capitalize;" /></span> screen. </p>
+      <p>From the <span class="function" title="Function:%WPC1301BCXC">Process Pending <MadCap:variable name="Variables.pc hires" style="text-transform: capitalize;" /></span> screen, you can:</p>
+      <ol>
+        <ol>
+          <ul>
+            <li>Change the details of an item line.</li>
+            <li>
+              <a href="WDPC0009_Processing_Pending_Hires.html">Assign the items</a> - specify where you will get each item from.</li>
+          </ul>
+        </ol>
+      </ol>
+      <p>When all the lines have been allocated, the <span style="white-space: nowrap;background-color: #e35151;padding: 1px 3px 1px 3px;">Assignments incomplete</span> text at the top of the <span class="function" title="Function:%WPC1301BCXC">Process Pending <MadCap:variable name="Variables.pc hires" style="text-transform: capitalize;" /></span> screen changes to a button labelled <span class="Key" style="white-space: nowrap;">Create Dispatches and POs</span>.  An additional column, <span class="Field">D&amp;Os</span>, indicates how many dispatches and orders <MadCap:variable name="General.ProductName" /> will create.</p>
+      <p style="border: black 1px solid;padding: 3px;">
+        <MadCap:variable name="General.ProductName" /> will create separate orders if any of the following are different: delivery point (client, contract, charge centre, delivery address), supplier, office of the same supplier, basis of hire (for example, days per week or whether holidays are charged).  Also, hourly and weekly hires will be on different orders.</p>
+      <ol>
+        <li>
+          <a href="WDPC0010_Adding_Charges_to_a_Pending_Hire.html">Add any additional charges</a>, such as transport charges.</li>
+        <li>Click <span class="Key" style="white-space: nowrap;">Create Dispatches and POs</span>.
+<p><MadCap:variable name="General.ProductName" /> displays the <span class="function" title="Function:%WPC1309UCXC">Dispatch Acknowledgement</span> screen.  This shows the numbers of the dispatches <MadCap:variable name="General.ProductName" /> has created.  If <MadCap:variable name="General.ProductName" /> has automatically raised any purchase orders, the order numbers will be displayed here.</p></li>
+        <li>Click the link on the order numbers to display a screen on which you can commit the purchase orders.</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">
+        <MadCap:variable name="Variables.pc hire desk" style="text-transform: capitalize;" /> Configuration</h2>
+      <p>Users must be assigned to depots.  Use <span class="function" title="Function:%WPC2060BCTL"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Users</span> to do this.</p>
+      <p>The depot must have an overhead <MadCap:variable name="Variables.jc contract" /> specified, against which you can raise purchase orders.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PC/PC_MAPINTRF.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

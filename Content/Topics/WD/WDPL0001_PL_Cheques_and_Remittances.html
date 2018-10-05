@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Configurable PL <MadCap:variable name="Variables.Cheques caps" /> and Remittances</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Configurable PL <MadCap:variable name="Variables.Cheques caps" /> and Remittances</h1>
+        <p><MadCap:variable name="General.ProductName" /> allows you to design and create various layouts for printing <MadCap:variable name="Variables.cheques" /> and remittances onto your own company pre-printed stationery. 
+</p>
+        <p>Define the layout of <MadCap:variable name="Variables.cheques" /> and remittances using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the System Module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+        <p>In <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />, </span>you can define three types of documents to print: <MadCap:variable name="Variables.cheques" /> only, remittances only, and combined <MadCap:variable name="Variables.cheques" /> and remittances. You can create different documents for each type, which will enable you to print various layouts for a particular type of form. When you print the <MadCap:variable name="Variables.cheque" /> or remittance, <MadCap:variable name="General.ProductName" /> lets you specify which document layout you want to use. </p>
+        <div class="process">
+            <h2 class="print">To configure forms for <MadCap:variable name="Variables.cheques" /> or remittances:</h2>
+            <ol>
+                <li>Use the document type <span class="userinput"><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" />/Remittances (PL)</span>. 
+</li>
+                <li>In the <span class="field">Layout Type</span> field, select: 
+<ul><li><span class="userinput"><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /></span> to define the layout for <MadCap:variable name="Variables.cheques" />; 
+</li><li><span class="userinput">Combined</span> to define the layout for combined <MadCap:variable name="Variables.cheques" /> and remittances; 
+</li><li><span class="userinput">Remittance</span> to define the layout for remittances. </li></ul></li>
+                <li>You can set up the following forms: 
+<ul><li>header/footer - In the <b>header</b> of the form, put information to appear on the top of the remittance advice, such as the <MadCap:variable name="Variables.pl supplier" />'s name and address. In the <b>footer</b>, put any additional information that is needed, and for <MadCap:variable name="Variables.cheque" /> prints, the details that will be printed on the <MadCap:variable name="Variables.cheque" />. Header and footer use tables ap_check, ap_vendor, sc_mast. 
+</li><li>BODY - In the <b>body</b> of the form, put a single line containing details of the invoices paid. Body forms use tables ap_pay, ap_invoice, jc_job. 
+<p class="noteheader">NOTE</p><p class="note">Each document needs to have a BODY form (even if it doesn't print anything). </p></li><li>DISC - To print discount on a separate line of the remittance (for example, underneath the invoice amount instead of alongside it), create a row with form type <span class="userinput">DISC</span>, containing the field <span class="screentype">apy_discamt</span>. This will only print if the discount amount is not zero. 
+</li><li>TAX - To print tax deducted on the <MadCap:variable name="Variables.labour" /> element of an invoice as a separate line, create a row with form type <span class="userinput">TAX</span>, containing the field <span class="screentype">ain_paye</span>. This will only print if tax was deducted. 
+</li><li>JOB - To print remittance comments, Create a row with form type <span class="userinput">JOB</span>, containing the field job_remcode. Remittance Comments are lines of standard text that can be associated with a <MadCap:variable name="Variables.jc contract" />. A typical remittance comment might be: <span class="screentype">Paid on behalf of ABC Ltd.</span> (See Remittance Comments Maintenance). If you use this section type, <MadCap:variable name="Variables.tick" /> the <span class="field">Break on Job</span> field; <MadCap:variable name="General.ProductName" /> sorts the invoices being paid into <MadCap:variable name="Variables.jc contract" /> order and prints a separate <MadCap:variable name="Variables.cheque" /> per <MadCap:variable name="Variables.jc contract" />. 
+</li><li>PAY - To print manual payments issued since the previous remittance and the invoices they were allocated to, use a form type <span class="userinput">PAY</span>. This form can be configured to print the <MadCap:variable name="Variables.jc contract" /> number, if applicable. DISC, TAX and JOB are repeated for these payments also. </li></ul></li>
+                <li>To configure a combined <MadCap:variable name="Variables.cheque" />/remittance document, configure the <b>body</b> form to print the remittance lines. The <MadCap:variable name="Variables.cheque" /> can be either at the top or at the bottom of the page. If the remittance lines take up more than one page, you will need to print a "VOID" form on the <MadCap:variable name="Variables.cheque" /> portion of the stationery on all pages after the first one. Configure a form called VOID, then, depending on whether the <MadCap:variable name="Variables.cheque" /> is at the top or bottom of the stationery, do one of the following: 
+<ul><li>If the <MadCap:variable name="Variables.cheque" /> is at the top: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Top of Page</span>. In the <span class="field">Continuation Header Form</span> field, enter VOID. Configure the Header Form to print the <MadCap:variable name="Variables.cheque" /> details. 
+</li><li>If the <MadCap:variable name="Variables.cheque" /> is at the bottom: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Bottom of Page</span>. Configure a form to print the <MadCap:variable name="Variables.cheque" /> details, and enter that form name in both the <span class="field">Footer Form</span> and <span class="field">Continuation Footer Form</span> fields. <MadCap:variable name="General.ProductName" /> then replaces the footer with the VOID form after the first page. </li></ul></li>
+                <li>To print <MadCap:variable name="Variables.cheques" /> one per page, leave the <span class="field">Multiple <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> per Page?</span><MadCap:variable name="Variables.tick" />box blank, and configure the header or footer form to print the <MadCap:variable name="Variables.cheque" /> details. To print multiple <MadCap:variable name="Variables.cheques" /> per page, <MadCap:variable name="Variables.tick" /> the <span class="field">Multiple <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> per Page?</span><MadCap:variable name="Variables.tick" />box, and configure the body form to print the <MadCap:variable name="Variables.cheque" /> details. </li>
+            </ol>
+            <p>Fields</p>
+            <p>RO_SpelledAmount - This is the <MadCap:variable name="Variables.cheque" /> amount spelled in words all on one line based on USA standards. </p>
+            <p>RO_usaAdd1, RO_usaAdd2, and RO_usaAdd3: Use these each on a separate line to print&#160;the address in USA formatting and without a blank line in the middle of the address if the name/address only uses three lines instead of four.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDPL5080_Printing_the_Cheque_Amount_in_Words.html" />
+                    <MadCap:relatedTopic src="WDPL5081_Conditional_Messages.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

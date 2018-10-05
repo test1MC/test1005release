@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Changing the Economic Life of Assets</title>
+        <style>/*<![CDATA[*/
+div.DEPNtext
+{
+	font-size: 8pt;
+}
+div.depn
+{
+	display: inline;
+	position: relative;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Changing the Economic Life of Assets</h1>
+        <p>If you need to change the useful economic life (UEL) of a large number of assets, use <span class="function" title="Function:%WFA1182RFAR">Change Asset Economic Life</span>.
+This procedure allows you to change the method of depreciation and/or the minimum book value (MBV) for the assets you select.  This creates an adjustment that applies a new depreciation method that has a life equal to the remaining UEL of the asset.</p>
+        <p>You can run the process in report-only mode, so you can see what changes would be made, before you actually update the assets.</p>
+        <p>You can only run this process for assets that use straight-line depreciation methods, and you will not be able to run the process in update mode if a depreciation run is in progress.</p>
+        <div class="process">
+            <h2>To change the useful economic life of multiple assets:</h2>
+            <ol>
+                <li>Go to <span class="Function" title="Function: %WFA1182RFAR">Change Asset Economic Life</span>.</li>
+                <li>On the Asset Selection tab, specify the assets you want to update.</li>
+                <li>On the Main tab, choose the <span class="field">Point of Change</span>, which determines the theoretical depreciation of the asset; see below.</li>
+                <li>Enter the <span class="field">New Depreciation Method </span>that corresponds to the new UEL you want to assign to the assets.</li>
+                <li>If you want to update the assets (rather than reporting on what the changes would be) select <span class="userselect">Create Adjustments</span>.</li>
+                <li>If you also want to change the minimum book values of the assets, choose either <span class="userselect">As Value </span>or <span class="userselect">Percent </span>and enter the new MBV or percentage change as appropriate.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />. 
+<p /><MadCap:variable name="General.ProductName" /> creates adjustment transactions that are ready to post; use <span class="Function">Batch Adjustments</span> to create an adjustment batch (you can run <span class="function">Change Asset Economic Life</span> several times then create a single batch), and <span class="function">Post Adjustments</span> to post it.</li>
+            </ol>
+            <h2>How it Works</h2>
+            <p>Changing the UEL of an asset involves changing the rate of depreciation (in <MadCap:variable name="General.ProductName" />, this is determined by the method of depreciation) to give a straight line from the current WDV to reach its MBV at the end of the new UEL.</p>
+            <p>
+                <img src="../../Resources/Images_D-F/Fixed Assets/FA_000101.png" />
+            </p>
+            <p>This is done by creating an adjustment with the following changes:</p>
+            <ul>
+                <li>The depreciation start date (DSD) is changed to the current written down date at the point when the change takes effect.</li>
+                <li>The initial WDV is changed to the current WDV (at the new DSD) .</li>
+                <li>The depreciation method is changed to give the required rate - one that has a life equal to the remaining UEL of the asset.<p>Based on the new depreciation method entered, <MadCap:variable name="General.ProductName" /> calculates the remaining UEL of the asset and the "target end date".  <MadCap:variable name="General.ProductName" /> then looks for an actual depreciation method that will achieve this, and if there is no method with the required life one will be created. These methods they will be created with a code with prefix SLPD followed by a four-digit number giving the life, so 29 periods would be SLPD0029.</p></li>
+            </ul>
+            <h2>Changing the Minimum Book Value</h2>
+            <p>You can also select a new minimum book value of the assets, either as a value or as a percentage.  If you enter a percentage, the asset price will be used to determine the MBV in monetary terms.</p>
+            <p>If the MBV for an asset is increased, the value will be limited by the current WDV, so the MBV will not be raised above the WDV. The diagram below shows assets where the MBV is raised (the target new MBV is shown by the red dotted and dashed line) without changing the economic life.</p>
+            <p>&#160;</p>
+            <div class="NewRowClass1">
+                <div>
+                    <p>
+                        <img src="../../Resources/Images_D-F/Fixed Assets/FA_000102a.png" />
+                    </p>
+                    <p>This asset has a WDV greater than the new MBV so the rate of depreciation will change.</p>
+                </div>
+                <div>
+                    <p>
+                        <img src="../../Resources/Images_D-F/Fixed Assets/FA_000102b.png" />
+                    </p>
+                    <p>This asset has a WDV below the target new MBV, so the MBV is raised to equal the WDV.</p>
+                </div>
+            </div>
+            <h2>Point of Change</h2>
+            <p>You can choose the point at which the adjustment takes effect: current period, start of financial year or start of asset life.  The three diagrams below show the effect of changing the UEL from three to five years for an asset that is 2.5 years old (negative depreciation is not being allowed).  The red arrow shows the current position and the dashed line the theoretical depreciation from the chosen point of change.  The blue lines show how the actual path for the WDV.</p>
+            <p>&#160;</p>
+            <div class="NewRowClass2">
+                <div>
+                    <p>
+                        <img src="../../Resources/Images_D-F/Fixed Assets/FA_000103a.png" />
+                    </p>
+                    <p style="text-align: center;">Now</p>
+                </div>
+                <div>
+                    <p>
+                        <img src="../../Resources/Images_D-F/Fixed Assets/FA_000103b.png" />
+                    </p>
+                    <p style="text-align: center;">Start of Year</p>
+                </div>
+                <div>
+                    <p>
+                        <img src="../../Resources/Images_D-F/Fixed Assets/FA_000103c.png" />
+                    </p>
+                    <p style="text-align: center;">Start of Life</p>
+                </div>
+            </div>
+            <h2>Multiple Changes of UEL</h2>
+            <p>Adjustments created by <span class="Function">Change Asset Economic Life</span> which have a change to the DSD will be marked as such.&#160; Note there will be no change to the DSD if the change is applied:</p>
+            <ul>
+                <li>from the start of asset life, or </li>
+                <li>from the start of year and the asset DSD is later, or </li>
+                <li>now and the asset DSD is now.</li>
+            </ul>
+            <p>When the routine is run <MadCap:variable name="General.ProductName" /> looks for adjustments that are changes to UEL and if there are any, works back to the correct initial DSD, so that the end of life is determined from that rather an adjusted one.</p>
+            <p>The diagram below shows an asset originally set to depreciate over two years (end shown by back arrow). The UEL is then changed to four years giving a new end date (blue arrow).&#160; Later the UEL is changed to seven years.&#160; When changing UEL the second time, <MadCap:variable name="General.ProductName" /> uses the original DSD (shown by the black vertical), not the current DSD on the asset which will be as per the blue vertical.</p>
+            <div style="POSITION: relative;HEIGHT: 160px;" class="DEPN">
+                <img src="../../Resources/Images_D-F/Fixed Assets/FA_000104.png" />
+                <div style="POSITION: absolute;TEXT-ALIGN: right;WIDTH: 12mm;TOP: 0px;LEFT: 0px;" class="DEPNtext">Original<br />DSD</div>
+                <div style="POSITION: absolute;TOP: 150px;LEFT: 50px;" class="DEPNtext">2 years</div>
+                <div style="POSITION: absolute;TOP: 150px;LEFT: 115px;" class="DEPNtext">4 years</div>
+                <div style="POSITION: absolute;TOP: 150px;LEFT: 210px;" class="DEPNtext">7 years</div>
+                <div style="POSITION: absolute; TOP: 150px; LEFT: 210px;" class="DEPNtext">&#160;</div>
+            </div>
+        </div>
+    </body>
+</html>

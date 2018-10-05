@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="3128" MadCap:lastWidth="1521" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Plot Data</h1>
+        <p>&#160;</p>
+        <p>A sample XML message to send a query to <MadCap:variable name="General.ProductName" /> to access plot information is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswssys1" method="dbquery" </p>
+        <p class="code">pcQuery="FOR EACH vp_wbsdef WHERE vp_wbsdef.kco = 1 AND vp_wbsdef.vwb_sale = TRUE AND vp_wbsdef.job_num BEGINS '2006'" pcFields="kco,job_num,hpg_group,vwb_code,RO_vud_name,RO_vud_catDesc,RO_vud_beds,vwb_relprice,vwb_desc,vwb_floorarea,vwb_showonrel,vwb_ssdate,RW_vwb_caption__1^4,vwb_lastrev" /&gt; </p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>The above request would retrieve all sellable plots on development 2006 in <MadCap:variable name="General.ProductName" /> company 1.</p>
+        <p>Note in the above example we have requested the value of a plot caption field.&#160; The field RW_vwb_caption__1^4 would return the value of the 1<sup>st</sup> caption in the caption group with a caption group code of 4.</p>
+        <p>&#160;</p>
+        <p>This would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswssys1" method="dbquery" </p>
+        <p class="code">pcQuery="FOR EACH vp_wbsdef WHERE vp_wbsdef.kco = 1 AND vp_wbsdef.vwb_sale = TRUE AND vp_wbsdef.job_num BEGINS '2006'" pcFields="kco,job_num,hpg_group,vwb_code,RO_vud_name,RO_vud_catDesc,RO_vud_beds,vwb_relprice,vwb_desc,vwb_floorarea,vwb_showonrel,vwb_ssdate,RW_vwb_caption__1^4,vwb_lastrev"&gt;</p>
+        <p class="code">&lt;record vp_wbsdefRowid="0x003cf064" vp_siteRowid="0x0029a8e2"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;job_num&gt;2006&lt;/job_num&gt; </p>
+        <p class="code">&lt;hpg_group&gt;A&lt;/hpg_group&gt; </p>
+        <p class="code">&lt;vwb_code&gt;001&lt;/vwb_code&gt; </p>
+        <p class="code">&lt;RO_vud_name&gt;Amberley&lt;/RO_vud_name&gt; </p>
+        <p class="code">&lt;RO_vud_catDesc&gt;Three Bedroom Detatched&lt;/RO_vud_catDesc&gt; </p>
+        <p class="code">&lt;RO_vud_beds&gt;3&lt;/RO_vud_beds&gt; </p>
+        <p class="code">&lt;vwb_relprice&gt;0&lt;/vwb_relprice&gt; </p>
+        <p class="code">&lt;vwb_desc /&gt; </p>
+        <p class="code">&lt;vwb_floorarea&gt;100.00&lt;/vwb_floorarea&gt; </p>
+        <p class="code">&lt;vwb_showonrel&gt;Y&lt;/vwb_showonrel&gt; </p>
+        <p class="code">&lt;vwb_ssdate&gt;&lt;/vwb_ssdate&gt; </p>
+        <p class="code">&lt;RW_vwb_caption__1_4&gt;&lt;/RW_vwb_caption__1_4&gt; </p>
+        <p class="code">&lt;vwb_lastrev&gt;2006-06-12T15:04:13&lt;/vwb_lastrev&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;record vp_wbsdefRowid="0x002dc700" vp_siteRowid="0x0029a8e2"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;job_num&gt;2006&lt;/job_num&gt; </p>
+        <p class="code">&lt;hpg_group&gt;A&lt;/hpg_group&gt; </p>
+        <p class="code">&lt;vwb_code&gt;002&lt;/vwb_code&gt; </p>
+        <p class="code">&lt;RO_vud_name&gt;Amberley&lt;/RO_vud_name&gt; </p>
+        <p class="code">&lt;RO_vud_catDesc&gt;Three Bedroom Detatched&lt;/RO_vud_catDesc&gt; </p>
+        <p class="code">&lt;RO_vud_beds&gt;3&lt;/RO_vud_beds&gt; </p>
+        <p class="code">&lt;vwb_relprice&gt;125,000&lt;/vwb_relprice&gt; </p>
+        <p class="code">&lt;vwb_desc&gt;Tudor Fronted two storey house with integral garage. Master bedroom/en-suite&lt;/vwb_desc&gt; </p>
+        <p class="code">&lt;vwb_floorarea&gt;100.00&lt;/vwb_floorarea&gt; </p>
+        <p class="code">&lt;vwb_showonrel&gt;Y&lt;/vwb_showonrel&gt; </p>
+        <p class="code">&lt;vwb_ssdate&gt;2003-12-05&lt;/vwb_ssdate&gt; </p>
+        <p class="code">&lt;RW_vwb_caption__1_4&gt;&lt;/RW_vwb_caption__1_4&gt; </p>
+        <p class="code">&lt;vwb_lastrev&gt;2005-07-22T10:14:57&lt;/vwb_lastrev&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+    </body>
+</html>

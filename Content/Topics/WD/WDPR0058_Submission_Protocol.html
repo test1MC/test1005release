@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Submission Protocol</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Submission Protocol</h1>
+    <p>The Submission Protocol always starts with you sending the end of year data. This message is called the ?submit_request?. Once you send this message, the State is SENDING.</p>
+    <p>The most likely response to the submit_request is a submit_acknowledgement, which tells you the gateway has received your data but has not finished processing it yet. This response puts you in the POLLING state, meaning <MadCap:variable name="General.ProductName" /> will start to poll the gateway. While polling, <MadCap:variable name="General.ProductName" /> sends submit_poll messages and asks the gateway for an update. The response may specify a change to the URL being used or to the interval between polls.</p>
+    <p>If the submission is successful, you will receive a submit_response; otherwise, you will receive a submit_error. There are three types of errors:</p>
+    <ul>
+      <li>Recoverable<br />A transmission error occurred. This asks for the previous message to be resent.</li>
+      <li>Business<br />The submission failed validation. <MadCap:variable name="General.ProductName" /> checks the submission using the same validation rules before you are allowed to send the submission. Therefore this error is only possible if there is a fault in <MadCap:variable name="General.ProductName" /> or the gateway.</li>
+      <li>Fatal<br />An error in the protocol handling by <MadCap:variable name="General.ProductName" /> or problems at the gateway.</li>
+    </ul>
+    <p>Once you are given a response by the gateway showing that your data has been processed, <MadCap:variable name="General.ProductName" /> enters the CLEARUP State and sends delete_request messages. These messages let the gateway know that it no longer needs to store your data. Note that the gateway acts as a middleman between yourself and HMRC, so deleting the gateway data does not delete HMRC's copy.</p>
+    <p>There are two possible responses to the delete_request:</p>
+    <ol>
+      <li>A delete_acknowledgement means the data hasn?t been deleted yet and another delete_request should be sent; or</li>
+      <li>A delete_response ends the submission attempt.</li>
+    </ol>
+    <p>The final state of the submission attempt depends on the response to the submission:</p>
+    <ul>
+      <li>If you have been successful, the State is COMPLETE.</li>
+      <li>If there were business logic errors, the State is ERROR.</li>
+      <li>If there was a fatal error, the State is FAILED.</li>
+    </ul>
+  </body>
+</html>

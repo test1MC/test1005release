@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109" MadCap:lastBlockDepth="2" MadCap:lastHeight="744" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Site Overhead Templates</h1>
+        <p><span class="function">Site Overhead Templates</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to configure the templates for site overheads. The templates specify the dates, <MadCap:variable name="Variables.cost heads" />, standard overhead items, and additional fields that are shown on the <span class="function">Site Overheads Workbench</span>.</p>
+        <p>There are two types of template:&#160;General and Home Building; Home Building templates have additional features that are not relevant for general contracting. The template allows you to maintain the dates and fields to be shown, the <MadCap:variable name="Variables.cost heads" />  and their accrual method and the individual detailed overhead items.</p>
+        <h2 MadCap:autonum="1.1 ">Template Dates</h2>
+        <p>The ‘Dates’ tab allows you to define the dates that are to be updated for a <MadCap:variable name="Variables.jc contract" />.  These dates form the basis of the time frame over which weekly or <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" />-based overheads items will be calculated. You can set up dates to be either entered manually, or calculated based on a number of days, weeks or months before or after another date on the template.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Site  Overheads/Template Dates.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Template Fields</h2>
+        <p>The ‘Fields’ tab allows you to define the fields which will appear on the summary tab in the <span class="function">Site Overheads Workbench</span>. Any field from the <MadCap:variable name="Variables.jc contract" /> record (and for home building templates, from the <MadCap:variable name="Variables.vp site" /> record) can be used.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Site  Overheads/Template_Fields.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">Template <MadCap:variable name="Variables.Cost Heads caps" /></h2>
+        <p>The ‘<MadCap:variable name="Variables.Cost Heads caps" />’ tab allows you to define the <MadCap:variable name="Variables.cost heads" /> that can be used in the template, and their accruals calculation method. Only <MadCap:variable name="Variables.cost heads" /> specified in the new JC parameter <span class="parameter">SOCHMASK</span> can be used.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Site  Overheads/Template_Fields.png" class="FullWidth" />
+        </p>
+        <p>To avoid the need to make manual adjustments where the difference between the actual cost and the budget/forecast cost is small, you can specify an <span class="field">Allowed Difference</span>. If the accrual method is accrual, but the difference is within this percentage, an accrual will not be created.</p>
+        <p>A row action <span class="function">Update Site <MadCap:variable name="Variables.Cost Heads caps" /></span> allows you to add <MadCap:variable name="Variables.cost heads" /> and update their accrual method and allowed difference on live sites in the <span class="function">Site Overheads Workbench</span>. The update runs as a background report.</p>
+        <h2 MadCap:autonum="1.4 ">Template Items</h2>
+        <p>The ‘Items’ tab allows you to configure the items that make up the breakdown of the site overheads.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Site  Overheads/Template_Item_Detail.png" class="FullWidth" />
+        </p>
+        <p>A row action ‘<span class="function">Update Site Items</span>’ allows you to add the selected items to existing live sites that don’t have the item.  The check if an item exists on a site is based on the <MadCap:variable name="Variables.cost head" /> and item description. The update runs as a background report.</p>
+        <h2 MadCap:autonum="1.5 ">Generate <MadCap:variable name="Variables.Cost Heads caps" /></h2>
+        <p>The <span class="function">Generate <MadCap:variable name="Variables.Cost Heads caps" /></span> function on the Options menu allows you to automatically generate the <MadCap:variable name="Variables.cost heads" /> for a template based on the <MadCap:variable name="Variables.cost heads" /> specified in the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>JC parameter <span class="parameter">SOCHMASK</span>. You can specify the accrual method and allowed difference, which apply to each new <MadCap:variable name="Variables.cost head" /> added to the template.</p>
+        <h2 MadCap:autonum="1.6 ">Template Export/Import</h2>
+        <p style="page-break-after: avoid;"><span class="function">Template Export/Import</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to export a template and its dates, fields, cost heads and items, or to import an exported template.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Site  Overheads/Template_Export.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Site  Overheads/Template_Import.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Lettings Financials Set Up</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Lettings Financials Set Up</h1>
+        <p>This topic details the items that need to be setup to operate the lettings financials. The two main items to configure are the control accounts and transaction categories. </p>
+        <ul>
+            <li><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> allows you to specify the control accounts used in <span class="module">Lettings Management</span>. <img src="../../Resources/Images_J-L/LM/LM_000101.png" /></li>
+            <li><span class="function" title="Function:%WLM2240BLMT">Transaction Categories</span> allows you to set up the categories of debit/credit notes required. For example: for rent, tax, management fees, admin feeds and other <MadCap:variable name="Variables.sundry" /> charges. <img src="../../Resources/Images_J-L/LM/LM_000102.png" /><p>Against each category are various options. The key thing is the account to post to; for rent this is the rent suspense account. </p><p><img src="../../Resources/Images_J-L/LM/LM_000103.png" /></p></li>
+        </ul>
+        <div class="configuration">
+            <h2 class="print">Parameters</h2>
+            <p>Various LM parameters are required for Financials.</p>
+            <p>In addition:</p>
+            <ul>
+                <li>To enter cash for lettings, the CB parameter <span class="parameter">CBLEDGER </span>will need to be amended to include the lettings module (14th entry).</li>
+                <li>The GL parameters <span class="parameter">ANALOPT </span>and <span class="parameter">ANALDESC </span>will need to be amended to allow for lettings recharges to be costed in GL, PL and SC ledgers.</li>
+            </ul>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_rentjour.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_taxrate.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_bacssum.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_bacsfile.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_bacsmed.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_bacsexec.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_bacsuser.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_bacsvdat.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_refbase.htm" />
+                    <MadCap:relatedTopic src="../Parameters/LM/lm_refform.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CB/cb_cbledger.htm" />
+                    <MadCap:relatedTopic src="../Parameters/GL/gl_analopt.htm" />
+                    <MadCap:relatedTopic src="../Parameters/GL/gl_analdesc.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

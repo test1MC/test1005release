@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="889" MadCap:lastWidth="849">
+  <head>
+    <title>Parent and Child Functions</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Parent and Child Functions</h1>
+    <p> </p>
+    <p>The vast majority of functions are subordinate functions to a menu item.  For example the payments tab on the <MadCap:variable name="Variables.pl supplier" /> maintenance screen is subordinate to the <MadCap:variable name="Variables.pl supplier" /> maintenance screen which is itself subordinate to the <MadCap:variable name="Variables.pl supplier" /> browse that appears on the menu.  Each function in the system is assigned a parent function that resides on a menu.   Functions that reside on a menu have themselves as parents, and are referred to as "menu items".  </p>
+    <p>If you are using <a href="WDSY0138_Menu_Item_Security.html">Menu Item Security</a>, <MadCap:variable name="General.ProductName" /> looks at the parent function when determining whether to grant a user access to a function; if the user has access to the parent, <MadCap:variable name="General.ProductName" /> automatically grants access to the child (unless this has been specifically denied using detailed function security).  </p>
+    <p>Even if you are not using Menu Item Security, you can use <span class="function" title="Function:%WMS2035FMSF">Main Menu Security</span> to see the children of a function. </p>
+    <h2>Generic Functions</h2>
+    <p>Some functions do not belong to an individual parent but are used on several different functions (sometimes across several modules); for example: <span class="function" title="Function:%WSY1013UCOB">Post</span>, <span class="function" title="Function:%WSY1014UCOB">Post with Report</span> and <span class="function" title="Function:%WSY1017UCOB">Posting/Listing Report</span>.  These functions have been placed on special menus in each module which have codes of the form %WxxCO, where xx is the module code and CO indicates "common" -- the functions on the menu are common to the module  (for example: %WPLCO).    The default for functions like this will be no access; you can set access permissions for these in exactly the same way as 'normal' functions.  The special menus are never displayed in the menu tree, but are shown at the end of the module menu in the function access maintenance screens.  This helps you decide which generic functions you need to consider for a module.</p>
+    <p>Some functions are generic functions which users should have access to in order to use <MadCap:variable name="General.ProductName" /> properly (for example, the <span class="function" title="Function:%WSYTCOBB">Batch</span> and <span class="function" title="Function:%WSYTCOBT">{RO_txns_label}</span> on the batch summary, which apply to all batches of all batch types).  These functions do not belong to a specific menu item, but are fundamental to the use of <MadCap:variable name="General.ProductName" />.  This type of generic function has a role type of SYS.  If you are using Menu Item Security, any function with the role type SYS is available to all users.  You can deny access to functions like this if you really think it is necessary, but this is not the intention.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0135_Access_to_Mandatory_Functions.html" />
+        <MadCap:relatedTopic src="WDSY0139_Setup_Main_Menu_Security.html" />
+        <MadCap:relatedTopic src="WDSY0140_Setup_Spreadsheet.html" />
+      </MadCap:relatedTopics>
+    </p>
+  </body>
+</html>

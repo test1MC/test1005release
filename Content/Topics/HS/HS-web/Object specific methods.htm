@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2><span style="margin-right: 0pt;">2.5 </span>Object-specific methods</h2>
+        <p>In addition to the methods above, there are a number of object-specific methods. For example the job-rsp object, which wraps the jc_job table has a method to update a report data store:</p>
+        <p>&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p>&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p>&lt;env:Body&gt;</p>
+        <p>&lt;login&gt;</p>
+        <p>&lt;user&gt;myloginname&lt;/user&gt; </p>
+        <p>&lt;password&gt;mypassword&lt;/password&gt; </p>
+        <p>&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p>&lt;/login&gt;</p>
+        <p>&lt;!—First, select the job to update the store on using the standard</p>
+        <p>Set&lt;tablename&gt;query method&#160; --&gt;</p>
+        <p>&lt;call object="job-rsp" method="setjc_jobquery" </p>
+        <p>pcQuery="FOR EACH jc_job where jc_job.kco = 1 and </p>
+        <p>jc_job.job_num = ‘E12345’" /&gt; </p>
+        <p>&lt;!—Then set the value for report store LP001 to 100 --&gt;</p>
+        <p>&lt;call object="job-rsp" method="setRW_ContractDataStore"</p>
+        <p> pcParam="LP001" pdValue="100" /&gt;</p>
+        <p>&lt;/env:Body&gt;</p>
+        <p>&lt;/env:Envelope&gt;</p>
+        <p>Note: There is no need to call commitCurrent for a setRW_ContractDataStore operation. Whether commitCurrent is necessary for a particular object-specific method or not varies from method to method.</p>
+        <p>By default, setRW_ContractDataStore uses the current period. Its full syntax is pcParam&#160; = "&lt;src_id&gt;|&lt;type&gt;|&lt;offset&gt;|&lt;period&gt;".&#160; </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <p style="list-style-type: disc;">Src_id is the name of the report store.</p>
+            <p style="list-style-type: disc;">Type is TP for this period, TY for this year, or TD for to date and specifies which type of store to write.</p>
+            <p style="list-style-type: disc;">Offset is a numeric field applied to type – e.g. type = TP, offset = -3 will be 3 periods before the current.</p>
+            <p style="list-style-type: disc;">Period is a specific period end date. It can be used with the type and offset omitted to target a known period. E.g. “LP001|||24-08-2005”</p>
+        </ul>
+        <p>Some methods also required the relevant <MadCap:variable name="General.ProductName" /> company number to be specified.&#160; This is done via the CID node on the login section of the XML message.</p>
+    </body>
+</html>

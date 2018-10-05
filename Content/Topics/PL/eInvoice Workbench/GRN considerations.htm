@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="578" MadCap:lastWidth="1266">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />GRN considerations </h1>
+        <p>Where a supplier is using the Open Order process and sending Order Confirmation messages these messages may contain a Delivery Ticket number that can be used in the matching process. The SUPREF option of the PO/AUTCHK parameter should be set to Y to make use of this. &#160; </p>
+        <p>The matching process is determined by configuration. For material orders the JC/ACCMETH states what accrual methods are valid, chose from any or all of these values</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>O</td>
+                    <td>Order</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>GRN</td>
+                </tr>
+                <tr>
+                    <td>Z</td>
+                    <td>Neither</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The contract will then have one of the valid accrual methods.</p>
+        <p>The <MadCap:variable name="Variables.Purchase Ledger caps" /> Supplier details record can override this accrual method using one of the valid values. The contract might normally use G for all suppliers, but a particular supplier record might have O to accrue PO values not GRNs.</p>
+        <p>Where O is used and the PL/AUTOINVM parameter is set to 2, it is possible for an eInvoice to go straight to approval if all the matching criteria described above is met.</p>
+    </body>
+</html>

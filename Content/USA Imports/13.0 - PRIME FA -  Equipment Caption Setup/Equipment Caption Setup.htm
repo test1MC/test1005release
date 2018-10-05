@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Equipment Caption Setup</h1>
+        <h2>Module: Fixed Assets</h2>
+        <p>This document will walk through the basic process of adding a new Caption. These user-defined fields can be logical, decimal, integer, character, or date-based, and used to contain usage information about the Asset Groups to which they are assigned. They can be set to require scheduled updating.</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>To create the Caption, begin by navigating to Fixed Assets &gt; Setup &gt; Maintenance &gt; Caption Maintenance, and click Add.</li>
+        </ol>
+        <p class="caption">Figure 1: Clicking Add on the Caption Maintenance Workbench</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Caption Setup.png" style="visibility: visible;mso-wrap-style: square;width: 579px;height: 334px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>Enter the Caption information:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Add a Caption Code and Description</li>
+            <li style="list-style-type: disc;">Select the “Caption Group” which will be associated with this caption. These groups are defined on the Maintain Caption Groups Workbench, and are an easy way to organize captions.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 90pt;">
+            <li style="list-style-type: circle;">The caption groups also defines whether captions that belong to the group can be updated or displayed at points in the rental life-cycle, and whether they can be linked to triggers. The U/W column on the Caption Group Workbench has these options:</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 126pt;">
+            <li style="list-style-type: square;">blank = Captions can only be updated on the FA Asset Workbench.</li>
+            <li style="list-style-type: square;">Update = Captions in the group can be updated at various stages in the rental life-cycle (specified on the individual caption), and can be used to update triggers linked to them.</li>
+            <li style="list-style-type: square;">Warning = Captions in the group can be displayed at various stages in the rental life-cycle.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 90pt;">
+            <li style="list-style-type: circle;">Choosing a Caption Group which is marked as Update or Warning will allow for additional tabs on the Caption, once it’s saved. See step #4.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Frequency controls how often the caption needs to be updated. This is used for reporting on due dates. Enter the numerical value, and the unit of time measure from the drop-down menu.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Type and Format define the kind of information to capture, and how it will be presented</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Character = x(8) format (for example: abc123)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Date = 99/99/99 format (for example: 12/08/17)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Decimal = -&gt;&gt;,&gt;&gt;9.99 format (for example: 123.45)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Integer = -&gt;,&gt;&gt;&gt;,&gt;&gt;9 format (for example: 345)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Logical = Y/N format (for example: Y or N)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Checking the History box produces a link on the caption value field that provides a view into the history of the changes of the value. If this box is not checked, the history of changes will not be saved. The best practice is to check the History box for any caption that will change over time, such as Mileage, Hours Used, or a service maintenance caption, like Oil Changes.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>When all details are filled out, click Save. The system will assume another Caption is to be added immediately and will produce another blank Caption Details screen to be filled. If this is unnecessary, simply hit Undo.</li>
+        </ol>
+        <p class="caption">Figure 2: Completed Caption Details</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Caption Setup_1.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 275px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>Once saved, and back on the Caption Maintenance Workbench, click the hyperlink of the newly created Caption, and select the Functions Tab. This tab, and the Triggers tab, will only be visible given the Caption Group settings. See Step #2.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li> The Functions tab simply defines at which stage of the rental cycle to capture values.</li>
+        </ol>
+        <p class="caption">Figure 3: The Functions Tab of the new Caption</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Caption Setup_2.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 276px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>If applicable, the Trigger Tab is used when associating the caption. To associate the new Caption to the appropriate Trigger, refer to the Link Captions to Triggers document.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="7">
+            <li>To add the new Caption to an Asset Group, navigate to Fixed Assets &gt; Setup &gt; Maintenance &gt; Asset Groups, and click the hyperlink of the appropriate group.</li>
+        </ol>
+        <p class="caption">Figure 4: Selecting the Hyperlink on the Asset Group</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Caption Setup_3.png" style="visibility: visible;mso-wrap-style: square;width: 577px;height: 326px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="8">
+            <li>In the group’s Caption Tab, use the Group filter at the bottom of the page to select the appropriate Caption Group to which the caption was assigned in Step #2.</li>
+        </ol>
+        <p class="caption">Figure 4: Using Group Filter on Caption Tab of Asset Group Record</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Caption Setup_4.png" style="visibility: visible;mso-wrap-style: square;width: 577px;height: 333px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="9">
+            <li>After filtering for the right Caption Group, click the Add button.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="10">
+            <li>Type in the Caption Code, or use the lookup to choose it, to add the Caption to this Asset Group. A default caption value can be added here, but is not required.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="11">
+            <li>Hit Save when complete.</li>
+        </ol>
+        <p class="caption">Figure 5: Typing Caption Code</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Caption Setup_5.png" style="visibility: visible;mso-wrap-style: square;width: 575px;height: 176px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="12">
+            <li>The system will assume another Caption is to be added immediately and will produce another blank line to be filled. If this is unnecessary, simply hit Undo.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="13">
+            <li>Adding the new caption here will allow it to be inherited to any new Asset added to this asset group.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="14">
+            <li>To update the caption on already existing assets, the configurable load process will be used. Please refer to the Equipment Mileage Update document for a good example.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="15">
+            <li>While on the Asset Record, another Caption-related field to consider is the “Caption Used for Service Meter,” found on the Details Tab</li>
+        </ol>
+        <p class="caption">Figure 6: “Caption Used for Service Meter” field on Details Tab of Asset Group</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Caption Setup_6.png" style="visibility: visible;mso-wrap-style: square;width: 575px;height: 327px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="16">
+            <li>This field defines the caption that holds the meter value upon which service cycles will be based for the group. The caption needs to be a numeric data type and must be set up to retain history, as the history is used to work out historical rate of change used in calculating the expected next service. </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">This will only need to be set if overriding Equipment parameter SERVMETR, which is the default caption to use for service cycles. </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.USOnly">
+    <head><title>Installing Tax Tables</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Installing Tax Tables</h1>
+        <p>&#160;</p>
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge">&#160;</td>
+                    <td><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+                    <td class="Edge">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Once a US <MadCap:variable name="Variables.kco company" /> has been configured in OA, Tax Tables for processing US Payroll need to be maintained. The procedure below demonstrates how this can be done.</p>
+        <div class="process">
+            <h2 class="print">How to Install Tax Tables in OA:</h2>
+            <p><strong>A. Download Tax Tables from Client <MadCap:variable name="Variables.centre" style="text-transform: capitalize;" /></strong>
+            </p>
+            <ol>
+                <li>Go to <a href="http://support.coins-global.com/usa/download/softwareExchange.php" target="_blank">http://support.coins-global.com/usa/download/softwareExchange.php</a> (<MadCap:variable name="General.ProductName" /> USA Client Area login required).</li>
+                <li>Click <span class="userinput">Download Tax Tables</span>.</li>
+                <li>Save file to PC and unzip.</li>
+                <li>Be sure to download the correct versions of Linux or Unix (<strong>Note:</strong> Win<MadCap:variable name="General.ProductName" /> does not apply to OA) or there will be errors in <span class="screentype">View Report</span> in Report Status.</li>
+            </ol>
+            <p><strong>B. Load Tax Tables</strong>
+            </p>
+            <ol>
+                <li>Log into <MadCap:variable name="General.ProductName" /> OA.</li>
+                <li>Go to <span class="function" title="Function:%WPR993UTXT">Tax Table Load</span>.</li>
+                <li>If files are on your Local PC, choose <span class="userinput">Local</span>.</li>
+                <li>Browse to your Local File Path for the files called <strong>tx_tables.d</strong>.</li>
+                <li>Deselect <span class="userinput">Validate Only</span> to run the Load program, and select <span class="userinput">Validate Only</span> to check for errors.</li>
+                <li>Select <span class="userinput">Output</span>.</li>
+                <li>Whether <span class="userinput">Validate Only</span> was selected or not, you will be able to view the results of the load in REPORT STATUS.</li>
+                <li>If <span class="userinput">Validate Only</span> was selected, be sure to run the LOAD program with <span class="userinput">Validate Only</span> deselected.</li>
+            </ol>
+            <p><strong>C. Load Calculation Rules</strong>
+            </p>
+            <ol>
+                <li>Log into <MadCap:variable name="General.ProductName" /> OA.</li>
+                <li>Choose <span class="function" title="Function:%WPR993UTXC">Tax Calculation Load</span>.</li>
+                <li>If files are on your Local PC, choose <span class="userinput">Local</span>.</li>
+                <li>Browse to your Local File Path for the files called <strong>tx_calcrules.d</strong>.</li>
+                <li>Deselect <span class="userinput">Validate Only</span> to run the Load program, select <span class="userinput">Validate Only</span> to check for errors.</li>
+                <li>Select <span class="userinput">Output</span>.</li>
+                <li>Whether <span class="userinput">Validate Only</span> was selected or not, you will be able to view the results of the load in REPORT STATUS.</li>
+                <li>If <span class="userinput">Validate Only</span> was selected, be sure to run the Load program with <span class="userinput">Validate Only</span> deselected.<br /><br /><img src="../../Resources/Images_P-R/PR/PR_001801.gif" class="FullWidth" /></li>
+            </ol>
+        </div>
+    </body>
+</html>

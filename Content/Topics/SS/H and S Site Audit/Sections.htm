@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><a name="_Toc454289659"></a>Sections</h1>
+        <p class="Body">Two new fields have been added to sections maintenance.&#160; </p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Mobile Forms Section Maintenance</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_S-U/SS/23515 HandS Site Audit/Sections.png" style="width: 602px; height: 240px;" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+                    <img src="../../../Resources/Images_S-U/SS/23515 HandS Site Audit/SCR_PART_SS_005.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p><span class="Field">DB Table</span> </p>
+                </div>
+                <div class="FieldDef">
+                    <p>This can now have a value of “sy_mobfel” which can be used to create multiple repeats of the same section.&#160;When sy_mobfel is entered you get a link to maintenance of the section elements (see <MadCap:xref href="Section Elements.htm">0.0.1 &#160;, Section Elements</MadCap:xref>).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p><span class="Field">Workflows</span>
+                    </p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is OA only (it has no effect in the mobile UI) and allows you to specify how many workflows can be entered on that section.&#160; </p>
+                </div>
+            </div>
+        </div>
+        <h2>Section Elements</h2>
+        <p>Section elements are designed to reduce repetition when setting up the form. So for example, instead of having 30 nearly identical sections, you can set up one section with 30 elements. When using elements you can change the section heading, field IDs and checklists used.</p>
+        <p>Section elements are available if the <span class="Field">DB&#160;Table</span> on the section is set to sy_mobfel.</p>
+        <p>The fields for the section are repeated for each element.&#160; The field ID value can mask with the section fields to give different field IDs for each element.&#160; </p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Mobile Form Section Elements</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_S-U/SS/23515 HandS Site Audit/Section Elements.png" style="width: 602px; height: 276px;" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+                    <img src="../../../Resources/Images_S-U/SS/23515 HandS Site Audit/SCR_SS_Mobile_Form_Section_Elements_11.05.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>If you are using checklists and want to have different checklists for the same field on different elements:</p>
+        <ol>
+            <li>Enter a list of checklists in the <span class="Field">Checklist</span> field on the element.</li>
+            <li>Enter a number in <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">curly brackets </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">braces </MadCap:conditionalText>({1} or {2}, for example) in the <span class="Field">Checklist</span> field on the Fields tab to specify which entry in the list of elements applies to that field.</li>
+        </ol>
+    </body>
+</html>

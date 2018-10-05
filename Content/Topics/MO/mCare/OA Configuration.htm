@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp'); mc-master-page-original: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:lastBlockDepth="7" MadCap:lastHeight="4454" MadCap:lastWidth="867">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="h1.">
+            <MadCap:concept term="COINS Mobile;Topics" />OA Configuration</h1>
+        <h2>Adding inspections</h2>
+        <p>Once the user has logged into OA, they will need to select the correct contract and module.</p>
+        <p>For the purpose of the app the user will need to select KCO and then ‘Inspections’ Module.</p>
+        <p>The user taps Inspection Workbench</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration.png" class="FullWidth" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 10pt;">
+            <li style="list-style-type: square;">At the bottom of the page the user selects <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" />.</li>
+        </ul>
+        <p>The user will then need to add the following details:</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_1.png" class="FullWidth" />
+        </p>
+        <ul style="list-style-type: square;margin-left: 28pt;">
+            <li style="list-style-type: square;">Development</li>
+            <li style="list-style-type: square;">Plot</li>
+            <li style="list-style-type: square;">Type</li>
+            <li style="list-style-type: square;">Inspector</li>
+            <li style="list-style-type: square;">Status</li>
+            <li style="list-style-type: square;">Date</li>
+            <li style="list-style-type: square;">Time</li>
+            <li style="list-style-type: square;">Notes</li>
+        </ul>
+        <p>Once the user goes back to the Inspection workbench, they will be able to view their created inspection which would be at the top of the list (most recently created).</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_2.png" class="FullWidth" />
+        </p>
+        <h2>Adding Repair tasks</h2>
+        <p>Repair tasks are created under the ‘Customer Care Workbench’.</p>
+        <p>The user taps on Development</p>
+        <p>Selects a development number</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_3.png" class="FullWidth" />
+        </p>
+        <p>Select a plot</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_4.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>They will then be taken to the plot details screen where they can view existing calls.</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_5.png" class="FullWidth" />
+        </p>
+        <p>At the bottom of the screen the user can tap on <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>Here the user can add the details to the repairs task.</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_6.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_7.png" class="FullWidth" />
+        </p>
+        <p>Once all details have been entered the user can click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>The repairs tasks will then be saved and sent to the device.</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/Completing Repair Tasks.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>Multiday view</h2>
+        <p>In order for the user to be able to view multiple days on the device, the user mobile configuration (CCVISITLISTTYPE and CCVISITLISTNUMBEROFDAYS) must be set up.</p>
+        <p>This can be done under the ‘System’ module on OA.</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_8.png" style="visibility: visible;width: 180px;height: 246px;" />
+        </p>
+        <p>The user taps ‘System Setup’.</p>
+        <p>Mobile setup</p>
+        <p>User Mobile Configuration</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_9.png" style="visibility: visible;width: 389px;height: 212px;" />
+        </p>
+        <p>The user opens CCVISITLISTTYPE and sets this to MULTIDAY and the tap save.</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_10.png" style="visibility: visible;width: 382px;height: 73px;" />
+        </p>
+        <p>Then the user can open CCVISITLISTNUMBEROFDAYS and select how many days in the week that the <MadCap:variable name="Variables.operative" /> can view.</p>
+        <p>Once this has been saved it will be sent to the ESB Outbound Messages.</p>
+        <p>&#160;</p>
+        <ul style="list-style-type: square;margin-left: 28pt;">
+            <li style="list-style-type: square;">Once successfully published then the update will be sent to the device.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>From the User Mobile Configuration settings, the user can also set the CCADDNEWISSUE function for repair tasks. </p>
+        <p>This parameter will allow the user to add a new issue and display the ‘Add issue’ button on a repairs task.</p>
+        <p>To enable this function, the user must open this parameter, logical must be ticked, and parameter must then be saved. The value for this parameter will then be set to ‘Y’.</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_11.png" style="visibility: visible;width: 389px;height: 79px;" />
+        </p>
+        <p>Similarly this can also be done for CCCOMPLETENEWISSUE. This parameter will provide the ability for the <MadCap:variable name="Variables.operative" /> to complete new issues identified on the current visit.</p>
+        <p>
+            <img src="../../../Resources/Images_M-O/MO/mCare/OA Configuration_12.png" style="visibility: visible;width: 387px;height: 82px;" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

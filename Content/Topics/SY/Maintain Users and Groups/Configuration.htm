@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:lastBlockDepth="4" MadCap:lastHeight="917" MadCap:lastWidth="610" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><MadCap:variable name="Variables.Jc Contract caps" /> Security Configuration</h1>
+        <p>Access is governed by the control field, which can be the <MadCap:variable name="Variables.jc contract" /> code, one of the other validated fields, such as <MadCap:variable name="Variables.jc contract" /> location, or any one of the four analysis sets. </p>
+        <p>Two <MadCap:variable name="Variables.Jc Contract caps" /> Status parameters control how <MadCap:variable name="Variables.Jc Contract caps" /> Security will be implemented:</p>
+        <h2>JC/JOBSEC </h2>
+        <p>Which field <MadCap:variable name="General.ProductName" /> uses to control <MadCap:variable name="Variables.jc contract" /> security.</p>
+        <p>When determining whether to allow a user access to a <MadCap:variable name="Variables.jc contract" />, <MadCap:variable name="General.ProductName" /> checks the value of the field specified here against the settings for that user in <MadCap:variable name="Variables.Jc Contract caps" /> Security Maintenance. </p>
+        <p>Enter one of the following:</p>
+        <ul>
+            <li>job_num for <MadCap:variable name="Variables.jc contract" /> code</li>
+            <li>jgr_group for <MadCap:variable name="Variables.jc contract" /> group code</li>
+            <li>jty_type for <MadCap:variable name="Variables.jc contract" /> type code</li>
+            <li>jcl_loc for <MadCap:variable name="Variables.jc contract" /> location code</li>
+            <li>job_fore for <MadCap:variable name="Variables.jc contract" /> manager</li>
+            <li>rcm_num for customer</li>
+            <li>job_anal1 for analysis set 1</li>
+            <li>job_anal2 for analysis set 2, etc. </li>
+            <li>or leave blank for no <MadCap:variable name="Variables.jc contract" /> security.</li>
+        </ul>
+        <h2>JC/COSECDEF </h2>
+        <p>Whether a missing record in <MadCap:variable name="Variables.Jc Contract caps" /> Status &gt; Setup &gt; Setup Maintenance &gt; Security &gt; <MadCap:variable name="Variables.Jc Contract caps" /> Security means 'None' or 'All'.</p>
+        <ul>
+            <li>Y = If there is no record for the user in <MadCap:variable name="Variables.Jc Contract caps" /> Status &gt; Setup &gt; Setup Maintenance &gt; Security &gt; <MadCap:variable name="Variables.Jc Contract caps" /> Security, the user has access to no <MadCap:variable name="Variables.jc contracts" />.</li>
+            <li>N = If there is no record for the user in <MadCap:variable name="Variables.Jc Contract caps" /> Status &gt; Setup &gt; Setup Maintenance &gt; Security &gt; <MadCap:variable name="Variables.Jc Contract caps" /> Security, the user has access to all <MadCap:variable name="Variables.jc contracts" />.</li>
+        </ul>
+    </body>
+</html>

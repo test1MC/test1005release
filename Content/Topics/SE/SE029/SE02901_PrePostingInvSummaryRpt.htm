@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Pre-Posting Invoice Summary Report</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Pre-Posting Invoice Summary Report</h1>
+        <p class="Body">  The <strong>Pre-Posting Invoice Summary Report</strong> allows management to review invoices before printing/posting. For this report, the Cost Basis for Billing is used for each Billing Detail line, allowing for Nominal Gross Margin (GM) calculations for the invoice only.   Gross Billings TD, as well as EMAC, are shown to assist in an overall review of the <MadCap:variable name="Variables.Se Service Order caps" />.  The Cost Basis for Billing is the ‘cost’ value assigned to the Billing Detail Line.</p>
+        <ul>
+            <li>For <MadCap:variable name="Variables.Labour caps" /> that has not been posted via payroll, the report uses the <MadCap:variable name="Variables.Se Technician caps" />'s Cost Class Rate so that the estimated gross margin may be shown on the report.  When PR posts and the report is rerun, the true incurred costs are shown and used for calculations.</li>
+        </ul>
+        <ul>
+            <li>For non-<MadCap:variable name="Variables.Labour caps" /> items, the <span class="Field">Cost </span>field on the billing detail line is used.  This may be a committed cost from a Purchase Order, an incurred cost from <MadCap:variable name="Variables.Purchase Ledger caps" />, or a cost amount manually entered by a user to calculate the billing line.</li>
+        </ul>
+        <ul>
+            <li>For Add-ons, the <span class="Field">Cost </span>field is ignored in the report calculations as this would cause the gross margin calculations to be inaccurate.</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE029_Images/PrePostRptCost.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.1 ">Invoices Action List</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Print Pre-Posting Invoice Summary Report</span> action <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been added to </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">is found on </MadCap:conditionalText>the action list in <i>Service Management &gt;&#160;Invoices submenu &gt;&#160;Invoices</i>, as shown in <MadCap:xref href="#ActionItem" class="ImageRef"><i>Figure 1:  Action Item</i></MadCap:xref>.    </p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="ActionItem"></a>Action Item</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE029_Images/PrePostRptAction.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Output Options Screen</h2>
+        <p class="Body">When you select <span class="Function">Print Pre-Posting Invoice Summary </span>from the action list, you are taken to the Output Options screen, as shown in <MadCap:xref href="#OutputOptions" class="ImageRef"><i>Figure 2:  Output Options Screen</i></MadCap:xref>. The fields at the top of the screen are:</p>
+        <ul>
+            <li><span class="Field">Sort By</span> - Choose how you wish to sort the information printed on the report: by<strong> Bill To Customer </strong>or <strong>Invoice</strong>.</li>
+            <li><span class="Field">Show <MadCap:variable name="Variables.Se Agreement caps" /> Covered Costs</span> - Whether you wish to show <MadCap:variable name="Variables.Se Agreement caps" /> covered costs on the report.</li>
+        </ul>
+        <p class="code">&#160;</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="OutputOptions"></a>Output Options Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE029_Images/PrePostRptOutput.png" class="FullWidth" />
+        </p>
+        <MadCap:pageBreak />
+        <h2 MadCap:autonum="1.3 ">Sample Report</h2>
+        <p class="Body"> After you run the <span class="Function">Print Pre-Posting Invoice Summary </span>action, the <strong>Pre-Posting Invoice Summary Report</strong> that is generated (<MadCap:xref href="#PrePostInvRptSample" class="ImageRef"><i>Figure 3:  Sample Pre-Posting Invoice Summary Report</i></MadCap:xref>) includes information for only the Invoices in the selected batch. Although this report is similar to the Invoice Summary Report<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> discussed </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">later in this document</MadCap:conditionalText>, it differs in the following ways:</p>
+        <ul>
+            <li> The report includes <strong>unposted </strong>invoices.</li>
+            <li>  The last 4 columns are different.</li>
+            <li>A <strong>Cost Basis </strong>row is shown  to help verify the Nominal GM values.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="PrePostInvRptSample"></a>Sample Pre-Posting Invoice Summary Report</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE030_Images/PrePostRptSample.png" class="FullWidth" />
+        </p>
+        <p class="Body">Other facts about this report include:</p>
+        <ul>
+            <li>Each Billing Detail Line has a Cost Basis for Billing.   For Detail Lines generated from cost, this is the true cost.   For other Detail Lines, the Cost value can be directly entered.</li>
+            <li><strong>Nominal Gross Margin </strong>= <i>Sum of Invoice Line Bill Amounts – Sum of Cost Basis for Billing for the Invoice Lines</i></li>
+            <li><strong>Gross Billings TD </strong>is the sum of all posted billings to date for the <MadCap:variable name="Variables.Se Service Order caps" />, including tax.</li>
+            <li><strong>Nominal Gross Margin</strong>, <strong>Nominal Gross Margin %</strong>, and <strong>EMAC </strong>are suppressed for Scheduled Billing invoices since the <MadCap:variable name="Variables.Se Service Order caps" /> has no costs.</li>
+        </ul>
+    </body>
+</html>

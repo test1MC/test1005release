@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2343" MadCap:lastWidth="1028">
+    <head><title>Paying <MadCap:variable name="Variables.Pl Suppliers caps" /> under eRCT</title>
+    </head>
+    <body>
+        <h1 class="print">Paying <MadCap:variable name="Variables.Pl Suppliers caps" /> under eRCT<MadCap:concept term="Topics" /></h1>
+        <p>The process is:</p>
+        <ol>
+            <li>Enter invoices and post them.</li>
+            <li>Select invoices for payment and freeze the payment batch.</li>
+            <li>Process the payment notification.</li>
+            <li>Pay invoices (print <MadCap:variable name="Variables.cheques" />/remittances, generate <MadCap:variable name="Variables.eft" />).</li>
+        </ol>
+        <p>For payments to subcontractors using the <span class="module">Subcontract Ledger</span>, see <a href="WDSC1502_Paying_Subcontractors.html">eRCT - Paying Subcontractors</a>.</p>
+        <h2>Invoice Entry</h2>
+        <p>Invoices with a subcontract <MadCap:variable name="Variables.labour" /> element that are processed through <MadCap:variable name="General.ProductName" /><span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>are subject to RCT processing rules.&#160; As with subcontract certificates, these need to be entered, posted and selected for payment before you process the Payment Notification.</p>
+        <p>When you enter invoices with a subcontract <MadCap:variable name="Variables.labour" /> element, <MadCap:variable name="General.ProductName" /> will issue the following warnings:</p>
+        <ul>
+            <li>If the subcontractor account linked to the <MadCap:variable name="Variables.pl supplier" /> does not have a valid Tax Reference, you will be able to enter the invoice but <MadCap:variable name="General.ProductName" /> will warn you that you must enter the Tax Reference against the subcontractor before you can pay the invoice.</li>
+            <li>If there is a contract notification end date against the order, or the linked subcontractor record has an ongoing contract notification end date, then:</li>
+            <ul>
+                <li>If the date is in the past but within the last six calendar months, <MadCap:variable name="General.ProductName" /> warns you that the invoice must be paid within six months of the end date, or the Contract Notification must be updated.</li>
+                <li>If the date is more than six months in the past, <MadCap:variable name="General.ProductName" /> either warns you that the invoice cannot be paid unless the notification end date is amended, or prevents you entering the invoice (depending on the setting of <span class="parameter">SCIRE/STOPUNPO</span>).</li>
+            </ul>
+        </ul>
+        <h3>Invoices with No Purchase Order</h3>
+        <p>No information about the Contract Notification will have been stored in <MadCap:variable name="General.ProductName" /> unless the subcontractor has on ongoing contract, details of which are stored against the subcontractor.&#160; You must check the Contract Notification details manually and input, on the <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> tab of the invoice, the necessary information (the Contract ID and optionally the End Date) for the Payment Notification to be processed by <MadCap:variable name="General.ProductName" />, unless details of the ongoing contract have been defaulted in and do not need to be over-ridden.</p>
+        <h3>Invoices against a <MadCap:variable name="General.ProductName" /> Purchase Order</h3>
+        <p>If the <MadCap:variable name="Variables.pl supplier" /> account of the company/office selected is linked to a subcontractor account as a supplier of subcontract <MadCap:variable name="Variables.labour" />, you can configure <MadCap:variable name="General.ProductName" /> to create a record on the&#160;<span class="function" title="Function:%WSC1500HSFY">Contract Notification Workbench</span> (for electronic submission) on commitment of the order or you can enter the basic details of the Contract Notification (Contract ID and End Date) either:</p>
+        <ul>
+            <li>On the order header (see <a href="WDSC1501_Manual_Notification_Suppliers.html">Manual Contract Notification for <MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /></a>).</li>
+            <li>Against an invoice, in which case <MadCap:variable name="General.ProductName" /> copies the details to the order.</li>
+        </ul>
+        <p>The registration details are then defaulted in for any future invoices against that order.</p>
+        <h2>Selecting Invoices for Payment</h2>
+        <p>If you select invoices for payment that fall within the scope of RCT, but for which either the Contract ID is not recorded, or the Contract Notification has expired, those invoices cannot be paid.</p>
+        <p>If you are using Manual Payment Selection, the warning/error will appear on screen; if you are using Batch Payment Selection the warning/error will be shown in the report.</p>
+        <p>If there are invoices you are unable to select, you need to use Amend Invoices to add the missing contract notification details and then re-select the invoices for payment.</p>
+        <p>See <a href="WDPL0411_Selecting_Invoices_for_Payment.html">Selecting Invoices for Payment</a>; the process is very similar to that used for subcontractors.</p>
+        <h2>Payment Notification</h2>
+        <p>The process is very similar to that used for subcontractors: see <a href="WDSC1504_Payment_Notification.html">eRCT - Payment Notification</a></p>
+        <h2>Making Payments</h2>
+        <p><MadCap:variable name="General.ProductName" /> will not let you print <MadCap:variable name="Variables.cheques" /> and/or remittances, or generate <MadCap:variable name="Variables.eft" /> payments, for any payments that require author<MadCap:variable name="Variables.is" />ation but have not been author<MadCap:variable name="Variables.is" />ed by Revenue.</p>
+        <h2>Amending Posted Invoices</h2>
+        <p>During Payment Notification, the Contract ID is validated by Revenue.&#160; If the response shows that the Contract ID has been input incorrectly, you need to input the correct Contract ID.</p>
+        <p>You also need to input the Contract ID for invoices that were input prior to the introduction of eRCT, but are paid under eRCT.</p>
+        <h3>To correct contract notification details on posted invoices:</h3>
+        <ol>
+            <li>Go to <span class="function" title="Function:%WPL1040BAIN">Amend Posted Invoices</span>.</li>
+            <li>Click the link for the invoice to update.</li>
+            <li>Click the <MadCap:variable name="Variables.Labour caps" /> tab.
+<p><img src="../../Resources/Images_S-U/SC/SC_151301.png" class="FullWidth" /></p></li>
+            <li>Enter the <span class="field">RCT Contract ID </span>and <span class="field">Contract End Date</span>.</li>
+            <li>If the invoice is linked to a purchase order, <MadCap:variable name="General.ProductName" /> copies any updates back to the order in the same way as when the invoice is input.</li>
+        </ol>
+    </body>
+</html>

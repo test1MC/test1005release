@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Implementing Secure Sockets Layer</h1>
+        <p>Whether it is due to the assurance of the additional security provided by Secure Sockets Layer or to conform to corporate applications policy, <MadCap:variable name="General.ProductName" /> LDAP Directory user authentication can be configured to demand SSL/TLS sessions with a verified server certificate.</p>
+        <p>This task covers the implementation of secure sockets layer for the communications channel between <MadCap:variable name="General.ProductName" /> and the Corporate Directory server.</p>
+        <p class="note">This task is optional. However, implementing an SSL connection to the Corporate Directory server will encrypt all communications between <MadCap:variable name="General.ProductName" /> and the Corporate Directory servers.</p>
+        <p class="warning">When activating Secure Sockets Layer, please take care to note the Expiry Date on the certificate authority certificates being installed. The installed certificates must be updated prior to their respective expiry dates. Failure to do so will result in <MadCap:variable name="General.ProductName" /> refusing access to all user accounts configured to use the LDAP Directory user authentication mechanism.</p>
+        <p>Due to the complexity of this task, it has been broken into the following sub-tasks:</p>
+        <ol>
+            <li>
+                <p>Exporting Certificate Authority certificate files</p>
+                <ul>
+                    <li>
+                        <p><a href="Microsoft-Active-Directory.htm">Microsoft Active Directory</a>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><a href="Installing-OpenSSL-on-the-COINS-server.htm">Installing OpenSSL on the  server</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="Installing-certificates-for-COINS.htm"><p>Installing certificates for <MadCap:variable name="General.ProductName"></MadCap:variable></p></a>
+                </p>
+            </li>
+            <li>
+                <p><a href="Testing-the-installed-certificates.htm">Testing the installed certificates</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="Activating-SSL-for-COINS-LDAP.htm">Activating SSL for  LDAP user authentication</a>
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

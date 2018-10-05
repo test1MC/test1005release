@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Configurable Forms for Faxing</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable Forms for Faxing</h1>
+    <p>When faxing a form, you are not able to select the font size and orientation at run time.  To ensure that the printed form from <MadCap:variable name="General.ProductName" /> provides VSI-Fax with the correct font information, it is necessary to insert an additional line into each configurable form which is to be faxed, to specify the font size to use.  For example, to configure the form to print/fax using the font 132p, enter:</p>
+    <p />
+    <table style="WIDTH: 0px;" class="type1">
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Line</th>
+          <th>Field</th>
+          <th>Format</th>
+          <th>Column</th>
+        </tr>
+        <tr>
+          <td>HEAD</td>
+          <td>1</td>
+          <td>"$&lt;132p&gt;"</td>
+          <td>x(7)</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

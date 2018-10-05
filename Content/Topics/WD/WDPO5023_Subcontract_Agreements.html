@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="787" MadCap:lastWidth="1205">
+  <head>
+    <title>Setting Up Subcontract Agreement Processing</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Setting Up Subcontract Agreement Processing</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> keeps track of the progress of subcontract agreements through the various approval and signatory stages by using a list of “events”.  See <a href="WDPO0560_Subcontract_Agreements.html">Subcontract Agreements</a>.</p>
+    <p>To enable subcontract agreement processing, set the PO parameter <span class="parameter" data-mce-mark="1">SCTRCKAG</span> to <span class="userinput" data-mce-mark="1">Y</span>.  </p>
+    <p>If you want new subcontract orders to require an agreement by default, set the PO parameter <span class="parameter" data-mce-mark="1">SCAGREE</span> to <span class="userinput" data-mce-mark="1">Y</span>.</p>
+    <h2>Agreement Types</h2>
+    <p>Use <span class="function" title="Function:%WTI2130BTGT">Subcontract Agreement Types</span> to set up a list of the different types of subcontract agreement you use (for example: DOM, JCT).</p>
+    <h2>Agreement Events</h2>
+    <p>Use <span class="function" title="Function:%WPO2041BCTA">Subcontract Agreement Events</span> to set up agreement events, which are used to record things that happen in the process of the agreement.</p>
+    <p>The event codes themselves are user-definable, so your system can use any code you want for any event. For example, for the event “accepting an agreement”, you could use <span class="sysmsg">ACCEPT</span> or <span class="sysmsg">OK</span>. However, for automatic events, you must specify in <span class="function" title="Function:%WPO0000BSYP">PO Parameters</span> which event code is used for which event.</p>
+    <h2>Reminder Letters</h2>
+    <p>You can set up a standard mail merge button on <span class="function" title="Function:%WPO2100BPGT">SC Agreements Workbench</span> to allow users to send reminder letters to subcontractors (see <a href="wdsy0025_Setting_Up_a_Generic_Mail_Merge.html">Setting Up a Generic Mail Merge</a>.  If you want to record automatically when a letter for an agreement has been sent, you need to set the <span class="field">Row Method</span> to <span class="userinput">pgt-rsp.reminder1Sent</span> (for the first reminder) and <span class="userinput">pgt-rsp.reminder2Sent</span> (for the second reminder).  This will add the event specified in <span class="parameter">PO/AEV-REM1</span> or <span class="parameter">PO/AEV-REM2 </span>to the agreement.  Users can filter <span class="function" title="Function:%WPO2100BPGT">SC Agreements Workbench</span> based on whether there are letters due.</p>
+    <div class="configuration">
+      <h2 class="print">Parameters</h2>
+      <p MadCap:conditions="COINS.Superseded in 1109">
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_sctrckag.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_scagree.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_rem1days.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_rem2days.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-acc.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-recd.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-rejd.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-rem1.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-rem2.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-sent.htm" />
+        </MadCap:relatedTopics>
+      </p>
+      <p MadCap:conditions="COINS.v1109">
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-exp.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_sctrckag.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_scagree.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_rem1days.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_rem2days.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-acc.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-recd.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-rejd.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-rem1.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-rem2.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-sent.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_aev-sig.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

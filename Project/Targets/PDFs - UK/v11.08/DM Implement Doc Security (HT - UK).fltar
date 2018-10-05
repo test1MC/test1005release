@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/How To Implement Document Security.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/BHTDoc_PDFLayout-UK.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly or COINS.v1105 or Documents.NotReleaseOverview]exclude[COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly or Documents.ReleaseOverview]"
+  conditions="COINS.UKOnly"
+  Medium="print"
+  OutputFile="[%=Document Variables.Document Reference%]-[%=Document Variables.File Name%]-UK"
+  InjectEmptyPages="false"
+  InjectBookHeadings="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Navigate COINS OA</Variable>
+    <Variable
+      Name="Document Variables/Document Title">How To Implement Document Security</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">LMDSY070</Variable>
+    <Variable
+      Name="Document Variables/Draft?"> </Variable>
+    <Variable
+      Name="Document Variables/Doc Version">1.1</Variable>
+    <Variable
+      Name="Document Variables/File Name">DocumentSecurity</Variable>
+    <Variable
+      Name="Document Variables/Modules">Document Management</Variable>
+    <Variable
+      Name="Document Variables/Version">11.06</Variable>
+    <Variable
+      Name="General/Year">2017</Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/Exchange UK CE Documents.fldes" />
+  </Destinations>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

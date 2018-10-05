@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="VAT Workbench"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  PatchHeadingLevels="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  MasterPageLayout="/Content/Resources/PageLayouts/PDF_Body_UK_2017.flpgl"
+  InjectEmptyPages="true"
+  ConditionTagExpression="include[COINS.1104 or COINS.Pre-v1105] exclude[COINS.ScreenOnly or COINS.USOnly or COINS.v1105] "
+  conditions="COINS.PrintOnly"
+  InjectBookHeadings="true"
+  MasterToc="/Project/TOCs/VAT/LMDVT0002.fltoc"
+  OutputFolder="c:\temp">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ConvertBookmarks="true" />
+  <Variables>
+    <Variable
+      Name="Document Variables/Document Reference">LMDVT0002</Variable>
+    <Variable
+      Name="Document Variables/Document Title">VAT Workbench</Variable>
+    <Variable
+      Name="Document Variables/Modules">VAT</Variable>
+    <Variable
+      Name="Document Variables/Version">1.00</Variable>
+    <Variable
+      Name="General/Year">2017</Variable>
+    <Variable
+      Name="Document Variables/File Name">LMDVT0002</Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Repository.fldes"
+      Publish="true" />
+  </Destinations>
+</CatapultTarget>

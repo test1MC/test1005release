@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Draft Certificates - Author<MadCap:variable name="Variables.is" />ation Levels</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Draft Certificates - Author<MadCap:variable name="Variables.is" />ation Levels</h1>
+    <p>
+      <span class="function" title="Function:%WSC2110BSCL">Author<MadCap:variable name="Variables.is" />ation Levels (Location)</span> allows you to set the level of access to <MadCap:variable name="Variables.jc contracts" /> for draft certificate processing, for each user.</p>
+    <p>A user's author<MadCap:variable name="Variables.is" />ation level determines whether he or she can enter or author<MadCap:variable name="Variables.is" />e draft subcontractor payment certificates for orders on that <MadCap:variable name="Variables.jc contract" />.  A user cannot have level 1 and level 3 security set.  When setting up a user's author<MadCap:variable name="Variables.is" />ation levels, <MadCap:variable name="General.ProductName" /> standard <MadCap:variable name="Variables.jc contract" /> security applies to both the user doing the set up, and the user being set up.  That is, both must be able to access the record for it to be created.</p>
+    <p>A "this period" limit can also be given for a user/contract. This means that the user cannot author<MadCap:variable name="Variables.is" />e over that limit. 0 means no limit. The parameter <span class="parameter">LIMITCHK </span>identifies the item IDs on the certificate that are checked against this limit. If the limit is exceeded then an error is given and that user can't author<MadCap:variable name="Variables.is" />e the draft certificate.</p>
+    <p>"No Recall" can be set for a user/contract. This means that the user cannot recall certificates for that <MadCap:variable name="Variables.jc contract" /> once they have moved to the next authority level. By default users will be able to recall any certificate.</p>
+    <div class="configuration">
+      <h2 class="print">Author<MadCap:variable name="Variables.is" />ation levels - configuration</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/sc_NOTIERS.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_MAXTIERS.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_LIMITCHK.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

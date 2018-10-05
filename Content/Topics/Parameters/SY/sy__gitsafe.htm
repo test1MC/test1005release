@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/_GITSAFE - Git installed and custom secured</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/_GITSAFE - </span> Git installed and custom secured
+</div>
+<div class="param_def">
+<p><div>
+<div>
+<div>Main control switch to quickly enable or disable the GitSafe features in a particular environment where GitSafe has already been fully configured. </div>
+</div>
+</div>
+<p><strong>Examples:</strong> <strong>YES</strong>  or  <strong>NO</strong></p></p>
+<p>If <strong>_GITSAFE</strong> parameter is TRUE, the data identified by the <strong>_COINSDATAID</strong> parameter will in turn be dumped and loaded to and from disk. Said data will then be further secured in git.</p>
+<p>GitSafe also secures <MadCap:variable name="Variables.sl customer"/> overrides and customisation data. These are <strong>+*</strong> and <strong>$*</strong> respectively. For example: +WSYBSUR function and $WSABDCE function would be dumped and loaded from disk. Said data will then be further secured in git.</p>
+<p>If <strong>_GITSAFE</strong> parameter is FALSE then no data, <MadCap:variable name="Variables.sl customer"/> overrides nor customisation, nor data identified by _COINSDATAID will be secured to disk and subsequently git. </p>
+<p>The <strong>_GITSAFE</strong> parameter is also be used to control access to the GitSafe menu item under System.</p>
+</div>
+</body>
+</html>

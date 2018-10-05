@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>ES Start and Stop Time Processing</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">ES Start and Stop Time Processing</h1>
+        <h2 MadCap:autonum="1.1 ">Timesheet Group</h2>
+        <p class="Body">The first day of the week and working days are defined by Timesheet Input Group in <i>Employee Self Service &gt; ESS&#160;Portal &gt; Maintenance &gt;&#160;TImesheet Group</i>. As of v11.09, the Default Start and End Time columns are no longer available on this screen, as shown in <MadCap:xref href="#TSGroupScreen" class="ImageRef"><i>Figure 1:  Timesheet Group Screen</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="TSGroupScreen"></a>Timesheet Group Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_TSGroupScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Start and Stop Time Records Generation</h2>
+        <p class="Body">By default, records for Start and Stop Time do not exist and must first be generated. This initial generation can be done by drilling on the <strong>Week Ending Date </strong>column on the My ESS&#160;Timesheets browse, as shown in <MadCap:xref href="#GenStartStopTime" class="ImageRef"><i>Figure 2:  Generate Start and Stop Time</i></MadCap:xref>.</p>
+        <div class="notelabel" MadCap:conditions="COINS.PrintOnly">NOTE:</div>
+        <div class="note">If <span class="Field">First Day of Week </span>is un<MadCap:variable name="Variables.tick" />ed in <span class="Function">TImesheet Group</span>, it will be marked as <strong>No Work </strong>during generation.</div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="GenStartStopTime"></a>Generate Start and Stop Time</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_GenStartStopTime.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.3 ">Start and Stop Time Input Screen</h2>
+        <p class="Body">When you drill down on the <span class="Field">Week Ending Date </span>in My ESS&#160;Timesheets, a Start and Stop Time screen is displayed. Here you can input the start/stop time records for the Employee.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="StartStopInputScreen"></a>Start and Stop Time Input Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_StartStopInputScreen.png" class="FullWidth" />
+                </p>
+                <p>(This is the Drop-down text)</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <ul>
+            <li>The Start and Stop Time Input screen contains the following information:<ol style="text-align: left;"><li>Employee information</li><li>Entered Start  and End Time in HH:MM format</li><li>Entered Start  and End Time in Timecard format</li><li><MadCap:variable name="Variables.Cheque caps" /> information</li><li>Detail information - <span class="Field">Employees </span>and <span class="Field">Mgr </span>(Manager) comments</li></ol></li>
+        </ul>
+        <ul>
+            <li>When <span class="Field">No Work </span>is <MadCap:variable name="Variables.tick" />ed (below), you cannot input the time on the Start and Stop Time Input screen.</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_NoWork.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>When <span class="Field">Split Shift </span>is <MadCap:variable name="Variables.tick" />ed (below), you can input hours on the Start and Stop Time screen, but you are required to enter Employee comments.</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_SplitShiftScreen.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li class="ListContinue1">If you do not enter Employee comments, the error message below is displayed.</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_ErrorSplitShiftComments.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li class="ListContinue1">If you do enter Employee comments, it is indicated on the appropriate record in the <span class="Field">E </span><MadCap:variable name="Variables.tick" />box (below).</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_EEComIndicator.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>When <span class="Field">No Lunch </span>is <MadCap:variable name="Variables.tick" />ed on the Start and Stop Time Input screen (below), Start and End Time cannot be entered and are emptied out when the record is saved.</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_NoLunch.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li><strong>Hours Worked </strong>= <i>Shift Hours – Lunch Hours</i>. It is displayed on the Start and Stop Time Input screen in HH:MM&#160;format and in Timecard Input format (below).</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_HrsWorked.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>Paid Time Off (PTO)</li>
+            <li class="ListContinue1">Parameter <span class="parameter">PTOTYPE </span>uses a comma-separated list of Pay Types that is included in Timesheets, but it is ignored when you Submit timesheets.</li>
+        </ul>
+        <ul>
+            <li>During input, the Input table on the Start and Stop Time Input screen (below) is changed.<p class="Body" style="text-align: center;"><img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_InputTable.png" class="FullWidth" /></p><p>These changes include:</p><ul><li>Calculating PTO hours separately</li><li>Comparing PTO to the schedule</li><li>Total Hours displaying the real <MadCap:variable name="Variables.cheque" /> hours</li></ul></li>
+        </ul>
+        <ul>
+            <li>Named filters on this screen include <strong>All Days </strong>and <strong>Monday-Friday</strong>.</li>
+        </ul>
+        <h2 MadCap:autonum="1.4 ">My ESS Timesheets</h2>
+        <h3 MadCap:autonum="1.4.1 ">Browse Screen</h3>
+        <p class="Body">Start and Stop Time changes that were made in the <span class="Function">My ESS&#160;Timesheets </span>browse (<MadCap:xref href="#MyESSTSBrowse" class="ImageRef"><i>Figure 4:  My ESS Timesheets Browse</i></MadCap:xref>) are explained in this section.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="MyESSTSBrowse"></a>My ESS Timesheets Browse</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_MyTSBrowse.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Column Definitions</p>
+        <p class="IndentBold">Status</p>
+        <p class="IndentFieldDef">The&#160;status options in this column include:</p>
+        <table style="width: 100%;">
+            <col style="width: 176px;" />
+            <col style="width: 403px;" />
+            <tbody>
+                <tr>
+                    <td style="text-align: left;"><strong>New</strong> </td>
+                    <td>No Start and Stop time records have been created, and the <span class="Field">Week Ending Date </span>has not been drilled on.</td>
+                </tr>
+                <tr>
+                    <td><strong>In Process</strong>
+                    </td>
+                    <td>
+                        <p>Records are submitted or rejected.</p>
+                        <ul>
+                            <li>When Reporting is submitted, you cannot drill on the <strong>Week Ending Date</strong>.</li>
+                            <li>You can only update submitted reporting if it is rejected by a user.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Approved</strong>
+                    </td>
+                    <td>Reporting has been approved by an Approver.</td>
+                </tr>
+                <tr>
+                    <td><strong>Transferred</strong>
+                    </td>
+                    <td>Reporting has been transferred to Payroll.</td>
+                </tr>
+                <tr>
+                    <td><strong>Transfer in progress</strong>
+                    </td>
+                    <td>Transfer was stopped by error.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="IndentBold"><strong>Start/End Completed</strong>
+        </p>
+        <p class="IndentFieldDef">This column is <MadCap:variable name="Variables.tick" />ed when ALL records on the Start  and End Time input screen are either <strong>No Work </strong>or <strong>Shift Hours</strong>.</p>
+        <h3 MadCap:autonum="1.4.2 ">Reporting Screen</h3>
+        <p class="Body">When <span class="Field">Start/End Completed </span>is <MadCap:variable name="Variables.tick" />ed on the My&#160;ESS&#160;Timesheets screen, you can click the <span class="Field">Work Ending Date </span>link to go to the Reporting screen. When you click the <span class="button">Next </span>button on this screen, you are taken to the Periods List screen (<MadCap:xref href="#PeriodsListScreen" class="ImageRef"><i>Figure 5:  Periods List Screen</i></MadCap:xref>), where you can open the Start/Stop Time Input screen either in the same window (<MadCap:xref href="#StartStopTimeSameWindow" class="ImageRef"><i>Figure 6:  Start/Stop Time Input Screen in Same Window</i></MadCap:xref>) by clicking the S column (#1 below), or in a new window (<MadCap:xref href="#StartStopTimeNewWindow" class="ImageRef"><i>Figure 7:  Start/Stop Time Input Screen in New Window</i></MadCap:xref>) by clicking the <span class="button">Enter Start and Stop Time </span>button (#2 below).</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="PeriodsListScreen"></a>Periods List Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_ReportingScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="StartStopTimeSameWindow"></a>Start/Stop Time Input Screen in Same Window</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_StartStopTimeScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">The <span class="button">Enter Timecard </span>button takes you to the Reporting screen, and the <span class="button">Back </span>button returns you to the Periods List.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="StartStopTimeNewWindow"></a>Start/Stop Time Input Screen in New Window</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>&#160;</p>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR119_Images/PR119_PeriodsList.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

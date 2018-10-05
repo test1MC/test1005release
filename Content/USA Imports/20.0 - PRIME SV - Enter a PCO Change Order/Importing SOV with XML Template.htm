@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Importing SOV with XML Template</h1>
+        <h2>Module: Job Contract Manager</h2>
+        <p>An SOV can be imported via an XML data file (created using Excel).</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>To use, from Job Contract Manager, with the Job selected, SOV folder, SOV workbench, use the Options menu in the upper right to Import SOV.</li>
+        </ol>
+        <p>&#160;</p>
+        <p class="caption">Figure 1: Import SOV in Options menu on SOV Workbench</p>
+        <p>
+            <img src="../../Resources/Images/20.0 - PRIME SV - Enter a PCO Change Order/Importing SOV with XML Template.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 269px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>On the Import screen, click on the Choose File button and select the SOV Template to be imported. This file should be an XML file (Excel XML 2003).</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>Fill in the other required data:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Import Contains Headers?</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">If the file has a header row (column headings), then make sure the checkbox is checked. This will let the function know to ignore the first row of the file.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Import Options</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Append and Import File</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">This will add the rows from the import to any existing SOV lines/sections</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Delete and Import File</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">This will delete existing SOV data and provide option to delete any change management. This option will not work if billings exist.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Archive and Import File</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Will prompt user to create a new “SOV” in addition to the normal SOV to which to move existing items. Not recommended to use.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Detailed Report checkbox</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Select to create a detailed report of all the lines as they are added to the SOV. If there are issues importing a specific file, selecting this option may provide more details as to what needs to be corrected. It is safe to leave this unchecked unless there is an issue with loading.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Uncheck Create Cost Codes checkbox as this SOV will not be used to create Job Status Cost Codes.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Stop Error</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This indicates the number of errors to encounter before aborting the load. Leave at 1 to prevent loading a file with any errors.</li>
+        </ul>
+        <p>&#160;</p>
+        <p class="caption">Figure 2: Import SOV Page with Details Filled</p>
+        <p>
+            <img src="../../Resources/Images/20.0 - PRIME SV - Enter a PCO Change Order/Importing SOV with XML Template_1.png" style="visibility: visible;mso-wrap-style: square;width: 623px;height: 335px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>Click Next.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>After the file loads, go back to the SOV Workbench to see the imported SOV.</li>
+        </ol>
+        <p class="caption">Figure 3: Imported SOV</p>
+        <p>
+            <img src="../../Resources/Images/20.0 - PRIME SV - Enter a PCO Change Order/Importing SOV with XML Template_2.png" style="visibility: visible;mso-wrap-style: square;width: 623px;height: 225px;" />
+        </p>
+        <p>Import File Format</p>
+        <p>
+            <img src="../../Resources/Images/20.0 - PRIME SV - Enter a PCO Change Order/Importing SOV with XML Template_3.png" style="width: 102px;height: 66px;" />
+        </p>
+        <p>The import file for the SOV will allow for the creation of an SOV if nothing exists (including the initial SOV “section”).&#160; This example file was designed to look like the bulk in most aspects.</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>SOV Import Template Columns</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">SOV Section</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This is the code of the section to which the line should be added. If the Section code does not already exist, a section will be created. (e.g. BASE)</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">SOV Description</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This is the description of the SOV level. (e.g. Base Contract)</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Row ID</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This is the Row ID. If left blank, COINS will auto-generate a number in sequential order. This number must be unique.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Every row in the file will have a Row ID (either manually specified or auto-generated).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">The order of lines as imported into the SOV will be determined by the Row ID value.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">E.g. Importing a file with two rows:</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 126pt;">
+            <li style="list-style-type: square;">First row has a Row ID of 20</li>
+            <li style="list-style-type: square;">Second Row has a Row ID of 10</li>
+            <li style="list-style-type: square;">After import, the row with ID 10 will be listed first and row with ID 20 will be second, regardless of the order on the import file.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Row Type</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This determines how the row is used in the SOV. Options Include:</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Head – a Heading which has no value. Item Number must remain blank for Heading rows</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Totprice – a Lump Sum row. User must fill in quantity (1), Unit (EA), Rate (the value of the lump sum line), and Value (same as Rate column value)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Cost – a Cost Based row. COINS will use Cost Transactions as pulled into the Job Contract Manager to determine the billing amount for this line. User can enter in quantity, Unit, Rate, and Value if system is set for GMP or user wants to use that for validation purposes to know when cost-based billings go above a certain value.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Subtot – Subtotal row. User must leave Item Number blank. User should add in the Row IDs of the rows that are to be used to calculate the Subtotal amount in the Subtotal field. This can have the format of +100, +101. Calc Rate % field should have 100 to fully calculate the subtotal.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Calc – Calculated row similar in function to the Subtotal row except the value of the Row will be added to the overall value of the Billing. User will need to specify the Row IDs of the rows on which to base the calculation and the Calc Rate % field should be the percent of the value of those rows to add to the total billing.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Leaving Row Type Blank – Leaving the Row Type field blank will make the row a Qty/Rate line. User can enter in A Quantity, Unit, Rate, and Value to allow entering in quantities installed to determine billing value of that line.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Item Number</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This is the identifier of the line that is typically printed on the Billing form.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Description</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">The description of the row that will appear on the printed Billing form.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Client Reference</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">An optional field to record any text based data point for this row. It is typically not printed on the Billing form.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Series</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">The Job Receivables Series code that should be attached to this line. (Also known as Sales Series) These are set up on the Job file under Job Receivables Series.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Revenue Analysis</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Optional field to redirect revenue for this line to a different job and/or cost code than is specified on the Job Receivables Series. Frequently used in Master/Subsidiary Job billings.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Tax Code</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Optional Field to override the Tax Code that is specified on the Job Receivables Series</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Quantity</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Quantity of units on this line. For Lump Sum (Totprice) lines, typically a 1. If using Qty/Rate Row Type, then the number of units that will be installed.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Optional for Cost Based lines but can enter in 1 and a rate in the following field for comparison to actual cost based billing amounts.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Should remain blank for Heading, Calculated and Subtotal Rows</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Unit</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Typically EA for Lump Sum (Totprice) lines. Can specify different Unit of measure for Qty/Rate Row Types if applicable.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Should remain blank for Heading, Calculated and Subtotal Rows</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Rate</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Typically the value of the line for Lump Sum (Totprice) lines. For Qty/Rate Row Types, the Rate that should be filled for every unit installed.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Optional for Cost Based lines but can enter in value of the line and a quantity of 1 in the Quantity field for comparison to actual cost based billing amounts.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Should remain blank for Heading, Calculated and Subtotal Rows</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Value</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Should be equal to the quantity * rate for any line where Quantity and Rate were entered</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Should remain blank for Heading, Calculated and Subtotal Rows</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Subtotal</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">If using Subtotal or Calculated Rows, the definition of which Rows are being Subtotaled or which are being used as the value to base the calculated amount.</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Calc Rate %</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">For Subtotal Rows, this should always be 100</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">For Calculated Rows, the percentage to use in the Calculation</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Entered as a percentage</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">E.g. 10% calculation would be entered as 10</li>
+        </ul>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Print</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Whether to print the Row on the Billing form</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Y = Print</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">N or Blank = Do Not Print</li>
+        </ul>
+        <p>&#160;</p>
+        <p class="caption">Figure 4: SOV Import Template</p>
+        <p>
+            <img src="../../Resources/Images/20.0 - PRIME SV - Enter a PCO Change Order/Importing SOV with XML Template_4.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 107px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

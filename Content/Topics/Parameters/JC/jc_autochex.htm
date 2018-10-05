@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>JC/AUTOCHEX - Auto Create Cost Codes - Exceptions</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">JC/AUTOCHEX - </span> Auto Create Cost Codes - Exceptions
+</div>
+<div class="param_def">
+<p>Exceptions to the "auto-create cost codes" policy (as specified by <span class="parameter">AUTOCH</span>).</p>
+<p><span class="parameter">AUTOCHEX </span>specifies <MadCap:variable name="Variables.jc contracts"/> that are exceptions to the <span class="parameter">AUTOCH </span>policy.</p>
+<ul>
+<li>If <span class="parameter">AUTOCH </span>is set to <span class="userinput">N </span>then auto-creation of cost codes is switched ON for these exceptional <MadCap:variable name="Variables.jc contracts"/>.</li>
+<li>If <span class="parameter">AUTOCH </span>is set to <span class="userinput">Y </span>auto-creation of cost codes is switched OFF for these exceptional <MadCap:variable name="Variables.jc contracts"/>.</li>
+</ul>
+<p>To specify exceptional <MadCap:variable name="Variables.jc contracts"/> using <span class="parameter">AHOTCHEX</span>, enter a pipe-separated list containing a maximum of two attribute pairs (field name and can-do list), the first pair selected from List A below and the second pair from List B below:</p>
+<p><strong>List A</strong></p>
+<p>Select only one of the following (if required):</p>
+<ul>
+<li>rcm_num={CAN-DO list of client account numbers}</li>
+<li>jgr_group={CAN-DO list of contract group codes}</li>
+<li>jty_type={CAN-DO list of contract types}</li>
+<li>jcl_loc={CAN-DO list of contract locations}</li>
+<li>job_fore={CAN-DO list of contract managers}</li>
+<li>job_anal1={CAN-DO list of contract analysis set 1 codes}</li>
+<li>job_anal2={CAN-DO list of contract analysis set 2 codes}</li>
+<li>job_anal3={CAN-DO list of contract analysis set 3 codes}</li>
+<li>job_anal4={CAN-DO list of contract analysis set 4 codes}</li>
+</ul>
+<p><strong>List B</strong></p>
+<ul>
+<li>job_num={CAN-DO list of contract numbers}<br />
+<p class="noteheader">NOTE</p>
+<div class="note">If List B is used in conjunction with one of the entries in List A, the CAN-DO list of <MadCap:variable name="Variables.jc contracts"/> in List B must not use the exclusion technique (that is, use of the ! character) that is normally supported by the CAN-DO method.</div>
+</li>
+</ul>
+<p>For example: <span class="userinput">jgr_group=CIV|job_num=V1002 </span>specifies <MadCap:variable name="Variables.jc contracts"/> within <MadCap:variable name="Variables.jc contract"/> group CIV, and including <MadCap:variable name="Variables.jc contract"/> V1002.</p>
+<p>This technique is similar to that employed by <a href="../../WD/WDSY0006_Account_and_Contract_Security.html" target="_parent"><MadCap:variable name="Variables.jc contract"/> security</a>.</p>
+<p>Typically, but not necessarily, <span class="parameter">AUTOCHEX </span>will be a <a href="../../WD/WDSY0016_Company-Specific_Parameters.html" target="_parent"><MadCap:variable name="Variables.kco company"/>-specific parameter</a> since it refers to data held at <MadCap:variable name="Variables.kco company"/> level.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../jc/jc_autoch.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

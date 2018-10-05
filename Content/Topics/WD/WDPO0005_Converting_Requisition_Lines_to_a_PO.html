@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2019" MadCap:lastWidth="1085">
+    <head><title>Converting Requisition Lines to a PO</title>
+    </head>
+    <body>
+        <div class="process">
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Converting Requisition Lines to a PO</h1>
+            <p>The Outstanding Requisition Items tab shows all unordered Requisition Items.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/Procurement/PO_000501.gif" />
+            </p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">
+                <p>If the PO parameter <span class="parameter">PORQTXT</span> is set to <span class="userinput">Y</span>, there will be a "Items and Text" filter available. If this is selected, this will also show text lines from Requisitions, that also have not been brought onto a Purchase Order.</p>
+            </div>
+            <p>To raise a Purchase Order, <a href="WDUG0026_Selecting_Records.html">select</a> Requisition items (and text if applicable), and select the "Raise PO" action (and press the blue arrow).</p>
+            <p>This takes you to an Order Header screen. Some of the details are brought across from the Requisition (for example:&#160;<MadCap:variable name="Variables.Jc Contract caps" />, Description, Due Date). The <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> will need to be entered.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/Procurement/PO_000502.gif" />
+            </p>
+            <p>Clicking <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> will auto-generate the PO number (if auto-generating), and will create PO Lines, from the unordered Requisition lines. It will then take you onto the PO Summary, where the newly created PO lines can be updated.</p>
+            <p>In the PO Summary, go to the Lines tab to update these new PO lines:</p>
+            <p>
+                <img src="../../Resources/Images_P-R/Procurement/PO_000503.gif" />
+            </p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">
+                <p>The Price is brought across from the Requisition line if the PO parameter <span class="parameter">PRPRTOPO </span>is set to <span class="userinput">Y</span>.</p>
+            </div>
+            <p>The Quantity can be amended on the Purchase Order, although it cannot be changed to a quantity greater that the quantity on the Requisition.</p>
+            <p>If the Quantity is reduced from 10 to 6, say, a quantity of 4 will now be outstanding, and will appear on the Outstanding Requisition Items tab, and will be available to be ordered.</p>
+            <p class="noteheader">NOTES</p>
+            <div class="note">
+                <p>Deleting a PO line that has been created from a Requisition will mean that the Requisition Item is now unordered, and will be available again to be re-ordered.</p>
+                <p>When updating these item details, it is possible to update the original Requisition Line's Quantity and Units.</p>
+            </div>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_porqtxt.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_prprtopo.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

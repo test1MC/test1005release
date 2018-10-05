@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types," MadCap:onlyLocalStylesheets="True" MadCap:conditions="COINS.v1109">
+    <head><title>SV Changes</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">SV Screen and Processing Changes</h1>
+        <p class="Body">Changes have been made in the <span class="module"><MadCap:variable name="Variables.Commercial Manager caps"></MadCap:variable> </span>module to allow Contractors to know whether a Statutory Declaration has been received from a Subcontractor,</p>
+        <h2 MadCap:autonum="1.1">SV SC Certificates Entry</h2>
+        <p class="Body">When parameter <span class="parameter">SC/TAXRULES </span>is set to <strong>AUS</strong>, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Statutory Declaration Received</span> field is found on the SV SC Certificates Entry screen, as shown in <MadCap:xref href="#SVSCCertEntryScreen" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. This field defaults to un<MadCap:variable name="Variables.tick" />ed, and any changes made to it also update the same field on the SC&#160;Certificates Entry screen in <span class="module">Subcontract Ledger</span>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="SVSCCertEntryScreen"></a>SV&#160;SC&#160;Certificates Entry Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SC/SC010_Images/SC010_SVSCCertEntry.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2">SV SC Certificates Browse</h2>
+        <p class="Body">The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>fields are found as columns on all tabs in the SV SC Certificates Browse (the screen in <MadCap:xref href="#SVSCCertBrowseColumn" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref> shows one of the columns as an example):</p>
+        <ul>
+            <li class="ListBullet3"><span class="Field">Statutory Declaration Attached </span>- This column is visible but not updatable under the following conditions:</li>
+            <li class="ListBullet4">Parameter <span class="parameter">SC/TAXRULES</span> is set to <strong>AUS</strong>.</li>
+            <li class="ListBullet4">Document category <strong>sc_certificate </strong>has the Document Group value defined in parameter <span class="parameter">SC/SCSTATDEC</span>.</li>
+            <li class="ListBullet3"><span class="Field">Statutory Declaration Received </span>- This column is visible when parameter <span class="parameter">SC/TAXRULES</span> is set to <strong>AUS</strong>. It is updatable and defaults to un<MadCap:variable name="Variables.tick" />ed.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="SVSCCertBrowseColumn"></a>SV&#160;Statutory Declaration Sample Column</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SC/SC010_Images/SC010_SVSCCertBrowseColumns.png" class="MaxPrintWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

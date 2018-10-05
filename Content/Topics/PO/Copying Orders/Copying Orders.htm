@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="785" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />Copying Orders</h1>
+        <p class="Body">When you create a new order by copying an existing one, most of the data is now taken from the copied order (rather than being taken from defaults). If you change certain values on the order header, they are now updated on the copied order lines. This applies if you change:</p>
+        <ul>
+            <li>The <MadCap:variable name="Variables.jc contract" /> number.</li>
+            <li>The order type.</li>
+            <li>The WBS&#160;code.</li>
+        </ul>
+        <p class="Body">In each case when a new cost analysis is generated, the data is validated and if any errors are found a message is displayed and the lines are shown with an error status.</p>
+        <h2 MadCap:autonum="1.1">Changed <MadCap:variable name="Variables.Jc Contract caps" /></h2>
+        <p class="Body">If the <MadCap:variable name="Variables.jc contract" /> on the copied order is changed,  the <MadCap:variable name="Variables.jc contract" /> code on the order line analysis is changed and a new analysis is generated for each line. </p>
+        <p class="Body">The following sections list special cases.</p>
+        <h3 MadCap:autonum="1.1.1">Non-WBS&#160;<MadCap:variable name="Variables.Jc Contract caps" /> to WBS <MadCap:variable name="Variables.Jc Contract caps" /></h3>
+        <p class="Body">If the <MadCap:variable name="Variables.jc contract" /> on the original order does not use WBS, and the <MadCap:variable name="Variables.jc contract" /> on the copy is changed to a <MadCap:variable name="Variables.jc contract" /> that does use WBS, the following applies:</p>
+        <ul>
+            <li>If the new order is a subcontract order and a header WBS&#160;code is entered, or if the new order is a material order and a default WBS&#160;code is entered, a new analysis is generated for each line, and <MadCap:variable name="General.ProductName" /> informs the user.</li>
+            <li>Otherwise, the user must enter the WBS&#160;for each line on the new order.</li>
+        </ul>
+        <h3 MadCap:autonum="1.1.2">Multi-<MadCap:variable name="Variables.Jc Contract caps" /> Orders</h3>
+        <p class="Body">If the original order is a multi-<MadCap:variable name="Variables.jc contract" /> order, nothing is changed on the copy.</p>
+        <h2 MadCap:autonum="1.2">Changed Order Type</h2>
+        <p class="Body">If the order type on the new order is changed, none of the analysis values are changed, unless the <MadCap:variable name="Variables.cost head" /> or category on the original order line is blank, in which case the values from the default order type settings are used to generate the new analysis.</p>
+        <h2 MadCap:autonum="1.3">Changed WBS&#160;Code</h2>
+        <p class="Body">If the default WBS&#160;code on a new material order is changed, the analysis is not re-generated.</p>
+        <p class="Body">If the header WBS code on a new subcontract order is changed, the order line analysis is re-generated with the new WBS code.</p>
+    </body>
+</html>

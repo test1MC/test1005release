@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Employee Self Service Setup</h1>
+        <h2>Module: Employee Self Service (ES)</h2>
+        <p>Check the service packs are up to date. Also fixes.</p>
+        <p>ESS module setup</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>Begin with finding the System Setup on the tree menu. </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Find the User Group (comes already standard from PRIME). It should be named: PRPortal. Remember this for the next step. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Create a Template User. This will auto create other users as new hires join, a system admin will be able to do this quickly. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Name it ESSPortal. Import the “current desktop” and “initialize desktop” from the DEV environment. Refer to it as the same name. %WESPV11, and %ESSPV1. </li>
+        </ul>
+        <p class="caption">Figure 3: Template User Setup</p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup.png" style="visibility: visible;width: 550px;height: 210px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Named User and Named Role need to be checked in setup. </li>
+        </ul>
+        <p class="caption">Figure 4: Named User</p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_1.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 278px;" />
+        </p>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">The User Role contains all the access for a user. </li>
+        </ul>
+        <p class="caption">Figure 5: Check ESS Portal Role</p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_2.png" style="visibility: visible;mso-wrap-style: square;width: 468px;height: 255px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>Next go to the ESS module. Set Email Templates here first. ESS &gt; Admin &gt; Email Templates. </li>
+        </ol>
+        <p class="caption">Figure 5: Set Emailing Template</p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_3.png" style="visibility: visible;mso-wrap-style: square;width: 459px;height: 241px;" />
+        </p>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">The following reserved words can be used:</li>
+        </ul>
+        <p>{username} – Name of User</p>
+        <p>{userid} – Userid that will be generated or set for user</p>
+        <p>{password} – generated password</p>
+        <p class="caption">Figure 6: Example Email setup</p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_4.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 259px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>Set ESS Parameters. ESS &gt; Admin &gt; ESS Parameters. </li>
+        </ol>
+        <p class="caption">Figure 7: Set Parameters</p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_5.png" style="visibility: visible;width: 549px;height: 304px;" />
+        </p>
+        <p> Obligatory parameters:</p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Template User (for this sample it is ESSTEMP)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">EmailUs&#160; (hr_inbox@company.com)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">WEBSITE (http://ourcompany.com)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Welcome Message Template (for this Demo - Portal Confirm)</li>
+        </ul>
+        <p>&#160;</p>
+        <p>Other Parameters:</p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">DESKTOP :&#160; Desktop Function. The default is %WESPV11 for clients but a custom desktop can be entered</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">EMAILUS : Enter Email address to send inquiries to HR department. This can be a comma separated list for multiple recipients.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">INITPRG:&#160; Initializing&#160; program.&#160; </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">LOGINFMT:&#160;&#160; Format for login ID generation. i.e. N6 will generate a 6 digit number.&#160; For the 11.05 and 11.06 release this is numeric only. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">WEBSITE:&#160; Company Website IP address</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">WELCOME:&#160; Portal Welcome Template. Configurable and is set up in System -&gt; Email Templates</li>
+        </ul>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>Set up Approvers.  ESS &gt; ESS Portal &gt; Maintenance &gt; Approvers. These are the users who will be reviewing and approving the timecards coming from the ESS Portal users.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_6.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 283px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>Set Payroll Pay Types in the ESS Portal. ESS &gt; ESS Portal &gt; Maintenance &gt; Payroll Pay Types. This also is where the earning categories are linked from payroll to the ESS module. Additionally, this can be weekly, 2-weekly, normal, office employees etc. – any naming convention that is desired. </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_7.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 222px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>Set up Timesheet Group.  ESS &gt; ESS Portal &gt; Maintenance &gt; Timesheet Group. This needs an approver to be setup first. Add the Valid Pay types here to include each of the earnings categories/ payroll pay types to each relevant timesheet group. </li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_8.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 194px;" />
+        </p>
+        <p>&#160;</p>
+        <p>Benefit Tiles Details Pages.  ESS &gt; Admin &gt; Benefit Tiles Details Pages. No setup required.<img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_9.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 283px;" /></p>
+        <p>&#160;</p>
+        <p>Set Plan Types.  ESS &gt; Admin &gt; Plan Types. Check the box for ESS Deployable to display. Group together the ESS Tile Type Group, when possible. </p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_10.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 275px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="7">
+            <li>Set Timesheet Periods. ESS &gt; ESS Portal &gt; Maintenance &gt; Timesheet Periods. Selects the timesheet group, sets a date on it – which adds the ability for portal users to input timesheets to this pay frequency. Sets expected hours. This cannot be deleted once employee data has been entered to it, only marked as dormant. Similar to a pay period in payroll.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_11.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 162px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="8">
+            <li>Set ESS PR Portal Tiles. ESS &gt; Admin &gt; ESS PR Portal Tiles. No setup necessary, this is allows the option to set a page as “dormant” and not appear on the Portal. For example, the ability to remove the “Pay History” tile. </li>
+        </ol>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_12.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 248px;" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/19.1 - PRIME ESS - Employee Setup and Maintenance/Employee Self Service Setup_13.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 116px;" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

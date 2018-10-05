@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="283" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Single Page Invoice Entry</h1>
+        <p class="Body"><span class="Function">Single Page Invoice Entry</span> is a new function on the <span class="module"><MadCap:variable name="Variables.Purchase Ledger caps" /></span> Invoices menu. The initial browse of invoice batches, and the batch header screen, are the same as for the standard invoice batch entry, but the invoice entry screen is different. </p>
+        <p class="Body">The invoice header remains fixed at the top of the page. Most of the information is now on a single page, rather than being on separate tabs, and the layout of the fields has been improved.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Single Page Invoice Entry Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="screenshot">
+            <img src="../../../Resources/Images_P-R/PL/Single Page Invoice Entry/Single Page Invoice Entry.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;">The fields are grouped as follows:</p>
+        <table style="width: 100%;">
+            <col style="width: 275px;" />
+            <col style="width: 50%;" />
+            <tbody>
+                <tr style="page-break-inside: avoid">
+                    <td>
+                        <div>
+                            <p class="Subtitle">Main Details</p>
+                            <ul class="CompactList">
+                                <li>Supplier #</li>
+                                <li>Supplier Name</li>
+                                <li>PO #</li>
+                                <li>Internal Ref</li>
+                                <li>Supplier Ref</li>
+                                <li>Description</li>
+                                <li>Analysis</li>
+                                <li>Invoice Date</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p class="Subtitle">Supplier Details</p>
+                            <ul class="CompactList">
+                                <li>Address</li>
+                                <li><MadCap:variable name="Variables.postal code" style="text-transform: capitalize;" />
+                                </li>
+                            </ul>
+                            <p class="Body">Tooltips on icons also show the company’s <MadCap:variable name="Variables.vat" /> registration number, email address and telephone number.</p>
+                            <p class="Body">
+                                <img src="../../../Resources/Images_P-R/PL/Single Page Invoice Entry/Supplier Icons.png" />
+                            </p>
+                            <p class="Subtitle">Order Details</p>
+                            <ul class="CompactList">
+                                <li>PO Original Amt</li>
+                                <li>PO Variation Amt</li>
+                                <li>PO Current Amt</li>
+                                <li>Previously Invoiced</li>
+                                <li>Remaining Balance</li>
+                                <li>GRN&#160;Value (if the order requires GRNs)</li>
+                            </ul>
+                        </div>
+                        <p>The above fields are displayed if a purchase order number is entered.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div>
+                            <p class="Subtitle">Dates and Type</p>
+                            <p class="Body">The values of these fields are set automatically, and the fields are disabled. In many cases these fields do not need to be changed. If you do want to change any of these fields, the <img src="../../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="icon24px" /> button enables them for update.</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="page-break-inside: avoid">
+                    <td>
+                        <ul class="CompactList">
+                            <li>Due Date</li>
+                            <li>Discount Date</li>
+                            <li>Cost Effective Date</li>
+                            <li>Received Date</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="CompactList">
+                            <li>Txn Type</li>
+                            <li>Dist Type</li>
+                            <li>Currency</li>
+                            <li MadCap:conditions="COINS.UKOnly">VAT</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="page-break-inside: avoid">
+                    <td>
+                        <div>
+                            <p class="Subtitle">Invoice Amounts</p>
+                            <ul class="CompactList">
+                                <li MadCap:conditions="COINS.USOnly">Merchandise</li>
+                                <li MadCap:conditions="COINS.USOnly">Additional Charges</li>
+                                <li>Net<MadCap:conditionalText MadCap:conditions="COINS.USOnly"> Amount</MadCap:conditionalText></li>
+                                <li>Discount%</li>
+                                <li>
+                                    <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">VAT</MadCap:conditionalText>
+                                    <MadCap:conditionalText MadCap:conditions="COINS.USOnly">Sales/Use Tax</MadCap:conditionalText>
+                                </li>
+                                <li>Gross<MadCap:conditionalText MadCap:conditions="COINS.USOnly"> Amount</MadCap:conditionalText></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p class="Subtitle">Commercial Hold</p>
+                            <ul class="CompactList">
+                                <li>On Hold</li>
+                                <li>Hold Code</li>
+                                <li>Hold Reason</li>
+                            </ul>
+                            <p class="Subtitle">Financial Hold</p>
+                            <ul class="CompactList">
+                                <li>On Hold</li>
+                                <li>Hold Code</li>
+                                <li>Hold Reason</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">If the order requires GRNs, but no GRNs have been entered yet, the text “GRNs do not exist” is displayed next to the order number, to inform the user that there is no need to try to perform any invoice matching.</p>
+        <p class="Body">If the order is linked to GRNs, when you save the invoice details the Matching screen is displayed.</p>
+        <h2 MadCap:autonum="1.1 "><MadCap:variable name="Variables.Vat caps" /> and Costing Distribution </h2>
+        <p class="Body">New dynamic input lines have been used for the <MadCap:variable name="Variables.vat" /> distribution (if the invoice has multiple <MadCap:variable name="Variables.vat" /> lines), and the costing distribution (if the invoice is not registered).</p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>This currently only supports UK-style invoices. For US invoices, costing distribution still uses the existing method of entering data on a Costing Distribution tab when saving the invoice.</p>
+            </div>
+        </div>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Dynamic Distribution Lines</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="screenshot">
+            <img src="../../../Resources/Images_P-R/PL/Single Page Invoice Entry/Dynamic Lines.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Body"> These work as follows:</p>
+        <ul>
+            <li>As you tab out of the last field on the line, a new line is automatically created.</li>
+            <li>The add button in the header allows you to add a new line.</li>
+            <li>The buttons on the line allow you to copy or delete the line.</li>
+            <li>You can rearrange the lines by dragging the line numbers up or down.</li>
+            <li>If there are more lines than will show on the screen, the header and footer (which shows the running totals) remain visible while the lines scroll.</li>
+        </ul>
+        <p class="Body">A frame to the right of the lines shows values for reference, which are updated as you update the lines.</p>
+    </body>
+</html>

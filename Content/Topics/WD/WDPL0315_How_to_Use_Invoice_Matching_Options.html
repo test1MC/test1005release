@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="1005" MadCap:lastWidth="897">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>How to Use Invoice Matching Options</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">How to Use Invoice Matching Options</h1>
+    <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p align="center">Invoice quantity<br />=<br />delivered quantity</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p align="center">Invoice price<br />=<br />delivered price</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <p align="center">Action</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p align="center">Y</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p align="center">Y</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Should match automatically. If not, use the Action list to obtain a match.</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p align="center">N</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p align="center">Y</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>If the invoiced quantity is less than the delivered quantity, update the matching line to enter the invoiced quantity. The line remains open for subsequent invoices.</p>
+            <p>If the invoiced quantity is greater than the delivered quantity:</p>
+            <ul>
+              <li>treat it as a <a href="WDPL0317_Creating_a_Missing_Ticket.html">missing ticket</a>, or</li>
+              <li>enter the invoiced quantity - <MadCap:variable name="General.ProductName" /> applies a hold code to the line. </li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p align="center">Y</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p align="center">N</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>Update the line to override the invoice price.</p>
+            <p>
+              <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />: This could be because there are several invoices for a single accrual. In this case, overtype the invoice amount. If the invoice amount is less than the accrual, the remainder of the accrual remains open for subsequent invoices.  </p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p align="center">N</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p align="center">N</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">Update the line to override the price and quantity.  </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>In all cases <MadCap:variable name="General.ProductName" /> uses tolerances to allow or disallow a match:</p>
+    <ul>
+      <ul>
+        <li>
+          <MadCap:variable name="General.ProductName" /> allows the match if the invoiced amount is less than or equal to the expected amount plus the tolerance. </li>
+        <li>
+          <MadCap:variable name="General.ProductName" /> disallows the match (does not allow you to accept the values) or warns you (asks if you want to accept the values) if the invoiced amount is greater than the expected amount plus the tolerance. 
+<p> </p>
+Once you have costed the invoice (that is, the <span class="field">Difference</span> is zero), click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />. <MadCap:variable name="General.ProductName" /> changes the distribution type of the invoice to <span class="field">C </span>(costed). </li>
+      </ul>
+    </ul>
+    <p class="noteheader">NOTE</p>
+    <div class="note">You can post an invoice with a matching imbalance: <MadCap:variable name="General.ProductName" /> will not post the costing, but sets the distribution type to R (registered). You then need to use <span class="function" title="Function:%WPL1070BCOB">Cost Invoices</span> to cost the posted invoice. </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_alouttol.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_tolmeth.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_tol_25.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_tolamt.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_ptolmeth.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_ptol_25.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_ptolamt.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

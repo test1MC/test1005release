@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Performing Calculations on Character Values</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Performing Calculations on Character Values</h1>
+    <p>
+      <strong>INLIST</strong>
+    </p>
+    <p>As IF statements can perform comparisons on numerical values, then the INLIST function can be used to perform such on character values. INLIST should be used in the format :</p>
+    <p>    <span style="color: purple;"><strong> INLIST('string1','string1,string2') </strong></span></p>
+    <p>and will return 1 for a true result and 0 for a false result.</p>
+    <p>Therefore </p>
+    <p>
+      <span style="color: purple;">
+        <strong>INLIST('a','a,b,c')</strong>
+      </span>       would return 1</p>
+    <p>
+      <span style="color: purple;">
+        <strong>INLIST('a','b,c')</strong>
+      </span>         would return 0</p>
+    <p />
+    <p>Using INLIST to assign text values to a column :</p>
+    <p>The example below checks the flag on a Purchase Order Header and instead of returning a TRUE or FALSE value will return either E-Commerce or Standard.</p>
+    <p>
+      <span style="color: purple;">
+        <strong>$IF$((INLIST(\<MadCap:variable name="Variables.po_hdr.poh_xmtd\" />,'yes')),EQ,1,'E-Commerce','Standard');</strong>
+      </span>
+    </p>
+    <p>
+      <br />
+      <strong>CAN-DO</strong>
+    </p>
+    <p>The CAN-DO function tests a value against a comma separated list of criteria in a similar way to INLIST but will allow the use of wildcards and exclusions. It should be used in the format :</p>
+    <p>     <span style="color: purple;"><strong>CAN-DO('strin*','string1') </strong></span></p>
+    <p>For example :</p>
+    <p>     <span style="color: purple;"><strong>CAN-DO('A*','A1000')</strong></span> would return 1</p>
+    <p>
+      <strong>MASK</strong>
+    </p>
+    <p>The MASK function will return a 1 or 0 for a true or false result when comparing a value against a combination of a RANGE of values and a CAN-DO list and should be used in the format :</p>
+    <p>     <span style="color: purple;"><strong>MASK(a,b,c,d) </strong></span></p>
+    <p>Where a is the range from, b the range to, c is a can-do list and d the value to be masked. In effect this function behaves as a From, To, List selection in <MadCap:variable name="General.ProductName" />.<br /><br />For example to check a GL Account ? element 2 within a range from 2000 to 2180 but excluding 2170 :</p>
+    <p>
+      <span style="color: purple;">
+        <strong>MASK('2000','2180','!2170,*','\<MadCap:variable name="Variables.gl_acct.gla_el2\" />');</strong>
+      </span>
+      <br />
+    </p>
+  </body>
+</html>

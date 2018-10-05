@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/LANGLOAD - Which languages should build a string list</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/LANGLOAD - </span> Which languages should build a string list
+</div>
+<div class="param_def">
+<p>A list of the languages for which COINS generates translation strings. New strings will only be created in the translation list if they are found for these translations.</p>
+<P>This is to cater for the situation where you have a multi-language system but different people use different languages in different modules. </P>
+<P>If <FONT color="#000000"><SPAN class="parameter">LANGLOAD </SPAN>= <SPAN class="userinput">*</SPAN>, then when running in a language (non-blank) then the translation strings are created for every new string you come across. This is good for when you are building your language translation but unnecessary for when you are finished. </FONT></P>
+<P>However, if you are building your translation for a second language then it will still be doing this extra processing for users with the first language, which is unnecessary. Setting <FONT color="#000000"><SPAN class="parameter">LANGLOAD </SPAN>to the second language allows you to suppress the extra effort when not required and just target it at the <SPAN class="nw">language(s)</SPAN> that you want. </FONT></P>
+</div>
+</body>
+</html>

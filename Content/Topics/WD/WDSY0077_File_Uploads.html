@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>File Uploads</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />File Uploads</h1>
+        <p>Various <MadCap:variable name="General.ProductName" /> routines including <MadCap:variable name="Variables.commercials" style="text-transform: capitalize;" /> spreadsheets and importing PO Lines allow you to upload files from a PC or network drive. In order to do this you need to set the upload script and directory.
+</p>
+        <div class="process">
+            <h2 class="print">Upload script and directory</h2>
+            <ol>
+                <li>Set the <span class="parameter">GZIPATH </span>parameter&#160;- gunzip and gzip are normally installed in /usr/contrib/bin/ or /usr/bin/ (find / -name gz*).
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">SY&#160;Parameters</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_D-F/DM/DM_100204.gif" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>Ensure the system parameters <span class="parameter">UPLOADS </span>and <span class="parameter">UPSCRIPT </span>are set correctly. The Unix uploads directory and .plx should have been setup as part of the technical build.
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot>SY&#160;Parameters – UPLOADS</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_D-F/DM/DM_100203.gif" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+            </ol>
+            <h2>Upload script</h2>
+            <p>To check the .plx name:</p>
+            <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                        <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                            <p class="TableHeader" style="text-align: center;">O/S</p>
+                        </th>
+                        <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                            <p class="TableHeader" style="text-align: center;">Path</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">HP systems</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">/opt/hpws/apache/cgi-bin/</td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Linux Systems</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">/var/www/cgi-bin/</td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">SCO Systems</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">/usr/lib/apache/cgi-bin/</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code">/var/www/cgi-bin<br />[root@Gladedale<MadCap:variable name="General.ProductName" /> cgi-bin]# ls -al *eup*<br />-rwxrwxrwx 1 root root 1710 Feb 27 15:11 cpliveupload.plx<br />-rwxr-xr-x 1 root root 1708 Feb 27 15:43 liveupload.plx</div>
+            <p class="noteheader">NOTE</p>
+            <div class="note">This file will be overwritten on a copy and will need to be edited back.</div>
+            <div class="code">#! /usr/bin/perl<br />$OutputDir = "../html/coins/cplive/uploads";</div>
+            <p>Check link directory created under $OutputDir specified in .plx file (see above) ? in this example /var/www/html/coins/cplive</p>
+            <div class="code">lrwxrwxrwx 1 root root 36 Feb 27 15:12 uploads -&gt; /u/coins/cplive/var/data/we<br />b/uploads</div>
+            <p>Later versions of <MadCap:variable name="General.ProductName" /> should follow the standard below:</p>
+            <p><strong>UPLOADS<br /></strong>$BASE/var/data/webuploads</p>
+            <p><strong>UPSCRIPT<br /></strong>Live liveupload.plx <br />CoL cpliveupload.plx <br />Test testupload.plx</p>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_gzippath.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_uploads.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_upscript.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

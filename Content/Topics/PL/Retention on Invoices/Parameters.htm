@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="6" MadCap:lastHeight="503" MadCap:lastWidth="601">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Retention on Invoices - </MadCap:conditionalText>Parameters</h1>
+        <p>The following <MadCap:variable name="Variables.Purchase Ledger caps" /> parameters control the retention on invoices functionality.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">USERETPL	
+</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Whether to use retention in <MadCap:variable name="Variables.Purchase Ledger caps" /> (Yes or No). This can only be set when <span class="parameter">CO/COMPLOC</span> in the current company is set to <span class="userselect">USA</span>&#160;or <span class="userselect">CA</span>.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RETDISC	</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Whether to allow retention invoices 
+with a discount amount to be created (Yes or No).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">CALCRET	</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p class="TableCell">A list of additional items (charges and tax) to include when calculating retention. The list can include one or more of A1, A2, A3 (additional charges 1-3) and T (tax).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In addition, the CO parameter <span class="parameter">TAXTYPE</span> must be set to <span class="userselect">SALES</span> and the PL&#160;parameters <span class="parameter">REFBASE</span> and <span class="parameter">REFFORM</span> must be populated (to provide the format for retention-only invoices – see <MadCap:xref href="Releasing Retention.htm">1 - Retention on Invoices - Releasing Retention</MadCap:xref>).</p>
+    </body>
+</html>

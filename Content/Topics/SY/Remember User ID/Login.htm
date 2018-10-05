@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Remember User ID – </MadCap:conditionalText>Login</h1>
+        <p class="Body">When a user first logs in to <MadCap:variable name="General.ProductName" /> (or if the security token has expired or if they are accessing <MadCap:variable name="General.ProductName" /> from a non-specified IP address such as a VPN), they will see the normal login page and will be required to authenticate with <MadCap:variable name="General.ProductName" />.  If using <a href="../Configuring LDAP/Configure-LDAP.htm">LDAP authentication</a> then this authentication might in turn be delegated to LDAP.</p>
+        <p class="Body">If the user is accessing from an IP address defined in the WEBRIPS list, then if they log in to <MadCap:variable name="General.ProductName" /> successfully, a security token will be built and encrypted, and stored on the user's browser as local storage data.</p>
+        <p class="Body">The next time they request the login page (on the same computer and browser, and from an IP address specified in WEBRIPS), <MadCap:variable name="General.ProductName" /> checks this security token, and if it is valid the user will be allowed access to <MadCap:variable name="General.ProductName" /> without further authentication.</p>
+        <p class="Body">When the security token expires (or if required the WEBRPWD is changed) users are redirected to the normal login page and are required to re-authenticate, at which point another security token valid for the number of days specified in WEBRDAYS is created, encrypted and stored.</p>
+    </body>
+</html>

@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Configurable UK and Ireland P60 Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable UK and Ireland P60 Documents</h1>
+    <p>The document type P60 (PR) is used to print the UK and Ireland P60.</p>
+    <p>Use <span class="function" title="Function:%WPR1195FEMP">Print P60s</span> to print the P60s.</p>
+    <div class="process">
+      <h2 class="print">To configure a P60:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>.</li>
+        <li>Use the <span class="userinput">P60 (PR)</span> document type.</li>
+        <li>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents.</li>
+        <li>The P60 document does not use a BODY form; set the <span class="field">Body Rows </span>and <span class="field">Continuation Body Rows </span>fields to <span class="userinput">0</span>, and set up all the fields in the HEAD form.</li>
+        <li>Fields from the Employee table are available. For UK you can also use fields from the sy_table for the tax reference. For Ireland the co_config table is also available.</li>
+        <li>Additionally there are a number of special fields:</li>
+        <ul>
+          <li>RS_kyear__1 - the tax year.</li>
+          <li>RO_Gross - string version of the gross pay for USC/income levy rounded to the nearest Euro (post mid-year rate change for 2009). Ireland only.</li>
+          <li>RO_Levy - string version of the USC/income levy in cents (post mid-year rate change for 2009). Ireland only.</li>
+          <li>RO_GrossPreMay - string version of the gross pay for UCS/income levy rounded to the nearest Euro prior to the mid-year rate change (for 2009 only). Ireland only.</li>
+          <li>RO_LevyPreMay - string version of the income levy in cents prior to the mid-year rate change (for 2009 only). Ireland only.</li>
+          <li>RO_FirstName - the employee's first name only (Employee.fname may contain a middle name too).</li>
+          <li>RO_StartDate - string version of the employee's <MadCap:variable name="Variables.employee start date" /> in "DDMMYY" format where this date is after 1st Jan in the tax year. Ireland only.</li>
+          <li>RO_LeftDate - string version of the employee's <MadCap:variable name="Variables.leaving date" /> in "DDMMYY" format where the <MadCap:variable name="Variables.leaving date" /> is in the tax year and after the 1st Jan. Ireland only.</li>
+          <li>RO_EmployerReg - the <MadCap:variable name="Variables.tax reference" />.</li>
+          <li>RO_EmployerName - the employer name. Ireland only.</li>
+          <li>RO_EmployerEmail - the employer's contact email address for P60 enquiries.</li>
+          <li>RO_PrintDate - string version of today's date in "DDMMYY" format.</li>
+          <li>RO_Week53 - "X" if this is a 53 week year; blank otherwise.</li>
+          <li>RO_TaxFlag - blank for UK or "D" (or "J7" pre 2011) for Ireland if there was a net tax deduction in this employment; "R" (or "H9" for Ireland pre 2011) if there was a net tax refund in this employment.</li>
+          <li>RO_USCFlag - "D" if there was a net USC deduction in this employment; "R" if there was a net USC refund in this employment. Ireland only.</li>
+          <li>P60^&lt;field&gt; - string version of any field from the P60 field list below. Decimal fields will have two decimal places. bDirector will be "D" if TRUE, blank if FALSE. bRefund and bRebate__* will be "R" if TRUE, blank if FALSE. bWeek1Basis will be "W" if true, blank if FALSE. Date fields will be in the format "DDMMYYYY" for UK and "DDMMYY" for Ireland. jStart and jStartDate will be blank if not in the tax year.</li>
+          <li>P60Date^&lt;field&gt; - any date field from the P60 field list below as a date so the format can be set on the form. jStart and jStartDate will be blank if not in the tax year.</li>
+          <li>P60Integer^&lt;field&gt; - any integer field from the P60 field list below as an integer so the format can be set on the form.</li>
+          <li>P60Decimal^&lt;field&gt; - any decimal field from the P60 field list below as a decimal so the format can be set on the form.</li>
+          <li>P60Logical^&lt;field&gt; - any logical field from the P60 field list below as a logical so the format can be set on the form.</li>
+        </ul>
+      </ol>
+      <p>
+        <strong>UK P60 Field List</strong>
+      </p>
+      <table class="type1">
+        <tbody>
+          <tr>
+            <th>P60 Field</th>
+            <th>Datatype</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>kco</td>
+            <td>Integer</td>
+            <td>Company</td>
+          </tr>
+          <tr>
+            <td>kno</td>
+            <td>Character</td>
+            <td>Employee number</td>
+          </tr>
+          <tr>
+            <td>jStart</td>
+            <td>Date</td>
+            <td>Start date</td>
+          </tr>
+          <tr>
+            <td>dPay__1</td>
+            <td>Decimal</td>
+            <td>Gross pay in previous employment</td>
+          </tr>
+          <tr>
+            <td>dTax__1</td>
+            <td>Decimal</td>
+            <td>Tax in previous employment</td>
+          </tr>
+          <tr>
+            <td>dPay__2</td>
+            <td>Decimal</td>
+            <td>Gross pay in this employment</td>
+          </tr>
+          <tr>
+            <td>dTax__2</td>
+            <td>Decimal</td>
+            <td>Tax in this employment</td>
+          </tr>
+          <tr>
+            <td>bRefund</td>
+            <td>Logical</td>
+            <td>TRUE if the tax in this employment is a refund</td>
+          </tr>
+          <tr>
+            <td>dPay__3</td>
+            <td>Decimal</td>
+            <td>Total gross pay for the year</td>
+          </tr>
+          <tr>
+            <td>dTax__3</td>
+            <td>Decimal</td>
+            <td>Total tax for the year</td>
+          </tr>
+          <tr>
+            <td>dWidows</td>
+            <td>Decimal</td>
+            <td>Employee's Widows &amp; Orphans/Life Assurance contributions in this employment</td>
+          </tr>
+          <tr>
+            <td>cTaxCode</td>
+            <td>Character</td>
+            <td>Tax code</td>
+          </tr>
+          <tr>
+            <td>cWeek53</td>
+            <td>Character</td>
+            <td>"53", "54" or "56" if this is a week 53 year on weekly, <MadCap:variable name="Variables.2-weekly" style="text-transform: capitalize;" /> and <MadCap:variable name="Variables.4-weekly" style="text-transform: capitalize;" /> payrolls respectively; blank otherwise.</td>
+          </tr>
+          <tr>
+            <td>cNIC__1</td>
+            <td>Character</td>
+            <td>NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>dLEL__1</td>
+            <td>Decimal</td>
+            <td>Earnings at the Lower Earnings Limit (LEL), where earnings are equal to or exceed the LEL, for NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>dET__1</td>
+            <td>Decimal</td>
+            <td>Earnings from the LEL to the Primary Threshold (PT) for NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>dUAP__1</td>
+            <td>Decimal</td>
+            <td>Earnings from the PT to the Upper Accrual Point (UAP) for NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>dUEL__1</td>
+            <td>Decimal</td>
+            <td>Earnings from the UAP to the Upper Earnings Limit (UEL) for NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>dNICee__1</td>
+            <td>Decimal</td>
+            <td>Employee NI contributions for NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>dNIC__1</td>
+            <td>Decimal</td>
+            <td>Total employee and employer NI contributions for NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>bRebate__1</td>
+            <td>Logical</td>
+            <td>TRUE if the total employee and employer NI contribution for NIC table letter 1 is a refund</td>
+          </tr>
+          <tr>
+            <td>cSCON__1</td>
+            <td>Character</td>
+            <td>Scheme contracted out number, where relevant, for NIC table letter 1</td>
+          </tr>
+          <tr>
+            <td>cNIC__2</td>
+            <td>Character</td>
+            <td>NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>dLEL__2</td>
+            <td>Decimal</td>
+            <td>Earnings at the Lower Earnings Limit (LEL), where earnings are equal to or exceed the LEL, for NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>dET__2</td>
+            <td>Decimal</td>
+            <td>Earnings from the LEL to the Primary Threshold (PT) for NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>dUAP__2</td>
+            <td>Decimal</td>
+            <td>Earnings from the PT to the Upper Accrual Point (UAP) for NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>dUEL__2</td>
+            <td>Decimal</td>
+            <td>Earnings from the UAP to the Upper Earnings Limit (UEL) for NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>dNICee__2</td>
+            <td>Decimal</td>
+            <td>Employee NI contributions for NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>dNIC__2</td>
+            <td>Decimal</td>
+            <td>Total employee and employer NI contributions for NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>bRebate__2</td>
+            <td>Logical</td>
+            <td>TRUE if the total employee and employer NI contribution for NIC table letter 2 is a refund</td>
+          </tr>
+          <tr>
+            <td>cSCON__2</td>
+            <td>Character</td>
+            <td>Scheme contracted out number, where relevant, for NIC table letter 2</td>
+          </tr>
+          <tr>
+            <td>cNIC__3</td>
+            <td>Character</td>
+            <td>NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>dLEL__3</td>
+            <td>Decimal</td>
+            <td>Earnings at the Lower Earnings Limit (LEL), where earnings are equal to or exceed the LEL, for NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>dET__3</td>
+            <td>Decimal</td>
+            <td>Earnings from the LEL to the Primary Threshold (PT) for NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>dUAP__3</td>
+            <td>Decimal</td>
+            <td>Earnings from the PT to the Upper Accrual Point (UAP) for NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>dUEL__3</td>
+            <td>Decimal</td>
+            <td>Earnings from the UAP to the Upper Earnings Limit (UEL) for NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>dNICee__3</td>
+            <td>Decimal</td>
+            <td>Employee NI contributions for NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>dNIC__3</td>
+            <td>Decimal</td>
+            <td>Total employee and employer NI contributions for NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>bRebate__3</td>
+            <td>Logical</td>
+            <td>TRUE if the total employee and employer NI contribution for NIC table letter 3 is a refund</td>
+          </tr>
+          <tr>
+            <td>cSCON__3</td>
+            <td>Character</td>
+            <td>Scheme contracted out number, where relevant, for NIC table letter 3</td>
+          </tr>
+          <tr>
+            <td>cNIC__4</td>
+            <td>Character</td>
+            <td>NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>dLEL__4</td>
+            <td>Decimal</td>
+            <td>Earnings at the Lower Earnings Limit (LEL), where earnings are equal to or exceed the LEL, for NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>dET__4</td>
+            <td>Decimal</td>
+            <td>Earnings from the LEL to the Primary Threshold (PT) for NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>dUAP__4</td>
+            <td>Decimal</td>
+            <td>Earnings from the PT to the Upper Accrual Point (UAP) for NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>dUEL__4</td>
+            <td>Decimal</td>
+            <td>Earnings from the UAP to the Upper Earnings Limit (UEL) for NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>dNICee__4</td>
+            <td>Decimal</td>
+            <td>Employee NI contributions for NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>dNIC__4</td>
+            <td>Decimal</td>
+            <td>Total employee and employer NI contributions for NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>bRebate__4</td>
+            <td>Logical</td>
+            <td>TRUE if the total employee and employer NI contribution for NIC table letter 4 is a refund</td>
+          </tr>
+          <tr>
+            <td>cSCON__4</td>
+            <td>Character</td>
+            <td>Scheme contracted out number, where relevant, for NIC table letter 4</td>
+          </tr>
+          <tr>
+            <td>dSMP</td>
+            <td>Decimal</td>
+            <td>Statutory maternity pay</td>
+          </tr>
+          <tr>
+            <td>dSPP</td>
+            <td>Decimal</td>
+            <td>Ordinary statutory paternity pay</td>
+          </tr>
+          <tr>
+            <td>dASPP</td>
+            <td>Decimal</td>
+            <td>Additional statutory paternity pay (to 2014); shared parental pay (from 2015)</td>
+          </tr>
+          <tr>
+            <td>dSAP</td>
+            <td>Decimal</td>
+            <td>Statutory adoption pay</td>
+          </tr>
+          <tr>
+            <td>dSSP</td>
+            <td>Decimal</td>
+            <td>Statutory sick pay</td>
+          </tr>
+          <tr>
+            <td>dStud</td>
+            <td>Decimal</td>
+            <td>Student loan deductions</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <strong>Ireland P60 Field List</strong>
+      </p>
+      <p>dUSCRate__3DecimalUSC rate 3dUSCCutOff__3DecimalAnnual USC cut off point 3</p>
+      <table class="type1">
+        <tbody>
+          <tr>
+            <th>P60 Field</th>
+            <th>Datatype</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>cPPSN</td>
+            <td>Character</td>
+            <td>PPS number</td>
+          </tr>
+          <tr>
+            <td>cSurname</td>
+            <td>Character</td>
+            <td>Employee <MadCap:variable name="Variables.last name" /></td>
+          </tr>
+          <tr>
+            <td>cForename</td>
+            <td>Character</td>
+            <td>Employee forename(s)</td>
+          </tr>
+          <tr>
+            <td>iKco</td>
+            <td>Integer</td>
+            <td>Company</td>
+          </tr>
+          <tr>
+            <td>cKno</td>
+            <td>Character</td>
+            <td>Employee number</td>
+          </tr>
+          <tr>
+            <td>jDOB</td>
+            <td>Date</td>
+            <td>Date of birth</td>
+          </tr>
+          <tr>
+            <td>cAddress__1</td>
+            <td>Character</td>
+            <td>Employee address line 1</td>
+          </tr>
+          <tr>
+            <td>cAddress__2</td>
+            <td>Character</td>
+            <td>Employee address line 2</td>
+          </tr>
+          <tr>
+            <td>cAddress__3</td>
+            <td>Character</td>
+            <td>Employee address line 3</td>
+          </tr>
+          <tr>
+            <td>jStartDate</td>
+            <td>Date</td>
+            <td>Start date</td>
+          </tr>
+          <tr>
+            <td>jEndDate</td>
+            <td>Date</td>
+            <td>
+              <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" />
+            </td>
+          </tr>
+          <tr>
+            <td>bExemptPRSI</td>
+            <td>Logical</td>
+            <td>TRUE if the employee was exempt from PRSI for the whole year</td>
+          </tr>
+          <tr>
+            <td>dPRSIGross</td>
+            <td>Decimal</td>
+            <td>Gross pay for employee PRSI in this employment</td>
+          </tr>
+          <tr>
+            <td>dEmployerPRSI</td>
+            <td>Decimal</td>
+            <td>Employer PRSI contributions</td>
+          </tr>
+          <tr>
+            <td>dEmployeePRSI</td>
+            <td>Decimal</td>
+            <td>Employee PRSI contributions</td>
+          </tr>
+          <tr>
+            <td>iTotalPRSIWeeks</td>
+            <td>Integer</td>
+            <td>Total number of insurable weeks</td>
+          </tr>
+          <tr>
+            <td>cPRSIClass__1</td>
+            <td>Character</td>
+            <td>First PRSI class</td>
+          </tr>
+          <tr>
+            <td>cPRSIClass__2</td>
+            <td>Character</td>
+            <td>Second PRSI class</td>
+          </tr>
+          <tr>
+            <td>cPRSIClass__3</td>
+            <td>Character</td>
+            <td>Third PRSI class</td>
+          </tr>
+          <tr>
+            <td>cPRSIClass__4</td>
+            <td>Character</td>
+            <td>Fourth PRIS class</td>
+          </tr>
+          <tr>
+            <td>iPRSIWeeks__1</td>
+            <td>Integer</td>
+            <td>Number of weeks at first PRSI class</td>
+          </tr>
+          <tr>
+            <td>iPRSIWeeks__2</td>
+            <td>Integer</td>
+            <td>Number of weeks at second PRSI class</td>
+          </tr>
+          <tr>
+            <td>iPRSIWeeks__3</td>
+            <td>Integer</td>
+            <td>Number of weeks at third PRSI class</td>
+          </tr>
+          <tr>
+            <td>iPRISWeeks__4</td>
+            <td>Integer</td>
+            <td>Number of weeks at fourth PRSI class</td>
+          </tr>
+          <tr>
+            <td>iTaxBasis</td>
+            <td>Integer</td>
+            <td>Tax basis: 0 = ordinary; 1 = temporary basis; 2 = emergency basis; 3 = exclusion order</td>
+          </tr>
+          <tr>
+            <td>dPrevGross</td>
+            <td>Decimal</td>
+            <td>Gross pay in previous employment</td>
+          </tr>
+          <tr>
+            <td>dPrevTax</td>
+            <td>Decimal</td>
+            <td>Tax in previous employment</td>
+          </tr>
+          <tr>
+            <td>dGrossPay</td>
+            <td>Decimal</td>
+            <td>Gross pay in this employment</td>
+          </tr>
+          <tr>
+            <td>dTax</td>
+            <td>Decimal</td>
+            <td>Tax in this employment</td>
+          </tr>
+          <tr>
+            <td>dIllBenefit</td>
+            <td>Decimal</td>
+            <td>Taxable illness benefit in this employment</td>
+          </tr>
+          <tr>
+            <td>dPrevUSCGross</td>
+            <td>Decimal</td>
+            <td>Gross pay for USC in previous employment</td>
+          </tr>
+          <tr>
+            <td>dLevyGross</td>
+            <td>Decimal</td>
+            <td>Gross pay for USC/income levy in this employment</td>
+          </tr>
+          <tr>
+            <td>dPrevUSC</td>
+            <td>Decimal</td>
+            <td>USC deducted in previous employment</td>
+          </tr>
+          <tr>
+            <td>dLevy</td>
+            <td>Decimal</td>
+            <td>USC/income levy deducted in this employment</td>
+          </tr>
+          <tr>
+            <td>dLPT</td>
+            <td>Decimal</td>
+            <td>Local property tax deducted in this employment</td>
+          </tr>
+          <tr>
+            <td>dTaxableBenefits</td>
+            <td>Decimal</td>
+            <td>Value of taxable benefits in kind provided to the employee</td>
+          </tr>
+          <tr>
+            <td>bDirector</td>
+            <td>Logical</td>
+            <td>TRUE if the employee is a director</td>
+          </tr>
+          <tr>
+            <td>bWeek1Basis</td>
+            <td>Logical</td>
+            <td>TRUE if the employee is on a week 1 basis</td>
+          </tr>
+          <tr>
+            <td>dFreePay</td>
+            <td>Decimal</td>
+            <td>Tax credits</td>
+          </tr>
+          <tr>
+            <td>der-ni-td7</td>
+            <td>Decimal</td>
+            <td>Standard rate cut off point</td>
+          </tr>
+          <tr>
+            <td>dUSCRate__1</td>
+            <td>Decimal</td>
+            <td>USC rate 1</td>
+          </tr>
+          <tr>
+            <td>dUSCRate__2</td>
+            <td>Decimal</td>
+            <td>USC rate 2</td>
+          </tr>
+          <tr>
+            <td>dUSCRate__3</td>
+            <td>Decimal</td>
+            <td>USC rate 3</td>
+          </tr>
+          <tr>
+            <td>dUSCRate__4</td>
+            <td>Decimal</td>
+            <td>USC rate 4</td>
+          </tr>
+          <tr>
+            <td>dUSCRate__5</td>
+            <td>Decimal</td>
+            <td>USC rate 5</td>
+          </tr>
+          <tr>
+            <td>dUSCCutOff__1</td>
+            <td>Decimal</td>
+            <td>Annual USC cut off point 1</td>
+          </tr>
+          <tr>
+            <td>dUSCCutOff__2</td>
+            <td>Decimal</td>
+            <td>Annual USC cut off point 2</td>
+          </tr>
+          <tr>
+            <td>dUSCCutOff__3</td>
+            <td>Decimal</td>
+            <td>Annual USC cut off point 3</td>
+          </tr>
+          <tr>
+            <td>dUSCCutOff__4</td>
+            <td>Decimal</td>
+            <td>Annual USC cut off point 4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="2439" MadCap:lastWidth="885">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Order Import File Format</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Order Import File Format</h1>
+    <p>The following import format is used by <span class="function" title="Function:%WPO901IFPOH">Import Purchase Orders</span>. The file must be in CSV format.</p>
+    <p>The first line of the file contains the field descriptions, which are for the user's benefit; the second line contains the <MadCap:variable name="General.ProductName" /> field names (as below) and is required for the import. The following lines contain the order data to be imported.</p>
+    <p>The file can contain multiple orders, each with multiple lines. Each new order (and the first line of that order) is identified by a line with Y in the first column; subsequent lines on that order have N in the first column.</p>
+    <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" cellspacing="0">
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Column<br />Number</th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Description</th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <MadCap:variable name="General.ProductName" /> Field</th>
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">1</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">New Purchase Order?</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">.new</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>This field cannot be blank.</p>
+            <p>Y = The line is a new order.</p>
+            <p>N = The line relates to the previous order (identified by Y in the .new column)</p>
+            <p>Values in fields related to the order header are ignored on lines where this is N.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">2</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Purchase Order Number</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_ordno</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">3</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">PO Type</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_mpo</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This must be one of the following PO types:
+<p>M – Material Order<br />P – <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Order<br />W – Workshop Order<br />A – Asset Order<br />I – <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Order<br />O – Overhead Order<br />R – <MadCap:variable name="Variables.pc rehire" style="text-transform: capitalize;" /> Order</p><p>This functionality doesn't support S – Subcontract Orders.</p></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">4</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Order Type</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.pot_type</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">One of the user-defined order type codes. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">5</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Confirmation Order?</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_confirm</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">6</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.Jc Contract caps" /> Number</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.job_jobph</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">7</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Overhead Department</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.pov_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">8</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Workshop Job Reference Number</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.faw_ref</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">9</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Internal Reference Number of Company</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.cim_intref</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">10</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Number</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_accno</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">11</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Name</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_name</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">12</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Internal Reference Number of Office</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.cio_intref</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">13</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />'s Office Name</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_offname</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">14</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Contact</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_attention</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">15</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">PO Date</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_odate</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">16</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Expected Delivery Date</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_ddate</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">17</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">PO Description</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_desc</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">18</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Buyer Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.pob_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">19</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Notes and Reference</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_specins__1</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">20</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Delivery Instruction</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_specins__2</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">21</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Allow Call-Offs?</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_alwcode</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">22</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Person that Requisitioned Order</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_reqdby</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">23</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">List of Requisition Numbers</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.poh_reqno</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">24</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Project Code for Address</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.pja_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">25</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_hdr.vat_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">26</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Order Line Type</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">.addtype</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>This field cannot be blank.</p>
+            <p>M = Material Line</p>
+            <p>T = Text Line</p>
+            <p>S = <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Line</p>
+            <p>P = <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Line</p>
+            <p>R = Extra Line</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">27</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Commodity Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">28</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">PO Line Description</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">.RW_pol_fullDescription</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field can be blank but the line description will not be populated automatically </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">29</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">WBS Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.jwb_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">30</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" />
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_CostHead</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">31</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Cost Category</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_cat</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">32</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Quantity</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_qty</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">33</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Unit of Quantity</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_uoq</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">34</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Price</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_price</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">35</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Price Per Unit</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_per</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">36</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">% Discount Available</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_disc</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">37</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Date Item is Due</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.pol_ddate</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">38</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Item <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">po_line.vat_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">39</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Item <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Amount</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">po_line.pol_tax</td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+  </body>
+</html>

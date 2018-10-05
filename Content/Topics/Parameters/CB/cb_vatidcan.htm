@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CB/VATIDCAN - Users able to cancel a VAT Return</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CB/VATIDCAN - </span> Users able to cancel a VAT Return
+</div>
+<div class="param_def">
+<p>A can-do list of users who have permissions to cancel a <MadCap:variable name="Variables.VAT caps"/> return.</p>
+<P>You can also specify users who are <EM>not</EM> permitted to cancel a <MadCap:variable name="Variables.VAT caps"/> return by prefixing their user ID with an exclamation mark (<SPAN class="userinput">!</SPAN>). </P>
+<P>To globally allow any user who created a <MadCap:variable name="Variables.VAT caps"/> return the ability to cancel it, enter '<SPAN class="userinput">INPUTUSER</SPAN>' on the list. </P>
+<P>If the parameter is blank then only SYSadmin users and Root users have permission to cancel <MadCap:variable name="Variables.VAT caps"/> returns.</P>
+<P>For example:</P>
+<OL>
+<LI><SPAN class="userinput">JOEBLOGGS,IANMIL</SPAN> - Only these two users can cancel <MadCap:variable name="Variables.vat"/> returns.</LI>
+<LI><SPAN class="userinput">JOEBLOGGS,IANMIL,SYSADMIN</SPAN> - Only these two users plus SYSADMIN can cancel <MadCap:variable name="Variables.vat"/> returns.</LI>
+<LI><SPAN class="userinput">INPUTUSER</SPAN>  - Any user can cancel a <MadCap:variable name="Variables.vat"/> return that they themselves have created but cannot cancel another user's <MadCap:variable name="Variables.vat"/> return.</LI>
+<LI><SPAN class="userinput">INPUTUSER,!SYSADMIN,!IANMIL </SPAN>- Same as (3) except that SYSADMIN and IANMIL are prevented from cancelling their own <MadCap:variable name="Variables.vat"/> returns.</LI></OL>
+</div>
+</body>
+</html>

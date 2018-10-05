@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="7342" MadCap:lastWidth="1186">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="OA Designer;Topics" />Page Fields - View As Options</h1>
+        <h2>blank</h2>
+        <p>Allows you to display the field as an input field.</p>
+        <h2>Blank When Zero</h2>
+        <p>Allows you to display the value of a numeric field, and display a blank when the value is zero.</p>
+        <h2>Checkbox</h2>
+        <p>Allows you to display a logical field as a checkbox.</p>
+        <h2>Code with tooltip</h2>
+        <p>Allows you to display the code value as normal but will provide a tooltip when you hover over the code showing the description. This uses the combo populate technology, so you must have a getValue&lt;Field&gt; available in the appropriate RSP.  This may not work very well with updates or with linked fields but might be useful at other times.</p>
+        <h2>Combo</h2>
+        <p>Provides a drop-down from which you can select the value of the field.</p>
+        <p>To specify how the combo is populated, in the Populate field is an RSP name and optionally the name of the populate procedure to call. e.g. job-rsp or job-rsp.job_complete. </p>
+        <p>You can populate a combo with a user defined list of options. The syntax for the populate is as follows:-</p>
+        <p><span class="Emphasis">sys002.combo^A,Desc A,B,Desc B,C, Desc C</span>
+        </p>
+        <p>As a default the combo will display in alphabetical order. To override this behaviour you can specify the order by inserting Pipe symbol prior to the Description. For example:-</p>
+        <p><span class="Emphasis">sys002.combo^C,|Desc C,A,|Desc A,B,|DescB</span>
+        </p>
+        <p>If the field is a user-defined code, show the value and description.  If the field is a system-generated code, show the description only.</p>
+        <p>Variants:</p>
+        <ul>
+            <li>Combo</li>
+            <li>Combo Description/Value</li>
+            <li>Combo Value Only</li>
+            <li>Combo Value/Description</li>
+        </ul>
+        <p>You can populate Combo-boxes using client-side code.</p>
+        <p>For example, on the Facilities Management - Add Job screen (page %WFM1010BSWJ), changing the Major Category will change the possible selections of Minor Category and Response.</p>
+        <p>There is a JavaScript file populateCombo.js which contains functions for populating description/value and value only combo boxes.  Various data is sent to the page using a couple of Send Data procedures.  This data is then manipulated by the function majcat_onchange in FMstuff.js which calls populateCombo.</p>
+        <p>If you have too many records in a combo then the combo as an input device becomes unusable. Also if you have lots of records then eventually you will break the string limit in PROGRESS and the input field will fail. One workaround to this is to put two fields, one as an input without combo and a display field with combo. There is now a count limit to all combos such that if the count of options in a combo exceeds 400 then the combo is now shown and instead a fill in will be shown instead. There is now an added option on the section field to allow you to specify the limit to be shown in the combo. The Combo Limit field in under the Populate field. If this is not specified it will default of 400 will be used.</p>
+        <h2>Disabled Field</h2>
+        <p>Allows you to display a field that is always disabled, but that you can put values into using JavaScript.  For example, a total field on a form that is the sum of some other fields.</p>
+        <h2>Disabled with Lookup</h2>
+        <p>Allows you to display a field as a disabled field and provide a lookup button alongside to populate it.</p>
+        <p>This is equivalent to a server-side combo.</p>
+        <p>For example, people fields on a HS visitor record.</p>
+        <p>It could also be used to select a company for a PO although this is currently done with an enabled field and field validation.</p>
+        <p>You will need to set up a lookup for the field in the normal way and return an appropriate description.  Also using the lookup you can return an additional code in to other fields on the page (hidden or otherwise); for example, the internal reference of the field.</p>
+        <h2>Editor</h2>
+        <p>Allows you to display the field as an editor box.  The box has vertical scroll-bars if required.</p>
+        <p>Avoid displaying Editor contents in a browse (Body form).  Use a Body Update or Update form.</p>
+        <h2>Email</h2>
+        <p>This is similar to View As Link except that it automatically adds on the mailto: to the link so that it links to your default email client.</p>
+        <h2>File</h2>
+        <p>Allows you to update a field as a filename.</p>
+        <p>In Update, the field has a Browse button next to it, which opens a Windows “Choose file” dialogue box.  The file you select is uploaded to the server and placed in the upload directory for further processing.</p>
+        <h2>Grid Element</h2>
+        <p>A grid element is a cell in a matrix. </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/GridElement_1.png" />
+        </p>
+        <h2>Inline Frame</h2>
+        <p>An inline frame is a separate window and can contain a browse page which can using paging techniques to navigate a large number of records.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/InlineFrame_1.png" class="HalfWidth" />
+        </p>
+        <p>In the Function field, specify the function that is to be included at that point in the header page. Functions/Pages of this type should be named like a normal browse type e.g. %WmmBttt.  If you specify a label then the frame will be labelled.  If you don't then the frame will take up the complete width of the header.</p>
+        <h2>Link</h2>
+        <p>Allows you to display a field as a Link.</p>
+        <p>This assumes the field contains a valid URL or Filename that can be linked to.</p>
+        <p>In Update the field is presented as a fill in for entry.</p>
+        <p>In display the field becomes a link to the document specified.</p>
+        <p>You can specify the link text to be different to the link itself.  For example, if you have a link to a document F:\documents\file.doc, that would by default appear as the text for the link.  If you enter something in the Populate: field for this field, then that is used instead.  You can also use {} to replace with data in the Populate: field.</p>
+        <h2>List Frame</h2>
+        <p>(Used on a Header form) A list is a non-paged set of records.  You can control the size of the containing frame by specifying a height on the field –this can result in a scrollbar being added (if you leave the height blank, the list grows to display all records).  However, all the records are downloaded in to the header page (beware the volume of data).  In the Function field, specify the function that is to be included at that point in the header page. Pages of this type should be named %WmmLttt where mm is the module, L (for List) and ttt is the table TLA.  If you specify a label then the list will be labelled.  If you don't then the list will take up the complete width of the header.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/ListFrame_1.png" class="HalfWidth" />
+        </p>
+        <h2>Multiple Selection</h2>
+        <p>You can view comma-separated lists as multiple check boxes.</p>
+        <p>e.g. cim_typelist on ci_company is a list of company types.</p>
+        <p>You setup populate/getvalue functions in the RSP exactly the same as a combo.  The result is a set of checkboxes, one for each of the options in your populate function, ticked if the field you are updating contains the code in its list.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/MultipleSelection_1.png" class="HalfWidth" />
+        </p>
+        <p>The display version shows only the ticked options.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/MultipleSelection_2.png" class="HalfWidth" />
+        </p>
+        <p>Variants:</p>
+        <ul>
+            <li>Multi-Select</li>
+            <li>Multi-Select Value/Description</li>
+            <li>Multi-Select (2 Columns) - displays as two columns of checkboxes.</li>
+            <li>Multi-Select Value/Description (2 Columns)</li>
+        </ul>
+        <h2>No Break</h2>
+        <p>No Break will ensure that the field is not broken up when the available space is too small.  This is done automatically for integers and decimals but you can use this view as option for other fields if required.  Particularly useful for codes that might contain hyphens.</p>
+        <h2>Ordered List</h2>
+        <p>Allows you to update ordered list fields with two separate lists with add, delete, move up and move down buttons.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/OrderedList_1.png" class="HalfWidth" />
+        </p>
+        <p>Set view-as on the field to Ordered List (or one of the value and description options).  You will need a populate method (same as for combos, selections, etc.) and you will be presented with a list of unused codes in a left selection list, and the selected codes show in a right selection list.</p>
+        <p>The display version shows a comma-separated list of the selected codes.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/OrderedList_2.png" class="HalfWidth" />
+        </p>
+        <p>Look at %WSYBSUR (User Maintenance - Groups Tab) for an example.</p>
+        <p>Variants:</p>
+        <ul>
+            <li>Ordered List</li>
+            <li>Ordered List Description/Value</li>
+            <li>Ordered List Value Only</li>
+            <li>Ordered List Value/Description</li>
+        </ul>
+        <h2>Password</h2>
+        <p>Allows you to update and view a field as "password".</p>
+        <p>This will display *** in the place of the actual field.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/Password_1.png" class="HalfWidth" />
+        </p>
+        <h2>Picture</h2>
+        <p>View-as picture will present an image on screen when in display/read only mode and a fill in field (for the file/URL reference) when in update mode.</p>
+        <p>See the picture on the HR Person record for an example.</p>
+        <h2>Preformatted</h2>
+        <p>Allows you to display a field as preformatted.</p>
+        <p>This will add &lt;PRE&gt; &lt;/PRE&gt; around the HTML for this field.  It assumes the data will be formatted in fixed width columns.</p>
+        <p>Select Preformatted on the view as field on the page field maintenance.</p>
+        <p>This view of data is provided to allow some existing code to be used in a web page.  You should not use this type of View As except in this circumstance.</p>
+        <h2>Radio Set</h2>
+        <p>Allows you to display input fields as radio sets.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RadioSet_1.png" class="HalfWidth" />
+        </p>
+        <p>Set it up like a combo (that is, with a populate option) and change the view as option to radio set.  You will get a vertical radio set.  Display will be the same as a combo i.e. the description of the selected option will be shown.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RadioSet_2.png" class="HalfWidth" />
+        </p>
+        <h2>Selection</h2>
+        <p>Allows you to display data in a multi-selection list.</p>
+        <p>These are equivalent to the combo selections except that they accept multi selections and return a comma-separated list as a result.</p>
+        <p>The use of these is not recommended for updating records as it is too easy to click on the list and delete the data that is already selected.  For this you should use multi select checkboxes.</p>
+        <p>These can be used for forms, for example report selection or processing selection where the initial value is probably blank.</p>
+        <p>You need to specify a populate method in the same way as you do for combos.</p>
+        <p>Variants:</p>
+        <ul>
+            <li>Selection</li>
+            <li>Selection Description/Value</li>
+            <li>Selection Value Only</li>
+            <li>Selection Value/Description</li>
+        </ul>
+        <h2>Sorting Combos, Selection List, Multi Selects and Ordered Lists</h2>
+        <p>These are sorted automatically in to the order that is selected in the view as.</p>
+        <p>For example, if you select view as combo value/description then the sort will be on the value.</p>
+        <p>If you select view as combo then the sort will be on the description.</p>
+        <p>If you want to override this (for example, GL Periods are sorted in date order not description order), then specify | as the first character of the description field.  This can be specified in the syu008.i entry as &amp;fixOrder=|.</p>
+    </body>
+</html>

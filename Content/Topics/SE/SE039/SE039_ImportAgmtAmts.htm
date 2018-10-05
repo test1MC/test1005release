@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Import [%=Variables.Se Agreement caps%] Amounts</title>
+    </head>
+    <body>
+        <h1>Import <MadCap:variable name="Variables.Se Agreement caps" /> Amounts</h1>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">An </MadCap:conditionalText>import called <strong>Import <MadCap:variable name="Variables.Se Agreement caps" /> Amounts </strong>is available in Service Management to import <MadCap:variable name="Variables.Se Agreement caps" /> Amounts. This function also supports a Workspace area.</p>
+        <p class="Body"> In order for this Import to be able to run, the <MadCap:variable name="Variables.Se Agreement caps" /> Details, Locations, Allowable Work, and Cost Codes must already be on file.</p>
+        <h2>Import <MadCap:variable name="Variables.Se Agreement caps" /> Data Menu</h2>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">An </MadCap:conditionalText><strong>Import <MadCap:variable name="Variables.Se Agreement caps" /> Amounts </strong>submenu is available under the Import <MadCap:variable name="Variables.Se Agreement caps" /> Data menu in <i>Service Management &gt; Administration</i>, as shown in <MadCap:xref href="#ImportAgmtAmtsMenu" class="ImageRef"><i>Figure 1:  Import [%=Variables.Se Agreement caps%] Amounts Submenu</i></MadCap:xref>. This submenu allows you to create <MadCap:variable name="Variables.Se Agreement caps" /> Amounts. It includes two functions:</p>
+        <ul>
+            <li><span class="Function">Import </span>- This provides you with an <strong>Example CSV </strong>file. The columns in the <strong>Example CSV </strong>file are configurable, that is, you can rearrange or remove them as needed.</li>
+            <li><![CDATA[  ]]><span class="Function">Workspace </span>- The Workspace browse has column set capability, so that you can view the elements of data you have imported.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="ImportAgmtAmtsMenu"></a>Import <MadCap:variable name="Variables.Se Agreement caps" /> Amounts Submenu</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE039_Images/ImpAgmtDataMenu.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Body">This import is designed as a multi-step function:</p>
+        <ol>
+            <li class="ListNumber1">Import the data into a temporary Workspace. </li>
+            <li class="ListNumber1">Use the <span class="Function">Workspace </span>browse to make corrections to the data.  You can also use the <strong>Delete </strong>button to remove individual rows of data.</li>
+            <li class="ListNumber1">Select options from the Options menu to validate the data (<span class="Function">Validate All Records</span>), post the data (<span class="Function">Post All Records</span>), and clear out all data (<span class="Function">Clear Workspace</span>).</li>
+        </ol>
+        <h2><a name="Import"></a>Import</h2>
+        <p class="Body">The <strong>Import </strong>screen (<MadCap:xref href="#ImportScreen" class="ImageRef"><i>Figure 2:  Import Screen</i></MadCap:xref>) allows you to import data for <MadCap:variable name="Variables.Se Agreement caps" /> Amounts from a CSV file. This data can then be imported into the <strong>Workspace</strong>, where it can be edited, validated, and posted.</p>
+        <p class="Body">Also found on this screen is a link to an <span class="Function">Example CSV</span> file. The columns in the Example CSV file are configurable, that is, you can rearrange or remove them as needed. In order to create new <MadCap:variable name="Variables.Se Agreement caps" /> Amount records, the CSV spreadsheet must reference the mandatory fields required to create an <MadCap:variable name="Variables.Se Agreement caps" /> Amount. </p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="ImportScreen"></a>Import Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE039_Images/ImportAmtScreen.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Subtitle">Field Definitions (Selected Field)</p>
+        <p class="IndentBold">Generate Billing and Revenue Schedule</p>
+        <p class="IndentFieldDef">This<span class="Field"> </span><MadCap:variable name="Variables.tick" />box allows you to mark <MadCap:variable name="Variables.Se Agreement caps" /> Amount records for the automatic generation of Billing and Revenue Schedule records when Import posting is complete. (The <span class="Function">Generate <MadCap:variable name="Variables.Se Agreement caps" /> Billing and Revenue Schedule </span>function under Import <MadCap:variable name="Variables.Se Agreement caps" /> Data can also be used when needed.)</p>
+        <p class="IndentFieldDef">In order for the Billing and Revenue Schedule to generate correctly, you must make sure that: (1)&#160;the <MadCap:variable name="Variables.Se Agreement caps" /> Amount record has a corresponding fields value set; and (2) the Effective Date, First Billing Date, and <MadCap:variable name="Variables.Se Agreement caps" /> Amount import values are set.</p>
+        <h2><a name="Generate"></a>Generate <MadCap:variable name="Variables.Se Agreement caps" /> Billing and Revenue Schedule Function</h2>
+        <p class="Body">In addition to the <span class="Field">Generate Billing and Revenue Schedule </span><MadCap:variable name="Variables.tick" />box discussed above, <span class="Function">Generate <MadCap:variable name="Variables.Se Agreement caps" /> Billing And Revenue Schedule</span> is provided as a separate function under the Import <MadCap:variable name="Variables.Se Agreement caps" /> Data menu in <i>Service Management &gt;&#160;Administration</i>, as shown in <MadCap:xref href="#GenAgmtBillRevSched" class="ImageRef"><i>Figure 3:  Generate [%=Variables.Se Agreement caps%] Billing And Revenue Schedule Function</i></MadCap:xref>. It can be used when schedules are not generated while posting the <MadCap:variable name="Variables.Se Agreement caps" /> Amount.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="GenAgmtBillRevSched"></a>Generate <MadCap:variable name="Variables.Se Agreement caps" /> Billing and Revenue Schedule Function</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="screenshot">
+            <img src="../../../Resources/Images_S-U/SE/SE039_Images/GenAgmtBillRevSched.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Body">As usual, you can also still generate Billing and Revenue Schedule records through the <span class="Function">Generate Billing Schedule </span>and <span class="Function">Generate Revenue Schedule </span>actions on <MadCap:variable name="Variables.Se Agreements caps" /> <i>&gt; Operational Setup &gt; <MadCap:variable name="Variables.Se Agreement caps" /> Amount</i>, as shown in <MadCap:xref href="#AgmtAmtActions" class="ImageRef"><i>Figure 4:  [%=Variables.Se Agreement caps%] Amount Actions</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="AgmtAmtActions"></a><MadCap:variable name="Variables.Se Agreement caps" /> Amount Actions</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE039_Images/GenBillRevSchedActions.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h2><a name="Workspac"></a>Workspace</h2>
+        <p class="Body">The <strong>Workspace </strong>browse has column set capability so that you can view the elements of data you have imported. Here you can edit, validate, and post the imported data. A sample browse is shown in <MadCap:xref href="#WSScreen" class="ImageRef"><i>Figure 5:  Workspace Browse</i></MadCap:xref>.</p>
+        <p class="Body">The <span class="Field">Status </span>column is found in the Workspace browse.    Also, a record is flagged in an <span class="Field">Alert </span>(red flag) column if it does not pass validation to qualify as a valid <MadCap:variable name="Variables.Se Agreement caps" /> Amount.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="WSScreen"></a>Workspace Browse</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE035_Images/WorkspaceBrowse.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h3>Options Menu</h3>
+        <p class="Body">The <strong>Options </strong>menu at the top of the Workspace browse contains the following options:&#160;<strong>Validate All Records</strong>, <strong>Post All Records</strong>, and <strong>Clear Workspace</strong>, as shown in <MadCap:xref href="#ValidationOption" class="ImageRef"><i>Figure 6:  Workspace Options Menu</i></MadCap:xref>. Each option is explained below.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="ValidationOption"></a>Workspace Options Menu</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE039_Images/ValidationOption.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="IndentBold">Validate All Records</p>
+        <p class="IndentFieldDef">Use this option to perform validation of the Workspace records. A record is flagged if it does not pass validation to qualify as a valid <MadCap:variable name="Variables.Se Agreement caps" /> Amount.</p>
+        <p class="IndentFieldDef">The <span class="Field">Status </span>of a validated record is shown as a green circle with the tooltip appearing as "OK", as shown in <MadCap:xref href="#StatusGreen" class="ImageRef"><i>Figure 7:  Green Circle Status</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="StatusGreen"></a>Green Circle Status</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE034_Images/StatusGreenCircle.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="IndentBold">Post All Records</p>
+        <p class="IndentFieldDef">All records in the Workspace must be valid in order for the Post to process. If at least one record is not valid, an error message is shown (see <MadCap:xref href="#ValidErrorMsg" class="ImageRef"><i>Figure 8:  Validation Error Message</i></MadCap:xref>) and posting is aborted.</p>
+        <p class="IndentFieldDef">The Post process removes all Workspace records upon successful completion.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="ValidErrorMsg"></a>Validation Error Message</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE034_Images/ValidErrorMsg.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="IndentBold">Clear Workspace</p>
+        <p class="IndentFieldDef">This function lets you clear the Workspace of all data.</p>
+    </body>
+</html>

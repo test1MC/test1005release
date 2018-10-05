@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Workflow Template (merging stages)</h1>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template merging.png" class="FullWidth" />
+        </p>
+        <p>In this example the workflow is launched from a button which has been inserted on the leaver tab of the personnel record.&#160;&#160; The launch of the workflow has been saved as a Calculation Programs which can be run as a link from the button on screen.</p>
+        <p>The workflow will then launch off four (4) simultaneous stages to four (4) separate roles. Only on the completion of all four (4) tasks will the Exit interview be allowed to proceed.</p>
+        <h2>Role definition</h2>
+        <p>Create the roles required for this Workflow.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-050-1108.png" class="FullWidth" />
+        </p>
+        <h2>Responsibility definition</h2>
+        <p>Assign Responsibilities to the Roles.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-051-1108.png" class="FullWidth" />
+        </p>
+        <h2>Template definition – HRPROJ1</h2>
+        <p>Create Workflow Template.&#160; -&#160; HRPROJ1</p>
+        <p>Setup the initial variables:</p>
+        <p>$cURL=substring$(co_config.coc_sysparam^SY|WEBROOT + '/' + co_config.coc_sysparam^SY|WEBSCRPT,8,9999);</p>
+        <p>$ppo_seq=pp_organisation.ppo_seq;<br />$cReport=pp_organisation.ppo_reports_to;<br />$TaskID=pp_organisation.ppo_search_name;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-052-1108.png" class="FullWidth" />
+        </p>
+        <h2>Stage definition</h2>
+        <p>Create Stages:</p>
+        <p>A Fork which will simultaneously send to all four (4) Stages to appear on the various Workbenches.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-053-1108.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Add all four stages individually – to appear on the relevant Role workbench. Include the link to the Personnel Workbench %WHRSPOR.&#160; -&#160; All four stages will Link to a merge stage called (M1).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Stage definition_1.png" class="FullWidth" />
+        </p>
+        <p>A merge stage will ensure that the workflow does not move on until all four (4) stages are completed.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-054-1108.png" />
+        </p>
+        <p>A Next field is available on the Merge stage to allow you to specify which stage to go to after the merge.&#160; If this is left blank, the workflow will default to the next available stage on the workflow after the merge.&#160; In this design the next stage is obvious so the Next field has not been specified and stage S5 will be defaulted to when the four (4) stages are complete.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-055-1108.png" class="FullWidth" />
+        </p>
+        <p>Followed by an END process.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-056-1108.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>The Paths diagram showing the actions on HRPROJ1 is as follows:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-057-1108.png" class="FullWidth" />
+        </p>
+        <h2>Calculation Program definition</h2>
+        <p>Create the Calculation Program required to run the workflow.</p>
+        <p>Calculation Program Option can be found under the OA Reporting&amp; BI Setup menu.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-058-1108.png" class="FullWidth" />
+        </p>
+        <p>A calculation is given a program name and description, and contains the syntax script of a single or multiple calculation commands.</p>
+        <p><span class="Emphasis">method('por-rsp.setRowid$','{1}');<br />$pp_organisation.ppo_leave-date;<br />$pp_organisation.ppo_surname;<br />d=if(INLIST(pp_organisation.ppo_leave-date,''),eq,1,0,1)<br />ifexec(d,eq,1) method('wfuwfp01.startWorkFlow','HRPROJ1');<br />//ifexec(d,eq,1) warning(1,"Leaver Process Started");<br />//ifexec(d,eq,0) warning(1,"Leaver Process Not Started as no leave date entered");</span>
+        </p>
+        <p>You can use // to comment out a calculation and you can add notes which are helpful to document what the calculation is used for.&#160;&#160; Any parameters which are passed into the calculation are numerically numbered according to the order in which they are passed. In this example there is only one (1) parameter passed to the calculation and is therefore referred to in the calculation as {1}.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-059-1108.png" class="FullWidth" />
+        </p>
+        <p>The calculation can then be run from within a calculation field from any of the OA toolkit using the run(calcname,parameter list) functionality or can be referred to on a function link in the following way.</p>
+        <p>sys006.runEval&amp;evalCalc=run('LeaverWF','{pp_organisationRowid}')</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-060-1108.png" />
+        </p>
+        <p>To run the workflow you can manually click on the button which has been added to the leaver tab on the HR Personnel Workbench.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-061-1108.png" class="FullWidth" />
+        </p>
+        <h2>Database Triggers</h2>
+        <p>It is also possible to trigger a workflow automatically when a leave date is entered against the pp_organisation table.&#160;</p>
+        <p>A trigger uses two (2) calculations one which occurs before a record is saved and one which occurs post save.</p>
+        <p>In the post save calculation it is possible to compare the data and if certain results are declared then the workflow is triggered automatically.&#160;&#160; You can leave the triggers in place and stop them from working by rendering the table inactive. (i.e. add X to the end of the table name).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-062-1108.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

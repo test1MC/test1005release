@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="744.3334" MadCap:lastWidth="602">
+    <head>
+        <link href="../../../Resources/TableStyles/COINS_LR_Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />WHERE</h1>
+        <p style="font-weight: normal;">Simply specifying the table with a FOR EACH statement in a query  is okay, assuming we want every record from the selected table, but in practice we would normally want to restrict the number of records returned in some way.  In <MadCap:variable name="General.ProductName" />, transactional data is held at company level.  </p>
+        <p style="font-weight: normal;">Even though you may only have one company in your organisation, the data is still recorded with a company identifier.  <MadCap:variable name="General.ProductName" /> uses the field kco to identify the company number. </p>
+        <p style="font-weight: normal;">Most queries will need to specify the kco values to ensure that the records returned relate specifically to the company you are reporting on.</p>
+        <p>The WHERE statement is used to add a constraint to the query and may refer to a constant, filed name, variable name or expression whose value you want to use to select records</p>
+        <p>Example Query on the coins database to retrieve all contracts (jc_job) that belong to company 1:</p>
+        <p>&#160;</p>
+        <p class="Example">FOR EACH jc_job WHERE kco = 1
+        </p>
+        <p>In the example above we have used ‘=’ as the comparison operator.  There are a number of others than may be used with the WHERE statement.  These are listed in the table below:</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" style="width: 195px;" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" style="width: 279px;" />
+            <thead>
+                <tr class="TableStyle-COINS_LR_Simple-Head-Header1">
+                    <th class="TableStyle-COINS_LR_Simple-HeadE-Column1-Header1">
+                        <p>Keyword</p>
+                    </th>
+                    <th class="TableStyle-COINS_LR_Simple-HeadE-Column1-Header1">
+                        <p>Symbol</p>
+                    </th>
+                    <th class="TableStyle-COINS_LR_Simple-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>EQ</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>=</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Equal to</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>NE	</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>&lt;&gt;</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Not equal to</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>GT	</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>&gt;</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Greater than</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>LT	</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>&lt;</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Less than</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>GE</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>&gt;=</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Greater than or equal to</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>LE</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>&lt;=</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Less than or equal to</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>BEGINS</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Not applicable</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>A character value that begins with this substring.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>MATCHES</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Not applicable</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>A character value that matches this substring, which can include wild card characters</p>
+                        <p>The expression you use to the right of the MATCHES keyword can contain the wild card characters:</p>
+                        <p>An asterisk (*) represents one or more missing characters.</p>
+                        <p>A period (.) represents exactly one missing character.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1">
+                        <p>CONTAINS</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1">
+                        <p>Not applicable</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyA-Column1-Body1">
+                        <p>A database text field that has a special kind of index called a WORD-INDEX</p>
+                        <p>The WORD-INDEX indexes all the words in a field’s text strings, for all the records of the table, allowing you to locate individual words or associated words in the database records, much as you do when you use an Internet search engine to locate text in documents on the web..</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><![CDATA[		]]></p>
+        <p>The WHERE statement can be followed by any expression that identifies a subset of the data using AND/OR to join multiple tests.</p>
+        <p>Example Query on the coins database to retrieve a specific contract (field job_num) for Company 1 from table jc_job</p>
+        <p>&#160;</p>
+        <p class="Example">FOR&#160;EACH jc_job WHERE jc_job.kco = 1<br />AND jc_job.job_num = '123456'</p>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>[%=Variables.Se Agreement caps%] Billings</title>
+        <link href="../../../Resources/Stylesheets/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 "><MadCap:variable name="Variables.Se Agreement caps" /> Billings</h1>
+        <p class="Body">COINS Ti supports separate Taxable Amount values on a transaction through the use of a separate <span class="Field">Taxable Amount </span>field. However, in COINS OA, every transaction is taxable, and the value of the tax is based on the Tax Code referenced. The <span class="Function">Generate <MadCap:variable name="Variables.Se Agreement caps" /> Scheduled Billings</span> and <span class="Function">Generate Time of Service </span>functions <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>allow you to create two separate <MadCap:variable name="Variables.Se Service Order caps" /> Scheduled Billing Detail Lines (see <MadCap:xref href="#RevTaxDefaults" class="ImageRef"><i>Figure 1:  Revenue Tax Defaults</i></MadCap:xref>): (1) one line holds the taxable portion; and (2) the other line holds the non-taxable portion.</p>
+        <ul>
+            <li class="ListBullet1">The <i>taxable portion</i> references the <MadCap:variable name="Variables.Se Agreement caps" />’s <span class="Field">Revenue Taxable Tax Code </span>and is the first line created.</li>
+            <li class="ListBullet1">The <i>non-taxable portion </i>references the <MadCap:variable name="Variables.Se Agreement caps" />’s <span class="Field">Revenue Exempt Tax Code</span>. Any rounding result is applied to the Taxable Detail Line. The sum of the two lines must equal the value of the <strong>Scheduled Amount</strong>. </li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="RevTaxDefaults"></a>Revenue Tax Defaults</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE051_Images/SE051_RevTaxDefaults.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li class="ListBullet1">The <span class="Function">Generate <MadCap:variable name="Variables.Se Agreement caps" /> Scheduled Billings </span>function uses the <strong>Taxable % </strong>entered in the <MadCap:variable name="Variables.Se Agreement caps" />, since both the <MadCap:variable name="Variables.Se Service Order caps" /> and the detail lines are created as one transaction. The <span class="Function">Generate Time of Service </span>(TOS) function (see <MadCap:xref href="#GenTOS" class="ImageRef"><i>Figure 2:  Generate Time of Service</i></MadCap:xref>) uses the <strong>Taxable % </strong>visible on the <MadCap:variable name="Variables.Se Service Order caps" />’s Allowable Work.</li>
+        </ul>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">The <strong>Taxable % </strong>has no effect when a Scheduled Billing Detail Line (<MadCap:xref href="#SchedBillDetLine" class="ImageRef"><i>Figure 3:  Scheduled Billing Detail Line</i></MadCap:xref>) is manually entered. You must enter the applicable Amount and Revenue Tax Code on each Scheduled Billing Detail Line added.</div>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="GenTOS"></a>Generate Time of Service</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE051_Images/SE051_GenTOS.png" class="FullWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="SchedBillDetLine"></a>Scheduled Billing Detail Line</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE051_Images/SE051_SchedBillDetLine.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

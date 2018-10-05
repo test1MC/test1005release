@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />HR and Payroll Record Anonym<MadCap:variable name="Variables.is" />ation</h1>
+        <p>To meet new European <MadCap:glossaryTerm glossTerm="COINS.Term5">GDPR</MadCap:glossaryTerm> requirements on 'the right to be forgotten' and the requirement to only retain personal data for as long as it is necessary and justifiable to do so, a new routine is available which will ‘anonym<MadCap:variable name="Variables.is" />e’ HR Personnel and PR Employee data when required.</p>
+        <p class="todo" MadCap:autonum=" ">To anonym<MadCap:variable name="Variables.is" />e HR and Payroll data</p>
+        <ol>
+            <li>
+                <p>Go to Human Resources &gt;&#160;Administration &gt; <span class="function">Anonym<MadCap:variable name="Variables.is" />e</span> or Payroll &gt;&#160;Administration &gt; <span class="function">Anonym<MadCap:variable name="Variables.is" />e</span>.</p>
+                <MadCap:dropDown class="screenshot">
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Anonym<MadCap:variable name="Variables.is" />ation Selection Screen</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>
+                            <img src="../../../Resources/Images_G-I/HR/HR032_Images/Anonymisation_Selection_Screen.png" />
+                        </p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>
+                <p>Enter the date ranges that apply to the records you want to anonym<MadCap:variable name="Variables.is" />e.</p>
+                <p>The <MadCap:variable name="Variables.leaving date" />s and last paid dates default to a number of years before the most recent year end, based on the setting of the CO&#160;parameter <span class="parameter">ANONYRS</span>. The routine cannot be run for records more recent than this.</p>
+            </li>
+            <li>
+                <p><MadCap:variable name="Variables.Tick caps" /> <span class="field">Delete Captions</span> if you want caption data to be deleted as well.</p>
+            </li>
+            <li>
+                <p>Set the <span class="field">Mode</span> field to <span class="userselect"><MadCap:variable name="Variables.sy check" style="text-transform: capitalize;" /></span> if you just want the routine to report on which records will be anonym<MadCap:variable name="Variables.is" />ed; set to <span class="userselect">Process</span> if you want it to actually anonym<MadCap:variable name="Variables.is" />e the records.</p>
+            </li>
+            <li>
+                <p>Optionally, use the Employee Selection or Personnel Selection tab to further restrict the records that will be anonym<MadCap:variable name="Variables.is" />ed.</p>
+            </li>
+            <li>
+                <p>Click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/Next.flsnp" /> to run the routine.</p>
+            </li>
+        </ol>
+        <h2>What the Routine Does</h2>
+        <p>The person’s name in both the Personnel and Employee records is changed as follows:</p>
+        <ul>
+            <li>
+                <p><span class="field">First Name</span> is set to “Anonymized”</p>
+            </li>
+            <li>
+                <p><span class="field">Last Name</span> is set to the Employee Number.</p>
+            </li>
+            <li>
+                <p><span class="field">Middle Name</span>, <span class="field">Suffix</span>, <span class="field">Inits</span> are blanked out.</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="COINS.Redacted">
+            <MadCap:annotation MadCap:comment="Since we are not updating the Composite Description, we did not have to change the employee name in any other tables.   The employee number is used to find the employee record and display the current name.  After anonymization then, the name is displayed as 'Anonymized aaaaaaaa'." MadCap:createDate="2018-08-10T16:57:41.363Z" MadCap:creator="cammy.goering@coins-global.com" MadCap:creatorCentralUserId="d0831d1e-c9e7-45bb-966d-44734e1d5d83" MadCap:editDate="2018-08-10T17:02:25.831Z" MadCap:editor="cammy.goering@coins-global.com" MadCap:guid="b6d57c81-f5b3-4bc2-a65d-d2cde10e07f6" MadCap:initials="CG">Any other fields (in all modules) that contain the separate name fields or concatenated name fields are changed to match the anonym<MadCap:variable name="Variables.is" />ed values.</MadCap:annotation>
+        </p>
+        <p>All PR payslip documents, photos, and <MadCap:variable name="Variables.hr dependant" style="text-transform: capitalize;" />/Spouse/Emergency contact records attached to the Employee record are deleted.</p>
+        <p>The following are either blanked out or (depending on the field) replaced with the text <i>Data Removed because of Anonymization</i>:</p>
+        <ul>
+            <li>
+                <p>All email addresses stored in both the Personnel and Employee records.</p>
+            </li>
+            <li>
+                <p>All partner/spouse fields in the Employee record.</p>
+            </li>
+            <li>
+                <p>All address fields stored in both the Personnel and Employee records (including Phone and Email)</p>
+            </li>
+            <li>
+                <p><MadCap:variable name="Variables.National Insurance Number caps" />.</p>
+            </li>
+            <li>
+                <p>Phone/Pager/Fax numbers</p>
+            </li>
+            <li>
+                <p>The name used in <MadCap:variable name="Variables.eft" /> payments in Employee record.</p>
+            </li>
+            <li>
+                <p>Emergency name in Personnel record.</p>
+            </li>
+            <li>
+                <p>Maiden name in Personnel record.</p>
+            </li>
+            <li>
+                <p>Known as in Personnel record.</p>
+            </li>
+            <li>
+                <p>Salutation</p>
+            </li>
+            <li>
+                <p>Birth Date</p>
+            </li>
+            <li>
+                <p>EEO-1 Code, Ethnic Origin</p>
+            </li>
+            <li>
+                <p>Nationality.</p>
+            </li>
+            <li>
+                <p>Country of Birth</p>
+            </li>
+            <li>
+                <p><MadCap:variable name="Variables.driving licence" style="text-transform: capitalize;" /> Numbers</p>
+            </li>
+            <li>
+                <p>Religion</p>
+            </li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Example of Anonym<MadCap:variable name="Variables.is" />ed Record</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_G-I/HR/HR032_Images/Anonymised_Record.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>When the person to be anonym<MadCap:variable name="Variables.is" />ed has employee records in different PR companies:</p>
+        <ul>
+            <li>
+                <p>If all are leavers, all employee records will be anonym<MadCap:variable name="Variables.is" />ed, as well as the personnel record.</p>
+            </li>
+            <li>
+                <p>If employee is current in a company, then only the PR employee records where the status is leaver will be anonym<MadCap:variable name="Variables.is" />ed. The personnel record will be untouched.</p>
+            </li>
+        </ul>
+        <div class="note">
+            <p>If the employee number format is based on the name (see parameters <span class="parameter">PR/EMPCODEF</span> and <span class="parameter">HR/HRIDFRMT</span>), JOHSMI for example, you can use the Payroll Administration utility <span class="function">Renumber Employees</span> to change the employee number to unique digits, such as 123456, to ensure all references which could enable someone to determine who the employee is are removed. </p>
+        </div>
+        <h3>What will not be anonym<MadCap:variable name="Variables.is" />ed</h3>
+        <p>A record will not be anonym<MadCap:variable name="Variables.is" />ed if any of the following apply to it:</p>
+        <ul>
+            <li>
+                <p>Open H&amp;S Accident records</p>
+            </li>
+            <li>
+                <p>Open H&amp;S Claim records (worker’s compensation, for example)</p>
+            </li>
+            <li>
+                <p>Unsatisfied payments/loans with the company</p>
+            </li>
+            <li>
+                <p>Unreturned assets (keys, laptop, etc.)</p>
+            </li>
+            <li>
+                <p>Pay History on file for the current PR Year.</p>
+            </li>
+            <li>
+                <p>HR Links</p>
+                <ul class="CompactList">
+                    <li>
+                        <p>ESS Portal link</p>
+                    </li>
+                    <li>
+                        <p>Contract Employee</p>
+                    </li>
+                    <li>
+                        <p>Fleet Driver</p>
+                    </li>
+                    <li>
+                        <p><MadCap:variable name="Variables.Operatives caps" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Job Managers</p>
+                    </li>
+                    <li>
+                        <p><MadCap:variable name="Variables.Mk Marketeer caps" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Subcontractor</p>
+                    </li>
+                    <li>
+                        <p>Supplier</p>
+                    </li>
+                    <li>
+                        <p>Expenses</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Employee timesheets on file against still open/incomplete contracts. The contract could be in litigation. (Currently, a liability period is not stored against the JS Contract to make this determination.)</p>
+            </li>
+        </ul>
+        <p>The utility will not delete the HR Personnel or PR Employee record. Unless otherwise stated above, other history records will remain on file, allowing this data to be available for audits, lawsuits, worker’s compensation claims, etc.</p>
+        <p>If the person is active in any company, the HR Personnel record will remain untouched.</p>
+        <p>The utility will not delete Audit records.</p>
+        <p>Old return files will not be deleted, since they are a record of the submission. Copies of the RTI and year end returns are stored in Document Management and these XML files contain employee identity fields. A future project will be considered to create purge routines for these files.</p>
+        <p>The utility will not anonym<MadCap:variable name="Variables.is" />e or delete data stored in PDF files. Clients need to ensure that these PDFs have document security applied to them to prevent unnecessary access.</p>
+        <h3>Access to Anonym<MadCap:variable name="Variables.is" />ed Personnel/Employees</h3>
+        <p>After the utility has been run, only <MadCap:variable name="General.ProductName" /> users whose Security setting is 8 or above will be allowed to view anonym<MadCap:variable name="Variables.is" />ed HR/PR Personnel/Employee records.</p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: 'Parameters';mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../../Parameters/CO/co_anonyrs.htm" />
+                    <MadCap:relatedTopic src="../../Parameters/HR/hr_hridfrmt.htm" />
+                    <MadCap:relatedTopic src="../../Parameters/PR/pr_empcodef.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

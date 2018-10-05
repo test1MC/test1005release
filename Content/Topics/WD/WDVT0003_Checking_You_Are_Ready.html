@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="823" MadCap:lastWidth="601">
+    <head><title>Checking You Are Ready to Create a <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print" MadCap:autonum="1 ">Checking You Are Ready to Create a <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return</h1>
+        <h2 MadCap:autonum="1.1 ">Ensure all transactions have been posted</h2>
+        <p>Firstly you need to ensure that all relevant transactions have been entered.</p>
+        <p>You can then use</p>
+        <ul>
+            <li><span style="font-size: 1em;" data-mce-mark="1"><span class="function" title="Function:%WSY3510RCBT">Batch Status Report</span> (single <MadCap:variable name="Variables.kco company" />) or&#160;</span>
+            </li>
+            <li><span style="font-size: 1em;"><span class="function" title="Function:%WSY3512RCBT">Batch Status Report (Multi-<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />)</span>&#160;</span>
+            </li>
+        </ul>
+        <p>to confirm that all batches have been posted.</p>
+        <h2 MadCap:autonum="1.2 ">Run <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Reconciliation Report</h2>
+        <p>The <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Reconciliation Report can be used before creating a Return to check that the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> records in <MadCap:variable name="General.ProductName" /> reconcile to the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> control accounts in the General Ledger. &#160;</p>
+        <p>The report runs for a single <MadCap:variable name="Variables.vat" /> registration and selects the <MadCap:variable name="Variables.kco companies" /> and/or sectors linked to that <MadCap:variable name="Variables.vat" /> registration&#160;- for both the <MadCap:variable name="Variables.vat" /> transactions and the GL balances to include.</p>
+        <p>The layout of the report follows a concept similar to a bank reconciliation.&#160; The report reconciles either the latest <MadCap:variable name="Variables.vat" /> return on the system (if you <MadCap:variable name="Variables.tick" /> Current Period) or the latest <MadCap:variable name="Variables.vat" /> return dated on or before the&#160;<span class="module" data-mce-mark="1">General Ledger&#160;</span>period selected.&#160;</p>
+        <p>The report always includes a summary section.&#160; You can also choose to include sections giving transactional details of various figures from the summary.</p>
+        <p><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> transactions with non-recoverable <MadCap:variable name="Variables.vat" /> codes are ignored.&#160; The sign convention is as for the <span class="module" data-mce-mark="1">General Ledger</span>, so debit GL balances are shown as positive and credit GL balances as negative.&#160; For <MadCap:variable name="Variables.vat" /> transactions, <MadCap:variable name="Variables.vat input" />&#160;<MadCap:variable name="Variables.vat" /> is shown as positive and <MadCap:variable name="Variables.vat output" /> <MadCap:variable name="Variables.vat" /> as negative.</p>
+        <p>The report is based on the following assumptions:</p>
+        <ul>
+            <li>The amounts which have been returned are transferred out of the&#160;<MadCap:variable name="Variables.vat" /> control accounts in the period following that in which the return ends.</li>
+            <li>No direct manual postings are made to the <MadCap:variable name="Variables.vat" /> control accounts other than the transfer of returned amounts as detailed above.</li>
+            <li>If the business makes <MadCap:variable name="Variables.vat" /> returns to more than one jurisdiction (country) from within one <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> then separate&#160;<MadCap:variable name="Variables.vat" /> codes and separate GL control accounts are used for each jurisdiction.</li>
+        </ul>
+        <h2 class="section" MadCap:autonum="1.3 ">To run the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Reconciliation Report:</h2>
+        <ol>
+            <li><span data-mce-mark="1">Go to <span class="function" title="Function:%WVT2010HVTN"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Returns Workbench</span>.</span>
+            </li>
+            <li><span data-mce-mark="1">On the Company Summary tab, select the registration you want to reconcile.</span>
+            </li>
+            <li><span data-mce-mark="1">Choose the <span class="function" title="Function:%WVT3020RVTT"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Reconciliation Report</span> action.</span>
+            </li>
+        </ol>
+        <p>The most likely reason for differences is direct postings to the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> control accounts. &#160;If this is the case, we recommend you reverse out such postings and re-input them as <MadCap:variable name="Variables.vat" /> journals (with a <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> code analysis rather than being coded to the <MadCap:variable name="Variables.vat" /> control accounts). &#160;To prevent this happening in future, the <MadCap:variable name="Variables.vat" /> control accounts should be set not to allow manual postings. &#160;This can be done either in <span class="function" title="Function:%WGL2000BGLA">Account Maintenance</span> or in <span class="function" title="Function:%WGL2030BGAN">GL Elements</span>, depending on the settings in <span class="function" title="Function:%WGL9000SGLC">Configuration</span>.</p>
+        <h2 MadCap:autonum="1.4 ">Review unreturned transactions</h2>
+        <p>You should check for any exceptional transactions before creating the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return.</p>
+        <h2 class="section" MadCap:autonum="1.5 ">To review unreturned transactions:</h2>
+        <ol>
+            <li>Go to <span class="function" title="Function:%WVT2010HVTN"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Returns Workbench</span></li>
+            <li>Click the Unreturned Transactions tab.
+<p><img src="../../Resources/Images_V-Z/VAT/VT_000301.png" class="FullWidth" /></p></li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

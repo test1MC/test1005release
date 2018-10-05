@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2><span style="margin-right: 0pt;">2.3 </span>Modifying Data</h2>
+        <p>In order to modify data, specific objects exist for each <MadCap:variable name="General.ProductName" /> business object. There is no generic database level update capability. For each database table listed in the database enquiry string, there is a three letter abbreviated table name. The object name is this three letter table name with -rsp appended.</p>
+        <p>E.g. sysuser has the abbreviated name sur so the object is sur-rsp.</p>
+        <p>Each of these objects provides generic methods for adding, updating and removing records from the associated table. However many of these objects provide additional methods that provide functionality specific to that object. These additional methods are not fully documented by <MadCap:variable name="General.ProductName" /> at this time.</p>
+        <p>The standard methods fall into three groups – those to select a row to work upon, those to modify the date of the row and the commit changes method. Typically an XML message contain one or more operations. Each operation will invoke a single row selection method, one or more get/set methods, a commit changes method and then finally additional get methods to retrieve any computed columns or rowid values.</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Method</p>
+                    </td>
+                    <td>
+                        <p>Arguments</p>
+                    </td>
+                    <td>
+                        <p>Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>setAddRowId </p>
+                    </td>
+                    <td>
+                        <p>None</p>
+                    </td>
+                    <td>
+                        <p>Call this method to begin an operation to add a new row to the database</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>setCopyRowId</p>
+                    </td>
+                    <td>
+                        <p>pcRowid = item to copy.</p>
+                    </td>
+                    <td>
+                        <p>Call this method to begin an operation to add a new row to the database and use a copy of an existing row as a starting point. No error occurs if the source row does not exist – a blank row is created as if setAddRowId was called.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>setInsertRowId</p>
+                    </td>
+                    <td>
+                        <p>pcRowid = item to insert above.</p>
+                    </td>
+                    <td>
+                        <p>This is the same as the setAddRowId method but is used on tables where the data is held “in order”. There are few of these in Coins – mainly in the menu definitions.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Set&lt;tablename&gt;query</p>
+                    </td>
+                    <td>
+                        <p>pcQuery = progress query to run</p>
+                        <p>&lt;tablename&gt; is the full Coins table name (not the three letter name) and must be the table associated with the object. </p>
+                    </td>
+                    <td>
+                        <p>Runs a progress query and sets the last row returned by the query as the current row for an update operation or getRowField value calls.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>setRowid$</p>
+                    </td>
+                    <td>
+                        <p>pcRowid = the rowed to update.</p>
+                    </td>
+                    <td>
+                        <p>This is alternative to using set&lt;tablename&gt;query to choose a row to update if the ID is known</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>setBufferField</p>
+                    </td>
+                    <td>
+                        <p>pcField = name of field</p>
+                        <p>pcExt = index of multi-valued field (zero for normal fields)</p>
+                        <p>pcValue = value to set</p>
+                    </td>
+                    <td>
+                        <p>Call this once an operation has been begun to set a particular field in the row being added / updates.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>getRowFieldValue</p>
+                    </td>
+                    <td>
+                        <p>pcField = name of field</p>
+                        <p>pcExt = index of multi-valued field (zero for normal fields)</p>
+                    </td>
+                    <td>
+                        <p>This can be used to fetch data after using a set&lt;tablename&gt;query or setCopyRowId, setrowid$ calls, or to fetch system calculated fields after inserting and committing a row.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>commitCurrent</p>
+                    </td>
+                    <td>
+                        <p>None</p>
+                    </td>
+                    <td>
+                        <p>Completes the current update operation. Once this has been called getRowFieldValue can be used to retrieve computed columns.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Get&lt;tablename&gt;rowid</p>
+                    </td>
+                    <td>
+                        <p>None</p>
+                    </td>
+                    <td>
+                        <p>Obtains the rowid of a newly inserted row in the return value field of the XML response after committing the row.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

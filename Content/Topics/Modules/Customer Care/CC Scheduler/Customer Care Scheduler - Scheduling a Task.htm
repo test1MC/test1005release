@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1025" MadCap:lastWidth="648">
+    <head>
+        <link href="../../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Customer Care Scheduler - </MadCap:conditionalText>Scheduling a Task</h1>
+        <p class="Body">To schedule an unscheduled task, drag it from the To Schedule list and drop it onto the calendar for a specific <MadCap:variable name="Variables.operative" /> and time. </p>
+        <p class="Body">The duration of the task is shown at the bottom right of the scheduled task. If an unscheduled task has duration specified, when the task is dropped onto the calendar a default duration will be assumed.  This is specified in the <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">new </MadCap:conditionalText>HS parameter <span class="parameter">SCHDEFHR</span>.</p>
+        <p class="Body">Tasks are <MadCap:variable name="Variables.colour" />ed based on the SLA dates of the associated issues: tasks that breach the SLA are <MadCap:variable name="Variables.colour" />ed red; tasks within the target SLA are green; tasks on the target SLA date are orange. </p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Completed Task in Breach of SLA</p>
+        <p class="screenshot">
+            <img src="../../../../Resources/Images_A-C/CC/Scheduler/Complete Task Breach SLA.png" class="FullWidth" />
+        </p>
+        <p class="Body">The following icons may be shown on scheduled tasks:</p>
+        <table style="width: 100%;mc-table-style: url('../../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Icon</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Meaning</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">
+                            <img src="../../../../Resources/Images_A-C/CC/Scheduler/fa-tick.png" style="height: 20px;width: auto;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell"> The task is complete.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">
+                            <img src="../../../../Resources/Images_A-C/CC/Scheduler/fa-user-plus-red.png" style="width: auto;height: 20px;" />&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">The task has been allocated to more than one <MadCap:variable name="Variables.operative" />.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">
+                            <img src="../../../../Resources/Images_A-C/CC/Scheduler/fa-flag-red.png" style="width: auto;height: 20px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">A task scheduling note has been entered.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">
+                            <img src="../../../../Resources/Images_A-C/CC/Scheduler/fa-exclamation-circle-red.png" style="width: auto;height: 20px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Special conditions exist for the plot.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">
+                            <img src="../../../../Resources/Images/fa-van.png" style="width: auto;height: 20px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Indicates this is where the <MadCap:variable name="Variables.operative" /> currently is (only if using mCare).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Reschedu"></a>Rescheduling a Task</h2>
+        <p class="Body">You can reschedule a scheduled task by:</p>
+        <ul>
+            <li> Dragging it to a different <MadCap:variable name="Variables.operative" /> and/or time on the calendar.</li>
+            <li>Double-clicking the task (or using the context menu; see <MadCap:xref href="Customer Care Scheduler - Task Context Menu.htm">1, <i>Customer Care Scheduler - Task Context Menu</i></MadCap:xref>) to bring up the Update Task <MadCap:variable name="Variables.dialogue" /> box and updating the date, time and/or duration.</li>
+            <li>Making a task the first task of the day. Right-click the task and choose Set As First Task from the context menu. This moves the selected task to the start of the <MadCap:variable name="Variables.operative" />‘s working day, then reschedules the other tasks to follow it.</li>
+        </ul>
+        <p class="Body">In Single Day view, you can change a task’s duration by dragging the left or right side of the task.</p>
+        <h2><a name="Unschedu"></a>Unscheduling a Task</h2>
+        <p class="Body">You can unschedule a task by right-clicking it to display the context menu (see <MadCap:xref href="Customer Care Scheduler - Task Context Menu.htm">1, <i>Customer Care Scheduler - Task Context Menu</i></MadCap:xref>), choosing Unschedule and clicking Yes. This removes the date and time from the task, but it remains assigned to the <MadCap:variable name="Variables.operative" />.</p>
+    </body>
+</html>

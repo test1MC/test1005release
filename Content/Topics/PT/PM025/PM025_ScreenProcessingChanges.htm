@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="1.1 ">Print [PT Type] Action</h2>
+        <p class="Body">The <strong>Print [PT Type] </strong>action is available on the following PT&#160;browses:&#160;RFIs, Submittals, Transmittals, Meetings, Daily Reports, Drawing Sets, <MadCap:variable name="Variables.Sv Variations caps" />, SC <MadCap:variable name="Variables.Sv Variations caps" />, and Material Tracker. When selected, the screen shown in <MadCap:xref href="#PrintPTScreen" class="ImageRef"><i>Figure 1:  Print [PT&#160;Type] Screen</i></MadCap:xref> is displayed, showing all the documents linked to the PT&#160;Type that are available to be emailed.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="PrintPTScreen"></a>Print [PT&#160;Type] Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM025_Images/PrintPTDocs.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Previously, the Available list on the <strong>Print [PT Type]</strong> screen could only show documents attached to the PT record and documents attached to the current PT&#160;Item. This has been changed so that the Available list can show all of the following documents:</p>
+        <ul>
+            <li class="ListBullet3">Documents attached to a Project Management record.</li>
+            <li class="ListBullet3">Documents attached to the current Project Management Item.</li>
+            <li class="ListBullet3">Documents attached to the <MadCap:variable name="Variables.Jc Contract caps" /> record (when a Project is associated with a <MadCap:variable name="Variables.Jc Contract caps" />).</li>
+            <li class="ListBullet3">Documents attached to the linked records of a Project Management Item.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <p class="Body">The file names in the Available list are shown in the following format:</p>
+        <p class="IndentFieldDef"><i>&lt;PT Type&gt; - &lt;Reference&gt;  (&lt;File Name&gt; [File Size]) </i>
+        </p>
+        <p class="IndentFieldDef"><b>Example:</b> <i>SUBMITTAL-SUB0001-Submittal (Koala.jpg [.74MB])</i></p>
+        <p class="IndentFieldDef">The <i>PT Type</i> can be RFI, Submittal, Transmittal, Meeting, or Daily Report.</p>
+        <h3 MadCap:autonum="1.1.1 ">PT Items Linked to Submittal Packages and Drawing Sets</h3>
+        <p class="Body">PT Items can be linked to Submittal Packages and Drawing Sets. The Available list that shows linked documents when printing a PT Item linked to a Submittal Package/Drawing Set can be any of the following:</p>
+        <ul>
+            <li class="ListBullet3">Documents attached to a Project Management record.</li>
+            <li class="ListBullet3">Documents attached to the current Project Management Item.</li>
+            <li class="ListBullet3">Documents attached to the <MadCap:variable name="Variables.Jc Contract caps" /> record (when a Project is associated with a <MadCap:variable name="Variables.Jc Contract caps" />).</li>
+            <li class="ListBullet3">Documents attached to the linked records of a Project Management Item.</li>
+            <li class="ListBullet3">Documents attached to Submittal records (when a PT Item is linked to Submittal Packages).</li>
+            <li class="ListBullet3">Documents attached to Drawing records (when a PT Item is linked to Drawing Sets).</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">Email [PT Type] Documents</h2>
+        <p class="Body">The <strong>Email [PT Type] Documents</strong> action <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>exists on the following browses: RFIs, RFI&#160;Revisions, Submittals, Submittal Packages, Transmittals, Meetings, Issues, Daily Reports, and Drawings. When selected, the screen shown in <MadCap:xref href="#EmailPTDocs" class="ImageRef"><i>Figure 2:  Email [PT&#160;Type] Documents Screen</i></MadCap:xref> is displayed,  showing all the documents linked to the PT&#160;Type that are available to be emailed.</p>
+        <p class="cellnote">&#160;</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="EmailPTDocs"></a>Email [PT&#160;Type] Documents Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM025_Images/EmailPTDocs.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4 ">Document Drop-Down</h2>
+        <p class="Body">CONS&#160;OA did not allow users to view all the documents linked to Material Tracker, <MadCap:variable name="Variables.Sv Variations caps" />, and Subcontract <MadCap:variable name="Variables.Sv Variations caps" />. To resolve this, a <strong>Linked Documents </strong>tab is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the Material Tracker and <MadCap:variable name="Variables.Sv Variations caps" /> Summary screens. A Documents drop-down has also been added to the Subcontract <MadCap:variable name="Variables.Sv Variations caps" /> Summary screen. These changes are discussed in more detail below.</p>
+        <h3 MadCap:autonum="1.4.1 ">Material Tracker</h3>
+        <p class="Body">The Documents drop-down on the Material Tracker Summary screen <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes a <strong>Linked Documents </strong>option, as shown in <MadCap:xref href="#MatTrackScreen" class="ImageRef"><i>Figure 3:  Material Tracker Summary Screen</i></MadCap:xref>. This drop-down option can show any of the following documents:</p>
+        <ul>
+            <li class="ListBullet3">Documents attached to the Project Management record.</li>
+            <li class="ListBullet3">Documents attached to the current Material Tracker record.</li>
+            <li class="ListBullet3">Documents attached to the <MadCap:variable name="Variables.Jc Contract caps" /> record.</li>
+            <li class="ListBullet3">Documents attached to the linked records of the Material Tracker record.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="MatTrackScreen"></a>Material Tracker Summary Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM025_Images/MatTrackLinkDocs.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.4.3 "><MadCap:variable name="Variables.Sv Variations caps" />
+        </h3>
+        <p class="Body">The Documents drop-down on the <MadCap:variable name="Variables.Sv Variations caps" /> Summary screen <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes a <strong>Linked Documents </strong>option, as shown in <MadCap:xref href="#CRSumScreen" class="ImageRef"><i>Figure 4:  [%=Variables.Sv Variations caps%] Summary Screen</i></MadCap:xref>. This drop-down option can show any of the following documents:</p>
+        <ul>
+            <li class="ListBullet3">Documents attached to the <MadCap:variable name="Variables.Jc Contract caps" /> record.</li>
+            <li class="ListBullet3">Documents attached to the <MadCap:variable name="Variables.Sv Variation caps" />.</li>
+            <li class="ListBullet3">Documents attached to the Project Management record.</li>
+            <li class="ListBullet3">Documents attached to the linked records of the <MadCap:variable name="Variables.Sv Variation caps" />.</li>
+            <li class="ListBullet3">Documents attached to the linked Subcontract <MadCap:variable name="Variables.Sv Variations caps" />.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CRSumScreen"></a><MadCap:variable name="Variables.Sv Variations caps" /> Summary Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM025_Images/CRLinkDocs.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.4.4 ">Subcontract <MadCap:variable name="Variables.Sv Variations caps" /></h3>
+        <p class="Body">A Documents drop-down tab is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the Subcontract <MadCap:variable name="Variables.Sv Variations caps" /> Summary screen, as shown in <MadCap:xref href="#SCCRScreen" class="ImageRef"><i>Figure 5:  Subcontract [%=Variables.Sv Variations caps%] Summary Screen</i></MadCap:xref>. This drop-down has the following three tabs:</p>
+        <ul>
+            <li class="ListBullet3"><strong>Browse Documents</strong> – Displays all the documents attached to the SC <MadCap:variable name="Variables.Sv Variation caps" />.</li>
+            <li class="ListBullet3"><strong>Linked Documents</strong> – Displays all the documents attached to linked records, SC <MadCap:variable name="Variables.Sv Variations caps" />, <MadCap:variable name="Variables.Sv Variations caps" />, <MadCap:variable name="Variables.Jc Contract caps" />, and Project Management records.</li>
+            <li class="ListBullet3"><strong>Upload Documents</strong> - Allows you to upload documents for the SC <MadCap:variable name="Variables.Sv Variation caps" />.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="SCCRScreen"></a>Subcontract <MadCap:variable name="Variables.Sv Variations caps" /> Summary Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM025_Images/SCCRDocs.png" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

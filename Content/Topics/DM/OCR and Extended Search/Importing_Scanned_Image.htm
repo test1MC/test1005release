@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1110">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Importing Scanned Images</h1>
+        <ol>
+            <li>Prepare the files to be imported by placing them into a network scanner location.</li>
+            <li>Run <span class="function">Import Scanned Images</span>.<p>The options during scanner import are:</p><div class="FieldTable"><div class="ListHead"><div class="ColHead">Field</div><div class="ColHead">Description</div></div><div class="FieldBlock"><div class="FieldLabel"><p>Batch Name</p></div><div class="FieldDef"><p>The name of the batch (co_batch record) to create in COINS. You can normally leave this as the value that the system generates, but you are free to use any value you wish.</p></div></div><div class="FieldBlock"><div class="FieldLabel"><p>Index to batch </p></div><div class="FieldDef"><p>A generic field which is normally set to yes (Y). Setting a value of no (N) will cause all files imported to be held in the same location, causing multiple users to try to find their work in the same pile of images.</p></div></div><div class="FieldBlock"><div class="FieldLabel"><p>Scanner Location</p></div><div class="FieldDef"><p>This is the location as set in the network scanner location configuration screen (Document Management &gt; Setup &gt; Configuration &gt; <span class="function">Network Scanner Locations</span>).</p></div></div><div class="FieldBlock"><div class="FieldLabel"><p>Pool</p></div><div class="FieldDef"><p>The target pool where the files you intend to import will reside. When using OCR, this is only a temporary location, as the files will pass straight into <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.Purchase Ledger caps" /> batch.</p></div></div><div class="FieldBlock"><div class="FieldLabel"><p>Blank Page Action</p></div><div class="FieldDef"><p>If your files are multipage PDF files, or multipage tiff files, this allows COINS to detect if a blank page has been used to separate the individual invoices in the file. If set, the action of New Document should be selected, and generally, the ‘Max Dark %’ should be left as the default value of 1.1. If the individual invoices are duplex scanned (both sides scanned at once), then the duplex option should be chosen. When scanning in duplex, there should be two successive blank pages to cause the file to be split.</p></div></div><div class="FieldBlock"><div class="FieldLabel"><p>Split Multi-page Documents</p></div><div class="FieldDef"><p>If the file imports is a batch of single page invoices, this option separates the file into its individual images to be processed separately.</p></div></div><div class="FieldBlock"><div class="FieldLabel"><p>OCR to P/L Invoice</p></div><div class="FieldDef"><p>This instructs COINS to process each image using the OCR engine as set in the parameters above. Currently, only tesseract is supported.</p></div></div><div class="FieldBlock"><div class="FieldLabel"><p>P/L Invoice Document Group</p></div><div class="FieldDef"><p>If document groups are used, you can choose which group this batch of invoices will be stored under. The default document group (if set) will be applied.</p></div></div> </div></li>
+            <li>&#160;Applying the ‘Next’ action triggers a report.
+<p> 
+ 
+You can check the status of the report at any time using Report Status.
+</p><p> 
+
+Once complete, the report displays the values read against the <MadCap:variable name="Variables.mod PL" /> Invoice that has been created.
+</p></li>
+        </ol>
+    </body>
+</html>

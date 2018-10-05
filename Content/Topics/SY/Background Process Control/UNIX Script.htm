@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Background Process Control – </MadCap:conditionalText>UNIX Script</h1>
+        <p class="Body">A new script is now created by COINSAdmin and placed in the $BASE/bin directory.</p>
+        <p class="IndentFieldDef">coinsctl is the control script for all <MadCap:variable name="General.ProductName" /> background processes</p>
+        <p class="Body">It is called when the start and stop buttons are selected on the screens and it consults the coins.cfg configuration data to decide what to do.</p>
+        <p class="Body">It has the following syntax:</p>
+        <p class="IndentFieldDef">coinsctl START|STOP|TEST|LOG [&lt;TYPE&gt;|ALL|AUTO [&lt;NAME&gt;]]</p>
+        <p class="Body">The first parameter is an action:</p>
+        <p class="IndentFieldDef">START and STOP will start or stop the process.&#160; For stop this involves removing a controlling .lk file which the process checks periodically and the absence of which causes the process to exit.</p>
+        <p class="IndentFieldDef">TEST will list the matching processes but will do nothing</p>
+        <p class="IndentFieldDef">LOG will view the tail of the corresponding log file(s).</p>
+        <p class="Body">The second parameter is the process type:</p>
+        <p class="IndentFieldDef">&lt;TYPE&gt; is the process type e.g. WFMON, ESBW, ESBR, ESBE, ETCW, ETCR, ETCRO or SRCH</p>
+        <p class="IndentFieldDef">Alternatively, ALL can be used and all processes will be actioned.</p>
+        <p class="IndentFieldDef">Alternatively, AUTO can be used and all auto starting processes will be actioned.</p>
+        <p class="IndentFieldDef">These last two are used for automatic start and stop with the DB brokers.</p>
+        <p class="Body">The third parameter is optional for ESBW and ESBR and allows you to specify the particular sender or receiver to be address.</p>
+        <p class="Body">Examples:</p>
+        <p class="Body">List all processes</p>
+        <p class="Body">coinsctl TEST ALL</p>
+        <p class="code">Test WFMON</p>
+        <p class="code">Test ESBW_APPSTUDIO</p>
+        <p class="code">Test ESBW_MOBILE</p>
+        <p class="code">Test ESBW_NORMAL</p>
+        <p class="code">Test ESBR_NORMAL</p>
+        <p class="code">Test ESBE</p>
+        <p class="code">Test ETCW</p>
+        <p class="code">Test ETCR</p>
+        <p class="code">Test ETCRO</p>
+        <p class="code">Test SRCH </p>
+        <p class="Body">coinsctl TEST AUTO</p>
+        <p class="code">Test WFMON</p>
+        <p class="code">Test ESBW_APPSTUDIO</p>
+        <p class="code">Test ESBW_MOBILE</p>
+        <p class="code">Test ESBW_NORMAL</p>
+        <p class="code">Test ESBE</p>
+        <p class="code">Test ETCW</p>
+        <p class="code">Test ETCR</p>
+        <p class="code">Test ETCRO</p>
+        <p class="code">Test SRCH</p>
+        <p class="Body">ESBR_NORMAL is omitted because it is not set as auto start.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">coinsctl TEST ESBW</p>
+        <p class="code">Test ESBW_APPSTUDIO</p>
+        <p class="code">Test ESBW_MOBILE</p>
+        <p class="code">Test ESBW_NORMAL</p>
+        <p class="Body">Just the ESBW processes are shown</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">coinsctl TEST ESBW NORMAL</p>
+        <p class="code">Test ESBW_NORMAL</p>
+        <p class="Body">Just the ESBW_NORMAL process is shown</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">If you replace the action with START or STOP then the processes listed would be started or stopped.</p>
+        <p class="Body">If you replace the action with LOG then the tail of the log file is shown.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">coinsctl LOG ESBW NORMAL</p>
+        <p class="code">26/07/16 "12:33:20" "" "Message 5538709 failed"</p>
+        <p class="code">26/07/16 "12:33:20" "" "Message 5538710 failed"</p>
+        <p class="code">26/07/16 "12:33:20" "" "Message 5538711 failed"</p>
+        <p class="code">26/07/16 "12:33:20" "" "Message 5538712 failed"</p>
+        <p class="code">26/07/16 "12:33:20" "" "Message 5538714 failed"</p>
+        <p class="code">26/07/16 "12:33:20" "" "Message 5538715 failed"</p>
+        <p class="code">26/07/16 "12:41:31" "" "ESB Broker stopped"</p>
+        <p class="code">26/07/16 "12:53:24" "" "Start ESB Broker"</p>
+        <p class="code">26/07/16 "15:54:40" "" "ESB Broker stopped"</p>
+        <p class="code">26/07/16 "15:57:00" "" "Start ESB Broker"</p>
+        <p class="code">&#160;</p>
+    </body>
+</html>

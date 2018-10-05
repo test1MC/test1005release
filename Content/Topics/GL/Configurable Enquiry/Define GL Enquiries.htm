@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="8028" MadCap:lastWidth="1152">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Define GL Enquiries</h1>
+        <p>A GL Enquiry is created in two stages, firstly the columns and secondly the rows. The following example illustrates the type of information an enquiry might consist of:</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_4_1105.png" class="FullWidth" />
+        </p>
+        <h2>Create the GL Enquiry</h2>
+        <p>The Configuration Option is under the GL Module &gt; Enquiries &gt; Enquiries Setup Maintenance &gt; Define GL Enquiries.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_5_1105.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_6_1105.png" class="FullWidth" />
+        </p>
+        <p>Give the enquiry a unique identifier and a description relating to the enquiry and click Save.</p>
+        <p>Once created click on the enquiry code to add the required details to the enquiry or click on the open button   to change the description.</p>
+        <h2>Configure the Rows</h2>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_8_1105.png" class="FullWidth" />
+        </p>
+        <p><MadCap:variable name="General.ProductName" /> allows you to create as many rows as you require for an enquiry. You can specify different types of rows from the following options:</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_7_1105.png" />
+        </p>
+        <p>On the Rows Tab, click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_9_1105.png" class="FullWidth" />
+        </p>
+        <p>Fill in the Description and the Account Selection. Refer to your GL account Configuration for appropriate selection.</p>
+        <p>The Mask feature can be used to select/deselect certain information from within the range of accounts specified.</p>
+        <p>The following "wildcard" characters can be used when masking account numbers:</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> ! </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Use an exclamation mark to exclude numbers. When using this "wildcard", you</p>
+                        <p>must type a comma ( , ) after the account number you want to exclude and then</p>
+                        <p>after the comma, type the account numbers you do want to include </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell"> . </p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">Use a dot to indicate a character location.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell"> * </p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Use an asterisk to indicate any number of characters. For example (without a mask),</p>
+                        <p>if the range entered is from 00.00.5000 to 00.00.5999, <MadCap:variable name="General.ProductName" /> will display the following account numbers:</p>
+                        <p>00.00.5000, 00.00.5001, 00.00.5002, 00.00.5003 etc., up to 00.00.5999</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following examples show how the "wildcard" characters can be used within the masking feature:</p>
+        <table style="width: 100%;">
+            <col style="width: 145px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>!00.20.5099, *</td>
+                    <td>If the range entered was from 00.00.5000 to 00.50.5999, this mask tells <MadCap:variable name="General.ProductName" /> to exclude account number 00.20.5099, but include all other account numbers specified within the range. Note that when excluding numbers, if you do not separate numbers with a comma, the value will display as zero.</td>
+                </tr>
+                <tr>
+                    <td>!00.00.507*, *</td>
+                    <td>Using the same range again, this example tells <MadCap:variable name="General.ProductName" /> to exclude all the account numbers with 00.00.507 (such as 00.00.5071, 00.00.5072, 00.00.5073, etc, up to 00.00.5079), but will show all other account numbers, as suggested by the comma and asterisk (,*).</td>
+                </tr>
+                <tr>
+                    <td>00.50..</td>
+                    <td>
+                        <p>Using the same range again, this example tells <MadCap:variable name="General.ProductName" /> to include account numbers with any two characters at the beginning and any two characters at the end, but that have 00.50 in the middle. <MadCap:variable name="General.ProductName" /> will display account numbers as follows:</p>
+                        <p>00.00.5000, 00.00.5001, 00.00.5002, 00.00.5003 etc., up to 00.00.5099</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>00.00.5*00 </td>
+                    <td>
+                        <p>Using the same range again, this example tells <MadCap:variable name="General.ProductName" /> to include account numbers starting with 00.00.5 and then any number of characters in place of the asterisk, but that end in 00. <MadCap:variable name="General.ProductName" /> will display account numbers as follows:</p>
+                        <p>00.00.5000, 00.00.5100, 00.00.5200, 00.00.5300 etc., up to 00.00.5900</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Select the Line Type:</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_10_1105.png" class="FullWidth" />
+        </p>
+        <p>Select a sign <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_11_1105.png" />if you want the content of this line to be calculated to the accumulator otherwise leave blank.</p>
+        <p>The Accumulator stores values added/subtracted to it from 'normal' lines and displays the total on the ‘total’ line. You can use an accumulator to calculate the totals from several lines, then display that total value on a separate line. In the Accumulator field, enter a name for the accumulator. For example, “Total A”. In cases where you have more than one accumulator in an enquiry, be sure to give each accumulator a different name.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_12_1105.png" class="FullWidth" />
+        </p>
+        <h3>Total Lines</h3>
+        <p>When creating a total Line leave the range From/To fields blank, because you have already specified the account ranges when creating the ‘normal’ lines.</p>
+        <p>Complete the Options frame for 'Total' lines as follows:</p>
+        <ul>
+            <li>Leave the Mask field blank.</li>
+            <li>In the Line Type field, select ‘Total’.</li>
+            <li>Leave the Sign field blank if you do not want to add/subtract this total value to another line.</li>
+            <li>In the Accumulator field, to display the total value of ‘normal’ lines in the ‘total’ line, enter the name of the accumulator that you have calculated the ‘normal’ lines to. For example, ‘Total A’.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If the Accumulator field is left blank, the ‘total’ line will calculate the total value of lines that are not calculated to a specified accumulator (for example, any lines where the Accumulator field has been left blank). <MadCap:variable name="General.ProductName" /> will interpret the blank field as an accumulator called " " (blank). Therefore, it is recommended that an entry be made in this field.</p>
+        <p>&#160;</p>
+        <h2>Configure Columns</h2>
+        <p>Select The Columns Tab.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_13_1105.png" class="FullWidth" />
+        </p>
+        <p>The Column Definitions frame determines the number of columns in the enquiry and the contents of each column. The columns can show the opening balance and/or the closing balance and/or the movement for a range of accounts in any given period.</p>
+        <p><MadCap:variable name="General.ProductName" />  allows you to create as many columns as you require for an enquiry.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>Populate the label.  A name to identify this column (for example, “Opening Balance”).</p>
+        <p>If you want a column heading to be split onto two lines, type ! where you want the new line to start (for example: Opening!Balance).</p>
+        <p>Select the type of column you want to create.<img src="../../../Resources/Images_G-I/GL/GL Configurable Enquiry/GL_ConfigEnq_14_1105.png" /></p>
+        <p>Specify the period you want to enquire on in this column.</p>
+        <p>The following options determine which period relative to the enquiry period (which you specify when you run the enquiry) the information in this field is taken from. For example:</p>
+        <p>0	 = the enquiry period</p>
+        <p>-1	 = the previous period</p>
+        <p>+8 	= eight periods after the enquiry period</p>
+        <p>-12 	= the period last year equivalent to the enquiry period (assuming you are using 12 periods per year)</p>
+        <p>!12+0	 = period 12 in the year of the enquiry period</p>
+        <p>!06-1	 = period 6 of the previous year</p>
+        <p>!01+1	 = period 1 of the following year</p>
+        <p>!1295 	= period 12 in 1995</p>
+        <p>!1200 	= period 12 in 2000</p>
+        <p>The Format field allows you to specify the PROGRESS format that determines how the value will be displayed.</p>
+        <p>To show zero values in the enquiry, for example, 0.00, (instead of showing a blank space) you must enter the following format: &gt;,&gt;&gt;9.99. To allow for larger values, you can add more "greater than" (&gt;) characters, for example, &gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99. If you do not enter enough "greater than" (&gt;) characters in the format, the value will display "?????". To include negative values (as well as positive values) in the enquiry, you must use brackets or a minus sign as follows: (&gt;,&gt;&gt;9.99) or -&gt;,&gt;&gt;9.99.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If you leave the format blank, the column will NOT appear in the enquiry.</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1878" MadCap:lastWidth="697">
+    <head><title>Configurable Subcontractor Certificates</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Configurable Subcontractor Certificates</h1>
+        <p><MadCap:variable name="General.ProductName" /> lets you design documents for printing subcontractor certificates. In this way you can print to your company's requirements and use pre-printed stationery. </p>
+        <p>Define the layout of configurable document using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the System Module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+        <div class="process">
+            <h2 class="print">To define the format for printing certificates</h2>
+            <ol>
+                <li>Use the document type <span class="userinput">Subcontract Certificate</span>. 
+<img src="../../Resources/Images_S-U/SC/SC_000701.gif" /></li>
+                <li>In the <span class="field">Document</span> field, enter a name for the certificate document (for example <span class="userinput">SCCERT1</span>). You can define different documents to print certificates with different layouts. When you print the certificate, <MadCap:variable name="General.ProductName" /> gives you a choice of which document to use.</li>
+                <li>In the <span class="field">Body IDs</span> field, enter a list of Item IDs, separated by commas, that correspond to any detail lines that are to be printed in the body of the certificate (see <a href="WDSC0211_Defining_a_Standard_Subcontractor_Certificate.html">Defining a Standard Subcontractor Certificate</a>). 
+<p><span class="screentype">Body IDs: GRC,RET,DIS,VAT,TAX,PAY </span></p><p>The body line will be repeated for each Item ID:</p><table class="screentype" style="TEXT-ALIGN: right;"><tbody><tr><td></td><td width="25%">Cumulative</td><td width="25%">Previous</td><td width="25%">This Period</td></tr><tr><td>Gross Certified</td><td>47,000.00</td><td>31,000.00</td><td>16,000.00</td></tr><tr><td>Retention</td><td>2,350.00</td><td>1,550.00</td><td>800.00</td></tr><tr><td>Discount</td><td>1,116.25</td><td>736.25</td><td>380.00</td></tr><tr><td><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /></td><td>7,681.41</td><td>5,024.91</td><td>2,593.50</td></tr><tr><td>Tax</td><td>10,883.44</td><td>7,178.44</td><td>2,593.50</td></tr><tr><td>Payment</td><td>40,268.72</td><td>26,560.22</td><td>13,708.50</td></tr></tbody></table><br /><p>Lines with zero values will not normally be printed. To print lines even if all values are zero, put an exclamation mark (!) before the Item ID.</p></li>
+                <li>In the header of the certificate, put information such as the subcontractor's name and address, the contract code, the contract name, the certificate date and value. Also, if you want column headings, such as Current Payment, these go in the header.</li>
+                <li>In the body of the certificate, put a line that shows the details of the payment (cumulative, previous and this period amounts).&#160; <MadCap:variable name="General.ProductName" /> will print these details for every item line you define in the IDs list (see above). This uses the tables sc_certdet andsc_defndet. Use the following fields:</li>
+                <ul>
+                    <li><strong>scd_prev</strong> for the Previous amount</li>
+                    <li><strong>scd_tp</strong> for the This Period amount</li>
+                    <li><strong>scd_cum</strong> for the Cumulative amount</li>
+                    <li><strong>scd_text</strong> for the item line description</li>
+                </ul>
+                <li>In addition, you can use the following hard-coded form types:</li>
+                <ul>
+                    <li><strong>VAP</strong> – an optional line type to show VAP payment details. You could set up a different certificate form to print VAP certificate details separately from the main certificate print. This uses the tables vp_wbsdef, vp_unitdef, vp_subcc, jc_stndcc, vp_certdet and vp_subcon.</li>
+                    <li><strong>TCARD</strong> – shows timecard details for the payment. This uses the tables sc_timecard and jc_job</li>
+                    <li><strong>SCDET</strong> – shows details of the item line (which may have been restructured for detailed valuations). This uses the sc_itemdet table.</li>
+                    <li><strong>DAYWORKS</strong> – shows dayworks details for a payment. This uses the following tables: vp_wbsdef, vp_unitdef, vp_subcc, jc_stndcc, vp_certdet, vp_subcon, vp_dayworks.</li>
+                    <li><strong>CERTDIST, VATDIST</strong> – show the certificate distribution and <MadCap:variable name="Variables.vat" /> distribution.</li>
+                </ul>
+                <li>In the footer of the certificate, put any additional information that may be needed.&#160; Header and footer use the tables sc_certificate, sc_mast, sc_subcon, jc_job, sc_pay and sc_check </li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDSC0008_SC_Certificates_Examples.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

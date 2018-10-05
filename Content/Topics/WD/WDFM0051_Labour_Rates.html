@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1049" MadCap:lastWidth="1145">
+  <head>
+    <title>[%=Variables.Labour caps%] Rates</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />
+      <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Rates</h1>
+    <p>
+      <span class="function" title="Function:%WFM2470BFLR">
+        <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Rates</span> allows you to store <MadCap:variable name="Variables.labour" /> rate charges for billing purposes. It allows payroll transactions, imported through <span class="function" title="Function:%WFM9150USJS">Load <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Transactions</span>, to be re-charged to the customer.</p>
+    <p>This assumes <MadCap:variable name="Variables.labour" /> is charged at an agreed rate per hour, with different rates applying for different classes of employee. From this table the '<MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Transaction' processing will determine which SOR item to create for each imported '<MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> transaction' record.</p>
+    <p>For each employee position, earnings code, <MadCap:variable name="Variables.pr effective date" /> there is one entry in all the other fields (sell rate per hour, costing group, SOR item, invoice class), and which <MadCap:variable name="Variables.labour" /> rate applies for a transaction is determined by a hierarchy of customer, minor category, major category, <MadCap:variable name="Variables.jc contract" /> as per mark-ups. Here there is the additional consideration of the <MadCap:variable name="Variables.pr effective date" />. </p>
+    <p>You can import <MadCap:variable name="Variables.labour" /> rates from a CSV file using <span class="function" title="Function:%WFM9140UFLR">Load <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Rates</span>.</p>
+    <div class="configuration">
+      <h2 class="print">
+        <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> rates - configuration</h2>
+      <p>
+        <span class="function" title="Function:%WFM2470BFLR">
+          <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Rates</span> can be found under FM <MadCap:variable name="Variables.Jc Contract caps" /> Setup - 'Invoicing Setup' tab group.</p>
+      <p>The SOR item must be set up as a standard one against the current SOR type. However, it is not possible to check whether the SOR item is a standard one at the configuration stage because we do not know which major category is going to apply.</p>
+      <p>As a compromise, an error will be given if the SOR item does not exist at all on any major categories for the current SOR type. A warning will be given if it is missing off some (the message displays which ones).</p>
+      <p>Standard <MadCap:variable name="General.ProductName" /> Auditing is available on this table.</p>
+      <p>You can import <MadCap:variable name="Variables.labour" /> rates from a CSV file using <span class="function" title="Function:%WFM9140UFLR">Load <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Rates</span>. The format for the CSV file is as follows (all field values are text unless stated): </p>
+      <ul>
+        <li>Major category (Optional)</li>
+        <li>Minor category (Optional)</li>
+        <li>Customer (Optional)</li>
+        <li>Position (Optional)</li>
+        <li>Position description (Optional)</li>
+        <li>Earnings code (Optional)</li>
+        <li>Description (Optional)</li>
+        <li>Cost Group (Mandatory)</li>
+        <li>SOR Item (Mandatory)</li>
+        <li>Invoice class (Optional)</li>
+        <li>Rate per Hour (Mandatory)</li>
+        <li>
+          <MadCap:variable name="Variables.pr effective date" style="text-transform: capitalize;" />   (Mandatory)<br /></li>
+      </ul>
+    </div>
+  </body>
+</html>

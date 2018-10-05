@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Enabling <MadCap:variable name="General.ProductName" /> Passport Login</h1>
+        <p>Two <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>SY parameters control the “<a href="Login_Using_COINS_Passport.htm">log in via <MadCap:variable name="General.ProductName" /> Passport</a>” functionality.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SY/CASAUTH</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The
+ URL to the <MadCap:variable name="General.ProductName" /> Construction Cloud Single Sign-On (SSO) server, provided by <MadCap:variable name="General.ProductName" /> Construction Cloud for this OA&#160;Environment.
+ Usually looks like https://cas-sso-example.com/authorize/[ext-system-id].</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>SY/CASAUSEC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>A
+ private key for JWT token verification, also provided by <MadCap:variable name="General.ProductName" /> Construction Cloud.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If both parameters are non-blank, the “Log in via <MadCap:variable name="General.ProductName" /> Passport button” is available on the OA&#160;login screen.</p>
+        <p>The OA&#160;Environment  must be configured on <MadCap:variable name="General.ProductName" /> Construction Cloud as an external system, available for CCC SSO authentication.</p>
+        <p>The UNIX ‘openssl’ command-line tool (<a href="https://www.openssl.org/" target="_blank">https://www.openssl.org/</a>) must be available for this functionality to work.</p>
+    </body>
+</html>

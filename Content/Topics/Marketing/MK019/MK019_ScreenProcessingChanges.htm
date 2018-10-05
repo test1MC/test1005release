@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="806" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Parameter Changes</h1>
+        <p class="Body">This section describes any changes that were made to MK parameters to satisfy the requirements of mCRM and OA Webservices.</p>
+        <h2 MadCap:autonum="1.1">CLOSEDEF</h2>
+        <h3 MadCap:autonum="1.1.1">OA Webservice Changes</h3>
+        <p class="Body">The Default Close Date to Today's Date is now determined by the Y/N value of the MK/CLOSEDEF parameter when the Stage is changed to Closed-Won/Closed-Lost/Inactive.</p>
+        <h3 MadCap:autonum="1.1.2">App Changes</h3>
+        <p class="Body">When a user changes the <MadCap:variable name="Variables.Mk Project caps" /> Substatus on the App, and MK/CLOSEDEF is set to <strong>Y</strong>, the Close Date defaults to Today’s Date.</p>
+        <h2 MadCap:autonum="1.2">CONTGRAD</h2>
+        <h3 MadCap:autonum="1.2.1">OA Webservice Changes</h3>
+        <p class="Body">The Webservice now does the following:</p>
+        <ul>
+            <li class="ListBullet3">Checks the MK/CONTGRAD parameter; if it is set to <strong>N</strong>, the <span class="Field">Grade </span>field is hidden.</li>
+            <li class="ListBullet3">Provides data for the Grade lookup.</li>
+            <li class="ListBullet3">Displays the <span class="Field">Grade </span>field for Contacts.</li>
+            <li class="ListBullet3">Allows the App to now submit the <span class="Field">Grade </span>field when submitting Contacts.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.2">App Changes</h3>
+        <ul>
+            <li class="ListBullet3">The App now downloads and stores the <span class="Field">Grade </span>field.</li>
+            <li class="ListBullet3">The <span class="Field">Grade </span>field is now available on the Contacts screen.</li>
+            <li class="ListBullet3">The Grade value can be selected from a lookup if it needs to be changed.</li>
+            <li class="ListBullet3">The App hides the <span class="Field">Grade </span>field if the MK/CONTGRAD parameter is set to N.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3">DISUNGRP</h2>
+        <p class="Body">All MK OA Webservices now must only display records that the logged in user is allowed to access.</p>
+        <h2 MadCap:autonum="1.4">ESTCLOSE</h2>
+        <p class="Body">The Webservice now references the MK/ESTCLOSE parameter, which allows the correct label to be displayed to the App for the <span class="Field">Estimated Close </span>field.</p>
+        <h2 MadCap:autonum="1.5">EXCDENTITY</h2>
+        <h3 MadCap:autonum="1.5.1">OA Changes</h3>
+        <p class="Body">The App can now reference the MK/EXCDENTITY parameter.</p>
+        <h3 MadCap:autonum="1.5.2">App Changes</h3>
+        <p class="Body">Two OA Webservices now allow the App to download Work Group data; one service downloads the full list, and the other service downloads a filtered list. The App must download both lists (sets of data).</p>
+        <p class="Body">Depending on the type of record being updated, processing is as follows:</p>
+        <ul>
+            <li class="ListBullet3">Company record: The App now checks the MK/EXCDENTITY mobile configuration value within a comma-separated list of values. If one of the values in the list is “ci_company”, the App uses the Work Group data (i.e., from either the full list or filtered list).</li>
+            <li class="ListBullet3"><MadCap:variable name="Variables.Mk Project caps" /> record: The App now checks for “pi_project” in the MK/EXCDENTITY mobile configuration value.</li>
+            <li class="ListBullet3">Contact record: The App now checks for “pp_contact” in the MK/EXCDENTITY mobile configuration value.</li>
+            <li class="ListBullet3">Office record: The App now checks for “ci_office” in the MK/EXCDENTITY mobile configuration value.</li>
+        </ul>
+        <h2 MadCap:autonum="1.6">JOBVALPR</h2>
+        <h3 MadCap:autonum="1.6.1">OA Changes</h3>
+        <p class="Body">The App can now reference the MK/JOBVALPR parameter.</p>
+        <h3 MadCap:autonum="1.6.2">App Changes</h3>
+        <ul>
+            <li class="ListBullet3">The App can now download the new mobile configuration item.</li>
+            <li class="ListBullet3">When editing <MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:variable name="Variables.Mk Project caps" />, if the value of the MK/JOBVALPR parameter is set to Y, and the Status of the <MadCap:variable name="Variables.Mk Project caps" /> is <strong>C</strong>, the <span class="Field">Job Value </span>field is read-only.</li>
+        </ul>
+        <h2 MadCap:autonum="1.7">NOPRCOSEC</h2>
+        <p class="Body">The MK/NOPRCOSEC parameter ensures that all MK OA Webservices must now only display records that the logged in user is allowed to access.</p>
+        <h2 MadCap:autonum="1.8">OFFTYPE</h2>
+        <h3 MadCap:autonum="1.8.1">OA Changes</h3>
+        <p class="Body">The App can now reference the MK/OFFTYPE parameter.</p>
+        <h3 MadCap:autonum="1.8.2">App Changes</h3>
+        <ul>
+            <li class="ListBullet3">The App can now download the new mobile configuration item</li>
+            <li class="ListBullet3">When a new Office is created, the Office Type field defaults to this value.</li>
+        </ul>
+        <h2 MadCap:autonum="1.9">PISEC</h2>
+        <p class="Body">The MK/PISEC parameter ensures that all MK OA Webservices must now only display records that the logged in user is allowed to access.</p>
+        <h2 MadCap:autonum="1.10">PISECDEF</h2>
+        <p class="Body">The MK/PISECDEF parameter ensures that all MK OA Webservices must now only display records that the logged in user is allowed to access.</p>
+        <h2 MadCap:autonum="1.11">PISECTYPE / PRFLDSEC</h2>
+        <h4 MadCap:autonum="1.11.0.1">OA Changes</h4>
+        <p class="Body">The App can now reference the MK/PRFLDSEC parameter.</p>
+        <h4 MadCap:autonum="1.11.0.2"> OA Web Service Changes</h4>
+        <p class="Body">Two OA Webservices can now return <MadCap:variable name="Variables.Mk Project caps" /> records to the App.</p>
+        <ul>
+            <li class="ListBullet3">If MK/PISECTYPE is set to Full Record Security (RS), the Webservices do not display any records that the user is not allowed to access.</li>
+            <li class="ListBullet3">If MK/PISECTYPE is set to Field Security (FS), and field security should be applied to some records, this new field should be set to True.</li>
+        </ul>
+        <h3 MadCap:autonum="1.11.1">	App Changes</h3>
+        <ul>
+            <li class="ListBullet3">The new mobile configuration item MK/PRFLDSEC can be downloaded and stored. It contains a comma-separated list of OA field names.</li>
+            <li class="ListBullet3">If any records received have field security, the fields contained in the MK/PRFLDSEC list are hidden.</li>
+        </ul>
+        <h2 MadCap:autonum="1.12">PRSTAT</h2>
+        <h3 MadCap:autonum="1.12.1">	OA Changes</h3>
+        <p class="Body">The App can now reference the MK/PRSTAT parameter.</p>
+        <h3 MadCap:autonum="1.12.2"> App Changes</h3>
+        <ul>
+            <li class="ListBullet3">The App can now download the new mobile configuration item.</li>
+            <li class="ListBullet3">When a new <MadCap:variable name="Variables.Mk Project caps" /> is created, the App defaults the <MadCap:variable name="Variables.Mk Project caps" /> Status to the value entered in MK/PRSTAT.</li>
+        </ul>
+        <h2 MadCap:autonum="1.13">	PRTYPE</h2>
+        <h3 MadCap:autonum="1.13.1">	OA Changes</h3>
+        <p class="Body">The App can now reference the MK/PRTYPE parameter.</p>
+        <h3 MadCap:autonum="1.13.2">	App Changes</h3>
+        <ul>
+            <li class="ListBullet3">The App can now download the new mobile configuration item.</li>
+            <li class="ListBullet3">When a new <MadCap:variable name="Variables.Mk Project caps" /> is created, the App defaults the <MadCap:variable name="Variables.Mk Project caps" /> Stage to the value entered in MK/PRTYPE.</li>
+        </ul>
+        <h2 MadCap:autonum="1.14">	REPRSTAT</h2>
+        <h3 MadCap:autonum="1.14.1">	OA Webservice Change</h3>
+        <p class="Body">The webservice now uses the MK/REPRSTAT parameter value to calculate correctly.</p>
+        <h3 MadCap:autonum="1.14.2">	App Changes</h3>
+        <p class="Body">When updating <MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:variable name="Variables.Mk Project caps" />, a user who is not allowed access cannot select any statuses, unless the <MadCap:variable name="Variables.Mk Project caps" /> had that status when it was downloaded from the server.</p>
+        <h2 MadCap:autonum="1.15">USERMKTR</h2>
+        <h3 MadCap:autonum="1.15.1">	OA Changes</h3>
+        <p class="Body">The App can now reference the MK/USERMKTR parameter.</p>
+        <h3 MadCap:autonum="1.15.2">	App Changes</h3>
+        <ul>
+            <li class="ListBullet3">The App can now download the new mobile configuration item.</li>
+            <li class="ListBullet3">If MK/USERMKTR is set to Y, and a new Contact, Company, Office, or <MadCap:variable name="Variables.Mk Project caps" /> is being added, the Sales Rep defaults to the logged in user.</li>
+        </ul>
+    </body>
+</html>

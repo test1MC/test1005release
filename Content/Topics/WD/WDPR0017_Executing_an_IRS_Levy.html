@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Executing an IRS Levy in <MadCap:variable name="General.ProductName" /> OA</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Executing an IRS Levy in <MadCap:variable name="General.ProductName" /> OA</h1>
+    <p align="center" />
+    <table border="1" cellspacing="0" bordercolor="#0c2340" cellpadding="0" frame="box">
+      <tbody>
+        <tr>
+          <td bgcolor="#da0000" bordercolor="#0c2340" width="10" cellspacing="0" cellpadding="0" />
+          <td>
+            <strong>
+              <span style="color: #da0000;">***</span>
+              <span style="color: #0c2340;">NOTE: THIS IS A US SPECIFIC TOPIC.</span>
+              <span style="color: #da0000;">***</span>
+            </strong>
+          </td>
+          <td bgcolor="#da0000" bordercolor="#0c2340" width="10" cellspacing="0" cellpadding="0" />
+        </tr>
+      </tbody>
+    </table>
+    <p>The IRS may inform an employer it must withhold a certain amount from an employee's wages that is necessary to repay Federal taxes owed to the government by the employee. If such a "levy" is necessary, the IRS will inform the employer using Form 668-W, Notice of Levy on Wages, Salary, and Other Income (see 3929). The employer must then determine what portion of the employee's wages is subject to the levy.</p>
+    <div class="process">
+      <h2 class="print">How to Execute an IRS Levy in <MadCap:variable name="General.ProductName" /> OA:</h2>
+      <ol>
+        <li>
+          <strong>Create a Pay Item for the Levy</strong>
+        </li>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>The Pay Item should have a type of <span class="userinput">subtotal</span> and will have no effects, nor will it affect other items.</p>
+      </blockquote>
+      <p>&lt;OL=2&gt;</p>
+      <ol start="2">
+        <li>
+          <strong>Add Pay Item to the Pay Item Sequence</strong>
+        </li>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>The Pay Item should appear immediately before Net Pay in the sequence.</p>
+      </blockquote>
+      <ol start="3">
+        <li>
+          <strong>Create a Pay Calculation </strong>
+        </li>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>Set up a Pay Calculation to process the Wage Deduction. Generally, it is fully taxable and will apply to every calculation period. Be sure to indicate the Calculation is for an IRS Levy by checking <span class="userinput">IRS LEVY</span> on the Main tab of the Pay Calculation File.</p>
+      </blockquote>
+      <ol start="4">
+        <li>
+          <strong>Add Pay Calculation to Employee Maintenance</strong>
+        </li>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>Add the Pay Calculation to each employee subject to an IRS Levy. Be sure to complete the field <span class="null"><span class="field">Per Period Amount Exempt From IRS Levy</span></span>. This amount will vary by employee. To determine the amount exempt from the IRS Levy, refer to <em>IRS Publication 1494, Table for Exemptions from Levy on Income</em> and <em>Form 668-W, Notice of Levy on Wages, Salary, and Other Income</em>.</p>
+      </blockquote>
+      <!--KGR - Added two paragraphs below as per Holly Ryan on 6/7/12-->
+      <p>
+        <strong>For employees receiving a single computer <MadCap:variable name="Variables.cheque" /> in one pay period:</strong> After timesheets are entered and calculations have been run, <MadCap:variable name="General.ProductName" /> will compute and automatically reduce Net Pay to the Per Period Income Exempt from IRS Levy and accumulate the difference in the Pay Calculation holding the Levy Deduction.</p>
+      <p>
+        <strong>For employees receiving multiple computer <MadCap:variable name="Variables.cheques" /> in one pay period:</strong> After timesheets are entered and calculations are run, and all necessary deductions have been taken from the employee's pay, any <MadCap:variable name="Variables.cheque" /> after the first will have all wages garnished down to a Net Pay of zero.</p>
+      <p>The calculation will automatically end when the Total Maximum Limit is met or the calculation becomes dormant.</p>
+    </div>
+  </body>
+</html>

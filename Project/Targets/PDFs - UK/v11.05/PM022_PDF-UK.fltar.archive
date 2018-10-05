@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/PM/PM022_PDFTOC.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/CEDoc_PDF-UK.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly]exclude[COINS.ScreenOnly or COINS.USOnly]"
+  conditions="COINS.UKOnly"
+  Medium="print">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Production Tracking Functionality</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">OA-CE-PM022</Variable>
+    <Variable
+      Name="Document Variables/Document Title">Allow PT Without MK Licence</Variable>
+    <Variable
+      Name="Document Variables/Draft?">1.0</Variable>
+    <Variable
+      Name="Document Variables/File Name">AllowPTWOMKLicense</Variable>
+    <Variable
+      Name="Document Variables/Modules">Project Management (PT)</Variable>
+    <Variable
+      Name="Document Variables/PDR">24143</Variable>
+    <Variable
+      Name="Document Variables/Region">All</Variable>
+    <Variable
+      Name="Document Variables/Version">11.05</Variable>
+  </Variables>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

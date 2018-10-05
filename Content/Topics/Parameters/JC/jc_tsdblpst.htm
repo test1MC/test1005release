@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>JC/TSDBLPST - Double posting lines for timesheets</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">JC/TSDBLPST - </span> Double posting lines for timesheets
+</div>
+<div class="param_def">
+<p>Whether to combine timesheet postings for employees into a single cost transaction per analysis with 0 value (<span class="userinput">Y</span> or <span class="userinput">N</span>). If so, a second cost transaction is created for all employees per analysis with the combined values.</p>
+<p>This allows for "double posting", where the timesheet posting program generates a debit costing line with employee name and hours only. When the transactions are posted, the <MadCap:variable name="Variables.jc contract"/> costing lines are generated one line per employee with name and detail of the days worked, and with days in the Quantity field of the costing transaction, but with zero cost. An additional transaction is generated to each cost code used, with an aggregated description, such as 6 Employees, and the total aggregated cost.</p>
+<p>Example of costing entries for a <MadCap:variable name="Variables.jc contract"/>/cost code</p>
+<table>
+<tbody>
+<tr>
+<th>Code</th>
+<th>Description</th>
+<th>Cost</th>
+<th>Hours</th>
+</tr>
+<tr>
+<td>1000.L123</td>
+<td>A Brown 1,2,3,4,5,8,9,10,11,12 Sep</td>
+<td>
+<p align="right">0.00</p>
+</td>
+<td>
+<p align="right">10.0</p>
+</td>
+</tr>
+<tr>
+<td>1000.L123</td>
+<td>B Jones 8,9,10,11,12 Sep</td>
+<td>
+<p align="right">0.00</p>
+</td>
+<td>
+<p align="right">5.0</p>
+</td>
+</tr>
+<tr>
+<td>1000.L123</td>
+<td>C Smith 1,2,3,4,5,8,9 Sep</td>
+<td>
+<p align="right">0.00</p>
+</td>
+<td>
+<p align="right">7.0</p>
+</td>
+</tr>
+<tr>
+<td>1000.L123</td>
+<td>3 Employees Sep</td>
+<td>
+<p align="right">3,275.00</p>
+</td>
+<td>
+<p align="right">0.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

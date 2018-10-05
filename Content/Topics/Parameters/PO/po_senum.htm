@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/SENUM - Order Number Base: for Service Order related Orders</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/SENUM - </span> Order Number Base: for Service Order related Orders
+</div>
+<div class="param_def">
+<p>The format for automatically-generated <MadCap:variable name="Variables.se service order"/> numbers. </p>
+<p class="yesnolist"><span class="userinput">PONUM1</span> = The <MadCap:variable name="Variables.se service order"/> number is generated using the pattern defined by the PO parameter <span class="parameter">PONUM1</span>.</p>
+<p class="yesnolist"><strong>SE</strong> = <MadCap:variable name="Variables.Kco Company caps"/> based Sequence.</p>
+<p class="yesnolist"><strong>SO</strong> = <MadCap:variable name="Variables.Se Service Order caps"/> based Sequence.</p>
+<p class="yesnolist">The <MadCap:variable name="Variables.se service order"/> number is generated as per the following pattern:<br /><br />{kco}{delimA}{prefixA}{ServiceOrder}{delimB}{prefixB}{sequence}</p>
+<p>Explanation of pattern:</p>
+<p class="yesnolist">{kco} Only present if the PO parameter <span class="parameter">APPENDCO </span>is set to Y</p>
+<p class="yesnolist">{delimA} Only present if the PO parameter <span class="parameter">APPENDCO </span>is set to Y and the PO parameter <span class="parameter">APPENDDL </span>is not blank</p>
+<p class="yesnolist">{prefixA} Only present if the PO parameter <span class="parameter">SEORDPFX </span>is non-blank and the <span class="parameter">POPFXFST </span>is set to Y (or blank)</p>
+<p class="yesnolist">{Service Order} The <MadCap:variable name="Variables.Se Service Order caps"/> as entered</p>
+<p class="yesnolist">{delimB} Only present if the PO parameter <span class="parameter">INSERTDL </span>is set to Y</p>
+<p class="yesnolist">{prefixB} Only present if the PO parameter <span class="parameter">SEORDPFX </span>is not blank and the <span class="parameter">POPFXFST </span>is set to N</p>
+<p class="yesnolist">{sequence} Unique sequential value with <MadCap:variable name="Variables.Se Service Order caps"/> (and Prefix if present). The length of the sequential part of the number is determined by the PO parameter <span class="parameter">POFORM</span>.</p>
+<p>It should be noted that, in the case of numbering a Material Order raised against a <MadCap:variable name="Variables.Se Service Order caps"/>, we do not make a distinction between a Head Office or a Site raised order.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../po/po_poautogn.htm" /><MadCap:relatedTopic src="../po/po_ponum1.htm" /><MadCap:relatedTopic src="../po/po_appendco.htm" /><MadCap:relatedTopic src="../po/po_seordpfx.htm" /><MadCap:relatedTopic src="../po/po_insertdl.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

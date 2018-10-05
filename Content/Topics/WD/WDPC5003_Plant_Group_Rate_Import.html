@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="856" MadCap:lastWidth="601">
+  <head>
+    <title>
+      <MadCap:variable name="Variables.Pc Plant caps" /> Group Rate Import File Format</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">
+      <MadCap:variable name="Variables.Pc Plant caps" /> Group Rate Import File Format</h1>
+    <p>The <span class="function" title="Function:%WPC9000RFAG">Import <MadCap:variable name="Variables.Pc Plant caps" /> Group Rates</span> import routine works in two ways.</p>
+    <p>The first is a simpler (and somewhat limited) import for which the following fields are required in the import CSV file.</p>
+    <div class="code">Asset Group Code,Description,Type,Valid From,Weekly Internal,Weekly External,<span class="nw">1 Day %</span>,2 Day %,3 Day %,4 Day %,5 Day %,6 Day %,Daily Internal,Daily External,Default Ownership Charge,Default Ownership Charge Frequency</div>
+    <p>The file can contain the field labels (column headings) as a first line, in which case you need to <MadCap:variable name="Variables.tick" /> the <span class="field">Does the first row in the file contain captions?</span><MadCap:variable name="Variables.tick" />box.</p>
+    <p> </p>
+    <p>The second is a more flexible way of importing records.</p>
+    <ul>
+      <li>The first line in the CSV file must be <strong>FILE-FORMAT=&lt;table&gt;</strong>. In this case, as you are importing <MadCap:variable name="Variables.pc plant" /> group rates the &lt;table&gt; will be pc_group.</li>
+      <li>The second line should include all the fields you want to import that are related to &lt;table&gt;. You will need to reference the System Table Summary or turn on the &amp;helpmode=stack prompt to view the fields you wish to import. Care must be taken to include the key fields of the &lt;table&gt;, which in this case are <em>cmg_code</em> (<MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Group Code) and <em>pgr_from</em> (Valid From Date). Even though the unique key for pc_group is <em>kco+cmc_type+cmg_code+pgr_from,</em> the <em>kco</em> and <em>cmc_type</em> can be included in the CSV file but are not mandatory because they can be calculated or worked out from <em>cmg_code</em>. A rule of thumb would be to include all the fields in the primary unique key of the &lt;table&gt;.</li>
+    </ul>
+    <p>Using this format, the <span class="field">Does the first row in the file contain captions?</span><MadCap:variable name="Variables.tick" />box is ignored as the import routine expects the FILE-FORMAT row first followed by a row of table fields.</p>
+    <p>Below is an example file:</p>
+    <div class="code">FILE-FORMAT=pc_group<br /><span style="word-spacing: -0.1em;">cmg_code, pgr_from, pgr_ownrate, pgr_ownfreq, pgr_rate__1, pgr_rate__7, pgr_wperc__1, pgr_wperc__2, pgr_wperc__3, pgr_wperc__4, pgr_wperc__5, pgr_wperc__6, pgr_rate__4, pgr_rate__10<br />MGP001, 3/01/2010, 290, W, 260, 410, 15, 25, 35, 45, 55, 65, 25, 55 </span></div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1267" MadCap:lastWidth="1162">
+    <head><title>Manual Contract Notification for <MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /></title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Manual Contract Notification for <MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /></h1>
+        <p>Invoices with a subcontract <MadCap:variable name="Variables.labour" /> element processed through <MadCap:variable name="General.ProductName" /><span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>are subject to RCT processing rules.&#160; </p>
+        <p>For subcontractors being paid through <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, in order to submit contract notification electronically, <MadCap:variable name="General.ProductName" /> must be set up to create contract notification records when orders are committed. </p>
+        <p>If this is not the case you must complete the Contract Notification outside of <MadCap:variable name="General.ProductName" /> (directly through ROS).&#160; You can then input the Contract Registration details (which are required for Payment Notification) in a choice of two places:</p>
+        <ul>
+            <li><span class="function" title="Function:%WPO101ABPHL">Material Orders</span> - for any contract for which a materials/<MadCap:variable name="Variables.pc plant" /> order is placed (see below);</li>
+            <li><span class="function" title="Function:%WPL1010BCOB">Enter Invoices</span>&#160;- for any contract where payment is through <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, whether or not an order is raised.</li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To record contract registration details on a purchase order:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPO101ABPHL">Material Orders</span> (or <span class="function" title="Function:%WPO101BBPHL"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Orders</span>).</li>
+                <li>Enter the order header details.</li>
+                <li>On the RCT Details tab, enter the <span class="field">Contract ID </span>and <span class="field">Contract End Date</span>.
+<p><img src="../../Resources/Images_S-U/SC/SC_150101.png" class="FullWidth" /></p></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the order header.</li>
+            </ol>
+            <h2>To record contract registration details on an invoice:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1010BCOB">Enter Invoices</span>.</li>
+                <li>Enter the invoice header details.</li>
+                <li>On the RCT tab, enter the <span class="field">RCT Contract ID </span>and <span class="field">Contract End Date</span>.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the invoice.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">If the invoice is related to a&#160; purchase order, this will copy the notification details to the order.&#160; These will then be used on subsequent invoices for the same order.</div>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SCIRE/SCIRE_AUTOCRCN.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="2940" MadCap:lastWidth="1152" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><a name="_Toc440873576"></a>Desktop Tile Values</h1>
+        <p>Certain Tile Values are hard-coded against a function – such as the ones we selected for our first Tile.&#160; Typically these will be for values that are standard for any <MadCap:variable name="General.ProductName" /> user, such as the number of report generating, the number of Uncommitted Orders, the number of users on the system etc.</p>
+        <p><MadCap:variable name="General.ProductName" /> functions that have been set up to display tile values have an information code specified in the function parameters (for example: &amp;info=cosval .reports on the Report Status Workbench function).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Desktop Tile Values.png" class="FullWidth" />
+        </p>
+        <p>For specific user requirements, it is possible to define other values which can be used on tiles.</p>
+        <p>You can either set up additional calculations that are available to any function that uses the same information code, or set up calculations that will be available on any tile by leaving the information code blank.</p>
+        <div>
+            <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Before writing a new Desktop Tile Value to address a specific client’s needs, consideration should be given as to whether Development should hard code the calculation against the function or if a bespoke Tile value is needed.</p>
+            <p>&#160;</p>
+            <p>There may be performance implications – see notes (in red) below</p>
+            <h2>Examples of Desktop Tile Values</h2>
+            <p>Desktop Tile Values allows you to set up calculations to show information on tiles on the <MadCap:variable name="General.ProductName" /> Desktop.</p>
+            <p>Accessing a Table Field</p>
+            <p>
+                <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_4.png" class="FullWidth" />
+            </p>
+            <p>Accessing a Data Mart Value</p>
+            <p>
+                <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_4_1.png" class="FullWidth" />
+            </p>
+            <p>&#160;</p>
+            <p>Using a Method to Write a Query to Retrieve Information</p>
+            <p>
+                <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_4_2.png" class="FullWidth" />
+            </p>
+            <p>&#160;</p>
+            <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Field</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Info Code</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The information code to identify which function(s) to make this value available on.</p>
+                        <p><MadCap:variable name="General.ProductName" /> functions that have been set up to display tile values already have an information code specified in the function parameters (for example: &amp;info= cosval .batches).&#160; If a user-defined value has an information code that matches the code on the function (for example, cosval.batches), the user-defined value will be available for users to show on the tile, in addition to the standard values.</p>
+                        <p>The information code can also be FUNCTION.&lt;MainArea&gt; where FUNCTION indicates that this value is for a single function only and &lt;MainArea&gt; is the function code.</p>
+                        <p>If the information code is blank, the user-defined value will be available for users to show on any tile.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Info ID</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The information value ID.&#160; The combination of info code and info ID must be unique.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>A description of the user variable value.&#160; This is used as the label for this value on the tile.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Configuration Tables</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The configuration tables that should be positioned before the calculation is evaluated.</p>
+                        <p>co_config, sysparam and menuparm are available by default, pointing at the correct records.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Calculation</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The calculation to evaluate for the value shown on the tile.</p>
+                        <p>The calculation can be any standard OA Designer Calculation syntax as in the examples above.</p>
+                        <p><span style="color: #ff4500;">Note that the values for all tiles will be updated with a frequency that is determined by the SY/USERINFO parameter. Therefore, although the calculations can be quite complex (using Method Queries for example), if they take too long to run this could have an adverse effect on performance.</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <p>&#160;</p>
+            <p>&#160;</p>
+        </div>
+    </body>
+</html>

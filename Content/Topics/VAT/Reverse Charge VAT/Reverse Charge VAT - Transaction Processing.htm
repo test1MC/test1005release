@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="765" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Reverse Charge VAT - </MadCap:conditionalText>Transaction Processing</h1>
+        <p>
+            <p class="Body">When a relevant transaction (<MadCap:variable name="Variables.Purchase Ledger caps" /> invoice, Subcontract Ledger certificate, Subcontract Invoice Register transaction, <MadCap:variable name="Variables.Cash Book caps" /> transaction, or General Ledger/<MadCap:variable name="Variables.Jc Contract caps" /> Status transaction with VAT&#160;analysis) is posted on which the VAT code on a distribution line is one of the source VAT&#160;codes in the VAT&#160;Code Substitution table (see <MadCap:xref href="Reverse Charge VAT - VAT Code Substitutions.htm">, <i>Reverse Charge VAT - VAT Code Substitutions</i></MadCap:xref>), a new VAT&#160;distribution line is created for each target VAT&#160;code listed against the source VAT&#160;code (and the original line is removed). The rules in the substitution table are applied to any VAT distribution lines created in this way.</p>
+            <div class="FieldTable">
+                <div class="ListHead">
+                    <div class="ColHead">Field</div>
+                    <div class="ColHead">Description</div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">
+                        <p style="font-weight: normal">Reference Fields</p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>The transaction reference (such as the invoice number or <MadCap:variable name="Variables.sc subcontractor reference" />), ledger account (such as supplier code or subcontractor code),&#160;and <MadCap:variable name="Variables.kco company" /> are copied from the source record.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">
+                        <p>GL&#160;account	</p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>Derived from the target VAT code.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">
+                        <p>Net amount</p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>Calculated from the net amount on the source record using the <span class="Field">Net Amount Percentage</span> specified against the target VAT&#160;code.</p>
+                        <p>For each source VAT&#160;code, the last entry for a corresponding target VAT&#160;code that is for input VAT is adjusted for rounding to ensure that the total Input VAT Net Amount substituted is the same as on the original record (ignoring output VAT).</p>
+                        <p>If any of the target VAT&#160;codes are for output VAT, the last entry is similarly adjusted so that the total Output VAT&#160;Net Amount is either zero or the same as the total Input VAT&#160;Net Amount.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">VAT amount</div>
+                    <div class="FieldDef">
+                        <p>Calculated using the <span class="Field">VAT Calculation Rule</span> specified against the target VAT code.</p>
+                        <p>The last entry corresponding to each source VAT&#160;code is adjusted for rounding to ensure that the total VAT amount is the same as on the original record.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">VAT code</div>
+                    <div class="FieldDef">Set to the target VAT code.</div>
+                </div>
+            </div>
+        </p>
+    </body>
+</html>

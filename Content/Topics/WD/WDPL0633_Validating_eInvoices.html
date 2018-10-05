@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Validating eInvoices</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Validating eInvoices</h1>
+        <p>When loading files, <MadCap:variable name="General.ProductName" /> will validate all invoices, automatically rejecting documents where configured to do so.&#160; A previously loaded file will be re-validated when the <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> (Review) button is pressed, or the <span class="userinput">Create Batch </span>action is used.</p>
+        <p>If invoices fail the validation, they can be automatically removed from the workbench, and a notification email can be sent to a designated recipient.</p>
+        <div class="configuration">
+            <h2 class="print">Configuring eInvoice Validation</h2>
+            <p>Use <span class="function" title="Function:%WEC2000BCTA">Validation Error Codes</span> to configure the handling of invoices with validation errors, for a range of pre-defined error conditions.&#160; <span class="function" title="Function:%WEC2000BCTA">Validation Error Codes</span> is a non-<MadCap:variable name="Variables.kco company" />-specific configuration program.&#160; You may specify the following for each error code:&#160;</p>
+            <ul>
+                <li>Whether a rejection notification email should be sent;</li>
+                <li>If so, the role that <MadCap:variable name="General.ProductName" /> should use when deciding who it should send the email to;</li>
+                <li>Whether the invoice should be automatically removed from the workbench.</li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_063302.png" />
+            </p>
+            <p>The following recipient roles are permitted: Accounts, Buyer, Site or <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />.&#160; When deciding who should receive a given notification, if the validation table role is Accounts, Buyer or Site <MadCap:variable name="General.ProductName" /> will cross-reference this with the <span class="function" title="Function:%WCI9010BWFE">User Roles</span>, giving priority to any <MadCap:variable name="Variables.jc contract" />-specific entry that may exist for that role.&#160; In each case, the first entry with an email address will be used (i.e. the same <MadCap:variable name="Variables.jc contract" /> and role could have several entries for different users).</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_063301.png" />
+            </p>
+            <p>In the case of notifications to <MadCap:variable name="Variables.pl suppliers" />, <MadCap:variable name="General.ProductName" /> will look for an office or <MadCap:variable name="Variables.kco company" />-specific invoice rejection email address specified against the HUB document type in <span class="function" title="Function:%WCI1010SCIF">Organ<MadCap:variable name="Variables.is" />ation Setup</span>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_063303.png" />
+            </p>
+            <p>In both cases, if <MadCap:variable name="General.ProductName" /> is unable to find a role-specific email address, the <span class="parameter">EC/MAILFROM </span>parameter will be used. In all cases, the sender's address is taken from the <span class="parameter">EC/MAILFROM </span>parameter.</p>
+            <p>In the unlikely event that all of the above attempts to derive an address fail, as a last resort <MadCap:variable name="General.ProductName" /> will send an internal mail message to the current <MadCap:variable name="General.ProductName" /> user to indicate that an error notification failure occurred during validation.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_mailfrom.htm" />
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_rejemail.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/LOGMSGS - List of message numbers to log</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/LOGMSGS - </span> List of message numbers to log
+</div>
+<div class="param_def">
+<P>A list of COINS messages to include in the log file.</P>
+<P>This is a can-do list of COINS messages (in the format xx999; for example <SPAN class="userinput Wrap">SY617, SY618, SY619</SPAN>). If a user receives a message on screen or in a report that is in this list, that message will be written to the log file (WebSpeed log for pages/screens, report log for reports) with a tag alongside it of <STRONG>COINSErrorMessage </STRONG>and showing the program stack. This can be used to monitor for certain messages being raised. </P>
+<P>There is a similar check that checks for System Error messages (which are specifically unexpected issues that the programmer has written a throwSystemError() message for). These are shown in the log file (regardless of this parameter) with <STRONG>COINSSystemError </STRONG>as a tag.</P>
+<P>Both these tags can be searched for in the log file (using OE Management or other tools) to alert the system administrator to issues.</P>
+</div>
+</body>
+</html>

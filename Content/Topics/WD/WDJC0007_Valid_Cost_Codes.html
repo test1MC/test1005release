@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="925" MadCap:lastWidth="1013">
+  <head>
+    <title>Valid Cost Codes</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Valid Cost Codes</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> builds up cost codes by combining section, activity and <MadCap:variable name="Variables.cost head" /> (see <a href="WDJC0004_Cost_Codes.html">Cost Codes</a>). When <MadCap:variable name="General.ProductName" /> generates cost codes automatically, either using <span class="function" title="Function:%WJC3401RJCC">Auto Generate Costcodes</span>, or when a user enters a previously unused cost code, it checks that the combination of section, activity and <MadCap:variable name="Variables.cost head" /> is valid, based on <MadCap:variable name="Variables.cost head" /> classes and activity classes.</p>
+    <p>Each <MadCap:variable name="Variables.cost head" /> and each activity can be assigned to a class. These represent groups of <MadCap:variable name="Variables.cost heads" /> or activities that belong together. For example, you might have a class of general <MadCap:variable name="Variables.cost heads" /> that will be appropriate for all <MadCap:variable name="Variables.jc contracts" />, and other classes for <MadCap:variable name="Variables.cost heads" /> that are specific to different types of <MadCap:variable name="Variables.jc contracts" />.</p>
+    <p>For each <MadCap:variable name="Variables.jc contract" />, section and activity, you can specify which <MadCap:variable name="Variables.cost head" /> classes are allowed.</p>
+    <p>For each section, you can specify which <MadCap:variable name="Variables.cost head" /> classes and which activity classes are allowed.</p>
+    <p>In order for a combination of <MadCap:variable name="Variables.cost head" />, activity and section to be a valid cost code, the <span class="screentype"><MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" /> Class(es) </span>lists on the activity, the section, and the <MadCap:variable name="Variables.jc contract" /> must all contain the class to which the <MadCap:variable name="Variables.cost head" /> belongs, and the <span class="screentype">Activity <span class="nw">Class(es)</span></span> list on the section must contain the class to which the activity belongs.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">These rules do not apply to cost codes you create by copying standard <MadCap:variable name="Variables.cost heads" /> or entering them manually.</div>
+    <div class="process">
+      <h2 class="print">To set up <MadCap:variable name="Variables.cost head" /> classes:</h2>
+      <ol>
+        <li>Use <span class="function" title="Function:%WJC2350BCTA"><MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" /> Classes</span> to set up the list of <MadCap:variable name="Variables.cost head" /> classes.</li>
+        <li>When maintaining a <MadCap:variable name="Variables.cost head" />, select the <span class="field">Class </span>to which the <MadCap:variable name="Variables.cost head" /> belongs.</li>
+        <li>When maintaining a <MadCap:variable name="Variables.jc contract" />, enter a can-do list of the <MadCap:variable name="Variables.cost head" /> classes that are valid on the <MadCap:variable name="Variables.jc contract" />, using the <span class="field"><MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" /> Classes </span>field on the Cost &amp; WBS Codes tab.</li>
+        <li>When maintaining a section, enter a list of <MadCap:variable name="Variables.cost head" /> classes and activity classes that are valid on the section.</li>
+        <li>When maintaining an activity code, enter a can-do list of the <MadCap:variable name="Variables.cost head" /> classes which are valid on the activity.</li>
+      </ol>
+      <h2>To set up activity classes:</h2>
+      <ol>
+        <li>When maintaining an activity code, enter the activity <span class="field">Class</span>.
+<p>Activity classes are free-text codes; there is no pre-set list of the codes you can use.</p></li>
+        <li>When maintaining a section, enter a list of activity classes that are valid on the section.</li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1744" MadCap:lastWidth="866">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Reservation Document - </MadCap:conditionalText>Additional Fields</h1>
+        <p class="Body" style="page-break-after: avoid;">The following additional RO fields are available for use on configurable reservation documents.</p>
+        <h2>Plot Fields</h2>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Returns</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_ConStageAtRes
+</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The actual construction stage as at the reservation date.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_DIList</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">This existing field has been enhanced to allow two new options so it can return a list of discount and incentives in the same format as the sales mail merge data file fields &lt;Cash_Discs_and_Incs&gt; and &lt;Non_Cash_Discs_and_Incs&gt;.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purSolDX</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The DX number of the purchaser’s solicitor.</p>
+                        <p>This and similar fields are array fields with an array of 1 to 4 (1 being the main purchaser, 2 the second joint purchaser, and so on), so <span class="fieldname">RO_vwb_purSolDX__1</span> is the DX number of the main purchaser’s solicitor.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purSolFax</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The fax number of the contact at the purchaser’s solicitor.  If no contact fax number is available then the fax number for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purSolContact</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The name of the contact at the purchaser’s solicitor.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purSolEmail</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The email address of the contact at the purchaser’s solicitor.  If no email is available then the email for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purMorDX</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The DX number of the purchaser’s mortgage lender.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purMorFax</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The fax number of the contact at the purchaser’s mortgage lender.  If no contact fax number is available then the fax number for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purMorContact</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The name of the contact at the purchaser’s mortgage lender.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purMorEmail</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The email address of the contact at the purchaser’s mortgage lender.  If no email is available then the email for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purFinFax</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The fax number of the contact at the purchaser’s financial advisor.  If no contact fax number is available then the fax number for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purFinContact</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The name of the contact at the purchaser’s financial advisor.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_purFinEmail</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The email address of the contact at the purchaser’s financial advisor.  If no email is available then the email for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_ResDeposit</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The reservation deposit amount.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_ResComments</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The comments from the reservation event.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_vwb_SalesRep</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">This existing field has been extended to also allow the telephone number and email to be returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">RO_vwb_ResExchDeposit</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">The exchange deposit required  at reservation.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Part Exchange Fields 
+</h2>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Returns</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hpx_leaseyr</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The number of full years remaining on the lease (fractions of a year are ignored). For freehold properties this returns blank.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hpx_ManCompany</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The company name of the management company.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hpx_ManOffice</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The office name of the management company.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hpx_ManContact	</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The name of the contact at the management company.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hpx_ManPhone</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The telephone number of the contact at the management company.  If no contact telephone is available then the phone number for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hpx_ManAdd[1-4]</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The address of the management company.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hpx_ManPCode</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The <MadCap:variable name="Variables.postal code" /> of the management company.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">RO_hpx_ManEmail</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">The email of the contact at the management company.  </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Prospect Fields 
+</h2>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Returns</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hvi_EstCompany</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The company name of the estate agent.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hvi_EstOffice</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The office name of the estate agent.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hvi_EstContact	</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The name of the contact at the estate agent.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hvi_EstPhone</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The telephone number of the contact at the estate agent.  If no contact telephone is available then the phone number for the office is returned.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hvi_EstAdd[1-4]</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The address of the estate agent.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hvi_EstPCode</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The post code of the estate agent.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">RO_hvi_EstEmail</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The email of the contact at the estate agent.  </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">RO_hvi_EstDXNum</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">The DX number the estate agent.  </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

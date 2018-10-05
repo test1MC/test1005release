@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('..\..\..\Resources\MasterPages\OtherTopics.flmsp');" MadCap:lastBlockDepth="2" MadCap:lastHeight="853" MadCap:lastWidth="601" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Datasets</h1>
+        <p>Three components are required for Datasets.&#160; A function, a page and the dataset itself.&#160; </p>
+        <p class="note">It is important that all three components are defined with the same name.</p>
+        <p>In this example, we will use the name NLWSEX1 and we will create a dataset that will retrieve specified Supplier Records from the Supplier Master File.</p>
+        <h2 MadCap:autonum="1.1 ">Function</h2>
+        <p>Create the function called NLWSEX1 with Category of SER – Service and Program of syesb003.&#160; The Context of the function will determine the description that will appear later on the Web Service menu.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_1106.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Dataset</h2>
+        <p>The dataset defines the output message of the webservice.</p>
+        <p>Create a dataset called NLWSEX1 with the Query:</p>
+        <p class="Example">FOR EACH ap_vendor <br />&#160; WHERE ap_vendor.kco = {kco}<br />&#160; AND CAN-DO('{RS_avm_num__3}',ap_vendor.avm_num)</p>
+        <p>This query will allow us to specify the <MadCap:variable name="General.ProductName" /> Company and a list of required Suppliers Accounts.&#160; These selections will be passed to the dataset by the page which we will create later.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_1_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" />&#160; </p>
+        <p>Add the fields </p>
+        <p>kco</p>
+        <p>avm_num </p>
+        <p>avm_name&#160; </p>
+        <p>The dataset is constructed in the same way as any OA Designer dataset, so fields can be calculated fields as well as taken directly from the <MadCap:variable name="General.ProductName" /> database.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_2_1106.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">Page</h2>
+        <p>The page design controls the fields that the web service will expect in order for it to perform its function.&#160; </p>
+        <p>In this example we need the web service to be passed the <MadCap:variable name="General.ProductName" /> Company (kco) and the list of required Supplier Accounts (RS_avm_num__3). </p>
+        <p class="note">For Web Services, the Page design consists only of a Page called the same name as the function and the Dataset, and the required fields defined on an UPDATE form.</p>
+        <p>Field names can be followed by (XX) where XX is either IN,DE,DA,CH,LO meaning Integer, Decimal, Date, Character or Logical data type respectively.&#160; <b>If omitted then character data type is assumed.</b></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_3_1106.png" class="FullWidth" />
+        </p>
+        <p>The page defines the INPUT schema for the BODY section of the message.</p>
+        <h2 MadCap:autonum="1.4 ">Adding the Function to the Web services Menu</h2>
+        <p>To run the Dataset Web Service, first check that the menu function UWXSYESB003 exists.&#160; If it does not exist, then you need to create it.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_4_1106.png" class="FullWidth" />
+        </p>
+        <p>Open the Function and select the Menu Items Tab.&#160; If the function already exists, there may already be entries on this tab relating to Standard Used Defined Services issued by <MadCap:variable name="General.ProductName" /> (prefixed with %) or other User Defined Services created by your company.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> and enter the name of your new User Defined Services Function (in our example NLWSEX1).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_5.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_5_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" />.&#160; The full details of the function are displayed.</p>
+        <p>&#160;</p>
+        <p>Navigate back to the <MadCap:variable name="General.ProductName" /> Services Menu and select the SY – System Hyperlink.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_7.png" style="left: 0;" class="HalfWidth" />
+        </p>
+        <p>Locate the SYESB003 entries.&#160; You new Function will be in this group.<br /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_8.png" style="left: 0;" class="HalfWidth" />
+            <br />
+        </p>
+        <p>Select the Hyperlink to view the service schema.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_9.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>The Input Schema defined by the page will look something like this:</p>
+        <p>Sample</p>
+        <p>&lt;COINSInterface&gt;</p>
+        <p> &lt;Header id="" confirm="" action="" entity="" arguments="" ackID="" testMsg="true"&gt;</p>
+        <p>&#160; &lt;UserID&gt;&lt;/UserID&gt;</p>
+        <p>&#160; &lt;From&gt;&lt;/From&gt;</p>
+        <p>&#160; &lt;HostName&gt;&lt;/HostName&gt;</p>
+        <p>&#160; &lt;Environment&gt;&lt;/Environment&gt;</p>
+        <p>&#160; &lt;Created&gt;2014-03-28T09:05:40.967+00:00&lt;/Created&gt;</p>
+        <p>&#160; &lt;Login&gt;</p>
+        <p>&#160;&#160; &lt;User&gt;&lt;/User&gt;</p>
+        <p>&#160;&#160; &lt;Password&gt;&lt;/Password&gt;</p>
+        <p>&#160;&#160; &lt;CID&gt;1&lt;/CID&gt;</p>
+        <p>&#160;&#160; &lt;Group&gt;&lt;/Group&gt;</p>
+        <p>&#160;&#160; &lt;extUser&gt;&lt;/extUser&gt;</p>
+        <p>&#160;&#160; &lt;extAuth&gt;&lt;/extAuth&gt;</p>
+        <p>&#160; &lt;/Login&gt;</p>
+        <p> &lt;/Header&gt;</p>
+        <p> &lt;Body&gt;</p>
+        <p>&#160; &lt;Results&gt;1&lt;/Results&gt;</p>
+        <p>&#160; &lt;kco&gt;99&lt;/kco&gt;</p>
+        <p>&#160; &lt;RS_avm_num__3&gt;&lt;/RS_avm_num__3&gt;</p>
+        <p> &lt;/Body&gt;</p>
+        <p>&lt;/COINSInterface&gt;</p>
+        <p>And the Output Schema, defined by the Dataset will look like this:</p>
+        <p>Sample</p>
+        <p>&lt;COINSInterface&gt;</p>
+        <p> &lt;Header id="" confirm="" action="" entity="" ackID=""&gt;</p>
+        <p>&#160; &lt;UserID&gt;&lt;/UserID&gt;</p>
+        <p>&#160; &lt;From&gt;&lt;/From&gt;</p>
+        <p>&#160; &lt;HostName&gt;&lt;/HostName&gt;</p>
+        <p>&#160; &lt;Environment&gt;&lt;/Environment&gt;</p>
+        <p>&#160; &lt;Created&gt;2014-03-28T09:05:41.194+00:00&lt;/Created&gt;</p>
+        <p> &lt;/Header&gt;</p>
+        <p> &lt;Body&gt;</p>
+        <p>&#160; &lt;ttRow&gt;</p>
+        <p>&#160;&#160; &lt;kco&gt;99&lt;/kco&gt;</p>
+        <p>&#160;&#160; &lt;avm_num&gt;&lt;/avm_num&gt;</p>
+        <p>&#160;&#160; &lt;avm_name&gt;&lt;/avm_name&gt;</p>
+        <p>&#160; &lt;/ttRow&gt;</p>
+        <p> &lt;/Body&gt;</p>
+        <p>&lt;/COINSInterface&gt;</p>
+        <p>&#160;</p>
+        <h2 MadCap:autonum="1.5 ">Testing the Service</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_10.png" style="left: 0;" class="FullWidth" />
+            <br />Create a new soapUI project and from the Service Schema, copy the WSDL shortcut link into the Initial WSDL field</p>
+        <p>Click OK.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>Once the Project has been created.&#160; Run Request 1 in the editor (Double-click the Request 1 entry)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_11.png" class="FullWidth" />
+        </p>
+        <p>As before, we can use the input message as it is.&#160; However, this time we are going to replace the input message with the one generated in the Service Schema as it is a simpler form.&#160; Clear all the text in the left hand panel.</p>
+        <p>From the Service schema, scroll to the sample input message:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_12.png" class="FullWidth" />
+        </p>
+        <p>Copy the text from &lt;COINSInterface&gt; to &lt;/COINSInterface&gt; and paste into the soapUI right hand panel.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_13.png" class="FullWidth" />
+        </p>
+        <p>Enter the hostname, Environment and username/password detail.</p>
+        <p>Delete the lines for Group, extUser and extAuth</p>
+        <p>In the &lt;Body&gt; section, specify how many results are to be returned, the Company number to retrieve the records from and a comma separated list of Supplier Account numbers to retrieve (or * for all).&#160;&#160; For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_14.png" class="FullWidth" />
+        </p>
+        <p>Send the message.&#160; Correct any exceptions if they occur. </p>
+        <p>If all is correct, a RESPONSE message should be returned along with the requested records:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_15.png" class="FullWidth" />
+        </p>
+        <p>Each record contains the fields as defined by the dataset.&#160; To add additional fields, simply add them to the dataset definition and re-run the request.&#160; The Page definition only needs to be amended if additional selection criteria are needed in the Input message. </p>
+    </body>
+</html>

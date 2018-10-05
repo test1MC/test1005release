@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SRM/SCD-PART - Status Code for Supply Chain Partners (OA)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SRM/SCD-PART - </span> Status Code for Supply Chain Partners (OA)
+</div>
+<div class="param_def">
+<p>A comma-separated list of Group Status Codes to use to identify "partner" companies.</p>
+<P>Where more than one entry exists, the following rules apply:</P>
+<UL>
+<LI>The tab labels in the SRM workbench will be taken from the first entry. </LI>
+<LI>When cascading-up the status of a supplier/subcontractor, the first entry will be used. </LI>
+<LI>The first value will be used when running actions such as changing a company's status.</LI></UL>
+<P>Set up the possible values for status types using <span class="function" title="Function:%WCI2130BCCA">Status Codes (Group Wide)</span>.</P>
+<P>There is a hierarchy of status codes: the code in <FONT color="#000000"><SPAN class="parameter">SCD-PART </SPAN>is the highest, followed by </FONT><FONT color="#000000"><SPAN class="parameter">SCD-PREF</SPAN>, then </FONT><FONT color="#000000"><SPAN class="parameter">SCD-APP</SPAN>, then </FONT><FONT color="#000000"><SPAN class="parameter">SCD-REG</SPAN>, then any others.</FONT></P>
+<P>COINS displays the description of this status code in the <MadCap:variable name="Variables.tick"/> list of group status codes in the search tab, and the tab label for 'partner' companies.  If <FONT color="#000000"><SPAN class="parameter">SCD-PART </SPAN>is blank, the tab disappears.</FONT></P>
+</div>
+</body>
+</html>

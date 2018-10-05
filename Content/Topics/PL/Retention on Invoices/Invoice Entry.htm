@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="5" MadCap:lastHeight="834.6667" MadCap:lastWidth="601">
+    <head>
+        <link href="../../../Resources/TableStyles/COINS.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Retention on Invoices - </MadCap:conditionalText>Invoice Entry</h1>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">New fields </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Fields </MadCap:conditionalText>on the <span class="function">Invoice Entry</span> screen allow you to enter the retention for the invoice.</p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Retention %<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The retention percentage to apply to this invoice. This defaults from the percentage on the order.</p>
+                    <p>The field to the right of this shows the calculated retention amount.</p>
+                </div>
+            </div>
+        </div>
+        <p>Retention is only calculated and updated if a committed order that has been set up with a retention percentage is entered. Retention cannot be entered if an unposted invoice with retention already exists for the order.</p>
+        <p>Retention is calculated using the retention percentage and taking into account PL parameter <span class="parameter">CALCRET</span>. For example on an invoice with the following amounts and a retention of 10%:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINS.css');border-spacing: 3px 3px;border-left-style: solid;border-left-width: 0.5pt;border-left-color: #97999b;border-right-style: solid;border-right-width: 0.5pt;border-right-color: #97999b;border-top-style: solid;border-top-width: 0.5pt;border-top-color: #97999b;border-bottom-style: solid;border-bottom-width: 0.5pt;border-bottom-color: #97999b;" class="TableStyle-COINS" cellspacing="0">
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Merchandise</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: right;">$100.00</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Freight (Additional Charge1) 
+</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: right;">                                          $20.00</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Handling (Additional Charge 2)                                       
+</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: right;">$10.00</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Insurance (Additional Charge 3) 
+</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: right;">                                       $5.00</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Subtotal                                                                             
+</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: right;">$135.00</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">Sales Tax (7% on Merchandise and Freight) 
+</td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1" style="text-align: right;">            $8.40</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If <span class="parameter">CALCRET</span> is blank, the retention will be $10.00 (10% * 100).</p>
+        <p>If <span class="parameter">CALCRET</span> = A1,A2,A3,T the retention will be $14.34 (10% * 100+20+10+5+8.40).</p>
+        <p>If <span class="parameter">CALCRET</span> = A1 the retention will be $12.00 (10% *&#160;100+20)</p>
+        <p>If the retention (calculated or entered) on the invoice, or the retention on the invoice combined with other invoices for the same order, is greater than the retention available, an error is displayed.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Retention on Invoices/Retention Exceeded Error.png" />
+        </p>
+        <p>Discount calculation takes retention into account, based on merchandise + additional charges – retention. For example:&#160;($100 + $20 + $10 + $5 - $14.34) * 0.1 = $12.06.</p>
+        <p>The invoice entry browse <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>shows a <span class="field">Retention</span> column.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Retention on Invoices/Invoice Browse.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

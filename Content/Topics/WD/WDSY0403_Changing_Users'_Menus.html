@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Changing Users' Menus</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Changing Users' Menus</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> comes with a set of standard menus. Standard functions have codes beginning with a percent sign '<span class="userinput">%</span>'. These functions and the standard menus are re-issued at each release with any new programs added.</p>
+    <p>However, these menus may not suit the way your staff work, so there are various things you can do:</p>
+    <ul>
+      <li>Restrict access to functions so that each user only has access to the menus and procedures you want them to.</li>
+      <li>Append functions to standard menus.</li>
+      <li>Copy existing menus and modify them.</li>
+      <li>Create new menus.</li>
+    </ul>
+    <p>For example, if you are happy with the standard menu structure, but simply want users to only see the menus and functions that are relevant to them, you do not need to alter the standard menu structure. You would just grant those users access to those functions - the other menu options would not appear on their screen. See <a href="WDSY0017_How_Function_Access_Works.html">How Function Access Works</a>.</p>
+    <p>If you want to add functions to an existing standard menu, you can append them to the end of the menu.  See <a href="WDSY0182_Adding_to_Standard_Menus.html">Adding to Standard Menus</a>.</p>
+    <p>If you want to modify an existing menu further - for example to change the order of the menu items, you can make a copy of the menu function (see <a href="WDSY0402_Making_Copies.html">Making Copies of Functions</a>), and make the changes to the copy.</p>
+    <p>But suppose you want a user to have a single menu that gives them access to the input functions of <span class="module">General Ledger</span>, <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" />,</span> and <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>. You would create a new menu for them. Use <span class="function" title="Function:%WSYBMSF">Function Maintenance</span>. You would put options on this menu to call up the input menus from each of the ledgers: in this case, %WGL1, %WSL1 and %WPL1.</p>
+    <p>Or suppose you wanted different users to have access to the input functions of different modules. You could create a menu that calls up all the input menus, and allocate access of different options to different users.  You could assign this menu as the main menu for those users. The main menu is the one <MadCap:variable name="General.ProductName" /> displays when they first log in.  Do this in <span class="function" title="Function:%WSYBSUR">Users</span>.</p>
+    <div class="configuration">
+      <h2 class="print">Default Menus</h2>
+You can control the default menus users see when they log in.  There are three parameters to control this: one for a normal browser, one for the documentation menu and one for a PDA browser.  You can also override these defaults for individual users.
+<p><MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;"><MadCap:relatedTopic src="../Parameters/SY/sy_mmenuoa.htm" /><MadCap:relatedTopic src="../Parameters/SY/sy_mmenudoc.htm" /><MadCap:relatedTopic src="../Parameters/SY/sy_mmenupda.htm" /></MadCap:relatedTopics></p></div>
+  </body>
+</html>

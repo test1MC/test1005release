@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2708" MadCap:lastWidth="597">
+    <head><title>Adding <MadCap:variable name="Variables.sc schemes" style="text-transform: capitalize;" /> for a Subcontract</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Adding <MadCap:variable name="Variables.sc schemes" style="text-transform: capitalize;" /> for a Subcontract</h1>
+        <p>You can track <MadCap:variable name="Variables.sc insurance" /> information for individual subcontracts when appropriate.&#160; This is done by setting up <MadCap:variable name="Variables.sc scheme" /> classes, which are collections of <MadCap:variable name="Variables.sc schemes" /> you want to check for different types of subcontract.&#160; You record which <MadCap:variable name="Variables.sc scheme" /> class is appropriate for the&#160;subcontract, if any.</p>
+        <div class="process">
+            <h2 class="print">To add <MadCap:variable name="Variables.sc schemes" /> to a subcontract:</h2>
+            <p>When entering a subcontract record or subcontract order, set the <span class="field"><MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Class </span>field to the <MadCap:variable name="Variables.sc scheme" /> class that is appropriate for the subcontract (or leave it as Not Required if checks are not needed).</p>
+            <p><MadCap:variable name="General.ProductName" /> adds to the subcontract any <MadCap:variable name="Variables.sc schemes" /> on the subcontractor record that belong to the selected <MadCap:variable name="Variables.sc scheme" /> class. The Compliance tab shows details of these <MadCap:variable name="Variables.sc schemes" />.</p>
+            <p>
+                <img src="../../Resources/Images_S-U/SC/SC_130701.png" />
+            </p>
+            <p>These <MadCap:variable name="Variables.sc schemes" /> are inherited from the subcontractor record, and if they are changed on the subcontractor record, those changes will be reflected here. However if you change the details of a <MadCap:variable name="Variables.sc scheme" /> on the subcontract record, this breaks the link with the <MadCap:variable name="Variables.sc scheme" /> on the subcontractor record; changes on the subcontractor record will not affect the <MadCap:variable name="Variables.sc scheme" /> on the subcontract.</p>
+            <p>You can add other <MadCap:variable name="Variables.sc scheme" /> types to the list, or remove any that are not marked as mandatory.</p>
+            <p>If you change the <MadCap:variable name="Variables.sc scheme" /> class to &lt;blank&gt;, this will remove ALL <MadCap:variable name="Variables.sc schemes" /> on the subcontract record. If you change the <MadCap:variable name="Variables.sc scheme" /> class to a different class, this will remove any <MadCap:variable name="Variables.sc schemes" /> that are linked to the subcontractor, retain any <MadCap:variable name="Variables.sc schemes" /> that have been amended, and add the extra <MadCap:variable name="Variables.sc schemes" /> that belong to the new <MadCap:variable name="Variables.sc scheme" /> class.</p>
+            <h2>Committing an order</h2>
+            <p>Committing a subcontract order causes the <MadCap:variable name="Variables.sc scheme" /> information on both the subcontractor record and the order to be verified; if any of the <MadCap:variable name="Variables.sc scheme" /> records or either the subcontractor record or the order triggers an error, it will not possible to commit the order.</p>
+            <p>If a record with the same <MadCap:variable name="Variables.sc scheme" /> type exists on both the subcontractor and the order it will have to valid on both; it will not be possible to use <MadCap:variable name="Variables.sc scheme" /> information on the order to override information on the subcontractor record. For example, if there as an expired public liability insurance record on the subcontractor and a valid public liability insurance record on the subcontract, <MadCap:variable name="General.ProductName" /> will prevent you from committing the order (or will issue a warning, depending on the configuration).</p>
+            <h2>Variation orders</h2>
+            <p>When entering a variation order, the <MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /> tab will be shown if the original order had a <MadCap:variable name="Variables.sc scheme" /> class specified. This shows the <MadCap:variable name="Variables.sc schemes" /> from the original order, but you can add new items. There is no restriction on which items can be added; new items with the same <MadCap:variable name="Variables.sc scheme" /> type as an existing entry can be added. For example, you could add a second "Signed Contract Received" entry, and use the <span class="field">Notes </span>field to show that the new item related to the variation order.</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Setting Up <MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Classes</h2>
+            <p>A <MadCap:variable name="Variables.sc scheme" /> class is a group of <MadCap:variable name="Variables.sc schemes" /> that is used to control when <MadCap:variable name="Variables.sc scheme" /> specifications are added to a subcontract.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">If you have not set up any <MadCap:variable name="Variables.sc scheme" /> classes, the order entry screen will not display the <span class="field"><MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Class </span>field.</div>
+            <h3>To set up <MadCap:variable name="Variables.sc scheme" /> classes:</h3>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC2130BCTA"><MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Classes</span>.</li>
+                <li>Enter a code and description for the <MadCap:variable name="Variables.sc scheme" /> class.</li>
+                <li>The code field is a hyperlink - click this to specify which individual <MadCap:variable name="Variables.sc schemes" /> you want to check for this type of subcontract.&#160;
+<p>&#160;</p><img src="../../Resources/Images_S-U/SC/SC_130702.png" /><p>&#160;</p>
+The list shows all the <MadCap:variable name="Variables.sc schemes" /> that have been set up; the <span class="field">Status </span>field determines which <MadCap:variable name="Variables.sc schemes" /> apply to subcontracts with this <MadCap:variable name="Variables.sc scheme" /> class:
+<p class="yesnolist"><span class="userinput">Blank </span>= The <MadCap:variable name="Variables.sc scheme" /> type&#160;is not included in this <MadCap:variable name="Variables.sc scheme" /> class.</p><p class="yesnolist"><span class="userinput">Mandatory</span> = The <MadCap:variable name="Variables.sc scheme" /> type is added to all subcontract orders that have this <MadCap:variable name="Variables.sc scheme" /> class and cannot be removed.</p><p class="yesnolist"><span class="userinput">Default </span>= The <MadCap:variable name="Variables.sc scheme" /> type is added to all subcontract orders that have this <MadCap:variable name="Variables.sc scheme" /> class but can be removed if not required.</p><p>The Included Only filter shows only those <MadCap:variable name="Variables.sc schemes" /> that have been included in this class; that is, those with a Default or Mandatory status.</p></li>
+                <li>To include a <MadCap:variable name="Variables.sc scheme" /> type in the class, select it and use the action to change the status.</li>
+            </ol>
+        </div>
+    </body>
+</html>

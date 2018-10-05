@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Initial Payroll Setup</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Initial Payroll Setup</h1>
+    <p>Before using the <span class="module">Payroll</span> module, there are a number of steps that should be performed initially to set it up in effective working order.</p>
+    <p>After you have performed these initial steps, you are ready to process Payroll (see <a href="WDPR0004_Processing_Payroll.html">Processing Payroll</a>).</p>
+    <div class="process">
+      <h2 class="print">To initially set up Payroll:</h2>
+      <ol>
+        <li>
+          <strong>Set Up Parameters for US <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /></strong>
+        </li>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>
+          <MadCap:snippetBlock src="../../Resources/Snippets/paramwarn.flsnp" />
+        </p>
+        <p>Make sure you have selected your US <MadCap:variable name="Variables.kco company" /> before setting up or changing the parameters.</p>
+      </blockquote>
+      <ol>
+        <ol>
+          <li>In <span class="function" title="Function:%WCO0000BSYP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters</span>:</li>
+        </ol>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <ul>
+                <ul>
+                  <li>Set parameter ID <span class="parameter">COMPLOC</span> to <span class="userinput">USA</span>.</li>
+                  <li>Set parameter ID <span class="parameter">CURDEC</span> to <span class="userinput">CENTS</span> (include space at beginning of word).</li>
+                  <li>Set parameter ID <span class="parameter">CURPLU</span> to <span class="userinput">Y</span>.</li>
+                  <li>Set parameter ID <span class="parameter">CURUNIT</span> to <span class="userinput">DOLLAR </span>(include space at beginning of word).</li>
+                  <li>Select <span class="userinput">Create <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific</span> from the <span class="null"><span class="field">Choose Action </span></span>field to associate this parameter with your US <MadCap:variable name="Variables.kco company" />.</li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol>
+        <ol start="2">
+          <li>In <span class="function" title="Function:%WAT0000BSYP">Attribute Parameters</span>:</li>
+        </ol>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <ul>
+                <ul>
+                  <li>Set parameter ID <span class="parameter">BANKACC</span> to <span class="userinput">FORMAT=9999999999</span>.</li>
+                  <li>Set parameter ID <span class="parameter">SORTCODE</span> to <span class="userinput">FORMAT=999999999|LABEL=Routing</span>.</li>
+                  <li>Select <span class="userinput">Create <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific</span> from the <span class="null"><span class="field">Choose Action </span></span>field to associate this parameter with your US <MadCap:variable name="Variables.kco company" />.</li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol>
+        <ol start="3">
+          <li>In <span class="function" title="Function:%WPR000BSYP">Parameters</span>:</li>
+        </ol>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <ul>
+                <ul>
+                  <li>Set parameter <span class="parameter">NINOFRMT</span> to <span class="userinput">999-99-9999</span>.</li>
+                  <li>Select <span class="userinput">Create <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific</span> from the <span class="null"><span class="field">Choose Action </span></span>field to associate this parameter with your US <MadCap:variable name="Variables.kco company" />.</li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol>
+        <ol start="4">
+          <li>To maintain essential parameters for <MadCap:variable name="Variables.eft" /> payments, go to <strong>Setup &gt; Parameters</strong> for each pay cycle (Weekly, Monthly, 2-weekly, 4-weekly):</li>
+        </ol>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <ul>
+                <ul>
+                  <li>Set parameter <span class="parameter">BACSEXEC</span> to <span class="userinput">chmod 777 $BACSFILE</span>.</li>
+                  <li>Set parameter <span class="parameter">BACSFILE</span> to <span class="userinput"><em>[path for <MadCap:variable name="Variables.eft" /> file on <MadCap:variable name="General.ProductName" /> Server]</em>/prbacs.tx</span>.</li>
+                  <li>Set parameter <span class="parameter">BACSMED</span> to <span class="userinput">16</span>.</li>
+                  <li>Select <span class="userinput">Create <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific</span> from the <span class="null"><span class="field">Choose Action </span></span>field to associate this parameter with your US <MadCap:variable name="Variables.kco company" />.</li>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol start="2">
+        <li>
+          <strong>Create GL and Bank Accounts to be used with Payroll</strong>
+        </li>
+        <ol>
+          <li>Use <span class="function" title="Function:%WGL2030BGAN">GL Elements</span> to add any accounts needed to process Payroll, such as Cash, Liability, and Accrual accounts.</li>
+          <li>Use <span class="function" title="Function:%WCB2011BBNK">Bank Accounts</span> to add a bank for Payroll, or use an existing bank.</li>
+        </ol>
+        <li>
+          <strong>Create/Maintain Pay Items to be used for US Payroll</strong>
+        </li>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>Use <span class="function" title="Function:%WPR210BQRI">Pay Items</span> to create and maintain pay items used in various file maintenances. Pay items are used to hold Gross Pay, Net Pay, computed values used in <span class="null"><span class="module">Payroll, </span></span>such as Withholding, as well as to create a user-determined Gross Pay Amount used for other computations.<span> P</span>ay items used must be included in any sequence associated with a Payroll run, which is set up in <span class="function" title="Function:%WPR240BPSQ">Item Sequences</span>.</p>
+        <p class="noteheader" dir="ltr" style="margin-right: 0px;">NOTE</p>
+        <p class="note">Pay items used in US <span class="module">Payroll </span>can only have a type of <span class="screentype">Subtotal</span> or <span class="screentype">Hours</span>.</p>
+      </blockquote>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>When used in US <span class="module">Payroll</span>, Pay Item Effects are currently limited to Add and Subtract only. Since pay items are shared among all <span class="module">Payroll</span><MadCap:variable name="Variables.kco companies" />, you must give careful consideration to the setup and maintenance of pay items. Changes can produce unwanted effects. Additionally, if pay items are added, you need to review sequences to see if they need to be modified to include new pay items.</p>
+      </blockquote>
+      <ol start="4">
+        <li>
+          <strong>Create <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration Record</strong>
+        </li>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <p>In <span class="function" title="Function:%WPR211SQRP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration</span>:</p>
+      </blockquote>
+      <ol dir="ltr">
+        <ol>
+          <li>Set <span class="FIeld">Tax Type</span> to <span class="userinput">6</span>.</li>
+          <li>Define which pay items will be used for Gross Pay, Net Pay, Tax Withholdings, EIC Payments, and Reimbursements.</li>
+          <li>Create Timecard Default Rules, Tax Distribution Methods, and other defaults to be used in <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span> and Payroll processing.</li>
+          <li>Create <span class="function" title="Function:%WPR9BCOA">Analysis Sets</span> for use in <span class="module">Payroll</span>.</li>
+        </ol>
+      </ol>
+      <ol start="5">
+        <li>
+          <strong>Create Federal/State/Local Tax Records</strong>
+        </li>
+        <ol>
+          <li>In <span class="function" title="Function:%WPR216BSTE">States</span>, add any State to be used in <span class="module">Payroll </span>for <MadCap:variable name="Variables.vat" /> purposes. You must define a State here first before adding a related jurisdiction in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>.</li>
+          <li>In <span class="function" title="Function:%WPR217BSTE">Localities</span>, add any localities to be used in <span class="module">Payroll </span>for Payroll processing. The State associated with the Locality must exist before adding the Locality here and in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>.</li>
+          <li>In <span class="function" title="Function:%WPR212BSTE">Comp Codes</span>, create a standard list of Workers Compensation Codes. These codes are associated with states in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>, given rates, limits, and other values. Not all codes must be used in all states.</li>
+          <li>In <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>, define <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Authorities used in Payroll processing. Levels of <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Authorities are Federal (Federal Gross and Withholding, Social Security Gross and Withholding, Medicare Gross and Withholding, FUTA Gross and Withholding), State (State Gross and Withholding, SUTA Gross and Withholding, Disability Gross and Withholding, Workers Compensation Gross and Withholding), and Local (City, County, and School District Gross and Withholding).</li>
+        </ol>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <blockquote dir="ltr" style="margin-right: 0px;">
+          <p>Multiple <MadCap:variable name="Variables.vat" /> records may be created for the same jurisdiction with different <MadCap:variable name="Variables.pr effective date" />s. This allows rates or limits to be established in advance for calculations such as Social Security <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> or SUTA <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" />. The <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Date in Period Maintenance is compared to the <MadCap:variable name="Variables.pr effective date" style="text-transform: capitalize;" /> in the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Authority Configuration record to determine which rates to use. The <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Table Date displayed within individual <MadCap:variable name="Variables.vat" /> records is compared against the <MadCap:variable name="Variables.cheque" /> date to determine which year's withholding tables to use in the calculation of withholding <MadCap:variable name="Variables.vat" />.</p>
+        </blockquote>
+      </blockquote>
+      <ol start="6">
+        <li>
+          <strong>Create Other Global Maintenance Files</strong>
+        </li>
+        <ol>
+          <li>In <span class="function" title="Function:%WSYBCRTHR0">Lookup Codes</span>, these simple two-field files are shared by both <span class="module">Human Resources </span>and <span class="module">Payroll</span>. Many fields are reserved for use in HR, but some are used in conjunction with US <span class="module">Payroll </span>processing. These fields are required to be completed in <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>, but if an organ<MadCap:variable name="Variables.is" />ation chooses not to use a particular field, a blank record can be created in the Lookup Code that will be the primary default.</li>
+          <ul>
+            <li>EEO-1</li>
+            <li>Employee Util<MadCap:variable name="Variables.is" />ation Classification</li>
+            <li>Employment Util<MadCap:variable name="Variables.is" />ation Trade</li>
+            <li>Ethnic Origin</li>
+            <li>Work Classification</li>
+          </ul>
+          <li>In <span class="function" title="Function:%WPR223BPEC">Earning Categories</span>, add earning categories for use in <span class="module">Payroll</span>. Earning categories summar<MadCap:variable name="Variables.is" />e the types of pay into categories that can then be reported on. They also allow for different methods, such as Amount, or different multipliers for Overtime and Double Time. If any earning category is made dormant, it cannot be used in Payroll processing.</li>
+          <li>In <span class="function" title="Function:%WPR218BSTE">Skill Levels</span>, add skill levels. Skill levels are used with Union and Trade rates and calculations. Skill levels must first be created here before they may be referenced in other files and on a timecard.</li>
+          <li>In <span class="function" title="Function:%WPR220BQRU"><MadCap:variable name="Variables.pr unions" style="text-transform: capitalize;" /></span>, add unions, union calculations, and union rates for any Collective Bargaining Agreements to which you are a signatory.</li>
+          <ul>
+            <li>
+              <MadCap:variable name="Variables.pr effective date" style="text-transform: capitalize;" />s are in use for both rates and calculations. The <MadCap:variable name="Variables.pr effective date" /> is determined by the timecard date of a transaction.</li>
+            <li>Union calculations include Deductions, Fringes in Pay, and Fringes Not in Pay.</li>
+            <li>Wild cards are in use when determining applicable Skill Levels and Earning Categories for calculations and rates.</li>
+          </ul>
+          <li>In <span class="function" title="Function:%WPR228BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span>, add rates and calculations for any project governed by Prevailing Wage laws.</li>
+          <ul>
+            <li>
+              <MadCap:variable name="Variables.pr effective date" style="text-transform: capitalize;" />s are in use for both rates and calculations. The <MadCap:variable name="Variables.pr effective date" /> is determined by the timecard date of a transaction.</li>
+            <li>Union calculations include Deductions, Fringes in Pay, and Fringes Not in Pay.</li>
+            <li>Wild cards are in use when determining applicable Skill Levels and Earning Categories for calculations and rates.</li>
+          </ul>
+        </ol>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <blockquote dir="ltr" style="margin-right: 0px;">
+          <p>Maintain additional file maintenance necessary to process Payroll, comply with Workers Compensation, and generate Payroll allocations. Information such as the project's state and/or locality must be maintained here for use in timecard entry.</p>
+        </blockquote>
+      </blockquote>
+      <ol>
+        <ol start="6">
+          <li>In <span class="function" title="Function:%WPR227BPAC">Pay Calculations</span>, handle additions and subtractions to <span class="module">Payroll</span>, as well as create burdens. It contains information about a calculation as well as taxability details, pay items, maximums, and other values used in Payroll processing. Examples of calculations are Child Support Deduction, 401k Deduction, 401k Company Match, and Employer Health Insurance Costs.</li>
+          <li>In <span class="function" title="Function:%WPR232BSTE">Employee Allocation Types</span>, add allocation types to determine which allocation groups can be used for this employee.</li>
+        </ol>
+      </ol>
+      <ol start="7">
+        <li>
+          <strong>Create Other <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific Maintenance Files</strong>
+        </li>
+        <ol>
+          <li>In <span class="function" title="Function:%WPR231BPAG">Allocation Groups</span>, add allocation groups, which are groups of calculations that will run if specfic criteria are met during timecard entry. These calculations create additional burdens to Payroll transactions. Allocation groups are associated with contracts and employees. When all criteria are met, the calculations associated with the group will run against a timecard.</li>
+          <li>In <span class="function" title="Function:%WPR233BCGR">Caption Groups</span>, add caption groups. These groups are used to construct a collection of user defined fields that can be accessed by <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>.</li>
+          <li>In <span class="function" title="Function:%WPR233BCAP">Caption Maintenance</span>, add captions. This function is used to define user defined fields associated with caption groups and used in <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>. Fields can be logical, decimal, integer, character, or date. The fields may be designed to contain default values and can be set to require updating.</li>
+          <li>In <span class="function" title="Function:%WPR234BLOC">Locations</span>, create a list of valid locations for the Payroll <MadCap:variable name="Variables.kco company" />. Locations can be used for security and are included in a base set of selectors for functions associated with Payroll.</li>
+          <li>In <span class="function" title="Function:%WPR215BQRD">Departments</span>, create a list of valid departments for the Payroll <MadCap:variable name="Variables.kco company" />. Departments can be used for security and are included in a base set of selectors for functions associated with Payroll.</li>
+          <li>In <span class="function" title="Function:%WPR9BCOA">Analysis Sets</span>, add analysis sets. Analysis sets are used as a tool to create configurable groupings. The title of each Analysis field is defined in <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /><span class="function" title="Function:%WPR211SQRP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration</span>, and allowable entries into individual analysis sets (look up values) are defined here. If necessary, you can use a field within an analysis set to create complex Payroll security.</li>
+        </ol>
+        <li>
+          <strong>Employees and Employee Security</strong>
+        </li>
+        <ol>
+          <li>In <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>, enter detailed employee information necessary to process Payroll. <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span> is organ<MadCap:variable name="Variables.is" />ed using many tabs, with mandatory information available on Add. Use the edit function to access information, such as Earning Categories, State Data, Pay Calculations, Allocation Overrides, and Pay History.</li>
+        </ol>
+      </ol>
+      <blockquote dir="ltr" style="margin-right: 0px;">
+        <blockquote dir="ltr" style="margin-right: 0px;">
+          <p>
+            <MadCap:variable name="Variables.pr effective date" style="text-transform: capitalize;" />s and dormancy capabilities have been added to Earning Categories and Pay Calculations at the Employee Level. This allows you to add known rate or pay calculation changes in advance of the Payroll cycle in addition to maintaining a browse history of the changes.</p>
+        </blockquote>
+      </blockquote>
+      <ol>
+        <ol start="2">
+          <li>In <span class="function" title="Function:%WPRBCOS">Employee Security</span>, employee security can be based upon department, location, or a field within an analysis set as determined by Payroll Parameter <span class="parameter">SECURITY</span>. Use this table to create a can-do list of valid security schemes for each user, or enter specific employee IDs to include or exclude from a user's view.</li>
+        </ol>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Initial Payroll Setup</h2>
+    </div>
+  </body>
+</html>

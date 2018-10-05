@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="834" MadCap:lastWidth="997">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />TRIM$</h1>
+        <table>
+            <tr>
+                <td>
+                    <p>Purpose:</p>
+                </td>
+                <td>
+                    <p>&#160;</p>
+                </td>
+                <td>
+                    <p>Removes leading and trailing specified characters from a character string</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Syntax:</p>
+                </td>
+                <td>
+                    <p>&#160;</p>
+                </td>
+                <td>
+                    <p>TRIM$(string,trim-chars)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>&#160;</p>
+                </td>
+                <td>
+                    <p>string:</p>
+                </td>
+                <td>
+                    <p>A character expression.&#160; The string may be a constant, field name, variable, or expression that results in a character value.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>&#160;</p>
+                </td>
+                <td>
+                    <p>trim-chars:</p>
+                </td>
+                <td>
+                    <p>A character expression that specifies the characters to trim from the string.&#160; A single character expression will be removed from both beginning and end of string, a comma separated trim-chars will specify different beginning and end characters.</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/TRIM.png" style="width: 515px; height: 254px;" class="FullWidth" />
+        </p>
+        <p>Example: </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>Note:&#160; There is a Right-Trim$ command to remove trailing characters from a character string, but no Left-Trim$ command.&#160; Therefore for a calculation to convert say ‘020’ to ‘20’ the following solution is suggested</p>
+        <p>TRIM$('020' + ' ','0') which would give you '20 '</p>
+        <p>Or </p>
+        <p>TRIM$(TRIM$('020' + ' ','0'),' ') to get rid of the trailing space if required</p>
+        <p>&#160;</p>
+    </body>
+</html>

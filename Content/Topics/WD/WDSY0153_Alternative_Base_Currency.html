@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Alternative Base Currency</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Alternative Base Currency</h1>
+    <p>There are up to six values available for each item held in <MadCap:variable name="General.ProductName" />:</p>
+    <p>The six fields are :</p>
+    <p>1 - Document currency (for example invoice; the original transaction value)<br />2 - Base currency for the <MadCap:variable name="Variables.kco company" /><br />3 - Alternative base currency 1<br />4 - Alternative base currency 2<br />5 - Alternative base currency 3<br />6 - Account currency (for example, <MadCap:variable name="Variables.pl supplier" /> account in PL, <MadCap:variable name="Variables.jc contract" /> currency in JC)</p>
+    <p>See <a href="WDSY0151_Basic_Principles.html">Basic Principles - How Multi-Currency Works</a>.</p>
+    <p>Three values (document, base and account) are calculated for all relevant transactions. The other three, which can be configured if required, are known as <strong>alternative base currencies</strong>.</p>
+    <p>If you are going to be doing significant reporting in currencies other than base, you can configure alternative base currencies. This means that each item entered will be converted to the value for those currencies on reports.</p>
+    <p>If, for example, you process all your transactions in GBP, but are owned by a European owner who you have to prepare reports for in Euros, you could define alternative base 1 as Euros, and all transactions on entry will have Alt-Base 1 calculated and held in Euros. This then means reports can be defined, in Euros, to read this value easily, instead of having to do some substantial arithmetic during production of the report.</p>
+    <p>If you have a number of different <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> working in a range of their own local currencies, you may find it convenient to set up your most commonly-used currencies as your various alternative base currencies, because you can then more easily define cross-company reports etc which add together the various values without needing to perform any exchange calculations. For example, if you have a number of <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> whose base is GBP, and others with base EUR, you might set up alternative base currencies of GBP, EUR and USD in all <MadCap:variable name="Variables.kco companies" />. This would allow you to define consolidating reports in all three of these currencies which add values from all the <MadCap:variable name="Variables.kco companies" /> in the system.</p>
+    <p>Posting reports print in the base currency of the <MadCap:variable name="Variables.kco company" />, and then repeat the report in any alternative base currencies in use.  If one of these is also the base currency for a <MadCap:variable name="Variables.kco company" /> that section would be a duplicate, therefore in this particular situation the alternative base section of any posting report is suppressed.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDGL0018_Multi-Currency_and_Joint-Venture_Reporting.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print">Configuring Alternative Base Currencies</h2>
+      <p>Use <span class="function" title="Function:%WGL9010RGLC">Alternative Base Currencies</span> to enable multi-base currency and define up to three alternative base currencies. <MadCap:variable name="General.ProductName" /> will then process all historical transactions and store the alternative base values - this may take a long time.</p>
+    </div>
+  </body>
+</html>

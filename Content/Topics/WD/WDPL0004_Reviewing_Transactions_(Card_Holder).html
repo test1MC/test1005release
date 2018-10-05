@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1758" MadCap:lastWidth="1061">
+    <head><title>Reviewing PCard Transactions (Card Holder)</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Reviewing PCard Transactions (Card Holder)</h1>
+        <p><span class="function" title="Function:%WPL1310BAPT">PCards Workbench - Card Holder Mode</span> allows you to review your PCard purchase transactions and complete any missing information.&#160; Marking a transaction as reviewed allows the card administrator to include the transaction in a batch.&#160; The browse shows transactions for any PCards for which you are registered in <MadCap:variable name="General.ProductName" /> as the user.</p>
+        <div class="process">
+            <h2 class="print">To review PCard transactions:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1310BAPT">PCards Workbench - Card Holder Mode</span>.</li>
+                <ul>
+                    <li>If a transaction contains errors, the <span class="field">Status </span>column shows <span class="sysmsg">Error</span>. Errors might occur because of incomplete or mis-typed information coming from the merchant. You must correct any errors before you can mark the transaction as "Reviewed". You can see a detailed explanation of the error or errors by pointing to the error indicator.</li>
+                    <li>If there are warnings that relate to a transaction, the column to the right of the Status column shows a red exclamation mark. You can see the warning text by pointing to this warning indicator. Warnings are for your information; the administrator may need to deal with them.</li>
+                    <li>You can see an image of the transaction receipt by clicking the <img src="../../Resources/Images/render.gif" class="button" /> button in the <span class="field">View Receipt </span>column (or by clicking the card network logo from the transaction detail screen).
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Transaction Receipt Image</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><img src="../../Resources/Images_P-R/PL/PL_000401.png" /></MadCap:dropDownBody></MadCap:dropDown></li>
+                </ul>
+                <li>To fill in any missing transaction details or correct errors, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />.</li>
+                <li>You may need to do the following (depending on your access rights):</li>
+                <ul>
+                    <li>Select or confirm the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> for which the purchase was made.</li>
+                    <li>Confirm the analysis or enter the correct <MadCap:variable name="Variables.jc contract" />, overhead department, asset or workshop code.</li>
+                    <li>If the <MadCap:variable name="Variables.jc contract" /> uses WBS codes, confirm or enter a valid code. This code will be defaulted into the WBS column against any line item detail line where no WBS code is already present.</li>
+                    <li>Enter the <MadCap:variable name="Variables.vat" /> amount (Level 1 only).</li>
+                    <li>Confirm that you have a <MadCap:variable name="Variables.vat" /> receipt for the transaction. (Level 1 only or if the <span class="field">Gross Amount </span>of the transactions exceeds a specified value. The specified value defaults to <MadCap:variable name="Variables.$" />5000 but is determined by a parameter.)</li>
+                </ul>
+                <li>Fill in the detail lines:</li>
+                <ul>
+                    <li>Ensure that the total of the lines is equal to the <span class="field">Net Amount</span>.</li>
+                    <li>Transactions from level 1 and level 2 merchants will not show the details of what was purchased. In this case (depending on your company policy) enter lines that include at least a description of the items and the prices.</li>
+                </ul>
+                <li>You can also enter a note for the administrator (for example, to explain the purchase).</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save your changes.
+<p>When you have corrected any errors, you can mark the transactions as "reviewed".</p><p class="noteheader">NOTE</p><div class="note">If you are unable to correct errors on a transaction, the administrator will be able to see these transactions and correct them. You may need to let the administrator know that there are transactions that need their attention.</div></li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the transactions you want to mark as "reviewed".</li>
+                <li>From the Choose Action list, select <span class="userselect">Mark As Reviewed </span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <p>Use <span class="function" title="Function:%WPL2120BAPP">PCard Maintenance</span> (or <span class="function" title="Function:%WPL1300BAPP">Unregistered PCards Workbench</span>) to register who administers each card.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_mintrval.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

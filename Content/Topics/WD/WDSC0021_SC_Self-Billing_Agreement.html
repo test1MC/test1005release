@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>SC Self-Billing Agreement</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">SC Self-Billing Agreement</h1>
+    <p>The Subcontractor Self-Billing Agreement document format allows you to configure a document which is intended to constitute and detail the agreement between the client and a subcontractor as regards the issuing and accepting of self-billed invoices.  </p>
+    <p>Use <span class="function" title="Function:%WSC1960BJOB">Subcontract Self Billing Agreement</span> to print these documents.  They are printed after the selection of a <MadCap:variable name="Variables.jc contract" /> and particular subcontractors who have subcontracts for that <MadCap:variable name="Variables.jc contract" />.  </p>
+    <div class="process">
+      <h2 class="print">To configure a self-billing agreement document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>. </li>
+        <li>Use the <span class="userinput">SC Self-Billing Agreement</span> document type.</li>
+        <li>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </li>
+        <ul>
+          <li>The following tables are available:</li>
+          <ul>
+            <li>jc_job - <MadCap:variable name="Variables.Jc Contract caps" /></li>
+            <li>sc_mast - Subcontractor</li>
+            <li>co_config -  Configuration</li>
+          </ul>
+          <li>All information should be in the header or footer; the BODY is not currently used on this document. The HEAD typically contains data about the client from co_config and about the subcontractor from sc_mast (and could contain information about the specific <MadCap:variable name="Variables.jc contract" /> from jc_job); for example: <MadCap:variable name="Variables.kco company" /> name, <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> number, <MadCap:variable name="Variables.jc contract" /> name and number.  The FOOT contains provision for the signatures of both parties.    </li>
+        </ul>
+      </ol>
+    </div>
+  </body>
+</html>

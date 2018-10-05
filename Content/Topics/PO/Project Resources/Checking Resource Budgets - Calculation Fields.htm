@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="2" MadCap:lastHeight="846" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Checking Resource Budgets - </MadCap:conditionalText>Calculation Fields</h1>
+        <p>Several <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly,COINS.PrintOnly">new </MadCap:conditionalText>fields can be used as decision points in the workflow process in order to decide, for example, whether a requisition or order should be routed for further approval.</p>
+        <h2 MadCap:autonum="1.1 ">Requisition Fields</h2>
+        <h3 MadCap:autonum="1.1.1 ">RO_LinesOverQtyResourceBudget	</h3>
+        <p>This field returns a list of requisition item numbers whose cumulative requisitioned quantity would exceed the budgeted resource quantity if the requisition was issued (approved). This takes into account the quantity tolerances specified by the PO parameters <span class="parameter">RBQTOL%</span> and <span class="parameter">RBQTOLAM</span>. The field <span class="fieldname"> RO_iLinesOverQtyResourceBudget</span> returns 0 if the above list is empty or 1 if the list is not empty.</p>
+        <h3 MadCap:autonum="1.1.2 ">RO_LinesOverAmtResourceBudget	</h3>
+        <p>This field returns a list of requisition item numbers whose cumulative requisitioned amount (that is, financial value) would exceed the budgeted resource amount if the requisition was issued (approved).  This takes into account the amount tolerances specified by the PO parameters <span class="parameter">RBATOL%</span> and <span class="parameter">RBATOLAM</span>. The field <span class="fieldname"> RO_iLinesOverAmtResourceBudget</span> returns 0 if the above list is empty or 1 if the list is not empty.</p>
+        <h3 MadCap:autonum="1.1.3 ">RO_CostHeadsOverBudget	</h3>
+        <p>This field returns a list of <MadCap:variable name="Variables.cost heads" /> whose associated financial budget (a <MadCap:variable name="Variables.Jc Contract caps" /> Status budget) would be exceeded if the requisition was issued (approved).  If the list is empty then the associated budget would not be exceeded. The field <span class="fieldname">RO_iCostHeadsOverBudget</span> returns 0 if the above list is empty or 1 if the list is not empty.</p>
+        <h3 MadCap:autonum="1.1.4 ">RO_CostAnalsOverBudget	</h3>
+        <p>This field returns a list of cost codes whose associated financial budget  (a <MadCap:variable name="Variables.Jc Contract caps" /> Status budget) would be exceeded if the requisition was issued (approved).  If the list is empty then the associated budget would not be exceeded. The field <span class="fieldname">RO_iCostAnalsOverBudget</span> returns 0 if the above list is empty or 1 if the list is not empty.</p>
+        <h2 MadCap:autonum="1.2 ">Order Fields</h2>
+        <p>An important point to note in the following paragraphs is that we refer to the <i>Maximum Allowable Quantity</i> and <i>Maximum Allowable Amount</i>.  </p>
+        <p>If a resource budget can be found and the <span class="field">Requisitioned Quantity</span> is non-zero and is greater than the <span class="field">Budgeted Quantity</span> then the <span class="field">Requisitioned Quantity</span> is the <span style="font-style: italic;">Maximum Allowable Quantity</span>; otherwise the <span class="field">Budgeted Quantity</span> is the <i>Maximum Allowable Quantity</i>.  </p>
+        <p>Similarly, if a resource budget can be found and the <span class="field">Requisitioned Quantity</span> is non-zero and the <span class="field">Requisitioned Amount</span> is greater than the <span class="field">Budgeted Amount</span> then the <span class="field">Requisitioned Amount</span> is the <i>Maximum Allowable Amount</i>; otherwise the <span class="field">Budgeted Amount</span> is the <i>Maximum Allowable Amount</i>.</p>
+        <h3 MadCap:autonum="1.2.1 ">RO_LinesOverQtyResourceBudget	</h3>
+        <p>This field returns a list of order item numbers whose cumulative ordered quantity would exceed the resource’s maximum allowable quantity if the order was committed (approved).  This takes into account the amount tolerances specified by the PO parameters <span class="parameter">RBATOL%</span> and <span class="parameter">RBATOLAM</span>. The field <span class="fieldname">RO_iLinesOverQtyResourceBudget</span> returns 0 if the above list is empty or 1 if the list is not empty.</p>
+        <h3 MadCap:autonum="1.2.2 ">RO_LinesOverAmtResourceBudget	</h3>
+        <p>This field returns a list of order item numbers whose cumulative ordered amount (that is, financial value) would exceed the resource’s maximum allowable amount if the order was committed (approved).   This takes into account the amount tolerances specified by the PO parameters <span class="parameter">RBATOL%</span> and <span class="parameter">RBATOLAM</span>. The field <span class="fieldname">RO_iLinesOverAmtResourceBudget</span> returns 0 if the above list is empty or 1 if the list is not empty.</p>
+    </body>
+</html>

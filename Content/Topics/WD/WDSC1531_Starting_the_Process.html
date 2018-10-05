@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1061" MadCap:lastWidth="1178">
+  <head>
+    <title>Starting the RCT Return Process</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Starting the RCT Return Process</h1>
+    <p>The first stage in the RCT return process involves requesting the deduction summary electronically from Revenue.  You can only do this after the end date of the return period; the return period is either a calendar month or a calendar quarter (ending on the last day of March, June, September or December), as instructed by Revenue. </p>
+    <p>If all payment notifications are complete and correct, and the information on <MadCap:variable name="General.ProductName" /> agrees with that held by Revenue, you may not need to do anything further; Revenue will treat the deduction summary as the completed return. </p>
+    <div class="process">
+      <h2 class="print">To start the RCT return process:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSC1440BSDS">Return Reconciliation Workbench</span>.</li>
+        <li>Add a new return record and select the end date of the period the return applies to.
+<p>If you are creating a return for a previous period, <MadCap:variable name="General.ProductName" /> displays a message to warn you that the return has already been final<MadCap:variable name="Variables.is" />ed.</p></li>
+        <li>Leave the <span class="field">Automatically Request Deduction Summary </span>box <MadCap:variable name="Variables.tick" />ed.</li>
+        <li>When you save the record, <MadCap:variable name="General.ProductName" /> submits an electronic request to Revenue for the deduction summary.  The request may take some time to complete.  During this process the request can have one of the following stages:</li>
+        <ul>
+          <li>
+            <span class="bgamber">New</span> - This is the initial stage of the record when first created, and should only be transitory unless there is a communication problem with Revenue.</li>
+          <li>
+            <span class="bgamber">Requested</span> - The deduction summary has been requested from Revenue but not received.   
+<p><b>&gt; If the record remains at this stage because no response has been received from Revenue, select the record and use the </b><span class="userselect" style="font-weight: bold;">Request Deduction Summary</span><b> action to resubmit the request. </b></p></li>
+          <li>
+            <span class="bgred">Request Error</span> - The deduction summary has been requested from Revenue but an error response has been received or the detail records received do not agree with the header received.
+<p><b>&gt; The underlying error will need to be resolved and then you need to cancel the return header record  </b><span style="font-style: normal;font-weight: normal;"><b>(see </b><a href="WDSC1536_Cancelling_a_Return.html" style="font-weight: bold;">Cancelling an RCT Return</a><b>)</b></span><b> and create a new one for the same period.</b></p></li>
+          <li>
+            <span class="bgamber">Processing</span> - The deduction summary has been received from Revenue and <MadCap:variable name="General.ProductName" /> is processing the response.  This may take a few minutes as <MadCap:variable name="General.ProductName" /> creates the necessary RCT Return Detail records and then attempts to automatically reconcile these to the <MadCap:variable name="General.ProductName" /> Tax Return details.</li>
+          <li>
+            <span class="bgamber">Incomplete</span> - The deduction summary has been received from Revenue and fully processed but the automatic reconciliation process could not completely reconcile the return because there are differences between the RCT Return and the <MadCap:variable name="General.ProductName" /> records. 
+<p><b>&gt; The differences need to be resolved before the Return can either be agreed as it stands or the necessary changes filed.  <span style="font-weight: normal;">See <a href="WDSC1534_Reconciling_the_Return_Details.html">Reconciling the Return Details</a>, <a href="WDSC1535_Reviewing_Unmatched_Payments.html">Reviewing Unmatched <MadCap:variable name="General.ProductName" /> Payment Records</a>.</span></b></p></li>
+          <li>
+            <span class="bggreen">Agreed</span> - The Return is fully reconciled with no updates so that the Deduction Summary as received from Revenue represents a correct Return.  No filing is necessary as the Deduction Summary will be automatically deemed to be the Return on the due day.</li>
+        </ul>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">
+        <p>If you need to request the deduction summary for an existing return record, select the record and use the <span class="userselect">Request Deduction Summary</span> action.</p>
+      </div>
+      <p> </p>
+    </div>
+  </body>
+</html>

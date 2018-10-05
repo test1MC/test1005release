@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>&#160;</head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Tables and Modules</h1>
+        <p>The table structure of the <MadCap:variable name="General.ProductName" /> database has been designed to be organized with a direct relation to the business processes and modules of the system. One of the main attributes of this design is the naming convention used on the schema.</p>
+        <p><MadCap:variable name="General.ProductName" /> have aimed to use a naming convention that would make it easy to identify which tables are used by which module. On most cases the first two letters of the table will point to the module code of the system.</p>
+        <p>Examples:</p>
+        <p>ap_	<MadCap:variable name="Variables.Purchase Ledger caps" /><br />ar_	Sales Ledger<br />cb_	<MadCap:variable name="Variables.Cash Book caps" /><br />ci_	Central Repository</p>
+        <p class="note">The above is the standard convention but there are tables in the database which do not conform to this convention of which users should be aware – main examples are payroll and all system information which either do not use underscrores but use hyphens or do not break the table names. The Database Enquiry contains all the information as required</p>
+        <p>The table name will also contain a descriptive element, for example ap_invoice is the <MadCap:variable name="Variables.Purchase Ledger caps" /> invoice table and ap_invdist the table which contains its associated distribution records.</p>
+        <p>Each table has a three letter ID, this is used as reference throughout coins – and is often used as the prefix of a field name. In the example of ap_invoice this ID is ain, therefore the field name for the <MadCap:variable name="Variables.Purchase Ledger caps" /> Invoice balance is ain_balance.</p>
+        <p>To reference a field the syntax is:</p>
+        <p>&#160;</p>
+        <p class="Example">{tablename}.{fieldname}<br /><br />For example :<br /><br />ap_invoice.ain_balance</p>
+        <h2>Database Structure</h2>
+        <p>The coins database is based on various levels, the top level being the Central Repository. Information held in the Central Repository is not <MadCap:variable name="General.ProductName" /> Company specific and is available across the system.</p>
+        <p>The main pieces of information held in the Central Repository are :</p>
+        <p><b>CI</b> Company Information<br /><b>PI</b> Project Information<br /><b>TI</b> Technical Information<br /><b>PP</b> People Information</p>
+        <p>In addition to the Central Repository, system information such as Users, Functions, Printers are also held at this top level.</p>
+        <p><b>SY</b> 	System<br /><b>MS</b> Menus and Functions<br /><b>PM</b> Print Manager<br /><b>XL</b> Translations and Language<br /><b>IB</b> Insurances and Bonds<br /><b>MK</b> Marketing</p>
+        <p>Most data in the Coins database is actually held at <MadCap:variable name="General.ProductName" /> Company level. Even though only one company may be used the company details will need to be used to access the data. In each instance the company number is held on each table in the kco (current logged in company) field.</p>
+        <p>There are a set of tables which relate directy to company information – configuration table etc, in addition to generic tables such as Batches – these are held in the co module.</p>
+        <p><b>CO</b>	Company</p>
+        <h2>Company Specific Modules</h2>
+        <p><b>GL</b>	General Ledger<br /><b>JC</b>	Contract Status Ledger (Job Costing)<br /><b>CB</b><![CDATA[	]]><MadCap:variable name="Variables.Cash Book caps" /><br /><b>AP</b><MadCap:variable name="Variables.Purchase Ledger caps" /> (Accounts Payable)<br /><b>AR</b>	Sales Ledger (Accounts Receivable)<br /><b>SC</b>	Subcontract Ledger</p>
+        <h2>Process Specific Modules :</h2>
+        <p>CS	<MadCap:variable name="Variables.Contract Sales" /></p>
+        <p><b>FM</b>	Facilities Management<br /><b>SM</b>	Valuations (Site Manager)<br /><b>SW</b>	Small Works<br /></p>
+        <p><b>House Builders Modules</b>
+        </p>
+        <p><b>BQ</b>		Bill of Quanties<br /><b>HS</b>		House Sales<br /><b>LA</b><![CDATA[		]]><MadCap:variable name="Variables.La Land Management caps" /><br /><b>VP</b>		Valuations and Payments<br /><b>WF</b>		Workflow</p>
+        <p><b>Payroll and HR</b>
+        </p>
+        <p><b>CR</b>		Credit Control<br /><b>HR</b>		Human Resources<br /><b>EX</b>		Expenses<br /><b>PR</b>		Payroll</p>
+        <p><b>Plant, Assets and Stock</b>
+        </p>
+        <p><b>CM</b>		Components<br /><b>FA</b>		Fixed Assets<br /><b>FL</b>		Fleet<br /><b>PC</b><![CDATA[	]]><MadCap:variable name="Variables.Plant Control caps" /><br /><b>SO</b>		Sales Orders<br /><b>ST</b><![CDATA[		]]><MadCap:variable name="Variables.St Stock caps" /></p>
+        <p><b>Procurement</b>
+            <br />
+            <br /><b>PO</b> 		Procurement</p>
+        <p>Other Modules :</p>
+        <p><b>BP</b>		Professional Billing<br /><b>CR</b>		Credit Control<br /><b>DC/DM</b>		Document Control / Management<br /><b>IB</b>		Insurance and Bonds</p>
+    </body>
+</html>

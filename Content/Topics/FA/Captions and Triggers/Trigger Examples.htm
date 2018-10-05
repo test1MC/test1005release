@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="945" MadCap:lastWidth="1186" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Trigger Examples</h1>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Trigger Examples_1.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The Safety Inspection trigger is a yearly trigger. It will fire when the current date is equal to the Expires date (the date when the Safety Inspection is due). It will reset to a date 1 year after the date on which it is reset (the next safety inspection is due one year after the previous one).</li>
+            <li>The Registration (yearly) trigger is a year-end trigger. It will fire when the current date is equal to the Expires date (when the registration is due). It will be reset to the end of the month, one year after the date on which it is reset (the registration is next due one year after it was paid, at the end of the month).</li>
+            <li>The Registration (6 monthly) trigger is a month-end trigger. It will fire when the current date is equal to the Expires date (when the registration is due). It will be reset to the end of the month, six months after the date on which it is reset (the registration is next due six months after it was paid, at the end of the month).</li>
+            <li>The 10,000 Mile Service trigger is a plus trigger. It will fire when the current mileage on the trigger record meets or exceed the Expires mileage (when the service is due). Note that <MadCap:variable name="General.ProductName" /> checks the mileage value on the trigger, not the mileage on the asset itself; the trigger will not fire unless it is updated. It will be reset to the value of the trigger when it is reset, plus 10,000 (the next service is due 10,000 miles after the current one).</li>
+            <li>The 40 Days On Hire Inspection trigger is a greater than or equal to trigger. It will fire when the number of days on hire is greater than or equal to 40 (when the inspection is due). It will reset the current Value to zero; the Expires value will still be 40.</li>
+            <li>The Tyre Depth trigger is a less than or equal to trigger.  It will fire when the tyre depth is equal to or less than 3, and will reset to 20 (the depth of new tyres).</li>
+        </ul>
+        <p>The Safety Inspection and Registration would not need to be updated: the Value of date triggers is always today. The 10,000 Mile Service trigger could be updated from the mileage on the asset record using FL Process Mileage Triggers (in Fleet Manager). The 40 Days On Hire Inspection trigger could be updated using Plant Control &gt; Processing &gt; Update Plant On Hire Triggers (in Plant Manager). All four could be reset by setting up Workshop <MadCap:variable name="Variables.Cost Head caps" /> Elements correctly.</p>
+    </body>
+</html>

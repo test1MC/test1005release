@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/SCCHKINS - SCPO insurance (comma-sep list - see help)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/SCCHKINS - </span> SCPO insurance (comma-sep list - see help)
+</div>
+<div class="param_def">
+<p>This allows you to prevent SC orders for subcontractors whose insurance has expired or where insurance details are missing. Four types of insurance can be checked:
+<P></P>
+<UL>
+<LI>Public Liability</LI>
+<LI>Employers Liability</LI>
+<LI>Contractors All Risk</LI>
+<LI>Professional Indemnity</LI></UL></p>
+<p>The parameter <SPAN class="parameter">SCCHKINS</SPAN> governs the checking that is done against these insurances. It holds a comma-separated list of four letters (one for each insurance). The letters must be one of the following: 
+<P></P>
+<P class="yesnolist"><SPAN class="userinput">e</SPAN> = "Error": if the insurance details are missing or expired, the order is prevented.</P>
+<P class="yesnolist"><SPAN class="userinput">w</SPAN> = "Warning": the order can still be raised.</P>
+<P class="yesnolist"><SPAN class="userinput">n</SPAN> = "No Error/Warning". (A blank is taken to mean "no Error/Warning".)</P>For example, enter <SPAN class="userinput">n,w,e,w</SPAN>. 
+<P></P>
+<P>The first letter always refers to Public Liability insurance. The second letter always refers to Employer's Liability. The insurance governed by the third and fourth letters depends on the SC parameter <SPAN class="parameter">SCADDINS</SPAN>. <SPAN class="parameter">SCADDINS</SPAN> holds two entries: Contractors All Risk and Professional Indemnity. Their order can be changed. The 3rd letter of <SPAN class="parameter">SCCHKINS</SPAN> governs the 1st entry of <SPAN class="parameter">SCADDINS</SPAN>, and the 4th letter governs the 2nd entry of <SPAN class="parameter">SCADDINS</SPAN>.</P>
+<P>For example, if <SPAN class="parameter">SCCHKINS</SPAN> was set to <SPAN class="userinput">e,w,w,n</SPAN> and <SPAN class="parameter">SCADDINS</SPAN> was set to 1 Contractors All Risk and 2 Professional Indemnity, then during Subcontract Order entry, a problem with the subcontractor's Public Liability insurance would result in an Error; a problem with either Employer's Liability or Contractor's All Risk insurance would result in a Warning (the order could still be raised); and a problem with Professional Indemnity insurance would not cause a warning or error at all.</P></p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sc/sc_scaddins.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

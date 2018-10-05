@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="3955" MadCap:lastWidth="1118">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Procurement Accruals Report</h1>
+        <p>The Accruals Report allows you to produce a report that shows accrued costs (value of materials delivered but not invoiced). If you have permission, you can also generate an accruals batch.</p>
+        <p>The report takes account of all accruals, regardless of how they occur; for example: GRNs, orders accruing based on a due date, plant allocation sheets, plant maintenance.</p>
+        <p>You can only create the accruals batch if you have access to the function %WPO3010RXXXS1. </p>
+        <p>If a contract, overhead department, asset or stock location has already been included in an accrual batch for the period, <MadCap:variable name="General.ProductName" /> will not include it in the new batch.</p>
+        <h2>Configuration</h2>
+        <p>Parameter : GL/ACCTTYPE </p>
+        <p>The GL transaction type used when posting monthly accruals. This must be a reversing transaction type.</p>
+        <h2>Process</h2>
+        <p>Navigate to Procurment &gt; Reports &gt; Goods Received and Plant &gt; Accruals Report </p>
+        <p>Complete the applicable selection screens. <span style="color: #ff4500;">On the first run, DO&#160;NOT <MadCap:variable name="Variables.tick" /> the create Batch Option</span></p>
+        <p>
+            <img src="../../Images/Accruals Report_1_1105.png" class="FullWidth" />
+        </p>
+        <h3>Parameters Tab</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>New Page per Contract / Department / Location</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Whether to create a page break at the introduction of a new contract.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Cut Off Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>This determines which ordered items to include, and the period for the accruals batch. Maximum Length: 10 characters</p>
+                        <p>If the report is being run in "Create Batch" mode, this date must relate to an open GL period.</p>
+                        <p>The report will ignore:</p>
+                        <ul>
+                            <li>GRNs dated after this datefor orders not using GRNs, items whose due date is after this date</li>
+                            <li>confirmed plant allocation sheets whose week ending date falls after this date</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Create Batch</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Whether to create an accruals batch.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Foreign Currency Value</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Check it to show values in foreign currencies as well as in base, for orders with foreign currency suppliers.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Exclude Effect of Later Invoices</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Whether to take later invoices into account.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Include Tab</h3>
+        <p>
+        </p>
+        <p>
+            <img src="../../Images/Accruals Report_2_1105.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Include</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Whether to report on commodities, plant items or both.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Contract Selection Tab</p>
+        <p>
+            <img src="../../Images/Accruals Report_3_1105.png" class="FullWidth" />
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Contract Selection_1_1105.flsnp" />
+        <p>Once you have made your selections, Click Next to run the Report. Run Accruals Report in Procurement <span style="color: #ff4500;">(Ensure that you do not <MadCap:variable name="Variables.tick" /> the Create Batch option at this stage)</span>.</p>
+        <p>Once the report has been checked, re-run the report, but this time <MadCap:variable name="Variables.tick" /> the create batch option.</p>
+        <p>A Contract Status batch will be generated (but NOT posted). This batch must then be posted.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">The batch will automatically reverse in the next period (thus the batch is posting in two periods) – therefore BOTH periods must be open, otherwise the batch will ‘stall’ in Posting status.</p>
+    </body>
+</html>

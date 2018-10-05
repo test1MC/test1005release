@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Positive Pay Document</h1>
+        <p>The Positive Pay configurable document specifies the format to use for the positive pay extract file. The format to use for each bank is set up using the <span class="field">Format</span> field on the bank account.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">The form has been enhanced.</MadCap:conditionalText> If the CB&#160;parameter <span class="parameter">USEPOSPY</span> = Y, a new Extras tab allows you to specify:</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">
+                    <p>Field</p>
+                </div>
+                <div class="ColHead">
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Delimited?</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether the fields in the output file are delimited or fixed-length.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Delimiter</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The delimiter to use. You can select one of comma, space, or tab.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Issue Form</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The name of the form to use for issued <MadCap:variable name="Variables.cheques" />.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Void Form</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The name of the form to use for <MadCap:variable name="Variables.cancelled" /> <MadCap:variable name="Variables.cheques" />.</p>
+                </div>
+            </div>
+        </div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Positive Pay Configurable Document – Extras Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/CB/Positive_Pay/Config_Form.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>The following fields are available in the Header and Footer forms:</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Linked Variable</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Bank Account</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>cBnk_acno</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Company Name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>cpp_companynm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Issue Total Amount</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>ldissuetot</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Issue Total Count</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>ldissuecnt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Void Total Amount</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>ldvoidtot</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Void Total Count</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>ldvoidcnt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Total <MadCap:variable name="Variables.Cheques caps" />s Amount</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>ldItemtot</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Total <MadCap:variable name="Variables.Cheques caps" />s Count</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>ldItemcnt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Override Account Number</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>lcAcct</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Todays’ Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Today</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Effective Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>RS_effectiveDate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Monthly Cutoff</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>RS_monthlycutoff</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Control Record</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>lcCtlRec</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following fields are available on the Issue and Void forms. Any fields you add will appear in the .txt extract file.</p>
+        <table class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Linked DB fields</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Cheque caps" /> Number</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>dpp_ckno</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Cheque caps" /> Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>jpp_ckdate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Cheque caps" /> Payee</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>cpp_ckpayee</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Cheque caps" /> Amount</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>dpp_ckamt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Address1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>cpp_payeeadd1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Address2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>cpp_payeeadd2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Address3</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>cpp_payeeadd3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Address4</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>cpp_payeeadd4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Full Address</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>full_address</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Name and Full Address</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>full_name_addr</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

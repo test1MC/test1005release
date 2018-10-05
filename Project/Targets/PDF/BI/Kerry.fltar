@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/BI/BI Training Guide.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/PDF_Body_UK_2017.flpgl"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="exclude[COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly] "
+  OutputFolder="C:\temp"
+  OutputFile="[%=Document Variables.File Name%]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Document Variables/Document Title">BI Training Guide</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">KB0001</Variable>
+    <Variable
+      Name="Document Variables/File Name">KB0001</Variable>
+    <Variable
+      Name="Document Variables/Modules">BI</Variable>
+    <Variable
+      Name="Document Variables/Version">1.0</Variable>
+    <Variable
+      Name="General/Year">2018</Variable>
+  </Variables>
+  <PDF
+    InitialMagnification="Fit" />
+</CatapultTarget>

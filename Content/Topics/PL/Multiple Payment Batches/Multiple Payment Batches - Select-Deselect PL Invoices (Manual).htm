@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="724" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Multiple Payment Batches - </MadCap:conditionalText>Select/Deselect PL Invoices (Manual)</h1>
+        <p class="Body">If you use the Pay Invoices action on the <span class="Function">Select/Deselect PL Invoices (Manual)</span> browse, the default PLCHQ batch is used. If the CO parameter <span class="parameter">AUTOREF</span> is set to N and the default batch does not exist, the process is stopped.</p>
+        <p class="Body">If you open an invoice record and enter the payment details manually, additional fields are now available.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Select/Deselect PL Invoices (Manual) Screen</p>
+        <p class="screenshot">
+            <img src="../../../Images/Multiple Payment Batches/Select-Deselect Invoices (Manual).png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Payment Batch	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is only shown if the new PL parameter <span class="parameter">CONCPAY</span> is set to Y. It is a radio set with the following options:</p>
+                    <ul>
+                        <li>Default - Use the default batch (or create one automatically if it does not exist).</li>
+                        <li>New - A new manual batch is created specially for the current process.</li>
+                        <li>Pre-existing - Use a pre-existing batch.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Payment Batch Number	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The batch number that will be used. If <span class="parameter">CONCPAY</span> is set to Y and you selected Pre-existing from the Batch field, you can enter the batch number to use; there is a lookup of incomplete and unfrozen batches. </p>
+                    <p>Otherwise this field is read-only.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Payment Batch Reference</div>
+                <div class="FieldDef">
+                    <p>The reference of the batch used. If the CO&#160;parameter <span class="parameter">AUTOREF</span> = N and a new batch needs to be created, you must enter a batch reference (that is, if <span class="parameter">CONCPAY</span> = N and no payment batch exists, or if <span class="parameter">CONCPAY</span> = Y and you selected Default above and no payment batch exists, or if <span class="parameter">CONCPAY</span> = Y and you selected New above). </p>
+                    <p>Otherwise, this field is read-only.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1750" MadCap:lastWidth="762">
+    <head>
+    </head>
+    <body>
+        <h1>Data Migration - Strategy</h1>
+        <p>There is no single approach which will solve all data migration issues and all options should be considered in terms of the both the amount of data, its source and destination.
+</p>
+        <p>The adage of “Garbage In, Garbage Out” applies to data migrations as much as any other data processes. A data migration should be looked upon as an opportunity to cleanse the input data set before it is loaded in <MadCap:variable name="General.ProductName" />. This will allow the migration to add value beyond that of simply moving values between two systems. The time spent cleaning up the data after an automated load can exceed the time saved by not examining the data beforehand.
+</p>
+        <p>It is unrealistic to expect to any automated data take-on process to be able to upload 100% of the data without any problems. Any data upload plan must include time for testing and several iterations of the upload process.
+</p>
+        <p>Every customer is different in both source data and <MadCap:variable name="General.ProductName" /> configuration, so there will never be a “one size fits all” solution for data migration. There will always be some exceptions which don’t fit the templates available and it will be quicker and more reliable to enter these exceptions manually into <MadCap:variable name="General.ProductName" /> rather than to alter or extend the data upload procedure.</p>
+        <h2>Types of File</h2>
+        <p>There are two groups of file which must be considered:</p>
+        <ul>
+            <li>Static Data	</li>
+            <li>Transactional Data
+</li>
+        </ul>
+        <h2>Migrating Static Data</h2>
+        <p>Static data excludes any transactional or balance information.</p>
+        <p>Typically this means:</p>
+        <ul>
+            <li>Supplier information in terms of name, address, post code, VAT Reg No., etc.</li>
+            <li>Subcontractor information (similar to Supplier info)</li>
+            <li>Customer Information</li>
+            <li>Contract (Project/Job) information in terms of name, customer, project manager, use of WBS etc.</li>
+            <li>Employee details</li>
+        </ul>
+        <p>The Central Repository can be populated before the Financial Ledger records.  Suppliers, subcontractors and customers are entered into the Company Information System as a central record.  The Ledger master records (Purchase, Subcontract and Sales) are then populated by drawing down from the Company Information System utilising the auto-numbering convention recommended by Coins.</p>
+        <p>However, the personal ledgers within Coins companies can be populated with data first and then loaded up to the company information system. As Coins recommends using the same account number across all Coins companies and across all ledgers for a single company in the company information system, you may need to manipulate legacy account numbers in order to maintain this convention consistently.</p>
+        <p>Transferring static data such as supplier details or contracts is usually a straightforward process as there is usually an obvious relationship between data on the source system and <MadCap:variable name="General.ProductName" />.</p>
+        <h2>Migrating Transactions</h2>
+        <p>Transactional data includes Invoices, Certificates, Orders and any other relevant detailed history such as Journals to the Cost or General Ledger.</p>
+        <p>When migrating transactional data decisions need to be made regarding whether this will be transferred in detail or in summary, with only balances transferred.</p>
+        <p>For suppliers and customers it is common practice to only load unpaid or ‘open items’ rather than the entire history of paid invoices.</p>
+        <p>This differs from the approach taken with certificates, either subcontract or <MadCap:variable name="Variables.Contract Sales" />. Usually a single ‘summary’ certificate is posted for paid certificates with any unpaid certificates posted separately. This preserves the ‘cumulative’ view inherent when processing certificates.</p>
+        <p>There are some transactions that are fairly ‘static’ so consider dealing with them early in the migration process. This will give you and the client an opportunity to see the results and address any issues arising. These might include Subcontracts, <MadCap:variable name="Variables.Contract Sales" /> Series, Cost and Revenue transactions in closed periods or anything else that does not ‘move’ very often once created or completed.</p>
+        <p>&#160;</p>
+    </body>
+</html>

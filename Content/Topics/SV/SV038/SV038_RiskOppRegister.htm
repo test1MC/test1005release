@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">SV&#160;Risks and Opportunities <MadCap:variable name="Variables.Sv Register caps"></MadCap:variable>:</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"> </MadCap:conditionalText>Risks and Opportunities <MadCap:variable name="Variables.Sv Register caps" /></h1>
+        <h2 MadCap:autonum="1.1 ">Menu <MadCap:variable name="Variables.PO&#160;Item" /></h2>
+        <p class="Body"><span class="Function">Risks and Opportunities</span> is found as a menu item on the<i> <MadCap:variable name="Variables.Commercial Manager caps" /> &gt; [selected <MadCap:variable name="Variables.Jc Contract caps" />]</i> menu. It only appears when a working <MadCap:variable name="Variables.jc contract" /> is selected.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">R&#160;&amp;&#160;O&#160;Menu Item</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV038_Images/ROMenuItem.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 "><a name="Browse"></a>Browse Screen</h2>
+        <p class="Body">When you select <span class="Function">Risks and Opportunities</span> from the SV&#160;Menu, a browse screen appears, as shown in <MadCap:xref href="#ROBrowseScreen" class="ImageRef"><i>Figure 2:  R&#160;&amp;&#160;O&#160;Browse Screen</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="ROBrowseScreen"></a>R&#160;&amp;&#160;O&#160;Browse Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV038_Images/ROBrowse.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Descriptions</p>
+        <p class="IndentBold">Reference</p>
+        <p class="IndentFieldDef">This field can be automatically generated or manually entered depending on the setting of SV parameter <span class="parameter">ROPMANNO</span>. A Reference code is generated automatically when <span class="parameter">ROPMANNO </span>is set to <strong>N</strong>.</p>
+        <p class="IndentBold">Category</p>
+        <p class="IndentFieldDef">Select the category for this risk/opportunity.</p>
+        <p class="IndentBold">Subject</p>
+        <p class="IndentFieldDef">The subject of this risk/opportunity.</p>
+        <p class="IndentBold">Status</p>
+        <p class="IndentFieldDef">Select <strong>Open </strong>or <strong>Closed</strong> from the drop-down list as the status for the risk/opportunity.</p>
+        <p class="IndentBold">Closed Date</p>
+        <p class="IndentFieldDef">The date that the risk/opportunity was closed.</p>
+        <p class="IndentBold">Cost Code</p>
+        <p class="IndentFieldDef">The cost code for the risk/opportunity. If this is not blank, validation occurs.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">Description</p>
+        <p class="IndentFieldDef">A description of the cost code.</p>
+        <p class="IndentBold">Link to <MadCap:variable name="Variables.Sv Variations caps" /></p>
+        <p class="IndentFieldDef">Indicate whether there is a link to <MadCap:variable name="Variables.Sv Variations caps" /> for this risk/opportunity.</p>
+        <p class="IndentFieldDef">This field is only used when parameter <span class="parameter">LNKROPVAR </span>is set.</p>
+        <p class="IndentBold">Type</p>
+        <p class="IndentFieldDef">This field is enabled when <span class="Field">Link to <MadCap:variable name="Variables.Sv Variations caps"></MadCap:variable></span> is <MadCap:variable name="Variables.tick" />ed. When it is enabled, you may select either <MadCap:variable name="Variables.Sv Internal caps" /> or <MadCap:variable name="Variables.Sv External caps" />.</p>
+        <p class="IndentFieldDef">This field is only used when parameter <span class="parameter">LNKROPVAR </span>is set.</p>
+        <p class="IndentBold">Margin Impact</p>
+        <p class="IndentFieldDef"><strong>Pessimistic</strong>
+        </p>
+        <p class="IndentFieldDef"><strong>Expected</strong>
+        </p>
+        <p class="IndentFieldDef"><strong>Optimistic</strong>
+        </p>
+        <p class="IndentFieldDef">If an R &amp; O Item has been linked to <MadCap:variable name="Variables.Sv Variations caps" /> that are not approved, Pessimistic, Expected, and Optimistic values are calculated automatically using the calculations below.</p>
+        <p class="IndentFieldDef"><strong>If the R &amp; O Item is <MadCap:variable name="Variables.Sv External caps" /></strong>:</p>
+        <p class="IndentFieldDef">Pessimistic Value = <i>0</i></p>
+        <p class="IndentFieldDef">Expected Value = <i>Total of <MadCap:variable name="Variables.Sv External caps"></MadCap:variable> Expected value of linked <MadCap:variable name="Variables.Sv Variations caps"></MadCap:variable> that are not approved</i></p>
+        <p class="IndentFieldDef">Optimistic Value = <i>Total of Estimated value of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not approved – Total of Approved value of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not approved</i></p>
+        <p class="IndentFieldDef"><strong>If the R &amp; O Item is <MadCap:variable name="Variables.Sv Internal caps" /></strong>:</p>
+        <p class="IndentFieldDef">Pessimistic Value =<i> Total of Estimated Cost of linked <MadCap:variable name="Variables.Sv Variations caps"></MadCap:variable> that are not approved – Total of Approved Cost of linked <MadCap:variable name="Variables.Sv Variations caps"></MadCap:variable> that are not approved</i></p>
+        <p class="IndentFieldDef">Expected Value = <i>Total of <MadCap:variable name="Variables.Sv Internal caps" /> Expected value of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not approved</i></p>
+        <h2 MadCap:autonum="1.3 ">Summary Page</h2>
+        <p class="Body">When you drill down from the Risks and Opportunities browse screen to the Summary page of the R &amp; O Register, you will see a screen with three tabs, as shown in <MadCap:xref href="#ROSummaryPage" class="ImageRef"><i>Figure 3:  R &amp;&#160;O&#160;Summary Page and Details Tab</i></MadCap:xref>. These tabs are:</p>
+        <ul>
+            <li class="ListBullet3">Details Tab <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">(see Section <MadCap:xref href="#Details" class="Figurenumberonly"><i>1.3.1</i></MadCap:xref>)</MadCap:conditionalText></li>
+            <li class="ListBullet3"><MadCap:variable name="Variables.Sv Variations caps" /> Tab <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">(see Section <MadCap:xref href="#Tab" class="Figurenumberonly"><i>1.3.2</i></MadCap:xref>) </MadCap:conditionalText>- This tab only appears when the SV parameter <span class="parameter">LNKROPVAR </span>is set and the <span class="Field">Linked to <MadCap:variable name="Variables.Sv Variations caps" /> </span>field is <MadCap:variable name="Variables.tick" />ed.</li>
+            <li class="ListBullet3">Documents Tab (with a Drop-down menu) - This is a standard tab that does not need to be covered in this document.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="ROSummaryPage"></a>R &amp;&#160;O&#160;Summary Page and Details Tab</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV038_Images/ROSummaryAUS.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.1 "><a name="Details"></a>Details Tab</h3>
+        <p class="Body">The Details tab screen (see <MadCap:xref href="#ROSummaryPage" class="ImageRef"><i>Figure 3:  R &amp;&#160;O&#160;Summary Page and Details Tab</i></MadCap:xref> above) contains 5 separate layouts and all of the fields from the R &amp; O browse. User defined fields for the R &amp; O Register are defined by SV parameter <span class="parameter">ROPUDFRM</span>.</p>
+        <h3 MadCap:autonum="1.3.2 "><a name="Tab"></a><MadCap:variable name="Variables.Sv Variations caps" /> Tab</h3>
+        <p class="Body">The <MadCap:variable name="Variables.Sv Variations caps" /> tab is a browse screen (<MadCap:xref href="#ROVariations" class="ImageRef"><i>Figure 4:  [%=Variables.Sv Variations caps%] Tab</i></MadCap:xref>) of <MadCap:variable name="Variables.Sv Variations caps" /> belonging to different <MadCap:variable name="Variables.boq" />s set up for a selected <MadCap:variable name="Variables.Jc Contract caps" />. It is only displayed when the<span class="Field"> Link to <MadCap:variable name="Variables.Sv Variations caps" /></span> field is <MadCap:variable name="Variables.tick" />ed.</p>
+        <p class="Body">This browse screen also contains two links at the bottom of the page: <strong>Link </strong>and <strong>Unlink</strong>. Multiple records can be selected for both actions. Also, multiple <MadCap:variable name="Variables.Sv Variations caps" /> can be linked to an R &amp; O Item.</p>
+        <ul>
+            <li class="ListBullet3">When a <MadCap:variable name="Variables.Sv Variation caps" /> that is not approved is linked/unlinked to an R &amp; O Item, Margin Impact values of the R &amp; O Item are calculated as stated in Section <MadCap:xref href="#Browse" class="ImageRef"><i>1.2  Browse Screen</i></MadCap:xref>.</li>
+            <li class="ListBullet3">Approved <MadCap:variable name="Variables.Sv Variations caps" /> can still be linked/unlinked to an R &amp; O item, but they do not have any impact on the Margin Impact values of the R &amp; O Item.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="ROVariations"></a><MadCap:variable name="Variables.Sv Variations caps" /> Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV038_Images/ROVariationsAUS.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">If you drill down on the <MadCap:variable name="Variables.Sv Variation caps" /> Number on this screen, you will see a <MadCap:variable name="Variables.Sv Variation caps" /> Details page, as shown in <MadCap:xref href="#ROVariationsDetails" class="ImageRef"><i>Figure 5:  [%=Variables.Sv Variation caps%] Details Page</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="ROVariationsDetails"></a><MadCap:variable name="Variables.Sv Variation caps" /> Details Page</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV038_Images/VariationsDetailsPage.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">&#160;</p>
+    </body>
+</html>

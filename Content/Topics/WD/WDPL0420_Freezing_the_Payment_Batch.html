@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Freezing the Payment Batch</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Freezing the Payment Batch</h1>
+        <p>
+When the invoices have been selected for payment, <MadCap:variable name="General.ProductName" /> automatically puts them into a payment batch and allocates a batch number. The payment batch will need to be frozen (closed) so that no other payments can be added to it. This needs to be done before the payment run can be made. Any other invoices that are selected after a batch has been frozen will subsequently be placed in another payment batch. <br /></p>
+        <div class="process">
+            <h2 class="print">To freeze the payment batch:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1120BCOB">Payment Batches</span>.&#160;
+<p><MadCap:variable name="General.ProductName" /> displays a list of payment batches.</p><p><img src="../../Images/PL/LMDAP0011/Freeze the Payment Batch_1.png" alt="LMDAP0036SC6" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" /></p><p><img src="../../Images/PL/LMDAP0011/Freeze the Payment Batch_1_1105AUS.png" class="FullWidth" MadCap:conditions="COINS.AUOnly" /></p><p><img src="../../Images/PL/LMDAP0011/Freeze the Payment Batch_1_1105UK.png" MadCap:conditions="COINS.v1105 UK" class="FullWidth" /></p><p>If you want, you can view the selected invoices by clicking the link in the <span class="field">Batch Number</span> column.</p><p class="noteheader">NOTE</p><div class="note">If your system is set to run multi-currencies and/or sector based ledgers, then these will determine whether users are able to create multiple (unposted) payment batches. <MadCap:variable name="General.ProductName" /> allows for only one payment batch, per currency, per sector.&#160;</div></li>
+                <li>From the list, select the payment batch or batches that you want to freeze.</li>
+                <li>Choose <span class="field">Freeze Payment Batches </span>from the list.</li>
+            </ol>
+            <p>You have now frozen the payment batch.&#160;</p>
+            <p>&#160;</p>
+            <p class="note">You cannot add or delete invoices from a frozen batch. If you want to make any changes, you will need to unfreeze it</p>
+            <p>&#160;</p>
+            <p>After freezing the batch, the next step is to print the <MadCap:variable name="Variables.cheques" /> and generate the <MadCap:variable name="Variables.eft" /> payments (see <a href="WDPL0430_Printing_Cheques_and_Remittance_Advices.html">Printing <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> and Remittance Advices</a> and <a href="WDPL0431_BACS_Payments.html"><MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> Payments</a>).</p>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_sectled.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

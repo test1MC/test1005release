@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2720" MadCap:lastWidth="550">
+    <head><title>[%=Variables.Operatives caps%]</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print"><MadCap:variable name="Variables.operatives" style="text-transform: capitalize;" />
+        </h1>
+        <p>&#160;</p>
+        <p><MadCap:variable name="Variables.operatives" style="text-transform: capitalize;" /> are the people who you can assign to work on <MadCap:variable name="Variables.fm jobs" />.&#160;There are different types of <MadCap:variable name="Variables.operatives" />:</p>
+        <ul>
+            <li>Your direct employees, whose information is held in <span class="module">Payroll</span>.</li>
+            <li>Subcontractors, whose information is held in <span class="module">Subcontract Ledger</span>.</li>
+            <li>Temporary <MadCap:variable name="Variables.operatives" />, who are employees of a subcontractor.&#160;Their information is held in <span class="module">Subcontract Ledger</span>.</li>
+            <li><MadCap:variable name="Variables.gangs" style="text-transform: capitalize;" />, which are groups of two or more <MadCap:variable name="Variables.operatives" /> who always work together.&#160;If a <MadCap:variable name="Variables.operative" /> is a member of a <MadCap:variable name="Variables.gang" />, you cannot assign work to that <MadCap:variable name="Variables.operative" /> individually.</li>
+            <li>Others.&#160;These are not linked to information elsewhere in <MadCap:variable name="General.ProductName" />.</li>
+        </ul>
+        <p>For each <MadCap:variable name="Variables.operative" />, you specify the <MadCap:variable name="Variables.jc contract" /> areas they work on and the trades they work in.&#160;This allows <MadCap:variable name="General.ProductName" /> FM to only display <MadCap:variable name="Variables.operatives" /> that are relevant to particular <MadCap:variable name="Variables.fm jobs" /> and locations.&#160;</p>
+        <div class="process">
+            <h2 class="print">To set up <MadCap:variable name="Variables.operatives" />:</h2>
+            <ol>
+                <li>Go to <b>FM &gt; Setup &gt; Scheduling &gt;</b><span class="function" title="Function:%WFM2250BSWR"><MadCap:variable name="Variables.operatives" style="text-transform: capitalize;" /></span>.</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_D-F/FM/FM-Operatives-1.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>Select the <span class="field">Personnel Type</span> of the <MadCap:variable name="Variables.operative" /> you want to add and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/filter.svg" class="button" />.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_D-F/FM/FM-Operatives-2.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>In the <span class="field">Code</span> field:</li>
+                <ul>
+                    <li>To add a subcontractor, enter the subcontractor's code.</li>
+                    <li>To add an employee, enter the employee's Payroll ID.</li>
+                    <li>To add a temporary <MadCap:variable name="Variables.operative" />, use the lookup to select the <MadCap:variable name="Variables.operative" /> from the list of subcontractor employees.</li>
+                    <li>To add an 'other' <MadCap:variable name="Variables.operative" />, enter a new code.</li>
+                </ul>
+                <li>If you are setting up the <MadCap:variable name="Variables.operative" /> based on Payroll or Subcontract data, <MadCap:variable name="General.ProductName" /> fills in the address details from the information already on the system.</li>
+                <li>Complete the <MadCap:variable name="Variables.operative" />'s details.</li>
+                <li>Enter the <MadCap:variable name="Variables.operative" />'s <MadCap:variable name="General.ProductName" /> User ID. (In order to use the scheduling features of <MadCap:variable name="General.ProductName" /> FM, the <MadCap:variable name="Variables.operative" /> must be set up as a <MadCap:variable name="General.ProductName" /> user.)</li>
+                <li>On the Trades tab, <MadCap:variable name="Variables.tick" /> the trades that the <MadCap:variable name="Variables.operative" /> will work on.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <p>You also need to specify the geographical areas in which the <MadCap:variable name="Variables.operative" /> works:</p>
+            <ol start="1">
+                <li>Click the link in the <span class="field">Code</span> column.</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_D-F/FM/FM-Responses-4.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>On the Worker Areas tab, for each geographical area in which the <MadCap:variable name="Variables.operative" /> will work:</li>
+                <ol>
+                    <li>Open the record.</li>
+                    <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field">Can Do </span>field.</li>
+                    <li>Save the record.</li>
+                </ol>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print"><MadCap:variable name="Variables.operatives" style="text-transform: capitalize;" /> - configuration</h2>
+Subcontractor employees are set up in <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span>, on the People tab.&#160;These correspond to records in <span class="module">Human Resources</span> with a Payroll type of Subcontractor.
+</div>
+        <MadCap:relationshipsProxy class="relatedTopics" />
+    </body>
+</html>

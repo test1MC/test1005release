@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Document Management OCR - </MadCap:conditionalText>Installing OCR Software</h1>
+        <p class="Body">The Tesseract OCR&#160;software needs to be installed. This also requires Leptonica.</p>
+        <h2>If ‘epel-release’ Is Available</h2>
+        <p class="Body">If the ‘epel-release’ repository is available as an installation source (as it is with most modern instances of CentOS and Red Hat) you can use ‘yum’ to install the required libraries:</p>
+        <p><code>sudo yum install leptonica tesseract</code>
+        </p>
+        <p>This installs both Tesseract and Leptonica, and automatically adds any required libraries.</p>
+        <h2>If ‘epel-release’ Is Not Available</h2>
+        <p style="page-break-after: avoid;">To install the ‘ epel-release’ repository for RHEL7/CentOS7 if it is not available, use the following commands (these may need to be run as sudo):</p>
+        <p><code>wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm</code> </p>
+        <p><code>rpm -ivh epel-release-7-10.noarch.rpm</code>
+        </p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>The version of ‘epel-release’ will change over time, so the link may need updating; for example, epel-release-7-10.noarch.rpm will become epel-release-7-11.noarch.rpm.</p>
+            </div>
+        </div>
+        <p style="page-break-after: avoid;">To process TIFF images, it is recommended to have the libgcj library available. This can be added from the pdftk library (this can be obtained from <MadCap:variable name="General.ProductName" />):</p>
+        <p><code>sudo rpm -ivh pdftk-2.02-1.el7.x86_64.rpm</code>
+        </p>
+        <p style="page-break-after: avoid;">Then install the image libraries</p>
+        <p><code>sudo yum install libgcj libtiff zlib</code>
+        </p>
+    </body>
+</html>

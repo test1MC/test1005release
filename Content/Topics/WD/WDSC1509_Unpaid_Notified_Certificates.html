@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2879" MadCap:lastWidth="904">
+    <head><title>Unpaid Notified Certificates</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Unpaid Notified Certificates</h1>
+        <p>If an SC payment certificate has been notified to Revenue but the payment is then not made (because the certificate was removed from the batch before it was posted or the payment was subsequently cancelled) <MadCap:variable name="General.ProductName" /> will have deduction author<MadCap:variable name="Variables.is" />ation details recorded on the unpaid certificate.&#160; If this certificate is paid within a few days then that author<MadCap:variable name="Variables.is" />ation will still be valid and the certificate can be paid without further notification.&#160; However, if the certificate remains unpaid at the end of the return period, you need to cancel the payment notification.&#160; </p>
+        <p>As part of regular house-keeping within the eRCT scheme, you should review any notified payments which have not been made.</p>
+        <p>To facilitate this, a workbench shows open (that is, unpaid) certificates which have been notified to Revenue, and allows you either to select the certificate line for cancellation (it will then be placed in a batch for submission to Revenue) or record the fact that payment notification has been cancelled directly on ROS.&#160; </p>
+        <div class="process">
+            <p><strong>To select a notification for cancellation:</strong>
+            </p>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC1410BSBP">Open Notified Certificates Workbench</span>.
+<p><img src="../../Resources/Images_S-U/SC/SC_150901.png" class="FullWidth" /></p>
+This shows all open (that is, unpaid) certificates which have been notified to Revenue (even if the deduction author<MadCap:variable name="Variables.is" />ation has expired).</li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the certificates whose notification you want to cancel.</li>
+                <li>From the Choose Action list, select <span class="userselect">Select Notification for Cancellation</span> and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+<p>In the following cases, you will not be able to select the certificate, and <MadCap:variable name="General.ProductName" /> displays an error message:</p><ul><li>If the payment notification method (shown in the <span class="field">Notified By </span>column), is not Auto. The reason for this restriction is that if the certificate has been manually recorded as notified then there could potentially be other certificates and/or invoices covered by the same payment notification. In this case you must cancel the payment notification directly on ROS and then record it in <MadCap:variable name="General.ProductName" /> as manually cancelled.</li><li>If the deduction author<MadCap:variable name="Variables.is" />ation expiry date of the certificate is less than 23 days in the future (because the payment notification was made in a previous return period). In this case the payment notification can only be cancelled as part of the return reconciliation process.</li><li>If the cancellation of the notification for a certificate has already been sent to Revenue, or the certificate is already selected for cancellation.</li></ul><p>If the action is run without errors, the cancellation status for each of the selected certificates will be changed to "Selected for Cancellation".</p></li>
+            </ol>
+            <p>
+            </p>
+            <p><strong>To submit the cancellation requests:</strong>
+            </p>
+            <ol>
+                <ol>
+                    <li>Go to <span class="function" title="Function:%WSC1430BCOB">Cancel Notifications</span> and find the last batch which is not posted. This batch may have status "Unposted" or "Posting".
+<p><img src="../../Resources/Images_S-U/SC/SC_150902.png" class="FullWidth" /></p>
+The transactions in this batch correspond to the certificate notifications that have been selected for cancellation.</li>
+                    <li>You can click the link on the <span class="field">Batch Number </span>column - this displays the batch summary - to check that the transactions are correct.</li>
+                    <li>On the <span class="function" title="Function:%WSC1430BCOB">Cancel Notifications</span> browse screen, select the batch, select the <span class="userselect">Post Batch </span>action and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> validates the batch and checks that the deduction author<MadCap:variable name="Variables.is" />ations to which the cancellation requests relate will not expire within the next 23 days (that is, that they are within the current return period). If the batch passes the validation, <MadCap:variable name="General.ProductName" /> submits the cancellation requests to Revenue electronically.</p><p>When the action has completed, <span class="function" title="Function:%WSY2130BCRR">Report Status</span> shows a "Post Cancel Notification Batches" report that gives details of the results. If any errors have been received from Revenue, an additional "Payment Notification Cancellation Errors" report will also be prepared automatically, and the errors will be shown in the <span class="field">Error </span>column of the <span class="function" title="Function:%WSC1430BCOB">Cancel Notifications</span> transaction browse.</p><p>If you receive an error from Revenue</p></li>
+                    <ol>
+                        <li>
+                            <p>Either:</p>
+                        </li>
+                        <ul>
+                            <li>Correct the problem identified by the error, then on the Transactions tab in <span class="function" title="Function:%WSC1430BCOB">Cancel Notifications</span> select the certificate and run <span class="userselect">Clear Error for Retry</span>.</li>
+                            <li>If cancellation is not required, remove the transaction from the batch.</li>
+                        </ul>
+                        <li>Run the <span class="userselect">Post Batch </span>action again.</li>
+                    </ol>
+                </ol>
+            </ol>
+            <p>When the Cancel Notification Batch is successfully posted, the selected certificates are removed from the <span class="function" title="Function:%WSC1410BSBP">Open Notified Certificates Workbench</span>.</p>
+            <p>
+            </p>
+            <p><strong>To record that you have cancelled a payment notification manually: </strong>
+            </p>
+            <ol>
+                <li>Cancel the notification manually on the ROS website.</li>
+                <li>Go to <span class="function" title="Function:%WSC1410BSBP">Open Notified Certificates Workbench</span>.</li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the certificates whose notification you want to cancel.</li>
+                <li>From the Choose Action list, select <span class="userselect">Notification Manually Cancelled</span>.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+            </ol>
+            <p>
+            </p>
+            <p>&#160;</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">There are equivalent functions in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> for cancelling notifications for invoices: <span class="function" title="Function:%WPL1410BAIN">Open Notified Invoices Workbench</span> and <span class="function" title="Function:%WPL1430BCOB">Cancel Notifications</span>.</div>
+        </div>
+    </body>
+</html>

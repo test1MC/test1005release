@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="8646" MadCap:lastWidth="1220" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Charts on Tiles</h1>
+        <p>In order to put a chart on a tile, you need to have a set of records with an X coordinate value and a Y coordinate value that you intend to plot.</p>
+        <p>To achieve this, you need to build a browse with fields on it.&#160; This can be directly against a database table, if you already have data to plot or you can build a dataset to create the data required before the chart is produced.</p>
+        <h2>Dataset driven Charts</h2>
+        <p>In this example, we will create a dataset to generate Supplier Statistics add the chart to a new tile.</p>
+        <h3>Create the Function</h3>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Charts on Tiles.png" class="FullWidth" />
+        </p>
+        <p>The function is a standard function with the exception that the Category must be Chart.</p>
+        <p>In the parameters field the parameter DSgen= specifies the name of the dataset to be built before the chart is generated.</p>
+        <h3>Create the Dataset</h3>
+        <p>Our example dataset will go through all the open invoices for the currently selected company and will then create a summary of the data to be displayed.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Example 2 Using a Data Set_1.png" class="FullWidth" />
+        </p>
+        <p>In this example, the query will return a large number of invoices, which we could plot, but the graph would be very confusing.&#160; So in this instance the Post Calculation is specified to use the Method syuds.sum to aggregate all the returned records by Transaction type so that we have one total value for Gross for each transaction type.</p>
+        <p>Syuds.sum requires the current temp table (OpenInvoice), a WHERE condition (if required), the new temp table to be created (Stats), the field(s) to aggregate the data by (coj_type).&#160; The remaining to parameter are left blank in this example.</p>
+        <p>Syuds. Calculation methods are covered in detail in the Guide LMDSY0036 – How to Create and Use Datasets available from the Learning Resources section of the <MadCap:variable name="General.ProductName" /> Client Area on our website (www.coins-global.com) under Business Intelligence and Analytics/OA Designer.</p>
+        <p>The data set has the following fields defined against it.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Example 2 Using a Data Set_2.png" class="FullWidth" />
+        </p>
+        <h3>Create the Page</h3>
+        <p>The Page should use the temp table ttStats as its query.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Create the Page.png" class="FullWidth" />
+        </p>
+        <p>On our body fields, we need to specify just the fields we are displaying.</p>
+        <p>For each value, you must specify an ID (this can be any unique reference for each value)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Create the Page_1.png" class="FullWidth" />
+        </p>
+        <h3>Create the Page</h3>
+        <p>The Page should use the temp table ttStats as its query.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Create the Page_1_1.png" class="FullWidth">
+            </img>
+        </p>
+        <p>The Gauge formatting is used in a chart page to set (via JavaScript) various graph axis and legend formatting.</p>
+        <p>Full details of the available parameters may be found at:</p>
+        <p>http://c3js.org/reference.html</p>
+        <p>The commands used in this example are:</p>
+        <p>legend: {position:value}<br></br>Currently values bottom, right and inset are supported.</p>
+        <p>axis: {x: {type:value}}<br></br>Currently values timeseries, category and indexed are supported.</p>
+        <p>axis: {y: {label:text,position}}<br></br>Text values will display the text as the axis label. Null will supress any title on the specified axis</p>
+        <p>Position values (not used in our example) are: </p>
+        <p> If it's the horizontal axis: <br></br>inner-right [default], inner-center,inner-left, outer-right, outer-center, outer-left</p>
+        <p>If it’s the vertical axis:<br></br>inner-top [default], inner-middle, inner-bottom, outer-top, outer-middle,outer-bottom</p>
+        <p>axis: {y: {<MadCap:variable name="Variables.tick" />:{count:value}}<br></br>A value entered here will set the number oy y axis ticks to show<br></br></p>
+        <p>axis: {y: {<MadCap:variable name="Variables.tick" />:{format:d3.format.(specifier)}}<br></br></p>
+        <p>Returns a new format function with the given string specifier. (Equivalent to locale.numberFormat for the default U.S. English locale.) A format function takes a number as the only argument, and returns a string representing the formatted number. The general form of a specifier is:</p>
+        <p> [[fill]align][sign][symbol][0][width][,][.precision][type]</p>
+        <p>The fill can be any character other than "{" or "}". The presence of a fill character is signaled by the character following it, which must be one of the align options.</p>
+        <p>The align can be:</p>
+        <p>("&lt;") Forces the field to be left-aligned within the available space.</p>
+        <p>("&gt;") Forces the field to be right-aligned within the available space. (This is the default).</p>
+        <p>("^") Forces the field to be centered within the available space.</p>
+        <p>The sign can be:</p>
+        <p>plus ("+") - a sign should be used for both positive and negative numbers.</p>
+        <p>minus ("-") - a sign should be used only for negative numbers. (This is the default.)</p>
+        <p>space (" ") - a leading space should be used on positive numbers, and a minus sign on negative numbers.</p>
+        <p>The symbol can be:</p>
+        <p>currency ("$") - a currency symbol should be prefixed (or suffixed) per the locale.</p>
+        <p>base ("#") - for binary, octal, or hexadecimal output, prefix by "0b", "0o", or "0x", respectively.</p>
+        <p>The "0" option enables zero-padding.</p>
+        <p>The width defines the minimum field width. If not specified, then the width will be determined by the content.</p>
+        <p>The comma (",") option enables the use of a comma for a thousands separator.</p>
+        <p>The precision indicates how many digits should be displayed after the decimal point for a value formatted with types "f" and "%", or before and after the decimal point for a value formatted with types "g", "r" and "p".</p>
+        <p>The available type values are:</p>
+        <p>exponent ("e") - use Number.toExponential.</p>
+        <p>general ("g") - use Number.toPrecision.</p>
+        <p>fixed ("f") - use Number.toFixed.</p>
+        <p>integer ("d") - use Number.toString, but ignore any non-integer values.</p>
+        <p>rounded ("r") - round to precision significant digits, padding with zeroes where necessary in similar fashion to fixed ("f"). If no precision is specified, falls back to general notation.</p>
+        <p>percentage ("%") - like fixed, but multiply by 100 and suffix with "%".</p>
+        <p>rounded percentage ("p") - like rounded, but multiply by 100 and suffix with "%".</p>
+        <p>binary ("b") - outputs the number in base 2.</p>
+        <p>octal ("o") - outputs the number in base 8.</p>
+        <p>hexadecimal ("x") - outputs the number in base 16, using lower-case letters for the digits above 9.</p>
+        <p>hexadecimal ("X") - outputs the number in base 16, using upper-case letters for the digits above 9.</p>
+        <p>character ("c") - converts the integer to the corresponding unicode character before printing.</p>
+        <p>SI-prefix ("s") - like rounded, but with a unit suffixed such as "9.5M" for mega, or "1.00µ" for micro.</p>
+        <p>The type "n" is also supported as shorthand for ",g".</p>
+        <p>On our body fields, we need to specify just the fields we are plotting, and indicate which is the X value and which is the Y value.</p>
+        <p>For each value, also specify an ID (this can be any unique reference for each value)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Create the Page_1_2.png" class="FullWidth">
+            </img>
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Create the Page_1_3.png" class="FullWidth">
+            </img>
+        </p>
+        <p>In the Gauge Formatting field on the Y axis value, the value type:"bar",color:"#339933" sets the graph type as a Bar Chart and assigns a <MadCap:variable name="Variables.colour" /> hex code to the chart.&#160; It may be good practice to assign a colour as there is a possibility of a white tile displaying a white graph – which would appear to the user as an empty chart.</p>
+        <h3>Desktop</h3>
+        <p>Adding the Function to a desktop will produce the following output:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Desktop_4.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

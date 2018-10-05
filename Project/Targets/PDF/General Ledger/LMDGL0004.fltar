@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="GL Year End Process"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  PatchHeadingLevels="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  InjectEmptyPages="true"
+  ConditionTagExpression="include[COINS.v1105]exclude[COINS.1104 or COINS.Pre-v1105 or COINS.ScreenOnly]"
+  conditions="COINS.PrintOnly"
+  InjectBookHeadings="true"
+  MasterToc="/Project/TOCs/GL/LMDGL0004.fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ConvertBookmarks="true" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Repository.fldes"
+      Publish="true" />
+  </Destinations>
+  <Variables>
+    <Variable
+      Name="Document Variables/Document Reference">LMDGL0004</Variable>
+    <Variable
+      Name="Document Variables/Document Title">Year End Procedure</Variable>
+    <Variable
+      Name="Document Variables/File Name">LMDGL0004</Variable>
+    <Variable
+      Name="Document Variables/Modules">General Ledger</Variable>
+  </Variables>
+</CatapultTarget>

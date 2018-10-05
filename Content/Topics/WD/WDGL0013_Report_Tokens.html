@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en">
+    <head><title>GL Reporter - Report Tokens</title>
+    </head>
+    <body>
+        <p>
+            <MadCap:concept term="Topics" />
+        </p>
+        <h1 class="print">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">GL Reporter – </MadCap:conditionalText>Report Tokens</h1>
+        <p>Report tokens allow you to embed 'run time selections' in your report. For example, you might produce a single report that can be run for individual departments or sectors within the business (choosing which department or sector when you run the report).</p>
+        <p>A token is designated by a $ (dollar) sign followed a character to differentiate it.&#160;&#160;For example, <span class="userinput">$A</span> = one token, <span class="userinput">$B</span> = another token.</p>
+        <p>To use tokens effectively, you must embed them in your report CONSISTENTLY throughout the rows where (for example) <MadCap:variable name="General.ProductName" /> makes an account selection.</p>
+        <p>For example, the account selection:</p>
+        <blockquote style="MARGIN-RIGHT: 0px;" dir="ltr">
+            <p><span class="userinput">00.0000</span> to <span class="userinput">00.9999</span></p>
+        </blockquote>
+        <p>would just select accounts for department 00.&#160; But the selection:</p>
+        <blockquote style="MARGIN-RIGHT: 0px;" dir="ltr">
+            <p><span class="userinput">$A.0000</span> to <span class="userinput">$A.9999</span></p>
+        </blockquote>
+        <p>would allow the user to choose which department when they run the report. <MadCap:variable name="General.ProductName" /> will print information regarding the selection automatically on the heading of a report containing tokens.</p>
+        <p>You could also use different tokens, to allow the user to select a range of departments; for example:</p>
+        <blockquote style="MARGIN-RIGHT: 0px;" dir="ltr">
+            <p><span class="userinput">$A.0000</span> to <span class="userinput">$B.9999</span></p>
+        </blockquote>
+        <p>Tokens can be embedded either in account rows or in columns within a report. Whichever option is used, they MUST then be used consistently throughout the report.</p>
+        <p class="todo" MadCap:autonum=" ">To add a token in a report row</p>
+        <p>For example if you wanted to specify the Sectors for the report at run-time:</p>
+        <ol>
+            <li>
+                <p>Use the Open button to update the required row.</p>
+            </li>
+            <li>
+                <p>Enter $ followed by a character (for example, S) in the <span class="field">Sector</span> field of an Account Line.</p>
+            </li>
+            <li>
+                <p>Save the changes to the report row.</p>
+            </li>
+        </ol>
+        <p class="todo" MadCap:autonum=" ">To add token in a report column</p>
+        <p>For example if you wanted to specify the Budget code for the report at run-time:</p>
+        <ol>
+            <li>
+                <p>Use the Open button to amend the line for the required column.</p>
+            </li>
+            <li>
+                <p>Enter $ followed by a character (for example, B) in the <span class="field">Budget</span> field of the column.</p>
+                <p>
+                    <img src="../../Resources/Images_G-I/GL/GL Reporter/Token_in_Column.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Save the changes to the Report Column.</p>
+            </li>
+        </ol>
+        <div class="process">
+            <p class="todo" MadCap:autonum=" ">To generate report tokens</p>
+            <p>You need to generate the report tokens so that you can add labels for them.</p>
+            <ol>
+                <li>
+                    <p>Run the <span class="userinput">Report Tokens</span> option (under Options at the top right of the screen).</p>
+                    <p><MadCap:variable name="General.ProductName" />&#160;generates or updates&#160;the tokens on the Report Tokens tab, based on any tokens you have used in the report configuration.</p>
+                </li>
+                <li>
+                    <p>On the Report Tokens tab, enter the prompts you want to use for each token.&#160; For example, when the user runs your report you might want to prompt them to 'Enter Division' and be provided with a <MadCap:variable name="General.ProductName" /> look up for divisions.</p>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>

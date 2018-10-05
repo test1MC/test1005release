@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1204" MadCap:lastWidth="1162">
+    <head><title>Submission Protocol</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">CIS&#160;Scheme - </MadCap:conditionalText>Submission Protocol</h1>
+        <p>A submission involves sending data to HMRC via the Government Gateway, and receiving a response that HMRC has processed that data.&#160; A submission may involve one or more attempts; HMRC may not process the data immediately, so an attempt can time out, in which case <MadCap:variable name="General.ProductName" /> makes a new attempt.&#160; As part of a submission attempt, <MadCap:variable name="General.ProductName" /> sends messages to the Government Gateway and for each message sent, receives a message in reply: this is an event.&#160;</p>
+        <p>The protocol always starts with <MadCap:variable name="General.ProductName" /> sending data.&#160; This event is called the 'submit_request'.&#160; Once <MadCap:variable name="General.ProductName" /> has sent this message the state is SENDING.</p>
+        <p>The most likely response to the submit_request is a submit_acknowledgement, which tells <MadCap:variable name="General.ProductName" /> that the gateway has received the data but has not finished processing it yet.&#160; This response puts <MadCap:variable name="General.ProductName" /> in the POLLING state, meaning <MadCap:variable name="General.ProductName" /> will start to poll the gateway. when polling, <MadCap:variable name="General.ProductName" /> sends submit_poll messages, asking the gateway for an update.&#160;</p>
+        <p>
+            <br /><MadCap:variable name="General.ProductName" /> continues to poll the gateway until the gateway responds that the data has been processed successfully, or the gateway responds with an error, or the maximum number of polls (set by the SCUK parameter <span class="parameter">POLLMAX</span>) has been reached.&#160; If the maximum number of polls has been reached, the state is set to TIMEOUT, and <MadCap:variable name="General.ProductName" /> generates a new attempt which will start automatically after a set interval (specified by the SCUK parameter <span class="parameter">POLLNEXT</span>).</p>
+        <p>If the submission is successful <MadCap:variable name="General.ProductName" /> receives a submit_response, otherwise the reply is a submit_error.&#160; There are three types of error:</p>
+        <ul>
+            <li>Recoverable: a transmission error occurred, this asks for the previous message to be resent.</li>
+            <li>Business: the submission failed validation.&#160; <MadCap:variable name="General.ProductName" /> checks the submission using the same validation rules, before you are allowed to send the submission.&#160; Therefore this error is only possible if there is a fault in <MadCap:variable name="General.ProductName" /> (such as <MadCap:variable name="General.ProductName" /> producing incorrect XML) or the gateway.</li>
+            <li>Fatal: an error in the protocol handling by <MadCap:variable name="General.ProductName" /> or problems at the gateway.&#160; <br />Once <MadCap:variable name="General.ProductName" /> has been given a response by the gateway that shows that the data has been processed, <MadCap:variable name="General.ProductName" /> then enters the CLEARUP state and sends delete_request messages.&#160; This message lets the gateway know that it no longer needs to store your data.&#160; Note that the gateway acts as a middleman between yourself and HMRC, so deleting the gateway data does not delete HMRC's copy.</li>
+        </ul>
+        <p>There are two possible responses to the delete_request: A delete_acknowledgement means the data hasn?t been deleted yet and another delete_request should be sent.&#160; A delete_response ends the submission attempt.&#160;</p>
+        <p>The final state of the submission attempt depends on the response to the submission: If the submission has been successful the state is COMPLETE.&#160; If there were business logic errors it will be ERROR.&#160; If there was a fatal error it will be FAILED.</p>
+        <p>Below is an example of a submission which required two attempts:</p>
+        <p>
+            <img src="../../Resources/Images_S-U/SC/SC_148301.gif" />
+        </p>
+    </body>
+</html>

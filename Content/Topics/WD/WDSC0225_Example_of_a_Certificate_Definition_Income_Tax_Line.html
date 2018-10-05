@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1206" MadCap:lastWidth="1066" lang="en">
+    <head><title>Example of a Certificate Definition - Income Tax Line</title>
+    </head>
+    <body>
+        <p>
+            <MadCap:concept term="Topics" />
+        </p>
+        <h1 class="print">Example of a Certificate Definition - Income Tax Line</h1>
+        <p>Income tax is calculated from the Gross, less any Retention, Discount or Materials costs.</p>
+        <p>The income tax line looks like this:</p>
+        <p>
+            <img src="../../Resources/Images_S-U/SC/SC_022501.png" class="HalfWidth" />
+        </p>
+        <p>Note that:</p>
+        <ul>
+            <li>
+                <p>The <span class="field">Rate</span> field on a tax line is ignored; set it to 0. The Income Tax percentage is taken from the parameter <span class="parameter">PAYE%</span>.</p>
+            </li>
+            <li>
+                <p>The <span class="field">Calc Cumulative</span>field is un<MadCap:variable name="Variables.tick" />ed, since Income Tax is calculated on this payment.</p>
+            </li>
+            <li>
+                <p>The user cannot override the tax paid, so the <span class="field">Update</span> field is un<MadCap:variable name="Variables.tick" />ed. This is because <MadCap:variable name="General.ProductName" /> recommends calculating the amount of tax again at point of payment so any changes made here would be lost.</p>
+            </li>
+        </ul>
+        <p>This will calculate the amount of income tax to be deducted. You have to subtract this in the <span class="field">Subtotals</span>field of the payment line.</p>
+        <p><MadCap:variable name="General.ProductName" /> takes account of whether the subcontractor has a valid CIS tax certificate.</p>
+        <p>
+            <br /> <strong>What if the Income Tax rate changes?</strong></p>
+        <p>If the Income Tax rate changes, on the day the rate changes you must change the value on the <span class="parameter">PAYE%</span>parameter.</p>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Rate Change - Overview</title>
+        <style>/*<![CDATA[*/
+table.type1 td
+{
+	vertical-align: top;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <div class="overview">
+            <MadCap:concept term="Topics" />
+            <h1 class="print"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Rate Change - Overview</h1>
+            <p>From time to time, <MadCap:variable name="Variables.vat" /> rates change. &#160;These pages explain what you need to do within <MadCap:variable name="General.ProductName" /> to implement changes to the <MadCap:variable name="Variables.vat" /> rates.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Please note that these instructions are not specifically tailored to the requirements of a particular&#160;change in <MadCap:variable name="Variables.vat" /> rate. &#160;You should confirm the detailed actions required in a specific situation, before the change in rate becomes effective.</div>
+            <p>Changes to <MadCap:variable name="Variables.vat" /> rates generally apply only to invoices dated on or after the rate changes. In the weeks immediately following a rate change, companies will be processing some invoices dated prior to the change at the old rate, together with other invoices dated on or after the rate change at the new rate. Therefore, it is necessary to use separate <MadCap:variable name="Variables.vat" /> codes for each rate on <MadCap:variable name="General.ProductName" /> -- it will <strong>not</strong> be possible to implement this change correctly by changing the percentage rate on existing <MadCap:variable name="Variables.vat" /> codes in <MadCap:variable name="General.ProductName" />.</p>
+            <p>There are a number of different areas within the <MadCap:variable name="General.ProductName" /> database where <MadCap:variable name="Variables.vat" /> codes are stored against various types of record. Some of these may not apply to all clients, but several are very widely used. It is thus essential that the procedures in these pages are followed to ensure trouble-free implementation of the change.</p>
+            <p>The following is a checklist of things you need to do within <MadCap:variable name="General.ProductName" /> to implement the increase in the standard rate of <MadCap:variable name="Variables.vat" />.&#160;</p>
+            <table class="type1">
+                <thead>
+                    <tr>
+                        <th>Done?&#160;</th>
+                        <th>Action&#160;</th>
+                        <th>&#160;Comment&#160;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5004_Create_New_VAT_Codes.html">Create New <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes</a>&#160;</td>
+                        <td>
+                            <p>This will only be necessary:</p>
+                            <ul>
+                                <li><span style="font-size: 1em;" data-mce-mark="1">If the new rate has not previously been used, or</span>
+                                </li>
+                                <li><span style="font-size: 1em;" data-mce-mark="1">For new clients who have gone live on <MadCap:variable name="General.ProductName" /> since the rate was last used.</span>
+                                </li>
+                            </ul>
+                            <p>This can be done in advance so that they are ready to use when the new rate comes into effect.&#160;</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5005_Unretire_Old_VAT_Codes.html">Unretire Old <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes</a>&#160;&#160;</td>
+                        <td>This can be done in advance so that they are ready to use <span>when the new rate comes into effect</span>.&#160;&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5006_Check_Parameters.html">Check Parameter Settings</a>&#160;</td>
+                        <td>These should be checked in advance but only changed on or as soon as possible after <span>the new rate comes into effect</span>.&#160;&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5007_Change_Default_VAT_Codes.html">Change Default <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes</a>&#160;&#160;</td>
+                        <td><MadCap:variable name="General.ProductName" /> has provided a software utility to assist with this; however, there are some codes you will need to update manually&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5008_Check_Templates_Definitions_etc..html">Check Transaction Templates</a>&#160;&#160;</td>
+                        <td>On or as soon as possible after <span>the new rate comes into effect</span>, update any transaction templates to use the new codes.&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span><a href="WDVT5008_Check_Templates_Definitions_etc..html"></a></span>Check certificate definitions<span></span>&#160;</td>
+                        <td>Ensure certificate definitions to not calculate <MadCap:variable name="Variables.vat" /> on a cumulative basis.&#160;&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span><a href="WDVT5008_Check_Templates_Definitions_etc..html"></a></span>Consider copied transactions<span></span> &#160;</td>
+                        <td>Ensure any copied transactions dated on or after <span>the new rate comes into effect&#160;</span>use the new codes.&#160;&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5009_Review_Partially-Processed_Transactions.html">Review Partially-Processed Transactions</a>&#160;</td>
+                        <td>Consider transactions where the <MadCap:variable name="Variables.vat" /> invoice date is dependent on the date of payment.&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5010_Change_eCommerce_Mappings.html">Change eCommerce Mappings</a>&#160;</td>
+                        <td>Create new mappings for BASDA <MadCap:variable name="Variables.vat" /> codes; do this as late as possible but before <span>the new rate comes into effect</span>.&#160;&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span data-mce-mark="1"><span><a href="WDVT5008_Check_Templates_Definitions_etc..html"></a></span>Consider configured reports, etc <span></span>&#160;</span>&#160;</td>
+                        <td><span data-mce-mark="1">These may require updating to use the new codes.&#160;</span>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span data-mce-mark="1"><a href="WDVT5011_Manually_override_VAT_codes.html">Manually override <MadCap:variable name="Variables.vat" /> codes on certain transactions</a>&#160;</span>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5012_Consider_Future_Retention_Releases.html">Consider Handling of Future Retention Releases</a>&#160;</td>
+                        <td>This depends on whether <MadCap:variable name="Variables.vat" /> is calculated before or after retention.&#160;&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><a href="WDVT5013_Retire_Old_VAT_Codes.html">Retire Old <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes</a>&#160;</td>
+                        <td>This should only be done once all invoices dated on or prior to the last date the old rate was in effect have been processed&#160;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&#160; &#160;&#160;</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Design of Changes to <MadCap:variable name="General.ProductName" /></title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Design of Changes to <MadCap:variable name="General.ProductName" /></h1>
+    <p>Enabling online submission requires changes other than simply how the information is transmitted.<span></span>The following design changes were made:</p>
+    <ul>
+      <li>
+        <MadCap:variable name="General.ProductName" /> now holds extra information previously hand written on to forms.</li>
+      <li>It now allows correction of in year mistakes.</li>
+      <li>It now handles multiple P14s for an employee in a single year. They can now have test copies, an original and amendments. Online submission works by sending an amended return with the movements; the differences from the original.</li>
+      <li>It now validates the return content pre-submission. Note that the additional validation is more exacting than previously required, for example a <MadCap:variable name="Variables.last name" /> can only contain letters, hyphens and apostrophes; spaces and any other character would cause the return to be rejected. </li>
+    </ul>
+    <p>The data that makes up a P14 is now held in <MadCap:variable name="General.ProductName" /> allowing you to see a true version of what was submitted, and to over-ride the values derived from elsewhere in <MadCap:variable name="General.ProductName" />. The P35 and P60 print routines now allow you to print data as is, or from a particular return.</p>
+    <p>If you are working with a return for the current tax year then <MadCap:variable name="General.ProductName" /> will work out the values - taking them from employee items and NI details. Working on a return from a previous year this will only happen when you create the return, and you will be allowed to amend any of the values on the form.</p>
+    <p>The return has statuses similar to a batch in <MadCap:variable name="General.ProductName" />:</p>
+    <ul>
+      <li>On creation it will be <strong>Incomplete</strong>.</li>
+      <li>When the P35 details have been entered you can run a routine that will validate the content and set the status to <strong>Complete</strong>.</li>
+      <li>Once complete you can submit the document, initially changing the status to <strong>Submitting</strong>, and then to <strong>Submitted</strong> on HMRC acceptance.</li>
+    </ul>
+    <p>Completion for a large payroll may be time-consuming, so to minim<MadCap:variable name="Variables.is" />e the number of times the validation needs to be run, you are prevented from changing values once the return is complete. To change values you must un-complete the return.</p>
+  </body>
+</html>

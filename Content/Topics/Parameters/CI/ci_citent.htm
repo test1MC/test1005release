@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CI/CITENT - Office entity denoting COINS company interest</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CI/CITENT - </span> Office entity denoting COINS company interest
+</div>
+<div class="param_def">
+<p>This allows you to use an analysis set to restrict which offices are downloaded to the CIT C21 estimating product, for example, to download only information about the offices of a national builders merchant that are local to your <MadCap:variable name="Variables.kco company"/>.</p>
+<P class="yesnolist"><SPAN class="userinput">blank = </SPAN>COINS downloads all offices of all qualifying <MadCap:variable name="Variables.kco companies"/>.</P>
+<P class="yesnolist"><SPAN class="userinput">OTHER1</SPAN> = The 'Other 1' analysis is used to identify offices that are to be downloaded.</P>
+<P class="yesnolist"><SPAN class="userinput">OTHER2</SPAN> = The 'Other 2' analysis is used to identify offices that are to be downloaded.</P>
+<P>If <SPAN class="userinput">OTHER1 </SPAN>or <SPAN class="userinput">OTHER2 </SPAN>is selected, you can tag an individual office of a company by entering, in the appropriate analysis field ('Other 1' or 'Other 2'), the three-digit number (or numbers) of the COINS <MadCap:variable name="Variables.kco company"/> (or <MadCap:variable name="Variables.kco companies"/>) that is interested in that office. When downloading data for that COINS <MadCap:variable name="Variables.kco company"/>, <SPAN class="procedure">Download COINS to CIT</SPAN> will download only tagged offices if any office of the company is tagged. If no office is tagged, all offices of the company will be downloaded.</P>
+<P>Parameters beginning with <SPAN class="parameter">CIT</SPAN> control the <MadCap:variable name="Variables.behaviour"/> of the <SPAN class="procedure">Download COINS to CIT</SPAN> program (ci930). This program is used to export data that relates to <MadCap:variable name="Variables.kco companies"/> and offices in the Company Information Workbench, for the purpose of loading into the CIT C21 third-party estimating product database. Download COINS to CIT can be run interactively (in which case the <SPAN class="parameter">CIT</SPAN> parameters supply default values), or as a background task.</P>
+</div>
+</body>
+</html>

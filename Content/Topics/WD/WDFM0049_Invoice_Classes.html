@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="639" MadCap:lastWidth="1171">
+  <head>
+    <title>Invoice Classes</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Invoice Classes</h1>
+    <p>Invoice Classes allow you to group sets of lines together on an invoice instead of printing them separately. The invoice class description will be displayed and the values of all the invoice lines with the same class will be totalled and displayed. Note: Invoice classes are only relevant to the 'SINGLE' invoice style.</p>
+    <div class="configuration">
+      <h2 class="print">Invoice Classes - configuration</h2>
+      <p>
+        <span class="function" title="Function:%WFM2450BFMI">Invoice Classes</span> can be found under FM Contract Setup - 'Invoicing Setup' tab group.</p>
+      <p>Once configured, you can add these invoice classes to 'Schedule of Rates' (SOR) items and billable cost transactions.</p>
+      <p>For SOR items, the invoice class on a <MadCap:variable name="Variables.fm job" /> SOR item will be defaulted from the standard SOR item if it exists. To be able to change an invoice class in the 'Add/amend SOR items' stage, you must set it in the <span class="null"><span class="parameter"><strong>SORFIELD</strong></span></span>parameter and made it updateable in the particular SOR type.</p>
+      <p>For cost transactions, the mark-up configuration (see <a href="WDFM0048_Mark-Ups.html">Mark-Ups</a>) can be used to default invoice classes in the same way that mark-ups are applied.</p>
+      <p>Invoice classes on both SOR items and cost transactions can be updated in the 'Ready for Invoicing' stage.</p>
+      <h3>Invoice documents</h3>
+      <p>On FM Invoice configurable documents (see <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a>), set the <span class="field">Invoice Class Form</span> to the name of a form to display lines with an invoice class. Any lines with an invoice class will be grouped by that invoice class and printed using the fields configured for that form type. The fields available in this form type are: fmi_code, fmi_desc, fmi_totnett, fmi_totvat, fmi_totgrss.</p>
+      <p>If this form type is not set or the line does not have an invoice class, the lines will display individually as per the BODY form type.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SW/sw_sorfield.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

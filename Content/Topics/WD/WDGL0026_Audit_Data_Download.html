@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>GL/JC Audit Data Download</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">GL/JC Audit Data Download</h1>
+    <p>
+      <span class="function" title="Function:%WGL3150RXXX">Audit Data Download</span> allows you to extract data files of GL/JC transactions and trial balances for audit purposes.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">This extracts the actual GL/JC batch lines, not the GL/JC transactions derived when the batch was posted.</div>
+    <p>Due to the large size of the output data set that can result (10M+ records) the extracts use direct extracts to files on the server. A single selection screen is used to collect the user-specified criteria for both GL/JC transactions and trial balance extracts:</p>
+    <ul>
+      <li>
+        <MadCap:variable name="Variables.kco companies" style="text-transform: capitalize;" /> - This specifies which <MadCap:variable name="Variables.kco companies" /> to include in the extract. </li>
+      <li>Inclusive Date Range - This specifies which transactions are included in the GL Transactions Extract based on the <MadCap:variable name="Variables.financial period" /> in which they sit and the opening and closing balances to include in the Trial Balance Extract. 
+</li>
+      <li>Date Posted (of GL Batch) - This specifies which transactions to include based on the date the GL batch was posted. The user either leaves this blank or specifies a date. If this field is left blank the report includes all transactions meeting the other criteria; otherwise the report will only include transactions with a GL batch posted date greater than or equal to that entered by the user. <MadCap:variable name="General.ProductName" /> does not hold the time of posting, so restricting by time is not possible. </li>
+    </ul>
+    <p>The GL Transaction Report filename is in the following format: </p>
+    <ul>
+      <li>[Maximum GL Batch Posting Date]_[From Date]_[To Date]_[file suffix]_GL_Transactions <br />For example: 2009-07-18_2008-07-01_2009-06-30_GL_Transactions </li>
+    </ul>
+    <p>The Trial Balance Report filename is in the following format: </p>
+    <ul>
+      <li>[From Date]_[To Date]_[file suffix]_Trial_Balances <br />For example: 2008-07-01_2009-06-30_Trial_Balances </li>
+    </ul>
+    <p>So for each of the extracts the user is able to specify: </p>
+    <ul>
+      <li>Directory location - directory on server (NOT network locations) 
+</li>
+      <li>File suffix - this is what the end of the filename will be after [To Date] - this will default to 'GL transactions' and 'Trial Balances'. 
+</li>
+      <li>Delimiter (defaults to |) </li>
+    </ul>
+    <p>
+      <strong>OUTPUT FORMAT</strong>
+      <br />The output format is a flat file using '|' as the field separator and "" to encapsulate text fields, with the first line containing the field names. The report has no other header or footer. </p>
+    <p>
+      <strong>GL/JC Transactions</strong>
+    </p>
+    <p>
+      <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Code ; <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Name ; GL Batch Number ; Reversing Journal Indicator ; GL Batch Costing Line ; GL Account Code ; GL Account Description ; GL Account Type ; GL Account Creation Date ; Analysis ; <MadCap:variable name="Variables.Jc Contract caps" /> Number ; <MadCap:variable name="Variables.Jc Contract caps" /> Name ; Transaction Source ; Manual/Automated Journal Indicator ; Transaction Type ; Transaction Value in Base Currency; Transaction Value in Local Currency - if applicable ; Currency Code ; Foreign Exchange Rate - if applicable ; Effective Date ; <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> Date ; <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> Indicator - e.g. 0109 ; GL Batch Line Description ; GL Batch Header Description ; <MadCap:variable name="General.ProductName" /> User ID ; <MadCap:variable name="General.ProductName" /> User Name ; GL Batch Entry Date &amp; Time Stamp </p>
+    <p>
+      <uses posted="" than="" rather="" creation="" batch="" of="">
+        <strong>Trial Balance</strong>
+      </uses>
+    </p>
+    <p>
+      <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Code ; <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Name ; GL Account Code ; GL Account Description ; GL Account Period Opening Balance ; Opening <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> Date ; Opening <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> Indicator - e.g. 0109 ; GL Account Period Closing Balance ; Closing <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> Date ; Closing <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> Indicator - e.g. 0109</p>
+  </body>
+</html>

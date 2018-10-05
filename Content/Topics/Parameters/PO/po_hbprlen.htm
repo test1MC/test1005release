@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/HBPRLEN - List UOM Price for HB Order Length</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/HBPRLEN - </span> List UOM Price for HB Order Length
+</div>
+<div class="param_def">
+<p>The unit or units of measure for commodities that are specified by length.</p>
+<p>House-builders material schedules and orders can use commodities (such as timber) that are sold as units of differing lengths. This means you only need to set up one commodity code for each different cross-section of timber; on the schedule, you specify the number of items, and an additional field allows you to enter the length of the item (for example: twelve 4.8m lengths of 50x25 timber @ 135 per 100m).</p>
+<p> </p>
+<p>To do this, set up against <span class="parameter">HBSULEN </span>the unit of measure that indicates that the commodity is specified by length. Against <span class="parameter">HBPRLEN</span>, enter the unit of measure used to specify the length. For example, LNG against <span class="parameter">HBSULEN </span>would indicate that the commodity is specified by length; and M against <span class="parameter">HBPRLEN </span>would indicate that the commodity is measured in <MadCap:variable name="Variables.metre"/>s. If you want to set up more than one such unit (say LNF and FT for commodities measured in feet), enter comma-separated lists in both parameters; the entries must be matching pairs, and both lists must have the same number of entries.</p>
+<p>Since timber is normally priced in 100 <MadCap:variable name="Variables.metre"/> lengths, you will also need to set up price conversion factors (using Unit Conversion Factors) from <MadCap:variable name="Variables.metre"/>s to 100 <MadCap:variable name="Variables.metre"/>s.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../po/po_hbsulen.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

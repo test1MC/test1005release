@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Payroll-HR Linking</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Payroll-HR Linking</h1>
+        <p>It is possible to set up linking between Payroll and HR for salary and benefits amounts, and <MadCap:variable name="Variables.holiday" /> and absence records, so that information can be updated in one place and is automatically available in both modules. &#160;Linking of salary and benefit amounts is two-way; linking of <MadCap:variable name="Variables.holiday" /> and absence records is from Payroll to HR only.</p>
+        <p>Linking from HR to Payroll is via a HR Requests Workbench in Payroll. Linking from Payroll to HR can be via a Payroll Requests Workbench in HR or it can be direct.</p>
+        <h2>OA Payroll Module</h2>
+        <p>The Payroll module in <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> contains the HR Requests Workbenches (one per period type). These workbenches are not available in <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" /> as you must already have OA HR to make use of the linking functionality.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDHR5112_HR_To_Payroll_Linking_Via_A_Workbench.html" />
+                <MadCap:relatedTopic src="WDHR5113_Payroll_To_HR_Linking.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="configuration">
+            <h2 class="print">Setting Up The Links:</h2>
+            <p>The following <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters (in <span class="function" title="Function:%WCO0000BSYP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters</span>) enable the type of linking for Payroll to HR and HR to Payroll for salary and benefits:</p>
+            <ul>
+                <li><span class="parameter">PRMAKEHR</span> - whether adding an employee creates a HR record.</li>
+                <li><span class="parameter">HRPRBENEFIT </span>- type of HR to Payroll linking for benefits.</li>
+                <li><span class="parameter">HRPRSALARY </span>- type of HR to Payroll linking for salaries.</li>
+                <li><span class="parameter">PRHRBENEFIT </span>- type of Payroll to HR linking for benefits.</li>
+                <li><span class="parameter">PRHRSALARY </span>- type of Payroll to HR linking for salaries.</li>
+            </ul>
+            <p>Payroll parameter setup:</p>
+            <ul>
+                <li><span class="parameter">SALARY </span>- for salary linking this must be set to the pay item that holds the annual salary in Payroll.</li>
+                <li><span class="parameter">HRREQUSR </span>- a comma-separated list of users who will receive actions on their Activity Workbench screen for HR to Payroll requests.</li>
+            </ul>
+            <p>HR parameter setup:</p>
+            <ul>
+                <li><span class="parameter">SALFIELD </span>- the field on the Payroll salary item which holds the annual salary amount which corresponds to the amount in HR.</li>
+                <li><span class="parameter">PRSALRES </span>- the HR lookup code for the reason to use for a salary history record created via Payroll linking (optional).</li>
+                <li><span class="parameter">PRREQUSR </span>- a comma-separated list of users who will receive actions on their Activity Workbench screen for Payroll to HR request.</li>
+            </ul>
+            <p>The employee and employer items and fields used for benefits in Payroll can be defined individually for each benefit in HR using <span class="function" title="Function:%WHRBHRB">Benefits</span>, as shown in the screenshot. The salary and benefits fields can be set as the standard amount, the standard input or the standard rate.</p>
+            <p>
+                <img src="../../Resources/Images_G-I/HR/HR_511101.gif" class="FullWidth" />
+            </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CO/co_prmakehr.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_hrprbenefit.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_hrprsalary.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_prhrbenefit.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_prhrsalary.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PR/pr_salary.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PR/pr_hrrequsr.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HR/hr_salfield.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HR/hr_prsalres.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HR/hr_prrequsr.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

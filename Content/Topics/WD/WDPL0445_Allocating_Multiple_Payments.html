@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Allocating Multiple Payments</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Allocating Multiple Payments</h1>
+If there are <MadCap:variable name="Variables.cheques" /> that have not been allocated to invoices, you can allocate <MadCap:variable name="Variables.cheques" /> for one or more <MadCap:variable name="Variables.pl suppliers" /> automatically.
+
+    <div class="process"><h2 class="print">To allocate multiple payments:</h2><ol><li>Go to <span style="color: black;"><strong>Input -</strong><span class="function" title="Function:%WPL1060BCOB">Apply Unallocated Cash</span>.</span></li><li>Add a new allocation batch.  </li><li>Add cash allocation transactions. 
+<p />For each transaction, specify the payment you want to allocate by entering the <MadCap:variable name="Variables.pl supplier" /> code and the original payment reference number of the <MadCap:variable name="Variables.cheque" />. 
+<p />Alternatively, you can leave the <span class="field"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Account </span>field blank, and use the <span class="field">Pay Reference </span>lookup, which displays a list of all unallocated payments. 
+<p />As you add each transaction, <MadCap:variable name="General.ProductName" /> displays the Payment detail; click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> to return to the allocation browse.</li><li><MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the payments you want to allocate. </li><li>Choose <span class="function" title="Function:%WPL1510UACS">Auto Apply Unallocated Cash</span> from the list.  
+<p /><MadCap:variable name="General.ProductName" /> automatically applies the cash, first to any transactions with negative balances, in order by due date (earliest first), and then to transactions with positive balances, again by due date, and displays the list again, this time with the balances adjusted. The <span class="field">Pay Reference </span>field contains a link to the allocation transactions.</li><li>If you want, you can view or adjust the automatic allocations: click the link in the <span class="field">Pay Reference </span>field and use the Allocation tab (see <a href="WDPL0441_Allocating_Cash_to_Outstanding_Transactions.html">Allocating Cash to Outstanding Transactions</a>). </li><li>When you are satisfied with the allocations, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.  
+<p /><MadCap:variable name="General.ProductName" /> returns you to the allocation batch list. </li><li>Post the batch in the normal way.  
+<p /><MadCap:variable name="General.ProductName" /> processes the payment batch and updates the <span class="module">General Ledger.</span></li></ol></div><div class="configuration"><p><MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;"><MadCap:relatedTopic src="../Parameters/PL/pl_alwunal.htm" /></MadCap:relatedTopics></p></div></body>
+</html>

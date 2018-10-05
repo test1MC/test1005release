@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>Batch Security in OA </p>
+        <h2>Module: Multiple Modules</h2>
+        <p>&#160;</p>
+        <p>Batch Security is used to restrict users from modifying other user’s batches, as well as determining the user’s batches that can be seen on the “My Groups Batches” filter.</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>The two fields to consider for batch security in OA, is the “Security” field and the Prime Group, both of which can be found on the user record.</li>
+            <li>Any user attempting to post/edit another user’s batches and/or print requests needs to have BOTH:</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li>Equal or higher Security level (0 to 9) </li>
+            <li>AND access to whatever group the owner has set as their prime group </li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li>The user attempting to do the posting/editing does not need to have this Prime Group set as their prime group. They will get permission as long as that group is anywhere on their list of security groups.</li>
+        </ol>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+            <li>An example: Caroline has Security Level 9, Prime Group “OAGPREN”, and has access to a few other Groups. Greg has Security Level 5, Prime Group “OAGDMDM”, and has no other access to any groups.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Batch Security in OA.png" style="visibility: visible;mso-wrap-style: square;width: 529px;height: 67px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="5">
+            <li>In this case, Caroline will not be able to post Greg’s batches because she does not have access to the group “OAGDMDM” – and Greg will not be able to post Caroline’s batches because he does not have access to group “OAGPREN” AND his level is a lower number than hers.</li>
+        </ol>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="6">
+            <li>To allow Caroline to post Greg’s batches without allowing Greg to Post Caroline’s; you could:</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 72pt;" start="1">
+            <li>Give Caroline the OAGDMDM group as an additional group.</li>
+            <li>Change Greg’s prime group to XYZ (a group that has no functional security), and add that to Caroline’s secondary groups.</li>
+        </ol>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="7">
+            <li>If all users have the same Prime group, this becomes easier to keep track of. The prime security group OAGBASE = “OA Prime - Prime Group” is intended for this use, and should be suggested as an option. This group provides no real security access, so you can add this group to all users without giving any user unwanted access. </li>
+        </ol>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="8">
+            <li>If this option is used – the “level” is the only variable that determines batch security access.&#160; For example, a user with level = 7 will be able to view and modify batches belonging to anyone with a level = 1-7 without having to think about each user’s prime group. </li>
+        </ol>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="9">
+            <li>The “My Groups Batches” filter follows the same rules as above. You will only be able to see another user’s batch with this filter on if you have their prime group and your security level is greater or equal to theirs. </li>
+        </ol>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Batch Security in OA_1.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 341px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

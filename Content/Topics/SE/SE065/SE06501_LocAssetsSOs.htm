@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Location [%=Variables.Se Assets caps%] - [%=Variables.Se Service Orders caps%]</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Location <MadCap:variable name="Variables.Se Assets caps" /> - <MadCap:variable name="Variables.Se Service Orders caps" /></h1>
+        <p class="Body">The original Quoted Price is not broken down by <MadCap:variable name="Variables.Se Asset caps" />, and  Quoted Price Detail Lines do not allow reference to a particular <MadCap:variable name="Variables.Se Asset caps" />.    <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">As a result, changes were made so that the </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">The </MadCap:conditionalText>value of the Quoted Price Billings (not including tax or add-ons) is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>proportionally distributed to each <MadCap:variable name="Variables.Se Asset caps" /> serviced based on <MadCap:variable name="Variables.Se Visit caps" /> Detail Total Hours Worked.  </p>
+        <p class="IndentFieldDef">For example, if the Total Hours Worked is 10 and two <MadCap:variable name="Variables.Se Assets caps" /> were serviced for 3 and 7 hours, the first <MadCap:variable name="Variables.Se Asset caps" /> receives 30% of the Quoted Price and the second <MadCap:variable name="Variables.Se Asset caps" /> receives 70% of the Quoted Price.</p>
+        <p class="Body">The column set for the <MadCap:variable name="Variables.Se Service Orders caps" /> browse in <i>Locations &gt;&#160;Location <MadCap:variable name="Variables.Se Assets caps" /></i> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>provides you with the ability to display the Detail Line Billing Amounts and <MadCap:variable name="Variables.Se Visit caps" /> Detail Hours Charged/Worked for a particular <MadCap:variable name="Variables.Se Asset caps" />. The screen below (<MadCap:xref href="#LocAssets" class="ImageRef"><i>Figure 1:  Location [%=Variables.Se Assets caps%] - [%=Variables.Se Service Orders caps%]</i></MadCap:xref>) highlights the columns that are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in the standard column set to allow for this.</p>
+        <p class="Body"><b>Note:</b> Tax, add-ons, etc. are <b>not</b> broken down by <MadCap:variable name="Variables.Se Asset caps" />.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="LocAssets"></a>Location <MadCap:variable name="Variables.Se Assets caps" /> - <MadCap:variable name="Variables.Se Service Orders caps" /></p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE065_Images/SE065_SO_LocAssets.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Column Set Fields</p>
+        <p class="Body">The fields listed below are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the standard column set for the <MadCap:variable name="Variables.Se Service Orders caps" /> browse.</p>
+        <p class="IndentBold"><strong>Num of Serviced <MadCap:variable name="Variables.Se Assets caps" /></strong> (RO_sso_NumOfAssets)</p>
+        <p class="IndentBold"><strong>Total <MadCap:variable name="Variables.Se Visit caps" /> Hours Charged </strong>(RO_sso_BillableHrsToDate)</p>
+        <p class="IndentBold"><strong>Total <MadCap:variable name="Variables.Se Visit caps" /> Hours Worked </strong>(RO_sso_WorkedHrsToDate)</p>
+        <p class="IndentBold"><strong>This <MadCap:variable name="Variables.Se Asset caps" /> <MadCap:variable name="Variables.Se Visit caps" /> Hours Charged </strong>(RO_sso_AssetBillableHrsToDate)</p>
+        <p class="IndentBold"><strong>This <MadCap:variable name="Variables.Se Asset caps" /> <MadCap:variable name="Variables.Se Visit caps" /> Hours Worked</strong> (RO_sso_AssetWorkedHrsToDate)</p>
+        <p class="IndentBold"><strong>This <MadCap:variable name="Variables.Se Asset caps" /> % of <MadCap:variable name="Variables.Se Visit caps" /> Hours Worked </strong>(RO_sso_AssetPctWorkedHrsToDate)</p>
+        <p class="IndentBold">This <MadCap:variable name="Variables.Se Asset caps" /> Hours Worked / Total <MadCap:variable name="Variables.Se Visit caps" /> Hours Worked * 100</p>
+        <p class="IndentBold"><strong>This <MadCap:variable name="Variables.Se Asset caps" /> % of Quoted Price Billings</strong>	(RO_sso_AssetPctQuotedPrice)</p>
+        <p class="IndentFieldDef"><i>(Total <MadCap:variable name="Variables.Se Service Order caps"></MadCap:variable> Quoted Price Billing Lines that are invoice/posted) * (This <MadCap:variable name="Variables.Se Asset caps"></MadCap:variable> % of <MadCap:variable name="Variables.Se Visit caps"></MadCap:variable> Hours Worked)</i>
+        </p>
+        <p class="IndentBold"><strong>This <MadCap:variable name="Variables.Se Asset caps" /> Detail Line Total Billings </strong>(RO_sso_Billings)</p>
+        <p class="IndentFieldDef">This includes Detail Lines referencing the <MadCap:variable name="Variables.Se Asset caps" />.    Quoted Price, Add-ons, etc. may need to be distributed based on the % of <MadCap:variable name="Variables.Se Visit caps" /> Detail Hours Worked.</p>
+    </body>
+</html>

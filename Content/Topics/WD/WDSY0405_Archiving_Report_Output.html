@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="733" MadCap:lastWidth="1014">
+  <head>
+    <title>Archiving Report Output</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Archiving Report Output</h1>
+    <p>To archive the output of a report produced in <MadCap:variable name="General.ProductName" /> OA, add the following as a function menu parameter on a user-defined copy of the report function:</p>
+    <blockquote dir="ltr" style="margin-right: 0px;">
+      <p>
+        <strong>archivename=<em>directoryname</em></strong>
+      </p>
+    </blockquote>
+    <p>where <em>directoryname</em> is the name of a directory which will be created under the $BASE/var/archive directory structure. It can contain "/" to indicate subdirectories. $BASE/var/archive must exist and have the appropriate permissions.</p>
+    <p>You can also specify archiveFile=YYY which is the file name that will be used in the archive directory. If archiveFile is omitted then the existing spool file name XX999999 will be used.</p>
+    <p>The archiveName is a directory in $BASE/var/archive and the archiveFile can contain \<MadCap:variable name="Variables.\" /> but these must be URL encoded to %7B and %7D respectively. The contents are replaced from the contents of the report selection (stored in rs_param), from co_rptstatus fields or from co_config fields. "/" is replaced with "-" and only a-z,A-Z,0-9 and "-", "_" and "." are allowed in the file name. All other characters are removed. For example:</p>
+    <blockquote>
+      <p>
+        <strong>archiveName=MyReports/Users<br />archiveFile=%7Brs_rundate%7C</strong>
+      </p>
+    </blockquote>
+    <p>might produce a file <span class="FileName">$BASE/var/archive/MyReports/Users/27-01-13.pdf</span></p>
+    <p>When the report is run from <MadCap:variable name="General.ProductName" /> OA, the PDF and XLS files are created in the spool directory (as defined in PM Parameter <span class="parameter">SPOOLDIR</span>) and are also copied into the specified archive directory.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0402_Making_Copies.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PM/pm_spooldir.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

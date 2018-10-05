@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />WF Stages - Subworkflow</h1>
+        <p class="Body">A sub workflow stage will call another workflow template from within the workflow. The workflow will return to the main workflow once any End stages are reached in the subworkflow.&#160; </p>
+        <p class="note">Each workflow must have its own <MadCap:variable name="Variables.licence" /> to run, so calling a subworkflow will require an additional <MadCap:variable name="Variables.licence" /> to the main workflow in order for it to be called.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_19.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_19_1106.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Check Calculation Result for Delegation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">If a workflow stage uses a role calculation,  instead of an assigned Role, delegation will not automatically kick-in - so if they are away the calculated role will always apply. You can now set it&#160;to check for delegation by ticking this field</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Pre Calculation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Calculation to be performed before the stage. For example, you could use this to throw an error if a certain condition hasn't been met before the stage is run.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Subworkflow</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Workflow template to call.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Post Calculation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Calculation to be performed after the stage. For example, you could use this to send an email when the stage has been completed.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Next</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">The label of another stage to which this stage is linked.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Removing Users</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Removing Users</h1>
+        <p>When you no longer want a user to have access to <MadCap:variable name="General.ProductName" /> (for example, when they leave the company), you should disable their User ID.&#160; However, you should not delete their user record; <MadCap:variable name="General.ProductName" /> has the policy of retaining details of all historical users in the database for the following reasons:</p>
+        <ul>
+            <li>Ensuring that the transactional audit trail retains details of who input and/or author<MadCap:variable name="Variables.is" />ed transactions, orders, payment runs, etc;</li>
+            <li>Ensuring that reprinted documents, including purchase orders, etc. will correctly print without missing information;</li>
+            <li>Ensuring that there is referential integrity within the database where database records refer to user IDs;</li>
+            <li>Preventing problems when users need to edit records which include reference to a user who has left (in some circumstances, if the details of the original user have been deleted then an error message will be displayed and the user will need to overwrite the original details with a current user): this can be both frustrating at the time and misleading for the future;</li>
+            <li>Allowing access to the <span class="function" title="Function:%WMS5011BMSO">User Logging <MadCap:variable name="Variables.Enquiry caps" /></span> to review functions used on <MadCap:variable name="General.ProductName" /> by the historical user (subject to the time limit set in SY parameter <span class="parameter">LOGHIST</span>).</li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To disable a user in a secure manner:</h2>
+            <ol>
+                <li>Un<MadCap:variable name="Variables.tick" /> the <span class="field">Named User </span>box in the Named User group of fields on the <span class="function" title="Function:%WSYSSUR">User Details</span> screen.&#160; This will remove the user from the user count for licensing purposes and will disable their user ID so that they cannot log in.</li>
+                <li>As added security, various other settings on the user record could be changed as follows to further deny the possibility of them gaining any access (although none of these should be necessary if they are no longer recorded as a named user):</li>
+                <ol>
+                    <li>All the groups could be removed from the user&#160;-- thus removing their function access and a Group called "<MadCap:variable name="Variables.leaver employee" style="text-transform: capitalize;" />" could then be added to their user record as their prime group&#160;-- this group would be configured to have no function access;</li>
+                    <li>The user's password could be changed;</li>
+                    <li>The <span class="field">Domain\User </span>field could be blanked (if this is used);</li>
+                    <li>The <span class="field">Restricted IP </span>field could be set (preventing login from any other IP address);</li>
+                    <li>Delete the User Views for this user (see <a href="WDCI5002_User_View_Set_Up.html">User View Set Up</a>).</li>
+                </ol>
+                <li>You may want to consider other places in <MadCap:variable name="General.ProductName" /> where the user is referred to.&#160; For example:</li>
+                <ul>
+                    <li>If the user is set up in the <span class="function" title="Function:%WHS2900BHSF">Sales Staff</span> list in <span class="module">House Sales </span>then this record should be marked as dormant.</li>
+                    <li>If the user is set up in the <span class="function" title="Function:%WPO2000BPOB">Buyers</span> list in <span class="module">Procurement</span>, this record should be marked as retired.</li>
+                </ul>
+            </ol>
+        </div>
+    </body>
+</html>

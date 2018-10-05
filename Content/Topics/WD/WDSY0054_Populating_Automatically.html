@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Populating Analysis Sets Automatically</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Populating Analysis Sets Automatically</h1>
+        <p>If the codes for a record have a structure that represents information about that record, you may find it useful to base the analysis sets on the code.&#160; In this way, <MadCap:variable name="General.ProductName" /> can populate the analysis sets automatically when a new record is created.</p>
+        <p>For example, suppose the <MadCap:variable name="Variables.cost heads" /> in <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status </span>are of the form: <strong>9999A99</strong>, where the first digit represents type of work, the first four digits represent type of resource, the letter represents the type of cost, and the digits following the letter represent a subanalysis of that cost. So the <MadCap:variable name="Variables.cost head" /> <strong>1300F01</strong> might be for a road-building <MadCap:variable name="Variables.jc contract" />, broken down as follows: </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong>1</strong>
+                    </td>
+                    <td>Earthworks </td>
+                </tr>
+                <tr>
+                    <td><strong>1300</strong>
+                    </td>
+                    <td>Bulldozer </td>
+                </tr>
+                <tr>
+                    <td><strong>F</strong>
+                    </td>
+                    <td>Fuel </td>
+                </tr>
+                <tr>
+                    <td><strong>F01</strong>
+                    </td>
+                    <td>Fuel from own bowser</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To set up analysis sets to relate to <MadCap:variable name="Variables.cost heads" />, you could enter: </p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_005401.png" class="FullWidth" />
+        </p>
+        <p>Then, whenever a new <MadCap:variable name="Variables.cost head" /> is created, <MadCap:variable name="General.ProductName" /> populates the <MadCap:variable name="Variables.cost head" /> analysis sets based on the <MadCap:variable name="Variables.cost head" /> code.</p>
+        <p>However, analysis sets need not necessarily be related to the record code. You can use them in whatever way suits your reporting needs.</p>
+    </body>
+</html>

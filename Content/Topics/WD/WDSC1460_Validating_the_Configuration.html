@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Validating the Configuration</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Validating the Configuration</h1>
+    <p>Run <span class="function" title="Function:%SC755">CIS Scheme Configuration</span> (in <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" />) to check that schemes have been configured correctly.</p>
+    <p>If you have sectors set up, you must run this report, because it also initial<MadCap:variable name="Variables.is" />es the fields on <span class="function" title="Function:%WGL2070BCTA">Sector Details Maintenance</span>: it sets them to default to the <MadCap:variable name="Variables.kco company" /> parameters, unless the fields have already been filled in.</p>
+    <p>For each scheme, the report shows a line for each <MadCap:variable name="Variables.kco company" /> that belongs to the scheme, and for each sector within that <MadCap:variable name="Variables.kco company" /> that belongs to the scheme.  There is a gap between lines for different schemes.</p>
+    <ul>
+      <ul>
+        <li>The Submit <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> column shows the <MadCap:variable name="Variables.kco company" /> <MadCap:variable name="General.ProductName" /> expects you to use for submissions for that scheme.  If for the same scheme there are lines showing different 'submit <MadCap:variable name="Variables.kco companies" />', that is a configuration error which needs to be resolved. Different schemes can have separate submission <MadCap:variable name="Variables.kco companies" />, but only one submission <MadCap:variable name="Variables.kco company" /> is allowed per scheme.</li>
+        <li>The <MadCap:variable name="General.ProductName" /><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> column shows the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> included in the scheme.  The Linked <MadCap:variable name="Variables.kco companies" style="text-transform: capitalize;" /> column shows the other <MadCap:variable name="Variables.kco companies" /> that are linked with the <MadCap:variable name="Variables.kco company" /> in the <MadCap:variable name="General.ProductName" /><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> column (that is, those in the same group in <span class="parameter">LINKCOIR</span>).  All <MadCap:variable name="Variables.kco companies" /> in the scheme need to be linked, so any <MadCap:variable name="Variables.kco company" /> shown in the <MadCap:variable name="General.ProductName" /><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> column for a scheme should be included in &gt;<span class="parameter">LINKCOIR</span>.  Within those <MadCap:variable name="Variables.kco companies" />, individual sectors can belong to different schemes.</li>
+        <li>The Name, Contact and Type columns show the contractor name, contact and company type as taken from the parameters or the sector address details; these must be the same for each combination of <MadCap:variable name="Variables.kco company" /> and sector within the scheme.</li>
+      </ul>
+    </ul>
+    <p class="noteheader">NOTE</p>
+    <div class="note">If you are in any doubt about how to configure the schemes for your structure of CIS registration, contact <MadCap:variable name="General.ProductName" /> for advice.  You need to ensure that the configuration is correct before you submit a monthly return.</div>
+  </body>
+</html>

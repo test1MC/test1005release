@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109" MadCap:lastBlockDepth="4" MadCap:lastHeight="2280" MadCap:lastWidth="922">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />PO Notification Routine</h1>
+        <p>The <span class="function">Send PO&#160;Notifications</span> routine (on the Procurement Administration menu) generates email notifications about committed orders to internal users, <MadCap:variable name="Variables.pl suppliers" />, and subcontractors.  It is a report, so it can be scheduled to run at regular intervals (for example, once a day).</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">PO&#160;Notification Routine Selection Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/Procurement/PO Notifications/Send_Notifications.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>When the routine is run for the first time, only orders committed since 00:00 on that day are included.</p>
+        <p>Notifications are only sent for orders committed after the date and time of the previous notification. Notifications are not sent for cancelled orders, but are sent for cancellation orders.</p>
+        <p>When the notification routine identifies a committed order that needs notifications to be sent, a PDF document of the order is automatically generated.  This PDF document is attached to whatever notifications are produced.</p>
+        <p>If the <span class="field">Use global log file</span> box is <MadCap:variable name="Variables.tick" />ed, report log data will be dumped to the $ECDIR/ponotify_kcoXXX.log file for easier analysis (where %ECDIR is the value of the <span class="parameter">EC/ECDIR</span> parameter, and XXX is the current company number).</p>
+        <h2>Notifications to Internal Users</h2>
+        <p>The notification routine sends a single email to each nominated internal user, which contains a list of all purchase orders relevant to that user, a .zip file containing PDF&#160;documents of each order, and spreadsheet in CSV format.</p>
+        <p>Email notifications sent to internal users use the template specified by the new PO parameter <span class="parameter">NTFY-INT</span>.</p>
+        <p>The <MadCap:variable name="General.ProductName" /> user record must contain the user’s email address.  If the user’s email address is blank no notifications will be sent to that user.</p>
+        <p>The routine consults the <span class="function">PO Internal Notification Rules</span> to determine which users to notify and which purchase orders are relevant to that user (see <MadCap:xref href="Rules.htm">Notification Rules</MadCap:xref>).</p>
+        <p>The Excel spreadsheet (in CSV format) lists the following information for each order included in the .zip file:</p>
+        <ul class="CompactList">
+            <li>Company (kco)</li>
+            <li>Major Order Type</li>
+            <li>Order Type</li>
+            <li>PO Number</li>
+            <li>Change No</li>
+            <li>Order Date</li>
+            <li>Supplier (or Subcontractor) Name</li>
+            <li>Buyer Code</li>
+            <li>Order Value</li>
+            <li>Currency</li>
+        </ul>
+        <p>The .zip file (and the .csv index file) are named in the following format: orders_kcoXXX_DD-MM-YY_HH-MM.zip.</p>
+        <h2>Notifications to <MadCap:variable name="Variables.Pl Suppliers caps" /> and Subcontractors</h2>
+        <p>The notification routine sends a single email for each order to the relevant <MadCap:variable name="Variables.pl supplier" /> or subcontractor. The PDF document of the order is attached to the email.</p>
+        <p>Email notifications sent to <MadCap:variable name="Variables.pl suppliers" /> and subcontractors use the template specified by the new PO&#160;parameter <span class="parameter">NTFY-EXT.</span></p>
+        <p>The new PO parameter <span class="parameter">DEFNTFEX</span>  and the &lt;EnableNotifications&gt; setting for the supplier or subcontractor in the PONOTIFY <span class="function">EC Organ<MadCap:variable name="Variables.is" />ation Setup</span> record determine whether emails are sent (see <MadCap:xref href="Org_Setup.htm">eCommerce Organation Setup</MadCap:xref>). The office email address must be populated.  If this email address is blank (and no email is set up in the PONOTIFY <span class="function">Organ<MadCap:variable name="Variables.is" />ation Setup</span> record) then no email is sent to that <MadCap:variable name="Variables.pl supplier" /> or subcontractor.</p>
+        <p>Notifications for cancellation orders are skipped if the original order has not been emailed externally.</p>
+        <p>After a notification has been sent to a <MadCap:variable name="Variables.pl supplier" /> or subcontractor, the order cannot be uncommitted (unless this is overridden at the office level using <span class="function">Organ<MadCap:variable name="Variables.is" />ation Setup</span>; see <MadCap:xref href="Org_Setup.htm">eCommerce Organation Setup</MadCap:xref>).</p>
+        <h2>Notifications to Purchasing Administrators</h2>
+        <p>The notification routine sends a single notification email to each address specified in the <span class="field">Administrator emails list</span> field on the <span class="function">Send PO&#160;Notifications</span> screen.</p>
+        <p>The email uses the template specified by the new PO&#160;parameter <span class="parameter">NTFY-ADM.</span> </p>
+        <p>If the <span class="field">Attach report output to the admin notification</span> box is <MadCap:variable name="Variables.tick" />ed, the report output is sent as an attachment. This shows how many orders and <MadCap:variable name="Variables.po variations" /> were committed, and how many were emailed to <MadCap:variable name="Variables.pl suppliers" /> or subcontractors.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Send PO&#160;Notifications Report Output</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/Procurement/PO Notifications/Notification_Report.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+    </body>
+</html>

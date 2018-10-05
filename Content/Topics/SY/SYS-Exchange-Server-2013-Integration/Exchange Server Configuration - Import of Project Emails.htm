@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="8" MadCap:lastHeight="1295" MadCap:lastWidth="1109">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" /><a name="_Ref290291046"></a><a name="_Toc450312891"></a>Import of Project Emails</h1>
+        <p class="Body">Project emails are imported from public folders on the Exchange Server.&#160; Each project must have its own public folder and these must all be under the same parent folder.&#160; These folders may also be given an email address to allow emails to be sent directly to the folder.&#160; The folder name must contain the Project Number as viewed in the Project Workbench: </p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SYS-Exchange-Server-2013-Integration/Import of Project Emails_1.png" style="visibility: visible;mso-wrap-style: square;width: 603px;height: 129px;" />
+        </p>
+        <p class="Body">The folder name can either be the Project Number only (e.g. “0204”) or a combination of both the Project Number and a label.&#160; If the folder name contains more than just the Project Number then the project number part of the folder name must be enclosed in square brackets.</p>
+        <p class="Body">The following are valid folder names:</p>
+        <ul class="CompactList">
+            <li>0204</li>
+            <li>Merrion Centre [0204]</li>
+            <li>[0204] Merrion Centre</li>
+            <li>1/0204 Merrion Centre – Berkshire – Fred Smith [0204]</li>
+        </ul>
+        <p class="Body">Example public folder tree:</p>
+        <ul class="CompactList">
+            <li>All Public Folders</li>
+            <ul>
+                <li><MadCap:variable name="General.ProductName" />
+                </li>
+                <ul>
+                    <li>Projects</li>
+                    <ul>
+                        <li>Merrion Centre [0204]</li>
+                        <li>Heathrow T4 [0205]</li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <p class="Body">The replication account should be given permission level of at least “Editor” as this account will need to delete items owned by all users.&#160; </p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SYS-Exchange-Server-2013-Integration/Public Folder Permissions - Author Editor None.png" style="width: 307px; height: 107px;" class="FullWidth" />
+        </p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Archive Folders</p>
+        <p class="Body"> In addition, a second set of project folders may be used to archive emails that have been imported (if archiving is not used then emails are deleted after import).&#160; The archive folders do not need an email address.</p>
+        <p class="Body">Example public folder tree with archive folders:</p>
+        <ul class="CompactList">
+            <li>All Public Folders</li>
+            <ul>
+                <li><MadCap:variable name="General.ProductName" />
+                </li>
+                <ul>
+                    <li>Projects</li>
+                    <li>Inbound</li>
+                    <ul>
+                        <li>Merrion Centre [0204]</li>
+                        <li>Heathrow T4 [0205]</li>
+                    </ul>
+                    <li>Archive</li>
+                    <ul>
+                        <li>Merrion Centre [0204]</li>
+                        <li>Heathrow T4 [0205]</li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <p class="Body">The replication account should be given permission level of at least “Editor” on the archive folders. </p>
+        <p class="Body">The Default permissions should be set to “Reviewer”.</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SYS-Exchange-Server-2013-Integration/Public Folder Permissions - Reviewer Editor None.png" style="visibility: visible;mso-wrap-style: square;width: 311px;height: 109px;" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Single Form Entry - Line Details</h1>
+        <p class="Body">A section of input lines for the Major Order Type (Material, Overhead, <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" />, Workshop or Asset) is shown. The number of input lines is dictated by the relevant PO parameter MAXLINxx (see <MadCap:xref href="Single Form Order Entry - Parameters.htm" class="Numbered_Heading">1 , Single Form Order Entry - Parameters</MadCap:xref>).</p>
+        <p class="Body">If the Major Order Type (Material, <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" />, Workshop or Asset) allows for multiple analysis types, <b>additional</b> sections of lines are shown. The PO parameters ALWMLAxx dictate whether multiple analysis types are allowed (see <MadCap:xref href="PO Multiple Analysis Types - Parameters.htm" class="Numbered_Heading">1, Multiple Analysis Types - Parameters</MadCap:xref>).</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Order Type </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Additional Sections</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">Material</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> and Overhead Sections (if the PO parameter ALWMLAMA is set to Y).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">Overhead</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">No other sections.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell"><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Overhead section (if the PO parameter ALWMLAST is set to Y).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">Workshop</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Asset and <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> sections (if the PO parameter ALWMULWS is set to Y)
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">Asset</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">Workshop and <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> sections (if the PO parameter ALWMULAS is set to Y)
+.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">If the order being raised is a Lump Sum order, the <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Lines section does not appear.  This is because <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> orders expect GRNs to be entered but Lump Sum orders cannot have GRNs.</p>
+        <p class="Caption">Single Form Order Entry - Order Lines</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/Procurement/OA-CE-PO009-OrderEntryImprovements/Single Form Orders-Lines.png" class="FullWidth" />
+        </p>
+        <p class="Body">The field in the first column depends on type of section.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" style="width: 35%;" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Material Section</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><span class="Field"><MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;"></MadCap:variable></span> (only if PO&#160;parameter ALWMULMA is set to Y).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">	Overhead Section
+</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><b class="Field">Department
+</b>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Stock Section</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><b class="Field">Location
+</b>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Workshop Section</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><span class="Field">Workshop Ref</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Asset Section</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1"><span class="Field">Asset Code</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">These fields are populated automatically from the entry in the corresponding header field. </p>
+        <p class="FieldLabel"><span class="Field">Line Type</span>
+        </p>
+        <p class="IndentFieldDef">The line type is equivalent to the Add Type on standard order entry.</p>
+        <p class="IndentFieldDef">The options available are:</p>
+        <p class="Body">
+            <ul>
+                <li>&#160;<b>Material Lines</b>		- The <span class="Field">Code</span> field is validated as a commodity code and the lookup button reacts accordingly.  All other fields behave as they do on the “standard” screen.
+				</li>
+                <li><b>Stock Lines</b>		- The <span class="Field">Code</span> field si validated as a stock code and the lookup button reacts accordingly.  If the ST parameter LUCKINS is set to Y then, just as in the “standard” screen, it is possible to enter a Shortcut code which is then replaced in the input field by the Stock Item code. All other fields behave as they do on the “standard” screen.
+				</li>
+                <li><b>Text Lines</b>		- The <span class="Field">Description </span>field changes to a text input field and becomes the only input field. The lookup button, as on the “standard” screen, provides the ability to select a phrase to be inserted into the text.  			</li>
+                <li><b>Clause Lines</b>		- The <span class="Field">Code</span> field is validated as a clause code and the lookup button reacts accordingly.  The text of the clause is displayed in the <span class="Field">Description </span>column.  If the selected clause requires “plugged” data to be entered, after clicking the Save/Next button you will have to retrieve this order on the standard browse screen and make any amendments via that screen.
+				</li>
+                <li><b>Extras Lines</b>	- 	The <span class="Field">Code</span> field is validated as an extras code and the lookup button reacts accordingly.  All other fields behave as they do on the “standard” screen.
+			</li>
+            </ul>&#160;</p>
+    </body>
+</html>

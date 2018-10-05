@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="11671" MadCap:lastWidth="1238" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0011,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OA Designer - Using a Dataset in a Report</title>
+    </head>
+    <body>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Dicscovery Heading.flsnp" />
+        <h1>Using a Dataset in a Report</h1>
+        <p>
+            <MadCap:relatedTopics>
+                <MadCap:relatedTopic src="Discovery_BI0009.htm" />
+            </MadCap:relatedTopics>
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">You should complete Discovery BI0009 before attempting this exercise.</p>
+        <h2>Create the Function and Menu </h2>
+        <p>Create the function that will be used to run the report then add this function to an appropriate menu.&#160; </p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Initials + BI0011 e.g. NLBI0011<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Description<br /></td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">A relevant description<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Module<br /></td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Contract Status<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Category</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">Report</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Function Context </p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">Leave as defaulted from the Function Description.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">Function Program </p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">wou005</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /></p>
+        <h2>Set up the Page </h2>
+        <ul>
+            <li>Navigate to OA Reporting &amp; BI &gt; Designer &gt; Page Designer</li>
+            <li> Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> to create the new Page and fill in the fields as follows (leave the others blank):<ul><li>Give the page section the same name as the function created.</li><li>Form Service&#160;Procedure: <b>jcfrep.p</b></li></ul><p><img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_B_1106.png" class="FullWidth" /></p></li>
+            <li>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" />to save the new Page. <MadCap:variable name="General.ProductName" /> returns to the summary for the page section being created.</li>
+        </ul>
+        <h2>Add the Page Section Forms</h2>
+        <p>Select the Form tab create an Update form.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> and enter the following information to create the Form :</p>
+        <p>&#160;</p>
+        <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 179px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 301px;" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Form</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Select Update </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Field Type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Select Update</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Linked To</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Leave blank</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_C_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> to create the form.</p>
+        <h2>Add the Fields</h2>
+        <ul>
+            <li>In the Field Tab go to the FORM selector at the bottom of the page, select Update and click Apply Filter.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>&#160;</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>Add a Field, leaving Field and Label blank :</p>
+        <p>In the Generate field, enter jcfrep.jobSelectionGenerate.&#160; This is the standard selection generator for contracts.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_D_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> to create the field.</p>
+        <p>Test the report selection by adding <b>&amp;mainarea=xxBI0011</b> (where xx are your initials) to the end of the URL</p>
+        <p><MadCap:variable name="General.ProductName" /> should display the selection criteria:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_3_1106.png" class="FullWidth" />
+        </p>
+        <p>If you were toclick <MadCap:conditionalText MadCap:conditions="COINS.Pre-v1105">the green arrow</MadCap:conditionalText> <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" />to generate the report it will not produce any output, because the report section has not yet been created. If you refer to the log file you will see an error message similar to the one below.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_4_1106.png" class="FullWidth" />
+        </p>
+        <h2>Create the report section</h2>
+        <ul>
+            <li>Navigate to OA Reporting &amp; BI &gt; Designer &gt; Report Designer</li>
+            <li>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> to create a new report section and fill in the details as follows:</li>
+        </ul>
+        <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;width: 100%;" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 132px;" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" style="font-size: 11pt;">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Report Section</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">Give the report section the same name as the function created.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">Body Table</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">Enter the name of the database table being reporting on; in this case our temporary table from the dataset ttcontract</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">Body Query</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p>Enter the query.&#160; This will select which records are shown on the report.&#160; Enter the following:</p>
+                        <p>FOR EACH ttcontract</p>
+                        <p>This query selects all records in the dataset.&#160; Note that in this exercise we do not need to specify the kco or the contract selection {jobSelect} as we have in earlier exercises because these have all been done in the dataset query.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">DataSet</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">Specify the name of the Data Set that contains the temporary table.&#160; In this case xxBI0009 (replace xx with your initials).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">Page Layout </p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p>Select %A4RLAND-A4 Report Landscape .</p>
+                        <p>The page layout determines the orientation (whether the report format is landscape or portrait), the margins, and the standard headers and footers.&#160; For <MadCap:variable name="General.ProductName" /> reports, with a logo, a title, and a report footer, choose a report layout (with an R in the name: %A4RLAND or %A4RPORT).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">Class</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1" style="font-size: 11pt;">
+                        <p class="TableCell" style="font-size: 11pt;">Select the font class to use.&#160; Since the user listing report doesn't have many fields on, use Arial 8pt (a larger font than Arial 6pt).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_E_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /> to save the section and present additional tabs.<br /></p>
+        <h2>Sorting the Report</h2>
+        <p>On the sort tab, enter ttcontract.job_num+ in the Sort field</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_F_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>Select the Form tab create a Body form. This will be used to display the report line fields.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> and enter the following information to create the Form:</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Form</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Body </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Field Type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> Body</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Linked To</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Leave blank</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_G_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> to create the form.</p>
+        <h2>Add the Fields</h2>
+        <p>In the Field Tab go to the FORM selector at the bottom of the page, select Body and click Apply Filter.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">You should always do apply the filter to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>For each of the fields in our dataset to be shown on the report, fill in the following:</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Field</td>
+                    <td>The name of the field.</td>
+                </tr>
+                <tr>
+                    <td>Label</td>
+                    <td>The label to appear in the column heading.</td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td>The width of the column on the report.</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Width</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">job_num</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Contract</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>15mm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">job_name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Contract Name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>60mm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">costs_td</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Costs TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>20mm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">rev_td</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Revenue TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>20mm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">prof_td</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">Profit TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>20mm</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" />after entering each field.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_H_1106.png" class="FullWidth" />
+        </p>
+        <p>The report is now ready to run.</p>
+        <h2>Running the Report</h2>
+        <p>Run the report selection by adding <b>&amp;mainarea=xxBI0011</b> (where xx are your initials) to the end of the URL</p>
+        <ul>
+            <li>Enter selection criteria.&#160; </li>
+            <li>Click on the Output Options tab and select the appropriate options.</li>
+            <li>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" /> to run the report.</li>
+        </ul>
+        <p>Example Output:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Running the Report.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Performing Calculations on Numerical Values</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Performing Calculations on Numerical Values</h1>
+    <p>
+      <strong>Creating a Simple Count Using Another Calculation </strong>
+    </p>
+    <p>To simply count the number of records being returned, assign the value in each to be <strong>1</strong>. This value can then be totalled and manipulated in the same way as other values. For example: the calculation below would count each line and complete a running total:</p>
+    <p>                        <span class="field"><span style="color: purple;">a = 1; counta = counta + a;</span><![CDATA[ ]]></span></p>
+    <p>Counts can also be used in conjunction with all other functions to allow counts of certain types of information, such as the example below where <strong><span style="color: #800080;">dStockItemCount </span></strong>is checking the PO Line type and assigns 1 if it is a <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Item, this value is then being totalled.</p>
+    <p>                       <span style="color: purple;"><strong>dStockItemCount = INLIST("\<MadCap:variable name="Variables.po_line.pol_type\" />","I");</strong></span></p>
+    <p>                      <span style="color: purple;"><strong> dStockItemCount = dStockItemCount + dStockItemCount;</strong></span></p>
+    <p>
+      <strong>Using IF statements</strong>
+    </p>
+    <p>An IF statement will return a true or false value when comparing two numeric values.</p>
+    <p>                      <span style="color: purple;"><strong>IF(a,EQ,b,truevalue,falsevalue);</strong></span></p>
+    <p>The operands available for use within the IF function are:</p>
+    <p>     EQ Equal To</p>
+    <p>      NE Not Equal To</p>
+    <p>      LT Less Than</p>
+    <p>      GT Greater Than</p>
+    <p>      LE Less Than or Equal To</p>
+    <p>      GE Greater Than or Equal To</p>
+    <p>
+      <br />Note: If no true or false values are defined, the IF function will return 1 for true and 0 for false.</p>
+    <p>Using an IF statement to create a simple Flag, in the example below the calculation is setting a variable, dFlag, to either 1 or 0 depending on the comparison of the Valuation Due Date against the Report Selection Date passed through to the report; this flag can be used to multiply values in other fields.</p>
+    <p>
+      <span style="color: purple;">
+        <strong>dFlag = IF(datestring(cs_valcert.cvc_duedate),LT,datestring('\<MadCap:variable name="Variables.rs_date__2\" style="text-transform: capitalize;" />'),1,0);</strong>
+      </span>
+    </p>
+    <p>
+      <br />
+      <strong>RANGES and LIMITS</strong>
+    </p>
+    <p>These two functions will allow the comparison of data against a series of other values:</p>
+    <p>The RANGE function will return 1 or 0 for a true or false result when comparing a value against an upper and lower limit and should be used in the format:</p>
+    <p>    <span style="color: purple;"><strong>RANGE(value,lowerlimit,upperlimit)</strong></span></p>
+    <p>Therefore:</p>
+    <p>
+      <span style="color: purple;">
+        <strong>RANGE(5,1,10)</strong>
+      </span>      would return 5</p>
+    <p>
+      <span style="color: purple;">
+        <strong>RANGE(5,10,20)</strong>
+      </span>    would return 0</p>
+    <p>
+      <br />In the example below, the RANGE function has been used within an IF function to calculate values in <MadCap:variable name="Variables.ageing" style="text-transform: capitalize;" /> columns for <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> invoices, where the varaiable Days has been calculated as an integer value of the days between TODAY and the Due Date on the Invoice:</p>
+    <p>     <span style="color: purple;"><strong>AgeDays = (TODAY - datestring(ap_invoice.ain_duedt))</strong></span></p>
+    <p>
+      <span style="color: purple;">
+        <strong>     IF(RANGE(AgeDays,-200,0),LT,1,\<MadCap:variable name="Variables.ap_invoice.ain_balance\" />,0);</strong>
+      </span>
+    </p>
+    <p>
+      <span style="color: purple;">
+        <strong>     IF(RANGE(AgeDays,0,30),GT,1,\<MadCap:variable name="Variables.ap_invoice.ain_balance\" />,0);</strong>
+      </span>
+    </p>
+    <p>
+      <span style="color: purple;">
+        <strong>     IF(RANGE(AgeDays,30,60),GT,1,\<MadCap:variable name="Variables.ap_invoice.ain_balance\" />,0);</strong>
+      </span>
+    </p>
+    <p>
+      <span style="color: purple;">
+        <strong>     IF(RANGE(AgeDays,60,90),GT,1,\<MadCap:variable name="Variables.ap_invoice.ain_balance\" />,0);</strong>
+      </span>
+    </p>
+    <p>
+      <span style="color: purple;">
+        <strong>     IF(RANGE(AgeDays,90,5000),GT,1,\<MadCap:variable name="Variables.ap_invoice.ain_balance\" />,0); </strong>
+      </span>
+    </p>
+    <p>The LIMIT function will return values dependent on where the value falls in relation to the lower and upper limit values. The format for using LIMIT is:</p>
+    <p>    <span style="color: purple;"><strong>LIMIT(value,lowerlimit,uperlimit)</strong></span></p>
+    <p>If the value is below the lower limit, the function returns the lower limit value; if it is within the range, it returns the value itself; if above the upper limit, it will return the upper limit value.</p>
+    <p>Therefore:</p>
+    <p>
+      <span style="color: purple;">
+        <strong>LIMIT(1,5,10)</strong>
+      </span>     would return x if x is in the range a-b, otherwise return a if x&lt;a, or b if x&gt;b.<br /><br /><strong>Comparing a List of Values</strong></p>
+    <p>If a list of values is available, there are various functions which can be used to compare every entry in the list:</p>
+    <p>
+      <span style="color: purple;">
+        <strong>max(a,b,c?)</strong>
+      </span>       returns the value of the largest entry.</p>
+    <p>
+      <span style="color: purple;">
+        <strong>min(a,b,c?)</strong>
+      </span>        returns the value of the smallest entry.</p>
+    <p>
+      <span style="color: purple;">
+        <strong>sum(a,b,c?)</strong>
+      </span>      adds all the entries.</p>
+    <p>
+      <span style="color: purple;">
+        <strong>nonzero(a,b,c?) </strong>
+      </span>returns 0 if all entries equal zero. Returns 1 if any entry is non-zero.</p>
+    <p>
+      <span style="color: purple;">
+        <strong>entry(n,a,b,c?)</strong>
+      </span>   returns the value of the nth entry in the list a,b,c. Returns 0 if n is outside the number of entries in the list.</p>
+    <p>
+      <strong>Other Simple Functions available </strong>
+    </p>
+    <p>Can be used in conjunction with standard formatting of fields:</p>
+    <p>
+      <span style="color: purple;">
+        <strong>truncate(a,n)</strong>
+      </span>      truncates a to n decimal places.</p>
+    <p>
+      <span style="color: purple;">
+        <strong>round(a,n)          </strong>
+      </span>rounds a to n decimal places.</p>
+  </body>
+</html>

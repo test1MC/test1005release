@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:lastBlockDepth="6" MadCap:lastHeight="2456" MadCap:lastWidth="584" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Creating a Group</h1>
+        <p>From the System menu, select User Maintenance and then Groups. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Creating a Group_1_1105.png" class="FullWidth" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: Orange;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">In the Group ID column you will see a list of groups beginning with #. These groups are for Coins+ and cannot be used in OA because OA uses different functions from Coinsplus.&#160; Coins+ users need to use the #menus to allow the use of the F6 switch to toggle between users and groups. #menus are not relevant to customers who use OA only. </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Creating a Group_3_1105.png" class="FullWidth" />
+        </p>
+        <p>Enter a name and description for the group. </p>
+        <p>&#160;</p>
+        <h2>To set a group's function access using wildcards:</h2>
+        <ul>
+            <li>Go to System &gt; User Maintenance &gt; Groups.</li>
+            <li>Click OPEN to open the group record.</li>
+            <li>In the Deny Functions and Functions fields, enter can-do lists for the functions you want to deny or allow access to.</li>
+            <li>For example, if you want to allow access to all the functions in <MadCap:variable name="Variables.Purchase Ledger caps" /> except the supplier update functions, you could set up a group with %WPL* in the Functions field, and %WPL2000BAVMA,%WPL2000BAVMU,%WPL2000BAVMD in the Deny Functions field.  This would deny the ability to add, update or delete a supplier.</li>
+            <li>Alternatively, to allow some users access to all the functions in <MadCap:variable name="Variables.Purchase Ledger caps" />, you could set up two groups, an "allow" group which gives access to %WPL*, and a "deny" group which denies access to the add, update and delete supplier functions.  If you put this "deny" group before the "allow" group in a user's group list, that user will not have access to the add, update and delete functions; other users without the "deny" group but with the "allow" group will have access to all the Purchase Ledger functions.</li>
+            <li>If there are roles that provide the functions you want, you can add these to the group; users who belong to the group will have access to all the functions in the role (or will be denied access, if you enter the role in the Deny Module/Role Type field).</li>
+            <li>Click SAVE.</li>
+        </ul>
+        <h2>To set a group's access to specific functions:</h2>
+        <p>These only take effect if the functions are not already included in the "allow" or "deny" lists - see above.</p>
+        <ul>
+            <li>Go to System &gt; User Maintenance &gt; Groups.</li>
+            <li>Click the link in the Group ID column of the group whose access permissions you want to change. <MadCap:variable name="General.ProductName" /> displays the Group Function Access screen for that group.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: Orange;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">You cannot change the access rights for the Root group or SYSAdmin user.</p>
+        <ul>
+            <li>Select the record or records you want to set permissions for.</li>
+            <li>In the Choose Action list, select:<ul><li>Set Access to Yes-Update to allow update access (only available if you are using Menu Item Security)</li><li>Set Access to No to prevent access.</li><li>Set Access to Group to use the setting from the next group in the user's list.</li><li>Set Access to Yes to allow access (or to allow read only access if using Menu Item Security)</li></ul></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: Orange;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Because <MadCap:variable name="General.ProductName" /> evaluates the permissions on each group in turn, the sequence of the groups on a user's record is important.  If a group denies access to a function, the user will not be able to access the function, even if a later group would allow access.</p>
+    </body>
+</html>

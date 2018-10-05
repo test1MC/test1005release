@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>[%=Variables.Pc Plant caps%] Accruals</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">
+      <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Accruals</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> calculates <MadCap:variable name="Variables.pc plant" /> accruals in different ways - this depends largely on the configuration of the <MadCap:variable name="Variables.jc contract" /> for which the <MadCap:variable name="Variables.pc plant" /> is <MadCap:variable name="Variables.pc hired" />.  </p>
+    <p>Whereas for material order lines, <MadCap:variable name="General.ProductName" /> calculates the accrual from the GRN or the due date on the order, for <MadCap:variable name="Variables.pc plant" /> items the accrual is not created from the GRN, but from the <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Sheet.  <MadCap:variable name="General.ProductName" /> provides different ways to generate <MadCap:variable name="Variables.pc plant" /> sheets, depending on your business needs:</p>
+    <ul>
+      <li>
+        <span class="function" title="Function:%WPO1260FJOB">
+          <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Maintenance (No Allocation)</span> creates a single <MadCap:variable name="Variables.pc plant" /> sheet per item.  This is used where your main concern is to record the <MadCap:variable name="Variables.pc offhire" /> date and do not need to record how and where <MadCap:variable name="Variables.pc plant" /> is used on the <MadCap:variable name="Variables.jc contract" />.  GRNs may or may not be required, depending on the <MadCap:variable name="Variables.jc contract" /> configuration.</li>
+      <ul>
+        <li>If not using GRNs (accrual method = Order), <MadCap:variable name="General.ProductName" /> assumes the <MadCap:variable name="Variables.pc plant" /> was delivered on the due date, and calculates the accrual when you commit the order.</li>
+        <li>If using GRNs (accrual method = No Allocation), <MadCap:variable name="General.ProductName" /> generates a <MadCap:variable name="Variables.pc plant" /> sheet for each item that has been delivered, and calculates the accrual based on the delivery date.</li>
+      </ul>
+      <li>
+        <span class="function" title="Function:%WPO1050FJOB">
+          <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Allocation</span> (accrual method = GRN) creates weekly <MadCap:variable name="Variables.pc plant" /> sheets, which allow you to record in detail what the <MadCap:variable name="Variables.pc plant" /> item is used for and how much is charged.  This provides more information for invoice matching.  GRNs are required if you are using <span class="function" title="Function:%WPO1050FJOB"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Allocation</span>.  <MadCap:variable name="General.ProductName" /> calculates the accrual when you confirm the <MadCap:variable name="Variables.pc plant" /> sheet.</li>
+    </ul>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDPO0541_Weekly_Plant_Sheets.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print">Accruals</h2>
+      <p>The <span class="field"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Accrual Method</span> field on the <MadCap:variable name="Variables.Jc Contract caps" /> Configuration tab in <span class="function" title="Function:%WJC2300BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span> determines how <MadCap:variable name="General.ProductName" /> calculates <MadCap:variable name="Variables.pc plant" /> accruals.  The setting of the <span class="field">GRN Required </span>field on the <MadCap:variable name="Variables.pl supplier" /> record (in the Company Information Workbench) can override the accrual method on orders for that <MadCap:variable name="Variables.pl supplier" />.</p>
+      <p>If you are using <span class="function" title="Function:%WPO1050FJOB"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Allocation</span>, the <MadCap:variable name="Variables.jc contract" /> must have a <MadCap:variable name="Variables.jc contract" /> calendar set up to cover the periods for which you are entering GRNs.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_placmeth.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

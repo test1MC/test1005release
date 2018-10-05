@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/AUTCHK - Invoice Auto-matching Directives (pipe list)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/AUTCHK - </span> Invoice Auto-matching Directives (pipe list)
+</div>
+<div class="param_def">
+<p>When matching invoices received electronically, which of the optional checks do you want COINS to use to determine whether an invoice line and a PO line match?</p>
+<p>COINS can use the following checks to determine whether lines match:</p>
+<p> </p>
+<ol>
+<li>PO number</li>
+<li><MadCap:variable name="Variables.Pl supplier caps"/>'s product code</li>
+<li><MadCap:variable name="Variables.Pl supplier caps"/>'s ticket number</li>
+<li>Delivery date</li>
+<li>Quantity</li>
+<li>Unit price</li>
+<li>Invoice line value (taking discount into account)</li>
+<li>WBS code (used in 2 way auto-matching criteria)</li>
+</ol>
+<p>COINS will always check the purchase order number, but 2 - 7 are optional. This parameter takes a pipe-separated list indicating which of these checks to include or omit. For example: <span class="screentype" style="word-spacing: -6pt;">ARTCODE=Y| SUPREF=N| DELDATE=N|QTYEXP=Y| PRICEEXP=Y| AMTEXP=Y|WBSCODE=Y</span>.</p>
+<p class="noteheader">NOTE</p>
+<div class="note">You can also configure automatic electronic invoice matching for individual <MadCap:variable name="Variables.pl suppliers"/> (at office and/or company level) using <span class="function" title="Function:%CI1010">Organisation Setup</span>.</div>
+</div>
+</body>
+</html>

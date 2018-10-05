@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="2392" MadCap:lastWidth="1178" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add Required Development (addDevelopment)</h1>
+        <p>&#160;</p>
+        <p>A sample XML message to add a new development to the prospect’s required development list is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswshvi1" method="addDevelopment"&gt;</p>
+        <p class="code">&lt;Prospect reference="487"&gt;</p>
+        <p class="code">&lt;Development reference=""&gt;</p>
+        <p class="code">&lt;Contract&gt;2006&lt;/Contract&gt; </p>
+        <p class="code">&lt;Plot1&gt;004&lt;/Plot1&gt; </p>
+        <p class="code">&lt;Plot2&gt;005&lt;/Plot2&gt; </p>
+        <p class="code">&lt;Plot3&gt;006&lt;/Plot3&gt; </p>
+        <p class="code">&lt;HouseType1&gt;A3&lt;/HouseType1&gt; </p>
+        <p class="code">&lt;HouseType2&gt;A&lt;/HouseType2&gt; </p>
+        <p class="code">&lt;HouseType3&gt;B&lt;/HouseType3&gt; </p>
+        <p class="code">&lt;Comments&gt;Another Req Dev comments&lt;/Comments&gt; </p>
+        <p class="code">&lt;NoLongerInterested&gt;no&lt;/NoLongerInterested&gt; </p>
+        <p class="code">&lt;/Development&gt;</p>
+        <p class="code">&lt;/Prospect&gt;</p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>If the add of the development to the prospect’s required development list was successful this would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswshvi1" method="addDevelopment"&gt;</p>
+        <p class="code">&lt;ProspectCompany&gt;001&lt;/ProspectCompany&gt; </p>
+        <p class="code">&lt;ProspectReference&gt;000487&lt;/ProspectReference&gt; </p>
+        <p class="code">&lt;DevelopmentReference&gt;00044207&lt;/DevelopmentReference&gt; </p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>The DevelopmentReference returned is the unique reference which identifies the event within the selected <MadCap:variable name="General.ProductName" /> company.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

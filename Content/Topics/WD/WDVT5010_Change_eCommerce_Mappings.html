@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1006" MadCap:lastWidth="802">
+    <head><title>Change eCommerce Mappings</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Change eCommerce Mappings</h1>
+        <p>If you are using the <MadCap:variable name="General.ProductName" />-etc hub for electronic trading, you will need to change the mappings between the BASDA <MadCap:variable name="Variables.vat" /> codes and the <MadCap:variable name="Variables.vat" /> codes in <MadCap:variable name="General.ProductName" />.</p>
+        <p>The <MadCap:variable name="General.ProductName" />-etc hub performs a mapping of all transactions from the suppliers' original format to a standard <MadCap:variable name="General.ProductName" /> BASDA format. Within the BASDA format, <MadCap:variable name="Variables.vat" /> code "S" represents the current standard rate of <MadCap:variable name="Variables.vat" />,and typically the code "S1" represents the previous standard <MadCap:variable name="Variables.vat" /> rate. When the rates change, this mapping will be updated so that <MadCap:variable name="Variables.vat" /> code "S" still represents the current standard rate.</p>
+        <p>The sending of ecommerce transactions from the hub to your <MadCap:variable name="General.ProductName" /> system will typically be suspended from approximately 14:00 on&#160;the day when the change of usage of BASDA <MadCap:variable name="Variables.vat" /> code S from the current rate to the new rate takes place, until approximately 10:00 on the following working day. You should change the BASDA mapping within your <MadCap:variable name="General.ProductName" /> system during that time.</p>
+        <p>If you require the suspension to operate for a longer period to enable you to make the necessary changes then this can be done on request. To request this please log a <MadCap:variable name="General.ProductName" /> support call in the normal way at least two weeks beforehand. In the support call you will need to specify the following:</p>
+        <ul>
+            <li>Date and time from which transactions should be suspended</li>
+            <li>Date and time from which transactions should be restarted</li>
+        </ul>
+        <div class="process">
+            <p>During the suspension period, you should update the mapping of <MadCap:variable name="Variables.vat" /> codes for eCommerce as follows:</p>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSY2310BCXC">BASDA/<MadCap:variable name="General.ProductName" /> Mapping</span>.</li>
+                <li>Set the mapping for IN VAT/Tax Code S to the standard purchase <MadCap:variable name="Variables.vat" /> code that uses the new rate; for example, P1.</li>
+                <li>Set the mapping for IN VAT/Tax Code S1 to the standard purchase <MadCap:variable name="Variables.vat" /> code that uses the current rate (the rate that will be superseded); for example, P11.</li>
+            </ol>
+            <p>This will mean that any invoices received after you change the mapping will be mapped to the correct <MadCap:variable name="Variables.vat" /> codes. Any invoices which are mapped to an incorrect <MadCap:variable name="Variables.vat" /> code (for example, because of timing differences in the implementation of changes in the various systems) will load into <MadCap:variable name="General.ProductName" /> and be registered on the <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> without any problem. They will appear on a <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Exception Report which will be for information only. The <MadCap:variable name="Variables.vat" /> figures from the XML are loaded to the <MadCap:variable name="General.ProductName" /><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />. There should be no need to manually change the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.vat" /> code on these transactions, although you can do so if you prefer.</p>
+            <p>You should review any credit notes that come in during the first few weeks after the rate change, to ensure that they use the same <MadCap:variable name="Variables.vat" /> rate as the invoice to which they relate.</p>
+        </div>
+    </body>
+</html>

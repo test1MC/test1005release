@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>FA/DLOADFLD - A list of the fields in the depreciation</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">FA/DLOADFLD - </span> A list of the fields in the depreciation
+</div>
+<div class="param_def">
+<p>A list of a fields in the depreciation load file, in the order they appear.</p>
+<p>A list of the fields in the load file in the order they appear. </p>
+<p>The following fields can be loaded:</p>
+<ul>
+<li><span class="fieldname">faa_code</span> &#8211; The asset the depreciation relates to.  There will be an error if this asset does not exist, purchase is not posted, or asset has been disposed.</li>
+<li><span class="fieldname">fdp_depntp</span> &#8211; The value of depreciation in the current period.</li>
+<li><span class="fieldname">fdp_wdv</span> &#8211; The new written down value of the asset.</li>
+<li><span class="fieldname">fdm_code</span> &#8211; Optional field &#8211; if not supplied the value from the asset will be used.</li>
+</ul>
+<p>One of <span class="fieldname">fdp_depntp </span>or <span class="fieldname">fdp_wdv</span> must be supplied.  If both are supplied then <span class="fieldname">fdp_wdv</span> will be used.</p>
+<p>If secondary depreciation is used, the fields can be given extents (for example: <span class="fieldname">fdp_wdv__2</span>).  If secondary depreciation is not used, any extent will be ignored.</p>
+<p>If the file contains additional fields, specify these using blank entries in the list of fields; these columns will be ignored in the file.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../fa/fa_depnload.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

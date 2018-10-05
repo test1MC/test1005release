@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="952" MadCap:lastWidth="1165">
+  <head>
+    <title>Resources</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Resources</h1>
+    <p>The amount of resource available for a given trade in a given timeslot will depend on the number of <MadCap:variable name="Variables.operatives" /> who engage in that trade. As <MadCap:variable name="Variables.operatives" /> are assigned to <MadCap:variable name="Variables.fm jobs" />, the amount of available resource will decrease. When the resource allocated to a timeslot reaches a certain percentage of the resource available, the scheduling screen for that trade shows the timeslot as "busy" (so help desk users should avoid making appointments for that timeslot). When the resource allocated reaches a second percentage, the scheduling screen for that trade shows the timeslot as "unavailable" (so help desk users cannot make appointments for that timeslot).  </p>
+    <p>In order to allow for busy periods or specific working patterns for individual trades, you can reduce the amount of resource that is available for scheduling in a given timeslot. This does not affect the actual amount of resource, but means that the timeslot will show busy or unavailable at a lower percentage; this means, for example, that the remaining resource can be allocated to emergency <MadCap:variable name="Variables.fm jobs" />.</p>
+    <div class="process">
+      <h2 class="print">To set the weekly resource patterns for a <MadCap:variable name="Variables.jc contract" />:</h2>
+      <ol>
+        <li>Open the <MadCap:variable name="Variables.jc contract" /> in <span class="function" title="Function:%WFM1000BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span>.</li>
+        <li>Select <span class="userselect">FM <MadCap:variable name="Variables.Jc Contract caps" /> Setup</span> tab.</li>
+        <li>Select the <span class="userselect">Operational Setup </span>tab group then select <span class="function" title="Function:%WFM2370BFME">Resource</span>.</li>
+        <li>For each trade you want to use on the <MadCap:variable name="Variables.jc contract" /> and against each timeslot, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />.</li>
+        <li>For each day, enter the percentage of resource to make available for appointments. </li>
+        <li>
+          <ul>
+            <li>Enter <span class="userinput">100 </span>to allow all resource to be booked.</li>
+            <li>Enter a lower percentage to reserve resource for the timeslot.</li>
+          </ul>
+        </li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+      </ol>
+      <h2>To reserve resource on a particular day:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WFM4060BFMQ">Resource Summary</span> and set the filter to show the <MadCap:variable name="Variables.jc contract" /> and date you want to reserve resource for.</li>
+        <li>For the trade and timeslot you want to reserve resource for, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />.</li>
+        <li>Enter the actual amount of time you want to make available for appointments.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Resources - configuration</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SW/sw_ambperc.htm" />
+          <MadCap:relatedTopic src="../Parameters/SW/sw_redperc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

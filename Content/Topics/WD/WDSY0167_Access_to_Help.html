@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Controlling Access to Side-Frame Help</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Controlling Access to Side-Frame Help</h1>
+        <p>
+            <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> side-frame help includes information about the purpose and usage of screens and fields, as well as information relating to parameters and configuration.&#160; By default this information is available to all users of <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" />, but not all of it is relevant to certain types of user.&#160; If necessary you can set up <MadCap:variable name="General.ProductName" /> so that specified users will not see the parameter and configuration information in the side-frame help.&#160; You can also remove access to the side-frame completely for some users.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Side-Frame Help with and without Configuration details</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images/SY/SY_016701.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0168_Access_to_Online_Documentation.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="configuration">
+            <h2 class="print">Access to Help</h2>
+            <h3>To deny access to the configuration information in side-frame help:<br /></h3>
+            <ul>
+                <li>Set the user or group access for the function %WSYD003 to <span class="userselect">No</span>.</li>
+            </ul>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The SY parameter <span class="parameter">HELPPARM</span>, which was used previously to specify groups who did not see the parameter lists in the help, has been removed.</div>
+            <h3>To deny access to the side-frame help:</h3>
+            <ul>
+                <li>Set the user or group access for the function %WSYD002 to <span class="userselect">No</span>.</li>
+            </ul>
+            <p>The <img src="../../Resources/Images/COINS Graphics/SVG buttons/help.svg" class="button" /> button will not be available to these users.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDSY0018_User_Access_Permissions.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

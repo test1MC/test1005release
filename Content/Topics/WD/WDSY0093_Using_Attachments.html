@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Using Attachments When Faxing From <MadCap:variable name="General.ProductName" /> and VSI-Fax</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Using Attachments When Faxing From <MadCap:variable name="General.ProductName" /> and VSI-Fax</h1>
+    <p>When printing certain documents from <MadCap:variable name="General.ProductName" /> such as Purchase Orders, the original document may be printed onto headed or pre-printed stationery which has information such as company terms and conditions printed on the reverse. To include information such as this in a fax sent from VSI-Fax, it is necessary to create the attachment and upload into VSI-Fax, and then configure the <MadCap:variable name="General.ProductName" /> datafile to reference the attachment.</p>
+    <p>To create an attachment simply create the document in the standard way (for example, using MS Word) and follow <a href="WDSY0090_Creating_Overlays.html">the instructions for creating the .prn file of the document</a> and converting it to a TIFF file.</p>
+    <p>Once you have created the TIFF file it must be uploaded into VSI-Fax using the following command: (NOTE: it is crucial that you do this as the VSI-Fax Administrator so the attachment is accessible by all users of VSI-Fax) :</p>
+    <div class="Code">$ vupload -d "Description of Attachment" attachment tc.tif</div>
+    <p>You can check the attachment has been successfully uploaded by running the following command:</p>
+    <div class="Code">$ vupload -l attachment</div>
+    <p>The VSI-Fax server will return a list of the TIFF files that have been updloaded as attachments.</p>
+    <p>To allow <MadCap:variable name="General.ProductName" /> to reference this attachment you must ensure that a copy of the TIFF file exists in the <MadCap:variable name="General.ProductName" /> overlay directory and also that it included in the <a href="WDSY0092_Directing_COINS_to_the_Overlay.html">datafile</a>. With an example of an attachment tc.tif - an entry must be made into the dat file of:</p>
+    <div class="Code">tc.tif,,$</div>
+  </body>
+</html>

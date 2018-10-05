@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Linking <MadCap:variable name="Variables.Bq Bill caps" /> Items to Variations</h1>
+        <p>When you update items and create orders for subcontract and materials within the <MadCap:variable name="Variables.bq bill of quantities" />, you can optionally link these to the variation register. You can link as many plot <MadCap:variable name="Variables.bq bill" /> items as required to the same variation header, but each plot <MadCap:variable name="Variables.bq bill" /> item can only be linked to one ‘in progress’ variation header at once.</p>
+        <p>A new field has been added to the <span class="Function">Plot <MadCap:variable name="Variables.Bq Bill caps" /> Item Maintenance</span> screen.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Plot <MadCap:variable name="Variables.Bq Bill caps" /> Item Maintenance</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BQ/Variation Register/Bill Item Update.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Variation<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a drop-down list that allows you to select the variation to link the <MadCap:variable name="Variables.bq bill" /> item to. The list only includes variations that have a system status of Registered, Budget Approval or Budget Approved, and if the variations are plot-specific (that is, if they have a reason code with a system status of Client Extra, Client Incentive or Client Option), they will only be included for the plot they relate to.</p>
+                    <p>If the <MadCap:variable name="Variables.bq bill" /> item is already associated with a variation and the system status is Detail Approval or Detail Approved, the variation cannot be changed. </p>
+                </div>
+            </div>
+        </div>
+        <p>If you amend an ordered item, it will be flagged as requiring a variation.  The variation order will not be able to be processed until the variation has been made live.</p>
+        <h2>Item Delete</h2>
+        <p>A new <MadCap:variable name="Variables.bq bill" /> item row action ‘Variation Delete Item’ has been added to all plot <MadCap:variable name="Variables.bq bill" /> item browses.  On selecting this you are prompted to select a variation to link the deleted item to.  The list only includes variations that have a system status of Registered, Budget Approval or Budget Approved, and if the variations are plot-specific (that is, if they have a reason code with a system status of Client Extra, Client Incentive or Client Option), they will only be included for the plot they relate to.</p>
+        <p>If the <MadCap:variable name="Variables.bq bill" /> item is already associated with a variation whose system status is Detail Approval or Detail Approved, the variation cannot be changed and the row action is prevented.</p>
+        <p>You can still delete plot <MadCap:variable name="Variables.bq bill" /> items directly where required and do not have to link all deletes to a variation.</p>
+        <h2>Item Indicator Column</h2>
+        <p>On <MadCap:variable name="Variables.bq bill" /> item browses, the last column is an indicator which has now been changed to indicate if the item is part of a variation. So the possible codes are now:</p>
+        <ul>
+            <li>C - The plot item has been overwritten from the associated house type <MadCap:variable name="Variables.bq bill" /> item.</li>
+            <li>VA - The item has been added as part of a variation and the variation is not yet live.</li>
+            <li>VU - The item has been updated as part of a variation and the variation is not yet live.</li>
+        </ul>
+    </body>
+</html>

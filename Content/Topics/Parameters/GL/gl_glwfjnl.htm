@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>GL/GLWFJNL - Workflow Template to use for posting GL Journals</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">GL/GLWFJNL - </span> Workflow Template to use for posting GL Journals
+</div>
+<div class="param_def">
+<p>The workflow template for posting GL Journals</p>
+<p>If <span class="parameter">GLWFJNL</span> is non-blank, the GL Journal Entry and Sector Balancing journal in <span class="module">General Ledger</span> and <span class="module"><MadCap:variable name="Variables.Jc Contract caps"/> Status</span> contains two tabs instead of one:</p>
+<ul>
+<li><span style="font-size: 1em;">GL Source Batches shows all batches that have been sourced in the GL. The <span class="userselect">Post</span> action is replaced with a <span class="userselect">Release to Workflow</span> action, which will trigger the workflow based on the template identified by <span class="parameter">GLWFJNL</span>. The workflow will need to be written so that the posting of a batch is approved, and the final stage of the workflow if approved will be to post the batch.</span></li>
+<li><span style="font-size: 1em;">External Batches shows all batches that have been sourced from another module.</span></li>
+</ul>
+</div>
+</body>
+</html>

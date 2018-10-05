@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Creating a Campaign </h1>
+        <p>The starting point for a new campaign in Communigator is a <MadCap:variable name="General.ProductName" /> prospect mailshot. The campaign details are published onto the <MadCap:variable name="General.ProductName" /> ESB queue; the <MadCap:variable name="General.ProductName" /> ESB engine then delivers the messages to Communigator.</p>
+        <p class="todo" MadCap:autonum=" ">To create a campaign</p>
+        <ol>
+            <li>Create a new <MadCap:variable name="Variables.hs prospect" /> mail shot.</li>
+            <li>Set the <span class="field">Destination Media</span> to Communigator.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">New <MadCap:variable name="Variables.Hs Prospect caps" /> Mail Shot Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../../Resources/Images_G-I/HS/Communigator/mailshot1.jpg" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+            <li>Set the selection criteria for the campaign, and click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot>New <MadCap:variable name="Variables.Hs Prospect caps" /> Mail Shot – Main Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../../Resources/Images_G-I/HS/Communigator/mailshot2.jpg" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><p><MadCap:variable name="General.ProductName" /> displays a list of <MadCap:variable name="Variables.hs prospects" /> that match the selection criteria you entered. </p><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot>New <MadCap:variable name="Variables.Hs Prospect caps" /> Mail Shot – Selected <MadCap:variable name="Variables.Hs Prospects caps" /></MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../../Resources/Images_G-I/HS/Communigator/mailshot3.jpg" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><p> Only <MadCap:variable name="Variables.hs prospects" /> with an email address will be included, and only details from the main contact will be used.</p></li>
+            <li>You can manually remove people from the list:<ul><li>To remove a contact, click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />, un<MadCap:variable name="Variables.tick" /> the <span class="field">Selected</span> box, and click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li><li>To remove several contacts at the same time, <a href="../../WD/WDUG0026_Selecting_Records.html">select</a> them, click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/multi.svg" class="button" /> and un<MadCap:variable name="Variables.tick" /> the <span class="field">Selected</span> box, then click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li></ul></li>
+            <li>
+                <p>When you are happy with the list, click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</p>
+            </li>
+            <li>
+                <p>When you submit the selected <MadCap:variable name="Variables.hs prospects" />, you are prompted to enter the campaign details:</p>
+                <MadCap:dropDown class="screenshot">
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>New <MadCap:variable name="Variables.Hs Prospect caps" /> Mail Shot – Campaign Details</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>
+                            <img src="../../../Resources/Images_G-I/HS/Communigator/mailshot4.jpg" class="FullWidth" />
+                        </p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <div class="FieldTable">
+                    <div class="ListHead">
+                        <div class="ColHead">Field</div>
+                        <div class="ColHead">Description</div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Campaign Name	</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>This is a mandatory field.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Campaign  Dates	 <span style="font-weight: normal;">(Start  &amp; End)</span></p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>These are optional.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Prospect Event</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>You can select from the list of pre-defined events (these are defined in the Communigator parameter <span class="parameter">PROEVNEW)</span>.  The selected event will be created on the <MadCap:variable name="Variables.hs prospect" />’s history so you can see in <MadCap:variable name="General.ProductName" /> that the <MadCap:variable name="Variables.hs prospect" /> has been included in a new campaign in Communigator.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Comments</p>
+                        </div>
+                        <div class="FieldDef">The comments for the event. These default to ‘Communigator Campaign &lt;CampaignName&gt; - Initiated’.</div>
+                    </div>
+                </div>
+            </li>
+            <li>When you submit the campaign details, the campaign and its contacts are processed and published onto the <MadCap:variable name="General.ProductName" /> ESB message queue. These are then sent to Communigator and a campaign is automatically created.</li>
+        </ol>
+    </body>
+</html>

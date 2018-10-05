@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="681" MadCap:lastWidth="949">
+  <head>
+    <title>Invoice Matching				</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Invoice Matching				</h1>
+    <p>Invoice matching allows you to identify which items on the order are covered by the invoice. When all items on the order have been invoiced, the order is closed. Invoice matching generates the costing distribution for the invoice. </p>
+    <p>You can run invoice matching either as part of the process of entering <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>invoices, or as the separate <span class="function" title="Function:%WPL1070BCOB">Cost Invoices</span> procedure. </p>
+    <p>Invoice matching will run if: </p>
+    <ul>
+      <li>You are using Procurement, and </li>
+      <li>The invoice was entered with a valid PO number, and </li>
+      <li>The distribution type of the invoice is C (Costed), and </li>
+      <li>The <MadCap:variable name="Variables.pl supplier" /> is set up with invoice matching enabled.  (Invoice matching is enabled if the <span class="field">Invoice Match </span>field on the <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> record is <MadCap:variable name="Variables.tick" />ed.)</li>
+    </ul>
+    <p class="noteheader">NOTE</p>
+    <div class="note">The invoice matching procedures in <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> and <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" /> are not compatible. You should use one or the other, not both. </div>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDPL0312_Invalid_Invoice_Dates.html" />
+        <MadCap:relatedTopic src="WDPL0313_The_Invoice_Matching_Frame.html" />
+        <MadCap:relatedTopic src="WDPL0317_Creating_a_Missing_Ticket.html" />
+        <MadCap:relatedTopic src="WDPL0213_Distributing_Invoice_Costs.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PL/pl_usepo.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

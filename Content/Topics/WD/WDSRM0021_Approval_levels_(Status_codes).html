@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1868" MadCap:lastWidth="1045">
+    <head><title>Approval Levels (Status Codes)</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Approval Levels (Status Codes)</h1>
+        <p>&#160;</p>
+        <p>Approval levels allow you to classify <MadCap:variable name="Variables.pl suppliers" /> and subcontractors based on your relationship with them. For example, you might categor<MadCap:variable name="Variables.is" />e your <MadCap:variable name="Variables.pl suppliers" /> into "Supply Chain Partners", "Preferred <MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" />" and "Approved <MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" />". Screens in <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span> show them on different tabs according to their approval level and you can search for them according to approval level.</p>
+        <p>Approval levels work by assigning a status code to the <MadCap:variable name="Variables.pl supplier" /> or subcontractor. You can have up to four "positive" levels of approval (that is, approval levels you want to focus on), corresponding to four different status codes. Each of these show on a separate tab. Companies with other status codes can be shown on the "Other" tab.</p>
+        <p>A particular level in the structure of your organ<MadCap:variable name="Variables.is" />ation (for example, branches or divisions) has the responsibility for setting approval levels. If an individual user is viewing companies in <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span> at a higher level than that, <MadCap:variable name="General.ProductName" /> uses the lowest-ranking status code at the level below to determine where to display each company.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSRM0011_Views_of_Suppliers.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To change the approval level of a company:</h2>
+            <p>Your current view must be set to the level at which approval levels are set; if not, use <span class="function" title="Function:%WCI4000FXXX">Select Level </span> to set your view level.</p>
+            <ol>
+                <li>In <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>, click the tab that the company is currently shown on.</li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the company whose approval level (status) you want to change.</li>
+                <li>Use the Choose Action selector to set the new level, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_S-U/SRM/SRM-0001-1107.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>
+                    <p>The company disappears from the current tab and is shown on the new tab.</p>
+                    <p class="noteheader">NOTE</p>
+                    <div class="note">If a company is both a <MadCap:variable name="Variables.pl supplier" /> and a subcontractor, you cannot give a different status code for "as a <MadCap:variable name="Variables.pl supplier" />" and "as a subcontractor".</div>
+                </li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Approval levels - configuration</h2>
+            <p>Set up the status codes you want to use for approval levels using <span class="function" title="Function:%WCI2130BCCA">Status Codes (Group Wide)</span>. <MadCap:variable name="General.ProductName" /> uses the description of the code as the label on the corresponding tab and the field labels in the Search tab in <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>.</p>
+            <p>Set the following parameter values to the status codes you want to use for each of four levels of approval. Note that these are in order, with the highest level of approval at the top:</p>
+            <ul>
+                <li><span class="parameter">SRM/SCD-PART </span>- the highest approval level, for example "Supply Chain Partner"</li>
+                <li><span class="parameter">SRM/SCD-PREF </span>- the second level of approval, for example "Preferred <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />"</li>
+                <li><span class="parameter">SRM/SCD-APP </span>- the third level of approval, for example "Approved"</li>
+                <li><span class="parameter">CI/SCD-REG </span>- the status code for companies that are registered in <MadCap:variable name="General.ProductName" /> - not specifically approved.</li>
+            </ul>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCD-PART.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCD-PREF.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCD-APP.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_scd-reg.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SHOWOTHR.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

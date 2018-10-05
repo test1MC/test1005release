@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1874" MadCap:lastWidth="793">
+  <head>
+    <title>Fixed Asset Accounts and Masking</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Fixed Asset Accounts and Masking</h1>
+    <p>One of the features of <span class="module" data-mce-mark="1">Fixed Assets</span> is the ability to post cost and revenue information to other ledgers. Depending on the type of transaction, the posting could be directly to a <span class="module" data-mce-mark="1">General Ledger</span> account, or to a <span class="module" data-mce-mark="1"><MadCap:variable name="Variables.Jc Contract caps" /> Status</span> analysis or workshop analysis, for example.</p>
+    <p>The list below describes the purpose of the various accounts involved. (See <a href="WDFA0012_Example_Postings.html">Example Postings</a> for examples of how each account is used.)</p>
+    <table style="width: 80%;" border="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">Purchase Control</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">A balance sheet control account credited when an asset purchase is entered. (<MadCap:variable name="General.ProductName" /> debits the account when the <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> invoice is entered).</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">Disposal Control</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">A balance sheet control account debited when an asset disposal is entered.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">B/S Capital</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">The balance sheet account which holds the original costs of assets: it represents the sum of all asset purchases.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">B/S Depreciation</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">The balance sheet account to be credited with depreciation transactions.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">PL Depreciation</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">The profit/loss account to be debited with depreciation transactions.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">PL on Sale</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">A profit/loss account used for the difference between the book value and the actual sales amount when an asset is disposed.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">Revaluation</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">The balance sheet account to be debited with any revaluation value.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">Revaluation Reserve</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">The balance sheet capital reserve account to be credited with any revaluation value.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 25%;">
+            <p class="Table">Workshop Profit/Loss</p>
+          </td>
+          <td style="width: 0px;">
+            <p class="Table">The account to record the recharge cost and revenue of a workshop job on an asset.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <p>However, these do not necessarily refer to individual accounts. For example, you might have one purchase control account for <MadCap:variable name="Variables.pc plant" /> assets and another for miscellaneous assets. Using account masking you can get <MadCap:variable name="General.ProductName" /> to post transactions to different accounts depending on, for example, which group the asset belongs to, which department it belongs to, or which <MadCap:variable name="Variables.jc contract" /> it is <MadCap:variable name="Variables.pc hired" /> to.</p>
+    <p>Account masking allows you to leave some (or all) of the <span class="module" data-mce-mark="1">General Ledger </span>elements unspecified, to be filled in from elsewhere. To do this, use underscores ( _ ) in place of the unspecified elements.</p>
+    <p>
+      <span class="function" title="Function:%WFA9000SFCF">FA Configuration</span> specifies the default codes for new asset groups. The default codes on new assets are built up from the codes on the group and department to which the asset belongs. If an element is filled in on both group and department, the one on the department takes priority. Note that you can change the account code on an individual asset; you do not have to use the default account.</p>
+    <p>When a transaction is entered, <MadCap:variable name="General.ProductName" /> builds up the <span class="module" data-mce-mark="1">General Ledger </span>account from the account elements on the asset, and the <MadCap:variable name="Variables.cost head" /> determined by the transaction.</p>
+    <p>For example; if your <span class="module" data-mce-mark="1">General Ledger </span>codes are made up of three elements <strong>department.type.account</strong>, you could set up, say, the Purchase Control account on mechanical <MadCap:variable name="Variables.pc plant" /> asset groups to be <strong>_ _.MP._ _</strong> ; on department 1, to be <strong>01._ _._ _</strong> and on a <MadCap:variable name="Variables.cost head" /> for asset purchases to be <strong>_ _._ _.2070</strong> . Then when an asset purchase is entered for a mechanical <MadCap:variable name="Variables.pc plant" /> asset and department 1, <MadCap:variable name="General.ProductName" /> posts the transaction to account <strong>01.MP.2070</strong>.</p>
+    <table border="0">
+      <tbody>
+        <tr>
+          <td>Asset Group</td>
+          <td>_ _.M P._ _ _ _</td>
+        </tr>
+        <tr>
+          <td>Department</td>
+          <td>0 1._ _._ _ _ _</td>
+        </tr>
+        <tr>
+          <td>Asset</td>
+          <td>0 1.M P._ _ _ _</td>
+        </tr>
+        <tr>
+          <td>
+            <MadCap:variable name="Variables.cost head" style="text-transform:capitalize;" />
+          </td>
+          <td>_ _._ _.2 0 7 0</td>
+        </tr>
+        <tr>
+          <td>Transaction</td>
+          <td>0 1.M P.2 0 7 0</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="configuration">
+      <H2 class="print">Configuration</H2>
+      <p>The Revaluation account fields are only enabled if the parameter <span class="parameter">REVALUE? </span>is set to <span class="userinput">Y</span>.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label:Parameters:;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/FA/fa_revalue_3F.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

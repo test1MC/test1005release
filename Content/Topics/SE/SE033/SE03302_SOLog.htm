@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 "><MadCap:variable name="Variables.Se Service Order caps" /> Log</h1>
+        <p class="Body">The <strong>Log </strong>tab of the <MadCap:variable name="Variables.Se Service Orders caps" /> function <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been changed to </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">is </MadCap:conditionalText>a drop-down menu, as shown in <MadCap:xref href="#SOLogMenu" class="ImageRef"><i>Figure 1:  Service Order Log Menu</i></MadCap:xref>.   This menu has 3 options: <strong>All Log Entries</strong>, <strong>Problem&#160;Code Log</strong>, and <strong>Resolution Log</strong>. These options are discussed in the sections that follow.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="SOLogMenu"></a><MadCap:variable name="Variables.Se Service Order caps" /> Log Menu</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE033_Images/LogMenu.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.1 ">All Log Entries</h2>
+        <p class="Body">The <strong>All Log Entries </strong>menu option displays information for both Problem Codes and Resolutions, as shown in <MadCap:xref href="#AllLogEntries" class="ImageRef"><i>Figure 2:  All Log Entries</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="AllLogEntries"></a>All Log Entries</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE033_Images/AllLogEntries.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Problem Code Log</h2>
+        <p class="Body">   The <strong>Problem Code Log </strong>menu option provides you with a quick way to see any data related to a Problem Code, as shown in <MadCap:xref href="#ProbCodeLog" class="ImageRef"><i>Figure 3:  Problem Code Log</i></MadCap:xref>.   The records on this browse are shown with a <span class="Field">Log Type </span>of either <strong>ProbCode </strong>or <strong>ProbCon</strong>. A <strong>Consolidated </strong>column helps to identify whether a source Problem Code Comment has been consolidated.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="ProbCodeLog"></a>Problem Code Log</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE033_Images/ProbCodeLog.png" class="FullWidth" />
+        </p>
+        <h3 MadCap:autonum="1.2.1 ">Filters</h3>
+        <p class="Body">A named filter <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been added to </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">on </MadCap:conditionalText>the Problem Code Log browse <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">with </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">has </MadCap:conditionalText>the following options:   <strong>All</strong>, <strong>Source</strong>, <strong>Consolidated</strong>.</p>
+        <ul>
+            <li><strong>Source </strong>- The Log Type is <strong>ProbCode </strong>and displays the original source comments only.</li>
+            <li><strong>Consolidated </strong>- The Log Type is <strong>ProbCon </strong>and  displays the consolidated comment(s) only.</li>
+            <li><strong>All </strong>- Both Log Types are displayed.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.2 ">Consolidate <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" />box and Buttons</h3>
+        <p class="Body">An <span class="Field">Exclude Consolidated Comments </span><MadCap:variable name="Variables.tick" />box and three Consolidate buttons are found at the bottom of the browse screen. Each is explained below.</p>
+        <p class="IndentBold">Exclude Consolidated Comments</p>
+        <p class="IndentFieldDef">This <MadCap:variable name="Variables.tick" />box allows you to exclude comments that have already been consolidated during previous consolidate processing.   This option works best for New and Append Consolidate processing.</p>
+        <p class="IndentBold">CONSOLIDATE (NEW)</p>
+        <p class="IndentFieldDef">When this button is clicked, a new Log Comment is created, which organ<MadCap:variable name="Variables.is" />es either all or non-consolidated ProbCode entries in Date/Time order.</p>
+        <p class="IndentFieldDef">There is no limit on the number of consolidated comments in this scenario.    You can prepare multiple consolidated comments, each containing the desired text.</p>
+        <p class="IndentBold">CONSOLIDATE (APPEND)</p>
+        <p class="IndentFieldDef">If a Consolidated Comment already exists, either all or non-consolidated ProbCode entries in Date/Time order are organ<MadCap:variable name="Variables.is" />ed at the end of the existing text.</p>
+        <p class="IndentFieldDef">This option is only available if there is one consolidated Problem Code comment on file (ProbCon) that has a Comment Type equal to the <span class="parameter">SE/CMPROBCN</span> value. </p>
+        <p class="IndentFieldDef">Users are responsible for deleting duplicate text.</p>
+        <p class="IndentBold">CONSOLIDATE (REPLACE)</p>
+        <p class="IndentFieldDef">If a Consolidated Comment already exists, the comment text is replaced with either all or non-consolidated ProbCode entries in Date/Time order.</p>
+        <p class="IndentFieldDef">This option is only available if there is one consolidated Problem Code comment on file (ProbCon) that has a Comment Type equal to the <span class="parameter">SE/CMPROBCN</span> value.</p>
+        <p class="Body">When one of the above buttons is clicked, a new Log Entry is created with a Log Type of <strong>ProbCon</strong>.</p>
+        <ul>
+            <li>If the Problem is for a particular <MadCap:variable name="Variables.se asset" />, then the <MadCap:variable name="Variables.se asset" />’s description is included at the beginning of the text in parentheses.</li>
+            <li>A consolidated comment does not include the Problem Code or the Problem Code description.</li>
+            <li>The consolidated comment can be edited, including the Comment Type.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 ">Resolution Log</h2>
+        <p class="Body">   The <strong>Resolution Log </strong>menu option provides you with a quick way to see any data related to a Resolution, as shown in <MadCap:xref href="#ResolutionLog" class="ImageRef"><i>Figure 4:  Resolution Log</i></MadCap:xref>. The records on this browse are shown with a Log Type of either <strong>Resolution </strong>or <strong>ResolCon</strong>. A <strong>Consolidated </strong>column helps to identify whether a source Resolution Comment has been consolidated.  </p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="ResolutionLog"></a>Resolution Log</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE033_Images/ResolutionLog.png" class="FullWidth" />
+        </p>
+        <p class="Body">A named filter has been added to the Resolution Log browse with the following options:   <strong>All</strong>, <strong>Source</strong>, <strong>Consolidated</strong>.</p>
+        <ul>
+            <li><strong>Source </strong>- The Log Type is <strong>Resolution </strong>and displays the original source comments only.</li>
+            <li><strong>Consolidated </strong>- The Log Type is <strong>ResolCon </strong>and  displays the consolidated comment(s) only.</li>
+            <li><strong>All </strong>- Both Log Types are displayed.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <h3 MadCap:autonum="1.3.1 ">Consolidate <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" />box and Buttons</h3>
+        <p class="Body">An <span class="Field">Exclude Consolidated Comments </span><MadCap:variable name="Variables.tick" />box and three Consolidate buttons <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">have been added </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">are found </MadCap:conditionalText>at the bottom of the browse screen.</p>
+        <p class="IndentBold">Exclude Consolidated Comments</p>
+        <p class="IndentFieldDef">This <MadCap:variable name="Variables.tick" />box allows you to exclude comments that have already been consolidated during previous consolidate processing.   This option works best for New and Append Consolidate processing.</p>
+        <p class="IndentBold">CONSOLIDATE (NEW)</p>
+        <p class="IndentFieldDef">When this button is clicked, a new Log Comment is created, which organ<MadCap:variable name="Variables.is" />es either all or non-consolidated Resolution entries in Date/Time order.</p>
+        <p class="IndentFieldDef">There is no limit on the number of consolidated comments in this scenario.        You can prepare multiple consolidated comments, each containing the desired text.</p>
+        <p class="IndentBold">CONSOLIDATE (APPEND)</p>
+        <p class="IndentFieldDef">If a Consolidated Comment already exists, either all or non-consolidated Resolution entries in Date/Time order are organ<MadCap:variable name="Variables.is" />ed at the end of the existing text.</p>
+        <p class="IndentFieldDef">This option is only available if there is one consolidated Resolution comment on file (ProbCon) that has a Comment Type equal to the <span class="parameter">SE/CMRESCN</span> value.</p>
+        <p class="IndentFieldDef">Users are responsible for deleting duplicate text.</p>
+        <p class="IndentBold">CONSOLIDATE (REPLACE)</p>
+        <p class="IndentFieldDef">If a Consolidated Comment already exists, the comment text is replaced with either all or non-consolidated Resolution entries in Date/Time order.</p>
+        <p class="IndentFieldDef">This option is only available if there is one consolidated Resolution comment on file (ProbCon) that has a Comment Type equal to the <span class="parameter">SE/CMRESCN</span> value.</p>
+        <p class="Body">When one of the above buttons is clicked, a new Log Entry is created with a Log Type of <strong>ResolCon</strong>. An example of this Log Type is shown below in <MadCap:xref href="#ResolCon" class="ImageRef"><i>Figure 5:  ResolCon Log Type</i></MadCap:xref>. This image also shows how you can identify each Resolution source comment in the ResolCon Log Type: the Comment Date and <MadCap:variable name="Variables.Se Technician caps" /> Name for the <MadCap:variable name="Variables.Se Service Order caps" /> are included at the beginning of the text in the following format:   <strong>XX/XX/XX – <MadCap:variable name="Variables.Se Technician caps" /> Name (<MadCap:variable name="Variables.Se Asset caps" /> Description):   Comment text</strong>.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="ResolCon"></a>ResolCon Log Type</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE033_Images/ResolCon1.png" class="FullWidth" />
+        </p>
+        <p class="Body">The following are also true for this consolidated comment:</p>
+        <ul>
+            <li>If the Resolution is for a particular <MadCap:variable name="Variables.se asset" />, then the <MadCap:variable name="Variables.se asset" />’s description is included at the beginning of the text in parentheses.</li>
+            <li>Resolution  comments are typically <MadCap:variable name="Variables.Se Service Order caps" /> specific, though a Resolution comment can be manually added on the Log browse.    In this case, only the Comment Date is prefixed.</li>
+            <li>A consolidated comment does not include the Resolution or the Resolution description.</li>
+            <li>The consolidated comment can be edited, including the Comment Type.</li>
+        </ul>
+    </body>
+</html>

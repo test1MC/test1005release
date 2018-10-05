@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Mark-Ups</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Mark-Ups</h1>
+    <p>Mark-ups are a way of adding a premium to an incurred cost which can then be re-charged to a customer. <MadCap:variable name="General.ProductName" /> allows you to vary these mark-ups depending on the cost category and a threshold figure (that is, two mark-ups per category are possible depending on the cost amount). The invoice class can be defaulted here also, and it is possible to mark a category so that any cost transactions of that category will be ignored when it comes to billing.</p>
+    <p>Further, you can default the mark-up figure depending on a hierarchy of customer, minor and major category, <MadCap:variable name="Variables.jc contract" />. So when determining the default mark-up figure for a particular cost transaction, the mark-up set up against a customer on the associated <MadCap:variable name="Variables.fm job" /> will override any mark-ups set up against the minor category of the <MadCap:variable name="Variables.fm job" />, which in turn will override the major category, and finally the <MadCap:variable name="Variables.jc contract" />.</p>
+    <p>See other sections for descriptions of <a href="WDFM0049_Invoice_Classes.html">invoice classes</a> and <a href="WDFM0050_Service_Fees.html">service fees</a>.</p>
+    <p>Mark-ups are applied when the cost transaction is created. There is a facility to update mark-ups if anything has subsequently changed for any reason.<br /></p>
+    <div class="configuration">
+      <h2 class="print">Mark-ups configuration</h2>
+      <p>Mark-up configuration can be found under FM <MadCap:variable name="Variables.Jc Contract caps" /> Setup on the 'Invoicing Setup' tab menu.</p>
+      <p>If the mark-up 1 limit is set, then a value should be entered for mark-up 1 (which applies when the amount is equal to or below this limit), and mark-up 2 (when it is greater than). If the limit is not set (equals zero), then mark-up 2 will always equal zero and will not apply.</p>
+      <ul>
+        <li>Major/minor category and customer are mutually exclusive, and a minor category can only exist if a major category has been entered.</li>
+        <li>No mark-up figure can be negative, but it can be zero.</li>
+        <li>These figures can be manually overridden in the 'Ready for Invoicing' stage.</li>
+      </ul>
+      <p>Standard <MadCap:variable name="General.ProductName" /> auditing is available on this table.</p>
+      <p>You can load mark-ups from a CSV file using <span class="function" title="Function:%WFM9130UFMM">Load Markups</span>. The format of the CSV file is as follows (all field values are text unless stated):</p>
+      <ul>
+        <li>Major Category (Optional)</li>
+        <li>Minor Category (Optional)</li>
+        <li>Customer (Optional)</li>
+        <li>Service Fee (Optional - numeric)</li>
+        <li>Service Fee SOR item (Optional)</li>
+        <li>Service Fee Desc (Optional)</li>
+        <li>Service Fee Inv Class (Optional) </li>
+        <li>Mark-up Limit (Optional)</li>
+        <li>Category[1] (*)</li>
+        <li>Ignore[1] (*)</li>
+        <li>Inv Class[1] (*)</li>
+        <li>Markup1[1] (* - numeric)</li>
+        <li>Markup2[1] (* - numeric)</li>
+        <li>Category [2] (*)</li>
+        <li>Ignore[2] (*)</li>
+        <li>Inv Class[2] (*)</li>
+        <li>Markup1[2] (* - numeric)</li>
+        <li>Markup2[2] (* - numeric)</li>
+        <li>Category [3] (*)</li>
+        <li>Ignore[3] (*) </li>
+        <li>Inv Class[3] (*) </li>
+        <li>Markup1[3] (* - numeric) </li>
+        <li>Markup2[3] (* - numeric)</li>
+        <li>Category [4] (*) </li>
+        <li>Ignore[4] (*) </li>
+        <li>Inv Class[4] (*) </li>
+        <li>Markup1[4] (* - numeric)</li>
+        <li>Markup2[4] (* - numeric)</li>
+        <li>Category [5] (*)</li>
+        <li>Ignore[5] (*)</li>
+        <li>Inv Class[5] (*)</li>
+        <li>Markup1[5] (* - numeric)</li>
+        <li>Markup2[5] (* - numeric)</li>
+        <li>Category [6] (*)</li>
+        <li>Ignore[6] (*)</li>
+        <li>Inv Class[6] (*)</li>
+        <li>Markup1[6] (* - numeric)</li>
+        <li>Markup2[6] (* - numeric)</li>
+      </ul>
+      <p>(*) There can be a maximum of 6 cost categories in <MadCap:variable name="General.ProductName" />. Each CSV line of mark-up loaded must have one entry for each category that exists with either the invoice class/mark-ups or ignored flag set. </p>
+      <p>You can update existing transactions with mark-up values using <span class="function" title="Function:%WFM9160UJCT">Set Mark-Ups</span>.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="861" MadCap:lastWidth="601">
+  <head>
+    <title>Loading Statement Files - Common Problems</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Loading Statement Files - Common Problems</h1>
+    <h2 MadCap:autonum="1.1 ">Date errors</h2>
+    <p>Please note that all transactions in the statement file must be dated as follows:</p>
+    <ul>
+      <li>after the last statement date;</li>
+      <li>before or on the current statement date.</li>
+    </ul>
+    <p>Failure to follow these date guidelines will result in an "Invalid Date" message. If you receive this message, check your statement manually and enter the correct date(s).</p>
+    <p>This message can also mean that you have wrongly dated the previous statement, in which case you will have to delete it. Assuming that you have not reconciled it, this should be quite simple. See <a href="WDCB0019_Deleting_Bank_Statements.html">Deleting Bank Statements</a>.</p>
+    <h2 MadCap:autonum="1.2 ">Loading Sequence Errors</h2>
+    <p>
+      <MadCap:variable name="General.ProductName" /> tries to prevent you from "skipping" statements by checking the date of the statement you are trying to load and checking whether there is a statement for a later date. If so, you will get "Statement in the future exists?". Assuming you have not mistyped the statement date, the remedy is the same as indicated in the previous section, that is, delete (this time) the newer statement.</p>
+    <h2 MadCap:autonum="1.3 ">Balance Errors</h2>
+    <p>
+      <MadCap:variable name="General.ProductName" /> tries to maintain data integrity by cross-checking the closing balance per statement. If the total of the transactions on the previous statement does not reconcile to the closing balance, you will get the following error:</p>
+    <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+      <p>Please check and correct the closing balance on the previous statement.<br /></p>
+    </blockquote>
+    <h2 MadCap:autonum="1.4 ">Missing Transactions</h2>
+    <p>Whilst it is very unlikely you can get transactions omitted from a statement or, if you are in "catch-up" mode you may wish to manually add transactions to your statement. This can be done using <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> on the transaction screen.</p>
+    <h2 MadCap:autonum="1.5 ">Deleting Reconciled or Part-reconciled statements</h2>
+    <p>In the normal course of events you should not need to do this, but this works in a tight regime and mistakes can occur. The only way to delete a reconciled (or Part-reconciled) statement is to reverse the process, that is, unreconcile all the items on the statement, then delete the statement.  See <a href="WDCB0019_Deleting_Bank_Statements.html">Deleting Bank Statements</a>.</p>
+    <p>Naturally this means repeating your reconciliation once you have re-loaded the statement.</p>
+  </body>
+</html>

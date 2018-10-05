@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics;11.08" />How To Implement Document Security</h1>
+        <p>Security is applied to individual documents using document group security. </p>
+        <h2>How Document Security Works</h2>
+        <p>A document can belong a document group.</p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/How To Implement Document Security/Document with Document Group.png" class="FullWidth" />
+        </p>
+        <p>Each user can be granted access to one or more document groups, and will be able to view documents that belong to those groups.</p>
+        <p>The paperclip button and the document browse respond to document group security. </p>
+        <ol style="list-style-type: decimal;" start="1">
+            <li>If there are documents attached to a record, the paperclip button turns orange if the user has access under document group security to at least one of the documents. </li>
+            <li>If the user clicks the paperclip button, a document browse opens. The document browse will only list documents that belong to document groups that the user has permission to access.</li>
+        </ol>
+        <p>If a document is attached to a record (for example, a purchase order or a supplier) the user must have access both to the record (determined by company security and contract security), and to the document (determined by document group security). If the user tries to view a document, but does not have permission, a message is displayed to inform them why they cannot view it.</p>
+        <p>When you move the mouse pointer over a document link, a thumbnail of the document appears. When you move the mouse pointer over the paperclip button, a thumbnail of the most recent document appears. If the user does not have access to view the document, the thumbnail currently shows an “image not available” icon.</p>
+        <h2>Example of document security</h2>
+        <p>In <span class="Function">Document Group Security</span>, user DONBAR has access to the group “001 - invoices” but not to the group “002 - payments”. </p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/How To Implement Document Security/Doc Group Security.png" class="FullWidth" /> </p>
+        <p>In <span class="Function">Contract Security</span>, the user does not have access to contract v7n.</p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/How To Implement Document Security/Contract Security.png" class="FullWidth" />
+        </p>
+        <p>The invoice record with internal reference 10060001 is costed to contract v7n, and has two documents attached – an invoice (belonging to document group “invoices”) and a payment (belonging to document group “payments”).</p>
+        <p>When user DONBAR runs the invoice enquiry, he can see the invoice record, and the orange paperclip button shows that there are documents attached. Because the most recent document is in the payments group (to which the user does not have access), the thumbnail shows an “image not available” icon.</p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/How To Implement Document Security/Document Browse - Image Not Available.png" class="FullWidth" />
+        </p>
+        <p>When the user clicks the paperclip, although there are two documents attached to the record, the document browse only lists the invoice, because the user does not have access to the payments document group. </p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/How To Implement Document Security/Document Browse - Only Invoice.png" class="FullWidth" />
+        </p>
+        <p>However, when the user tries to view the document, because he does not have access to the contract, he does not have permission to view it, and an error message is displayed.</p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/How To Implement Document Security/Document Security Error Message.png" style="width: 447px; height: 160px;" class="HalfWidth" />
+        </p>
+        <h2>To set up document group security for an individual user</h2>
+        <ol style="list-style-type: decimal;" start="1">
+            <li>In Company 0, go to <span class="Function">Document Group Security</span>.<p>By default, this displays a list of all current users.</p></li>
+            <li>Open the record for the user whose access you want to update.</li>
+            <li>In the <span class="field">Code</span> field, enter a can-do list of codes for the document groups the user is allowed to access. * means the user has access to all document groups; blank means the user has access to no document groups.</li>
+            <li>Save the record.</li>
+        </ol>
+        <h2>To update document group security for multiple users</h2>
+        <ol style="list-style-type: decimal;" start="1">
+            <li>In Company 0, go to <span class="function">Update User DM Group Security</span>.</li>
+            <li>Use the <span class="field">From</span>, <span class="field">To</span> and <span class="field">Matches</span> fields to specify the users whose document group security you want to update.</li>
+            <li>In the <span class="field">Code</span> field, enter a can-do list of codes for the document groups the users are allowed to access. * means the users have access to all document groups; blank means the users have access to no document groups.</li>
+            <li><MadCap:variable name="Variables.Tick caps" /> the <span class="field">Update User DM Group Security?</span> box. </li>
+            <li>Click Next and answer Yes to the confirmation message.</li>
+        </ol>
+        <p>You can use <span class="function">Update User DM Group Security</span> to produce a report showing users’ current document management security settings, by running it with <span class="field">Update User DM Group Security?</span> un<MadCap:variable name="Variables.tick" />ed.</p>
+        <h2>Access to documents with no document group</h2>
+        <p>Some documents may not have been assigned to document groups. The DM parameter <span class="parameter">BLANKGRP</span> controls whether users are able to view these documents. </p>
+        <p>If <span class="parameter">BLANKGRP</span> is set to Y, users will not be able to see any documents that do not have a document group assigned. (Note that although users will not be able to view documents with no document group, they may still be able to see the document listed in enquiries, and may be able to change the document group to one they have access to, effectively giving them access to the document.) </p>
+        <p>If <span class="parameter">BLANKGRP</span> is set to N (or blank), all users will be able to see any document that does not have a document group assigned. </p>
+        <p>For documents that do have a document group assigned, document group security applies. </p>
+    </body>
+</html>

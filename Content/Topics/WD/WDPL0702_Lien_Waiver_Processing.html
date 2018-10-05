@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Lien Waiver Processing</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Lien Waiver Processing</h1>
+        <p>&#160;</p>
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge">&#160;</td>
+                    <td><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+                    <td class="Edge">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Lien waivers can be generated from two modules: <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> (PL) and Subcontract Ledger (SC). Outlined below is the information you need to know about processing lien waivers in these modules.</p>
+        <div class="process">
+            <h2 class="print">How to Process Lien Waivers:</h2>
+            <p>Please note that some sections in this process refer to functionality within a specific module; others are shared by both modules. This is noted in the beginning of each title with the notation <strong>PL ONLY</strong>, <strong>SC ONLY</strong>, or <strong>SHARED</strong>.</p>
+            <ul>
+                <ul>
+                    <li>For processing waivers in PL, you need to be concerned with the <strong>PL ONLY</strong> and <strong>SHARED</strong> sections.</li>
+                    <li>For processing in SC, you need to be concerned with the <strong>SC ONLY</strong> and <strong>SHARED</strong> sections.</li>
+                </ul>
+            </ul>
+            <p><strong>1.&#160;General Setup Maintenance <br /></strong>
+            </p>
+            <p><strong>1.1&#160;SHARED: Flag <MadCap:variable name="General.ProductName" /> Company as USA Company<br /></strong>
+            </p>
+            <p>Lien waiver processing is only available for <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> that have been defined as USA <MadCap:variable name="Variables.kco companies" />. Non-USA <MadCap:variable name="Variables.kco companies" /> do not have any lien waiver data entry fields or menu items displayed. For clients using <MadCap:variable name="General.ProductName" /> OA in the United States, the <MadCap:variable name="Variables.kco company" /> (USA) should already be set up correctly. If it is not, you can define a <MadCap:variable name="Variables.kco company" /> as a USA <MadCap:variable name="Variables.kco company" /> by entering USA in <strong>System &gt; Company Setup &gt; Configuration &gt; <span class="function" title="Function:%WCO0000BSYP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters</span></strong> under the Parameter ID <strong>COMPLOC</strong>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070201.png" />
+            </p>
+            <p><strong>1.2&#160;PL ONLY: Configuration ? <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></strong>
+            </p>
+            <p>The PL module defaults for lien waiver printing and warning messages are defined in <strong><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> &gt; Setup &gt; Configuration &gt; <span class="function" title="Function:%WPL0000BSYP">Parameters</span></strong>. These defaults are assigned to each supplier that is created.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070202.png" />
+            </p>
+            <p><strong>1.3&#160;SC ONLY: Configuration ? Subcontract Ledger</strong>
+            </p>
+            <p>The SC module defaults for lien waiver printing and warning messages are defined in <strong>Subcontract Ledger &gt; Setup &gt; Configuration &gt; <span class="function" title="Function:%WSC0000BSYP">SC Parameters</span></strong>. These defaults are assigned to each subcontract that is created.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070203.png" />
+            </p>
+            <p><strong>1.4&#160;PL ONLY: Define Supplier Flags for Printing Options and Warning Messages</strong>
+            </p>
+            <p>Each supplier has Lien Waiver flags on the Configuration tab in <strong><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> &gt; Supplier Maintenance &gt; Supplier Summary &gt; Configuration tab</strong>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070204.png" />
+            </p>
+            <p>There are two fields related to lien waivers on this screen:</p>
+            <ol>
+                <li><span class="field">Lien Waiver Required </span>- You may select one of three options: Selected, Always, or Never. For a detailed explanation of this functionality, see <em>P4. PL ONLY: Summary of Options for Lien Waiver Flags</em>.</li>
+                <li><span class="null"><span class="null"><span class="field">Warn for Outstanding Lien Waivers on Invoice Entry </span></span></span>- If <MadCap:variable name="Variables.tick" />ed, this causes a warning message to appear in Invoice Entry if an outstanding lien waiver for the supplier is found.</li>
+            </ol>
+            <p><strong>1.5&#160;PL ONLY: Define <MadCap:variable name="Variables.Jc Contract caps" /> Flags for Printing Options and Defaults</strong>
+            </p>
+            <p>Each <MadCap:variable name="Variables.jc contract" /> or <MadCap:variable name="Variables.fm job" /> has Lien Waiver flags on the Configuration tab in <strong><MadCap:variable name="Variables.Jc Contract caps" /> Status &gt; <MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /> &gt; <MadCap:variable name="Variables.Jc Contract caps" /> Details &gt; Configuration tab</strong>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070205.png" />
+            </p>
+            <p>There are two fields related to lien waivers on this screen:</p>
+            <ol>
+                <li><span class="field">Lien Waiver Required Default for Subcontractors&#160;-</span> The Yes/No <MadCap:variable name="Variables.tick" />box defaults the subcontracts when a subcontract is created for the <MadCap:variable name="Variables.fm job" />.</li>
+                <li><span class="field">Lien Waiver Required for Suppliers -</span> You may select one of three options: <span class="userinput">Selected</span>, <span class="userinput">Always</span>, or <span class="userinput">Never</span>. For a detailed explanation of this functionality, see <em>4. PL ONLY: Summary of Options for Lien Waiver Flags</em>.</li>
+            </ol>
+            <p><strong>1.6&#160;PL ONLY: Lien Waiver Overrides</strong>
+            </p>
+            <p><span class="function">Lien Waiver Overrides </span>is a maintenance function found in <strong><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> &gt; Administration &gt; Lien Waiver Processing &gt; <span class="function" title="Function:%WPL9510BALW">Lien Waiver Overrides</span></strong>. It allows you to select a supplier and <MadCap:variable name="Variables.fm job" /> to always be generated for lien waivers. The existence of an entry in this function is what marks the supplier/<MadCap:variable name="Variables.fm job" /> combination as 'Yes' for lien waivers. For more information on this function, see <em>4. PL ONLY: Summary of Options for Lien Waiver Flags</em>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070206.png" />
+            </p>
+            <p><strong>1.7&#160;SC ONLY: Define Subcontract Flags for Printing Options and Defaults</strong>
+            </p>
+            <p>Each Subcontract has Lien Waiver flags on the Setup tab in <strong>Subcontract Ledger &gt; Subcontract Maintenance &gt; Subcontract Summary &gt; Setup tab</strong>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070207.png" />
+            </p>
+            <p>There are two fields related to lien waivers on this screen:</p>
+            <ol>
+                <li><span class="field">Lien Waiver Required&#160;-</span> This is a <MadCap:variable name="Variables.tick" />box that indicates if a lien waiver is required for this subcontract.</li>
+                <li><span class="field">Warn for Outstanding Lien Waivers on Invoice Entry -</span> If <MadCap:variable name="Variables.tick" />ed, this causes a warning message to appear in SC Certificate Entry if an outstanding lien waiver for the subcontractor is found.</li>
+            </ol>
+            <p />
+            <p><strong>2.&#160;Steps for Lien Waiver Processing </strong>
+            </p>
+            <p><strong>2.1&#160;Select Step 1A or Step 1B</strong>
+            </p>
+            <p><strong>Step 1A - PL ONLY: Data Entry</strong>
+            </p>
+            <p>In the <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> module, enter payments into a payment batch like you normally would and process them up through the posting of <MadCap:variable name="Variables.cheques" /> or <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> payments. Once a batch is posted, it is ready for printing lien waivers. Unposted batches are not displayed in the <span class="function">Print Lien Waivers </span>function.</p>
+            <p align="left"><strong>- OR -</strong>
+            </p>
+            <p><strong>Step 1B - SC ONLY: Data Entry</strong>
+            </p>
+            <p>In the Subcontract Ledger module, enter payments into a payment batch like you normally would and process them up through the posting of <MadCap:variable name="Variables.cheques" /> or <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> payments. Once a batch is posted, it is ready for printing lien waivers. Unposted batches are not displayed in the <span class="null"><span class="function">Print Lien Waivers </span></span>function.</p>
+            <p><strong>2.2&#160;SHARED: Printing Lien Waivers</strong>
+            </p>
+            <p>Printing Lien Waivers is done in the PL module through <strong><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> &gt; Payments &gt; Print Lien Waivers</strong>, or in the SC module through <strong>Subcontract Ledger &gt; Payments &gt; Print Lien Waivers</strong>. The batch selection for this function is unique for each module, but the screens look very similar. The end result is that you choose the batch to be used for printing lien waivers.</p>
+            <p>The screen below displays the PL <span class="function">Print Lien Waivers </span>batch selection screen.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070208.png" />
+            </p>
+            <p>Once the batch is selected, the <span class="function">Print Lien Waivers </span>screen for the batch is displayed. Click the <span class="field">Batch Number </span>to select a batch.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070209.png" />
+            </p>
+            <p><strong>SPECIAL NOTES:</strong>
+            </p>
+            <ul>
+                <li>Since you can select posted batches to be used for printing lien waivers, you are allowed to reprint waivers if needed at a later date.</li>
+                <li>Lien waivers can be printed for payments made with <MadCap:variable name="Variables.cheques" /> and for <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> payments.</li>
+                <li>One lien waiver is printed per <MadCap:variable name="Variables.cheque" /> or <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> payment.</li>
+                <li>The generation of the Lien Waiver Receipts data is processed by using the report generator when the waivers are printed. This processing could take some time depending on the volume of transactions in the payment batch. It is always recommended that this type of processing be run in background mode.</li>
+            </ul>
+            <p><strong>2.3&#160;Lien Waiver Receipts</strong>
+            </p>
+            <p>The <span class="function">Lien Waiver Receipts </span>function is found in <strong><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> &gt; Administration &gt; Lien Waiver Processing &gt; <span class="function" title="Function:%WPL9520BLWH">Lien Waiver Receipts</span></strong>. It refers to the action of noting that a waiver has been received back from a supplier or subcontractor.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070210.png" />
+            </p>
+            <ul>
+                <li>Lien waivers from both the <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> and Subcontract Ledger modules are tracked in this function.</li>
+                <li>Clicking the folder icon for a lien waiver allows you to flag the waiver as received and to enter additional information for the receipt of the waiver.</li>
+                <li>Lien waiver numbers are automatically assigned when the waivers are printed. There is no Last Waiver Number counter stored in the system; the last number used is incremented.</li>
+                <li>The <span class="field">Lien Waiver Number </span>is a link that takes you to a screen displaying the detail lines of the lien waiver.</li>
+                <li>There are no <strong>Add</strong> or <strong>Delete</strong> options for this function. Entries are automatically added to this function when lien waivers are printed.</li>
+            </ul>
+            <p><strong>2.4&#160;Outstanding Lien Waiver Report</strong>
+            </p>
+            <p>The Outstanding Lien Waiver Report allows you to see a list of lien waivers that have not been flagged as received from the supplier or subcontractor. The same report can be run from either <strong><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> &gt; Reports &gt;&#160;<span class="function" title="Function:%WPL3270RLWH">Outstanding Lien Waiver Report</span></strong> or <strong>Subcontract Ledger &gt; Reports &gt; Operational &gt; <span class="function" title="Function:%WPL3270RLWH">Outstanding Lien Waiver Report</span></strong>. Waivers from both modules can be included in one report, or each module can be reported separately. A sample report is shown below.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_070211.png" />
+            </p>
+            <p />
+            <p><strong>3.&#160;California Lien Waivers </strong>
+            </p>
+            <p>The state of California requires a special lien waiver format that does not print all the BODY information found in the general waivers normally provided with <MadCap:variable name="General.ProductName" /> OA. The system comes with some California waivers. These waivers have a document code that begins with '%CAL'. If you need to custom<MadCap:variable name="Variables.is" />e these for a particular client, the custom waiver document code needs to start with 'CAL'. If <MadCap:variable name="General.ProductName" /> OA prints a waiver with a document code that begins with %CAL or CAL, then BODY lines are automatically suppressed.</p>
+            <p />
+            <p><strong>4.&#160;PL ONLY: Summary of Options for Lien Waiver Flags </strong>
+            </p>
+            <p>The Lien Waiver flags are designed to give you several options for controlling which suppliers and <MadCap:variable name="Variables.fm jobs" /> receive lien waivers. Suppliers and <MadCap:variable name="Variables.fm jobs" /> have the options <span class="userinput">Selected</span>, <span class="userinput">Always</span>, and <span class="userinput">Never</span>. There is also an Override Entered function that you can consider.</p>
+            <p>The numerous possible combinations for these flags are outlined in the chart below.</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>SUPPLIER FLAG</th>
+                        <th><MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> FLAG</th>
+                        <th>OVERRIDE<br />ENTERED</th>
+                        <th>WILL A WAIVER<br />BE PRINTED?</th>
+                    </tr>
+                    <tr>
+                        <td>Never</td>
+                        <td>Never</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Never</td>
+                        <td>Never</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Always</td>
+                        <td>Always or Selected</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Always</td>
+                        <td>Never</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Always or Selected</td>
+                        <td>Always</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Never</td>
+                        <td>Always</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Selected</td>
+                        <td>Selected</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Selected</td>
+                        <td>Selected</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p />
+            <p><strong>5.&#160;Lien Waiver Processing Troubleshooting </strong>
+            </p>
+            <ol>
+                <li><strong>I've posted my <MadCap:variable name="Variables.cheques" /> and printed lien waivers, and I'm missing some waivers because the Supplier flags, <MadCap:variable name="Variables.Jc Contract caps" /> flags, or Overrides are set incorrectly. What should I do?</strong>
+                </li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>Since the flags are interpreted when the waivers are printed, you can just correct the flag settings and print the waivers again.</p>
+            </blockquote>
+            <ol start="2">
+                <li><strong>I've printed lien waivers, and too many waivers are printing because the Supplier flags, <MadCap:variable name="Variables.Jc Contract caps" /> flags, or Overrides are set incorrectly. What should I do?</strong>
+                </li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>Since the flags are interpreted when the waivers are printed, you can just correct the flag settings and print the waivers again.</p>
+            </blockquote>
+            <ol start="3">
+                <li><strong>I see that I have entries in Lien Waiver Receipts for payments that did not need a waiver. How do I remove the unwanted entries in Lien Waiver Receipts?</strong>
+                </li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>This most likely happened because the Supplier flags, <MadCap:variable name="Variables.Jc Contract caps" /> flags, or Overrides are set incorrectly. Since the flags are interpreted when the waivers are printed, you should correct the flag settings and print the waivers again. The system is smart enough that it should remove extra waiver receipt entries that do not belong. Note that if a waiver is marked as received, it is locked in the system and not removed.</p>
+            </blockquote>
+            <ol start="4">
+                <li><strong>I need one lien waiver to print per <MadCap:variable name="Variables.fm job" />. When I print <MadCap:variable name="Variables.cheques" />, all the <MadCap:variable name="Variables.fm jobs" /> for a given supplier are combined into one <MadCap:variable name="Variables.cheque" /> and only one waiver is printed. How do I print one waiver per <MadCap:variable name="Variables.fm job" />?</strong>
+                </li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>Lien waivers are currently designed to print only one waiver per <MadCap:variable name="Variables.cheque" />. To print one waiver per <MadCap:variable name="Variables.fm job" />, you must enter the payments so that a single <MadCap:variable name="Variables.cheque" /> prints for each <MadCap:variable name="Variables.fm job" />.</p>
+            </blockquote>
+            <p />
+        </div>
+        <div class="configuration">
+            <h2 class="print">Lien Waiver Processing</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CO/co_comploc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_liendef.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_lienwarn.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_LIENDEF.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_LIENWARN.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="839" MadCap:lastWidth="601">
+  <head>
+    <title>Creating a New Document</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Creating a New Document</h1>
+    <p>You may find it easier to copy an existing document and modify it, but if you want to create a new one, this is how to do it:</p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">To create a new configurable document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span>.</li>
+        <li>Select the document type for the document you want to create, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.
+<p>It is important to set this to the correct document type first, as document types determine which forms <MadCap:variable name="General.ProductName" /> offers a user when printing a document. Some document types may have additional features, such as more than one type of repeating line.</p><p><img src="../../Resources/Images/Configurable Forms/Creating a New Document_4.png" class="FullWidth" /></p></li>
+        <li>Give the document a code and a description. <MadCap:variable name="General.ProductName" /> uses the code to identify the document; the description is used when giving the user a choice of which document to print. You can have different documents for the same document type, to allow you to print using different layouts.</li>
+        <li>Because continuation headers and footers can be different heights from headers and footers (typically first page headers could show more information than continuation headers), you need to specify the number of body (repeating) lines on first and continuation pages. The number of lines you can fit on the page will depend on the total heights specified for header and footer lines, and the height specified on the body lines.<p><img src="../../Resources/Images/Configurable Forms/Creating a New Document 6.png" /></p></li>
+        <li>Choose a page layout for the document.</li>
+        <li>
+          <p>Choose a default Class for the document. A Class is a combination of formatting features, such as font, size, <MadCap:variable name="Variables.colour" /> and background</p>
+        </li>
+        <li>
+          <p>Add Extra Formatting if required; as a minimum enter the text ‘margin=0mm,padding=0mm’ to account for differing FOP versions.</p>
+          <p>
+            <img src="../../Resources/Images/Configurable Forms/Creating a New Document_8.png" />
+          </p>
+        </li>
+        <li>For each form (header, continuation header, body, continuation footer, footer), give a name. You can call these whatever you like, but when you set up the fields to print on the document, you use these codes to specify which form they appear on. If you want the header and continuation header to be the same, give them the same names (similarly with the footer and continuation footer). Note that the form you nominate as the body form is used to specify the formatting (especially the line height) of blank lines at the end of the repeating body data.  Each document must have a form called BODY.</li>
+        <li>Many documents use other form names that are specific to the type of document. For example, <MadCap:variable name="Variables.Contract Sales" style="text-transform: capitalize;" /> statements use additional forms for certificate lines, invoice lines, CS cash lines and SL cash lines within the body of the document. Enter your names for these on the Extras tab.  See the side-frame help or the documentation for each module for more details.</li>
+        <li>
+          <p>Documents can be stored against tables. The tables available will depend upon the document type you selected.  If this option is selected, when the document print file is generated, <MadCap:variable name="General.ProductName" /> creates separate PDFs for each relevant record in the table, and stores the PDF against that record.</p>
+          <p>
+            <img src="../../Resources/Images/Configurable Forms/Creating a New Document_10.png" />
+          </p>
+        </li>
+        <li>If you do not want users to be able to select the document for printing (for example, while you are still designing it) clear the <span class="field">Live </span><MadCap:variable name="Variables.tick" /> box.</li>
+        <li>Save the document.</li>
+        <li>Then add field records (see <a href="WDSY0503_Defining_Content.html">Defining the Content of the Document</a>).
+<p class="noteheader">NOTE</p><div class="note">As you configure the document, you can preview the layout.  Click the <u>Preview</u> link in the header to display a two-page PDF that contains dummy values for all the fields, but allows you to view the general layout of the document.</div></li>
+      </ol>
+    </div>
+  </body>
+</html>

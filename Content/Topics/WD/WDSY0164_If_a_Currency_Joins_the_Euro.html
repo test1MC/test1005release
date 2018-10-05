@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>If a Currency Joins the Euro</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">If a Currency Joins the Euro</h1>
+    <p>if a currency that you work with joins the Euro, you will need to:</p>
+    <ul>
+      <li>Specify the fixed exchange rate between that currency and the Euro.</li>
+      <li>Convert <MadCap:variable name="Variables.pl supplier" />/customer accounts.</li>
+    </ul>
+    <h2>Specifying the Exchange Rate</h2>
+    <p>The exchange rate between the Euro and other currencies indenting to join the single European currency is fixed on the joining date. <MadCap:variable name="General.ProductName" /> has a table to hold these exchange rates.</p>
+    <p>If a currency is intending to join the single European currency, enter that currency in this table. After the joining date, <MadCap:variable name="General.ProductName" /> uses these rates and uses the triangulation rules for conversion.</p>
+    <h3>To set up Euro exchange rates:</h3>
+    <ol>
+      <li>Go to <span class="function" title="Function:%WSY2034COE">EMU Currency Conversion Rates</span>.</li>
+      <li>Enter a line for the currency, including the date that the currency will join the Euro and the conversion rate to convert one Euro to this currency.
+<p class="noteheader">NOTE</p><div class="note">Once you have set up a currency in <span class="function" title="Function:%WSY2034COE">EMU Currency Conversion Rates</span>, you no longer need to maintain the exchange rate for that currency - you only need to maintain the exchange rate for the Euro against currencies outside the Eurozone, using <span class="function" title="Function:%WCO2021BCCR">Currency Exchange</span>.</div></li>
+    </ol>
+    <h2>Converting Accounts</h2>
+    <p>If one of your <MadCap:variable name="Variables.pl suppliers" /> or customers changes their accounting currency (for example from a European currency to Euros), you will need to set up a new account for them. All the outstanding transactions processed up to the point where you to set up a new account will be processed in the 'old' currency; all transactions processed after that time will be processed from the new account, in Euros.</p>
+    <p>The instructions below refer to changing a <MadCap:variable name="Variables.pl supplier" />; the same procedure applies to subcontractors and customers.</p>
+    <h3>To change a <MadCap:variable name="Variables.pl supplier" /> from one currency to another:</h3>
+    <ol>
+      <li>Identify the old <MadCap:variable name="Variables.pl supplier" /> account number.</li>
+      <li>Go into <span class="function" title="Function:%WCI2000BCIM">Companies</span>. Click the <span class="field">Company </span>link. On the Offices tab, open the relevant office record.</li>
+      <li>On the Accounts tab, enter a new <span class="field"><MadCap:variable name="Variables.Purchase Ledger caps" /></span>Account number.</li>
+      <li>Save the office record.</li>
+      <li>Go to <span class="function" title="Function:%WPL2000BAVM"><MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /></span>.</li>
+      <li>Add a new <span class="module"><MadCap:variable name="Variables.Purchase Ledger caps" /></span>account for the office. The details should be the same as on the old account, except that the <span class="field">Currency </span>code should be set to the new currency.</li>
+    </ol>
+    <p>If you make a mistake with the currency code, you can go back and change it provided that you have not yet entered an invoice against the <MadCap:variable name="Variables.pl supplier" />. Once you have entered an invoice, the <span class="field">Account Currency </span>field is <MadCap:variable name="Variables.grey" />ed out, and you cannot change the currency code on the account.</p>
+    <p> </p>
+  </body>
+</html>

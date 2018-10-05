@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Purchase Order Numbers</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Purchase Order Numbers</h1>
+    <p>Depending on your order numbering policy, you can control whether and under what circumstances <MadCap:variable name="General.ProductName" /> generates order numbers.  This topic explains how to set the parameters that control how <MadCap:variable name="General.ProductName" /> generates the numbers.  For information on the format of purchase order numbers, see <a href="WDPO5018_Format_of_Order_Numbers.html">Format of Order Numbers</a>.</p>
+    <h2>Generating Numbers for Purchase Orders</h2>
+    <p>How do you want <MadCap:variable name="General.ProductName" /> to generate purchase order numbers?</p>
+    <ul>
+      <li>Generate numbers automatically, but allow users to enter their own purchase order numbers, as an alternative to the automatic sequencing:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span class="parameter">POALLWMN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span>,</p><p><span class="parameter">POAUTOGN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span></p></blockquote></li>
+      <li>Generate numbers automatically and not allow users to enter their own numbers:
+<blockquote><p><span class="parameter">POALLWMN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">N</span>,</p><p><span class="parameter">POAUTOGN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span></p></blockquote></li>
+      <li>Users must enter purchase order numbers manually:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span class="parameter">POALLWMN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span>,</p><p><span class="parameter">POAUTOGN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">N</span></p></blockquote></li>
+    </ul>
+    <h2>Generating Numbers for Template Orders</h2>
+    <p>If <MadCap:variable name="General.ProductName" /> generates purchase order numbers automatically, how do you want to treat template order numbers?</p>
+    <ul>
+      <li>Allow users to enter numbers for template orders manually? (This allows users to enter meaningful codes for templates):
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span class="parameter">POAUTOGN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span>,</p><p><span class="parameter">POTMPGEN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">N</span></p></blockquote></li>
+      <li>
+        <MadCap:variable name="General.ProductName" /> to generate both purchase order and template order numbers:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span class="parameter">POAUTOGN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span>,</p><p><span class="parameter">POTMPGEN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span></p></blockquote></li>
+    </ul>
+    <h2>Generating Numbers for Change Orders</h2>
+    <p>How do you want <MadCap:variable name="General.ProductName" /> to generate change order numbers?</p>
+    <ul>
+      <li>Generate numbers automatically, but allow users to enter their own change order numbers, as an alternative to the automatic sequencing:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span class="parameter">CHGALWMN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span>,</p><p><span class="parameter">CHGAUTOG </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span></p></blockquote></li>
+      <li>Generate change order numbers automatically and not allow users to enter their own numbers:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span class="parameter">CHGALWMN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">N</span>,</p><p><span class="parameter">CHGAUTOG </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span></p></blockquote></li>
+      <li>Users must enter change order numbers manually:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span class="parameter">CHGALWMN </span><span style="font-family: Wingdings;">ð</span><span class="userinput">Y</span>,</p><p><span class="parameter">CHGAUTOG </span><span style="font-family: Wingdings;">ð</span><span class="userinput">N</span></p></blockquote></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>"Failed" Verifications</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">"Failed" Verifications</h1>
+    <p>If the verification process (using "Match" mode) returns the status of a subcontractor as "Failed", this means the data you hold in <MadCap:variable name="General.ProductName" /> is not sufficiently similar to the data that HMRC holds.  This may be because:</p>
+    <ul>
+      <li>
+        <strong>The subcontractor is not actually registered with HMRC.  <br /></strong>You may want to check with the subcontractor whether they are registered, and if not, whether they want you to verify them as unmatched and pay them immediately at the higher rate of deduction, or whether they want to register first so that you can pay them gross or at the lower rate of deduction. 
+<p />If the subcontractor is not registered and you want to verify them as unmatched, re-submit the record for verification (using "Verify" mode) in <span class="function" title="Function:%WSC2070BSBM"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification</span>.  This should return a verification status of unmatched, which will allow you to pay the subcontractor. 
+<p />If the subcontractor is going to register with HMRC, wait until the subcontractor notifies you that they are registered, then re-submit the record for verification (using either "Match" or "Verify" mode) in <span class="function" title="Function:%WSC2070BSBM"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification</span>.  This should return a verification status of matched and the tax treatment, which will allow you to pay the subcontractor.</li>
+      <li>
+        <strong>There are discrepancies between the data in <MadCap:variable name="General.ProductName" /> and the HMRC data. 
+<p /></strong>In this case, update the <MadCap:variable name="General.ProductName" /> data in <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span>, then re-submit the record for verification (using either Match" or "Verify" mode; we recommend "Match") in <span class="function" title="Function:%WSC2070BSBM"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification</span>.  This should return a verification status of "Matched" and the tax treatment, which will allow you to pay the subcontractor.<br /><br /></li>
+    </ul>
+  </body>
+</html>

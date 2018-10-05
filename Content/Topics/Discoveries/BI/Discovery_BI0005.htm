@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="2587" MadCap:lastWidth="836" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0005,">
+    <head><title>Summarising the Contract Report from BI0004</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Discovery BI0005 - Summarising Reports</h1>
+        <p>&#160;</p>
+        <MadCap:relationshipsProxy class="relatedTopics" />
+        <p>&#160;</p>
+        <p>Copy the Report from BI0004 so that both a detailed and summary report can be run, first copy each of the Function, Page and Report Sections of the example created in Discovery BI0004 and call them xxM1Exercise8 (where xx = your initials) and add the new function to the menu.</p>
+        <p>&#160;</p>
+        <p class="note">You will need to amend the field on the Update form to use the Exercise 8 Tab Function not the Exercise 7 Tab function.&#160; Be aware of changes like this when you copy functions/pages/reports unless you specifically want to reuse functions.</p>
+        <h2>&#160;</h2>
+        <h2>Select the Sort Level&#160; </h2>
+        <p>The report will sort and subtotal by Contract Group, then by Type, then by Contract Code :</p>
+        <p>jgr_group+<br />jty_type+<br />job_num+</p>
+        <p>To summarise the data at Contract Type enter 2 into the Detail field on the Sort Tab.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0005-1-1107.png" class="FullWidth" />
+        </p>
+        <h2>Select the correct Header and Footer Forms </h2>
+        <p>When selecting a report to summarise it is not necessary (nor is it permitted) to have headers and footers at any sort level on or below the summary level.</p>
+        <p>In this exercise, headers and footers are only required at Sort Level 1 so delete the headers and footers at level 2</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0005-2-1107.png" class="FullWidth" />
+        </p>
+        <p>Run the report to return data summarised at Contract Type.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Summarising the Contract Report_2.png" class="FullWidth" />
+        </p>
+        <h2>Amend the fields on the report</h2>
+        <p>Due to the fact that the report is now summarised it is necessary to ensure that the fields you are displaying reflect the type of report you are producing </p>
+        <p class="Example">For example : Job Number and Job Name are no longer relevant to display as multiple contracts may be used to make up the detail line <br /><br />Therefore you may want to delete or hide these fields from the report ….&#160; Also you may like to add the jty_desc field to the report so that you can see that the Type Description as this is now the detail level.</p>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1232" MadCap:lastWidth="886">
+    <head>
+        <link href="Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Updating Triggers for Plant On Hire</h1>
+        <p>Triggers allow you to keep track of when events related to plant or vehicle assets are due. You can automatically update hourly and daily triggers for plant which is on hire.</p>
+        <p>For example, suppose you have a plant item which you want to inspect when it has been on hire for 60 days or more. Using Fixed Assets &gt; Setup &gt; Maintenance &gt; Asset Trigger Definitions, you would set up an integer trigger, with a TT (trigger type) of GE (greater than or equal to) and a reset Value of 60.</p>
+        <p>
+            <img src="Resources/Images_D-F/Fixed Assets/Trigger_Plant_1.png" />
+        </p>
+        <p>Then you would enter that trigger against the asset using Asset Maintenance.</p>
+        <p>
+            <img src="Resources/Images_D-F/Fixed Assets/Trigger_Plant_2.png" />
+        </p>
+        <p>You should update the daily (and hourly) triggers periodically, and before reporting on trigger expiry dates, for example. This will update the value of the trigger; when this value reaches (or exceeds) the Expires value (60 in this example), the trigger will fire, and will appear on the Trigger Enquiry and the Fixed Assets &gt; Reports &gt; Operational Reports &gt; Asset Triggers Report.</p>
+        <h2>To update triggers:</h2>
+        <ol>
+            <li>Go to Plant Control &gt; Processing &gt; Update Plant On Hire Triggers.</li>
+            <li>Fill in the fields as follows:</li>
+        </ol>
+        <ul>
+            <li>Type  Select whether to update triggers based on Daily or Hourly hire.</li>
+            <li>End Date  The date to use to update the triggers.</li>
+        </ul>
+        <ol MadCap:continue="true">
+            <li>To update triggers for selected assets only, use the Asset Selection tab to specify the assets.</li>
+        </ol>
+        <p>&#160;</p>
+        <p><MadCap:variable name="General.ProductName" /> updates the hourly triggers with the number of hours working since the last reset (from the timesheets), and updates the daily triggers with the number of days on hire since the last reset.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If you are using captions on timesheets to update a trigger, do not also use Plant Control &gt; Processing &gt; Update Plant On Hire Triggers to update the same trigger.  You could have different triggers that use the different methods; so you could use TRIGHOUR to drive hourly-based servicing, and have a trigger for off hire inspection status updated by a caption.</p>
+    </body>
+</html>

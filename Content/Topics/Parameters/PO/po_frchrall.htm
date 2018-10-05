@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/FRCHRALL - Force Full Allocation (Hourly) on these contracts</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/FRCHRALL - </span> Force Full Allocation (Hourly) on these contracts
+</div>
+<div class="param_def">
+<p>A can-do list of <MadCap:variable name="Variables.jc contracts"/> for which you want COINS to automatically set the accrual method on the order to "full allocation".</p>
+<P>In order to capture weekly operator timesheet data, hourly-rated <MadCap:variable name="Variables.pc plant"/> orders raised by <span class="function" title="Function:%WPC1300HXXX"><MadCap:variable name="Variables.Pc Hire Desk caps"/></span> need to be set to full weekly allocation mode. </P>
+<P>If a <MadCap:variable name="Variables.pc plant"/> order is raised against a <MadCap:variable name="Variables.jc contract"/> in this list, and that <MadCap:variable name="Variables.pc plant"/> order contains hourly-rated <MadCap:variable name="Variables.pc plant"/> (typically operated <MadCap:variable name="Variables.pc plant"/>), COINS ignores the accrual method set up against the <MadCap:variable name="Variables.jc contract"/> and sets the accrual method for this order to <SPAN class="userinput">G,</SPAN> thereby requiring a GRN to be input (but see <FONT color="#000000"><SPAN class="parameter">AUTHRGRN</SPAN>) and full weekly <MadCap:variable name="Variables.pc plant"/> allocation. Note that this will only happen on orders that contain at least one item that is being <MadCap:variable name="Variables.pc hired"/> on an hourly operated basis.</FONT></P>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../po/po_authrgrn.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

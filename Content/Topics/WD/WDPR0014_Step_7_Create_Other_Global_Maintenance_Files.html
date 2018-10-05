@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.USOnly">
+  <head>
+    <title>Step 7 - Create Other Global Maintenance Files</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Step 7 - Create Other Global Maintenance Files</h1>
+    <table class="SpecificTopic">
+      <tbody>
+        <tr>
+          <td class="Edge"> </td>
+          <td>
+            <span style="color: #000000;">
+              <span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></span>
+          </td>
+          <td class="Edge"> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Before using the <span class="module">Payroll</span> module, there are a number of steps that should be performed initially to set it up in effective working order. Step 7 is outlined below.</p>
+    <p>After you have performed these initial steps, you are ready to process Payroll (see <a href="WDPR0004_Processing_Payroll.html">Processing Payroll</a>).</p>
+    <div class="process">
+      <h2 class="print">How to create other global maintenance files:</h2>
+      <p>In <span class="function" title="Function:%WSYBCRTHR0">Lookup Codes</span>, these simple two-field files are shared by both <span class="module">Human Resources </span>and <span class="module">Payroll</span>. Many fields are reserved for use in HR, but some are used in conjunction with US <span class="module">Payroll </span>processing. These fields are required to be completed in <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>, but if an organ<MadCap:variable name="Variables.is" />ation chooses not to use a particular field, a blank record can be created in the Lookup Code that will be the primary default.</p>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>EEO-1</li>
+              <li>Employee Util<MadCap:variable name="Variables.is" />ation Classification</li>
+              <li>Employment Util<MadCap:variable name="Variables.is" />ation Trade</li>
+              <li>Ethnic Origin**</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <blockquote style="MARGIN-RIGHT: 0px;" dir="ltr">
+        <p class="noteheader">**IMPORTANT NOTE**</p>
+        <div class="note">In order to use ethnicity correctly for US Payroll and HR Reporting (EEO-1, CC-257), it is <strong>IMPERATIVE</strong> that the codes be set up as shown in <a href="WDPR0019_Setting_Up_Ethnic_Codes.html">Setting Up Ethnic Codes</a>. Any diversion from this setup may cause reports to print incorrectly.</div>
+      </blockquote>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Work Classification</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <p>To create global maintenance files, follow the steps below.</p>
+      <ol>
+        <li>In <span class="function" title="Function:%WPR223BPEC">Earning Categories</span>, add earning categories for use in <span class="module">Payroll</span>. Earning categories summar<MadCap:variable name="Variables.is" />e the types of pay into categories that can then be reported on. They also allow for different methods, such as Amount, or different multipliers for Overtime and Double Time. If any earning category is made dormant, it cannot be used in Payroll processing.</li>
+        <li>In <span class="function" title="Function:%WPR218BSTE">Skill Levels</span>, add skill levels. Skill levels are used with Union and Trade rates and calculations. Skill levels must first be created here before they may be referenced in other files and on a timecard.</li>
+        <li>In <span class="function" title="Function:%WPR220BQRU"><MadCap:variable name="Variables.pr unions" style="text-transform: capitalize;" /></span>, add unions, union calculations, and union rates for any Collective Bargaining Agreements to which you are a signatory.</li>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Effective dates are in use for both rates and calculations. The effective date is determined by the timecard date of a transaction.</li>
+              <li>Union calculations include Deductions, Fringes in Pay, and Fringes Not in Pay.</li>
+              <li>Wild cards are in use when determining applicable Skill Levels and Earning Categories for calculations and rates.</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol start="4">
+        <li>In <span class="function" title="Function:%WPR228BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span>, add rates and calculations for any project governed by Prevailing Wage laws.</li>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Effective dates are in use for both rates and calculations. The effective date is determined by the timecard date of a transaction.</li>
+              <li>Union calculations include Deductions, Fringes in Pay, and Fringes Not in Pay.</li>
+              <li>Wild cards are in use when determining applicable Skill Levels and Earning Categories for calculations and rates.</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <blockquote style="MARGIN-RIGHT: 0px;" dir="ltr">
+        <p>Maintain additional file maintenance necessary to process Payroll, comply with Workers Compensation, and generate Payroll allocations. Information such as the project's state and/or locality must be maintained here for use in timecard entry.</p>
+      </blockquote>
+      <ol start="5">
+        <li>In <span class="function" title="Function:%WPR227BPAC">Pay Calculations</span>, handle additions and subtractions to <span class="module">Payroll</span>, as well as create burdens. It contains information about a calculation as well as taxability details, pay items, maximums, and other values used in Payroll processing. Examples of calculations are Child Support Deduction, 401k Deduction, 401k Company Match, and Employer Health Insurance Costs.</li>
+        <li>In <span class="function" title="Function:%WPR232BSTE">Employee Allocation Types</span>, add allocation types to determine which allocation groups can be used for this employee.</li>
+      </ol>
+    </div>
+  </body>
+</html>

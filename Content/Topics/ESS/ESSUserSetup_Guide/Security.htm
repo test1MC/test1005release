@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-gb">
+    <head>
+        <link href="../../../Resources/Images/SY/Mail Assistant/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /><title></title>
+    </head>
+    <body>
+        <h1>Security</h1>
+        <p>In addition to user security there is the ability to set which employees any given employee can have access to using Personnel security. </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/ESS/ESSUserSetup_Guide/Security.png" style="left: 0; width: 155px; height: 221px;" class="HalfWidth" />
+            <br />
+        </p><span class="Function">Navigate to Human Resources &gt; Personnel Security. </span>
+        <p>A calculation is required to dictate which employees they can have access to. Examples below:</p>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/Images/SY/Mail Assistant/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Access To</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Code</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Own record only</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>CAN-DO(pp_organisation.ppo_seq + ',' + pp_organisation.ppo_seq, '{sysuser.getLink^HRKEY}')</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Work group ‘700’</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>pp_organisation.hrg_code = '700'</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Work groups ‘700’ or ‘500’</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>pp_organisation.hrg_code = '700' OR pp_organisation.hrg_code = '500'</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>All apart from employee ‘123456’</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>pp_organisation.hrp_id &lt;&gt; '123456'</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

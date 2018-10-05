@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1660" MadCap:lastWidth="528">
+    <head><title>Format F (Commonwealth Bank)</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Format F (Commonwealth Bank)</h1>
+        <p><span style="FLOAT: right;"><img src="../../Resources/Images/Misc/CBA.gif" /></span>The file consists of the following 8 record types: </p>
+        <ul>
+            <li><span style="COLOR: #0000ff;">Type 0 Extraction Header Record</span>
+            </li>
+            <li>Type 1 Client Header Record</li>
+            <li>Type 2 Account Header Record(s)</li>
+            <li>Type 3 Account Balance Record(s)</li>
+            <li><span style="COLOR: #0000ff;">Type 4 Credit Transaction Record(s)</span>
+            </li>
+            <li><span style="COLOR: #0000ff;">Type 5 Debit Transaction Record(s)</span>
+            </li>
+            <li><span style="COLOR: #0000ff;"></span>Type 6 Account Totals Record(s)</li>
+            <li>Type 8 Client Trailer Record </li>
+        </ul>
+        <p><MadCap:variable name="General.ProductName" /> reads only the records highlighted in <span style="COLOR: #0000ff;">blue</span> (that is, types 0, 4 and 5). Each record is a fixed length of 80 bytes. </p>
+        <p><span style="COLOR: #0000ff;FONT-WEIGHT: bold;">Type 0: Extraction Header Record</span>
+        </p>
+        <table style="MARGIN-LEFT: 1.26cm;" border="1" cellspacing="0" bordercolor="#000000" width="86%">
+            <tbody>
+                <tr>
+                    <th width="15%">
+                        <p style="TEXT-ALIGN: center;">RELATIVE ADDRESS </p>
+                    </th>
+                    <th width="15%">
+                        <p style="TEXT-ALIGN: center;">LENGTH </p>
+                    </th>
+                    <th width="21%">
+                        <p style="TEXT-ALIGN: left;">CONTENTS </p>
+                    </th>
+                    <th width="47%">
+                        <p>DETAIL </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">1 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">1 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;" align="left">0 </p>
+                    </td>
+                    <td width="47%">
+                        <p>Record Type </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">2 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">4 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">0000 </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Zeros </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">6 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">2 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Blanks </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Blanks </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">8 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">6 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">000000 </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Zeros </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">14 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">6 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Date DDMMYY </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">20 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">37 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Blanks </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Blanks </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">57 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">4 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">0000 </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Zeros </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">61 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">20 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Blanks </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Blanks </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p />
+        <p><span style="COLOR: #0000ff;FONT-WEIGHT: bold;">Type 4: Credit Transaction Record</span>
+        </p>
+        <table style="MARGIN-LEFT: 1.26cm;" border="1" cellspacing="0" bordercolor="#000000" width="86%">
+            <tbody>
+                <tr>
+                    <th width="15%">
+                        <p style="TEXT-ALIGN: center;">RELATIVE ADDRESS </p>
+                    </th>
+                    <th width="15%">
+                        <p style="TEXT-ALIGN: center;">LENGTH </p>
+                    </th>
+                    <th width="21%">
+                        <p style="TEXT-ALIGN: left;">CONTENTS </p>
+                    </th>
+                    <th width="47%">
+                        <p>DETAIL </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">1 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">1 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">4 </p>
+                    </td>
+                    <td width="47%">
+                        <p>Record Type </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">2 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">4 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Branch Number </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">6 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">8 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Account Number </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">14 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">8 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Agent Number, Depositing Branch, or blanks </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">22 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">3 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Alpha/Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Transaction Type Code </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">25 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">11 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Transaction Amount ($$$$$$$$$¢¢) </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">36 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">9 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Number of <MadCap:variable name="Variables.cheques" /> in deposit, or zeros. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">45 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">30 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Alpha/Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Statement Narrative </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">75 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">6 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Blanks </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Blanks </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p />
+        <p><span style="COLOR: #0000ff;FONT-WEIGHT: bold;">Type 5: Debit Transaction Record</span>
+        </p>
+        <table style="MARGIN-LEFT: 1.26cm;" border="1" cellspacing="0" bordercolor="#000000" width="86%">
+            <tbody>
+                <tr>
+                    <th width="15%">
+                        <p style="TEXT-ALIGN: center;">RELATIVE ADDRESS </p>
+                    </th>
+                    <th width="15%">
+                        <p style="TEXT-ALIGN: center;">LENGTH </p>
+                    </th>
+                    <th width="21%">
+                        <p style="TEXT-ALIGN: left;">CONTENTS </p>
+                    </th>
+                    <th width="47%">
+                        <p>DETAIL </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">1 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">1 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">5 </p>
+                    </td>
+                    <td width="47%">
+                        <p>Record Type </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">2 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">4 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Branch Number </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">6 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">8 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Account Number </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">14 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">8 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Blanks </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Blanks </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">22 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">3 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Alpha/Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Transaction Type Code </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">25 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">11 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Transaction Amount ($$$$$$$$$¢¢) </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">36 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">9 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> serial number or branch number </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">45 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">30 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Alpha/Numeric </p>
+                    </td>
+                    <td width="47%">
+                        <p>Statement Narrative </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">75 </p>
+                    </td>
+                    <td width="15%">
+                        <p style="TEXT-ALIGN: center;">6 </p>
+                    </td>
+                    <td width="21%">
+                        <p style="TEXT-ALIGN: left;">Blanks </p>
+                    </td>
+                    <td width="47%">
+                        <p>Always Blanks </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

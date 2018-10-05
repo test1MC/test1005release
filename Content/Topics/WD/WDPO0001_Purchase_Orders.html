@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="1583" MadCap:lastWidth="844">
+  <head>
+    <title>Configurable Purchase Order Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable Purchase Order Documents</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> allows you to configure the format used for printing purchase orders in order to print to your business requirements and use pre-printed stationery. </p>
+    <p>You define the layout of purchase orders using <span class="function" title="Function:%WSYBSFS">Document Designer</span>. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for general information on how to configure documents for printing. </p>
+    <p>You need to set up a configurable document for each different type of order form you want to print (for example: material order, <MadCap:variable name="Variables.pc plant" /> order, <MadCap:variable name="Variables.st stock" /> order). </p>
+    <div class="process">
+      <h2 class="print">To define the layout for printing purchase orders:</h2>
+      <ol>
+        <li>Use the document type "Purchase Order".</li>
+        <li>Configure <strong>BODY</strong> forms to print the details of order lines.</li>
+        <li>There are special forms for printing text lines and clauses. Set up:
+<ul><li>a <strong>BODYTEXT</strong> form to print text lines. Use the field <span class="screentype">RW_pol_FullDescription</span> for the text.</li><li>a <strong>BODYINDENT</strong> form to print indented clauses. Use the field <span class="screentype">pol_desc__1</span> for the clause text.</li><li>a <strong>BODYAUTO</strong> form to print auto-numbered clauses. Use the field <span class="screentype">pol_clsitem</span> for the clause number, and <span class="screentype">pol_desc__1</span> for the clause text.</li></ul></li>
+        <li>For <MadCap:variable name="Variables.pc plant" /> orders, to print rates from the <MadCap:variable name="Variables.pc plant" /> sheet, configure forms called <strong>BODYPLANT01</strong> to <strong>BODYPLANT10</strong> (one for each <MadCap:variable name="Variables.pc plant" /> sheet rate). You can use the following fields:
+<ul><li><span class="screentype">PlantRateLabel__<em>x</em></span> - the description of the <MadCap:variable name="Variables.pc plant" /> sheet rate</li><li><span class="screentype">RO_PlantRate__<em>x</em></span> - the <MadCap:variable name="Variables.pc plant" /> sheet rate</li><li><span class="screentype">RO_PlantPer__<em>x</em></span> - the unit of charging (for example WK, DY)</li><li><span class="screentype">RO_PlantDisc__<em>x</em></span> - the discount on the <MadCap:variable name="Variables.pc plant" /> rate</li></ul>
+where <em>x</em> is the number of the <MadCap:variable name="Variables.pc plant" /> sheet rate. <MadCap:variable name="General.ProductName" /> prints the BODYPLANT lines after the corresponding BODY line. To suppress the price, discount and per values on the BODY line (because they will be printed on the BODYPLANT line), <MadCap:variable name="Variables.tick" /> the Blank first <MadCap:variable name="Variables.pc plant" /> line field.</li>
+        <li>You can choose whether to print <MadCap:variable name="Variables.po variations" /> that show the current state of the full order, or only the changed lines. To print only the changed lines, <MadCap:variable name="Variables.tick" /> the <span class="field">Print Changes Only Variation Order? </span>box. You could use an alternative document if you want to print <MadCap:variable name="Variables.po variations" /> both with and without the unchanged lines.</li>
+      </ol>
+      <p>Note also:</p>
+      <p>You can configure the form to print various different messages depending on the type and status of the order (for example, text to indicate a confirmation order, a duplicate order or an amendment order). See <a href="WDPO0002_Text_on_Configurable_Forms.html">Text on Configurable Documents</a>.</p>
+      <p>You can also print the order amount (or the amount of an order line) in words. See <a href="WDPO0014_Printing_the_Order_Value_in_Words.html">Printing the Order Value in Words</a>.</p>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Purchase Order Documents - configuration</h2>
+      <p>
+        <MadCap:snippetBlock src="../PO/Order_Stamped_With_Doc_Name.flsnp" /> </p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: 'Parameters';mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_pofrm.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

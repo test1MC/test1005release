@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="787" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />Create/Post Recurring Invoices</h1>
+        <p class="Body"><span class="Function">Create/Post Recurring Invoices</span> allows you to create and/or post a range of recurring invoices.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/PL/Recurring Invoices/RecInvCreatePost.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>From, To<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>A range of recurring invoice numbers.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Period<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The posting period for the recurring invoices.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Post Batch</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to post the batch automatically.</p>
+                    <p>If the new PL parameter <span class="parameter">RIAUTPST</span> is set to Y, this defaults to Y, otherwise it is blank.</p>
+                </div>
+            </div>
+        </div>
+        <p class="Body">Only recurring invoice types with a <span class="Field">Next Post</span> period that is the same as the posting period and are also marked as "Ready to Post" will be created/posted.</p>
+        <p class="Body">When you click Next, a PL Invoice batch will be created for the period selected, with a description of ‘Recurring Invoices’. The batch transaction type will be taken from new PL parameter <span class="parameter">RITTYPE</span> (for example, PRI – PL Recurring Invoice). For each recurring invoice type selected as ready to post, an invoice transaction will be created; the cost and <MadCap:variable name="Variables.vat" /> distribution records will also be created from the template invoice. You can edit the recurring invoices in the same way as standard invoices, except for the <span class="Field">Supplier Code</span> and <span class="Field">Reference</span> fields.</p>
+    </body>
+</html>

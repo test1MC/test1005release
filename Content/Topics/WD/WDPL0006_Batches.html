@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Creating a PCard Batch</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Creating a PCard Batch</h1>
+        <p>When all the transactions have been marked as "reviewed" and any errors corrected, you can create a batch of PCard transactions.&#160; When this batch has been posted, <MadCap:variable name="General.ProductName" /> creates a batch of fully paid and costed <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> invoices. </p>
+        <div class="process">
+            <h2 class="print">To create a PCard transaction batch:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1320BAPT">PCards Workbench - Administrator Mode</span>.</li>
+                <li>From the Options menu, choose <span class="function" title="Function:%WPL132BUAPT">Create PCard Batch - Select <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /></span>.
+<p><MadCap:variable name="General.ProductName" /> displays a list of <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> in which there are transactions that are ready to be processed.</p><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Screenshot: <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Selection</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_P-R/PL/PL_000601.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown>
+Both <MadCap:variable name="Variables.kco company" /> and <MadCap:variable name="Variables.jc contract" /> security is taken into account. Only transactions that are error-free and not held are considered as "ready to be processed". Also, if a transaction has already been included in another batch then it will not be included.</li>
+                <li>Click the link on one of the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> to produce a batch for that specific <MadCap:variable name="Variables.kco company" />.
+<p>If more than one <MadCap:variable name="Variables.kco company" /> is shown in the list, you must select each <MadCap:variable name="Variables.kco company" /> separately and produce a separate batch for each.</p><p><MadCap:variable name="General.ProductName" /> opens a new window or tab:</p><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot>Screenshot: Create Batch</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_P-R/PL/PL_000602.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>Enter the <MadCap:variable name="Variables.financial period" /> date for the batch.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> creates a new batch of type PLPCARD.</p></li>
+            </ol>
+            <h2>To post PCard batches:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1260BCOB">PCard Transactions</span>.</li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the PCard batches you want to post.</li>
+                <li>From the Choose Action menu, select <span class="userselect">Post Batches </span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+<p>For each PCard batch, <MadCap:variable name="General.ProductName" /> automatically creates and posts two batches:</p></li>
+                <ul>
+                    <li>a batch of <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> </span>invoices (Batch Type PLINV).</li>
+                    <li>a PCard payment batch (Batch Type PLPPAY) which marks the transactions as paid.</li>
+                </ul>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>Use <span class="function" title="Function:%WPLBCBT">Batch Configuration</span> to configure the following batch types:</p>
+            <ul>
+                <li>PLPCARD (Purchase card transactions)</li>
+                <li>PLPPAY (Purchase card payments)</li>
+            </ul>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_purccard.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

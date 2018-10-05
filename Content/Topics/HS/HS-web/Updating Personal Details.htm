@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="3" MadCap:lastHeight="3580" MadCap:lastWidth="1498" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Updating Personal Details (updatePerson)</h1>
+        <p>&#160;</p>
+        <p>The method updatePerson allows you to update the existing personal details held within <MadCap:variable name="General.ProductName" /> for a person.</p>
+        <p>A sample XML message to update a person’s details in <MadCap:variable name="General.ProductName" /> is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswsppe1" method="updatePerson" id="12323"&gt;</p>
+        <p class="code">&lt;Person reference="003017"&gt;</p>
+        <p class="code">&lt;Title&gt;Mr&lt;/Title&gt; </p>
+        <p class="code">&lt;Firstname&gt;Response&lt;/Firstname&gt; </p>
+        <p class="code">&lt;Surname&gt;SOAP&lt;/Surname&gt; </p>
+        <p class="code">&lt;Salutation&gt;Dear Mr SOAP&lt;/Salutation&gt; </p>
+        <p class="code">&lt;AddressLine1&gt;Address Line 1&lt;/AddressLine1&gt; </p>
+        <p class="code">&lt;AddressLine2&gt;Address Line 2&lt;/AddressLine2&gt; </p>
+        <p class="code">&lt;AddressLine3&gt;Address Line 3&lt;/AddressLine3&gt; </p>
+        <p class="code">&lt;AddressLine4&gt;Address Line 4&lt;/AddressLine4&gt; </p>
+        <p class="code">&lt;PostCode&gt;SL1 5TO&lt;/PostCode&gt; </p>
+        <p class="code">&lt;HomeTel&gt;h1&lt;/HomeTel&gt; </p>
+        <p class="code">&lt;WorkTel&gt;w1&lt;/WorkTel&gt; </p>
+        <p class="code">&lt;MobileTel&gt;m1&lt;/MobileTel&gt; </p>
+        <p class="code">&lt;DateOfBirth&gt;1980-01-31&lt;/DateOfBirth&gt; </p>
+        <p class="code">&lt;Email&gt;soap.request@coins-global.com&lt;/Email&gt; </p>
+        <p class="code">&lt;ContactMethod&gt;M&lt;/ContactMethod&gt; </p>
+        <p class="code">&lt;ContactTime&gt;Any time&lt;/ContactTime&gt; </p>
+        <p class="code">&lt;Occupation&gt;Consultant&lt;/Occupation&gt; </p>
+        <p class="code">&lt;EmployerName&gt;Employer Name&lt;/EmployerName&gt; </p>
+        <p class="code">&lt;EmployerAddressLine1&gt;Emp Address Line 1&lt;/EmployerAddressLine1&gt; </p>
+        <p class="code">&lt;EmployerAddressLine2&gt;Emp Address Line 2&lt;/EmployerAddressLine2&gt; </p>
+        <p class="code">&lt;EmployerAddressLine3&gt;Emp Address Line 3&lt;/EmployerAddressLine3&gt; </p>
+        <p class="code">&lt;EmployerAddressLine4&gt;Emp Address Line 4&lt;/EmployerAddressLine4&gt; </p>
+        <p class="code">&lt;EmployerPostCode&gt;SL1 5ET&lt;/EmployerPostCode&gt; </p>
+        <p class="code">&lt;Salary&gt;90000&lt;/Salary&gt; </p>
+        <p class="code">&lt;Bonus&gt;9000&lt;/Bonus&gt; </p>
+        <p class="code">&lt;Years&gt;10&lt;/Years&gt; </p>
+        <p class="code">&lt;DataConsentUse&gt;yes&lt;/DataConsentUse&gt; </p>
+        <p class="code">&lt;ThirdPartyUse&gt;no&lt;/ThirdPartyUse&gt; </p>
+        <p class="code">&lt;Password&gt;letmein&lt;/Password&gt; </p>
+        <p class="code">&lt;/Person&gt;</p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p class="code">&#160;</p>
+        <p>In <MadCap:variable name="General.ProductName" /> each person has a unique reference this must be supplied with the message.&#160; </p>
+        <p>Note you only have to supply the fields you want to update.&#160; If the field is not contained in the XML message then the existing value held in <MadCap:variable name="General.ProductName" /> will be retained.</p>
+        <p>The ContactMethod node must have one of the following values:</p>
+        <ul style="list-style-type: disc;margin-left: 63pt;">
+            <p style="list-style-type: disc;">E – Email</p>
+            <p style="list-style-type: disc;">H – Home telephone</p>
+            <p style="list-style-type: disc;">W – Work telephone</p>
+            <p style="list-style-type: disc;">M – Mobile telephone</p>
+            <p style="list-style-type: disc;">P – Post/written communication</p>
+            <p style="list-style-type: disc;">&lt;blank&gt;&#160; - No preference specified</p>
+        </ul>
+        <p>&#160;</p>
+        <p>Certain fields on the person record are also mandatory, these are determined by the House Sales parameter MPERFLD.&#160; The <MadCap:variable name="General.ProductName" /> administrator will be able to advise on what this is set to.</p>
+        <p>&#160;</p>
+        <p>If the update was successful this would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswsppe1" method="updatePerson" id="12323"&gt;</p>
+        <p class="code">&lt;Reference&gt;003017&lt;/Reference&gt; </p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="794" MadCap:lastWidth="1062">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Central<MadCap:variable name="Variables.is" />ed Addressing</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Central<MadCap:variable name="Variables.is" />ed Addressing</h1>
+    <p>Central<MadCap:variable name="Variables.is" />ed addressing ensures that address information for ledger accounts is kept in sync across all <MadCap:variable name="Variables.kco companies" /> in <MadCap:variable name="General.ProductName" />. </p>
+    <p>For example, any change to the controlled fields on a <MadCap:variable name="Variables.pl supplier" /> record in one <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> is replicated up to the CI Office Address record and also to the corresponding <MadCap:variable name="Variables.pl supplier" /> record in all the other <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" />.  Additionally, any change to the <MadCap:variable name="Variables.pl supplier" /> name field is replicated across the <MadCap:variable name="Variables.pl supplier" /> records in each <MadCap:variable name="Variables.kco company" /> though not to the CI Office record.</p>
+    <p>As long as the ledgers are linked to the Company Information Workbench, this always happens.  The CI parameter <span class="parameter">CENT-ADD</span> allows you to choose whether the addresses can be updated on the ledger accounts or on the office record.</p>
+    <p>All other fields on the account record can be maintained separately in each <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> as required.</p>
+    <div class="configuration">
+      <h2 class="print">Technical Details</h2>
+      <p>The following fields are controlled by central<MadCap:variable name="Variables.is" />ed addressing:</p>
+      <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" cellspacing="0">
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <thead>
+          <tr class="TableStyle-COINSBasic-Head-Header1">
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <p class="TableHeader">Field</p>
+            </th>
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />
+            </th>
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <p class="TableHeader">Customer </p>
+            </th>
+            <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+              <p class="TableHeader">Subcontractor </p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Address Line 1</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_add__1</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_add__1 </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_add__1 </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Address Line 2</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_add__2</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_add__2 </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_add__2 </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Address Line 3</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_add__3</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_add__3 </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_add__3 </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Address Line 4</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_add__4</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_add__4 </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_add__4 </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <MadCap:variable name="Variables.postal code" style="text-transform: capitalize;" />
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_pcode</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_pcode </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_pcode </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Telephone</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_phone</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_phone </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_fone </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Fax</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_fax</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_fax </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_fax </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Email</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_email</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">rcm_email </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sbm_email </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td colspan="4" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>
+                <br />The following field is replicated across accounts in all <MadCap:variable name="Variables.kco companies" />, but not to the Company Information office record:</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Account name</td>
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">avm_name</td>
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">rcm_name</td>
+            <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">sbm_name</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/CI/ci_cent-add.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

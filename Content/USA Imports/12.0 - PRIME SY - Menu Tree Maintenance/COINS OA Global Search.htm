@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>COINS OA Global Search</h1>
+        <h2>Module: Configuration in System; Global Functionality</h2>
+        <p>A new search feature allows users to search for records in the COINS database (for example, suppliers, customers, subcontractors or jobs). The search is configurable, so you can choose which tables, and which fields on those tables, to include in the search.</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>Key Parameters to Initially Set:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">SY/GLOBSRCH - Whether the Global Search is in use (Y or N).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">If this is set to N, the Search results only include COINS functions.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This can be overridden for individual users in System &gt; User Maintenance &gt; Users. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">NOTE: To use the search frame, the user must have a COINS Desktop configured.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">SY/SRCHMON - The email address to which any error messages encountered during the global search process will be sent.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">SY/SRCHOPEN - The system default for how links in Global Search results will open.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Main Area – Open in the current main area.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Frame – Open in a new desktop frame.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Frame with Banner – Open in a new desktop frame with the COINS function title (useful if the function has navigation links in the title).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Window – Open in a separate window or tab (this depends on the browser).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This can be overridden for individual users in System &gt; User Maintenance &gt; Users, and for individual search types using System &gt; System Setup &gt; Global Search Configuration.</li>
+        </ul>
+        <p class="caption">Figure 1: Key System Parameters</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 128px;" />
+        </p>
+        <p>&#160;</p>
+        <p>Global Search now has Extended Search Capability (SOLR) to allow the searching and indexing of any data within COINS, including transactional data. The following new SY parameters corresponding to this change are therefore now available.</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>These parameters will be set by COINS Tech Department during installation of SOLR.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">SY/SRCHENGN - Search engine. Blank is the default, which indicates that standard COINS searching will be used.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">SY/SRCHURL - Base URL for Apache SOLR, such as http://localhost:8983/solr/.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">SY/SRCHCOL1 - Collection name for COINS data; each collection has a schema and holds data. Multiple collections can be configured for different COINS environments.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>Before adding or deleting a configuration record, it is necessary to stop the index process, and start it again after the record has been added or deleted.</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>OA ver11.06 makes this possible via Search Broker Status Start and Stop buttons on the Global Search Configuration page.</li>
+        </ol>
+        <p class="caption">Figure 2: Broker Start and Stop Button on Global Search Config Page</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 418px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>Attempting to modify the Global Search Configuration while the Search Brokers are running will result in an error</li>
+        </ol>
+        <p class="caption">Figure 3: Search Broker Error</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_2.png" style="visibility: visible;mso-wrap-style: square;width: 407px;height: 172px;" />
+        </p>
+        <p>The new Global Search Configuration function allows you to set which tables and fields will be searchable. Before making any changes, stop the search index process. See Step #3 above.</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>Global Search comes with several standard search configuration records. If you want to use one of these standard searches, open the record and check the Use box.</li>
+        </ol>
+        <p class="caption">Figure 4: Use Check Box and Security RSP Field</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_3.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 284px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>Make note of the Security RSP field. This is an optional RSP that returns a security query. For example, job-rsp has a function “getSecurityFilter()” which returns a query condition based on the security code and job security that has been setup. COINS uses this to check that the user is allowed to view the record that is found in the search. If not, then the detail frame is not shown and the link on the item is disabled, so the user can see that a job exists but cannot see the details.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">If blank then no security is used.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="7">
+            <li>The Build Data action allows you to create, update or delete search index data for a selected configuration record or records. Run this for any configuration lines that have changed.</li>
+        </ol>
+        <p class="caption">Figure 5: Build Data Action</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_4.png" style="visibility: visible;mso-wrap-style: square;width: 383px;height: 121px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="8">
+            <li>When the appropriate records are selected and the Apply Action button is clicked, COINS displays the following screen, with these options:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Delete - Whether to delete the index data for the selected tables. Use this to remove existing indexed records, for example if you have changed the search conditions.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Initialize - Whether to create index data for the selected tables. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Type - Whether to process company, global or both sets of records. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Companies - If processing company-specific data, this is a list of companies to process.</li>
+        </ul>
+        <p class="caption">Figure 6: Build Data Options</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_5.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 199px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="9">
+            <li>Once fully configured, and with the Search Brokers running, the Search frame can be launched by:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Pressing Ctrl+Shift+?</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Clicking the “Magnifying Glass” button on the Desktop.</li>
+        </ul>
+        <p>&#160;</p>
+        <p class="caption">Figure 7: Magnifying Glass Icon</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_6.png" style="visibility: visible;mso-wrap-style: square;width: 380px;height: 77px;" />
+        </p>
+        <p>NOTE: The Search frame is only available if you have a COINS Desktop configured and if Global Search is enabled by the configuration of both your system and your user record.</p>
+        <p class="caption">Figure 8: Global Search Frame</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_7.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 419px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="10">
+            <li>You can type a word or words to begin the search. As you type, COINS displays matching records, grouped by index type. If you cursor up or down, or hover over an item with the mouse then a detail frame to the right shows more detail about that record.</li>
+        </ol>
+        <p class="caption">Figure 9: Search Frame with Live Data</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_8.png" style="visibility: visible;mso-wrap-style: square;width: 491px;height: 287px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="11">
+            <li>You can filter the search to show only records that belong to the categories you select. COINS remembers your filter settings and the text you searched for, and uses them the next time you open Global Search (until you log out).</li>
+        </ol>
+        <p class="caption">Figure 10: Filtering Search Results</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_9.png" style="visibility: visible;mso-wrap-style: square;width: 524px;height: 307px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="12">
+            <li>Clicking the link on the item launches the corresponding link page. This can open in in a new desktop frame, in a new tab, or in the current main area. See Step #13 below.</li>
+        </ol>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="13">
+            <li>Two new fields have been added to the Preferences tab in User Maintenance.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Search On - Whether the global search feature is available for this user.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">If set to Default, the setting of the SY/GLOBSRCH parameter is used.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Search Open In - How links from the Global Search function should open (in what type of window/frame).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This only applies if the "open in" method has not been set for a particular search type in System &gt; System Setup &gt; Global Search Configuration.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">This can be one of these options:</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Default – Use the setting on the user's record and the SY/SRCHOPEN parameter</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Main Area – Open in the current main area.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Window – Open in a separate window or tab (this depends on the browser).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Frame – Open in a new desktop frame.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Frame with Banner – Open in a new desktop frame with the COINS function title (useful if the function has navigation links in the title).</li>
+        </ul>
+        <p class="caption">Figure 11: New Fields on User Record</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/COINS OA Global Search_10.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 308px;" />
+        </p>
+    </body>
+</html>

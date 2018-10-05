@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="3" MadCap:lastHeight="1408" MadCap:lastWidth="775">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Exposing RO Fields</h1>
+        <p>The benefit of using this method is the fields will be selectable by the user as report columns when building the report, however as RO Fields they will NOT be available for sorting and grouping.&#160; The disadvantage is that the fields will be hard-coded to the state they are exposed as and any change to their functionality must be made by the administrator and cannot be changed by the report writer users. For this reason, it is recommended that RO fields are used in calculations within the Report rather than by Exposing.</p>
+        <p>Go to the OA Reporting and BI Setup and Table Documentation and select the table in which the field you wish to pass parameters to.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Exposing RO Fields.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Exposing RO Fields_1106.png" class="FullWidth" />
+        </p>
+        <p>The Parametrised Fields section then needs to be populated with the appropriate RO_ field and any parameters that are required. (The parameter information can be found in the Database Enquiry.</p>
+        <p>&#160;</p>
+        <p>A single field can be documented more than once with different parameters, for each a balance field can be documented with several dates, such as a year of period end dates.</p>
+        <p class="Example">
+            <p>Examples of an RO_ field and associated parameters are :</p>
+            <p style="font-weight: bold;">jc_job.RO_ContractCosts^TP|-3 <span style="font-weight: normal;">(This Period with period offset  -3)</span></p>
+            <p style="font-weight: bold;">cs_certificate.RO_cst_ctd_cum^10 <span style="font-weight: normal;">(<MadCap:variable name="Variables.Contract Sales" /> Certificate Item – Cumulative to Date Certificate Line 10)</span></p>
+        </p>
+        <p>&#160;</p>
+        <p>Once a RO_ field has been entered in the Table Documentation with appropriate parameters it will then become available in Report Writer for selection as per standard database fields. </p>
+        <p class="note">It will also appear in the Database Enquiry with a field type of EX</p>
+    </body>
+</html>

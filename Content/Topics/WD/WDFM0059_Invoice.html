@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="1540" MadCap:lastWidth="1067">
+  <head>
+    <title>FM Invoice Configurable Documents</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />FM Invoice Configurable Documents</h1>
+    <p>FM Invoice documents (document type FMINV) are used to print invoice documents, whether created from 'normal' FM <MadCap:variable name="Variables.fm job" /> processing, or via the <MadCap:variable name="Variables.fm application" />/certification process. </p>
+    <p>Define the layout of configurable documents using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System</span> module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0501_Configurable_Documents.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">Invoice Style</h2>
+      <p>All FM <MadCap:variable name="Variables.fm applications" /> and invoices have an 'invoice style'. This can be 'SINGLE', 'CONSOLIDATED', 'MAJOR CATEGORY', 'CROSS-<MadCap:variable name="Variables.Jc Contract caps" />'. This affects the <MadCap:variable name="Variables.behaviour" /> of the documents:</p>
+      <ul>
+        <li>SINGLE - the header is a FM <MadCap:variable name="Variables.fm job" /> and the individual lines shown are items (SOR items or cost transactions). You can subhead/subtotal by 'invoice class' ('invoice class' is a category you can apply to a SOR item or cost transaction that enables you to group these items in non-standard ways - and add mark-ups to them).</li>
+        <li>CONSOLIDATED - the header is customer/<MadCap:variable name="Variables.jc contract" /> and the individual lines shown are FM <MadCap:variable name="Variables.fm jobs" /> within this <MadCap:variable name="Variables.jc contract" />.</li>
+        <li>MAJOR CATEGORY - the header is customer/major category and the individual lines shown are FM <MadCap:variable name="Variables.fm jobs" /> within the major category.</li>
+        <li>CROSS-<MadCap:variable name="Variables.Jc Contract caps" /> - the header is customer and the individual lines shown are FM <MadCap:variable name="Variables.fm jobs" /> for the customer.</li>
+      </ul>
+      <p> </p>
+      <h2>To configure an invoice document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span>.</li>
+        <li>Use the document type <span class="userinput">Invoice (FM)</span> (FMINV).
+<ul><li>For single invoice styles</li><ul><li>For a summary invoice (one line per invoice class), <MadCap:variable name="Variables.tick" /><span class="field">Summary </span>and configure the Invoice Class Subtotal form. For example, if you have one invoice class for '<MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />' and one for 'Materials' you can show:
+<table><tbody><tr><td><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /></td><td>21.00</td></tr><tr><td>Materials</td><td>50.24</td></tr></tbody></table></li><li>For a detailed invoice (individual invoice lines), un<MadCap:variable name="Variables.tick" /><span class="field">Summary </span>and configure the standard Header, Body and Footer forms. If you also want subtotals by invoice class, configure the Invoice Class Subtotal form. For example, if you have one invoice class for '<MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />' and one for 'Materials' you can show:
+<table><tbody><tr><td><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /></td><td> </td><td> </td></tr><tr><td> </td><td>Task 1</td><td align="right">10.00</td></tr><tr><td> </td><td>Task 2</td><td align="right">11.00</td></tr><tr><td><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /></td><td> </td><td style="border-bottom: black 3px double;border-top: black 3px double;" align="right">21.00</td></tr><tr><td>Materials</td><td> </td><td> </td></tr><tr><td> </td><td>Mat 1</td><td align="right">30.23</td></tr><tr><td> </td><td>Mat 2</td><td align="right">20.01</td></tr><tr><td>Materials</td><td> </td><td style="border-bottom: black 3px double;border-top: black 3px double;" align="right">50.24</td></tr></tbody></table></li></ul><li>For other invoice styles, <MadCap:variable name="Variables.tick" /><span class="field">Summary </span>and configure the CONSOLIDATED Header, Body and Footer forms on the Extras tab.</li></ul></li>
+        <li>To configure a credit note document, <MadCap:variable name="Variables.tick" /> the <span class="field">Credit Note </span>box; to configure an invoice, leave it un<MadCap:variable name="Variables.tick" />ed. The credit note flag only applies if the separate <span class="function" title="Function:%WFM5130BSIH">Credit Notes</span> workbench is being used. In this case credit notes will only ever include negative items - and positive items will appear on an invoice. This type of credit note is always 'single' style, the idea being that giving credit would be an exception so would normally only apply to single <MadCap:variable name="Variables.fm jobs" />. If the separate workbench is not used, an invoice would be a credit note if the total is negative and would appear on the normal <span class="function" title="Function:%WFM5141BSIH">Invoices</span> workbench.</li>
+      </ol>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDFM0060_Application_and_Invoice_Fields.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SW/sw_credsing.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="429" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Document Management Extended Search - </MadCap:conditionalText>Security</h1>
+        <p class="Body">Existing <MadCap:variable name="Variables.kco company" /> and <MadCap:variable name="Variables.jc contract" /> security is applied automatically to attached documents. When a user tries to open a document, either from Global Search or from any document browse in <MadCap:variable name="General.ProductName" />, the document is withheld if the user is not author<MadCap:variable name="Variables.is" />ed to see either the company or the <MadCap:variable name="Variables.jc contract" /> (if the document belongs to a <MadCap:variable name="Variables.jc contract" />).</p>
+        <p class="Body">To prevent the new search functionality allowing users to view documents you do not want them to see, you may need to consider additional security especially if HR or Payroll are in use. For example:</p>
+        <ul>
+            <li>Restrict which documents are processed for extraction and indexing.  This is managed by the  %DM_DOCUMENT record in <span class="Function">Global Search Configuration</span> – the <span class="Field">Condition Value</span> field holds a “can-do” list of document groups; only documents matching this list will be indexed.  The default value is “*” (for all). This is standard data so it will be reloaded during upgrades; if you want to change this you should copy %DM_DOCUMENT to a non-% record.</li>
+            <li>Restrict which search results the user can see.  This uses Document Group security in DM only – it does not apply <MadCap:variable name="Variables.jc contract" /> or GL security.</li>
+        </ul>
+    </body>
+</html>

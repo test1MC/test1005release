@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="611" MadCap:lastWidth="601">
+  <head>
+    <title>More Than One <MadCap:variable name="Variables.Kco Company caps" /> in a Scheme</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">More Than One <MadCap:variable name="Variables.Kco Company caps" /> in a Scheme</h1>
+    <p>In the <span class="parameter">SC/LINKCOIR </span>parameter enter a list of the <MadCap:variable name="Variables.kco company" /> numbers you want to treat as one scheme.</p>
+    <p>Enter a list of linked <MadCap:variable name="Variables.kco company" /> numbers, and separate each group of <MadCap:variable name="Variables.kco companies" /> with a pipe character.</p>
+    <p>For example:<br />    <strong>1,2,3|5,6|7 </strong></p>
+    <p>links <MadCap:variable name="Variables.kco companies" /> 1,2 and 3 together, and <MadCap:variable name="Variables.kco companies" /> 5 and 6 together.  <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> 7 is not linked.  If a <MadCap:variable name="Variables.kco company" /> is not listed, it will not be linked. </p>
+    <p>This allows you to link <MadCap:variable name="Variables.kco companies" /> for reporting and submission separately from the <span class="parameter">CO/LINKCOMP </span>list of linked <MadCap:variable name="Variables.kco companies" />, which are linked for maintenance.  If <span class="parameter">LINKCOIR </span>is blank, <MadCap:variable name="General.ProductName" /> uses the list from <span class="parameter">LINKCOMP</span>.</p>
+    <p>Payments will take the contractor's details from the parameter settings in the main <MadCap:variable name="Variables.kco company" />.  The main <MadCap:variable name="Variables.kco company" /> in each case is the first <MadCap:variable name="Variables.kco company" /> in the comma-separated list.  The main <MadCap:variable name="Variables.kco company" /> is also referred to as the submission <MadCap:variable name="Variables.kco company" />.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">It is important to ensure that <span class="parameter">LINKCOIR </span>and <span class="parameter">LINKCOMP </span>are NOT set as <a href="WDSY0016_Company-Specific_Parameters.html"><MadCap:variable name="Variables.kco company" />-specific parameters</a> in any of the <MadCap:variable name="Variables.kco companies" /> involved.</div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/SC_LINKCOIR.htm" />
+          <MadCap:relatedTopic src="../Parameters/CO/CO_LINKCOMP.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

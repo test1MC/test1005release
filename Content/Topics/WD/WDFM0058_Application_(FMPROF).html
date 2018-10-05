@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>FM Configurable <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> (FMPROF) Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">FM Configurable <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> (FMPROF) Documents</h1>
+    <p>FM <MadCap:variable name="Variables.fm application" /> documents (document type FMPROF) are used to print <MadCap:variable name="Variables.fm applications" />:</p>
+    <ul>
+      <li>Using the "normal" <MadCap:variable name="Variables.fm job" /> processing ("simple measured" invoice type).</li>
+      <li>Using the <MadCap:variable name="Variables.fm application" />/certification process ("transaction" invoice type) where all information within the process is at the item level; that is, individual SOR items or cost transactions (FM parameter <span class="parameter">INVGENER </span>is set to N). Invoices created from this process use the FMINV document.</li>
+    </ul>
+    <p>Define the layout of configurable documents using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System</span> module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDFM0057_Application_(FMAPP).html" />
+        <MadCap:relatedTopic src="WDFM0059_Invoice.html" />
+        <MadCap:relatedTopic src="WDSY0501_Configurable_Documents.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">Invoice Style</h2>
+      <p>All FM <MadCap:variable name="Variables.fm applications" /> and invoices have an 'invoice style'.  This can be 'SINGLE', 'CONSOLIDATED', 'MAJOR CATEGORY', 'CROSS-<MadCap:variable name="Variables.Jc Contract caps" />'.  This affects the <MadCap:variable name="Variables.behaviour" /> of the documents:</p>
+      <ul>
+        <li>SINGLE - the header is a FM <MadCap:variable name="Variables.fm job" /> and the individual lines shown are items (SOR items or cost transactions).  You can subhead/subtotal by 'invoice class' ('invoice class' is a category you can apply to a SOR item or cost transaction that enables you to group these items in non-standard ways - and add mark-ups to them).</li>
+        <li>CONSOLIDATED - the header is customer/<MadCap:variable name="Variables.jc contract" /> and the individual lines shown are FM <MadCap:variable name="Variables.fm jobs" /> within this <MadCap:variable name="Variables.jc contract" />.</li>
+        <li>MAJOR CATEGORY - the header is customer/major category and the individual lines shown are FM <MadCap:variable name="Variables.fm jobs" /> within the major category.</li>
+        <li>CROSS-<MadCap:variable name="Variables.Jc Contract caps" /> - the header is customer and the individual lines shown are FM <MadCap:variable name="Variables.fm jobs" /> for the customer. </li>
+      </ul>
+      <p> </p>
+      <h2>To configure a <MadCap:variable name="Variables.fm application" /> document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span>.</li>
+        <li>Use the document type <span class="userinput">Proforma (FM)</span> (FMPROF).</li>
+        <ul>
+          <li>For single invoice styles</li>
+          <ul>
+            <li>For a summary <MadCap:variable name="Variables.fm application" /> (one line per invoice class), <MadCap:variable name="Variables.tick" /><span class="field">Summary </span>and configure the Invoice Class Subtotal form.  For example, if you have one invoice class for '<MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />' and one for 'Materials' you can show: 
+<p /><table><tbody><tr><td><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /></td><td>21.00</td></tr><tr><td>Materials </td><td>50.24</td></tr></tbody></table><br /></li>
+            <li>For a detail <MadCap:variable name="Variables.fm application" /> (individual invoice lines), un<MadCap:variable name="Variables.tick" /><span class="field">Summary </span>and configure the standard Header, Body and Footer forms.  If you also want subtotals by invoice class, configure the Invoice Class Subtotal form.  For example, if you have one invoice class for '<MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />' and one for 'Materials' you can show: 
+<table><tbody><tr><td><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /></td><td /><td /></tr><tr><td /><td>Task 1  </td><td align="right">10.00</td></tr><tr><td /><td>Task 2 </td><td align="right">11.00</td></tr><tr><td><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /></td><td /><td style="BORDER-BOTTOM: black 3px double;BORDER-TOP: black 3px double;" align="right">21.00</td></tr><tr><td>Materials  </td><td /><td /></tr><tr><td /><td>Mat 1 </td><td align="right">30.23</td></tr><tr><td /><td>Mat 2 </td><td align="right">20.01</td></tr><tr><td>Materials </td><td /><td style="BORDER-BOTTOM: black 3px double;BORDER-TOP: black 3px double;" align="right">50.24</td></tr></tbody></table></li>
+          </ul>
+          <li>For other invoice styles, <MadCap:variable name="Variables.tick" /><span class="field">Summary </span>and configure the CONSOLIDATED Header, Body and Footer forms on the Extras tab.</li>
+        </ul>
+      </ol>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDFM0060_Application_and_Invoice_Fields.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="5" MadCap:lastHeight="3998" MadCap:lastWidth="971">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Background Process Configuration</h1>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;margin-left: 0.5in;">The new function <span class="Function">Background Process Configuration</span> (%WSY1330SMNP) allows you to configure the required background processes.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Background Process Configuration Screen</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SY Background Process Control/Background Process Configuration.png" class="FullWidth" />
+        </p>
+        <p class="Body">The Processes tab shows the single process background processes, together with a selector for each of the multi-process background processes (ESB send/receive) which controls the visibility of the ESB Send and ESB Receive tabs.</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel" style="font-weight: normal;"><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" />boxes</div>
+                <div class="FieldDef">Whether the process is required.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Status</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Shows the current status of the process (green if the process can be found to be running; red if it is not running). The status shown is evaluated at the point the page is refreshed. </p>
+                    <p>Text next to the status indicator shows the date that the process started (or the time, if it started today).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Auto</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Indicates whether the process will be started when the database brokers script is started.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Poll Interval</p>
+                </div>
+                <div class="FieldDef">
+                    <p> A setting on some of the processes; this is the number of seconds it will pause between looking for things to do.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Start/Stop</div>
+                <div class="FieldDef">  These allow control of the process.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Log</div>
+                <div class="FieldDef"> Allows you to view the log file (providing it is configured in <span class="parameter">SY/WEBLOG</span>).</div>
+            </div>
+        </div>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;margin-left: 0.5in;">The ESB Send tab contains additional settings for each ESB sender process.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: ">Background Process Configuration - ESB&#160;Send Tab</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SY Background Process Control/Background Process Configuration ESB Send.png" class="FullWidth" />
+        </p>
+        <p class="Body">It also shows the status, and has START, STOP and LOG buttons.</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Poll<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The polling time in seconds (defaults to 10).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Endpoint(s)<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p> The endpoints that will be sent by this process.&#160; This is a CAN-DO list of endpoint names.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Retries </p>
+                </div>
+                <div class="FieldDef">
+                    <p> The number of retries that will be tried before stopping the queue (defaults to 6).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Multi </div>
+                <div class="FieldDef">The number of messages that will be batched together and sent if there are consecutive messages for the same endpoint (requires ESB configuration to define the messages that can be batched).</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Auto </div>
+                <div class="FieldDef">Whether the process should be started at DB broker start.</div>
+            </div>
+        </div>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;margin-left: 0.5in;">The ESB Receive tab contains additional settings for each ESB receiver process.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: ">Background Process Configuration - ESB&#160;Receive Tab</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SY Background Process Control/Background Process Configuration ESB Receive.png" class="FullWidth" />
+        </p>
+        <p class="Body">The ESB receiver is used ONLY when SONIC ESB is in use. It reads messages SONIC ESB queues and processes the message payload with a <MadCap:variable name="General.ProductName" /> service.</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock" style="page-break-before: always;">
+                <div class="FieldLabel">
+                    <p style="page-break-inside: avoid;column-break-after: avoid;">Poll	</p>
+                </div>
+                <div class="FieldDef">
+                    <p> The number of seconds to wait before polling for more messages.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Endpoint</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The SONIC endpoint to read messages from.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Queue </p>
+                </div>
+                <div class="FieldDef">
+                    <p> Whether the SONIC endpoint is a queue or a topic.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Reply To </div>
+                <div class="FieldDef">If set then the Sonic Queue which will receive the responses to the message.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Auto </div>
+                <div class="FieldDef">Whether this process should be started automatically with the DB brokers.</div>
+            </div>
+        </div>
+        <p class="Body">If you start or stop any of the processes, you will need to refresh the page for the new status to show.&#160; It can take some time for the process to start and stop.</p>
+    </body>
+</html>

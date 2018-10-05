@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2710" MadCap:lastWidth="1077">
+    <head><title>FM Task Print</title>
+        <style>/*<![CDATA[*/
+img.a4
+{
+	width: 16cm;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">FM Task Print</h1>
+        <p><MadCap:variable name="General.ProductName" /> allows you to configure the format of the task print to suit your needs.</p>
+        <p>You define the layout of statements using <span class="function" title="Function:%WSYBSFS">Document Designer</span>. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for general information on how to configure documents for printing. </p>
+        <p>You need to set up a configurable document for each different type of task print you want to print.</p>
+        <div class="process">
+            <h2 class="print">To define the layout for the FM Task Print:</h2>
+            <ol>
+                <li>Use the document type Task Print (FM).</li>
+                <li>You can configure a simple document that prints header and footer forms, and prints sw_sor records using a BODY form.</li>
+                <li>You can also configure a more complex document that prints extended text for hazards, task description, task instructions, and task notes. To configure this:</li>
+                <ol>
+                    <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field">Use Extended Body Print?</span> field.</li>
+                    <li>Configure the fields to print using the following forms: 
+<ul><li>TASKDETHAZ - to print the first line of Hazards (If there is only one line, TASKDETHAZE is used.)</li><li>TASKDETHAZC - to print the subsequent Hazard lines (TASKDETHAZCE is used to print the last line.)</li><li>TASKDESCH - Task description "header"</li><li>TASKDETDES / TASKDETDESC - to print the task description (the first and subsequent lines)</li><li>TASKDETINS / TASKDETINSC - to print the task instructions (the first and subsequent lines)</li><li>TASKDETOTH / TASKDETOTHC - to print the task other notes (the first and subsequent lines)</li></ul><p>These print before any sw_sor records in the BODY form.</p></li>
+                    <li>The document will then print a TASK form and a TASKDETBOTTOM form.&#160;The TASKDETBOTTOM form is for a fixed-length form.&#160;Specify the length (number of lines) using the <span class="field">Body Bottom Height</span> field.&#160;If there are not enough lines at the bottom of the page to print this, it is printed on a new page.</li>
+                </ol>
+            </ol>
+            <p>The following images show sample prints, with the appropriate forms indicated at the right.</p>
+            <p>
+                <img src="../../Resources/Images_D-F/FM/FM_001901.gif" />
+            </p>
+            <p>
+                <img src="../../Resources/Images_D-F/FM/FM_001902.gif" />
+            </p>
+        </div>
+    </body>
+</html>

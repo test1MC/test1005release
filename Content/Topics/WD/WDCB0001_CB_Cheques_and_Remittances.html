@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="995" MadCap:lastWidth="1015">
+  <head>
+    <title>Configurable <MadCap:variable name="Variables.Cash Book caps" /> <MadCap:variable name="Variables.Cheques caps" /> and Remittances</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Configurable <MadCap:variable name="Variables.Cash Book caps" /> <MadCap:variable name="Variables.Cheques caps" /> and Remittances</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> lets you configure the format for printing <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /><MadCap:variable name="Variables.cheques" /> and remittances.  You can print <MadCap:variable name="Variables.cheques" /> and remittances separately, or as a combined document.  You can also configure a document to print multiple <MadCap:variable name="Variables.cheques" /> on one sheet. </p>
+    <p>Define the layout of <MadCap:variable name="Variables.cheques" /> and remittances using <span class="function" title="Function:%WSYBSFS">Document Designer</span>. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for general information on how to configure documents for printing. </p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDCB0002_Printing_the_Cheque_Amount_in_Words.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To define a document for <MadCap:variable name="Variables.cheques" /> and/or remittances:</h2>
+      <ol>
+        <li>Use the document type "<MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" />/Remittances (CB)".</li>
+        <li>In the <span class="field">Layout Type</span> field, select:
+<ul><li><span class="userinput"><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /></span> to define the layout for <MadCap:variable name="Variables.cheques" />;</li><li><span class="userinput">Combined</span> to define the layout for combined <MadCap:variable name="Variables.cheques" /> and remittances;</li><li><span class="userinput">Remittance</span> to define the layout for remittances.</li></ul></li>
+        <li>To configure a combined <MadCap:variable name="Variables.cheque" />/remittance document, configure the <strong>body</strong> form to print the remittance lines. The <MadCap:variable name="Variables.cheque" /> can be either at the top or at the bottom of the page. If the remittance lines take up more than one page, you will need to print a "VOID" form on the <MadCap:variable name="Variables.cheque" /> portion of the stationery on all pages after the first one. Configure a form for this and enter its name in the <span class="field">VOID <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Form </span>field, then, depending on whether the <MadCap:variable name="Variables.cheque" /> is at the top or bottom of the stationery, do one of the following:</li>
+        <ul>
+          <li>If the <MadCap:variable name="Variables.cheque" /> is at the top: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Top of Page</span>. In the <span class="field">Continuation Header Form</span> field, enter the name of the VOID form. Configure the Header Form to print the <MadCap:variable name="Variables.cheque" /> details.</li>
+          <li>If the <MadCap:variable name="Variables.cheque" /> is at the bottom: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Bottom of Page</span>. Configure a form to print the <MadCap:variable name="Variables.cheque" /> details, and enter that form name in both the Footer Form and Continuation Footer Form fields. <MadCap:variable name="General.ProductName" /> then replaces the footer with the VOID form after the first page.</li>
+        </ul>
+        <li>To print <MadCap:variable name="Variables.cheques" /> one per page, leave the <span class="field">Multiple <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> per Page?</span><MadCap:variable name="Variables.tick" />box blank, and configure the header or footer form to print the <MadCap:variable name="Variables.cheque" /> details. To print multiple <MadCap:variable name="Variables.cheques" /> per page, select <span class="field">Multiple <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> per Page?</span>, and configure the body form to print the <MadCap:variable name="Variables.cheque" /> details.
+<p class="noteheader">NOTE</p><Div class="note">Each document needs to have a BODY form (even if it doesn't print anything).</Div></li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">
+        <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" />
+        <MadCap:variable name="Variables.cheques" /> and remittances - parameters</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/CB/cb_chqrempl.htm" />
+          <MadCap:relatedTopic src="../Parameters/CB/cb_chqremsc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

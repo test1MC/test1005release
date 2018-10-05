@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>[%=Variables.Sc Insother caps%] - Checks Made</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print"><MadCap:variable name="Variables.Sc Insother caps" /> - Checks Made</h1>
+        <p><MadCap:variable name="Variables.Sc Insother caps" /> processing makes the following checks:</p>
+        <h2>Order Entry</h2>
+        <p>Entering a subcontract order causes the <MadCap:variable name="Variables.sc insother" /> information the subcontractor record to be verified; if any of the <MadCap:variable name="Variables.sc scheme" /> records triggers an error, it will not possible to enter the order.</p>
+        <h2>Committing an Order</h2>
+        <p>When committing a subcontract order causes, if any of the <MadCap:variable name="Variables.sc scheme" /> records on either the subcontractor record or the order triggers an error, it will not possible to commit the subcontract order.</p>
+        <p>If a record with the same <MadCap:variable name="Variables.sc scheme" /> type exists on both the subcontractor and the order it must be valid on both; it will not be possible to use <MadCap:variable name="Variables.sc scheme" /> information on the order to override information on the subcontractor record.&#160; For example, if there as an expired public liability insurance record on the subcontractor and a valid public liability insurance record on the subcontract it will not be possible to commit the subcontract order.</p>
+        <h2>Certificate Entry</h2>
+        <p>When entering certificates, <MadCap:variable name="General.ProductName" /> checks the <MadCap:variable name="Variables.sc scheme" /> status of the subcontractor and the relevant subcontract, and displays the appropriate warnings or errors.</p>
+        <p>If the <MadCap:variable name="Variables.sc insurance" /> test is marked as 'apply levy' and SC parameter <span class="parameter">LEVYITEM</span> is set to a valid certificate definition line, then if the transaction date test fails, <MadCap:variable name="General.ProductName" /> applies the rate to the certificate detail line. </p>
+        <h2><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> Invoice Entry</h2>
+        <p>If the <span class="pARAMETER">INVINS </span>parameter is set to Y, <MadCap:variable name="General.ProductName" /> will display a message during <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> Invoice Entry if the <MadCap:variable name="Variables.pl supplier" /> - or the <MadCap:variable name="Variables.pl supplier" />'s corresponding subcontractor account - has <MadCap:variable name="Variables.sc insurance" /> records which have Invoice/Certificate Entry set to Warn or Error and which have expired on the date the invoice is entered or have missing details.<br /></p>
+        <h2>Payment Processing</h2>
+        <p><span class="function" title="Function:%WSC1100RSBP">Select/Deselect Certificates (Batch)</span> - certificates are not selected for payment if the test fails - that is, if the certificate is for a subcontract which was raised py an order that has missing or expired <MadCap:variable name="Variables.sc scheme" /> information.&#160; The <span class="function" title="Function:%WSC1100RSBP">Select/Deselect Certificates (Batch)</span> report shows the reason the certificate has not been selected, along with the order number. </p>
+        <p><span class="function" title="Function:%WSC1110BSPY">Select/Deselect Certificates (Manual)</span> - <MadCap:variable name="General.ProductName" /> displays a message if the test fails.<br /><MadCap:variable name="General.ProductName" /> checks configured <MadCap:variable name="Variables.sc insurances" /> that require validation for whether insurer and policy number set and whether <MadCap:variable name="Variables.expiry" /> date is set or is within the lead time to <MadCap:variable name="Variables.expiry" /> (for example: 1 month to <MadCap:variable name="Variables.expiry" />) (if <span class="parameter">PAYINS </span>= "E" then stops if W then gives warning).</p>
+        <p><span class="function" title="Function:%WPL1100RAIN">Select/Deselect Invoices (Batch)</span> - During invoice payment selection, <MadCap:variable name="General.ProductName" /> checks the <MadCap:variable name="Variables.sc scheme" /> status of any subcontractor accounts linked to the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span><MadCap:variable name="Variables.pl suppliers" />, and <MadCap:variable name="Variables.sc scheme" /> information entered directly against <MadCap:variable name="Variables.pl suppliers" /> which are not suppliers of subcontract <MadCap:variable name="Variables.labour" />.&#160; The SC parameters <span class="parameter">PAYINS </span>and <span class="parameter">PAYINSPL </span>determine whether payment can be made.</p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SC/SC_PAYINS.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/SC_PAYINSPL.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

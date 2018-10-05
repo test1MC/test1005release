@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="1581" MadCap:lastWidth="1266">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Invoice Auto matching</h1>
+        <p>When 3-way matching Purchase Orders to GRNs to Invoices, or 2-way matching POs to Invoices there are seven criteria that are vital in the auto-matching process:</p>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">The Purchase Order number</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">Product Code </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">Delivery ticket number </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">Delivery date</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">Quantity</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">Price</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">Line Amount</li>
+        </ul>
+        <p>All but the Purchase Order number can be turned off using the parameter PO/AUTCHK. This parameter holds a pipe-separated list of options. For example:</p>
+        <p>ARTCODE=Y|SUPREF=Y|DELDATE=Y|QTYEXP=Y|PRICEEXP=N|AMTEXP=Y</p>
+        <p>Here all criteria are checked except for the expected price. If the parameter is blank all checks are made.</p>
+        <p>Supplier by supplier these settings can be overridden in the eCommerce Configuration PLINV record. </p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Overriding auto-matching criteria</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/Invoice Auto matching.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Here the Delivery Date criterion has been relaxed for Acme Open Order Limited.</p>
+        <p>&#160; </p>
+    </body>
+</html>

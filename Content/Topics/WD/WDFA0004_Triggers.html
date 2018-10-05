@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1670" MadCap:lastWidth="998">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Asset Triggers</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Asset Triggers</h1>
+    <p>Triggers let you keep track of when events related to <MadCap:variable name="Variables.pc plant" /> or vehicle assets are due. For example, safety inspections which are due after a given number of months, or services which are due after a given mileage.</p>
+    <p>
+      <MadCap:variable name="General.ProductName" /> tests the current or most recent value of the trigger to see whether it has expired, that is, when the event which the trigger refers to is due. For example, when a vehicle has reached a given mileage or when a <MadCap:variable name="Variables.pc plant" /> item has been used for a given number of hours. You can update the value of the trigger:</p>
+    <ul>
+      <li>Manually from the Triggers option in <span class="function" title="Function:%WFA2400BFAA&quot;">FA Asset Workbench</span> or during one of several processing functions).</li>
+      <li>For mileage triggers: from the mileage on the asset record using <!-- <span class="function" title=Function:%FL702">Process Mileage Triggers</span> in <span class="module">Fleet Manager</span>.</li>
+<li>For "time  --><MadCap:variable name="Variables.pc onhire" />" triggers: using <span class="function" title="Function:%WPC7040RFAA&quot;">Asset Trigger Definitions</span>.</li>
+      <li>Add a new trigger.</li>
+      <li>Choose the data type and display format of the trigger.  A trigger can be one of the following types:</li>
+      <ul>
+        <li>Characters</li>
+        <li>Date</li>
+        <li>Decimal</li>
+        <li>Integer</li>
+        <li>Logical</li>
+      </ul>
+      <li>Select the trigger type and enter the value: these govern when the trigger will fire, and how it will be reset.  The trigger has a current value and a "trigger point" ? a value at which it expires/is triggered.  Which of these changes on reset is affected by the trigger type.  For example:</li>
+      <ul>
+        <li>If you are doing a 10k service on a car you will want the current reading to be unaffected by reset and the trigger point to be updated (from 50K to 60K for example).  You would do this with a PL (plus) type trigger - there is no "Reset To" and "Value" (10k) will determine the reset trigger point value (new trigger point will be current + Value).</li>
+        <li>For a 500 hour use service, you may want the trigger point to be constant (500) and the current reading to reset.  This would be done with a GE type, and "Reset To" would be zero. </li>
+      </ul>
+      <p>Triggers can be reset to a fixed value (like "0" or "yes"), to the current value of the trigger plus or minus a fixed number, or to a number of days, months or years after today's date.  </p>
+      <li>For EQ, GE and LE type triggers, specify how the current value will be reset when the trigger is reset.</li>
+      <li>Specify the action <MadCap:variable name="General.ProductName" /> will take if someone selects the asset (for example when entering a dispatch or changing an item <MadCap:variable name="Variables.pc onhire" />).  <MadCap:variable name="General.ProductName" /> can stop the user selecting the asset, or issue a warning that the trigger has expired, or do nothing.</li>
+      <li>Save the trigger definition.</li>
+      <p>Table of Trigger Types and How they are Reset</p>
+      <table style="FONT-SIZE: 9pt;mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+        <thead>
+          <tr class="TableStyle-COINSBasic-Head-Header1">
+            <th valign="top" class="TableStyle-COINSBasic-HeadE-Column1-Header1">Trigger Type</th>
+            <th valign="top" class="TableStyle-COINSBasic-HeadE-Column1-Header1">Available on Data Types</th>
+            <th valign="top" class="TableStyle-COINSBasic-HeadE-Column1-Header1">Fires when current value is?</th>
+            <th valign="top" class="TableStyle-COINSBasic-HeadE-Column1-Header1">When trigger fires, current value is ?</th>
+            <th valign="top" class="TableStyle-COINSBasic-HeadE-Column1-Header1">When trigger fires, Expires field is ?</th>
+            <th valign="top" class="TableStyle-COINSBasic-HeadD-Column1-Header1">Last Reset field is?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Equal (EQ)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Character, Integer, Logical</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Equal to <strong>Expires</strong> field</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to <strong>Reset To</strong></p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Not reset</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Blank (previous fired value makes no sense ? there is only one option)</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Plus (PL)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Decimal, Integer</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Greater than/equal to <strong>Expires</strong> field</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Not reset</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to Current value plus <strong>Value</strong></p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Previous value; not updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Minus (MI)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Decimal, Integer</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Less than/equal to <strong>Expires</strong> field</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Not reset</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to Current value minus <strong>Value</strong></p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Previous value; not updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Greater Than or Equal (GE)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Decimal, Integer</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Greater than/equal to <strong>Expires</strong> field</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to <strong>Reset To</strong></p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Not reset </p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Date; updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Less Than or Equal (LE)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Decimal, Integer</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Less than/equal to <strong>Expires</strong> field</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to <strong>Reset To</strong></p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Not reset </p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Date; updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Days (DY)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Date</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Equal to/later than <strong>Expires</strong> field (date)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Current value is always today</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to Current date plus <strong>Value</strong> (days)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Date; not updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Months (MO)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Date</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Equal to/later than <strong>Expires</strong> field (date)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Current value is always today</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to Current date plus <strong>Value</strong> (months)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Date; not updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Years (YR)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Date</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Equal to/later than <strong>Expires</strong> field (date)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Current value is always today</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to Current date plus <strong>Value</strong> (years)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Date; not updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Month End (ME)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Date</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Equal to/later than <strong>Expires</strong> field (date)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Current value is always today</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Set to End of current month plus <strong>Value</strong> (months) </p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>Date; not updateable</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td valign="top" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>Year End (YE)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>Date</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>Equal to/later than <strong>Expires</strong> field (date)</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>Current value is always today</p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>Set to End of current month plus <strong>Value</strong> (years) </p>
+            </td>
+            <td valign="top" class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+              <p>Date; not updateable</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ul>
+    <MadCap:relationshipsProxy class="relatedTopics" />
+  </body>
+</html>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Multi-Currency and Joint-Venture Reporting</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">GL&#160;Reporter – </MadCap:conditionalText>Multi-Currency and Joint-Venture Reporting</h1>
+        <p>If you use multiple <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> (kcos) to record the transactions of other group entities (subsidiaries, associates, joint ventures, etc.), you may need to produce single entity and/or "consolidated" reports. This is more complex if the functional currency (base currency) is different from one <MadCap:variable name="Variables.kco company" /> to the next -&#160;"consolidated" reports often need to use a common "presentation" currency. This may also require including varying percentages of joint venture(s).</p>
+        <p>The GL reporter allows you to:</p>
+        <ul>
+            <li>
+                <p>Vary the base/alternative base currency for particular columns that use <MadCap:variable name="Variables.kco company" /> groups and make it different from the one chosen for the whole report.</p>
+            </li>
+            <li>
+                <p>Apply a percentage rate to the column value.&#160; For example, in joint ventures you may only want to count part of the total value in the consolidated figures. <br /></p>
+            </li>
+        </ul>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0153_Alternative_Base_Currency.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2>To configure a consolidated report:</h2>
+            <ol>
+                <li>
+                    <p>Use <span class="function" title="Function:%WSY2040COG"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Group Maintenance</span> to set up <MadCap:variable name="Variables.kco company" /> groups as required:</p>
+                    <ul>
+                        <li>
+                            <p>Set up a group that contains <strong>all</strong> the <MadCap:variable name="Variables.kco companies" /> you want to consolidate across.</p>
+                        </li>
+                        <li>
+                            <p>Set up groups for each combination of <MadCap:variable name="Variables.kco companies" /> you want to show in a single column.&#160;&#160;For each of these groups, all the <MadCap:variable name="Variables.kco companies" /> in the group should use the same base currency or alternative base currency.</p>
+                        </li>
+                        <li>
+                            <p>It is useful to also create a company group for each individual company. This allows company comparisons within a single report.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Typically you would write the report in the <MadCap:variable name="Variables.kco company" /> that uses the presentation currency as its base currency.</p>
+                </li>
+                <li>
+                    <p>On each row,&#160; in the <span class="field"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Group</span> field, enter the <MadCap:variable name="Variables.kco company" /> group that includes all the <MadCap:variable name="Variables.kco companies" /> you want to report on.</p>
+                </li>
+                <li>
+                    <p>On each column, when adding any relevant decimal item (Opening Balance, Closing Balance and Movement) :</p>
+                    <ul>
+                        <li>
+                            <p>In the <span class="field"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Group</span> field, enter the <MadCap:variable name="Variables.kco company" /> group that includes the <MadCap:variable name="Variables.kco companies" /> whose figures you want to add together.&#160; These could be groups that include a single <MadCap:variable name="Variables.kco company" /> only, or they could&#160;include several <MadCap:variable name="Variables.kco companies" /> that use the same base or alternative base currency.&#160;</p>
+                        </li>
+                        <li>
+                            <p>Specify which currency to show&#160;(the base currency or one of the alternative base currencies).</p>
+                        </li>
+                    </ul>
+                    <p>For example, if you have <MadCap:variable name="Variables.kco companies" /> as follows:</p>
+                    <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+                        <colgroup>
+                            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                        </colgroup>
+                        <thead>
+                            <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                                <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                                    <p class="TableHeader"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />
+                                    </p>
+                                </th>
+                                <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                                    <p>Base currency</p>
+                                </th>
+                                <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                                    <p>Alternative <br />Base Currency 1</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                                <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                                    <p>1</p>
+                                </td>
+                                <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                                    <p>GBP</p>
+                                </td>
+                                <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                                <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                                    <p>2</p>
+                                </td>
+                                <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                                    <p>EUR</p>
+                                </td>
+                                <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                                    <p>GBP</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                                <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                                    <p>3</p>
+                                </td>
+                                <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                                    <p>USD</p>
+                                </td>
+                                <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                                    <p>GBP</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>you would use a <MadCap:variable name="Variables.kco company" /> group on the&#160;report rows that includes&#160;<MadCap:variable name="Variables.kco companies" /> 1, 2 and&#160;3.&#160;&#160;You could then configure&#160;separate report columns&#160;for each <MadCap:variable name="Variables.kco company" />:</p>
+                    <ul>
+                        <li>
+                            <p>Column 1 would specify a group that only included <MadCap:variable name="Variables.kco company" /> 1, and would use "base" currency.</p>
+                        </li>
+                        <li>
+                            <p>Column 2 would specify a group that only included <MadCap:variable name="Variables.kco company" /> 2, and would use "alternative base 1".</p>
+                        </li>
+                        <li>
+                            <p>Column&#160;3 would specify a group that only included <MadCap:variable name="Variables.kco company" /> 3, and would use "alternative base 1".</p>
+                        </li>
+                    </ul>
+                    <p>Alternatively, you could consolidate <MadCap:variable name="Variables.kco companies" /> 2 and 3 in a single column, using a group that included both <MadCap:variable name="Variables.kco companies" />, and again used "alternative base 1".</p>
+                </li>
+            </ol>
+        </div>
+        <h2>To report a percentage of the total (for a joint venture):</h2>
+        <p>When adding any relevant decimal item (Opening Balance, Closing Balance and Movement):</p>
+        <ol>
+            <li>
+                <p>Enter the percentage to report on in the <span class="field">Reported Percentage</span> field.</p>
+            </li>
+        </ol>
+        <div style="BACKGROUND-COLOR: #eeeeee;DISPLAY: none;COLOR: #555555;">
+            <h2>To report in a different currency:</h2>
+            <ol>
+                <li>
+                    <p>Choose the currency to display (the base currency or one of the alternative base currencies).&#160;</p>
+                </li>
+                <li>
+                    <p>You must also have a value in the <span class="field"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Group</span> field.&#160;</p>
+                </li>
+            </ol>
+            <p>When the report is run, If the reporting <MadCap:variable name="Variables.kco company" /> is included in the <MadCap:variable name="Variables.kco company" /> group, the column will be displayed using the base/alternative base currency set against the column, instead of the report currency.</p>
+        </div>
+    </body>
+</html>

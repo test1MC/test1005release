@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Parameters</h1>
+        <p class="Body" MadCap:conditions="COINS.ScreenOnly">This section describes the parameters that are related to Leave of Absence (LOA)&#160;processing.</p>
+        <h2 MadCap:autonum="1.1 ">HR System Parameters</h2>
+        <p class="Body">Two HR System Parameters (<MadCap:xref href="#HRSysParameters" class="ImageRef"><i>Figure 1:  HR System Parameters</i></MadCap:xref>) found in <MadCap:variable name="General.ProductName" />&#160;OA in <i>System &gt;&#160;System Setup &gt;&#160;Global Parameters (under <strong>HR&#160;Module</strong>)</i> are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>used for Leave of Absence (LOA) processing. These parameters are as follows:</p>
+        <ul>
+            <li class="ListBullet3"><span class="parameter">STATLOA </span>- a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>parameter  used in HR Status to indicate a Leave of Absence.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3"><span class="parameter">STATACT </span>- used  in HR Status to represent an Active status (such as ACT).</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="HRSysParameters"></a>HR System Parameters</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/SYHRParameters.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Company Parameters</h2>
+        <p class="Body">Two Company parameters, <span class="parameter">TIPRCO </span>and <span class="parameter">TIPRLOA</span>, are found in <i>System &gt;&#160;Company Setup &gt; Configuration &gt;&#160;Company Parameters</i>, as shown in <MadCap:xref href="#CoParameters" class="ImageRef"><i>Figure 2:  Company Parameters</i></MadCap:xref>. They are used in the OA&#160;HR/Ti PR Leave of Absence process, as explained below.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CoParameters"></a>Company Parameters</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/CoParams.png" class="FullWidth" />
+        </p>
+        <p class="IndentBold">TIPRCO</p>
+        <p class="IndentFieldDef">When filled in with a company number, this field indicates that the user is using <MadCap:variable name="General.ProductName" /> Ti Payroll.</p>
+        <p class="IndentFieldDef"><strong>Note: </strong>Benefit Enrollments are not end-dated when an HR LOA record is created in OA&#160;HR<span class="Function"> Employment History</span>.</p>
+        <p class="IndentBold">TIPRLOA</p>
+        <p class="IndentFieldDef">Whether the Layoff Date can be used to indicate an employee's Leave of Absence (L) or Termination (T). If set for Termination (T), OA treats the Layoff Date from Ti PR as a Termination Date.</p>
+    </body>
+</html>

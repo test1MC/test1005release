@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Document Management OCR Invoices - </MadCap:conditionalText>OCR&#160;Layouts</h1>
+        <p class="Body" MadCap:conditions="COINS.v1108"><span class="function">Import Scanned Images</span> can create layouts for <MadCap:variable name="Variables.Purchase Ledger caps" /> invoices (see <a href="OCR Import Invoices.htm"><MadCap:xref href="OCR Import Invoices.htm">OCR&#160;– Processing Scanned Invoices</MadCap:xref></a>), but you may need to modify the settings.</p>
+        <p class="Body">A configuration screen allows you to tell OCR which parts of the image hold relevant information. This screen allows <MadCap:variable name="General.ProductName" /> database fields (for example ap_invoice.ohd_num, Purchase Order number) to be related to specific areas of the screen.</p>
+        <p class="Body" MadCap:conditions="COINS.Superseded in 1108">To set up the layouts, you need a pre-scanned batch to use as a template.</p>
+        <div class="NoteIndent1" MadCap:conditions="COINS.Superseded in 1110">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>Currently, OCR uses explicit locations for the text to be read. Due to this, the example image should be scanned at the same resolution as any invoices that will use this feature. Future development will change this to be able to dynamically adjust the text location based on the image resolution.</p>
+                <p>Images should be scanned at a minimum of 200 DPI (dots per inch). Anything scanned below this resolution will be rejected during the OCR process.</p>
+            </div>
+        </div>
+        <h2>Document Management Links</h2>
+        <p class="Body">The <span class="Field">Table</span> field on the <span class="Function">Document Management Links</span> screen is a link which opens a new <span class="Function">Layout Creation</span> screen for that document category (for example, ap_invoice - <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> invoice).</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Document Management Links Browse</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Images/DM/DM OCR Invoices/Document Management Links screen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Layout Creation Screen</h2>
+        <p class="Body">Layouts are associated with tables in <MadCap:variable name="General.ProductName" />. Selecting a table on the <span class="Function">Document Management Links</span> screen takes you to the <span class="Function">OCR Layout</span> screen.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">OCR&#160;Layout Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Images/DM/DM OCR Invoices/OCR Layout Screen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">To create a new OCR layout, click the Add button. Enter a name for the layout, and a description.</p>
+        <p class="Body">Once a new OCR layout has been created, or to edit an existing layout, click the link in the <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1110"><span class="Field">Description</span> </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.v1110"><span class="Field">Layout</span> </MadCap:conditionalText>column to open the <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1110"><span class="Function">Batch for OCR</span>&#160;</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.v1110"><span class="Function">OCR&#160;Setup</span> </MadCap:conditionalText>screen.  </p>
+        <div class="NoteIndent1" MadCap:conditions="COINS.Superseded in 1110">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>The link on the <span class="Field">Layout</span> column also opens a screen to configure layouts; this  is primarily to allow for debugging potential problems.</p>
+            </div>
+        </div>
+        <div MadCap:conditions="COINS.Superseded in 1110">
+            <h2>Batch Selection</h2>
+            <p class="Body">After selecting the layout to edit, on the <span class="Function">Batch for OCR</span>&#160;screen you must select a pre-scanned batch which contains example(s) of the invoice to be configured for OCR.</p>
+        </div>
+        <h2>OCR&#160;Setup</h2>
+        <p class="Body" style="page-break-after: avoid;">When you have selected <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1110">a pre-scanned invoice batch</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.v1110">an OCR layout</MadCap:conditionalText>, the <span class="Function">OCR&#160;Setup</span> screen opens.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">OCR Setup Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot" style="margin-top: 18pt;margin-bottom: 18pt;">
+                    <img src="../../../Images/DM/DM OCR Invoices/OCR Setup Screen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>Image Templates</h3>
+        <p>If you are setting up a new layout, or if you want to change an existing layout to use a different image template, click the <span class="button">TEMPLATE</span> button, select a file, click <span class="button">UPLOAD</span>, then click <span class="Button">REGENERATE</span>.</p>
+        <h3>Identifying Data on the Layout</h3>
+        <p style="page-break-after: avoid;">You can modify the location of the keyword on the image: </p>
+        <ol>
+            <li>You can move and resize the zone as follows:<ul><li>Click and drag the zone or its edges.</li><li>Use the keyboard shortcuts:&#160;<span class="userinput">x</span> moves the zone right, and Shift+<span class="userinput">x</span> moves it left; <span class="userinput">y</span> moves it down, and Shift+<span class="userinput">y</span> moves it up; <span class="userinput">h</span>  increases the height, and Shift+<span class="userinput">h</span> decreases it; <span class="userinput">w</span> increases the width, and Shift+<span class="userinput">w</span> decreases it.</li><li>Un<MadCap:variable name="Variables.tick" /> the <span class="field">Hide Coordinates</span> box, and enter the x and y positions and the width and height of the zone (as percentages of the image’s width and height) in the <span class="field">x%</span>, <span class="field">y%</span>, <span class="field">w%</span>&#160;and <span class="field">h%</span> fields below the fieldname. </li></ul></li>
+            <li>Click <span class="button">SAVE</span>.</li>
+        </ol>
+        <p>You can add a new data zone:</p>
+        <ol>
+            <li>
+                <p>In the blank field drop-down at the bottom of the list, select the field you want to identify.</p>
+                <p>As you choose each keyword, a new drop down box appears below it to allow you to configure another keyword.</p>
+            </li>
+            <li>If you choose a field that has an extent (for example Balance - ain_cur_balance), an additional field opens to allow you to enter the extent. Usually this will be 1.</li>
+            <li>If the text you want to identify contains spaces, <MadCap:variable name="Variables.tick" /> the box to the right of the <span class="field">h%</span> field.</li>
+            <li>Move and resize the selection zone at the top left of the image so that it covers the text you want to identify.</li>
+            <li>
+                <p>Click <span class="button">SAVE</span>.</p>
+                <p>The <MadCap:variable name="Variables.grey" />ed-out field to the right shows  the data <MadCap:variable name="General.ProductName" /> has found in the zone.</p>
+            </li>
+        </ol>
+        <div MadCap:conditions="COINS.Redacted">
+            <p class="Subtitle">Fields</p>
+            <div class="FieldTable">
+                <div class="ListHead">
+                    <div class="ColHead">Field</div>
+                    <div class="ColHead">Description</div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">
+                        <p>Supplier<MadCap:conditionalText MadCap:conditions="COINS.v1110">	Name</MadCap:conditionalText></p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>This <MadCap:variable name="Variables.pl supplier" /> to associate with this layout. This is optional, but allows you to associate the layout with an individual <MadCap:variable name="Variables.pl supplier" />.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">
+                        <p><span style="font-weight: normal;">Keyword selector</span><![CDATA[	]]></p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>The keyword to associate with a location on the image. The drop-down list shows all the <MadCap:variable name="General.ProductName" /> fields on the table.</p>
+                        <p>If you choose a field that has an extent (for example Balance - ain_cur_balance), an additional field opens to allow you to enter the extent.</p>
+                        <p>As you choose each keyword, a new drop down box appears to allow you to configure another keyword.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel"><span style="font-weight: normal;">Field value</span>
+                    </div>
+                    <div class="FieldDef">The text on the image. This is the value of the keyword on the image you are looking at.</div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">x<MadCap:conditionalText MadCap:conditions="COINS.v1110">%</MadCap:conditionalText>, y<MadCap:conditionalText MadCap:conditions="COINS.v1110">%</MadCap:conditionalText>, w<MadCap:conditionalText MadCap:conditions="COINS.v1110">%</MadCap:conditionalText>, h<MadCap:conditionalText MadCap:conditions="COINS.v1110">%</MadCap:conditionalText></div>
+                    <div class="FieldDef">
+                        <p>The horizontal and vertical position, and the width and height, of the text. The values are shown as percentages.  </p>
+                        <p>The OCR&#160;process fills in these values when it locates the text you specify. You can manually adjust the values for the keyword location as required to correct any OCR mistakes, or can enter the values manually to start with.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel"><span style="font-weight: normal;"><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" />box</span>
+                    </div>
+                    <div class="FieldDef">Whether to allow spaces in the text. By default, any spaces read in the OCR location will be stripped out. <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the box to include spaces in the OCR&#160;text.</div>
+                </div>
+                <div class="FieldBlock" MadCap:conditions="COINS.Superseded in 1110">
+                    <div class="FieldLabel">
+                        <p>INFO</p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>This informs you of the actual image size in pixels. There is no need to edit this information.</p>
+                    </div>
+                </div>
+                <div class="FieldBlock" MadCap:conditions="COINS.Superseded in 1110">
+                    <div class="FieldLabel">Show Grid on Image</div>
+                    <div class="FieldDef"><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> this box to overlay a grid on the image. This can help with manually entering the location values. The grid is divided into 10% sections.</div>
+                </div>
+            </div>
+        </div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Scanned Image with Data Highlighted</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Images/DM/DM OCR Invoices/Invoice with highlighted text.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

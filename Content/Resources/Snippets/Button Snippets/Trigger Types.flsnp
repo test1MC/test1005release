@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>EQ = Equals (this is available for integer triggers, and is the only type available for logical and character triggers). Use this for events that depend on a particular value (such as a status).
+
+       <br />The trigger expires when the current value equals the Expires field.  The Expires field is always equal to the Value on the definition, and the current value is reset to the value in the Reset To field (see below). <br />For example, an EQ character trigger could have an Expires value of DAMAGED and be reset to REPAIRED.
+
+<br /><br />PL = Plus (this is available for integer and decimal triggers). Use this for events that should happen when a given value is exceeded, and where that value continues to increase (such as a service based on a mileage).
+
+       The trigger expires when its current value is greater than or equal to the Expires field.  The Expires field is reset to the current value plus Value; the current value is not reset.<br /><![CDATA[  ]]><br />For example, a PL trigger with a Value of 5,000, if fired at 30,000, will be reset to 35,000.
+
+MI = Minus. The trigger expires when the current value is less than the Expires field, which is reset to the current value minus Value. See PL.
+<br /><br />GE = Greater Than or Equal. Use this for events that should happen when a value exceeds a set limit, and where the event resets the value (such as an inspection that is required a fixed number of days after the previous one).
+
+       The trigger expires when its current value is greater than or equal to the Expires field.  The Expires field is always equal to the Value on the definition, and the current value is reset to the value in the Reset To field (see below).  The Last Reset field is the date on which the trigger was last reset, and can be updated.
+<br /><br />LE = Less Than or Equal. Use this for events that should happen when a value drops below a set limit, and where the event resets the value (for example, replacing tyres when the tread is less than a given depth).
+
+       The trigger expires when its current value is less than or equal to the Expires field.  See GE.
+
+<br /><br />Use date triggers for events that are due on or after a given date.  For date triggers, the current value is always today's date, and the trigger expires if today's date is equal or later than the date in the Expires field.  The difference is how the Expires field is reset:
+
+<br /><br />DY = Days. The trigger is reset to the current date plus the number of days in Value.
+<br /><br />
+MO = Months. The trigger is reset to the current date plus the number of months in Value.
+<br /><br />YR = Years. The trigger is reset to the current date plus the number of years in Value.
+<br /><br />
+ME = Month end. Same as MO, but the trigger is reset to the end of the month.
+
+<br /><br />YE = Year end. Similar to YR. The trigger is reset to the end of the current month plus the number of years in Value.</body>
+</html>

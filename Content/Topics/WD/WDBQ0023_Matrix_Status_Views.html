@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Matrix Status Views</title>
+        <style>/*<![CDATA[*/
+table.type1 table td
+{
+	border: none;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Matrix Status Views</h1>
+        <p>The status view on the various matrices shows the status of each element in the view:</p>
+        <p>
+            <img src="../../Resources/Images_A-C/BQ/BQ_002301.png" />
+        </p>
+        <p>The status shows:</p>
+        <ul>
+            <li>The item pricing status - whether the items have been priced.</li>
+            <li>The ready to use (from a suveyor's point of view) indicator or, on Package Matrices, the passed to procurement (from a buyer's point of view) indicator - whether the items have been marked as "ready to use".</li>
+            <li>The order status (on the plot workbenches <span class="function" title="Function:%WBQ1070BVSI">Surveyors Plot {bq boq} Workbench</span> and <span class="function" title="Function:%WBQ1080BVSI">Buyers {bq boq} Workbench</span>).</li>
+        </ul>
+        <table class="type1" style="font-size: 8pt;">
+            <tbody>
+                <tr>
+                    <th>Ready to Use / <br />Passed to Procurement</th>
+                    <td>
+                        <table class="null">
+                            <tbody>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #fc7c86;padding: 2px;">NRU</span> / <span style="background-color: #fc7c86;padding: 2px;">NPS</span> =</td>
+                                    <td>
+                                        <p>Not ready/not passed - none of the associated bill items are marked as "ready to use".</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #ffbc79;padding: 2px;">PRU</span> / <span style="background-color: #ffbc79;padding: 2px;">PPS</span> =</td>
+                                    <td>
+                                        <p>Part ready/part passed - some of the items are ready to use.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #aaffaa;padding: 2px;">FRU</span> / <span style="background-color: #aaffaa;padding: 2px;">PAS</span> =</td>
+                                    <td>
+                                        <p>Ready/fully passed - all associated bill items are ready to use. This means the bill items have the correct quantities and are ready to be priced and ordered.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Item pricing status</th>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #fc7c86;padding: 2px;">UPR</span> =</td>
+                                    <td>
+                                        <p>Unpriced - bill items exist and are all unpriced.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #ffbc79;padding: 2px;">PPR</span> =</td>
+                                    <td>
+                                        <p>Part - bill items exist but are part-priced.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #aaffaa;padding: 2px;">FPR</span> =</td>
+                                    <td>
+                                        <p>Full - bill lines exist and are all fully priced.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>A * next to the status shows that there has been a change from the standard house type.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left: medium none;border-right: medium none;" colspan="2">
+                        <p>And on the plot workbenches:</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Order Status</th>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #fc7c86;padding: 2px;">UOR</span> =</td>
+                                    <td>
+                                        <p>Unordered - there are no orders for any associated bill item.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #ffbc79;padding: 2px;">POR</span> =</td>
+                                    <td>
+                                        <p>Part ordered - some of the bill items have been ordered.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #aaffaa;padding: 2px;">ORD</span> =</td>
+                                    <td>
+                                        <p>Fully ordered - all associated bill items are ordered.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="white-space: nowrap;"><span style="background-color: #fc7c86;padding: 2px;">VAR</span> =</td>
+                                    <td>
+                                        <p><MadCap:variable name="Variables.po variation" style="text-transform: capitalize;" /> required - the details of an order that has already been placed for at least one associated bill item have been changed, so a <MadCap:variable name="Variables.po variation" /> is required.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The cells may also show:</p>
+        <ul>
+            <li>N/A - The element is not applicable.</li>
+            <li>N/R - The element is not required.</li>
+            <li>No Items - There are no bill items associated with the element.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

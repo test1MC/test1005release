@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="10" MadCap:lastHeight="2024" MadCap:lastWidth="1052" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0002.4,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Adding Filters to the Contract Browse Screen</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Discovery BI0002.4 -Adding Filters to the Contract Browse Screen</h1>
+        <p>&#160;</p>
+        <p>This exercise is to modify the contract browse screen to include advanced filters.</p>
+        <p>&#160;</p>
+        <h2>Adding a Page Browse Filter </h2>
+        <p>Edit the page section by clicking on the Open button and save or follow the link on the Page Name.</p>
+        <p>Select the Browse Filters Tab.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> to Add fields to the filter as follows:</p>
+        <table style="width: 100%;caption-side: top;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Types</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">job_num</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Contract</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">GE,LE,MA</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jcl_loc</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Location</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">GE,LE,MA</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jgr_group</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Group</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">GE,LE,MA</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">jty_type</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Type</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">GE,LE,MA</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> after adding each field.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-4-0001-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>Using Populates with a Browse Filter</h2>
+        <p>Add in a filter as follows (watch out for the mixture of underlines and dashes in the populate field!):</p>
+        <p>&#160;</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Types</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">View As</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Populate</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">job_fore</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Manager</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">MA</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Combo </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>job-rsp.job_fore</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-4-0002-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /></p>
+        <p>Now run the function.</p>
+        <p>Use the <img src="../../../Resources/Images/COINS Graphics/SVG buttons/afilter.svg" class="icon24px" /> button to access the advanced filter. Experiment with your new filters – remember to apply the filter after you change the criteria.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-4-0003-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <MadCap:relationshipsProxy class="relatedTopics" />
+    </body>
+</html>

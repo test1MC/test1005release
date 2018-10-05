@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Emailing Expense Remittances in COINSplus</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Emailing Expense Remittances in COINSplus</h1>
+    <p>
+      <MadCap:snippetBlock src="../../Resources/Snippets/C+topic.flsnp" />
+    </p>
+    <p>In <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" /> you can email <span class="module">Expenses </span>remittances to employees.</p>
+    <div class="configuration">
+      <h2 class="print">Configuring <MadCap:variable name="General.ProductName" /> to email EX remittances</h2>
+      <ol>
+        <li>Set the <span class="parameter">EX/DEFPRNT </span>parameter to EMAIL.</li>
+        <li>Set up employees using <span class="function" title="Function:%EX201-B">Employees</span>:</li>
+        <ul>
+          <li>For any new employee entered, the default value of the <span class="field">Default Print Method</span> field will be <span class="userinput">email</span>.  If the <span class="field">Email </span>field is not filled in (or if there is no @ sign in the field), <MadCap:variable name="General.ProductName" /> displays an error.  The <span class="field">Default Print Method </span>can be changed to <span class="userinput">Print </span>if there is no email address available. </li>
+          <li>For any existing employee, the <span class="field">Default Print Method </span>field will be blank.  This means the preference in <span class="parameter">EX/DEFPRNT </span>comes into effect; that is, email if there is an email address.   If there are employees you don't want to email, set the <span class="field">Default Print Method </span>on those accounts to <span class="userinput">Print.</span></li>
+        </ul>
+        <li>Set up a function to print or email the remittances:</li>
+        <ul>
+          <li>If you know that all your employees will have an email address, then amend your existing remittance print to add a third parameter Y (Email) and set the fourth parameter as Y (Autoemail).</li>
+          <li>If you know that there are some employees who wish to have printed remittances then you will need to set up an additional remittance print option, with the third parameter N (print) and the fourth parameter N (exclude email preference employees).   You will not be able to proceed to post a payments batch until all remittances have been printed, so both your email and your paper print remittances will get run each period.</li>
+        </ul>
+      </ol>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/EX/EX_DEFPRNT.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

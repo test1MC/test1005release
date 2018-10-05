@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1444" MadCap:lastWidth="1186" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Non-GRN Purchase Orders</h1>
+        <h2 class="Heading2">Match Action</h2>
+        <p class="Body">When the "Match" action is taken, the following will now occur:</p>
+        <ul class="MultiLevelBullets">
+            <li>If the selected invoice matching line (or lines) refer to a <MadCap:variable name="Variables.mk contract" /> that uses WBS codes:</li>
+            <li class="ListBullet2">If the new PO&#160;parameter ALWCLSST = N, and if the section associated with the WBS&#160;code the related order line is closed, an error is displayed and matching is prevented.</li>
+            <p class="Body_3">
+                <img src="../../../Images/PL/PreventInvoicingClosed/ErrorSectionClosed.png" class="HalfWidth" />
+            </p>
+            <li class="ListBullet2">If the new PO&#160;parameter ALWCLSCC = N, and if the cost code on the related order line is closed, an error is displayed and matching is prevented.</li>
+            <p class="Body_3">
+                <img src="../../../Images/PL/PreventInvoicingClosed/ErrorCostCodeClosed.png" class="HalfWidth" />
+            </p>
+        </ul>
+        <p class="Body">In this case you will not be able to complete the invoice matching process unless the closed code is re-opened. If the new PO&#160;parameter ALWCHOV5 = Y, you will be able to override the closed code, and change it to an open code.</p>
+        <h2 class="Heading2">Overriding the WBS Code and Cost Code</h2>
+        <p class="Body">If the new parameter ALWCHOV5 = Y, additional fields appear when updating a matching line:</p>
+        <p class="Body"><b class="Field">WBS&#160;Code</b>  (if the <MadCap:variable name="Variables.mk contract" /> uses WBS)</p>
+        <p class="Body"><b class="Field"><MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" /></b>
+        </p>
+        <p class="Body"><b class="Field">Cost Category</b>
+        </p>
+        <p class="Body">
+            <img src="../../../Images/PL/PreventInvoicingClosed/UpdateMatchingLine.png" class="FullWidth" />
+        </p>
+        <p class="Body">The default values for these fields are taken from the order line. If the WBS Code, <MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" /> or Category have been overridden an asterisk is shown in a new column at the right of the Matching browse.</p>
+        <p class="Body">
+            <img src="../../../Images/PL/PreventInvoicingClosed/MatchingLineUpdated.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/VATTEXT1 - VAT text 1</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/VATTEXT1 - </span> VAT text 1
+</div>
+<div class="param_def">
+<p>(For Irish Reverse Charge <MadCap:variable name="Variables.Vat caps"/>) The text to print on authenticated receipt subcontract certificates which are fully paid, and on invoice type subcontract certificates. For example: This is not a <MadCap:variable name="Variables.vat"/> invoice.</p>
+<p>In <MadCap:snippetBlock src="../../../Resources/Snippets/coinsoa.flsnp"/>, use the field <span class="fieldname">RO_sbp_vattext</span> to print the appropriate text on the configurable document.</p>
+<ul>
+<li>If the certificate has been set to Invoice (I), this will display the text from <span class="parameter">VATTEXT1</span>.</li>
+<li>If the certificate has been set to Self Billing (S):</li>
+<ul>
+<li>If the balance on the certificate is not zero and the CO parameter <span class="parameter">CURRTAXP</span> has "SC" in the list, it will display the text from <span class="parameter">VATTEXT2</span></li>
+<li>Otherwise it will display the text from <span class="parameter">VATTEXT3</span>.</li>
+</ul>
+<li>If the certificate has been set to Authenticated Receipts (A):</li>
+<ul>
+<li>If the balance on the certificate is not zero and the CO parameter <span class="parameter">CURRTAXP</span> has "SC" in the list, this will display the text from <span class="parameter">VATTEXT2</span>.</li>
+<li>Otherwise it will display the text from <span class="parameter">VATTEXT1</span>.</li>
+</ul>
+</ul>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sc/sc_vattext2.htm" /><MadCap:relatedTopic src="../sc/sc_vattext3.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

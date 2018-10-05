@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Isle of Man C11</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Isle of Man C11</h1>
+    <p>The SCC11 (see also <a href="WDSC0023_Isle_of_Man_C11A.html">Isle of Man C11A</a>) is an Isle of Man (only) tax document.  It can be used to produce a substitute C11 form (i.e. a substitute if that is agreed by the specific contractor with the Isle of Man authorities).</p>
+    <p>The C11 is a <strong>Certificate of Tax Deducted in Respect of Subcontract Work</strong>.  One is produced for each subcontractor from whom tax is deducted.</p>
+    <div class="process">
+      <h2 class="print">To configure an SCC11 document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>. </li>
+        <li>Use the <span class="userinput">SC C11 (IoM)</span> document type.</li>
+        <li>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </li>
+        <li>The following tables are available: sc_mast, sc_return, sc_sc60, co_config.</li>
+        <li>The SCC11 has the following forms:  </li>
+        <ul>
+          <li>The BODY form shows sc_sc60 records: that is (for this form) summary tax data associated with a particular C11 reference number, and relating to a particular subcontractor for payments up to a particular date.   There is only a single BODY record per subcontractor.  This is built up from tax data (sc_return) relating to each certificate that has been paid and sc_sc60 records are created during the form print.    A particular C11 reference number is assigned to each C11 (the user is prompted for the initial C11 reference number and thereafter the system keeps tracks of the numbers and the user can accept the defaulted next free C11 number.   There are a number of additional RO fields used that are populated in the course of the print: RO_Taxable, RO_cost, RO_Deduct provide the financial data required off the sc_sc60 formatted with a £ sign, RO_taxcode shows N.T. if the subcontractor was not taxable and H.R. if the subcontractor was.</li>
+          <li>The HEAD form shows the C11 text required by the authorities plus the date range which is both prompted for and stamped onto the sc_sc60 records.   In addition the field RO_C11unique which is the C11 number assigned to the particular C11 print.</li>
+          <li>The FOOT form shows the specific C11 substitute text required by the authorities plus a page count using the standard tokens.   At the end of the document a summary page is printed using the TOTAL form and with the FOOTTOTAL giving the page count.     </li>
+          <li>The TOTAL form has a number of additional RO fields used not connected with a particular table that are populated in the course of the print: RO_C11Start, RO_C11End, RO_PeriodNumber, RO_DateEnd, Ro_SbmCount (number of subcontractors reported on) and RO_totalTax.<br /></li>
+        </ul>
+      </ol>
+    </div>
+  </body>
+</html>

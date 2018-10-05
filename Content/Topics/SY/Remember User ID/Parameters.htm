@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Remember User ID – </MadCap:conditionalText>Parameters</h1>
+        <p class="Body">The following parameters need to be set:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col style="width: 91px;" class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1" style="color: #ffffff;">
+                        <p>Parameter </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1" style="color: #ffffff;">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">WEBRIPS</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A list of IP addresses that if identified from the browser will be allowed to remember the user ID and allow pass through access.
+If this is blank (default) then this feature is switched off.
+This is intended to allow for internal IP addresses to be identified and only allow this pass through access if the user is on the corporate network.
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">WEBRDAYS</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The number of days that a user ID will be remembered.  
+The default is for the remainder of the current day (based on the server date), but this can be set to any integer.  This will be the number of days that the user will be allowed access to <MadCap:variable name="General.ProductName" /> without further authentication provided they are on the network defined in WEBRIPS
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">WEBRPWD</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">An additional password, which is encrypted and checked on login to allow access. 
+This is intended to prevent a user setting up a similar <MadCap:variable name="General.ProductName" /> system, creating a login token, transferring to the live system and gaining access. Without this password they would not be able to set up the correct token.
+You can re-set this if you want to force all users to log in.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

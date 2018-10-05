@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="18766" MadCap:lastWidth="1186">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Adding a New Company</h1>
+        <p>In this example, we will take an existing company (921) and create a new company (931) using the configuration of 921 as the basis for the structure.</p>
+        <p>In System &gt; Company Setup &gt; Live Companies create an entry for the new company. At this stage, <b>do not flag the company as Live</b></p>
+        <p>Note: If this is taking place on a Clients Live environment, each step taken should be carefully checked before you commit changes to the database.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY - Company Setup/Add_Kco_1.png" class="FullWidth" />
+        </p>
+        <p>Be aware that although you have now set up the name of the new company, this does not mean that there is not already a company 931 with data on the system. A company may already have been created and the entry removed from the screen above.</p>
+        <p>It is therefore important, before you go any further, that you verify whether a company with the number allocated already exists and whether it is an empty shell, or if it already contains data. Deleting a company that contains a lot of data may have serious implications on disk space, and on the database extents not being able to cope with the number of records you are deleting.</p>
+        <p>One quick way to test if data exists is to select the company, in this case 931, and in the General Ledger select Input &gt; Journal Batch</p>
+        <p>
+            <img src="../../../Images/Add_Kco_2.png" class="FullWidth" />
+        </p>
+        <p>As most transactions will end up in the GL at some point, the screen above being empty is a good indication that no data has been entered into the system.</p>
+        <p>If you run the Batch Status Report, you should get an error in the report log file to the effect that the Company Configuration has not been set - this will also indicate that the company is empty, as by definition no transactions should have been possible without the configuration having been completed.</p>
+        <p>Be aware that any data added via webservices may not show in our tests above.</p>
+        <p>If your test indicates that data is present, your first action should be to consult with the <MadCap:variable name="General.ProductName" /> Technical team to establish if the environment has sufficient capacity to accomodate the data that will be written to the BI files and that the  database extents will cope with this expansion.</p>
+        <p>Tech will need to be provided with basic information in order to advise on the likely impact of your deletion of a company: </p>
+        <ul>
+            <li>How long the company has been trading</li>
+            <li>What Modules are they using</li>
+            <li>How many companies are on the system</li>
+        </ul>
+        <p><b>DO&#160;NOT&#160;PROCEED&#160;with the deletion of a company with transactional data without the advice and support of Tech. Failure to do so may have a detrimental effect on a clients system</b>
+        </p>
+        <h2>Sygrab.p</h2>
+        <p>Once the company has been created, and we have checked (to the best of our ability) that the company is empty, we can proceed with the process.</p>
+        <p>Login to the client system via CoinsPlus.</p>
+        <p>Currently (May 2016) there is no OA version of the sygrab utility that is required to create the new company. As such, the next steps will require CoinPlus access to the system.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_3.png" class="FullWidth" />
+        </p>
+        <p>Select the environment you are working on, and login as SYSADMIN.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_4.png" class="FullWidth" />
+        </p>
+        <p>sygrab can potentially be run from any company, but it is good practice to select the company you wish to work on (931 in our example).</p>
+        <p>Within the selected company, press . (full-stop) to access the Run command and enter sygrabb.p</p>
+        <p>
+            <img src="../../../Images/Add_Kco_5.png" class="FullWidth" />
+        </p>
+        <p>press Enter to run the command.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_6.png" class="FullWidth" />
+        </p>
+        <p>As a prcaution, it is good practice to run the Delete <MadCap:variable name="General.ProductName" /> Company option for the new company being created, just to ensure that it is empty.</p>
+        <p>Select Delete <MadCap:variable name="General.ProductName" /> Company</p>
+        <p>
+            <img src="../../../Images/Add_Kco_7.png" class="FullWidth" />
+        </p>
+        <p>Double check the <MadCap:variable name="General.ProductName" /> company number to be deleted. Then check it again!</p>
+        <p>It is VERY easy to be distracted whilst you are performing this process and a mistake here could be catastrophic to the client.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_8.png" class="FullWidth" />
+        </p>
+        <p>If you are sure that the company number is correct, enter it here and press enter.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_9.png" class="FullWidth" />
+        </p>
+        <p>Although you have the option to delete an entire <MadCap:variable name="General.ProductName" /> company, you also have the option to delete single tables from that company. This will be covered later. To delete all tables from the company, leave the field blank and click Enter.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_10.png" class="FullWidth" />
+        </p>
+        <p>Always, ALWAYS, read the messages that are displayed and confirm that the details are correct before proceeding further. If the correct company number is displayed Select Yes and click Enter.</p>
+        <p>The utility will now run through the company and delete the tables within.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_11.png" class="FullWidth" />
+        </p>
+        <p>In our example, only Kco 931 specific tables  will be deleted, no Global tables are affected. You will need to press the space bar on each screen until the utility completes.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_12.png" class="FullWidth" />
+        </p>
+        <p>Read the message panel to confirm that the tables have been cleared and click OK</p>
+        <p>
+            <img src="../../../Images/Add_Kco_13.png" class="FullWidth" />
+        </p>
+        <p>Once the screen above is displayed, press F4 to return to the menu.</p>
+        <h2>Company Export</h2>
+        <p>The next step is to move the configuration data from company 921 into company 931. It is strongly recommended that this is done via an Export/Import method.</p>
+        <p>The export needs to go into a Unix directory. On <MadCap:variable name="General.ProductName" /> Hosted Clients, Tech have instigated security measures to prevent inappropriate use of Unix directories. For this reason, it is recommended that you make use of the My Files area of <MadCap:variable name="General.ProductName" /> (Report Status Workbench &gt; My Files Tab) as this will ensure you have the necessary permissions to read/write data.</p>
+        <p>In CoinsPlus, run the sygrabb.p utility again</p>
+        <p>
+            <img src="../../../Images/Add_Kco_14.png" class="FullWidth" />
+        </p>
+        <p>Select the Export <MadCap:variable name="General.ProductName" /> Company option.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_15.png" class="FullWidth" />
+        </p>
+        <p>For Hosted clients, the $base directory path to the myfiles directory is always:</p>
+        <p> /u/coins/&lt;environment&gt;/var/home/&lt;username&gt;</p>
+        <p>So in our example we can specify:</p>
+        <p>/u/coins/live/var/home/sysadmin</p>
+        <p>
+            <img src="../../../Images/Add_Kco_16.png" class="FullWidth" />
+        </p>
+        <p>Check the path entry and click OK or press Enter.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_17.png" class="FullWidth" />
+        </p>
+        <p>You now need to tell <MadCap:variable name="General.ProductName" /> what it is you want to export. When creating a shell company for a client you are only interested in configuration data - option C (which the screen will default to).</p>
+        <p>Static data refers to records such as Contracts, Suppliers, Customer etc. which a client may require, but in general they would set these up themselves from scratch.</p>
+        <p>In this example, we will stay with configuration data only by selecting C and clicking Enter.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_18.png" class="FullWidth" />
+        </p>
+        <p>The next screen requires a selection of Global Data, Company Specific data or Both. Again, for a shell company, you only want Company Specific data. Global data by definition, already exists as it is Global. Generally, this option would be used if you were creating a new environment and exporting the data from an exisiting environment.</p>
+        <p>In this example, we will select C for Company Specific and click Enter.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_19.png" class="FullWidth" />
+        </p>
+        <p>Enter the number for the Company to be exported - 921 in this example. Again, before you click Enter, double check the PDR to ensure you are specifying the correct company number to copy from.</p>
+        <p>Click Enter</p>
+        <p>
+            <img src="../../../Images/Add_Kco_20.png" class="FullWidth" />
+        </p>
+        <p><b>Verify the details in the message panel before selecting the Yes option</b>
+        </p>
+        <p>
+            <img src="../../../Images/Add_Kco_21.png" class="FullWidth" />
+        </p>
+        <p>The system will begin its copy, press space bar on each screen to progress through the tables. Once completed, the system will dispolay a confirmation message.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_22.png" class="FullWidth" />
+        </p>
+        <p>Click OK. The system will return to a blank screen, on which you may press F4 to return to the menu.</p>
+        <p>In OA, select Report Status &gt; My Files Tab and if necessary click the regenerate button.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_23.png" class="FullWidth" />
+        </p>
+        <p>The screen should show a list of all the configuration tables you have just exported into the My Files area. Most of these are fine to re-import, but a few should not be imported.</p>
+        <p>On the filter, enter <b>co_table.d</b> and apply the filter</p>
+        <p>
+            <img src="../../../Images/Add_Kco_24.png" class="FullWidth" />
+        </p>
+        <p>Download the file to your PC and open it in a Text editor such as TextPad.</p>
+        <p>Within the file, search for the keyword VATRET</p>
+        <p>
+            <img src="../../../Images/Add_Kco_25.png" class="FullWidth" />
+        </p>
+        <p>If a VATREG line is present, this indicates that a VAT return has been processed in the source company. Leaving this record in place will prevent the new company from processing its VAT return, so this line must be deleted. </p>
+        <p>Save the amended file on your PC.</p>
+        <p>In OA, Navigate to System &gt; My Files and delete the current record for co_table.d You will not be able to load the new version of the file with the old one in place.</p>
+        <p>Select the Put Files Tab</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Images/Add_Kco_26.png" class="FullWidth" />
+        </p>
+        <p>Click Choose File</p>
+        <p>Navigate to the location on your PC where you saved the amended file, select it and click Open</p>
+        <p>
+            <img src="../../../Images/Add_Kco_27.png" class="FullWidth" />
+        </p>
+        <p>On the OA screen, enter co_table.d as the Save As name and Click Next.</p>
+        <p>Check that co_table.d appears on the My Files Tab with the current date and time.</p>
+        <p>From the My files Tab, you should also delete the entries for the follow tables:</p>
+        <p>&#160;</p>
+        <ul>
+            <li>gl_acct.d - contains the accounts, made up of the GL elements</li>
+        </ul>
+        <h2>Company Import</h2>
+        <p>Return to CoinsPlus and run the sygrabb.p utility again.</p>
+        <p>Select Import <MadCap:variable name="General.ProductName" /> Company</p>
+        <p>
+            <img src="../../../Images/Add_Kco_28.png" class="FullWidth" />
+        </p>
+        <p>Enter the location for the My Files Directory, for example: </p>
+        <p>/u/coins/live/var/home/sysadmin</p>
+        <p>
+            <img src="../../../Images/Add_Kco_29.png" class="FullWidth" />
+        </p>
+        <p>Click Ok.</p>
+        <p>The System will ask if you want to import Configuration, static or Both types of data. Again, as this is a shell compnay we will specify C for Configuration only.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_30.png" class="FullWidth" />
+        </p>
+        <p>Click OK or press Enter</p>
+        <p>The next screen asks if we want to import Global, company specific or both types of data. Select C for company specific.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_31.png" class="FullWidth" />
+        </p>
+        <p>On the next screen, specify the company that you are Importing IN TO. Be careful as the question on the screen is mis-leading. In our example, we are importing in to 931.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_32.png" class="FullWidth" />
+        </p>
+        <p>Check and re-check that you are specifying the correct company number to import in to. <b>A mistake here will not overwrite existing data, but may generate data in tables that are currently empty - which may cause issues for the client</b></p>
+        <p>Click OK and confirm the details on the next screen are correct</p>
+        <p>
+            <img src="../../../Images/Add_Kco_33.png" class="FullWidth" />
+        </p>
+        <p>If the details are correct, select Yes to continue.</p>
+        <p>The import will commence with the number of expected records, imported records and errors detailed.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_34.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Because we deleted the record for gl_acct.d from the import table, this will appear as an error on teh import screen:</p>
+        <p>
+            <img src="../../../Images/Add_Kco_35.png" class="FullWidth" />
+        </p>
+        <p>This is correct behaviour and can be ignored. There may also be discrepancies between the expected and Imported figures. Again, this can be ignored.</p>
+        <p>Once complete, teh system will confirm the number of tables to which data was imported.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_36.png" class="FullWidth" />
+        </p>
+        <p>Click OK to clear the message and on the blank screen that follows, click F4 to return to the menu.</p>
+        <p>Company 931 should now be a resonably well configured copy of company 921</p>
+        <h2>CO Configuration</h2>
+        <p>In OA select System &gt; Configuration &gt; CO Configuration</p>
+        <p>If applicablea, amend any details on this screen to those relevant to the new company - if they have been provided by the client.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_37.png" class="FullWidth" />
+        </p>
+        <p>Depending on the CSR, the client may be responsible for updating any company specific settings following the creation of the company.</p>
+        <p>Reset Batch Numbers</p>
+        <p>In CoinsPlus, withing the new company, select General Ledger &gt; Setup &gt; Configuration &gt; Batch Configuration.</p>
+        <p>
+            <img src="../../../Images/Add_Kco_38.png" class="FullWidth" />
+        </p>
+        <p>Within this option, reset all applicable batch numbers to 1. As with all the steps in this process, <b>make absolutely sure that you are in the correct company before you commit any changes.</b></p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Images/Add_Kco_39.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="905" MadCap:lastWidth="904">
+  <head>
+    <title>Can-Do Lists</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Can-Do Lists</h1>
+    <p>Several fields in <MadCap:variable name="General.ProductName" /> allow you to specify a list of values.  Often in these fields you can use wildcards to represent "any character" or "any string of characters".  Lists like these are known as "can-do lists".</p>
+    <p>For example, you can enter can-do lists in both the regular filter and the <span class="field">Matches </span>field of the advanced filter.</p>
+    <p>You can enter the following in can-do lists:</p>
+    <ul>
+      <li>To specify several values, enter the items as a list, separated by commas. For example: <span class="userinput">A1000,A1500,B1224</span>.</li>
+      <li>
+        <span class="userinput">.</span> (<MadCap:variable name="Variables.full stop" />) character represents 'any single character'; for example, <span class="userinput">C1.0</span> tells <MadCap:variable name="General.ProductName" /> to match any item beginning with <span class="userinput">C1</span> and ending with <span class="userinput">0</span>, with any single character being in the third position.</li>
+      <li>
+        <span class="userinput">*</span> (asterisk) character represents 'any string of characters'; for example, <span class="userinput">C*</span> tells <MadCap:variable name="General.ProductName" /> to match any item beginning with <span class="userinput">C</span>, that has any number of characters after it. Another example: <span class="userinput">*0</span> tells <MadCap:variable name="General.ProductName" /> to match any item ending with <span class="userinput">0</span>, but with any number of characters before it.</li>
+      <li>
+        <p>! (exclamation mark) character represents items you want to exclude from a list; for example, <span class="userinput"><span class="nw">!C...,*</span></span> tells <MadCap:variable name="General.ProductName" /> to exclude any item beginning with <span class="userinput">C</span> that has any three characters after it, but include everything else. Another example: <span class="userinput"><span class="nw">!1*,!9999,....</span></span> tells <MadCap:variable name="General.ProductName" /> to match all four-character codes except the code 9999 and those beginning with 1.</p>
+        <p class="noteheader">NOTE</p>
+        <Div class="note">To "match all", a can-do list field must have a <span class="userinput"><span class="userinput">*</span></span> in it; if the can-do list field is blank, no items are matched.  Also, after an item with a <span class="userinput">!</span> wildcard, you need to have an item that contains a <span class="userinput">*</span> (or <span class="userinput">.</span>) wildcard, otherwise you are excluding something, but not including anything. </Div>
+      </li>
+      <li>To match a blank field, enter a single comma.  (This is interpreted as a list containing two blank entries.)</li>
+    </ul>
+    <p>With can-do lists, if you want to search for a <MadCap:variable name="Variables.full stop" /> , put a \ (backslash) before it. So a can-do list of ..\.*\.1234 would match items beginning with any two characters followed by a <MadCap:variable name="Variables.full stop" />, and ending with a <MadCap:variable name="Variables.full stop" /> followed by "1234". This can be used, for example, when matching GL accounts by pattern.</p>
+    <p>If you want to match multiple words in any order, you need to repeat the options in each possible order. For example, <span class="userinput" data-mce-mark="1">*20 foot*pole*,*pole*20 foot*</span> would find both "Scaffold pole, 20 foot" and "20 foot Galvan<MadCap:variable name="Variables.is" />ed scaffold pole".</p>
+  </body>
+</html>

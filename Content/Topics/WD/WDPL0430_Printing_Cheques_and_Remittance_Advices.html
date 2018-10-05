@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Print <MadCap:variable name="Variables.Cheques caps" /> / Remittances</h1>
+        <p>Once you have <a href="WDPL0411_Selecting_Invoices_for_Payment.html">created</a> and <a href="WDPL0420_Freezing_the_Payment_Batch.html">frozen</a> the payment batch, you can print the <MadCap:variable name="Variables.cheques" /> and generate <MadCap:variable name="Variables.eft" /> payments.&#160; </p>
+        <MadCap:snippetBlock src="../PL/Processing Payments/Check_Batch_Frozen.flsnp" />
+        <p>If printing remittance advices, you must do this after processing the <MadCap:variable name="Variables.eft" /> payments, and after printing the <MadCap:variable name="Variables.cheques" /> (or at the same time, if you are using combined <MadCap:variable name="Variables.cheques" /> and remittances).&#160;</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0132_Remittances.html" />
+                <MadCap:relatedTopic src="WDPL0431_BACS_Payments.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To print <MadCap:variable name="Variables.cheques" /> and remittance advices:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1994BCOB">Print <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /></span> or <span class="function" title="Function:%WPL1990BCOB">Print <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" />/Remittances</span>.</li>
+                <li>In the <span class="field">Batch Number </span>column, click the link for the batch that contains the <MadCap:variable name="Variables.cheques" /> you want to print.</li>
+                <li>Select the configurable document form to use for printing the <MadCap:variable name="Variables.cheques" />.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Batch Main Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/USA Imports/2.5 - PRIME AP - Printing Live Checks/Printing and Posting Checks_2.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>On the Main tab, if you only want to print <MadCap:variable name="Variables.cheques" /> for a range of <MadCap:variable name="Variables.pl suppliers" />, enter the <MadCap:variable name="Variables.pl supplier" /> codes of the first and last <MadCap:variable name="Variables.pl suppliers" /> for whom you want to print <MadCap:variable name="Variables.cheques" />.</li>
+                <li>On the <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Selection tab:<ul><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><MadCap:variable name="Variables.Cheque caps" /> Selection Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/USA Imports/2.5 - PRIME AP - Printing Live Checks/Printing and Posting Checks_3.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><li>Select the bank account on which the <MadCap:variable name="Variables.cheques" /> will be drawn.</li><li>Enter the date to appear on the <MadCap:variable name="Variables.cheques" />. This defaults to today’s date.</li><li>Verify that the "next <MadCap:variable name="Variables.cheque" /> number" <MadCap:variable name="General.ProductName" /> displays is correct; if not, enter the correct <MadCap:variable name="Variables.cheque" /> number.</li></ul></li>
+                <li>Select any Output Options.&#160; For example, to print the <MadCap:variable name="Variables.cheques" /> directly on a <MadCap:variable name="General.ProductName" /> printer, <MadCap:variable name="Variables.tick" /> the <span class="field">Print</span> box (and choose the printer if the one you want is not shown).</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays a message informing you of the number of <MadCap:variable name="Variables.cheques" /> and/or <MadCap:variable name="Variables.eft" /> payments that will be included in the payment run. To continue, click <span class="key">OK</span>. Otherwise, click <span class="key">Cancel</span> to return to the <MadCap:variable name="Variables.pl supplier" /> selection fields.</p>
+Depending on the output options you selected, <MadCap:variable name="General.ProductName" /> either displays a "Task completed successfully" message to tell you that the print request has been sent, or displays a "Generating" page, and then displays the printable output (PDF file).&#160;</li>
+                <li>Next, if you are not using combined <MadCap:variable name="Variables.cheques" />/remittances, print the remittances.</li>
+                <li>You can print a Payment List to check that the payments are correct (use <span class="function" title="Function:%WPL3230BCOB">Payment List</span>).</li>
+                <li>Finally, you need to post the batch.</li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDUG0056_Posting_a_Batch.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Printing <MadCap:variable name="Variables.cheques" /> and remittance advices</h2>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDPL0001_PL_Cheques_and_Remittances.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

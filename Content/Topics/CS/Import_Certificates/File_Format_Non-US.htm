@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />File Format (Non-US)</h1>
+        <p class="Body">The following is the file format for loading certificates if the <span class="parameter">CO/TAXTYPE</span> parameter is blank. <MadCap:snippetText src="../../../Resources/Snippets/ImportInvsFormat.flsnp" MadCap:conditions="COINS.ScreenOnly" /></p>
+        <h2 MadCap:autonum="1.1 ">Certificate Header Section</h2>
+        <MadCap:snippetBlock src="Cert_Header_Format.flsnp" />
+        <h2 MadCap:autonum="1.2 ">Distribution Section </h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Position</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Required</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Format</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>19</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Distribution
+ Amount</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Dec</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>0.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>20</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Analysis
+ Type (1,2,3,5)</p>
+                        <p>1-<MadCap:variable name="Variables.Jc Contract caps" /></p>
+                        <p>2-<MadCap:variable name="Variables.Pc Plant caps" /> Number</p>
+                        <p>3-Department</p>
+                        <p>5-Fixed Asset Code</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Integer</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>21</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Analysis</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Char</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>22</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Distribution
+ Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Char</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>23</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Quantity</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>No</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Dec</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>24</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Unit
+ of Measure</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>No</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Char</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.3 "><MadCap:variable name="Variables.Vat caps" /> Section <![CDATA[
+]]></h2>
+        <p>This is only required if there are multiple <MadCap:variable name="Variables.Vat caps" /> Split lines. </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Position</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Required</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Format</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>25</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Vat
+ Code</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Char</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>26</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Vat
+ Amount</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>No</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Dec</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>27</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Goods
+ Amount </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Dec</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.4 ">
+Certificate Detail Line Section </h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Position</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Required</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Format</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Default</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>28</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>ItemId</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Char</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>29</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Amount</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Dec</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>30</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>No</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Char</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

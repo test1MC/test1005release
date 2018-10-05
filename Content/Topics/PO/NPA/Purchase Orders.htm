@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="779" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">National Purchasing Agreements - </MadCap:conditionalText>Purchase Orders</h1>
+        <h2 MadCap:autonum="1.1">Order Header</h2>
+        <p class="Body">If you place an order against a company that has the National Purchasing Agreement box <MadCap:variable name="Variables.tick" />ed, the text “NPA” is shown alongside the Supplier name in the order header.  If at least one agreement document has been uploaded against the company, a hyperlink on the “NPA” text opens a new tab/window which displays all documents that have been uploaded to the company record using the Document Group specified in the new CI parameter <span class="parameter">NPAGROUP</span>. </p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Order Header NPA&#160;Link</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/Order Header NPA Link.png" class="FullWidth" /> </p>
+        <p class="Body">Note:&#160;If the CI parameter <span class="parameter">NPAGROUP</span> is blank then no “NPA” text will be shown.</p>
+        <h2 MadCap:autonum="1.2">Line Entry</h2>
+        <p class="Body">If the CI parameter <span class="parameter">USENPA</span> is set to Y, two additional fields appear when a purchase order line is entered or amended.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: ">Order Line with NPA&#160;Fields</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/Order Line with NPA Fields.png" class="FullWidth" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Eligible NPA Purchase with Supplier<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this line is covered by a National Purchasing Agreement.</p>
+                    <p>This is <MadCap:variable name="Variables.tick" />ed, by default, if the supplier entered on the order header is marked as having a National Purchasing Agreement.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Eligible Manufacturer<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>This field is optional.  If there is a National Purchasing Agreement in place with the manufacturer of the goods (as opposed to the supplier of the goods), choose the manufacturer. This denotes that this line should be marked as being eligible.</p>
+                    <p>The lookup displays a list of manufacturers from the Central Repository with whom you have a National Purchasing Agreement.  A manufacturer, in Central Repository terms, is company whose lists of Company Types includes the value set against the CI parameter <span class="parameter">COT-MANU</span>.  Typically, this parameter is set to “MANUF” or something similar.  Only manufacturers that also have the <span class="Field">National Purchasing Agreement</span> field <MadCap:variable name="Variables.tick" />ed appear in the lookup list .</p>
+                </div>
+            </div>
+        </div>
+        <p class="Body">Both of these new fields are updateable even after the purchase order has been committed.</p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>If the agreement is only with the manufacturer of the goods, not the supplier, leave the <span class="Field">Eligible NPA Purchase with Supplier</span> <MadCap:variable name="Variables.tick" />box unticked, but choose a manufacturer.</p>
+            </div>
+        </div>
+        <p class="Body">When you save the order line, the following warning message is displayed if you have <MadCap:variable name="Variables.tick" />ed the <span class="Field">Eligible NPA Purchase with Supplier</span> <MadCap:variable name="Variables.tick" />box and/or chosen an <span class="Field">Eligible Manufacturer</span>:</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/Message PO1413 NPA Warning.png" />
+        </p>
+        <p class="Body">You can then confirm or cancel saving the <MadCap:annotation MadCap:createDate="2017-01-16T14:30:52.0268228+00:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="Note about variations, copying orders, etc." MadCap:editor="Don Barwick" MadCap:editDate="2017-01-16T14:31:17.6653864+00:00">line.</MadCap:annotation></p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>If the supplier is marked as having a National Purchasing Agreement and if the <span class="Field">Eligible NPA Purchase with Supplier</span> <MadCap:variable name="Variables.tick" />box was <i>automatically</i> ticked,  no warning is shown.</p>
+            </div>
+        </div>
+    </body>
+</html>

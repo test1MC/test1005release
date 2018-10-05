@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title>[%=Heading.Level1%]</title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><span style="margin-right: 0pt;">4.3 </span>2-way Auto-matching </h1>
+        <p>The 2-way match process is invoked if accrual method for the Contract, possibly modified by the Supplier’s Office, is set to O or Z when the order is created, and the PL/AUTOINVM parameter is set to 2.&#160;&#160; </p>
+        <p>The 2-way match process can be restricted to contracts listed in the PL/AMJOBS parameter. This parameter should be a comma-separated  ‘matches’ list in the form </p>
+        <p>JOBMASK|X,JOBMASK|X,...</p>
+        <p>JOBMASK will be a contract number or mask where wildcards are allowed and X is a value 0, N or 2.</p>
+        <p>If a PO’s Contract number matches any JOBMASK and X for that mask is 2 then invoices will be 2-way matched if possible, if X is 0 (zero) or N then invoices will not be auto-matched. If the parameter is blank or a Contract does not match any mask then the auto-matching rule from the PL/AUTOINVM parameter applies.&#160; Similarly PL/AMDEPTS is set up for Departments.</p>
+        <p>For example, your PL/AUTOINVM parameter is set to N that is, by default, we do not want to 2-way match. Setting PL/AMJOBS to A*|2,B*|2,C*|0 will attempt to 2-way match any Contract whose number begins with A or B but will not attempt to 2-way match for Contracts beginning C.</p>
+        <p>This could get more elaborate because the parameter is read from left to right. So setting PL/AMJOBS to AA*|0,A*|2,B*|2 will not try to two way match anything beginning AA but will attempt anything else beginning A, and try to match anything beginning B. As a belt and braces measure you could add *|0 as another value at the end of the list but this is implied by the setting of PL/AUTOINVM. (For consistency with the PL/AUTOINVM parameter you can use N in PL/AMJOBS if you wish instead of 0.)</p>
+        <p>A 2-way match is attempted for every invoice when the Create button is pressed in the Review screen.</p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="773" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Bank Reconciliation Screen</h1>
+        <p class="Body">Several changes have been made to the <span class="Function">Bank Reconciliation - Statement Items</span> screen.</p>
+        <h2 MadCap:autonum="1.1">New Action</h2>
+        <p class="Body">A new action is available, named Enter Missing  Items. You can select a single unreconciled statement item and apply this action. This takes you to a new Missing Items Entry Screen (see <MadCap:xref href="Missing Items Entry Screen.htm">1, Missing Items Entry Screen</MadCap:xref>) in which you can enter details of missing COINS items for the unreconciled statement item.</p>
+        <p class="Body">The missing COINS items for all unreconciled statement items are entered in a single special open <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /> batch, with a description of “Missing Items Reconciliation”. If there is no missing items reconciliation batch currently open, the Enter  Missing Items action creates one.</p>
+        <h2 MadCap:autonum="1.2">New Column</h2>
+        <p class="Body">A new column has been added to the Bank Reconciliation browse.</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Missing Items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This shows the balance of all missing COINS items that have been created for each unreconciled statement item. </p>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum="1.3">New Filter</h2>
+        <p class="Body">A new filter called ‘Missing <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /> Items’ has been added. When selected, the filter shows only those unreconciled statement items that have had missing items entered against them.</p>
+        <h2 MadCap:autonum="1.4">New Statuses</h2>
+        <p class="Body">Two new values are possible in the <span class="Field">Status</span> column:</p>
+        <ul>
+            <li>‘Missing Items Incomplete’ means that missing items exist against the unreconciled statement item but their balance does not match the statement item value. </li>
+            <li> ‘Missing Items Complete’ means that the balance of the missing items matches the statement item value.</li>
+        </ul>
+        <h2 MadCap:autonum="1.5">Statement Item Date Link</h2>
+        <p class="Body">If missing items have been entered against a bank statement item then clicking on the statement date link takes you to the Missing Items screen where you can maintain the missing items. If there are no missing items against the statement item then clicking the statement item date field takes you to the COINS items screen as usual.</p>
+        <h2 MadCap:autonum="1.6">Other Actions</h2>
+        <p class="Body">The actions Un-reconcile Items, Reconcile Unmatched Item and Enter and Reconcile Unmatched Item cannot be used if any missing items have been entered against the statement item.</p>
+    </body>
+</html>

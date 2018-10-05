@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>1099 Processing</title>
+    </head>
+    <body>
+        <h1 class="print">1099 Processing</h1>
+        <p>&#160;</p>
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge">&#160;</td>
+                    <td><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+                    <td class="Edge">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>This procedure describes 1099 processing, which is only available for <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> that have been defined as USA <MadCap:variable name="Variables.kco companies" />.</p>
+        <p>For a PDF version of this process, visit the US Client Area website at <a href="http://support.coins-global.com/usa/publications/manuals-oa/OA_1099UsersGuideV4.pdf" target="_blank">http://support.coins-global.com/usa/publications/manuals-oa/OA_1099UsersGuideV4.pdf</a>.</p>
+        <div class="process">
+            <h2 class="print">How to Set Up 1099 Processing:</h2>
+            <p><strong>General Setup Maintenance</strong>
+            </p>
+            <p>This section describes how to set up OA so that US <MadCap:variable name="Variables.kco companies" /> can use 1099 processing.</p>
+            <p>
+                <MadCap:concept term="Topics" />Click on the&#160;topics below for details.</p>
+            <p><strong>1.&#160;Flag <MadCap:variable name="General.ProductName" /><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> as United States <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /></strong>
+            </p>
+            <p>1099 processing is only available for <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> that have been defined as USA <MadCap:variable name="Variables.kco companies" />. Non-USA <MadCap:variable name="Variables.kco companies" /> do not have any 1099 data entry tabs or menu items displayed. For clients using <MadCap:variable name="General.ProductName" /> OA in the United States, this should already be set up correctly.</p>
+            <ol>
+                <li>Go to <strong>System &gt; <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Setup &gt; Configuration &gt;</strong><span class="function" title="Function:%WCO0000BSYP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters</span> and find the <span class="parameter">COMPLOC </span>Parameter ID.</li>
+                <li>Open the parameter and set the value of the <MadCap:variable name="Variables.kco company" /> location to <strong>USA</strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PL/PL_00701.png" />
+                </p>
+            </blockquote>
+            <p />
+            <p><strong>2. Central Repository - <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Workbench</strong>
+            </p>
+            <p><span style="color: #ff6600;"><strong>1099 Info Tab</strong></span>
+            </p>
+            <p>Each <MadCap:variable name="Variables.pl supplier" /> and subcontractor that needs to have a 1099 form generated must be flagged as such in the <span class="function" title="Function:%WCI2000BCIM">Companies</span>. This information is maintained in <strong>Central Repository &gt; <MadCap:variable name="Variables.kco companies" style="text-transform: capitalize;" /> &gt; Click on a <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Name &gt; 1099 Info tab</strong>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00702.png" />
+            </p>
+            <p>Fill in the fields on this tab according to the criteria below:</p>
+            <p><strong>Print A 1099 Form For This <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /></strong>
+            </p>
+            <p>A <MadCap:variable name="Variables.tick" />box that causes 1099 data to be generated for this <MadCap:variable name="Variables.kco company" />.</p>
+            <p><strong>TIN Type</strong>
+            </p>
+            <p>A drop down box for the Tax Identification Number Type with valid choices of <span class="userinput">EIN </span>(Employer Identification Number),&#160;<span class="userinput">SSN </span>(Social Security Number), and <span class="userinput">Unknown</span>.</p>
+            <p><strong>TIN Number</strong>
+            </p>
+            <p>A numeric field for the Tax Identification Number.</p>
+            <p><strong>Box To Print 1099 Amount</strong>
+            </p>
+            <p>A drop down box with valid choices of 1, 2, 3, 4, 5, 6, 7, 8, 10, 13, 14, 15a, 15b, 16, and 18 that refer to the boxes on the printed 1099 form.</p>
+            <p><strong>Bank Account Number</strong>
+            </p>
+            <p>This optional data is the bank account number of the <MadCap:variable name="Variables.pl supplier" /> or subcontractor <MadCap:variable name="Variables.kco company" />.</p>
+            <p><strong>Alternative 1099 Name</strong>
+            </p>
+            <p>Allows you to override the <MadCap:variable name="Variables.pl supplier" /> / subcontractor <MadCap:variable name="Variables.kco company" /> name printed on the 1099 forms.</p>
+            <p><strong>Foreign Payee</strong>
+            </p>
+            <p>A <MadCap:variable name="Variables.tick" />box that indicates if the <MadCap:variable name="Variables.pl supplier" /> / subcontractor <MadCap:variable name="Variables.kco company" /> is foreign.</p>
+            <p><strong>FATCA</strong>
+            </p>
+            <p>Whether this company meets certain reporting requirements under the Foreign Account Tax Compliance Act (FATCA) requiring the FATCA <MadCap:variable name="Variables.tick" />box on the 1099 Form to be <MadCap:variable name="Variables.tick" />ed.</p>
+            <p><span style="color: #ff6600;"><strong>Company Tab</strong></span>
+            </p>
+            <p>The Legal Name field found in Central Repository &gt; Companies &gt; Click on a Company Name &gt; Company tab is the legal name of the company. It is used as the contractual name on orders and also in 1099 Forms.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00702-2.png" />
+            </p>
+            <p />
+            <p><strong>3. Define <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />/<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />/Office and Subcontractor/<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />/Office Relationships</strong>
+            </p>
+            <p>The <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> (<MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />) Account Number and/or the Subcontract Ledger (Subcontractor) Account Number must be linked to a <MadCap:variable name="Variables.kco company" /> or office so that transactions can be related to a <MadCap:variable name="Variables.kco company" /> when the 1099 data is generated.</p>
+            <p>This is maintained in <strong>Central Repository &gt; <MadCap:variable name="Variables.kco companies" style="text-transform: capitalize;" /> &gt; Click on a <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Name &gt; Office tab &gt; Click on an Office Name &gt; Accounts tab</strong>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00703.png" />
+            </p>
+            <ul>
+                <li>If this <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />/Office is a <MadCap:variable name="Variables.pl supplier" /> to be used in the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> module, the account number of the <MadCap:variable name="Variables.pl supplier" /> used in <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> should be entered on this screen.</li>
+                <li>If this <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />/Office is a subcontractor to be used in the <span class="module">Subcontract Ledger </span>module, the account number of the subcontractor used in Subcontract Ledger should be entered on this screen.</li>
+                <li>If this <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />/Office is both a <MadCap:variable name="Variables.pl supplier" /> and a subcontractor, an account number for both can be entered on this screen. This causes the generation of 1099 data from both modules to be combined into one 1099 form.</li>
+            </ul>
+            <p />
+            <p><strong>Steps for Processing 1099 Data</strong>
+            </p>
+            <p>A 1099 Processing Menu can be found in the <span class="module">Central Repository </span>module under the Administration menu. The steps involved for processing 1099 data are designed so that you can follow the six menu options in order from beginning to end. Steps can be run as many times as needed. Each menu option is discussed in more detail below.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00704.png" />
+            </p>
+            <p><strong>Step 1 - Edit 1099 Payer Information</strong>
+            </p>
+            <p>A 1099 Payer is the <MadCap:variable name="Variables.kco company" /> issuing the 1099 forms to the <MadCap:variable name="Variables.pl suppliers" /> and subcontractors. The typical <MadCap:variable name="General.ProductName" /> user only sets up one 1099 payer for each year, but <MadCap:variable name="General.ProductName" /> can handle processing for multiple 1099 payers in the same year.</p>
+            <p>A sample data entry screen is shown below.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00705.png" />
+            </p>
+            <p>Some special fields of note in this function are:</p>
+            <ul>
+                <li><span class="field">Payer Name </span>- Once the Payer Name has been entered, it cannot be changed because the 1099 data generated for this payer is tagged internally with this name. Changing this name would break the link and stop processing. You therefore need to take extra care when entering the Payer Name so that it is entered exactly how it should appear on the printed 1099 form.</li>
+                <li><span class="field">KCO's to Process </span>- This controls combining transactions from multiple <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> for 1099 reporting. When left blank, all data from all <MadCap:variable name="Variables.kco companies" /> (KCO's) in <MadCap:variable name="General.ProductName" /> are reported under this Payer. To only report one or more specific lists of <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" />, enter a comma separated list of KCO numbers with no spaces.</li>
+            </ul>
+            <p />
+            <p><strong>Step 2 - Generate 1099 Payee Data</strong>
+            </p>
+            <p>At this point in the processing, the Payer record has been created from Step 1, but no data has been created from which to print 1099's. This function creates the 1099 data known as the Payee Information. You must enter a 1099 Year if different from the default year, and click the button to the right of the Payer Name to select a Payer from a list that appears in a pop-up box.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00706.png" />
+            </p>
+            <p>The following processing takes place when this function is run:</p>
+            <ol>
+                <li>The payments to <MadCap:variable name="Variables.pl suppliers" /> and subcontractors are totaled so that there is a value paid to each for the payment year based on the <MadCap:variable name="Variables.cheque" /> date of each payment. A 1099 Payee Information record is created for each <MadCap:variable name="Variables.kco company" />/office with payments greater than the value entered for the <span class="function">Produce 1099s for Amounts Over in the Edit 1099 Payer Information </span>function.</li>
+                <li>The following data default from the <MadCap:variable name="Variables.kco companies" style="text-transform: capitalize;" /> Workbench &gt; 1099 Info tab into the newly created 1099 Payee Information record.</li>
+            </ol>
+            <ul>
+                <ul>
+                    <ul>
+                        <ul>
+                            <li>TIN Type</li>
+                            <li>TIN Number</li>
+                            <li>Bank Account Number</li>
+                            <li>Alternative 1099 Name</li>
+                            <li>Foreign Payee</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </ul>
+            <ol start="3">
+                <li>Error checks are performed as this data is created. Error messages are noted on each Payee record.</li>
+                <li>A report of the data created is produced along with any error information for each Payee record.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The generation of the 1099 data is processed by using the report generator. This processing could take some time depending on the volume of transactions in <MadCap:variable name="General.ProductName" />. It is always recommended that this type of processing be run in the background. A simple report is produced as a summary of the processing. Checking the status of this report alerts the user that the 1099 data has been created successfully, created with errors, or is still being generated in background mode.</div>
+            <p>A sample report from the <span class="function">Generate 1099 Payee Data </span>function is shown below.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00707.png" />
+            </p>
+            <p />
+            <p><strong>Step 3 - Edit 1099 Payee Information</strong>
+            </p>
+            <p>This function allows you to view and edit the 1099 Payee Data that was created with the <span class="function">Generate 1099 Payee Data </span>function from Step 2.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00708.png" />
+            </p>
+            <p>Some things to note about this function are:</p>
+            <ul>
+                <li>A payee record can be added or changed in this function.</li>
+                <li>The <span class="function">Generate </span>function can be run as many times as needed, but if a payee record was generated, then changed with this function, the changes are lost when the data is regenerated.</li>
+                <li>If a new payee record is added with this function, the <span class="function">Generate </span>function is run again. The new payee record remains unchanged by the <span class="function">Generate </span>function.</li>
+                <li>The <span class="field">FATCA</span> field in the Setting box shows whether this payee meets certain reporting requirements under the Foreign Account Tax Compliance Act (FATCA) requiring the FATCA <MadCap:variable name="Variables.tick" />box on the 1099 Form to be <MadCap:variable name="Variables.tick" />ed.</li>
+            </ul>
+            <p />
+            <p><strong>Step 4 - 1099 Final Error Check</strong>
+            </p>
+            <p>When the payee data has been reviewed and all errors have been fixed using Step 3, the <span class="function">1099 Final Error Check </span>function should be run to verify that all errors have been resolved. The selection screen for this function (shown below) works in the same manner as the <span class="function">Generate </span>selection screen.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00709.png" />
+            </p>
+            <p>The <span class="function">1099 Final Error Check </span>can be run as many times as needed. It produces a report similar to the Generate 1099 Payee Information Report, but only errors are shown. Error checking is performed on data that are both generated and added.</p>
+            <p>Below is a sample 1099 Final Error Check Report with errors.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00710.png" />
+            </p>
+            <p>Below is a sample 1099 Final Error Check Report with no errors.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00711.png" />
+            </p>
+            <p />
+            <p><strong>Step 5 - Print 1099 Forms</strong>
+            </p>
+            <p>The <span class="function">Print 1099 Forms </span>function allows 1099 data to be printed to a special preprinted 1099 form. If any 1099 records have an error, the number of error records is displayed with a message; no 1099's are printed until the errors are resolved.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00712.png" />
+            </p>
+            <p>There are two slightly different formats for 1099 forms. The <span class="field">Form </span>drop down box allows you to select either a <span class="userinput">Federal </span>or <span class="userinput">Payee </span>format. The <span class="userinput">Federal </span>format is used for the form that is sent to the government. All other forms use the <span class="userinput">Payee </span>format.</p>
+            <p>The <span class="field">1099 Year </span>and <span class="field">Payer Name </span>fields on this selection screen are used in the same way as the Generate and Error Check selection screens, in other words, you can select a Payer for which to print 1099 data.</p>
+            <p>The <span class="field">From / To Payee Number </span>field allows you to print one form, or a small subset of forms, from the entire group. This can be useful if part of a group of forms is destroyed from a paper jam or other printing problem.</p>
+            <p />
+            <p><strong>Step 6 - Create 1099 Magnetic Media File</strong>
+            </p>
+            <p>The <span class="function">Create 1099 Magnetic Media File </span>function creates an ASCII file of 1099 data to be sent to the government for reporting. If any 1099 records have an error, the number of error records is displayed with a message, and the 1099 Magnetic Media File is not created until the errors are resolved. The selection screen for this function is shown below. It works in the same manner as the <span class="function">Generate </span>selection screen.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_00713.png" />
+            </p>
+            <p>Additional selection screen fields on this screen are <span class="field">Magnetic Media File Name </span>and <span class="field">Save File in Directory</span>.</p>
+            <p>The government requires the file submitted to be named "IRSTAX", but you can change the name if you wish to do a test run. Just make sure that the final creation of the file is named "IRSTAX". Do not create the file under a different name and rename the file using an operating system command. This is because the file name is also stored in the ASCII file. Renaming the file at the operating system level does not change the name saved within the ASCII file.</p>
+            <p>The ASCII file is located on the <MadCap:variable name="General.ProductName" /> server at the <span class="field">Save File in Directory</span>. <span style="color: black;">The default path in this field saves the 1099 Magnetic Media file to your 'My Files' directory. This path (such as<strong> /coinsoa/live/var/home/katrey</strong>) is set up with the beginning representing the OA environment that you (the current user) are working in (such as <strong>/coinsoa/live/</strong>) and the ending based on your 'My Files' directory (such as <strong>var/home/<em>katrey</em>/</strong>, where <strong><em>katrey</em></strong> is the user id variable). To access the ASCII file, 'My Files' can be found at <strong>System &gt; My Files</strong>.</span></p>
+            <p>It is best to use the directory name that defaults, but this can be changed. Note that if the report generator does not have permissions to access the directory, no file is created.</p>
+            <p />
+        </div>
+        <div class="configuration">
+            <h2 class="print">1099 Processing</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CO/co_comploc.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

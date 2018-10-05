@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PC/INTERCO - Intercompany charges direct to JC (not via SL/PL)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PC/INTERCO - </span> Intercompany charges direct to JC (not via SL/PL)
+</div>
+<div class="param_def">
+<p>Whether to run <MadCap:variable name="Variables.Pc Plant caps"/> to charge inter-<MadCap:variable name="Variables.kco company"/> <MadCap:variable name="Variables.jc contracts"/> directly.</p>
+<p>The value for <span class="parameter">INTERCO</span> is read from the <MadCap:variable name="Variables.jc contract"/> <MadCap:variable name="Variables.kco company"/> rather than in the <MadCap:variable name="Variables.pc plant"/> <MadCap:variable name="Variables.kco company"/>.</p>
+<p>If <span class="parameter">INTERCO </span>is set to <span class="userinput">Y</span>, when checking out on the <MadCap:variable name="Variables.Pc Plant caps"/> Web <MadCap:variable name="Variables.Catalogue caps"/>, pending <MadCap:variable name="Variables.pc hires"/> are for the <MadCap:variable name="Variables.jc contract"/> rather than for a customer. Resulting dispatches are treated as Internal downstream in the process and post directly to JC.</p>
+<p class="noteheader">NOTES</p>
+<div class="note"><ol>
+<li>This option requires inter-<MadCap:variable name="Variables.kco company"/> GL accounts to be configured.</li>
+<li>This option is only appropriate if you run <MadCap:variable name="Variables.Pc Plant caps"/> entirely in <MadCap:snippetBlock src="../../../Resources/Snippets/coinsOA.flsnp"/>. This is because an inter-<MadCap:variable name="Variables.kco company"/> dispatch created using OA could have a <MadCap:variable name="Variables.jc contract"/> code of 12 characters (3 kco, 1 cosep and 8 job_num). In <MadCap:snippetBlock src="../../../Resources/Snippets/COINSplus.flsnp"/> you would not be able to update this dispatch.</li>
+</ol></div>
+<p>If <span class="parameter">INTERCO</span> is set to <span class="userinput">N</span>, <MadCap:variable name="Variables.pc hires"/> are for customers, and charges are entered via <span class="module"><MadCap:variable name="Variables.Sales Ledger caps"/></span>.</p>
+</div>
+</body>
+</html>

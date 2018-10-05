@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:annotation MadCap:createDate="2018-05-30T17:44:20.3216951+01:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="TODO: Check that the GRN process is still the same as documented here." MadCap:editor="Don Barwick" MadCap:editDate="2018-05-30T17:44:44.8355102+01:00">Entering Goods Received</MadCap:annotation> Notes (Materials and <MadCap:variable name="Variables.Pc Plant caps" />)</h1>
+        <p>The procedure for entering Goods Received (material orders) and <MadCap:variable name="Variables.Pc Plant caps" /> Advice (<MadCap:variable name="Variables.pc plant" /> <MadCap:variable name="Variables.pc hire" /> orders) is similar, except that if the order is <MadCap:snippetText src="../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.pc plant" /> <MadCap:variable name="Variables.pc hire" /> order, you also fill in the <MadCap:variable name="Variables.Pc Plant caps" /> on Site frame.</p>
+        <p class="todo" MadCap:autonum=" ">To enter GRNs:</p>
+        <ol>
+            <li>Go to Procurement &gt; Material GRNs &gt; Material GRNs or Procurement &gt; <MadCap:variable name="Variables.Pc Plant caps" /> GRNs.<p class="note">You cannot enter goods against an uncommitted order.</p></li>
+            <li>Enter the ticket number (the supplier's delivery note reference).</li>
+            <li>Enter the number of the order for which you are entering the goods.</li>
+        </ol>
+        <p><MadCap:variable name="General.ProductName" /> generates the GRN number automatically.</p>
+        <p><MadCap:variable name="General.ProductName" /> <MadCap:annotation MadCap:createDate="2018-05-30T17:45:13.2715964+01:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="TODO: Add a screenshot?" MadCap:editor="Don Barwick" MadCap:editDate="2018-05-30T17:45:25.3772710+01:00">displays</MadCap:annotation> the Order Details frame, showing all undelivered items on the purchase order.</p>
+        <p>If the order is a <MadCap:variable name="Variables.Pc Plant caps" /> <MadCap:variable name="Variables.Pc Hire caps" /> Order, <MadCap:variable name="General.ProductName" /> prompts for the <MadCap:variable name="Variables.Pc Plant caps" /> Details for each line on the order.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To record that the full quantity of goods was delivered</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>Select all the lines on which the full remaining quantity of goods was delivered.</li>
+                    <li>Choose Accept Whole Quantity from the Choose Action list.</li>
+                    <li><MadCap:variable name="General.ProductName" /> fills in the quantities delivered based on the quantities expected, and marks the lines as closed.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To record that not all expected goods were delivered</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>Open the line (click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="icon24px" />).</li>
+                    <li>Enter the quantity of goods delivered.</li>
+                    <li>Save the line (click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="icon24px" />).</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To record the delivery of goods not ordered</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>Add a new line (click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="icon24px" />).</li>
+                    <li>Enter the details of the unordered goods.</li>
+                    <li>Save the line (click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="icon24px" />).</li>
+                </ol>
+                <p class="note">You can only add unordered goods if you have permission to do so. There may be a limit on the value of unordered goods you can enter.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To reject delivered goods</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>Enter the full quantity of goods delivered.</li>
+                    <li>Enter the quantity of goods that were rejected.</li>
+                    <li>Select an exception code to show why the goods were rejected.</li>
+                    <li>If necessary, enter a note to explain further.</li>
+                    <li>If the line refers to a plant item, <MadCap:variable name="General.ProductName" /> displays the <MadCap:variable name="Variables.Pc Plant caps" /> Details frame.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To reassign the costing</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>To assign the goods to a different WBS or cost code, open the line and enter the new code.</li>
+                    <li>To assign goods to more than one WBS or <MadCap:variable name="Variables.cost head" />, open the line, click Multi Cost Head or Multi WBS, then enter the quantities to be costed to each code. The quantities on the individual WBS or <MadCap:variable name="Variables.cost head" /> lines must add up to the total quantity delivered.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>GRNs - changing units, opening and closing lines</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>If the goods were delivered in units that were different from the units ordered, enter the units delivered.</li>
+                    <li>To close a line (if no further goods are required for this order line), select the line and choose Close from the Choose Action list. For example, you might override the quantity delivered, then close the line because no further delivery is needed.</li>
+                    <li>To open a closed line, select the line and choose Open from the Choose Action list.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>When you have finished entering Goods Received, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/next.svg" class="icon24px" />NEXT .</p>
+        <p><MadCap:variable name="General.ProductName" /> processes the GRN, and removes any lines that have no quantity delivered. These will appear on subsequent GRNs.</p>
+    </body>
+</html>

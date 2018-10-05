@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/AMJOBS - Specific Automatching for Contracts</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/AMJOBS - </span> Specific Automatching for Contracts
+</div>
+<div class="param_def">
+<p>Whether to allow Automatic Invoice Matching to be applied selectively against <MadCap:variable name="Variables.jc contracts"/>.</p>
+<P>Enter a can-do list in the form <EM>jobmask|x,jobmask|x,...</EM> where <EM>jobmask </EM>matches against <MadCap:variable name="Variables.jc contract"/> numbers and <EM>x </EM>is either 0 (zero) (invoices on <MadCap:variable name="Variables.jc contracts"/> matching the mask will not be auto-matched) or 2 (invoices on <MadCap:variable name="Variables.jc contracts"/> matching the mask will be two-way matched if possible).  For example: <SPAN class="userinput">A*|2,B*|2,C*|0</SPAN>.</P>
+<P>If the parameter is blank or a <MadCap:variable name="Variables.jc contract"/> does not match any mask then the auto-matching rule from the <FONT color="#000000"><SPAN class="parameter">PL/AUTOINVM</SPAN> parameter applies.</FONT></P>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../pl/pl_autoinvm.htm" /><MadCap:relatedTopic src="../pl/pl_amdepts.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

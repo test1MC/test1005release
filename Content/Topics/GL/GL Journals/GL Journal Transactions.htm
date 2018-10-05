@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3542" MadCap:lastWidth="792">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />GL Journal Transactions</h1>
+        <p>On the Transactions Tab of the Journal Batch, select the Add button. Enter the details of the transaction in the relevant fields. </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Transactions_1_1104.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Transactions_1_1106.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The type of account (contract, General Ledger, asset, workshop, VAT or part exchange account) to which you are entering the journal.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Unlabelled Field</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>If the transaction is to an account other than a General Ledger account, this shows:</p>
+                        <p>Rev if the transaction is a revenue journal.</p>
+                        <p>Input if the transaction is input VAT.</p>
+                        <p>Output if the transaction is output VAT.</p>
+                        <p>Cost if the transaction is a cost journal</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Analysis</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Financial analysis where you want to record the value of the transaction</p>
+                        <p>
+                            <MadCap:xref href="../GL Account Lookup.htm" target="_blank">GL Account Lookup</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="COINS.AUOnly">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">GSTable</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Amount excluding GST</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="COINS.AUOnly">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">VATable</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The amount excluding VAT (for VAT journals).</p>
+                        <p>The VATable amount is shown with the natural sign; VAT amounts (in the Value column) are displayed with the sign which depends on whether the entry is a debit or a credit.</p>
+                        <p>For example, for a VATable input with a positive figure in the VATable column, the VAT amount is displayed as a positive figure in the Value column since this will be a debit entry in the journal.</p>
+                        <p>For a VATable output with a positive figure in the VATable column, the VAT amount is displayed as a negative figure in the Value column since this will be a credit entry in the journal.</p>
+                        <p>A negative VATable output figure is interpreted as reducing the VATable outputs which requires a debit entry in the journal, so this is displayed as positive in the Value column.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Value	</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Value of the transaction.</p>
+                        <p>If the Rate field on the batch header is not zero, <MadCap:variable name="General.ProductName" /> calculates the value of the transaction from the quantity, when you complete the line.</p>
+                        <p>To enter alternative base currency values manually, leave the value in this field as 0.00.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Currency</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Currency code of the transaction</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Description will default to either the batch header or the previous transaction or you can enter a specific description per transaction line.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Date</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Date of the transaction</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Quantity</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The quantity for the transaction.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Units</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">The unit of quantity.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>After entering each line, click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> to store the details.</p>
+        <p>Once you have completed your entries, click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" /></p>
+        <p>The GL Journal Batches screen is displayed listing all the batches, sorted in batch number order.</p>
+        <p>Locate your batch and it will show the status as Unposted.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Transactions_2_1104.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Transactions_2_1106.png" class="FullWidth" />
+        </p>
+        <p>You can now post the batch</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"><MadCap:variable name="General.ProductName" /> will not allow you to post an incomplete/unreconciled batch</p>
+        <p>&#160;</p>
+    </body>
+</html>

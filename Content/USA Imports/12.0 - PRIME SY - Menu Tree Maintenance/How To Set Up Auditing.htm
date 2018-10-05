@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>How To Set Up Auditing</h1>
+        <h2>Module: System Wide Functionality</h2>
+        <p>Note: This will not ever capture any “past data”. Once you configure auditing on a database table, COINS will begin capturing data moving forward. There is no way to go back and capture data before auditing was set up. </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Go to the “Audit” folder in the module you are working in and open up “Configuration.”&#160; For this example, we used Job Status &gt; Audit &gt; Configuration.</li>
+        </ol>
+        <p class="caption">Figure 1: Job Status Audit Configuration </p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing.png" style="visibility: visible;mso-wrap-style: square;width: 492px;height: 240px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li>On this list, select the database table that you want to use by clicking open its folder.&#160; </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">You cannot add additional database tables here.&#160; If the table you want to audit is not on this list, consider that it may be under the “audit” folder in a different module.</li>
+            <li style="list-style-type: disc;">You can use System &gt; System Inquiries &gt; Database Inquiry to see what database tables exist and what fields exist on each table. </li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li>Open the database table you want to audit and add the field(s) that you want to audit:</li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p class="caption">Figure 2: Opening Audit Table</p>
+        <p class="caption">&#160;</p>
+        <ul style="list-style-type: circle;margin-left: 108pt;">
+            <li style="list-style-type: circle;">You can also use the action bar to create company-specific rules for auditing.</li>
+            <li style="list-style-type: circle;">“Number of Days History” is the length of time COINS will store the audit records for.</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="list-style-type: square;">Audit records are never automatically deleted.&#160; When you run Audit &gt; Delete, COINS will remove records that are older than this many days.</li>
+        </ul>
+        <p>Note: If there is nothing in the Audit Field box, then you will not be able to Audit that selected field in the next steps</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+            <li>Open the Standard Cost Types record in order to Audit these listed fields.&#160; This is found under Job Status &gt; Setup &gt; Setup Maintenance &gt; Standard Cost Types.&#160; </li>
+        </ol>
+        <p class="caption">Figure 3: Standard Cost Type Audit</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_1.png" style="visibility: visible;mso-wrap-style: square;width: 493px;height: 240px;" />
+        </p>
+        <p class="caption">&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="5">
+            <li>For example, when you open a Standard Cost Type record such as Equipment, you should now see an Audit icon on records of this type on the bottom left.</li>
+        </ol>
+        <p class="caption">Figure 4: Audit Icon</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_2.png" style="visibility: visible;mso-wrap-style: square;width: 492px;height: 240px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="6">
+            <p>Selecting the Audit Icon will bring up the audit trail for this record:</p>
+        </ol>
+        <p class="caption">Figure 5: Audit Trail</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_3.png" style="visibility: visible;mso-wrap-style: square;width: 492px;height: 240px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">By default, this shows the audit trail for the last field you “touched” on this record.</li>
+            <li style="list-style-type: disc;">In the above screenshot I am seeing audit trail on the “short description” field. To see the audit trail on “billing item,” simply click on that field as if you were going to edit it, and then click the Audit button</li>
+            <li style="list-style-type: disc;">Note the field name at the top of the audit is jsc_item; this is the “billing item” field</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="7">
+            <p>In order to process an audit across all records (rather than just seeing the audit trail on a single field of a single record as shown above), you will need to run Audit &gt; Processing.&#160; Under Job Status (at the bottom of the list) open Audit &gt; Processing &gt; Cost Type.&#160; </p>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <p style="list-style-type: disc;">The audit number will be automatically filled in. The next time I process auditing on this field, the audit number will be 2</p>
+        </ul>
+        <p class="caption">Figure 6: Audit Processing</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_4.png" style="visibility: visible;mso-wrap-style: square;width: 492px;height: 277px;" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">By clicking the Process button on this screen, it will produce a report which simply shows how many records were processed:</li>
+        </ul>
+        <p class="caption">Figure 7: Audit Processing Report:</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_5.png" style="visibility: visible;mso-wrap-style: square;width: 493px;height: 76px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="8">
+            <li>You can now generate an audit report for this database table.&#160; Under Job Status &gt; Audit &gt; Reports &gt; Cost Types and this will bring up the selection fields to run the audit.&#160; </li>
+        </ol>
+        <p class="caption">Figure 8: Audit Report:</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_6.png" style="visibility: visible;mso-wrap-style: square;width: 493px;height: 240px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 108pt;">
+            <li style="list-style-type: circle;">Note that you will be running this report for a particular audit number. COINS will default in the most recent audit #</li>
+            <li style="list-style-type: circle;">You can select to sort either by field name or by sequence (lists the changes made to all fields in chronological order)</li>
+            <li style="list-style-type: circle;">You can select a date range, specify a set of fields, specify an individual cost type record, or specify a user to see only changes made by that user. </li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 144pt;">
+            <li style="list-style-type: square;">For example, you can leave all fields blank except User to see every change a specific user made to any standard cost type record. </li>
+        </ul>
+        <p class="caption">Figure 9: Audit Report Sample:</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_7.png" style="visibility: visible;mso-wrap-style: square;width: 461px;height: 314px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="9">
+            <li>After processing this audit trail, I made a single change to the standard cost type 112 record. The description was changed slightly, Subcontract to Subcontractors.&#160; </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Run “process” to generate audit #2 for this table. </li>
+        </ul>
+        <p class="caption">Figure 10: Audit Processing After Change:</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_8.png" style="visibility: visible;mso-wrap-style: square;width: 485px;height: 87px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="10">
+            <p>Audit #2 has only the record of the one change that I made.&#160; On the last line you can see when and where the change was made, “Old” to “New.”</p>
+        </ol>
+        <p class="caption">Figure 11: Audit Change:</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_9.png" style="visibility: visible;mso-wrap-style: square;width: 493px;height: 240px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="11">
+            <p>Run the audit report open-ended for audit #2:</p>
+        </ol>
+        <p class="caption">Figure 12: New Audit Report:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="12">
+            <p>This report will only show the one change:</p>
+        </ol>
+        <p class="caption">Figure 13: Audit Report Sample:</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/How To Set Up Auditing_10.png" style="visibility: visible;mso-wrap-style: square;width: 471px;height: 91px;" />
+        </p>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">You can still run the audit report for audit #1, but the selection criteria will default to the latest audit, which will only contain the changes that were made since the previous time the audit processing was run</li>
+            <li style="list-style-type: circle;">It is very useful to use the report scheduler to run the “processing” function at a regular interval. Scheduling this report to run every month on the last (or first) day of the month is probably best practice – this will tie each audit record to a single month</li>
+        </ul>
+        <ul style="list-style-type: square;margin-left: 108pt;">
+            <li style="list-style-type: square;">Audit reports can also be scheduled to be run immediately after each audit processing is run… these audit reports can then be saved / archived to preserve audit trails even after records themselves are deleted. </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

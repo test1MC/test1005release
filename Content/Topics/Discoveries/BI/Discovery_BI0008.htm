@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="8826" MadCap:lastWidth="1739" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0008,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OA Designer - Container Reports</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Dicscovery Heading.flsnp" />
+        <h1>Container Reports</h1>
+        <p>A Container Report is a report which may be run or Scheduled and will in turn spawn off different reports that can be run and emailed to different users.&#160; </p>
+        <p>&#160;</p>
+        <p>In the following example a report will be built which will spawn reports for distribution to Contract Managers. </p>
+        <h2>Create a New Function for the container report </h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Initials + Exercise No.e.g. xxBI0008<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Description<br /></td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Description identifier.e.g. Container Report<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Module</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Contract Status</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Category</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Report</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Context</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Leave as defaulted from the Function Description.<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Function Program</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">wou005</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports.png" class="FullWidth" />
+        </p>
+        <h2>Set up the Page</h2>
+        <p>Set up the page section xxM2Exercise4 using Page Designer.&#160; Click Add <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_5.png" style="visibility: visible;mso-wrap-style: square;width: 24px;height: 24px;" alt="add" /> to create the new Page and fill in the fields as follows (leave the others blank):</p>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Page</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Give the page section the same name as the function created.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Form Service Procedure</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">jcfrep.p</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Click Save <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_1.png" style="width: 24px;height: 24px;" /> to save the new Page. <MadCap:variable name="General.ProductName" /> returns to the summary for the page section being created.</p>
+        <h3>Add the Page Section Forms</h3>
+        <p>&#160;</p>
+        <p>Select the Form tab create an Update form.</p>
+        <p>Click the <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_5.png" style="visibility: visible;mso-wrap-style: square;width: 24px;height: 24px;" alt="add" /> Add Button and enter the following information to create the Form :</p>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Form</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Update </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Field Type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Update</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Linked To</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Leave blank</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Click the Save Button <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_1.png" style="width: 24px;height: 24px;" /> to create the form.</p>
+        <h3>Add the Fields</h3>
+        <p>In the Field Tab go to the FORM selector at the bottom of the page, select Update and click Apply Filter.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>Add the Field, leaving Field and Label blank :</p>
+        <p>In the Generate field, enter jcfrep.jobSelectionGenerate.&#160; This is the standard selection generator for contracts.</p>
+        <p>Click the Save Button <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Using the dataset in a Report_1.png" style="width: 24px;height: 24px;" /> to create the field.</p>
+        <h3>Create the Container Report</h3>
+        <p>Create the Container Report xxM2Exercise4 – No header table is required</p>
+        <p>Body Tablejc_job</p>
+        <p>QueryFOR EACH jc_job WHERE jc_job.kco = {kco} {jobSelect}</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_1.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_2.png" style="left: 0;" class="FullWidth" />
+            <br />
+        </p>
+        <p>Sortjc_job.job_fore+ </p>
+        <p>Detail Level1</p>
+        <p>&#160;</p>
+        <p>Add a Body form</p>
+        <p>Add the following field to the body form</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Field</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">job_fore</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Label</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Manager</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">FunctionName&amp;jc_jobRowid={jc_jobRowid}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">View-As</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Report</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">FunctionName</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p> should be the function name of the report to be generated from the container – use xxM2Exercise4a (replacing xx with your initials).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_3.png" class="FullWidth" />
+        </p>
+        <h3>Create the function for the Report to be generated by the Container</h3>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Initials + Exercise No.e.g. NLM2Exercise4a<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Description<br /></td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Description identifier.e.g. Container Report Contents<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Module<br /></td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Contract Status<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Category</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Report</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Context</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Leave as defaulted from the Function Description</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Program</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">wou005</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Report Parameters</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Use the Report Selection page from the Container with stn_code=FunctionName and pass the contract manager code from the container report through to the generated report with the parameter &amp;job_fore={job_fore}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_4.png" class="FullWidth" />
+        </p>
+        <h3>Create the Report to be spawned from the Container.</h3>
+        <p>Create the Container Report xxM2Exercise4a </p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Header Table</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">co_config,jc_config</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Body Table</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">jc_job</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use the Query to pass the contract manager code from the container report as a required condition for the spawned report</p>
+        <p class="Example">FOR EACH jc_job WHERE jc_job.kco = {kco} AND job_fore = '{job_fore}'</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_5.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Sort</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">jc_job.job_fore+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Add a body form and to this form add the following fields</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Width</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">job_num</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Contract</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">25mm<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">job_name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Contract Name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">35mm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_ContractCosts^TD</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Costs TD<br /></td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">20mm</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">RO_ContractRevenue^TD</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Revenue TD</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">20mm</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Results</h3>
+        <p>Run the Container Report.&#160; The output on the Report Status Workbench should be similar to that shown below:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_6.png" class="FullWidth" />
+        </p>
+        <p>Note, however that there is no easy way to identify which report goes to whom.&#160; This can remedied by a small change to the function:</p>
+        <p>Return to the function definition for xxM2Exercise4a and in the description field add {RO_job_fore_Desc} to the end of the context description.&#160; </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_7.png" class="FullWidth" />
+        </p>
+        <p>This will instruct the function to display the Manager name alongside the report name in the print Queue.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Container Reports_8.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

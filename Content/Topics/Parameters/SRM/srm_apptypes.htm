@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SRM/APPTYPES - iPortal Approval Types</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SRM/APPTYPES - </span> iPortal Approval Types
+</div>
+<div class="param_def">
+<p>A comma-separated list of iPortal approval types that will place a Company Restriction on a vendor's record in the Company Information Workbench. </p>
+<p>Builder's Profile can be configured to maintain approvals at whatever level the user requires. This approval information is sent to iPortal and then forwarded to the relevant COINS system. On receipt of this approval information, COINS looks at the approval types in the XML message assesses whether a Company Restriction should be imposed.</p>
+<p>An example setting for <span class="parameter">APPTYPES</span> might be: <span class="userinput">Commercial,SHEQ,Financial</span>. If a vendor record is received with any of these approval types set to "NonApproved" then a Restriction is imposed. If all of these types are received as "Approved" then any Restriction is removed.</p>
+<p>If a Company Restriction is in place:</p>
+<ul>
+<li><span style="font-size: 1em;">An asterisk with a red background shows to the right of the company name in the Company Information Workbench.</span></li>
+<li><span style="font-size: 1em;">If the CI parameter <span class="parameter">RSTDISP</span> is populated, the Group Status shows the value stored in that parameter rather than the actual Group Status Code. (The actual Group Status Code remains unchanged.)</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 1em;">A tooltip shows the reason for the restriction.</span></li>
+</ul>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../ci/ci_rstdisp.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

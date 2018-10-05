@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/VALBTYPE - OA Only - Validate Billing Type against VAT Registration</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/VALBTYPE - </span> OA Only - Validate Billing Type against VAT Registration
+</div>
+<div class="param_def">
+<p>(COINS OA only) Whether COINS validates the Billing Type for subcontractors that are not <MadCap:variable name="Variables.vat"/> registered (<STRONG>Y</STRONG> or <STRONG>N</STRONG>).</p>
+<P class="yesnolist"><SPAN class="userinput">Y</SPAN> = The subcontractor's billing type cannot be set to <SPAN class="userinput">A</SPAN> (Authenticated Receipt) or <SPAN class="userinput">S</SPAN> (Self Billing) if there is no <MadCap:variable name="Variables.vat"/> registration number recorded for them.</P>
+<P class="yesnolist"><SPAN class="userinput">N</SPAN> = COINS does not restrict the billing type for non-<MadCap:variable name="Variables.vat"/>-registered subcontractors.</P>
+<P>We consider that it is good practice to have this set to <SPAN class="userinput">Y</SPAN>, since subcontractors who submit authenticated receipts or with self-billing agreements must be registered for <MadCap:variable name="Variables.vat"/>; however, clients with existing data that is not set up this way may need to set this to <SPAN class="userinput">N</SPAN>.</P>
+</div>
+</body>
+</html>

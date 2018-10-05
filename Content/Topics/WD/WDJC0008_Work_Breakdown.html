@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1010" MadCap:lastWidth="1000">
+  <head>
+    <title>Work Breakdown</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Work Breakdown</h1>
+    <p>In <MadCap:variable name="General.ProductName" />, work breakdown analysis provides a way of referring to specific activities or operations within a <MadCap:variable name="Variables.jc contract" />. For example, when raising requisitions, purchase orders or goods received notes, work breakdown structure (WBS) codes identify where materials are used and what for.</p>
+    <p>You can import project planning information from other software.</p>
+    <p>The components of the work breakdown analysis are:</p>
+    <ul>
+      <li>A <a href="WDJC0010_Sections.html">section</a>, which typically represents a physical location within the scope of the <MadCap:variable name="Variables.jc contract" />.</li>
+      <li>An <a href="WDJC0011_Activities.html">activity</a>, which represents a type of work.</li>
+      <li>A WBS code, which represents an individual operation on a <MadCap:variable name="Variables.jc contract" />.</li>
+    </ul>
+    <p>When configuring a <MadCap:variable name="Variables.jc contract" />, you can decide whether or not to use WBS codes. This will depend on the amount of information about activities you want to keep in <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status</span>. If you are using WBS codes, you must use either sections or activities, or both.</p>
+    <h2>Work breakdown codes</h2>
+    <p>WBS codes can be quite detailed and some reports (for example: <span class="function" title="Function:%WPO3200RJOB">Delivery Analysis Report (Material)</span>, <span class="function" title="Function:%WPO3380RPGL"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Allocation Analysis</span>, <span class="function" title="Function:%WPO3170RPPS"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />Sheet Report</span>) allow you to sort by WBS. However, if you do not need to <MadCap:variable name="Variables.analyse" /> at this level of detail, you can treat WBS codes as being equivalent to combinations of sections and activities, which is what many <MadCap:variable name="General.ProductName" /> users do.</p>
+    <h3>Costing</h3>
+    <p>If the <MadCap:variable name="Variables.jc contract" /> does not use WBS codes, the <a href="WDJC0006_Cost_Heads.html"><MadCap:variable name="Variables.cost heads" /></a> become the <a href="WDJC0004_Cost_Codes.html">cost codes</a> for that <MadCap:variable name="Variables.jc contract" />.</p>
+    <p>If the <MadCap:variable name="Variables.jc contract" /> uses WBS codes, the cost code is typically built up from the section and activity on the WBS code, and the <MadCap:variable name="Variables.cost head" /> from the commodity.</p>
+    <table border="0">
+      <tbody>
+        <tr>
+          <td style="width: 33%;">
+            <span style="color: #008800;font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;font-weight: bold;">Section - A</span>
+            <br />
+            <span style="color: #008800;font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;font-weight: bold;">Activity - Excavation</span>
+          </td>
+          <td style="width: 23%;"> </td>
+          <td style="width: 33%;" colspan="2" align="right">
+            <span style="color: #008800;font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;font-weight: bold;">Commodity - JCB</span> </td>
+        </tr>
+        <tr>
+          <td style="width: 33%;text-align: center;">
+            <span style="text-align: start;"> </span>
+            <strong style="font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;">
+              <span style="color: #880000;">Work Breakdown Structure <br />code: AEX03</span>
+            </strong>
+          </td>
+          <td style="width: 23%;"> </td>
+          <td style="width: 33%;" colspan="2">
+            <strong style="font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;">
+              <span style="color: #880000;">Associated <MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" />: P100</span>
+            </strong>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 33%;text-align: center;">
+            <img src="../../Resources/Images/diagonalr1.gif" />
+          </td>
+          <td style="width: 23%;"> </td>
+          <td style="width: 33%;" colspan="2" align="center"> <span style="text-align: center;"><img src="../../Resources/Images/diagonall1.gif" /></span></td>
+        </tr>
+        <tr>
+          <td style="width: 33%;text-align: right;" align="right">
+            <strong style="color: #000088;font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: medium;text-align: start;">A</strong> <strong style="color: #000088;font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: medium;">EX      </strong></td>
+          <td style="width: 23%;"> </td>
+          <td style="width: 16%;" colspan="2">       <strong style="color: #000088;font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: medium;text-align: start;">P100</strong> </td>
+        </tr>
+        <tr>
+          <td style="width: 33%;text-align: right;"> <img src="../../Resources/Images/diagonalr1.gif" /></td>
+          <td style="width: 23%;"> </td>
+          <td style="width: 33%;" colspan="2">
+            <img src="../../Resources/Images/diagonall1.gif" />  </td>
+        </tr>
+        <tr>
+          <td style="width: 33%;"> </td>
+          <td style="width: 23%;" align="center">
+            <strong style="font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;text-align: start;">
+              <span style="color: #000066;font-size: medium;">AEXP100</span>
+            </strong>
+            <br style="font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;text-align: start;" />
+            <span style="font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 11px;text-align: start;">
+              <MadCap:variable name="General.ProductName" /> Cost Code</span> </td>
+          <td style="width: 33%;" colspan="2">  </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

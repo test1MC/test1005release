@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1110">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:concept term="11.10" />Importing <MadCap:variable name="Variables.Pc Plant caps" /> Sales Orders/Requisitions</h1>
+        <p><span class="function">Load <MadCap:variable name="Variables.Pc Plant caps" /> Sales Order</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to load <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.pc plant" /> sales order (or requisition) from a CSV file. This provides a way of getting any large <MadCap:variable name="Variables.pc plant" /> requirement into <MadCap:variable name="General.ProductName" />; for example, when an external service takes design drawings and produces a parts list required to make formwork, falsework, scaffold, or site accommodation. </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="caption">
+                <MadCap:dropDownHotspot>Load <MadCap:variable name="Variables.Pc Plant caps" /> Sales Order – Main Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_P-R/PC/PC013/Load_PC_SO_Main_UK.png" MadCap:conditions="COINS.UKOnly" class="FullWidth" />
+                    <img src="../../../Resources/Images_P-R/PC/PC013/Load_PC_SO_Main_US.png" MadCap:conditions="COINS.USOnly" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>The CSV file can contain columns for <span class="field">Item Code</span>, <span class="field">Quantity</span>, <span class="field">Per</span>, <span class="field">Price</span>, <span class="field"><MadCap:variable name="Variables.pc onhire" style="text-transform: capitalize;" /> Date</span>, <span class="field"><MadCap:variable name="Variables.Pc Offhire caps" /> Date</span>, <span class="field">Responsible Person</span>, <span class="field">WBS Code</span> and <span class="field"><MadCap:variable name="Variables.Cost Head caps" /></span>. You indicate on the CSV Columns tab which columns are in the CSV file and their order. The <span class="field">Item Code</span> and <span class="field">Quantity</span> must be present in the CSV file. If any of the other columns are missing, you can enter default values for them. The settings are stored and recalled for each supplier entered on the Main tab, as are the settings if the supplier is left blank.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="caption">
+                <MadCap:dropDownHotspot><a name="Load"></a>Load <MadCap:variable name="Variables.Pc Plant caps" /> Sales Orders – CSV&#160;Columns Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_P-R/PC/PC013/Load_PC_SO_CSV_Items_UK.png" MadCap:conditions="COINS.UKOnly" class="FullWidth" />
+                    <img src="../../../Resources/Images_P-R/PC/PC013/Load_PC_SO_CSV_Items_US.png" MadCap:conditions="COINS.USOnly" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>The <span class="field">Item Code</span> must correspond to a valid <MadCap:variable name="Variables.st stock" /> item, which could be the <MadCap:variable name="Variables.st stock" /> item code, shortcut code, <MadCap:variable name="Variables.catalogue" /> number or RFID/Barcode, as long as it gives a unique match. If the <MadCap:variable name="Variables.st stock" /> item is hidden or inactive, the <MadCap:variable name="Variables.st stock" /> validation will depend on the setting of the <MadCap:variable name="Variables.St Stock caps" /> parameters <span class="parameter">STOPHIDD</span> and <span class="parameter">STOPINAC</span>.</p>
+        <p>If the <span class="field">Per</span> column is not specified, the default <MadCap:variable name="Variables.st stock" /> group Per is used. If there is no default Per, an error is returned.</p>
+        <p>The <span class="field"><MadCap:variable name="Variables.Cost Head caps" /></span> is available if <span class="parameter">PC/FULLCOST</span> is YES.</p>
+        <p>If <span class="parameter">PC/WFORD</span> parameter is populated, the <span class="field">Trigger Workflow</span> <MadCap:variable name="Variables.tick" />box is available for Load mode. If <span class="field">Trigger Workflow</span> is <MadCap:variable name="Variables.tick" />ed, the workflow starts and the requisition is set to '05' status - Awaiting Approval.</p>
+        <p>You can enter the customer details for the requisition on the 'Customer/<MadCap:variable name="Variables.Jc Contract caps" /> Details' tab.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead class="caption">
+                <MadCap:dropDownHotspot>Load <MadCap:variable name="Variables.Pc Plant caps" /> Sales Orders – Customer/<MadCap:variable name="Variables.Jc Contract caps" /> Details Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_P-R/PC/PC013/Load_PC_SO_Customer_UK.png" class="FullWidth" MadCap:conditions="COINS.UKOnly" />
+                    <img src="../../../Resources/Images_P-R/PC/PC013/Load_PC_SO_Customer_US.png" class="FullWidth" MadCap:conditions="COINS.USOnly" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>Normally the whole file will need to be error free to load, but the <span class="field">Load when File has Errors</span> <MadCap:variable name="Variables.tick" />box allows you to override this.</p>
+        <h2> <MadCap:variable name="Variables.Pc Hire Desk caps" /> – Requisitions</h2>
+        <p>If the requisition was loaded with a supplier name, the Process Entire Order option creates a Pending <MadCap:variable name="Variables.Pc Hire caps" /> transaction, split between what can be supplied from the depot and what needs to be <MadCap:variable name="Variables.pc rehired" />, with the assignments already made.</p>
+        <p>If supplier is not specified, the SO lines are loaded and marked as lines which should be fulfilled from <MadCap:variable name="Variables.st stock" />.</p>
+        <p>If the picked quantity is less than the quantity requested, the quantity to  re<MadCap:variable name="Variables.pc hire-v" /> is increased, either adding quantity to an existing line or creating a new line if required.</p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: 'Parameters';mc-help-control-display: list;mc-use-custom-sort-order: true;">
+                    <MadCap:relatedTopic src="../../Parameters/ST/st_stophidd.htm" />
+                    <MadCap:relatedTopic src="../../Parameters/ST/st_stopinac.htm" />
+                    <MadCap:relatedTopic src="../../Parameters/PC/pc_fullcost.htm" />
+                    <MadCap:relatedTopic src="../../Parameters/PC/pc_wford.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Configuration</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">
+                <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">PR&#160;Timesheet Input Group Merge Code Restrictions: </MadCap:conditionalText>
+            </MadCap:conditionalText>Configuration</h1>
+        <p class="Body">Two <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>global parameters are used to implement the PR Timesheet Input Group Merge Code restrictions functionality.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 186px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 434px;" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">TSGRPMCODE</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Error/Warning/None when inputting timesheets into a TS&#160;Input Group where the Merge Code of the employee conflicts with the merge code list set for the TS Input Group.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">CHKMULTITSG</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">Error/Warning/None when an employee timesheet already exists in another TS&#160;Input Group for the same period.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>TSGRPMCODE Parameter</h2>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Global Payroll parameter <span class="parameter">TSGRPMCODE </span>controls whether you receive a Warning/Error/None message when inputting timesheets into a Timesheet Input Group where the Merge Code of the employee conflicts with the merge code list set for the Timesheet Input Group.</p>
+        <ul>
+            <li class="ListBullet3">Only employees with the Timesheet Input Group Merge Code included in the Group Merge Codes of the Group can have time cards under the Group.</li>
+            <li class="ListBullet3">If parameter <span class="parameter">TSGRPMCODE </span>is set to <strong>N-None or blank</strong>, you can only enter time cards for the employee under groups with Group Merge Codes set up with an asterisk (“*”). A single wild card “*” means that employees with any merge code can have <MadCap:variable name="Variables.cheques" /> under this Group. You can do this regardless of the conflict between the employee’s TS Group Merge Code and the TS Group’s Merge Codes.</li>
+            <li class="ListBullet3">If parameter <span class="parameter">TSGRPMCODE </span>is set to <strong>W-Warning</strong>, you can enter time cards for the employee under a group regardless of the conflict between the employee’s TS Group Merge Code and the TS Group’s Merge Codes. However, you will receive a warning message about the conflict.</li>
+            <li class="ListBullet4">When you start a new screen session to enter time cards on the Time Cards tab of Timesheets entry, or on the Timesheets Quick Adds by Job/by Employee/by Multiple Employee, or if you enter Overrides on the Overrides tab of Timesheets entry, you will receive the warning only for the first add or update transaction or override record for the employee on the screen, if the add/update operation was not canceled.</li>
+            <li class="ListBullet4">If you change an employee, start a new screen session, or cancel adding or updating the transaction or override record, the warning will appear again if there is a Merge Code conflict. However, the warning will not appear again if you enter or update the new record for the same employee for the same screen session.</li>
+            <li class="ListBullet4">For regular <MadCap:variable name="Variables.cheque" /> entry, a warning will always appear if there is a Merge Code conflict.</li>
+            <li class="ListBullet3">If parameter <span class="parameter">TSGRPMCODE </span>is set to <strong>W-Warning</strong>, you can enter time cards for the employee under a group regardless of the conflict between the employee’s TS Group Merge Code and the TS Group’s Merge Codes. However, you will receive a warning message about the conflict.</li>
+            <li class="ListBullet4">When you start a new screen session to enter time cards on the Time Cards tab of Timesheets entry, or on the Timesheets Quick Adds by Job/by Employee/by Multiple Employee, or if you enter Overrides on the Overrides tab of Timesheets entry, you will receive the warning only for the first add or update transaction or override record for the employee on the screen, if the add/update operation was not canceled.</li>
+            <li class="ListBullet4">If you change an employee, start a new screen session, or cancel adding or updating the transaction or override record, the warning will appear again if there is a Merge Code conflict. However, the warning will not appear again if you enter or update the new record for the same employee for the same screen session.</li>
+            <li class="ListBullet3">If parameter <span class="parameter">TSGRPMCODE </span>is set to <strong>E-Error</strong>, you cannot enter time cards for the employee under the group if there is a conflict between the employee’s TS Group Merge Code and the TS Group’s Merge Codes.</li>
+        </ul>
+        <h2>CHKMULTITSG Parameter</h2>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Global Payroll parameter <span class="parameter">CHKMULTITSG </span>controls whether you receive a Warning/Error/None when an employee timesheet already exists in another Timesheet Input Group for the same period.</p>
+        <ul>
+            <li class="ListBullet3">If the <span class="parameter">CHKMULTITSG </span>is set to <strong>N</strong>, <strong>None</strong>, or <strong>blank</strong>, employees can have <MadCap:variable name="Variables.cheques" /> under multiple groups.</li>
+            <li class="ListBullet3">If the <span class="parameter">CHKMULTITSG </span>is set to <strong>W</strong>, <strong>Warn</strong>, or <strong>Warning</strong>, employees can have <MadCap:variable name="Variables.cheques" /> under multiple groups, but you will receive the appropriate warning message.</li>
+            <li class="ListBullet4">When you start a new screen session to enter time cards on the Time Cards tab of Timesheets entry, or on the Timesheets Quick Adds by Job/by Employee/by Multiple Employee, or if you enter Overrides on the Overrides tab of Timesheets entry, you will receive the warning only for the first add or update transaction or override record for the employee on the screen, if the add/update operation was not canceled.</li>
+            <li class="ListBullet4">If you change an employee, start a new screen session, or cancel adding or updating the transaction or override record, the warning will appear again if there are multiple groups. However, the warning will not appear again if you enter or update the new record for the same employee for the same screen session. For regular <MadCap:variable name="Variables.cheque" /> entry, the warning will always appear if there are multiple groups.</li>
+            <li class="ListBullet3">If the <span class="parameter">CHKMULTITSG </span>is set to <strong>E </strong>or <strong>Error</strong>, employees cannot have <MadCap:variable name="Variables.cheques" /> under multiple groups.</li>
+        </ul>
+        <p><strong>Note: </strong>There are two possible situations in which an employee can have <MadCap:variable name="Variables.cheques" /> under several groups:</p>
+        <ul>
+            <li class="ListBullet4">	An employee has a <MadCap:variable name="Variables.cheque" /> under multiple groups; or</li>
+            <li class="ListBullet4">An employee has two <MadCap:variable name="Variables.cheques" /> under single but different groups.</li>
+        </ul>
+    </body>
+</html>

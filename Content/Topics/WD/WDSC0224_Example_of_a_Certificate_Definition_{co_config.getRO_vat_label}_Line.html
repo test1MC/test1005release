@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1161" MadCap:lastWidth="1064" lang="en">
+    <head><title>Example of a Certificate Definition - &lt;MadCap:variable name="Variables.vat" style="text-transform: capitalize;"&gt;&lt;/MadCap:variable&gt; Line</title>
+    </head>
+    <body>
+        <p>
+            <MadCap:concept term="Topics" />
+        </p>
+        <h1 class="print">Example of a Certificate Definition - <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Line</h1>
+        <p>Suppose the amount of <MadCap:variable name="Variables.vat" /> payable is calculated from the Total Cost less any Set Off, Retention and Discount. The <MadCap:variable name="Variables.vat" /> line looks like this:</p>
+        <p>
+            <img src="../../Resources/Images_S-U/SC/SC_022401.png" class="HalfWidth" />
+        </p>
+        <p>Note that:</p>
+        <ul>
+            <li>
+                <p>Although <MadCap:variable name="Variables.vat" /> is calculated from this line, the <span class="field">Rate</span> field shows 0%. This is because the <MadCap:variable name="Variables.vat" /> rate is taken from the <MadCap:variable name="Variables.vat" /> rate table (this is a special case for <MadCap:variable name="Variables.vat" />).</p>
+            </li>
+            <li>
+                <p>The <span class="field">Calc Cumulative</span>field is not <MadCap:variable name="Variables.tick" />ed, since the <MadCap:variable name="Variables.vat" /> is calculated on a single payment basis.</p>
+            </li>
+            <li>
+                <p>The user can override the <MadCap:variable name="Variables.vat" /> paid, so the <span class="field">Update</span> field is <MadCap:variable name="Variables.tick" />ed.</p>
+            </li>
+            <li>
+                <p>The <span class="field">Account</span>field is blank, since the <MadCap:variable name="Variables.vat" /> account is defined in <MadCap:variable name="Variables.vat" /> Code Maintenance.</p>
+            </li>
+            <li>
+                <p>When Retention is released, because the Retention line comes before <MadCap:variable name="Variables.vat" />, that Retention release will correctly have <MadCap:variable name="Variables.vat" /> calculated on it.</p>
+            </li>
+        </ul>
+        <p>This will calculate the <strong>amount</strong> of <MadCap:variable name="Variables.vat" /> to be paid. You have to add this in the <span class="field">Subtotals</span> field of the payment line.</p>
+    </body>
+</html>

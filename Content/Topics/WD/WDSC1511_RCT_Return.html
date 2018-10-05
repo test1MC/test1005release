@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1534" MadCap:lastWidth="723">
+  <head>
+    <title>RCT Return</title>
+    <style>/*<![CDATA[*/
+div.usertext
+{
+	display: none;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">RCT Returns</h1>
+    <p>The eRCT scheme requires contractors to make a regular return of all payments and deductions made within the scope of the scheme.  This is an electronic return of payments made on Relevant Contracts which will be processed either monthly or quarterly depending on the filing frequency of the principal.  Revenue produces a draft RCT Return (known as a Deduction Summary) based on the Payment Notifications received during the period. </p>
+    <p>You can obtain the draft return from ROS after the end of the period.  If you do not correct this by the 23rd of the following month, it will be deemed to be correct; therefore you need to check this and notify Revenue of any amendments.</p>
+    <ul>
+      <li>You need to ensure that there are no unallocated payments in <span class="module">Subcontract Ledger </span>or <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> before attempting to reconcile the Return.</li>
+      <li>If you notified payments to Revenue, but did not actually make them and have not notified Revenue that you did not make them, you need to remove them from the Return.</li>
+      <li>If you made any payments that are not included on the Return, you need to add them to the Return.</li>
+      <li>If you notified payments before the end of the month, but made them after the end of the month, you can defer them until the next return.  Only do this if you have actually made the payment after the end of the month, as once you have deferred a payment, you cannot cancel it.</li>
+    </ul>
+    <p>The Return Reconciliation Workbench allows you to manage the process of retrieving the periodic Deduction Summary from Revenue, reconciling it to the <MadCap:variable name="General.ProductName" /> records and submitting any amendments to Revenue.</p>
+    <p>The reconciliation will be regarded as complete when:</p>
+    <ol>
+      <li>Every detail item received from Revenue in the deduction summary has either been:</li>
+      <ol>
+        <li>Matched exactly to one or more <MadCap:variable name="General.ProductName" /> return records, or</li>
+        <li>Marked as matched even though the <MadCap:variable name="General.ProductName" /> return records do not agree: that is 'forced', or</li>
+        <li>Amended to match one or more <MadCap:variable name="General.ProductName" /> return records: so that an update will be sent to Revenue; and</li>
+      </ol>
+      <li>Every <MadCap:variable name="General.ProductName" /> return record which is dated within the return period has either been:</li>
+      <ol>
+        <li>Matched to detail items received from Revenue in the deduction summary, or</li>
+        <li>Marked to be ignored.</li>
+      </ol>
+    </ol>
+    <div class="process">
+      <h2 class="print">Overview of the process</h2>
+      <ol>
+        <li>Add a return header record for the period (see <a href="WDSC1531_Starting_the_Process.html">Starting the RCT Return Process</a>).</li>
+        <li>
+          <MadCap:variable name="General.ProductName" /> retrieves the deduction summary from Revenue and attempts to reconcile it automatically.  (If <MadCap:variable name="General.ProductName" /> is able to fully reconcile the records on the deduction summary automatically with the records in <MadCap:variable name="General.ProductName" />, no further action is needed.)</li>
+        <li>Manually reconcile any records that <MadCap:variable name="General.ProductName" /> cannot reconcile automatically (see <a href="WDSC1534_Reconciling_the_Return_Details.html">Reconciling the Return Details</a>).</li>
+        <li>File any adjustments to the return electronically with Revenue (see <a href="WDSC1533_Submitting_Amendments.html">Submitting Amendments to an RCT Return</a>).</li>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">
+        <p>If you want to manually reconcile the return rather than using the Return Reconciliation Workbench, you can use <span class="function" title="Function:%WSC5320BSCN">RCT Payment and Deduction Summary</span>; see <a href="WDSC1512_Reporting_and_Enquiring.html">eRCT - Reporting and <MadCap:variable name="Variables.enquiring" style="text-transform: capitalize;" /> on Payments and Deductions</a>. If you do this you will need to submit any amendments directly on ROS.</p>
+      </div>
+    </div>
+  </body>
+</html>

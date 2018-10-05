@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1032" MadCap:lastWidth="1028">
+    <head><title>Printing the <MadCap:variable name="Variables.Cheque caps" /> Amount in Words</title>
+    </head>
+    <body>
+        <h1 class="print">Printing the <MadCap:variable name="Variables.Cheque caps" /> Amount in Words<MadCap:concept term="Topics" /></h1>
+        <p><MadCap:variable name="General.ProductName" /> provides special fields that allow you to print the amount of the <MadCap:variable name="Variables.cheque" /> in words, either as individual words for each digit, or as a line of text that represents the amount.</p>
+        <div class="process">
+            <h2 class="print">To print the <MadCap:variable name="Variables.cheque" /> amount in words:</h2>
+            <ul>
+                <ul>
+                    <li>To print a line with the following format:
+<p><span class="screentype">ONE ZERO NINE SEVEN FIVE THREE 64 </span></p><p>add a line containing the field <span class="screentype">RO_scs_digitword__<em>n</em></span> where <em>n</em> is the position (1 = units, 2 = tens, 3 = hundreds, and so on). Repeat this field for each position. Use <span class="screentype">RO_scs_cents</span> for the pence/cents amount in figures:</p><p><img src="../../Resources/Images_S-U/SC/sc10.gif" /></p><p>The format <span class="screentype">***,**9.99</span> prints the amount with leading asterisks; for example: <span class="screentype">**1,275.45</span>.</p></li>
+                    <li>To print the payee and the amount in "full text"; for example:&#160;
+<p><span class="screentype">Anderson &amp; Little ***************<br />ONE HUNDRED AND TWENTY THREE <span style="text-transform: uppercase;">$P$CO|CURUNIT$P$S</span> 99$P$CO|CURDEC$P$ ONLY ****************<br />************************************************************* </span></p><p>add consecutive lines containing the fields <span class="screentype">RO_sbm_payeen*</span>, <span class="screentype">RO_scs_amtWords__1</span> and <span class="screentype">RO_scs_amtWords__2</span>.</p></li>
+                    <li>To print the <MadCap:variable name="Variables.cheque" /> amount in words on one line, using the USA format, for example:
+<p class="screentype">ONE HUNDRED AND TWENTY THREE DOLLARS 99CENTS</p><p>use the field <span class="field">RO_SpelledAmount</span>.</p></li>
+                    <li>To print the "Pay text" (the payee name and the amount in figures, with no spaces), for example:
+<p><span class="screentype">ANDERSON&amp;LITTLE123.99ONLY****************** </span></p><p>use the field <span class="screentype">RO_scs_payText</span>.</p></li>
+                </ul>
+            </ul>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CO/CO_CURUNIT.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/CO_CURDEC.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_curplu.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

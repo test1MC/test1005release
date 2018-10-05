@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Contact Details</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">GDPR in <MadCap:variable name="Variables.Marketing" />: </MadCap:conditionalText>Contact Details</h1>
+        <p class="Body">The <strong>Contact Details </strong>tab in MK&#160;<span class="Function">Contacts </span>shows <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>sections depending on how the MK parameter <span class="parameter">CONSUSE </span>is set. These sections include:&#160;<strong>Main</strong>, <strong>Social/Personal</strong>, <strong>Consent</strong>, <strong>Further Details, Notes</strong>, and <strong>Activities</strong>. Each section is explained in better detail in the paragraphs that follow.</p>
+        <ul>
+            <li class="ListBullet3">If <span class="parameter">CONSUSE </span>is set to <strong>N</strong>, a Further Details tab appears, and the Consent tab does not appear, as shown in <MadCap:xref href="#CONSUSEsetN" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="CONSUSEsetN"></a>CONSUSE = N</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/CONSUSEN.png" class="MaxPrintWidth" />
+        </p>
+        <ul>
+            <li class="ListBullet3">If <span class="parameter">CONSUSE </span>is set to <strong>Y</strong>, the Consent tab appears, and the Further Details tab does not appear, as shown in <MadCap:xref href="#CONSUSEsetY" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CONSUSEsetY"></a>CONSUSE = Y</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_CONSUSEY.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.1">Main Section</h2>
+        <p class="Body">The <strong>Main </strong>section no longer contains Notes and Activities, which are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>found as sections. A sample screen is shown in <MadCap:xref href="#ContactDetMain" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="ContactDetMain"></a>Main Section</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_ContactDet_Main.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Upload Contact Photo </strong>link shown below is found on this screen. It allows you to upload a Contact photo onto the Main Details section.</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_UploadContactPhoto.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2">Social/Personal Section</h2>
+        <p class="Body">The <strong>Social/Personal </strong>section appears as shown in <MadCap:xref href="#ContactDetSocial" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. It allows you to maintain a Contact's social information (such as Twitter, YouTube, etc.) and personal information (Date of Birth, Personal Assistant, etc.).</p>
+        <p class="Body">The bottom of this section also includes a Relationships browse where you can record friend/family relationships.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="ContactDetSocial"></a>Social/Personal Section</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_ContactDet_Social.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3">Consent Section</h2>
+        <p class="Body">The <strong>Consent </strong>section (<MadCap:xref href="#ContactDetConsent" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>) collects and displays the data from <span class="Function">Data Consent Categories</span>. You can enter and update this information as needed. <strong>NOTE:&#160;</strong>This section only appears if parameter <span class="parameter">MK/CONSUSE </span>is set to <strong>Y</strong>.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="ContactDetConsent"></a>Consent Section</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_ContactDet_Consent.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Data Consent Notes</p>
+        <p class="IndentFieldDef">This <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>field lets you enter information about the consent data, as needed.</p>
+        <p class="IndentFieldDef"><strong>NOTE:&#160;</strong>Parameter <span class="parameter">MK/CONSNOTEW </span>determines whether you will receive an error or a warning when trying to save the record if you have changed one or more consent values but have not changed this field.</p>
+        <p class="IndentBold">Data Consent Document</p>
+        <p class="IndentFieldDef">When you click the <span class="button">Choose File </span>button in this <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>field, it opens a window where you can choose a document to be uploaded that is associated with this Contact (it can support proof of the consent given). Once uploaded, the file name is shown next to the button.  <strong>Note:</strong> Only one document can be uploaded per update.</p>
+        <p class="IndentFieldDef">After the record is saved, the uploaded document is stored against the Contact's record in <span class="Function">Document Manager</span>.</p>
+        <h2 MadCap:autonum="1.4">Further Details Section</h2>
+        <p class="Body">The <strong>Further Details </strong>section (<MadCap:xref href="#FurtherDetails" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>) lets you set up the Mailing Preferences information as needed. <strong>NOTE:&#160;</strong>This section only appears if parameter <span class="parameter">MK/CONSUSE </span>is set to <strong>N</strong>.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="FurtherDetails"></a>Further Details Section</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_FurtherDetails.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.5">Notes Section</h2>
+        <p class="Body">The <strong>Notes </strong>section allows you to add, update, and review notes for a Contact.</p>
+        <h2 MadCap:autonum="1.6">Activities&#160;Section</h2>
+        <p class="Body">The <strong>Activities </strong>section allows you to add, update, and review activities for a Contact.</p>
+    </body>
+</html>

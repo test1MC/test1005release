@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Sector-Based Ledgers</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Sector-Based Ledgers</h1>
+    <p>Sector-based ledgers enable you to produce separate payment runs (for example, in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> and <span class="module">Subcontract Ledger</span>) for each sector, which in turn produce a separate <MadCap:variable name="Variables.cheque" /> for each sector.  In effect it is as if you had a separate ledger for each sector, but with a single set of <MadCap:variable name="Variables.pl suppliers" />.  You might want to do this if, for example, your sectors correspond to separate legal entities, or if they have different branding.</p>
+    <p>When users process a payment run, they must first specify the sector, and will only be able to select transactions for that sector.</p>
+    <p>You may also want to consider using <a href="WDGL0024_Sector_Security.html">sector security</a> with sector-based ledgers.</p>
+    <div class="configuration">
+      <h2 class="print">To enable sector-based ledgers:</h2>
+      <ol>
+        <li>Sectors must be enabled (see <a href="WDGL0020_Sectors.html">Sectors</a>).</li>
+        <li>Set the <span class="parameter">SECTLED </span>parameter in the parameters list for each ledger (<span class="module">Expenses</span>, <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span> and <span class="module">Subcontract Ledger</span>) to <span class="userinput">Y</span>. You can do this for some ledgers and not others.</li>
+        <li>If you are using <a href="WDGL0023_Sector-Based_Ledgers.html">sector security</a>, set the <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span> parameter <span class="parameter">BNKSECSC </span>to <span class="userinput">Y</span>.</li>
+      </ol>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/EX/EX_SECTLED.htm" />
+          <MadCap:relatedTopic src="../Parameters/PL/pl_sectled.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_SECTLED.htm" />
+          <MadCap:relatedTopic src="../Parameters/SL/SL_SECTLED.htm" />
+          <MadCap:relatedTopic src="../Parameters/CB/cb_bnksecsc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CO/BATCHQ - Batch processing queue</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CO/BATCHQ - </span> Batch processing queue
+</div>
+<div class="param_def">
+<p>The queue on which batch processes will be run.</p>
+<P>The batch posting process is a regular report with a generate program that actually does the updates to the ledger. The user does not get to choose the queue on which the process is executed. </P>
+<P>This parameter allows a system administrator to decide which queue is best suited to process batches. Typically this might be the local queue running on the main database server and may be a queue to which the user does not normally have access.</P>
+<P>If <FONT color="#000000"><SPAN class="parameter">BATCHQ </SPAN>is blank, then the user?s default report queue is used.</FONT></P>
+<P>The batch posting process and any subsequent posting report or a batch listing report also use this parameter to select the queue.</P>
+<P class="noteheader">NOTE</P>
+<DIV class="note">If the CO parameters <FONT color="#000000"><SPAN class="parameter">BATCHDM </SPAN>and </FONT><FONT color="#000000"><SPAN class="parameter">BATCHDMQ </SPAN>are set, these dictate where the posting report is run.</FONT></DIV>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../co/co_batchdm.htm" /><MadCap:relatedTopic src="../co/co_batchdmq.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><span style="margin-right: 0pt;">1 </span>Using <MadCap:variable name="General.ProductName" /> Web Services</h1>
+        <p><MadCap:variable name="General.ProductName" /> web services are accessed using the SOAP protocol by posting an XML document as the entire body of an HTTP request to the URL. All web services are accessed using the same URL – the elements within the SOAP message specify what object(s) are used.</p>
+        <p>Unlike most SOAP interfaces the <MadCap:variable name="General.ProductName" /> interface allows you to call many methods on many objects in the same XML request. It is also maintains state between method calls within the same XML message. Most operations require a sequence of methods to be called within the same XML message and these methods are executed as a single database transaction. It is not possible to run multiple SOAP requests in the same transaction or split a single request into multiple transactions.</p>
+        <p>Due to these restrictions and the way methods and arguments are represented in the XML, it is not possible to represent the&#160; <MadCap:variable name="General.ProductName" /> web services using the WDSL definition language and hence it is not possible to add “Web References” to Microsoft.NET projects to invoke them.</p>
+        <p>The following c# function executes a <MadCap:variable name="General.ProductName" /> web service call from a .NET application:</p>
+        <p>static public bool SendRequest(string url, string datain, out string dataout) </p>
+        <p>{</p>
+        <p>//NOTE: This method will throw an System.Net.WebException </p>
+        <p>//error if an HTTP failure occurs</p>
+        <p>HttpWebRequest req = HttpWebRequest)HttpWebRequest.Create(url);</p>
+        <p>req.ContentType="text/xml";</p>
+        <p>req.Method="POST";</p>
+        <p>&#160;</p>
+        <p>StreamWriter writer = new StreamWriter(req.GetRequestStream(),</p>
+        <p> System.Text.ASCIIEncoding.GetEncoding("ISO-8859-1"));</p>
+        <p>writer.Write(datain + "\r\n\r\n");</p>
+        <p>writer.Close();</p>
+        <p>&#160;</p>
+        <p>//Timeout period in milliseconds – set to 3 mins here</p>
+        <p>req.Timeout = 180000;</p>
+        <p>&#160;</p>
+        <p>HttpWebResponse response = (HttpWebResponse)req.GetResponse();</p>
+        <p>StreamReader reader = new StreamReader(</p>
+        <p>response.GetResponseStream(),</p>
+        <p>System.Text.ASCIIEncoding.GetEncoding("ISO-8859-1"));</p>
+        <p>&#160;</p>
+        <p>dataout = reader.ReadToEnd();</p>
+        <p>reader.Close();</p>
+        <p>return (response.StatusCode == HttpStatusCode.OK);</p>
+        <p>}</p>
+        <p>&#160;</p>
+        <p>After the call dataout contains the response XML as a string which can be loaded into an XML parser.</p>
+    </body>
+</html>

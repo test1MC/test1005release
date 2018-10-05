@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>[%=Variables.<MadCap:variable name="Variables.Financial Periods caps" /> caps%]</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">
+      <MadCap:variable name="Variables.financial periods" style="text-transform: capitalize;" />
+    </h1>
+    <p>In <MadCap:variable name="General.ProductName" />, <MadCap:variable name="Variables.financial periods" /> are identified by a code of up to four digits. These will normally be the month and year of the end of the period, for example, <span class="userinput">1205</span> or <span class="userinput">606</span>. Each <MadCap:variable name="Variables.financial period" /> has a financial date associated with it -- this date is the end of the period. </p>
+    <p>A period is either <span style="FONT-WEIGHT: bold;">closed</span>, <b>open </b>or <b>current</b>. If a period is closed, you cannot enter transactions to that period. If it is open, you can enter transactions. If a period is current, it is also open; this is the period which <MadCap:variable name="General.ProductName" /> enters by default in some <span class="field">Period </span>prompts. </p>
+    <p>For each module, only certain periods are open at any one time. You can only assign transactions to periods that are open for the current module. If you enter a period that is not open, <MadCap:variable name="General.ProductName" /> displays the message <span class="sysmsg">Period Closed</span>. If you enter a period that is incorrect or does not exist, <MadCap:variable name="General.ProductName" /> displays the message <span class="sysmsg">Invalid Period</span>. </p>
+    <p>Each module may have different periods open or closed. For example, <span class="module">Subcontractor's Ledger </span>might have the January period closed on 1st February, and the February period opened on the same day, so that transactions can only be entered into one period at any time. However, <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> might have the February period opened on February 1st, but the January period left open until February 10th, to allow late January invoices to be entered. </p>
+    <p>Periods can be opened or closed in any sequence, and open periods do not necessarily have to be consecutive. You can have up to 24 periods open (or 26 if you are using 13 periods per year), although since users could then post transactions to any of these periods, you would normally want to limit the number of open periods. Closed periods may be re-opened. </p>
+    <p>If periods in <span class="module">General Ledger </span>or <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status </span>are closed, transactions to other modules will still update the general and costing ledgers. A closed period in <span class="module">General Ledger </span>or <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status </span>only means you cannot enter journal transactions directly to these modules. </p>
+    <p>
+      <MadCap:variable name="General.ProductName" /> can also use a separate set of periods (valuation periods) in <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status</span>. These are described in the documentation for the <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status </span>module. </p>
+  </body>
+</html>

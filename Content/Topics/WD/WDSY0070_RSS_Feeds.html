@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>RSS Feeds</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">RSS Feeds</h1>
+        <p>RSS lets you display up-to-date information (such as news articles),&#160;published by different websites,&#160;in a single place.&#160;This means that you do not have to visit each individual website to see if new information is available.</p>
+        <p>What does RSS mean?There are various explanations for what the initials RSS stand for: RDF Site Summary, Rich Site Summary, or Really Simple Syndication. Each information source is known as a channel or a feed.</p>
+        <p><MadCap:variable name="General.ProductName" /> provides an RSS reader that displays the latest feeds from the sources you select.&#160;You can also display RSS feeds on the home pages.&#160; </p>
+        <p>A background routine in <MadCap:variable name="General.ProductName" /> updates the listings regularly.<br /></p>
+        <div class="process">
+            <h2 class="print">To select the RSS channels you are interested in:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBSUR">Users</span>.</li>
+                <li>Open your user record.</li>
+                <li>Click the Preferences tab. 
+<p />The RSS Channels field lists the channels your system has subscribed to.&#160; <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the channels you are interested in.&#160; (If you do not select any channels, you will see all channels in <span class="function" title="Function:%WSY5030BSIT">RSS Reader</span>, but none on the home pages.)</li>
+                <li>Save the user record.</li>
+            </ol>
+            <h2>To display RSS feeds:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSY5030BSIT">RSS Reader</span>. 
+<p /><p><img src="../../Resources/Images/SY/SY_007001.gif" /></p>The Channel selector shows the channels that have been set up on your system.&#160; You can select the feeds from a single channel, or set the selector to All. 
+<p />The browse shows the title or headline of the article, and an image to show the channel (or source of the article).&#160; </li>
+                <li>To show a summary of the article, click the <img src="../../Resources/Images/COINS Graphics/SVG buttons/detail.svg" class="button" /> button.&#160; </li>
+                <li>To read the full article, click the link in the title column; this will display the article from the relevant website, in a new window.<br /></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">RSS feeds - configuration</h2>
+            <p>In order to make RSS channels available to your users you must subscribe to them; this just means you say which data sources you want the update routine to get information from.</p>
+            <h2>To subscribe to RSS channels:</h2>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>Use <span class="function" title="Function:%WSY2350BSCH">RSS Channels</span> to add a record for each of the channels you want to subscribe to.</p>
+            </blockquote>
+            <p>Each user can then select which channels they are interested in from the channels you have subscribed to.&#160; </p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Until the Load RSS Feeds program runs for the first time after you add a new channel, references to that channel (for example, the name on the Channel selector in RSS Reader or the User Preferences tab, and the logo) will be blank.</div>
+            <h2>Updating the RSS data:</h2>
+            <p>The Load RSS Feeds program (syu9000.p) runs the WebServices and updates the data files. You need to set up a cron&#160;job to run this regularly (for example, every 30 minutes during the working day).&#160; This must be run in background via a shell script rss.sh (not directly from<MadCap:snippetText src="../../Resources/Snippets/COINSplus.flsnp" />, because doing so would corrupt the code page conversion).&#160; <br /></p>
+        </div>
+    </body>
+</html>

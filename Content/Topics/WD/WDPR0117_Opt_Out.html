@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Opt Out</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Opt Out</h1>
+    <p>If an eligible employee notifies you that they wish to opt out of the pension scheme, you must record this.</p>
+    <div class="process">
+      <h2 class="print">To record an employee opt out:</h2>
+      <ol>
+        <li>Go to Employee Notifications (or the Employee Notifications tab on the employee record).</li>
+        <li>Add a WEOO (opt out of pension scheme) notification.</li>
+        <ol>
+          <li>The <span class="field">Due Date </span>is not important here; it will be processed the next time the pay calculation is run if the WEOO has been marked as invalid.</li>
+          <li>In the <span class="field">Sent/Received </span>field, enter the date you received the opt-out notice from the employee.</li>
+          <li>In the <span class="field">Pension Scheme </span>field, enter the pension scheme number the opt-out is for (an employee can be a member of multiple schemes at once).</li>
+          <li>You need to decide (based on the information provided by the Pension Regulator) whether or not the opt-out notification you have received from the employee is valid. In the <span class="field">Assessment </span>field, choose <span class="userselect">Valid </span>or <span class="userselect">Invalid </span>accordingly</li>
+          <li>If the notification is invalid, enter the <span class="field">Response Text </span>explaining why it is invalid (for example, the form did not contain all legally required information and warnings, or it did not detail the employee's full name, the name of employer, NI number or date of birth); this text can be included in the notification that is sent back to the employee.</li>
+          <li>Save the notification record.</li>
+        </ol>
+        <li>
+          <MadCap:variable name="General.ProductName" /> creates one of the following:</li>
+        <ul>
+          <li>When you save an invalid WEOO, <MadCap:variable name="General.ProductName" /> creates an EWIOO (Invalid Opt Out) notification to send to the employee.</li>
+          <li>If the WEOO was valid but it was received outside the opt-out period, the pay calculation generates an EPCM (Cease Membership) notification for the pension provider.</li>
+          <li>If the WEOO was valid and within the opt-out period, the pay calculation generates an EPCMR (Cease Membership and Refund Contributions) notification for the pension provider.</li>
+        </ul>
+        <li>If the opt-out notice was invalid and the employee later submits a valid opt-out notice, either update the WEOO opt-out notification record and change the <span class="field">Assessment </span>to <span class="userselect">Valid</span>, or enter a new opt-out notification. If you have already sent an EWIOO for the initial invalid WEOO you may want to keep the old record and add a new one, but if the EWIOO has not yet been sent you may prefer to update the old WEOO, so that the EWIOO gets removed rather than sent out later and potentially causing confusion.
+<p><MadCap:variable name="General.ProductName" /> will then generate the relevant "cease membership" notification. </p></li>
+      </ol>
+    </div>
+  </body>
+</html>

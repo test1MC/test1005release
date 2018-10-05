@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="598" MadCap:lastWidth="1091">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Report Designer_Using RS Fields</h1>
+        <p>In addition to the standard Selection Generates available in the FSP?s it is also possible to pass other selection criteria to a report, either to the report query or to any parameter driven (RO_) fields used on the Report.</p>
+        <p>The RS_ Fields are specified on the ?Update? Field portion of the Page Section for the report. To create a Report Selection field add the RS_ prefix and selection type suffixes (?FROM? = __1 , ?TO? = __2 and ?MATCHES? = __3) to the field required for selection.</p>
+        <p class="Example">Example:<br /><br />To filter for ?Matches? on the ?job_group? use the following:<br />RS_jgr_group__3<br />Filtering the same field on a ?FROM ? TO? basis use:<br />RS_jgr_group__1 and RS_jgr_group__2</p>
+        <p>Reference these RS_fields on the selection criteria of the report query, when doing this the program will replace the {RS_ fields} portion of the query with the actual values the user entered at runtime.</p>
+    </body>
+</html>

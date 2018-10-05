@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="660" MadCap:lastWidth="601" MadCap:conditions="COINS.v1108">
+    <head><title>Configurable House Sales Statements</title>
+    </head>
+    <body>
+        <div class="overview">
+            <MadCap:concept term="Topics;11.08" />
+            <h1 class="print" MadCap:autonum="1 ">
+                <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Configurable House Sales Receipts - </MadCap:conditionalText>Overview</h1>
+            <p>The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>configurable receipt print allows you to print details of cash, <MadCap:variable name="Variables.cheques" /> and post-dated <MadCap:variable name="Variables.cheques" /> (PDCs) received from HS purchasers through House Sales and <MadCap:variable name="Variables.Cash Book caps" />. </p>
+            <p>The configured documents can be run from two places:</p>
+            <ul>
+                <li>From the Options menu on the <span class="Function">Sales Workbench</span>. This allows you to print a receipt for a single plot. You can select the document to be used and a date range for the transactions to be included.</li>
+                <li>From a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>function on the Financials &gt; Cash menu in House Sales called <span class="Function">Receipt Print</span>.</li>
+            </ul>
+        </div>
+        <div class="process">
+            <h2 class="print" MadCap:autonum="1.1 ">To define the layout for printing receipts</h2>
+            <ol>
+                <li>Define the layout of receipts using <span class="function" title="Function:%WSYBSFS">Document Designer</span>.</li>
+                <li>
+                    <p> Use the document type Receipt Print (HS). See <a href="../WD/WDSY0501_Configurable_Documents.html">Configurable Documents</a> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">in the online documentation </MadCap:conditionalText>for general information on how to configure documents for printing. </p>
+                    <p>The receipt has three BODY sections, which show:</p>
+                    <ul>
+                        <li>BODY1 - HS cash receipts</li>
+                        <li>BODY2 - HS <MadCap:variable name="Variables.cheque" /> receipts</li>
+                        <li>BODY3 - CB PDCs</li>
+                    </ul>
+                </li>
+                <li>On the Extras tab, <MadCap:variable name="Variables.tick" /> the appropriate boxes to select which sections to include. <p><img src="../../Resources/Images_G-I/HS/HS_Receipt_Configuration.png" class="FullWidth" /></p><p>Cash and <MadCap:variable name="Variables.cheque" /> transactions are distinguished from each other by their HS transaction type. If you are including these sections, enter comma-separated lists of transaction types that identify them.</p></li>
+                <li>You can configure <MadCap:variable name="General.ProductName" /> to include an event automatically in the sales history when the receipt is printed.&#160; Enter the event code and any comments.</li>
+            </ol>
+        </div>
+    </body>
+</html>

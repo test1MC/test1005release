@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="3" MadCap:lastHeight="17108" MadCap:lastWidth="1385" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Exercise – Adding Calculated Fields to a Collection</h1>
+        <p>In the last exercise, we created new fields based on a Token and modified parameters.&#160; In this exercise, we are going to create a number of fields using calculations to control their functionality. If performing this exercise, familiarity with either OA Designer, or with Excel formulas is very desirable because this exercise requires the entry of formulas.</p>
+        <p>Please note that the calculations used are Progress Code and NOT the calculation syntax used elsewhere in the OA BI Toolset. Refer to  Appendix of common formulas</p>
+        <h2 class="Heading2">Add the fields</h2>
+        <p>Our dataset currently reports on Costs for each contract, but we now want to break the costs down to each costs category for the current period.&#160; The costs Token did not offer a parameter to do this so we need to make used of the Calculated Fields Tokens.</p>
+        <p>Navigate to the OA Reporting and BI module and select the Semantic Layer folder.</p>
+        <p>Select the Collections menu option.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents.png" style="width: 144px; height: 268px;" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+            <br />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_1_1106.png" class="FullWidth" />
+        </p>
+        <p>Select the hyperlink on the %JOB Collection and select the All Tokens Tab.</p>
+        <p>Set the Search filter to Token and search for *calc*</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_1106.png" class="FullWidth" />
+        </p>
+        <p>There are calculated field Tokens for each of the data types (Integer, Decimal, Character etc.).&#160; The Fields column on the far right indicates the number of fields that have been created against a token and provides a hyperlink to the field definitions.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_1_1106.png" class="FullWidth" />
+        </p>
+        <p>We are going to create fields containing cost figures so select the hyperlink for the fields against %CALCDEC.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_2_1106.png" class="FullWidth" />
+        </p>
+        <p>The %JOB Collection contains links to Contract data and Cost Code data and we can reference this is our calculations.&#160; </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_4_1106.png" class="FullWidth" />
+        </p>
+        <p>Our first field is going to breakdown Labour Costs, so give the field a name (for example xxLAB_CST_TP where xx = your initials) and a description that will be meaningful to your users.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_5.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>Our calculation needs to look at the Category code against each cost code and add up the costs to date if it matches ‘L’, (which is the category code for Labour in the <MadCap:variable name="General.ProductName" /> training database – your <MadCap:variable name="General.ProductName" /> system may use a different code).&#160; There is already a field in the Collection for accumulating Cost Code Costs for this period (%JCC_COSTSTP) so we can use this as the basis to accumulate our broken down costs</p>
+        <p>Our calculation (in Progress syntax) is as follows.&#160; </p>
+        <p>&#160;</p>
+        <p class="Example">(IF jc_costcode.jcc_defcat = 'L' THEN {&amp;table}.JCC_COSTSTP ELSE 0)</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_6.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>The calculation requires %JCC_COSTSTP in order to function, so we need to ensure that it is automatically added to any datasets.&#160; We can do this by adding an entry for %JCC_COSTSTP to the Dependencies field.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_7.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_7_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>Copy the field and change its name to xxMAT_CST_TP with a description appropriate for Material Costs.</p>
+        <p>Change the Calculation to look for a Category code of M (Materials)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_9.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_9_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>Repeat from step 11 for category codes A (Prelims), O (Other), P (Plant) and S(Subcon)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_10.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_10_1106.png" class="FullWidth" />
+        </p>
+        <h2 class="Heading2">Add the fields to the Dataset</h2>
+        <p>Once the fields are created in the collection, they are immediately available to selection in new or existing Datasets.&#160; In this exercise we will add them to our existing dataset xxEX1.</p>
+        <p>In Collection %JOB, navigate to the Datasets Tab</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 2 Adding fields to_8.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available_1106.png" class="FullWidth" />
+        </p>
+        <p>Open the Dataset xxEX1 and add your two new fields to the dataset</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_11.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Exercise 3 Adding Calculated_11_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>Check the Program and Compiled date and Time have updated</p>
+        <p>At this point, your dataset will have the new fields and any new reports based on this dataset will have them available for selection.&#160; Any existing reports based on this dataset will have the columns available for adding next time you edit the design but will not automatically have the columns added.</p>
+        <h2 class="Heading2">Test the Dataset </h2>
+        <p>Select the Data tab</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_1106.png" class="FullWidth" />
+        </p>
+        <p>The coloured field indicates where a mandatory value is required – in this case it is the <MadCap:variable name="Variables.Financial Period caps" /> on which we want to report.&#160; Enter a valid <MadCap:variable name="Variables.Financial Date caps" /> and click <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_1.png" style="visibility: visible;mso-wrap-style: square;width: 31px;height: 14px;" /></p>
+        <p>Your new fields should now appear on the output with the figures changing as appropriate.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_2_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_2_1_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

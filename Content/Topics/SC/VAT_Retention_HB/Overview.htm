@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:concept term="11.09" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Subcontract <MadCap:variable name="Variables.Vat caps" /> and Retention – </MadCap:conditionalText>Overview</h1>
+        <p>Changes have been made to correctly handle the calculation of <MadCap:variable name="Variables.vat" /> after retention on subcontractor payments where there is a split <MadCap:variable name="Variables.vat" /> analysis from VAP. The standard certificate definition has been updated to allow for this, and manual update of the calculated values is now prevented.</p>
+        <p>An additional change allows CITB&#160;accruals and training cost recoveries to be handled based on payments net of tax rather than <MadCap:variable name="Variables.labour" />-only payments.</p>
+        <h2>Background to the Changes</h2>
+        <p>HMRC has clarified that a self-billing invoice or authenticated receipt cannot create a tax point for the retention amount until that retention is paid. This means that <MadCap:variable name="Variables.vat" /> on these payments must be calculated after the retention, and additional processing by <MadCap:variable name="General.ProductName" /> is needed to ensure that the correct <MadCap:variable name="Variables.vat" /> treatment is applied to each release of retention.</p>
+        <h2>Action Required</h2>
+        <p>Contractors should not need to make any changes to configuration as a result of these enhancements. Home builders who pay subcontractors through self-billing or authenticated receipts need to check existing configuration and may need to configure new certificate definitions. <MadCap:variable name="Variables.Vat caps" /> invoices are not affected.</p>
+    </body>
+</html>

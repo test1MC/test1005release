@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Lookup Parameters</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Lookup Parameters</h1>
+    <p>In the parameter field for the lookup, you can specify the following:</p>
+    <ul>
+      <li>
+        <span class="screentype">keyField=<em>field</em></span>. By default (if you do not specify a keyField), the lookup will return the value of the field from the lookup record that has the same name as the field you are looking up (that is, the one specified in the <span class="screentype">Field </span>field in <span class="function" title="Function:%WSYBSYH">Lookup Maintenance</span>). By specifying a keyField, you can get the value of a different field. For example, the Field may be avm_factnum, but the keyField is specified as avm_num.</li>
+      <li>
+        <span class="screentype">lookupCode=<em>field-list</em></span>. A list of other fields on the form that you want to populate (with the corresponding values from the keyCode list).
+<p class="noteheader">NOTE</p><div class="note">To refer to a field with a parameter in the lookupCode field list, replace the <strong>^</strong> with <strong>$$$</strong>.  For example: <span style="FONT-FAMILY: 'Verdana', 'sans-serif';FONT-SIZE: 8.5pt;"><span class="userinput">&amp;lookupCode=emp_xml$$$bankname</span>.</span></div></li>
+      <li>
+        <span class="screentype">keyCode=<em>field-list</em></span>. A list of other fields in the same table that you want to get values from. If keyCode is blank, the values are taken from the field specified in lookupCode.</li>
+      <li>
+        <span class="screentype">contextFields=<em>field-list</em></span>. A list of fields on the current page that are required for the context of the lookup (for example, the <MadCap:variable name="Variables.pl supplier" /> code if you are looking up invoices). These will be passed to the lookup program and used in the query. See RO_hrs_desc lookup, which requires the current value of hrg_code from the form to be able to show the appropriate sub groups. </li>
+      <li>
+        <span class="screentype">quickFields=<em>field-list</em></span>.  A comma-separated list of field names to be matched when typing the characters in the inline lookup. Example is poh_attention where quickFields is set to ppc_name,ppc_surname so the matching is on either of those fields. (By default the inline lookup uses the same field (keyCode/lookupCode) as is used by the lookup page.)</li>
+      <li>
+        <span class="screentype">quickShow=<em>field-list</em></span>.  A comma-separated list of fields to show on the inline lookup. By default the inline lookup will show the field being looked up (keyCode/loookupCode) but this can be overridden and added to: for example, for job_num, quickShow has been set to job_num,job_name and these then both show on the lookup. 
+<p /><p class="noteheader">NOTE</p><div class="note">The default show for inline lookups includes the first column from the lookup page that is not the code being looked up. This is typically the description of name field. This is used if quickShow and quickFields are not specified.</div></li>
+      <li>
+        <span class="screentype">quickSort=<em>field-list</em></span>.  A field (or comma-separated list of fields) to sort the inline lookup by.  For example: <span class="screentype">quickSort=job_name+</span></li>
+    </ul>
+    <p class="noteheader">NOTE</p>
+    <div class="note">The entries must be capital<MadCap:variable name="Variables.is" />ed exactly as shown (for example, keyField not keyfield).</div>
+    <p />
+    <h2>Lookup return code</h2>
+    <p />
+    <p>You can return a return code from a lookup.</p>
+    <p>For example, the poh_name lookup in PO header is against ci_company and returns the field cim_name.  But we also want the cim_intref to be returned and populated in the cim_intref field on the PO header.</p>
+    <p>This can be configured by putting lookupCode=cim_intref as a parameter on the lookup record.  This causes an additional value for cim_intref to be stored on the lookup page and returned to the cim_intref input field on the form in which the lookup field exists.  The return value to return is by default the same field (that is cim_intref) but can be varied if required by setting keyCode=XXX where XXX is the name of the field whose value you require.</p>
+    <p>If you require a lookup to return a code but to build a list of codes that have been looked up, then on lookup maintenance, include the text "multiLookup=," in the parameters.  This will then give a comma-separated list in the field in which the lookup is started.  You still need to select the records one at a time from the lookup.  You can also choose a different separator if required (but a comma is a good standard).</p>
+    <p />
+  </body>
+</html>

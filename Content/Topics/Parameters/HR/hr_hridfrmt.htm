@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>HR/HRIDFRMT - Personnel Id number format</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">HR/HRIDFRMT - </span> Personnel Id number format
+</div>
+<div class="param_def">
+<p>The format to use for HR ID numbers.</p>
+<p>This takes the form of a template for the employee number. The template characters you can use are:</p>
+<p><span class="userinput">9</span> - a digit. If auto-numbering the first number with obeys the uniqueness rules will be used.</p>
+<p><span class="userinput">I</span> - a digit. If auto-numbering the next available number will be used.</p>
+<p><span class="userinput">Z</span> - a digit which will be blank for a leading zero. If a string of <span class="userinput">Z</span>s is followed by an <span class="userinput">I</span> then it will be an <span class="userinput">I</span> type number, otherwise it will be a <span class="userinput">9</span> type number.</p>
+<p><span class="userinput">X</span> - any character. If auto-numbering this will be taken as a literal <span class="userinput">X</span> as it is really to cater for manual input which does not fit a definable rule.</p>
+<p><span class="userinput">A</span> - any letter. If auto-numbering this will be taken as a literal <span class="userinput">A</span> as it is really to cater for manual input which does not fit a definable rule.</p>
+<p><span class="userinput">F</span> - a character from the first name (initial characters used).</p>
+<p><span class="userinput">M</span> - a character from the middle name (initial characters used).</p>
+<p><span class="userinput">L</span> - a character from the <MadCap:variable name="Variables.last name"/> (initial characters used).</p>
+<p><span class="userinput">N</span> - a character from the <MadCap:variable name="Variables.national insurance number"/> (final characters used).</p>
+<p><span class="userinput">D</span> - a character from the department code (initial characters used).</p>
+<p><span class="userinput">P</span> - a character from the payroll type description (initial characters used).</p>
+<p>For options <span class="userinput">X</span>, <span class="userinput">A</span>, <span class="userinput">F</span>, <span class="userinput">M</span>, <span class="userinput">L</span>, <span class="userinput">N</span>, <span class="userinput">D</span> or <span class="userinput">P</span> any lower case letters will be converted to upper case. However if the lower case equivalents of these are used (<span class="userinput">x</span>, <span class="userinput">a</span>, <span class="userinput">f</span>, <span class="userinput">m</span>, <span class="userinput">l</span>, <span class="userinput">n</span>, <span class="userinput">d</span> or <span class="userinput">p</span>) then both lower and upper case letters will be allowed.</p>
+<p>Any other character will be a literal. To specify the literal text for one of the special characters above put a tilde (<span class="userinput">~</span>) before it.</p>
+<p>Examples:</p>
+<p><span class="userinput">999999</span> - a 6 digit number including leading zeros (for example <span class="userinput">000150</span>).</p>
+<p><span class="userinput">ZZZZZ9</span> - a 6 digit number without leading zeros (for example <span class="userinput">150</span>).</p>
+<p><span class="userinput">LLL999</span> - the first 3 characters of the <MadCap:variable name="Variables.last name"/> followed by 3 digits to make it unique (for example <span class="userinput">SMI001</span>).</p>
+<p>To demonstrate the difference between <span class="userinput">9</span> and <span class="userinput">I</span> consider the formats <span class="userinput">LLL999</span> and <span class="userinput">LLLIII</span>. If you add a HR Person <span class="userinput">John Smith</span> both of these will give the same result <span class="userinput">SMI001</span>. But if you then add Sarah Jones <span class="userinput">LLL999</span> will give <span class="userinput">JON001</span> whilst <span class="userinput">LLLIII</span> will give <span class="userinput">JON002</span>.</p>
+</div>
+</body>
+</html>

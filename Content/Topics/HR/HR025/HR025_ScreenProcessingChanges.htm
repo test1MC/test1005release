@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Screen and Processing Changes</h1>
+        <p MadCap:conditions="COINS.ScreenOnly">The information below describes how <MadCap:variable name="General.ProductName" /> OA users in the Australia region can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>use the Human Resources module to track the Visa information of employees.</p>
+        <h2 MadCap:autonum="1.1 ">HR Visa Information Function</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Visa Information </strong>drop down option is found on the Australia menu in <i>Human Resources &gt; Personnel Workbench &gt; Events tab</i>, as shown in <MadCap:xref href="#EventsVisaOption" class="ImageRef"><i>Figure 1:  Visa Information Option</i></MadCap:xref>. You can use this option to add and maintain Visa information for an employee.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="EventsVisaOption"></a>Visa Information Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR025_Images/HR025_EventsVisaOption.png" class="FullWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.1 ">Main Screen</h3>
+        <p class="Body">After you select <span class="Function">Visa Information </span>from the drop down menu, the Main screen appears, as shown in <MadCap:xref href="#VisaMainScreen" class="ImageRef"><i>Figure 2:  Visa Information Main Screen</i></MadCap:xref>. You can add or update Visa Information records on this screen.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="VisaMainScreen"></a>Visa Information Main Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR025_Images/HR025_VisaMainScreen.png" class="FullWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.2 ">Add/Update Screen</h3>
+        <p class="Body">When you add or update Visa Information records from the Main screen (<MadCap:xref href="#VisaMainScreen" class="ImageRef"><i>Figure 2:  Visa Information Main Screen</i></MadCap:xref> above), a selection screen appears, as shown in <MadCap:xref href="#VisaInfoScreen" class="ImageRef"><i>Figure 3:  Visa Information Add/Update Screen</i></MadCap:xref>. Use this screen to enter or update information for these records.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="VisaInfoScreen"></a>Visa Information Add/Update Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR025_Images/HR025_VisaInfoAddScreen.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Visa Type</p>
+        <p class="IndentFieldDef">The type of Visa, which may include lookup options such as 457 Visa, Working Holiday Maker, Bridging Visa, etc. Lookup codes for this field are set up under the VISATYPE lookup type.</p>
+        <p class="IndentBold">Residency Status</p>
+        <p class="IndentFieldDef">The type of Residency status, which may include lookup options such as Temporary, Permanent, etc. Lookup codes for this field are set up under the RESISTATUS lookup type.</p>
+        <p class="IndentBold">Sponsor Relationship</p>
+        <p class="IndentFieldDef">The type of Sponsor Relationship, which may include lookup options such as Company Sponsor, Individual, Father, Mother, etc. Lookup codes for this field are set up under the SPONREL lookup type.</p>
+        <h2 MadCap:autonum="1.2 ">PR&#160;Missing Timecard Report</h2>
+        <p class="Body">The <span class="Function">Missing Timecard Report </span>in <i>Payroll &gt; [frequency] Payroll &gt; Reports</i> determines if an employee has a corresponding HR personnel record. If so, it can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>check if there is an active Visa (the Visa <MadCap:variable name="Variables.Expiry caps" /> Date is greater than the current time card period Effective Date).</p>
+        <p class="Body">A message appears if the time card hours do not meet the minimum and maximum hours of the Visa criteria of an employee. (The Earnings Categories configured against the PR/PR-BASICRAT parameter are used to check the total hours worked for the employee.)</p>
+        <h2 MadCap:autonum="1.3 ">HR&#160;Visa Information Report</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Visa Information Report </span>function is found on the Australia menu in <i>Human Resources &gt; Reports &gt; Personnel</i>. It allows you to show the Visa details of employees. The Main tab of the report selection screen is shown in <MadCap:xref href="#VisaRptSelScreen" class="ImageRef"><i>Figure 4:  Report Selection Screen (Main tab)</i></MadCap:xref>. (The Personnel tab is standard and does not need to be shown here.)</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="VisaRptSelScreen"></a>Report Selection Screen (Main tab)</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_G-I/HR/HR025_Images/HR025_VisaRptSelScreen.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">From/To Issue Date</p>
+        <p class="IndentFieldDef">The starting/ending issue dates of the Visas to show on the report.</p>
+        <p class="IndentBold">From/To <MadCap:variable name="Variables.Expiry caps" /> Date</p>
+        <p class="IndentFieldDef">The starting/ending <MadCap:variable name="Variables.expiry" /> dates of the Visas to show on the report.</p>
+        <p class="IndentBold">Visa Information Details</p>
+        <p class="IndentFieldDef">Select the field set you wish to display on the report. Field sets are set up in<i> OA Reporting &amp; BI &gt; Field Sets &gt; Report Field Sets</i>.</p>
+    </body>
+</html>

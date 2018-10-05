@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="576" MadCap:lastWidth="584">
+  <head>
+    <title>Configurable Purchase Requisition Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable Purchase Requisition Documents</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> allows you to configure the format used for printing purchase requisitions in order to print to your business requirements and use pre-printed stationery. </p>
+    <p>You define the layout of purchase orders using <span class="function" title="Function:%WSYBSFS">Document Designer</span>. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for general information on how to configure documents for printing. </p>
+    <p>You need to set up a configurable document for each different type of requisition you want to print (for example: material requisition, <MadCap:variable name="Variables.pc plant" /> requisition, <MadCap:variable name="Variables.st stock" /> requisition). </p>
+    <div class="process">
+      <h2 class="print">To define the layout for printing purchase requisitions:</h2>
+      <ol>
+        <li>Use the document type "Purchase Requisition". </li>
+        <li>Configure <b>BODY</b> forms to print the details of requisition lines. </li>
+        <li>There are special forms for printing text lines and clauses. Set up: </li>
+        <ul>
+          <li>a <b>BODYTEXT</b> form to print text lines. Use the field <span class="FieldName">RW_rql_FullDescription</span> for the text.</li>
+          <li>a <b>BODYINDENT</b> form to print indented clauses. Use the field <span class="FieldName">rql_desc__1</span> for the clause text.</li>
+        </ul>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="484" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"><MadCap:variable name="Variables.Jc Contract caps" /> Requisitions - </MadCap:conditionalText>Tag/Add Requisition Lines</h1>
+        <p class="Body">It is possible to <span class="Function">Tag/Add Requisition Lines</span> from the Options menu on the Order Summary screen.  If the new PO parameter <span class="parameter">GRNCREQ</span> is set to <span class="userinput">Y</span> then this option takes the user to the new <MadCap:variable name="Variables.Jc Contract caps" /> Requisitions list for the <MadCap:variable name="Variables.jc contract" /> in question.  </p>
+        <p class="Body">When the user takes the <span class="Function">Add to PO</span> (or the <span class="Function">Add Requisition Items</span>)  action on the subsequent screen, if the purchase order being created is a material one then no <MadCap:variable name="Variables.pc plant" /> line can be selected and an error is shown.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/Procurement/Generic Requisitions/Error PO641.png" />
+        </p>
+        <p class="Body"><MadCap:variable name="Variables.Pc Plant caps" /> lines are still shown on this screen because the other requisition lines may inform the buyer to raise a different type of order (<MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.pc plant" /> order rather than a material one).</p>
+        <h1 MadCap:autonum="2">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"><MadCap:variable name="Variables.Jc Contract caps" /> Requisitions - </MadCap:conditionalText>Multi Update</h1>
+        <p class="Body">The Multi Update feature on the Order Lines screen now includes the following additional fields:</p>
+        <ul>
+            <li><span class="Field">Commodity Code</span>
+            </li>
+            <li><span class="Field">Unit of Quantity</span>
+            </li>
+            <li><span class="Field">Per</span>
+            </li>
+            <li><span class="Field"><MadCap:variable name="Variables.Cost Head caps"></MadCap:variable></span> (only on material and <MadCap:variable name="Variables.pc plant" /> orders)</li>
+            <li><span class="Field">Cost Category</span> (only on material and <MadCap:variable name="Variables.pc plant" /> orders)</li>
+        </ul>
+        <p class="Body">Note that if the PO parameter <span class="parameter">ALWCHOV1</span> is set to <span class="userinput">N</span>, both <span class="Field"><MadCap:variable name="Variables.Cost Head caps" /></span> and <span class="Field">Cost Category</span> become disabled.</p>
+    </body>
+</html>

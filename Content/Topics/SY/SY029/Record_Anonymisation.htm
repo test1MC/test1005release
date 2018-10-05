@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:concept term="11.09" />Anonym<MadCap:variable name="Variables.is" />ing Records</h1>
+        <p>Various regulations (including the European <MadCap:glossaryTerm glossTerm="COINS.Term5">GDPR</MadCap:glossaryTerm>) require businesses not to keep data that can identify individuals for longer than is necessary. <span class="function">Clear User Personal Data</span> is a new function that allows you to anonym<MadCap:variable name="Variables.is" />e user ID values on records that are more than a set number of years old. The actual user ID will be replaced with 'COINS'.</p>
+        <h2>How Anonym<MadCap:variable name="Variables.is" />ation Works</h2>
+        <p>The new SY&#160;parameter <span class="parameter">GDPRUIDY</span> specifies the number of years to retain user ID&#160;records. Records that are older are anonym<MadCap:variable name="Variables.is" />ed; that is, the user ID or user name on those records is set to ‘COINS’.</p>
+        <p class="note">A user record with the user ID ‘coins’ must exist (which it does on standard <MadCap:variable name="General.ProductName" /> environments).</p>
+        <p>User records on which the last login is more than <span class="parameter">SY/GDPRUIDY</span> years ago are deleted if they are locked and are not a named user.</p>
+        <p>So, for example, if you have been using <MadCap:variable name="General.ProductName" /> for 20 years, you could have 20 years’ worth of records with JSMITH stamped as the user who last updated them. If you run <span class="function">Clear User Personal Data</span> with <span class="parameter">GDPRUIDY</span> set to 10, ten years’ worth of transactions that have JSMITH stamped on them will have this replaced with ‘COINS’, and 10 years’ worth will keep JSMITH for now.</p>
+        <p>Once JSMITH leaves (and IT lock the account and remove the named user setting) and it gets to ten years since they last logged in, their user record will be deleted. By this point there will be no records that refer to JSMITH.</p>
+        <p>If a user record is deleted, any “satellite” data is also deleted; for example:</p>
+        <ul class="CompactList">
+            <li>
+                <p><MadCap:variable name="Variables.Pc Plant caps" /> User</p>
+            </li>
+            <li>
+                <p><MadCap:variable name="Variables.Marketing caps" /> User</p>
+            </li>
+            <li>
+                <p>Buyer in Procurement</p>
+            </li>
+            <li>
+                <p>Service <MadCap:variable name="Variables.Se Technician caps" /></p>
+            </li>
+            <li>
+                <p>JC Employee</p>
+            </li>
+            <li>
+                <p>FM <MadCap:variable name="Variables.Operative caps" /></p>
+            </li>
+        </ul>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Full list of satellite tables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 100%;">
+                    <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>ci_user</p>
+                                <p>co_security</p>
+                                <p>cr_action_docs</p>
+                                <p>cr_actions</p>
+                                <p>cr_diary</p>
+                                <p>cr_input_audit</p>
+                                <p>cr_interface</p>
+                                <p>cr_profiles</p>
+                                <p>hr_access</p>
+                                <p>hr_user</p>
+                                <p>la_myapp</p>
+                                <p>la_user</p>
+                                <p>menuuser</p>
+                                <p>mk_access</p>
+                                <p>mk_quick_contact</p>
+                                <p>mk_user</p>
+                            </td>
+                            <td>
+                                <p>mkuser</p>
+                                <p>ms_access</p>
+                                <p>ms_favour</p>
+                                <p>my_quick_contact</p>
+                                <p>pi_iactions</p>
+                                <p>po_buyer</p>
+                                <p>pp_future</p>
+                                <p>sc_userlvl</p>
+                                <p>sumail</p>
+                                <p>sunotes</p>
+                                <p>suprocop</p>
+                                <p>sy_access</p>
+                                <p>sy_button</p>
+                                <p>sy_cogroup</p>
+                                <p>sy_colset</p>
+                                <p>sy_ddeparam</p>
+                            </td>
+                            <td>
+                                <p>sy_fieldopt</p>
+                                <p>sy_fldacc</p>
+                                <p>sy_flddef</p>
+                                <p>sy_funcopt</p>
+                                <p>sy_funinit</p>
+                                <p>sy_menu</p>
+                                <p>sy_menuitem</p>
+                                <p>sy_puser</p>
+                                <p>sy_repalt</p>
+                                <p>sy_secalt</p>
+                                <p>sy_user</p>
+                                <p>sy_usercfg</p>
+                                <p>sy_userparam</p>
+                                <p>sy_utable</p>
+                                <p>vp_carduser</p>
+                                <p>wf_delegate</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>Because the process takes a long time to run, <span class="function">Clear User Personal Data</span> allows you to specify a maximum run time in Hours. If not all user ID values are anonym<MadCap:variable name="Variables.is" />ed during the run, the process will remember where it stopped and will continue from there next time it is run, if it is run less than a month later. If the next run is a month or more after the initial run, the process will start from the beginning. If all user values have been anonym<MadCap:variable name="Variables.is" />ed, but it hasn’t been a month since the initial run, the process will not anonym<MadCap:variable name="Variables.is" />e user ID values until a month has passed since the initial run.</p>
+        <p>The report content details the number of records processed for each table updated in that run. It also displays the last revised value for the last table it was processing before the report hit the run time limit.</p>
+    </body>
+</html>

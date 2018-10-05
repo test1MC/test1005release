@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">File Location	</div>
+                <div class="FieldDef">
+                    <p>Whether the file to load is located on your local PC (PC) or on the <MadCap:variable name="General.ProductName" /> host computer (Server).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">PC File Name	</div>
+                <div class="FieldDef">
+                    <p>The name of the local PC file to load (this field is visible if you choose PC).</p>
+                    <p>You can enter up to five local PC files. Each of five names should be entered in a separate PC File Name field; a new field is shown each time a PC File Name is entered. Commas cannot be used in the name of the file.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Server File Name</div>
+                <div class="FieldDef">
+                    <p>The name of the server (host) file to load (this field is visible if you choose Server).</p>
+                    <p>It is possible to enter a list of the server files and also a pattern to match multiple files.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Include Header Line</div>
+                <div class="FieldDef">Whether the import file includes a row for header details.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Delimiter</div>
+                <div class="FieldDef">The character used to separate entries in the file (comma, semicolon, or space).</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Description</div>
+                <div class="FieldDef">A description of the invoices to be loaded.</div>
+            </div>
+            <div class="FieldBlock" MadCap:conditions="Snippet Conditions.GL-Journals">
+                <div class="FieldLabel">Transaction Format</div>
+                <div class="FieldDef">The format of the input file. This can be one of the following:
+                <ul class="CompactList"><li>All Types </li><li>General Ledger</li><li>Contract Cost/Rev</li><li>Asset</li><li>VAT</li><li>Workshop</li></ul></div>
+            </div>
+            <div class="FieldBlock" MadCap:conditions="Snippet Conditions.GL-Journals,Snippet Conditions.CS-Certificates">
+                <div class="FieldLabel">Transaction Type</div>
+                <div class="FieldDef">The transaction type to use for the <MadCap:snippetText src="Transactions.flsnp" />.</div>
+            </div>
+            <div class="FieldBlock" MadCap:conditions="Snippet Conditions.GL-Journals">
+                <div class="FieldLabel"><MadCap:variable name="Variables.Financial Period caps" /> Defined in File</div>
+                <div class="FieldDef">Whether the <MadCap:variable name="Variables.Financial Period caps" /> for the transactions is specified in the import file. If this is <MadCap:variable name="Variables.tick" />ed, the file must include a <MadCap:variable name="Variables.Financial Period caps" /> column.</div>
+            </div>
+            <div class="FieldBlock" MadCap:conditions="Snippet Conditions.GL-Journals">
+                <div class="FieldLabel"><MadCap:variable name="Variables.Financial Period caps" />
+                </div>
+                <div class="FieldDef">The <MadCap:variable name="Variables.Financial Period caps" /> to use (if <span class="Field"><MadCap:variable name="Variables.Financial Period caps"></MadCap:variable> Defined in File</span> is not <MadCap:variable name="Variables.tick" />ed).</div>
+            </div>
+            <div class="FieldBlock" MadCap:conditions="Snippet Conditions.GL-Journals">
+                <div class="FieldLabel">Use Default Currency</div>
+                <div class="FieldDef">Whether the transaction amounts in the file represent amounts in the default currency. If this is not <MadCap:variable name="Variables.tick" />ed, the import file must include a currency column.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Generate Template Only</div>
+                <div class="FieldDef">If this is <MadCap:variable name="Variables.tick" />ed, <MadCap:variable name="General.ProductName" /> generates a template import file based on the selected options, but does not import any data. The template is available on the <span class="Function">My Files</span> screen.</div>
+            </div>
+        </div>
+    </body>
+</html>

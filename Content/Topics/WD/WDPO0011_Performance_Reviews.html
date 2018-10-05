@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2322" MadCap:lastWidth="749">
+    <head><title>Performance Reviews</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Performance Reviews</h1>
+        <p>Performance reviews allow you to record assessments of how well subcontractors and <MadCap:variable name="Variables.pl suppliers" /> have performed on individual orders. You enter the reviews against a <MadCap:variable name="Variables.kco company" /> or an individual office, and the <MadCap:variable name="Variables.kco company" /> list shows the average results of these reviews at a glance.</p>
+        <p>
+            <img src="../../Resources/Images_P-R/Procurement/PO_001101.png" class="FullWidth" />
+        </p>
+        <p>The <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Score shows your <MadCap:variable name="Variables.kco company" />'s assessment of the <MadCap:variable name="Variables.pl supplier" /> or subcontractor. This is the average of the performance reviews for all offices of the company.&#160; The Group Score shows the average assessment of all your <MadCap:variable name="Variables.kco companies" />.</p>
+        <p>From this you can dig deeper to see the scores for each year; you can display this as a table or as a graph.&#160; </p>
+        <p>
+            <img src="../../Resources/Images_P-R/Procurement/PO_001102.png" class="FullWidth" />
+        </p>
+        <p>From the annual scores, you can dig deeper to display the detail of the reviews.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDPO0012_Non-Conformance.html" />
+                <MadCap:relatedTopic src="WDSRM0016_Performance_Reviews_in_SRM.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To record a performance review:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WCI2000BCIM">Companies</span>.</li>
+                <li>Go to the Company Summary Office Summary for the company or office for which you want to record the review.</li>
+                <li>Click the Performance tab, then click the <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> or Subcontractor tab, depending on whether the review relates to a purchase order or subcontract order.</li>
+                <li>Set the Add Type drop-down to <span class="userinput">Normal Review </span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />. 
+<p /><MadCap:variable name="General.ProductName" /> defaults in an order number of the last Material or Trade PO for the selected <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> or Subcontractor.&#160; To record a review for a different order, use the lookup to select it.</li>
+                <li>Enter the details of the review: enter a score for each of the criteria that the company is being rated against.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the review.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Performance review configuration</h2>
+            <p>Use <span class="function" title="Function:%WTI2080BTIR">Performance Rating Codes</span> to set up the scores and the descriptions for each score. You can determine whether scores are out of 5 or out of 10 - use <span class="parameter">CI/PERFBASE</span>.</p>
+            <p>Use <span class="function" title="Function:%WTI209BBTIC">Subcontractor Performance Criteria</span> and <span class="function" title="Function:%WTI209ABTIC"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Performance Criteria</span> to set up the performance criteria for subcontractors and for <MadCap:variable name="Variables.pl suppliers" /> (that is, the things you want to score them against).</p>
+            <p>To configure the <MadCap:variable name="Variables.colour" /> coding Performance Scores in the Company Workbench, use <span class="function" title="Function:%WSY2078BCTA1">Data Display <MadCap:variable name="Variables.colour" style="text-transform: capitalize;" /> Ranges</span> to set up the <MadCap:variable name="Variables.colour" /> ranges for the code CIREVSCORE. Example</p>
+            <div style="background-color: #f0f0f0;">
+                <p>CIREVSCORE = <span class="userinput">0,,1,perf30,39,perf60,59,perf100,100</span> If the score is 0, then there is no <MadCap:variable name="Variables.colour" />. If the score is between 1 and 39, the <MadCap:variable name="Variables.colour" /> is Red (perf30). If the score is between 40 and 59, the <MadCap:variable name="Variables.colour" /> is Amber (perf60). If the score is between 60 and 100, the <MadCap:variable name="Variables.colour" /> is green (perf100).</p>
+                <p>You cannot separately configure the scores for <MadCap:variable name="Variables.pl suppliers" /> and subcontractors, as in some places we combine the <MadCap:variable name="Variables.pl supplier" /> and subcontractor scores.</p>
+            </div>
+            <p />
+            <p>&#160;</p>
+            <p><MadCap:variable name="General.ProductName" /> can calculate the percentage shown on the company browse based on all the performance reviews ever recorded for the company, or only on recent reviews - use the parameters <span class="parameter">CI/POREVHST </span>and <span class="parameter">CI/SCREVHST </span>to set the number of months' reviews to use.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_porev.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_screv.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_incmass.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_perfbase.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_porevhst.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_screvhst.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_exclkcos.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />NHBC Data Submission</h1>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Home builders who provide home construction warranty and insurance through NHBC need to submit data regarding their reservations, exchanges and completions every month as part of the Insurance Distribution Directive (IDD). </MadCap:conditionalText><span class="function">NHBC Data Submission</span> is a new function that submits <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">this information </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">the information required under IDD </MadCap:conditionalText>to NHBC using a web service.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">NHBC&#160;Data Submission Selection Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_G-I/HS/NHBC_Data/NHBC_Submission.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Report Only Mode<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>This allows you to  run the submission in report-only mode so you can check on the data to be sent before the submission is made.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Up to Date<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Data that is changed after this date will not be submitted.</p>
+                </div>
+            </div>
+        </div>
+        <p> 	Standard report scheduling allows you to set up this process to run at specified times.
+Standard Development selection allows you to run the submission process for selected sites only.</p>
+        <p>When run, the report collates information for all relevant changes to selected sites and their plots since the last submission was made. Only sites with a populated NHBC Builders Site Ref/SNIN will be included, and only plots whose sales classification is listed in the new parameter <span class="parameter">NHBCSCLS</span> will be included (or if the parameter is blank then all plots will be included). If no change has occurred on a plot since the previous submission, it will be excluded from both the report and the submission.</p>
+        <p>Any records with errors are shown together in a section at the top of the report.
+</p>
+        <h2>Buildmark Policy Number</h2>
+        <p>Whenever a plot is submitted, NHBC’s Buildmark Policy Number is returned and is stored against the plot (in the <span class="field">Certificate Number</span> field on the Plots tab of the <span class="function">Sales Workbench</span>).</p>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="836" MadCap:lastWidth="599">
+  <head>
+    <title>Configuration for Faxing and Emailing</title>
+  </head>
+  <body>
+    <h1 class="print">VSI-Fax Configuration for Faxing and Emailing</h1>
+    <p>Once VSI-Fax has been installed on the host server there are various areas within the <MadCap:variable name="General.ProductName" /> system which must also be configured to allow successful faxing from <MadCap:variable name="General.ProductName" />. </p>
+    <p>
+      <MadCap:concept term="Topics" />Depending on which types of document you wish to fax, and from which <MadCap:variable name="General.ProductName" /> modules, the nature of the configuration may change. These topics are designed to give an overview of the system parameters and central configuration.</p>
+    <p>You can <MadCap:variable name="Variables.enquire" /> on fax requests using <span class="function" title="Function:%WSY5080BSMP">Fax Request History</span>.</p>
+    <div class="configuration">
+      <h2 class="print">Configuration</h2>
+      <ol>
+        <li>Set up a report queue for faxing, using <span class="function" title="Function:%WSY2570BCTA">Report Queues</span>.</li>
+        <li>Create <a href="WDSY0109_COINS_Report_Agent_Families.html">Report Agent families</a>.</li>
+        <li>If using email, link to the mail SMTP server.  The SMTP server needs to author<MadCap:variable name="Variables.is" />e relaying of SMTP mail traffic from the <MadCap:variable name="General.ProductName" /> server. </li>
+        <ul>
+          <li>For <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />, VSI-Fax needs to be configured with the mail server details.</li>
+          <li>For <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" />, the <span class="parameter">SY/MAILHOST </span>and <span class="parameter">SY/MAILPORT </span>parameters point to the mail server.</li>
+        </ul>
+        <li>The <span class="parameter">CO/FAXSEND </span>parameter must be set to the full path of the VFX command /opt/vsifax/bin/vfx .</li>
+        <li>The <span class="module">Print Manager </span>parameter <span class="parameter">GENBACK </span>must include the VSIFAX command: VSIFAX=/opt/vsifax .</li>
+      </ol>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/CO/co_faxsend.htm" />
+          <MadCap:relatedTopic src="../Parameters/PM/pm_genback.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

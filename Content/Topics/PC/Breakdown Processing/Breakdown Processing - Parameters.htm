@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="6" MadCap:lastHeight="699" MadCap:lastWidth="601">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Breakdown Processing - </MadCap:conditionalText>Parameters</h1>
+        <p>The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><MadCap:variable name="Variables.Pc Plant caps" /> parameters affect breakdown functionality.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">BDWNEVNT</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The workshop event code that will be assigned to <MadCap:variable name="Variables.pc jobcards" /> created for breakdowns.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">	BDWNMAIL</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>A list of users or roles to email when a breakdown is registered.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">BDWNSTAT	</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The asset status to use during breakdown. </p>
+                        <p> 
+If this status excludes the asset from charging, charging is suspended until the outcome of the breakdown is processed and the number of <MadCap:variable name="Variables.Pc Hire caps" /> Free Days is entered.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">INSPSTAT	</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The status code of assets that need  inspection after they are returned. </p>
+                        <p>If you wish to inspect certain groups of assets after the <MadCap:variable name="Variables.pc hire" />, set the return status for the groups to this status. In the <span class="function">Maintenance Desk</span> you can filter to assets that need inspection and choose to make them available or create <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.pc jobcard" /> to work on them.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">WAITSTAT	</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>
+The status code of assets waiting for decision.
+This status is used when the person doing first line assessment is unsure and refers the decision (whether to make the asset available or create <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.pc jobcard" />) to someone else.
+</p>
+                        <p>If this is populated, a third action – Awaiting Decision – becomes available on the <span class="function">Maintenance Desk</span> - Assets tab, to allow you to set the status of assets that are to be inspected after they are returned.  </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

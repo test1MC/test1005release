@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Equipment Trigger Setup</h1>
+        <h2>Module: Fixed Assets</h2>
+        <p>This document will show the process of adding date triggers, and updating already existing triggers using the configurable asset load.</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>To create the Trigger, begin by navigating to Fixed Assets &gt; Setup &gt; Maintenance &gt; Asset Trigger Definitions, and click Add.</li>
+        </ol>
+        <p class="caption">Figure 1: Clicking Add on Asset Trigger Definitions Page</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 313px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>Enter the Trigger information:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Add Trigger Code and Description</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Select the “Data Type”, which is the type of information this trigger represents:</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Character = x(8) format (for example: abc123)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Date = 99/99/99 format (for example: 12/08/11)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Decimal = -&gt;&gt;,&gt;&gt;9.99 format (for example: 123.45)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Integer = -&gt;,&gt;&gt;&gt;,&gt;&gt;9 format (for example: 345)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Logical = Y/N format (for example: Y or N)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">The Value in the “Format” field is automatically filled in based on the&#160;Data Type selected, but it can be changed.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">The “Trigger Type,” combined with the Value, determines how the expiration value for the trigger is reset. The types available depend on the “Data Type”. For date triggers, the current value is always today's date, and the trigger expires if today's date is equal or later than the date in the Expires field.&#160; The difference is how the Expires field is reset:</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Days - The trigger is reset to the current date plus the number of days in Value.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Months - The trigger is reset to the current date plus the number of months in Value.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Years - The trigger is reset to the current date plus the number of years in Value.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Month end - The trigger is reset to the end of the current month, plus the number of months in Value.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Year-end - The trigger is reset to the end of the current month, plus the number of years in Value.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">“Value” is the reset value, which determines to what value the Expires field on the trigger is reset. The entry in “Trigger Type” governs how the trigger is reset.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">The “Reset To” field is the value to which you want COINS to reset the current value when the trigger is reset. This is only applicable for Integer data&#160;type triggers.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">The “Main Trigger” allows for the linking of this trigger as a secondary to a primary trigger. This can be used in situations where the event can be fired for more than one reason. For example, service every 10k or 6 months.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">The “Validation” defines how COINS responds when someone selects the asset. The trigger can be set up to give either a warning or an error message when the asset is selected (for example when entering a dispatch or changing an item on rent).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">None - COINS does not give a warning or an error.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Warning - COINS issues a warning message but allows selecting the asset. Use this, for example, if the trigger relates to a service or inspection that is not mandatory.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Error - COINS will not allow selecting the asset. Use this, for example, if the trigger relates to a service that must be done before the asset can be dispatched.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">NOTE: In workshop procedures, all errors are treated as warnings.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Click Save.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">The system will assume another Trigger is to be added immediately and will produce another blank Trigger Details screen to be filled. If this is unnecessary, simply hit Undo.</li>
+        </ul>
+        <p class="caption">Figure 2: Completed Trigger Details</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_1.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 270px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>To associate the new Trigger to the appropriate Caption, navigate to Fixed Assets &gt; Setup &gt; Maintenance &gt; Caption Maintenance, and click the hyperlink. </li>
+        </ol>
+        <p class="caption">&#160;</p>
+        <p class="caption">Figure 3: Clicking the Hyperlink of the Caption</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_2.png" style="visibility: visible;mso-wrap-style: square;width: 577px;height: 172px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>While within the Caption chosen in step #3, on the “Triggers” tab, click Add.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>Use the Lookup to find and select the new Trigger created in step#2</li>
+        </ol>
+        <p class="caption">&#160;</p>
+        <p>&#160;</p>
+        <p class="caption">Figure 4: Selecting the Trigger on the Caption Trigger Tab</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_3.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 113px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>Click Save.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="7">
+            <li>To add the new Trigger to an Asset Group, navigate to Fixed Assets &gt; Setup &gt; Maintenance &gt; Asset Groups, and click the hyperlink of the appropriate group.</li>
+        </ol>
+        <p class="caption">Figure 5: Selecting the Hyperlink on the Asset Group</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_4.png" style="visibility: visible;mso-wrap-style: square;width: 575px;height: 133px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="8">
+            <li>In the group’s Trigger Tab, click open, and move to the Trigger Tab.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="9">
+            <li>Use the Add to move the new Trigger to the “Selected” column, and click Save.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="10">
+            <li>This process will only affect newly added assets in this group.</li>
+        </ol>
+        <p class="caption">Figure 6: Adding new Trigger on Asset Group’s Trigger Tab</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_5.png" style="visibility: visible;mso-wrap-style: square;width: 575px;height: 214px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="11">
+            <li>To update the Trigger Expiration Date on already existing assets, the configurable load process will be used.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="12">
+            <li>Begin with a spreadsheet with the following format:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Row 1: field labels for the Asset Code and the Date of the Trigger Expiration</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Faa_code</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">RW_faa_ftv^”NameofTrigger”|expires (Replace “NameofTrigger” with the actual Trigger Code. In this example, the final field label would be RW_faa_ftv^ Diesel3Mo|expires)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Row 2 and onward: the actual Asset Code and the actual Trigger Expiration Date</li>
+        </ul>
+        <p class="caption">Figure 7: Spreadsheet of Configurable Load Format</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_6.png" style="visibility: visible;mso-wrap-style: square;width: 335px;height: 119px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="13">
+            <li>After adding all of the assets to the spreadsheet with the appropriate dates, save the file as a CSV (Comma Delimited).</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="14">
+            <li>Navigate to Fixed Assets &gt; Administration &gt; Fixed Asset Load, and choose the file created in the previous step.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="15">
+            <li>Choose Validate as the Upload Mode, with the following settings:</li>
+        </ol>
+        <p class="caption">Figure 8: Configurable Load Validation Settings</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_7.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 219px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="16">
+            <li>Click “Next”, and then click OK on the pop-up warning to acknowledge that one file is being validated.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="17">
+            <li>After the process runs, use the report status printer to check the report that was produced by the validation. The number of lines, and the successful checks, should match the upload.</li>
+        </ol>
+        <p class="caption">Figure 9: Configurable Load Report</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Trigger Setup_8.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 374px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="18">
+            <li>Assuming no errors, rerun the load, changing the Upload Mode to “Load” instead of “Validate”.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="403" MadCap:lastWidth="602">
+    <head>&#160;</head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Open Items</h1>
+        <p>In addition to the Summary and detail information, <MadCap:variable name="General.ProductName" /> also has specific tables for open transactions in the database. This is to enhance performance when maintain and reporting on current data.</p>
+        <p>For example every PL Invoice that has not been paid, or has been part paid will have an associate record in the PL Invoice Open Item table. Once an invoice has been fully paid the open item record is deleted.</p>
+        <p>It is therefore recommended that when enquiring or reporting on open items that it is the open item record which is used as the basis of the query.</p>
+        <p>For example :</p>
+        <p class="Example">FOR EACH ap_invopen WHERE ap_invopen.kco = {kco},<br />EACH ap_invoice OF ap_invopen</p>
+        <p>Each of the tables which contain transactional data will have an associate open item table.</p>
+    </body>
+</html>

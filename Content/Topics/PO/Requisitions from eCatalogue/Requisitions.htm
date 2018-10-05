@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Raising a Requisition from the e<MadCap:variable name="Variables.Catalogue caps" /></h1>
+        <p>If the requisition being created is covered by the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PO parameter <span class="parameter">REQECAT</span>, the changes documented below apply.</p>
+        <p>The words “Via e<MadCap:variable name="Variables.Catalogue caps" />” appear in red on the requisition header.<img src="../../../Resources/Images_P-R/Procurement/Reqs from eCatalogue/Req_Header.png" class="FullWidth" /></p>
+        <p>A new <MadCap:variable name="Variables.tick" />box is available:</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Disable Punchout?<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The ability to raise a requisition without accessing the e<MadCap:variable name="Variables.Catalogue caps" /> may be a requirement for certain users.  This <MadCap:variable name="Variables.tick" />box will only appear if the user has access to the function %WPO1010FRQH and if no lines have been entered against the requisition. If the requisition has been issued, even if changes are allowed to an issued requisition, the <MadCap:variable name="Variables.tick" />box will not appear.  If the user <MadCap:variable name="Variables.tick" />s the <span class="field">Disable Punchout?</span> box, the “Via e<MadCap:variable name="Variables.Catalogue caps" />” text is hidden and the e<MadCap:variable name="Variables.Catalogue caps" /> is not invoked when the user clicks Save.</p>
+                </div>
+            </div>
+        </div>
+        <p>While the requisition remains un-issued, it can be changed at any point, so new lines can be added via the e<MadCap:variable name="Variables.Catalogue caps" /> and existing lines can be deleted or amended. </p>
+        <p> When the user clicks the Save button (and if the <span class="field">Disable Punchout?</span> <MadCap:variable name="Variables.tick" />box has not been <MadCap:variable name="Variables.tick" />ed), the e<MadCap:variable name="Variables.Catalogue caps" /> is invoked. The following “holding” screen is shown:</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/Procurement/Reqs from eCatalogue/eCat_Holding_Screen.png" class="FullWidth" />
+        </p>
+        <p>A request to the FirstB2B e<MadCap:variable name="Variables.Catalogue caps" /> is made in order to establish a connection between the requisition header just created (or amended) and the e<MadCap:variable name="Variables.Catalogue caps" />.</p>
+        <p>A new tab is opened in the browser, which displays the initial cross-supplier <MadCap:variable name="Variables.catalogue" /> screen as determined by FirstB2B.</p>
+        <p>Once the user has filled their basket in the e<MadCap:variable name="Variables.Catalogue caps" />, they close the e<MadCap:variable name="Variables.Catalogue caps" /> tab and click the Forward button.  The basket is retrieved and the user is taken to the Requisition Lines screen.</p>
+        <h2 MadCap:autonum="1.1 ">Requisition Browse</h2>
+        <p>If the requisition has been raised via the e<MadCap:variable name="Variables.Catalogue caps" />, ‘e’ is shown in the column immediately to the right of the <span class="field">Requisition Number</span> column. If the <MadCap:variable name="Variables.Jc Contract caps" /> tab is relevant, the same <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>‘e’ column is visible on that tab.</p>
+        <h2 MadCap:autonum="1.2 ">Requisition Summary</h2>
+        <p>If the requisition has been raised via the e<MadCap:variable name="Variables.Catalogue caps" />, the words “Via e<MadCap:variable name="Variables.Catalogue caps" />” are shown on the Main tab.</p>
+    </body>
+</html>

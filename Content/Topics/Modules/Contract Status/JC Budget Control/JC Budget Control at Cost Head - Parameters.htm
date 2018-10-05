@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="747" MadCap:lastWidth="601" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">JC Budget Control at <MadCap:variable name="Variables.Cost Head caps" /> - </MadCap:conditionalText>Parameters</h1>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">The following PO parameters govern the <MadCap:variable name="Variables.behaviour" /> when comparing order values against budgets. </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Two existing PO parameters have been renamed to more accurately reflect their purpose:</MadCap:conditionalText>
+        </p>
+        <ul>
+            <li><span class="parameter">BUDCHCOM </span>
+                <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">- 
+			</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been re-named <span class="parameter">BUDCCCOM</span> and its description changed to "</MadCap:conditionalText>Budget Type for Cost Code budget validation when committing PO<MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly,COINS.PrintOnly">"</MadCap:conditionalText>.</li>
+            <li><span class="parameter">BUDCHCAT </span>
+                <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">- 
+                </MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been re-named <span class="parameter">BUDCCCAT</span> and its description changed to "</MadCap:conditionalText>Validate Cost Code Budget at Cost Category level<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">"</MadCap:conditionalText>.</li>
+        </ul>
+        <p MadCap:conditions="COINS.PrintOnly">Four new PO parameters have been introduced:</p>
+        <ul>
+            <li><span class="parameter">BUDCHCOM</span> - Budget Type for <MadCap:variable name="Variables.Cost Head caps" /> budget validation when committing PO.</li>
+            <li><span class="parameter">BUDCHCAT</span> - Validate <MadCap:variable name="Variables.Cost Head caps" /> Budget at Cost Category level.</li>
+            <li><span class="parameter">BUDCHWRN</span> - Issue Warning rather than Error if <MadCap:variable name="Variables.Cost Head caps" /> budget exceeded.</li>
+            <li><span class="parameter">BUDCCWRN</span> - Issue Warning rather than Error if Cost Code budget exceeded.</li>
+        </ul>
+        <p>If <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">the new parameter </MadCap:conditionalText><span class="parameter">BUDCHCOM</span> is set to a valid JC budget type, an order cannot be committed if any <MadCap:variable name="Variables.cost head" /> affected by the order would cause the related <MadCap:variable name="Variables.cost head" /> budget to be exceeded.</p>
+        <p>If <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">the (newly renamed) parameter </MadCap:conditionalText><span class="parameter">BUDCCCAT</span><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">,</MadCap:conditionalText> or <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">the new </MadCap:conditionalText><span class="parameter">BUDCHCAT</span><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">,</MadCap:conditionalText> is set to Y, the check against the budget will be at the level of the cost category.</p>
+        <p>If either of the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new PO </MadCap:conditionalText>parameters <span class="parameter">BUDCHWRN</span> and <span class="parameter">BUDCCWRN</span> is set to Y, orders that would cause the <MadCap:variable name="Variables.cost head" /> budget or cost code budget (respectively) to be exceeded can be committed, but a warning is issued.</p>
+    </body>
+</html>

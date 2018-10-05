@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1704" MadCap:lastWidth="1118">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Electronic Invoice Load - Data File Format</h1>
+        <p>A <a href="PL LOAD .xlsm">spreadsheet template</a> is provided to facilitate the creation of the file into the correct format for loading.</p>
+        <p>Note:  The spreadsheet requires macros to be enabled to assist with the correct formatting of the data.</p>
+        <p>Each row starting at Row 4 should contain the details for one invoice and the columns to be completed are as follows:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 89px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader" style="text-align: center;">Column</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader" style="text-align: center;">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader" style="text-align: center;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+A</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	avm_num</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Supplier Account Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+B</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_idate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Invoice date</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">B1</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ain_recdate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">(Only if PL/ENTERREC = Y) The date on which the invoice was received.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+C</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_amount</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Gross amount (2 Decimal Places)</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+D</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	Source</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Source ledger code
+This should be set to PL</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+E</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	coj_type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Transaction type
+It is recommended that the import is only carried out for PINN invoices (no Purchase Order)</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+F</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_taxamt</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	VAT amount (2 Decimal Places)
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">G</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_duedt</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically calculated from Invoice Date Due date</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+H</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_discdt</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically calculated 
+Discount date</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+I</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_discamt</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Discount</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+J</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_desc</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Description
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">K</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	new_ain_hcode</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Hold code and Reason.  Leave blank f these will not go on hold, otherwise specify a valid hold code and reason, separated by a comma.
+e.g. AA,Awaiting Approval</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+
+L</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ohd_num</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	P O number
+Leave blank</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+M</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_supref</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Supplier Reference</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+N</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_disttype</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Distribution type (R/P/C)
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">O</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	job_num</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Contract, Department, Sector</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+P</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	cur_code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Currency Code
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Q</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	int_ref</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Internal reference
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">R</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	"$"</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	This must contain “$”
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">S</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	Lines</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Leave Blank</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> 
+T</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	"$"</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	This must contain “$”
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">U</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	vat_code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	VAT code</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+V</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_taxamt</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically copied from previous entry VAT amount (2 Decimal Places)
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">W</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_netamt</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically calculated
+Goods amount (2 Decimal Places)t
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">X</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	summ2</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Summary (YES/NO)
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Y</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	"$"</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	This must contain “$”
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Z</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	Lines</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Leave Blank</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> 
+AA</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	"$"</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	This must contain “$”</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+AB</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_netamt</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically copied from previous entry Amount
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AC</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	anal_type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Analysis type (1 - Contract, 2 - Plant, 3 - General Ledger, 5 - Workshop)
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AD</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	Anal</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Analysis (for example, contract/cost code/category, G/L account)</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+AE</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_fdate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Effective Date
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AF</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	Sum</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Summary (YES/NO)</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+AG</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ain_desc</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically copied from previous entry Description
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AH</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	ohd_num</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically copied from previous entry PO Number </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> 
+AI</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	tax_code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Automatically copied from previous entry Sales Tax Code
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AJ</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Quantity
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AK</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	Units
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AL</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">	"$"</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">	This must contain “$”
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">AM</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">	"E"</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">	This must contain “E” to signify the end of the import record</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>FM Configurable Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">FM Configurable Documents</h1>
+    <p>There are several documents you can configure in FM. These include:</p>
+    <p>
+      <strong>
+        <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" />
+      </strong>
+    </p>
+    <p>
+      <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> (FM) (document type FMAPP) is used to print a <MadCap:variable name="Variables.fm application" /> or invoice within FM. It prints sw_invhead at the HEADER level and sw_invline at the BODY level. Depending on the setting of the FM parameter <span class="parameter">INVGENER</span>, the Invline can relate to a <MadCap:variable name="Variables.fm job" /> (sw_job) or at item level (sw_jobsor or jc_costtran).</p>
+    <p>
+      <MadCap:variable name="Variables.fm applications" style="text-transform: capitalize;" /> are used with the <MadCap:variable name="Variables.fm application" />/certification process on transaction invoicing (that is, if the <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> and Certification field on <span class="function" title="Function:%WFM2461SFMM">Markup Rates</span> is <MadCap:variable name="Variables.tick" />ed). See <a href="WDFM0057_Application_(FMAPP).html">FM <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> (FMAPP) Documents</a>.</p>
+    <p>
+      <strong>Proforma (or <MadCap:variable name="Variables.fm application" />) </strong>
+    </p>
+    <p>Proforma (FM) (or <MadCap:variable name="Variables.fm application" />) (document type FMPROF). The Header is the Invoice Header table and the BODY is the Invoice Line.</p>
+    <p>Proforma is used when using simple measured invoicing, and when using <MadCap:variable name="Variables.fm application" />/certification at item level. See <a href="WDFM0058_Application_(FMPROF).html">FM Configurable <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> (FMPROF) Documents</a>.</p>
+    <p>
+      <strong>Invoice</strong>
+    </p>
+    <p>Invoice (FM) (document type FMINV) is used to print FM invoice documents if Proforma (FM) is used for <MadCap:variable name="Variables.fm applications" />.</p>
+    <p>On the Invoice <MadCap:variable name="Variables.fm application" /> documents there are many extras; generally for subtotalling/grouping by <MadCap:variable name="Variables.fm job" /> and by Invoice Class. See <a href="WDFM0059_Invoice.html">FM Invoice Configurable Documents</a>.</p>
+    <p>
+      <strong>Daily Tasks</strong>
+    </p>
+    <p>Daily Tasks (document type FMTASKDY) is used to print a document for a <MadCap:variable name="Variables.operative" />, showing all their tasks per day. It has the <MadCap:variable name="Variables.operative" /> (sw_personnel) record in the header and then FM tasks (sw_task) in the BODY.</p>
+    <p>
+      <strong>
+        <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" />
+      </strong>
+    </p>
+    <p>
+      <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> (FM) (document type FMJOB) is a configurable print of the <MadCap:variable name="Variables.fm job" /> and location details. This can automatically be appended to the <MadCap:variable name="Variables.fm job" /> in OA <span class="module">Document Management</span>; so this can be used to ensure that health and safety information that is contractually required is associated with the <MadCap:variable name="Variables.fm job" />.</p>
+    <p>This has an extras body form for printing information about hazards defined on the location.</p>
+    <p>
+      <strong>Letter</strong>
+    </p>
+    <p>Print Letter - FM Stage (document type FMLETTE): Originally intended as a letter print, this can be used for many things. It can print the <MadCap:variable name="Variables.fm job" /> and location details in the Header. Details of schedule of rates items can be printed in the BODY.</p>
+    <p>
+      <strong>Quote</strong>
+    </p>
+    <p>Quote (document type FMQUOT) is a configurable print of a quote within FM. In the header you can print information from the <MadCap:variable name="Variables.fm job" />, location and the quote header (fm_qheader). In the body you can print details of the quote line (fm_qline) and the associated schedule of rates item (sw_jobsor).</p>
+    <p>
+      <strong>Tasks</strong>
+    </p>
+    <p>Task Print (FM) is a configurable print of an FM task.  You can also configure a more complex document that prints extended text for hazards, task description, task instructions, and task notes. See <a href="WDFM0019_FM_Task_Print.html">FM Task Print</a>.</p>
+  </body>
+</html>

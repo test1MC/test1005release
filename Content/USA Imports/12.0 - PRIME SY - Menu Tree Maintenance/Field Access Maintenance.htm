@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Field Access Maintenance</h1>
+        <h2>Module: System-wide Functionality</h2>
+        <p>Field Access Maintenance is a way to change what Update, Hidden, and Add fields users, or groups, will see when going to specific pages in COINS. This is the process for updating that access. </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>Find the field name: Go to the page that you want to edit the field on, hit “CTRL+SHIFT+C”. This will bring up blue “i” icons next to each item</li>
+        </ol>
+        <p class="caption">Figure 1: Job Input Screen (Can be any screen)</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>If you hover your mouse over the “i” you will see the field name in the database. The field name for “Name” under jobs is “job_name”.</li>
+        </ol>
+        <p class="caption">Figure 2: Field Name</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance_1.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>Next go to System &gt; System Setup &gt; Field Access Maintenance</li>
+        </ol>
+        <p class="caption">Figure 3: Field Access Maintenance</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance_2.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>Add a field that has the same field name as the option picked in Step 2</li>
+        </ol>
+        <p class="caption">Figure 4: Adding Field Access Maintenance</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance_3.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>Types of Access: </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">Update – this field is available to edit</li>
+            <li style="list-style-type: disc;">UPDATE (Mandatory) – this field must be filled out before you can save</li>
+            <li style="list-style-type: disc;">Add Only – field can only be added</li>
+            <li style="list-style-type: disc;">Add Only (Mandatory) – Must be added before you can save</li>
+            <li style="list-style-type: disc;">Read Only – will show the field value but is not available to be edited</li>
+            <li style="list-style-type: disc;">Hidden – field will not be shown</li>
+        </ul>
+        <p class="caption">Figure 5: Types of Access</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance_4.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>To make exceptions, add a second row where either a user or a function is listed. In the below example, these two rows together mean: the job_name field is hidden for all users except alenei, who can update the field.</li>
+        </ol>
+        <p class="caption">Figure 6: Combining Rows of Field Access Maintenance</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance_5.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="7">
+            <li>If this field access maintenance is for a group, simply add the group name under the “USER” column.</li>
+        </ol>
+        <p class="caption">Figure 7: Group Specific Field Access Maintenance</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance_6.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="8">
+            <li>Next run group access from System &gt; System Setup &gt; Group Field Access and select the group being updated. This function can be run once per group, after all field access rules have been set up for them</li>
+        </ol>
+        <p class="caption">Figure 8: Group Field Access Update</p>
+        <p>
+            <img src="../../Resources/Images/12.0 - PRIME SY - Menu Tree Maintenance/Field Access Maintenance_7.png" style="visibility: visible;mso-wrap-style: square;width: 527px;height: 252px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="9">
+            <li>When a new user is added to a group the field access security rules that exist for that group will not be applied to that new user until you re-run “Group Field Access” for that group</li>
+        </ol>
+    </body>
+</html>

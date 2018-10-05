@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Setting Up a Fax Printer</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Setting Up a Fax Printer</h1>
+    <p>
+      <MadCap:snippetBlock src="../../Resources/Snippets/C+TOPIC.flsnp" />
+    </p>
+    <p>To ensure that the file produced by <MadCap:variable name="General.ProductName" /> to be sent to VSI-Fax is formatted in the same way as if the document was to be produced by a printer, it is necessary to configure a printer record for use solely by the faxing functionality. VSI-Fax will use this printer for all formatting (such as codepages and column settings). This printer record must not be a real printer - it is for the sole use of VSI-Fax (NOTE: printing to it will not produce a fax).</p>
+    <div class="code">      Printer: FAXHP             Description: Fax Printer<br />     O/S Name:                        Device: /dev/null<br />       Banner: N                   Code Page:<br />        Group:<br />      Command:<br />   Initial<MadCap:variable name="Variables.is" />e: INIT<br />        Reset: RESET<br />   Default to: #HPLJ4<br />     Owner(s): *</div>
+    <p>With the following printer escape sequences:</p>
+    <p />
+    <table>
+      <tbody>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>132 </td>
+          <td>132 Columns<br /></td>
+        </tr>
+        <tr>
+          <td>158 </td>
+          <td>158 Columns</td>
+        </tr>
+        <tr>
+          <td>198 </td>
+          <td>198 Columns<br /></td>
+        </tr>
+        <tr>
+          <td>220 </td>
+          <td>220 Columns<br /></td>
+        </tr>
+        <tr>
+          <td>BOLD </td>
+          <td>Bold On<br /></td>
+        </tr>
+        <tr>
+          <td>BOLDOFF </td>
+          <td>Bold Off</td>
+        </tr>
+        <tr>
+          <td>SLVOFF </td>
+          <td>SLAVE printing Off<br /></td>
+        </tr>
+        <tr>
+          <td>SLVON </td>
+          <td>SLAVE printing On<br /></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="configuration">
+      <h2 class="print">Parameters</h2>
+      <p>The System parameter <span class="parameter">DEFLASER </span>must be set to the code of the "fax" printer; in this example we are using FAXHP.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_deflaser.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

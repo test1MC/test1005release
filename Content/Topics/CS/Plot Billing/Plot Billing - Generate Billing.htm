@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="2" MadCap:lastHeight="475" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Plot Billing - </MadCap:conditionalText>Generate Plot Billing</h1>
+        <p><span class="Function">Generate Plot Billing</span> is a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>background report process that generates the <MadCap:variable name="Variables.Contract Sales" /> Applications or Certificates for a <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" /> based on the <MadCap:variable name="Variables.tick" /> group valuation. It can be run from the menu, for multiple <MadCap:variable name="Variables.vp sites" />, or as an Option from <span class="Function">Valuation Matrix (Tick Group)</span> for a single <MadCap:variable name="Variables.vp site" />.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/Contract Sales/Plot Billing/Generate Plot Billing.png" class="FullWidth" />
+        </p>
+        <p>This processes each open <MadCap:variable name="Variables.Contract Sales" style="text-transform: lowercase;" /> series that is set up as a ‘Plot Billing Series’ and flagged as a ‘Tick Group Valuation Generation’ series.  For each billing stage and plot where there is an order amount and the billing stage is linked to a <MadCap:variable name="Variables.tick" /> group, the valuation percentage will be calculated for the tick groups and plot.  If the billing stage and plot are fully valued, then an application or certificate will be raised for the order amount.</p>
+        <p>The application or certificate date is set to today’s date, and the transaction type is determined by the VP parameters <span class="parameter">BILLCSTA</span> and <span class="parameter">BILLCSTC</span>. If the VP parameter <span class="parameter">BILLPOST</span> is set to Y, the batch is posted automatically.</p>
+    </body>
+</html>

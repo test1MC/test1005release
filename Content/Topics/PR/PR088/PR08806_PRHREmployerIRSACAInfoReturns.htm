@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>PRHR Employer IRS ACA Information Returns</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="6 ">PR/HR Employer IRS ACA&#160;Information Returns</h1>
+        <p class="Body">The fields listed below were added to the 1095-C table (pr_1095c).  The <span class="Function">Employer IRS ACA Information Returns</span> function found on both the PR and HR ACA Processing menu <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been updated to fill </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">fills </MadCap:conditionalText>in these fields as an employee 1095-C record is processed and its data placed in an AIR transmission XML file.   This data helps users with their AIR transmissions to the IRS.</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Field</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Format</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">ahd_AIRcrbywho</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">CHAR x(10)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">	The userid of the user that created the AIR xml file containing this 1095-C’s data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">ahd_AIRcrdate</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">	DATE 99/99/99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">The date when this 1095-C’s data was placed in an AIR xml file.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">ahd_AIRcrtime</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">CHAR x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">	The time when this 1095-C’s data was placed in an AIR xml file.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">ahd_AIR</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">CHAR x(2)	</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">	X, for xml files created, T, for transmitted/uploaded, A for accepted, R for rejected, C for correction, etc.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">&#160;</p>
+    </body>
+</html>

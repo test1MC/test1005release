@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="805" MadCap:lastWidth="597">
+    <head><title>Format A (Barclays)</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Format A (Barclays)</h1>
+        <p><span style="PADDING-BOTTOM: 3px;BACKGROUND-COLOR: #00254f;PADDING-LEFT: 0px;PADDING-RIGHT: 3px;FLOAT: right;COLOR: #ffffff;PADDING-TOP: 3px;"><img src="../../Resources/Images/Misc/barclays.gif" /></span>Barclays statement files contain header (or summary) lines and memo lines (which are the transaction detail lines).&#160;<span class="function" title="Function:%CB105">Load Bank Statement</span> only reads the memo lines. The format of memo lines is as follows: </p>
+        <ul>
+            <li>ignored field, </li>
+            <li>ignored field, </li>
+            <li>account number, </li>
+            <li>MEMO, </li>
+            <li>bank sorting code (with separators), </li>
+            <li>currency, </li>
+            <li>transaction date, </li>
+            <li>ignored field, </li>
+            <li>transaction value, </li>
+            <li>bank transaction type, </li>
+            <li><MadCap:variable name="Variables.cheque" /> number (if relevant), </li>
+            <li>ignored field, </li>
+            <li>description </li>
+        </ul>
+        <p>The fields are separated by commas. </p>
+        <p>Barclays statement files include information for several accounts in a single file. <span class="function" title="Function:%CB105">Load Bank Statement</span> only reads the information relevant to the bank and account you are processing. </p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CB/cb_lineskip.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

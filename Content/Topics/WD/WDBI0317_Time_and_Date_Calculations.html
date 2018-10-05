@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="854" MadCap:lastWidth="601">
+  <head>
+    <title>Time and Date Calculations</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Time and Date Calculations</h1>
+    <p>
+      <span class="field">
+        <span style="color: purple;">date(DD,MM,YYYY)</span><![CDATA[ ]]></span>Returns the integer value of the date. This is useful if combined with get() or set() for report stores, or for comparison with other dates.</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">datestring("dd/mm/yyyy")</span><![CDATA[ ]]></span>Returns the integer value of the date string.</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">weekday(a)</span>
+      </span>          Returns the number of the day in the week (where Sunday=1), if 'a' is the integer value of a date. For example, 11-Feb-04 is a Wednesday, so weekday(date(11,02,2004)) returns 3.</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">day(a)</span>
+      </span>                  Returns the date in the month if 'a' is the integer value of a date.</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">month(a)</span>              </span>Returns the number of the month if 'a' is the integer value of a date.</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">year(a)</span>                 </span>Returns the year (as a four-digit integer) if 'a' is the integer value of a date.</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">time$("12345")</span>   </span>Would return 03:45:23</p>
+    <p>
+      <strong>Dates and Datestrings</strong>
+    </p>
+    <p>Recommended that in all instances where calculations are required on a date, that date is converted to an integer - then for display purposes converted back to a standard date format.</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">TODAY   </span>             </span>returns an integer</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">DATESTRING</span>       </span>converts a date (that is, from input field or a database field) to an integer</p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">$DATE$(integer)</span>
+      </span> displays an integer as a date</p>
+    <p>Once a date is in integer form, it can be used in further calculations (that is, add 7 to calculate a week later or within an IF statement.</p>
+    <p>
+      <strong>Calculating Period Dates from Report Run Dates :</strong>
+    </p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">startyear = (method("glp-rsp.periodoffset","!12-1",datestring('{rs_glp_fdate__2}'))) + 1; </span>
+      </span>
+    </p>
+    <p>
+      <span class="field">
+        <span style="color: purple;">startperiod = (method("glp-rsp.periodoffset","-1",datestring('{rs_glp_fdate__2}'))) + 1; </span>
+      </span>
+    </p>
+  </body>
+</html>

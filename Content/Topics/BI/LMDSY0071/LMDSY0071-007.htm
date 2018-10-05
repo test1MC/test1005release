@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Workflow Template Change</h1>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template Change.png" class="FullWidth" />
+        </p>
+        <h2>Stage decision makers</h2>
+        <p>When leaving a stage you must always make allowances for all decision possibilities. Usually there are at least two decisions Yes/No scenarios, however there maybe conditions as to which options are available at decision time.&#160; In this scenario we will be allowing the Level 1 authoriser to be able to commit the order or reject the order.</p>
+        <p>On the Stages Tab, Select the line P1 and click Copy<img src="../../../Resources/Images/COINS Graphics/SVG buttons/copy.svg" class="icon24px" /></p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-037-1108.png" class="FullWidth" />
+        </p>
+        <p>Change the Stage Label to <b>P2</b></p>
+        <p>Change the description to <b>Reject Order</b></p>
+        <p>Change the Calculation to <b>method('poh-rsp.RejectOrder')</b></p>
+        <p>Set the Next field to <b>E2</b></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-038-1108.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /></p>
+        <p>Select the line for stage E1 and click Copy<img src="../../../Resources/Images/COINS Graphics/SVG buttons/copy.svg" class="icon24px" /></p>
+        <p>&#160;</p>
+        <p>Set Stage to <b>E2</b></p>
+        <p>Change the Description to <b>Email Buyer to notify of Rejection</b></p>
+        <p>Change the subject to <b>Order {poh_ordno} has been rejected</b></p>
+        <p>Change the Next to <b>END</b></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-039-1108.png" class="FullWidth" />
+        </p>
+        <p>Now we need to modify stage S1 to include the second option:</p>
+        <p>Select Stage S1 and click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Open_Both.flsnp" /></p>
+        <p>Scroll to the Link section and add the Option for P2.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-040-1108.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>If we select the Diagram tab again and refresh the page, we should now see that there are two possible paths the workflow could take. You can drag the stages around to make them more readable.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-041-1108.png" />
+        </p>
+        <p>&#160;</p>
+        <p>Purge the workflow <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template Change_6.png" style="visibility: visible;mso-wrap-style: square;width: 195px;height: 33px;" /></p>
+        <p>Then re-launch&#160; <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template Change_7.png" style="visibility: visible;mso-wrap-style: square;width: 202px;height: 32px;" /></p>
+        <p>If a decision has to be made by the user, the option to complete from the front page of the Activity Workbench is only possible if a default link is specified within the stage.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-043-1108.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>If this field is left blank, the user must open the task via the link and complete the task individually. In this example the selection on the Activity Workbench now provides the user with two options; to either Commit or Reject the Order. No default link is specified so a choice must be made between the two.&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-042-1108.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

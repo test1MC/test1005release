@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Multi-Currency - Operational Recommendations</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Multi-Currency - Operational Recommendations</h1>
+    <h2>Do not allow transactions in other currencies</h2>
+    <p>Although it is possible to have transactions (such as <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>invoices) in a different currency to the currency of the account, we recommend you do not do this; set the flag to allow transactions in an alternative currency on an account to No.</p>
+    <h2>Post batches before updating exchange rates</h2>
+    <p>When transactions are written out to the system the currency conversion is made at that time. For example, where invoices are entered they are written to the system as unposted transactions, with the exchange rate as calculated at that time. When the batch is posted the items are set to posted but any foreign currency values are not adjusted.  Further transactions are written out at posting time, for example to the GL and <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> ledgers.</p>
+    <p>If the exchange rate were to be changed between input and posting (for example, items left for some days before being posted) there could  be discrepancies between these two areas.  These would not be noticeable in day-to-day operation, but it is good business practice to ensure there are no unposted batches of transactions at the time that the exchange rates are updated. This task should typically be scheduled as part of the month end process, when unposted batches are cleared for other reasons. </p>
+    <h2>Run Unreal<MadCap:variable name="Variables.is" />ed Exchange Variance reports regularly</h2>
+    <p>Because the exchange rate movements can be significant, you should run the Unreal<MadCap:variable name="Variables.is" />ed Exchange Variance reports periodically to check the transactions held on the system in foreign currencies, to get early warning of significant differences, and to make provisions for them.<br /></p>
+  </body>
+</html>

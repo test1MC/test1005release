@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Single Physical Server, Multiple Agent Families, Single Queue</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Single Physical Server, Multiple Agent Families, Single Queue</h1>
+        <p>In this scenario we have multiple agent families running on the same physical hardware server. Each agent family processes one or more report queues. A common usage would be for slow running reports (such as end of month reports) to use a particular queue (NASTY), with general reporting using another queue (GENERAL). </p>
+        <p>The diagram below includes a third queue reserved for more time critical reports (FASTPO) and shows how these queues may be apportioned across the agent families. All agent families will process reports for the FASTPO queue. The second agent family will also process reports in the GENERAL queue. The third agent family will process all queues (FASTPO, GENERAL and NASTY). </p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_Report_Queues_02.png" />
+            <br />
+        </p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0103_Single_Physical_Server_Single_Agent_Family_Single_Queue.html" />
+                <MadCap:relatedTopic src="WDSY0105_Multiple_Physical_Servers_Multiple_Agent_Families_Single_Queue.html" />
+                <MadCap:relatedTopic src="WDSY0106_Multiple_Physical_Servers_Multiple_Agent_Families_Multiple_Queues.html" />
+            </MadCap:relatedTopics>
+        </p>
+    </body>
+</html>

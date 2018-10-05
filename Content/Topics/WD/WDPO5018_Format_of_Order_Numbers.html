@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="856" MadCap:lastWidth="601">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Format of Order Numbers</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Format of Order Numbers</h1>
+    <p>You can configure the format of purchase order numbers, so that they show information about the order.</p>
+    <p>Order numbers can be up to 15 characters long.</p>
+    <p>The simplest format for an order number would be a single numerical sequence for your entire <MadCap:variable name="Variables.kco company" />. To do this, set <span class="parameter">PONUM1 </span>to <span class="userinput">comp</span>, and <span class="parameter">POFORM </span>to <span class="userinput">99999999 </span>(or however many digits you want in the number, up to 15).</p>
+    <p>But you may want the number to show other information:</p>
+    <ul>
+      <ul>
+        <li>You can add the current <MadCap:variable name="Variables.kco company" /> number at the beginning of the order number.  Set <span class="parameter">APPENDCO </span>to <span class="userinput">Y</span> if you want to do this, and use <span class="parameter">APPENDDL </span>to specify the character to separate the <MadCap:variable name="Variables.kco company" /> number from the rest of the number. Leave <span class="parameter">APPENDDL </span>blank if you do not want to a separator.</li>
+        <li>You can show any one of the following as the <strong>base</strong> part of the order number:</li>
+        <ul>
+          <li>For material, <MadCap:variable name="Variables.pc plant" /> or subcontract orders: <MadCap:variable name="Variables.jc contract" />, location, group, <MadCap:variable name="Variables.jc contract" /> type, or any one of the four analysis sets. Use the PO parameter <span class="parameter">PONUM1</span>.</li>
+          <li>For overhead orders: department or one of the four General Ledger account elements. Use the PO parameter <span class="parameter">PONUM2</span>.</li>
+          <li>For workshop orders: location or <MadCap:variable name="Variables.pc jobcard" />. Use the PO parameter <span class="parameter">PONUM3</span>.</li>
+          <li>For asset orders: asset code or department code. Use the PO parameter <span class="parameter">PONUM4</span>.</li>
+          <li>For <MadCap:variable name="Variables.pc rehire" /> orders: department or one of the four General Ledger account elements. Use the PO parameter <span class="parameter">PONUM5</span>.</li>
+          <li>For <MadCap:variable name="Variables.st stock" /> orders: location/department or one of the four General Ledger account elements. Use the PO parameter <span class="parameter">PONUM6</span>.
+<p> </p>
+For example, to include the <MadCap:variable name="Variables.jc contract" /> code in the order number, set <span class="parameter">PONUM1 </span>to <span class="userinput"><MadCap:variable name="Variables.fm job" /></span>. <MadCap:variable name="General.ProductName" /> prefixes the number with the <MadCap:variable name="Variables.jc contract" /> code. There will be a different sequence of numbers for each prefix; for example: <span class="screentype">1/00001, 1/00002 </span>and <span class="screentype">2/00001, 2/00002</span>.
+<p> </p>
+NOTE: To generate different sequences for each <MadCap:variable name="Variables.kco company" />, set the above parameters to <span class="userinput">comp</span>. </li>
+        </ul>
+        <li>To control whether the <strong>/</strong> separator is shown between the base and the sequence part of the number, use the PO parameter <span class="parameter">INSERTDL</span>.</li>
+        <li>To indicate the <strong>type </strong>of order (for example, material, <MadCap:variable name="Variables.pc plant" /> or subcontract), enter the prefixes against the following PO parameters:</li>
+        <ul>
+          <li>
+            <span class="parameter">ASORDPFX</span> (Asset)</li>
+          <li>
+            <span class="parameter">OVORDPFX</span> (Overhead)</li>
+          <li>
+            <span class="parameter">PLORDPFX</span> (<MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />)</li>
+          <li>
+            <span class="parameter">POORDPFX</span> (Material)</li>
+          <li>
+            <span class="parameter">RHORDPFX</span> (<MadCap:variable name="Variables.pc rehire" style="text-transform: capitalize;" />)</li>
+          <li>
+            <span class="parameter">SCORDPFX</span> (Subcontract)</li>
+          <li>
+            <span class="parameter">STORDPFX</span> (<MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" />)</li>
+          <li>
+            <span class="parameter">WSORDPFX</span> (Workshop)</li>
+        </ul>
+      </ul>
+    </ul>
+    <p>For example, <span class="screentype">MAT-, OHD-, PLT- </span>would produce order numbers such as <span class="userinput">MAT-00001, MAT-00002, OHD-00001, PLT-00001, OHD-00002</span> and so on.</p>
+    <ul>
+      <li>To show the origin of the order (head office or site), enter a list of two prefixes as the PO parameter <span class="parameter">POSHOPFX</span>. For example: <span class="screentype">H,S </span>would produce order numbers such as <span class="userinput">H00001, H00002, S00001, H00003</span>.
+<p> </p>
+To distinguish between head office and site subcontract orders, use the PO parameter <span class="parameter">SCSHOPFX </span>in the same way.</li>
+    </ul>
+    <p>You can combine any of the above, and all are optional. <MadCap:variable name="General.ProductName" /> generates separate sequences for each different prefix. So if you set different prefixes for site and head office orders, and for <MadCap:variable name="Variables.pc plant" />, material and overhead orders, there will be six different sequences. If you have different prefixes for site and head office orders, and include the <MadCap:variable name="Variables.jc contract" /> code, there will be two sequences for each <MadCap:variable name="Variables.jc contract" />.</p>
+    <p>Subcontract orders always have different sequences from material/<MadCap:variable name="Variables.pc plant" /> orders, even if you are not using any prefixes. The parameter <span class="parameter">SCFORM </span>governs the format of subcontract order sequence numbers, and <span class="parameter">SCNUM1 </span>governs the base.</p>
+    <p>You can change the next number in any of the sequences. See <a href="WDPO5012_Number_Sequences.html">Number Sequences</a>.</p>
+    <p>To summar<MadCap:variable name="Variables.is" />e:</p>
+    <table border="0" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1" style="text-align: center;">
+            <p class="TableHeader" style="text-align: center;">
+              <MadCap:variable name="Variables.kco co" style="text-transform: capitalize;" />
+            </p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1" colspan="3" style="text-align: center;">
+            <p class="TableHeader" style="text-align: center;">Origin</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1" colspan="3" style="text-align: center;">
+            <p class="TableHeader" style="text-align: center;">Type</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1" colspan="3" style="text-align: center;">
+            <p class="TableHeader" style="text-align: center;">Base</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1" style="text-align: center;">
+            <p class="TableHeader"> </p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1" style="text-align: center;">
+            <p class="TableHeader" style="text-align: center;">Sequence</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />
+            <br />Number</td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">[</td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Head<br />Site</td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">]</td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <span style="e: 60pt;">[</span>
+          </td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Asset<br />Material<br /><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /><br />Overhead<br /><MadCap:variable name="Variables.pc rehire" style="text-transform: capitalize;" /><br />Subcontractor<br /><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /><br />Workshop</td>
+          <td style="margin-top: 0px;vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <span style="e: 60pt;">]</span>
+          </td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">[</td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.Jc Contract caps" />
+            <br />Location<br />Group<br />etc. :</td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">]</td>
+          <td style="text-align: center;vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">/</td>
+          <td style="vertical-align: middle;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Sequence</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td colspan="3" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Governed by:</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">APPENDCO,<br />APPENDDL</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>POSHOPFX, <br />SCSHOPFX</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">ASORDPFX, <br />POORDPFX, <br />OVORDPFX, <br />PLORDPFX, <br />RHORDPFX, <br />SCORDPFX, <br />STORDPFX, <br />WSORDPFX</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">PONUM1, <br />PONUM2, <br />PONUM3, <br />PONUM4, <br />PONUM5, <br />PONUM6, <br />SCNUM1</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">INSERTDL</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>
+                                POFORM
+                            </p>
+            <p MadCap:conditions="COINS.v1108">POASFORM</p>
+            <p MadCap:conditions="COINS.v1108">POOVFORM</p>
+            <p MadCap:conditions="COINS.v1108">POSTFORM</p>
+            <p MadCap:conditions="COINS.v1108">POWSFORM</p>
+            <p MadCap:conditions="COINS.v1108">POSEFORM</p>
+            <p MadCap:conditions="COINS.v1108">SCSEFORM</p>
+            <p>
+                                SCFORM</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td colspan="3" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Examples:</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">H</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">M-</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">1000</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">/</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">0005</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">S</td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">P-</td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Civil</td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">/ </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">B0102</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>  <br />The prefixes for <strong>Order Templates</strong> are governed by the PO parameters <span class="parameter">POTMPFX </span>(purchase order templates) and <span class="parameter">SCTMPFX </span>(Subcontract order templates).</p>
+    <p>In addition, the PO parameter <span class="parameter">POPFXFST </span>determines whether the order prefix is placed before the base, or before the sequence number.</p>
+    <p>So if <span class="parameter">POPFXFST </span>= <span class="userinput">Y</span>, the example order numbers above would be <span class="screentype">HM-1000/0005 </span>and <span class="screentype">SP-Civil/B0102</span>.</p>
+    <p>If <span class="parameter">POPFXFST</span> = <span class="userinput">N</span>, they would be <span class="screentype">1000/HM-0005</span> and <span class="screentype">Civil/SP-B0102</span>.</p>
+    <p>The PO parameter <span class="parameter">SCPFXFST</span> has the same effect for subcontract order numbers. </p>
+  </body>
+</html>

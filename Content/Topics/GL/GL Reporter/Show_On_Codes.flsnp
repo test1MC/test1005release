@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>The "Show On" code is used on the columns to specify which row types the column is shown on.&#160; For example, to show the account balance on account rows and total rows, you would include <span class="userinput">D.</span> and <span class="userinput">T.</span> in the <span class="field">Show On</span> field for the account balance.&#160;H and F refer to the <a href="../../WD/WDGL0014_Sorting_Headings_and_Totals.html">sort headers and footers</a> for account and <MadCap:variable name="Variables.jc contract" /> rows.</p>
+        <p class="ListParagraph">The codes are:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Code</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>‘Show On’</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Blank Rows</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>D<i>n</i></p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Account (Detail) Rows</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>F<i>n</i></p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Sort footers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>H<i>n</i></p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Sort headers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>J<i>n</i></p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Contract (Job Costing) rows</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>S<i>n</i></p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Standard text rows</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>X</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Additional text rows</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Where <i>n</i> is a number that represents a level.</p>
+        <p>Levels allow you to show different information in different sections of the report.&#160; Give the row types in each section different <strong>levels</strong>, and put the relevant level number after the "show on" code for each column.&#160; For example, you could have a report that has summary information on level 1, and account listings (with account descriptions) on level 2.&#160; Or you could have a report with account lines in one section showing closing balance and movement, and a second section with account lines showing budget and forecast:</p>
+        <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');width: 100%;" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Item type</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Show On</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Comment</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="border-top: medium none;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Account code</p>
+                    </td>
+                    <td style="border-top: medium none;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>D.</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Show the account code on all detail rows</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Account description&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>D.</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Show the account description on all detail rows</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Closing balance</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>D1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Show the closing balance for detail rows of level 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Movement</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>D1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Show the movement amount for detail rows of level 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Budget</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>D2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Show the budget amount for detail rows of level 2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Forecast</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>D2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Show the forecast amount for detail rows of level 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

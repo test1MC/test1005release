@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="554" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types," MadCap:onlyLocalStylesheets="True">
+    <head><title>Screen and Processing Changes</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Standard <MadCap:variable name="Variables.Contract caps" /> Listing Report</h1>
+        <p class="Body">The standard <MadCap:variable name="Variables.Contract caps" /> Listing Report  lists all Subsidiary <MadCap:variable name="Variables.Contracts caps" /> and their values for each <MadCap:variable name="Variables.Contract caps" /> selected.</p>
+        <h2 MadCap:autonum="1.1">Menu Option</h2>
+        <p class="Body">The standard <span class="Function"><MadCap:variable name="Variables.Contract caps" /> Listing</span> report is found as a menu option in <i><MadCap:variable name="Variables.Contract caps" /> Status &gt; Reports &gt;&#160;Operational Reports &gt;&#160;Standard Reports</i>, as shown in <MadCap:xref href="#MenuOption" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="MenuOption"></a>Menu Option</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/JC037_Images/JC037_MenuOption.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2">Selection Screen</h2>
+        <h3 MadCap:autonum="1.2.1"><a name="Main"></a>Main Tab</h3>
+        <p class="Body">When you select the <span class="Function"><MadCap:variable name="Variables.Contract caps" /> Listing</span> report option from the menu above, the Main tab report selection screen appears, as shown in <MadCap:xref href="#SelectionScreen" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>. The fields on this screen are described below.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="SelectionScreen"></a>Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC037_Images/JC037_SelScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Standard fields found on this selection screen are:<span class="Field"> <MadCap:variable name="Variables.Contract caps" /></span>, <span class="Field">Group</span>, <span class="Field">Type</span>, <span class="Field">Location</span>, <span class="Field">Manager</span>, <span class="Field">Customer</span>, <span class="Field">Active</span>, <span class="Field">Complete</span>, and <span class="Field">Supervisor</span>. </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Financial Period caps" />
+        </p>
+        <p class="IndentFieldDef">The value of this field defaults to the current period.</p>
+        <p class="IndentBold">Recogn<MadCap:variable name="Variables.is" />ed Revenue Method</p>
+        <p class="IndentFieldDef">This option is only available if Recogn<MadCap:variable name="Variables.is" />ed Revenue Methods are set up in the logged-in company. The lookup options for this field include all Recogn<MadCap:variable name="Variables.is" />ed Revenue Methods that have been set up under<i> <MadCap:variable name="Variables.Contract caps"></MadCap:variable> Status &gt; Setup &gt; Setup Maintenance</i>. Sample options are shown in <MadCap:xref href="#RRMLookup" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="RRMLookup"></a>Sample Lookup Options</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC037_Images/JC037_RRMLookup.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">Field Set</p>
+        <p class="IndentFieldDef">Select the field set you wish to display on the report. (Field sets are set up in <i>Main Web Menu &gt; OA Reporting &amp; BI &gt; Field Sets &gt; Report Field Sets</i>.) The following field set options to select from are:</p>
+        <ul>
+            <li class="ListBullet4">Cash Analysis</li>
+            <li class="ListBullet4">Cost and Revenue Summaries</li>
+            <li class="ListBullet4">Cost Budgets</li>
+            <li class="ListBullet4">Current Budget</li>
+            <li class="ListBullet4">Forecast at Completion</li>
+            <li class="ListBullet4">Initial Budget</li>
+            <li class="ListBullet4">Revenue Budgets</li>
+            <li class="ListBullet4">Standard WIP - this includes all the fields found in the Standard WIP Report (which only exists when CO Parameter <span class="parameter">COMPLOC </span>is set to <strong>USA</strong>)</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.2">Sort Tab</h3>
+        <p class="Body">The Sort tab can be selected from the <span class="Function"><MadCap:variable name="Variables.Contract caps" /> Listing Report</span> selection screen, as shown in <MadCap:xref href="#SortTab" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="SortTab"></a>Sort Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC037_Images/JC037_SortTab.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>options may be included in the dropdown menu of the <span class="Field">Sort By</span> field, depending on parameter settings:</p>
+        <p class="IndentBold">Site Name</p>
+        <p class="IndentFieldDef">This option is only available when JC Parameter <span class="parameter">SITELOC </span>is set to <strong>Y</strong>.</p>
+        <p class="IndentBold">Recogn<MadCap:variable name="Variables.is" />ed Revenue Method</p>
+        <p class="IndentFieldDef"> This option is only available  when Recogn<MadCap:variable name="Variables.is" />ed Revenue Methods are set up in the logged-in company.</p>
+        <p class="IndentBold">Existing Phase</p>
+        <p class="IndentFieldDef"> This option is only available when JC Parameter <span class="parameter">JPHOFF </span>is not set to <strong>Y</strong>.</p>
+        <h2 MadCap:autonum="1.3">Report Layout</h2>
+        <p class="Body">When the <MadCap:variable name="Variables.Contract caps" /> Listing Report is generated, its layout appears as shown in <MadCap:xref href="#RptLayout" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>. The body of the Report shows one fixed column labeled<strong> <MadCap:variable name="Variables.Contract caps"></MadCap:variable></strong>, as well as fields from the selected <span class="Field">Field Set</span>.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="RptLayout"></a>Report Layout</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/JC037_Images/JC037_RptLayout.png" class="MaxPrintWidth" />
+        </p>
+        <h1 MadCap:autonum="2">Master <MadCap:variable name="Variables.Contract caps" /> Listing Report</h1>
+        <p class="Body">The master <span class="Function"><MadCap:variable name="Variables.Contract caps" /> Listing Report</span> is found as a menu option in <i><MadCap:variable name="Variables.Contract caps" /> Status &gt; Reports &gt;&#160;Master <MadCap:variable name="Variables.Contracts caps" /></i>. Its report selection screen contains a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Standard WIP </strong>option on the <span class="Field">Field Set </span>dropdown menu, as shown in <MadCap:xref href="#StdWIPOption" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="StdWIPOption"></a>Standard WIP Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC037_Images/JC037_MasterRptFieldSet.png" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

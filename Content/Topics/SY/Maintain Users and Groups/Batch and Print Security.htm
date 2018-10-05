@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="478" MadCap:lastWidth="1153" MadCap:onlyLocalStylesheets="False" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Batch and Print Security</h1>
+        <p>Each user has a security level, which controls whether they have access to other users' batches and print requests.
+
+In many <MadCap:variable name="General.ProductName" /> modules, transactions are entered in batches. <MadCap:variable name="General.ProductName" /> stamps each batch with the User ID of the user who created it. Other users are prevented from changing batches, with the following exception:
+
+</p>
+        <ul>
+            <li>A user may see and update another user's batch if they have a higher security level than the other user and if the other user's prime group is one of the groups the user has access to. The security level is indicated on the user record (9 highest, 0 lowest). By giving a supervisor the same group code as their clerks but a higher security level, the supervisor can change and post the clerks' batches.
+
+</li>
+        </ul>
+        <p>If you also want clerks to be able to change and post each other's work, set the system parameter EQACCESS to Y, using Parameter Maintenance. The same hierarchy of group access is also applied to amending, viewing and reprinting reports in <span class="Emphasis">Home &gt; Report Status</span>. 
+</p>
+    </body>
+</html>

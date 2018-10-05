@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="3" MadCap:lastHeight="4133" MadCap:lastWidth="1277" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Using the Dataset in an OA Designer Report</h1>
+        <p>This exercise assumes familiarity with the OA Designer Tool and therefore does not go into detail on its operation.&#160; If your company does not use the OA Designer Toolset, this exercise may be ignored.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA.png" style="left: 0; width: 205px; height: 111px;" class="FullWidth" />
+            <br />In the OA Reporting and BI Module, select the Functions folder and select the Function Maintenance option</p>
+        <p>Create a new function with the following parameters (where COLL_NLEX1 is query name of our dataset)</p>
+        <p>stn_code=%WSY2896FXXX&amp;colldsq=COLL_NLEX1</p>
+        <p>For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA_1.png" class="FullWidth" />
+        </p>
+        <p>In the OA Reporting and BI Module, select the Designer folder and select the Report Designer option</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA_2.png" style="width: 184px;height: 254px;" class="FullWidth" />
+        </p>
+        <p>Add a new Report with the same name as the Function created above.</p>
+        <p>The body table will be ttNLEX1 (i.e. the name of the dataset prefixed with tt).</p>
+        <p>The body query will be:&#160; FOR EACH ttNLEX1</p>
+        <p>The Data Set Definition will be COLL_NLEX1 (i.e. the Query Name of the Dataset)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA_3.png" class="FullWidth" />
+        </p>
+        <p>Click <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA_4.png" style="visibility: visible;mso-wrap-style: square;width: 44px;height: 19px;" /></p>
+        <p>Add a Body Form and add the required fields to it.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA_5.png" class="FullWidth" />
+        </p>
+        <p>When the report is run, the Dataset selection screen is presented.&#160; Mandatory fields are in Yellow. Note that the Company Number is not mandatory and will default to the Companies you have access to. This is a key difference to Standard OA Reports, which mostly run for a single <MadCap:variable name="General.ProductName" /> Company.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA_6.png" class="FullWidth" />
+        </p>
+        <p>When run, the output will be available from the Report Status Workbench</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Using the Dataset in an OA_7.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

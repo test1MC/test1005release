@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+        <link href="../../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />VAT Bad Debt Configuration</h1>
+        <p>The aim of this topic is to detail the steps required to configure and use VAT Bad Debt Relief functionality in <MadCap:variable name="General.ProductName" />.</p>
+        <h2>Prerequisites</h2>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>The VAT Bad Process involves transferring amounts between various control accounts  - please ensure Finance/VAT manager have approved the process and nominated the correct General Ledger accounts.</p>
+        <p>Before running the Bad Debt process – please ensure all cash is allocated.</p>
+        <h2>Configuration</h2>
+        <h3>Batch Types</h3>
+        <p>A batch type has been added to each of the four affected sub-ledgers:</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Sub-ledger </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Batch Type </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Description </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Purchase Ledger caps" /> </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>P/L
+ Bad Debt Invoices </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Sales Ledger caps" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SLBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>S/L
+ Bad Debt Invoices </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Subcontract </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SCBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>S/C
+ Bad Debt Certificates </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Contract Sales caps" /> </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>CSBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>C/S
+ Bad Debt Certificates </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Transaction Type</h3>
+        <p>Each batch will need at least one associated transaction type.</p>
+        <p>For example, a transaction type PLDB has been added to the PL with batch type PLBDVAT.</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT Bad Debt/Transaction Types.png" class="FullWidth" />
+        </p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Sub-ledger </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Batch Type </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Description </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Associated Transactions Example</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Purchase Ledger caps" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>P/L
+ Bad Debt Invoices </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>PLBD</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Sales Ledger caps" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SLBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>S/L
+ Bad Debt Invoices </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SLBD</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Subcontract </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SCBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>S/C
+ Bad Debt Certificates </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SCBD</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Contract Sales caps" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>CSBDVAT
+  </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>C/S
+ Bad Debt Certificates </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>SCBD</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Transaction Types can be added by the System Administrator.</p>
+        <h3>Parameters</h3>
+        <p>There are several new parameters that need to be configured:</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Parameter </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Notes </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CO/BDACCT </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>GL Account code for bad
+ debt VAT suspense account.</p>
+                        <p>For transactions flagged as
+ bad debt this account will be used instead of the VAT suspense account on the
+ VAT configuration record. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PL/BDACCT </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>GL Account code for
+<MadCap:variable name="Variables.Purchase Ledger caps" /> bad debt control account.</p>
+                        <p>For transactions flagged as
+ bad debt this account will be used instead of the standard <MadCap:variable name="Variables.Purchase Ledger caps" />
+ control account.  Can be sector<MadCap:variable name="Variables.is" />ed. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SL/BDACCT </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>GL Account code for <MadCap:variable name="Variables.Sales Ledger caps" /> bad debt control account.</p>
+                        <p>For transactions flagged as
+ bad debt this account will be used instead of the standard <MadCap:variable name="Variables.Sales Ledger caps" />
+ control account.  Can be sector<MadCap:variable name="Variables.is" />ed. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SC/BDACCT </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>GL Account code for
+ subcontract ledger bad debt control account.</p>
+                        <p>For transactions flagged as
+ bad debt this account will be used instead of the standard subcontract ledger
+ control account.  Can be sector<MadCap:variable name="Variables.is" />ed. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>CS/BDACCT </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>GL Account code for
+ <MadCap:variable name="Variables.Contract Sales caps" /> ledger bad debt control account. </p>
+                        <p> For transactions flagged as bad debt this
+ account will be used instead of the standard <MadCap:variable name="Variables.Contract Sales caps" /> ledger control
+ account.  Can be sector<MadCap:variable name="Variables.is" />ed. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For example from VAT Parameters:</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT Bad Debt/Parameters.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

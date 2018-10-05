@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/SCSENUM - Order Number Base: for Service Order related Subcontract Orders</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/SCSENUM - </span> Order Number Base: for Service Order related Subcontract Orders
+</div>
+<div class="param_def">
+<p><span data-mce-mark="1"><span data-mce-mark="1">Defines how COINS generates the base part of <MadCap:variable name="Variables.se service order"/> numbers.</span></span></p>
+<p>Set to <span class="userinput">SCNUM1</span> to use the value defined in <span class="parameter">PO/SCNUM1</span>.</p>
+<p>Set to <span class="userinput">SE</span> or <span class="userinput">COMP</span> and the PO Number is generated using the following pattern:</p>
+<p><strong>[kco][delimA][prefixA][<MadCap:variable name="Variables.se Service Order caps"/>][delimB][prefixB][sequence]</strong></p>
+<p><strong>[kco] </strong>- Only present if <span class="parameter">PO/APPENDCO</span> is set to <span class="userinput">Y</span></p>
+<p><strong>[delimA] </strong>- Only present if <span class="parameter">PO/APPENDCO</span> is set to <span class="userinput">Y</span> and the PO parameter <span class="parameter">APPENDDL</span> is non-blank</p>
+<p><strong>[prefixA] </strong>- Only present if <span class="parameter">PO/SEORDPFX</span> is non-blank and the <span class="parameter">SCPFXFST</span> is set to <span class="userinput">Y</span> (or blank)</p>
+<p><strong>[<MadCap:variable name="Variables.se Service Order caps"/>]</strong> - The <MadCap:variable name="Variables.se Service Order caps"/> as entered</p>
+<p><strong>[delimB]</strong> - Only present if <span class="parameter">PO/INSERTDL</span> is set to <span class="userinput">Y</span></p>
+<p><strong>[prefixB]</strong> - Only present if <span class="parameter">PO/SEORDPFX</span> is non-blank and the <span class="parameter">SCPFXFST</span> is set to <span class="userinput">N</span></p>
+<p><strong>[sequence] </strong>- Unique sequential value with <MadCap:variable name="Variables.se Service Order caps"/> (and Prefix if present).   The length of the sequential part of the number is determined by <span class="parameter">PO/SCFORM</span>.</p>
+</div>
+</body>
+</html>

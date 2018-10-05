@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>VTUK/EGOVRDIR - VAT Return XML root directory</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">VTUK/EGOVRDIR - </span> VAT Return XML root directory
+</div>
+<div class="param_def">
+<p>The base directory for XML submissions to the Government Gateway.</p>
+<p>For example, <span class="wrap userinput">$BASE/ var/ egovxml</span>.</p>
+<p>The ASCII text files that COINS creates during a submission attempt will be held in a subdirectory of this root directory. The subdirectory name is the same as the 'message class', and is created automatically. These are:</p>
+<ul>
+<li>HMRC-VAT-DEC - Live Submissions</li>
+<li>HMRC-VAT-DEC-TIL  - Test in Live Submissions</li>
+</ul>
+<p>All users who will send the Internet submissions will require permissions to read and write from this directory.</p>
+<p>If you have more than one submission <MadCap:variable name="Variables.kco company"/>, you may want to create separate subdirectories for each submission <MadCap:variable name="Variables.kco company"/>, to make it easier to locate the XML for each <MadCap:variable name="Variables.kco company"/>. For example: <span class="userinput Wrap">BASE/ var/ egovxml/ company16</span></p>
+<p class="noteheader">NOTE</p>
+<div class="note">There is an equivalent parameter in Payroll and Subcontract Ledger.  You may want to configure all these parameters to point to the same root directory.</div>
+</div>
+</body>
+</html>

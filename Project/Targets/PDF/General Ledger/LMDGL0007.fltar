@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="GL Reporter User Guide"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  PatchHeadingLevels="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  MasterPageLayout="/Content/Resources/PageLayouts/PDF_Body_UK_2017.flpgl"
+  InjectEmptyPages="true"
+  ConditionTagExpression="include[COINS.v1105] exclude[COINS.1104 or COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly] "
+  conditions="COINS.PrintOnly"
+  InjectBookHeadings="true"
+  MasterToc="/Project/TOCs/GL/LMDGL0007.fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ConvertBookmarks="false"
+    ShowUsedBookmarks="false" />
+  <Variables>
+    <Variable
+      Name="Document Variables/Document Reference">LMDGL0007</Variable>
+    <Variable
+      Name="Document Variables/Document Title">General Ledger Reporter</Variable>
+    <Variable
+      Name="Document Variables/Draft?">2.0</Variable>
+    <Variable
+      Name="Document Variables/File Name">LMDGL0007</Variable>
+    <Variable
+      Name="Document Variables/Modules">GL</Variable>
+    <Variable
+      Name="Document Variables/Version">2.0</Variable>
+    <Variable
+      Name="General/Year">2018</Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Repository.fldes"
+      Publish="true" />
+  </Destinations>
+  <RelationshipTables />
+</CatapultTarget>

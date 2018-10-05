@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Using RO Fields directly in a calculation</h1>
+        <p>RO fields, unless exposed, cannot be selected as a column by the user.&#160; However, they may be used within a calculation in a report column which allows the report writer user to directly control how the RO field is used and can change this at any time without needing to refer to a system administrator.</p>
+        <p>To create a calculated field, select ADD on the fields tab and leave the Field name blank.&#160; Enter a label for the field and within the calculation field enter the RO field and the required parameters.&#160; </p>
+        <p>&#160;</p>
+        <p class="note">The field must be fully qualified as table.fieldname such as jc_job.RO_ContractCosts^TD|0|&#160; <br />If the table name is not specified, the field will not work as Report Writer will assume it is a variable rather than a database field.</p>
+        <p>&#160;</p>
+        <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Using RO Fields directly in.png" class="FullWidth" />
+        <p>A variable name will need to be assigned in the Variable column if this column is to be included in Totals, as calculations require a variable to accumulate totals.</p>
+        <p>RO fields in calculations may also be passed values from sources such as input forms – if available in the query (for example period selections) using OA standard substitution {}.&#160; So if our input screen has a period field of RS_glp_fdate__2, our RO field might become: <br /><br />jc_job.RO_ContractCosts|0|{RS-glp_fdate__2}.&#160;&#160;&#160; This RO field will then generate different figures depending on the period date selected by the user when they run the report, making the report much more dynamic.</p>
+        <p>&#160;</p>
+        <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Using RO Fields directly in_1.png" class="FullWidth" />
+    </body>
+</html>

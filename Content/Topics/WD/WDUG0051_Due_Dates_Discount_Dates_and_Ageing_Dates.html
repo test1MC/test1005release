@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Due Dates, Discount Dates and <MadCap:variable name="Variables.Ageing caps" /> Dates</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Due Dates, Discount Dates and <MadCap:variable name="Variables.Ageing caps" /> Dates</h1>
+    <p>Several procedures calculate one date based on another (for example, the due date for payment based on the date of the invoice, or <MadCap:variable name="Variables.ageing" /> dates for reports based on the current date). The way these dates are calculated depends on the Type and Days settings that have been set up.</p>
+    <p>For example, in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, the due dates are calculated according to the <span class="field">Due Type </span>and <span class="field">Due Days </span>on the <MadCap:variable name="Variables.pl supplier" /> record.</p>
+    <p>The <span class="field">Type </span>field controls how the <span class="field">Days </span>field is interpreted. If the type is <span class="userinput">N</span>, the <span class="field">Days </span>represent a fixed number of days from the date of the invoice. If the <span class="field">Type </span>is a number, it represents the number of months from the date of the invoice, and the <span class="field">Days </span>represent a date in the month.</p>
+    <ul>
+      <li>If the due date is a fixed number of days from the date of the invoice, enter <span class="userinput">N </span>in the <span class="field">Due Type </span>field, and the number of days in the <span class="field">Due Days </span>field. For example, <span class="userinput">N 30 </span>on invoice date <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">25/08/18</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">08/25/18</MadCap:conditionalText> would give a due date of <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">24/09/18</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">09/24/18</MadCap:conditionalText>.</li>
+      <li>If the due date is a fixed date in the month, enter a number in the <span class="field">Due Type </span>field to represent the number of months from the invoice date and enter the date in that month in the <span class="field">Due Date </span>field. For example, <span class="userinput">2 15 </span>on invoice date <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">25/08/18</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">08/25/18</MadCap:conditionalText> would give a due date of <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">15/10/18</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">10/15/18</MadCap:conditionalText>. A type of 0 means the month of the invoice.</li>
+      <li>If the due date is the last day of a month, enter the number of months from the invoice date in the <span class="field">Due Type </span>field, and <span class="userinput">31</span> in the <span class="field">Due Date </span>field.</li>
+    </ul>
+    <table>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Days</th>
+          <th> </th>
+        </tr>
+        <tr>
+          <td>N</td>
+          <td>30</td>
+          <td>Due date is 30 days after the invoice date.</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>15</td>
+          <td>Due date is 15<sup>th</sup> of the month after the invoice date.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>31</td>
+          <td>Date is the last day of the month, 2 months after the invoice date.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

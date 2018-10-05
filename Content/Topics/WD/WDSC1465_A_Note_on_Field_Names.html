@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="544" MadCap:lastWidth="601">
+  <head>
+    <title>A Note on Field Names</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">A Note on Field Names</h1>
+    <p>Any transitional record created for CIS tax and any record created for the new scheme will have the following pairs of fields, which hold the same data:</p>
+    <p />
+    <table>
+      <tbody>
+        <tr>
+          <th>Usage</th>
+          <th>New field </th>
+          <th>Old field </th>
+          <th>Previous usage</th>
+        </tr>
+        <tr>
+          <td>Type of subcontractor</td>
+          <td>sc7_business</td>
+          <td>sc7_otype</td>
+          <td>Other type - not used</td>
+        </tr>
+        <tr>
+          <td>Subcontractor's UTR</td>
+          <td>sc7_utr</td>
+          <td>sc7_certno</td>
+          <td>CIS certificate number</td>
+        </tr>
+        <tr>
+          <td>HMRC Trading Name </td>
+          <td>sc7_tradname</td>
+          <td>sc7_holder</td>
+          <td>Certificate holder’s name</td>
+        </tr>
+        <tr>
+          <td>Tax treatment</td>
+          <td>sc7_treatment</td>
+          <td>sc7_type</td>
+          <td>CIS certificate type</td>
+        </tr>
+        <tr>
+          <td>Verification number </td>
+          <td>sc7_verno</td>
+          <td>sc7_ocertno </td>
+          <td>NI/<MadCap:variable name="Variables.ci coregno" /></td>
+        </tr>
+        <tr>
+          <td>Verification date</td>
+          <td>sc7_verdate</td>
+          <td>sc7_from</td>
+          <td>Certificate valid from</td>
+        </tr>
+      </tbody>
+    </table>However, the new fields have not been added to the sc_check and sc_certificate records ? the new data is simply stored in the "old" fields on those records.  So for example to display the subcontractor's UTR on a certificate or remittance, you would need to use the field sc7_certno.   <br /><br />   <br /></body>
+</html>

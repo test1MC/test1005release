@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="656" MadCap:lastWidth="601">
+  <head>
+    <title>Printing the Body of the Certificate</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Printing the Body of the Certificate</h1>
+    <p>In the body of the certificate, you may want detail lines showing this period values, previous values, and cumulative values for each of the following: gross certified, retention, discount, <MadCap:variable name="Variables.vat" />, and payment. </p>
+    <p>You do not need to define a separate line for each detail line you want to print. </p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">To print the body of the certificate</h2>
+      <ol>
+        <li>Add a <b>body</b> line containing the fields <span class="screentype">csd_desc</span> (the line description), <span class="screentype">ctd_tp</span> (this period value), <span class="screentype">ctd_prev</span> (previous value) and <span class="screentype">ctd_cum</span> (cumulative value): <p><img src="../../Resources/Images/cs18.png" class="FullWidth" /></p><p>To enter the Rate on the line, use the field <span class="screentype">csd_rate</span>. (The rate will not print if it is 0 or 100, or if the calculated value was over-ridden when the certificate was entered.)</p></li>
+        <li>In the <span class="field">IDs</span> line on the <span class="function" title="Function:%WSYBSFS">Document Designer</span> Extras tab, enter the Item IDs for gross certified, retention, and so on (in other words, for each of the lines you want printed in the body). 
+<p>For example: </p><p><span class="screentype">IDs: GRC,CON,RET,DIS,VAT,PAY</span></p></li>
+      </ol>
+    </div>
+  </body>
+</html>

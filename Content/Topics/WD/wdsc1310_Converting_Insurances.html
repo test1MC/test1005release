@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Converting From 'Old Style' Insurance</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Converting From 'Old Style' Insurance</h1>
+    <p>The 'old' style of SC insurance validation, using four insurance types, is only supported in <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />.  This topic explains how to convert to the <MadCap:variable name="Variables.sc insother" /> checking supported in <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" />.  </p>
+    <p>You can convert existing data to the configurable format, so that the data is kept in sync and any reports you have will still work. </p>
+    <div class="process">
+      <h2 class="print">To convert old-style insurance data:</h2>
+      <ol>
+        <li>Set <span class="parameter">SC/EXTINS </span>to <span class="userinput">Y</span>.</li>
+        <li>Use <span class="function" title="Function:%WSC2060BSCY"><MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /></span> to create new <MadCap:variable name="Variables.sc scheme" /> types that correspond to the existing four insurance types.</li>
+        <li>Set <span class="parameter">SC/INSMAP </span>to a pipe-separated list that corresponds to the existing four insurance types, using the names you have given them in <span class="function" title="Function:%WSC2060BSCY"><MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /></span>, in the following order:
+<blockquote dir="ltr" style="margin-right: 0px;"><p>Entry 1 = Public Liability; <br />Entry 2 = Employer Liability; <br />Entry 3 = First policy specified by <span class="parameter">SC/SCADDINS</span>; <br />Entry 4 = Second policy specified by <span class="parameter">SC/SCADDINS</span>.</p></blockquote>
+For example: <span class="userinput">Public Liability|Employer Liability|Contractor All Risks|Professional Indemnity</span></li>
+        <li>In <span class="function" title="Function:%WSC2060BSCY"><MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /></span>, <a href="WDUG0026_Selecting_Records.html">select</a> each new insurance type, and choose <span class="userinput">Change Scheme Status </span>from the Choose Action list.</li>
+        <li>
+          <a href="WDSC1314_Applying_Schemes_to_Subcontractors.html">Set the status</a> of the new versions to <span class="userinput">Default </span>or <span class="userinput">Mandatory:</span>  
+<ul><li>Default means the insurance normally applies to the subcontractor but there can be exceptions.  The rule is applied to all subcontractors but can be removed for individual subcontractors. </li><li>Mandatory means the insurance must be recorded against each subcontractor.  The rule cannot be removed. </li></ul><p>This will add the new type to all existing subcontractors, and as long as the new policy name has the same name as one of the values in <span class="parameter">SC/INSMAP</span>, <MadCap:variable name="General.ProductName" /> loads policy data (insurer, policy number, limit amount and <MadCap:variable name="Variables.expiry" /> date) from the old insurance data (and updates the old insurance automatically if the new insurance type changes).</p><p><MadCap:variable name="General.ProductName" /> runs a background report process to copy the data, so this may take some time.</p></li>
+        <li>
+          <p>If you make a mistake in conversion (for example, if you set up an insurance type with a different name from that in the <span class="parameter">SC/INSMAP </span>parameter) you will get no data.  In this case, set the status of the insurance type to "unset", correct the mistake and set it back to "default" (or "mandatory").</p>
+        </li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Setting up</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/sc_EXTINS.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_INSMAP.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_SCADDINS.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

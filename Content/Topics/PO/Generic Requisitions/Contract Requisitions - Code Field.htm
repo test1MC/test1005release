@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="448" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"><MadCap:variable name="Variables.Jc Contract caps" /> Requisitions - </MadCap:conditionalText>Blank Code Field</h1>
+        <p class="Body">If the new PO parameter <span class="parameter">ALWRQNCD</span> is set to Y, you can leave the <span class="Field">Code</span> field blank.  In this instance the new PO parameter <span class="parameter">NCDDEFU</span> is consulted to determine the default <span class="Field">Unit of Quantity</span> and <span class="Field">Price Per</span>.</p>
+        <p class="Body">If you leave the <span class="Field">Code</span> blank and if the <MadCap:variable name="Variables.cost head" /> and category are not configured to be entered, the derived cost analysis is not validated since this would always fail.  The <span class="Field">Status</span> column on the Requisition Line browse screen does not show “Costing Error” in this case. Instead, the error condition will need to be corrected when the order is raised. </p>
+        <p class="Body">Various procedures that would previously have treated requisition lines with a blank <span class="Field">Code</span> field as an error have been modified to accept a blank <span class="Field">Code</span> if the requisition is a <MadCap:variable name="Variables.jc contract" /> requisition:</p>
+        <ul>
+            <li>Copying requisitions - the warning message about lines with cost coding problems is not shown if the only error is one that relates to a blank <span class="Field">Code</span> on a <MadCap:variable name="Variables.jc contract" /> requisition that has no <MadCap:variable name="Variables.cost head" /> and category.</li>
+            <li>Price <MadCap:variable name="Variables.enquiries" /> - when adding a requisition line to a price <MadCap:variable name="Variables.enquiry" />, if the line being added is on a <MadCap:variable name="Variables.jc contract" /> requisition that has no <MadCap:variable name="Variables.cost head" /> and category, the line is now be added to the <MadCap:variable name="Variables.enquiry" />, and no error is shown.</li>
+        </ul>
+    </body>
+</html>

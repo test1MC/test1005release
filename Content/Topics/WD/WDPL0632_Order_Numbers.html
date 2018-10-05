@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Order Numbers on the eInvoice Workbench</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Order Numbers on the eInvoice Workbench</h1>
+        <h2><MadCap:variable name="Variables.po variation" style="text-transform: capitalize;" /> Order Numbers</h2>
+        <p>The workbench can recogn<MadCap:variable name="Variables.is" />e <MadCap:variable name="Variables.po variation" /> order numbers in an eInvoice XML message. The workbench will look for a <strong>/ </strong>character in the <span class="screentype">&lt;BuyersOrderNumber&gt;</span> tag and take the trailing number after it to be a <MadCap:variable name="Variables.po variation" /> number. The EC parameter <span class="parameter">SWWBMEMO </span>must be set to <span class="userinput">N</span> and the PL parameter <span class="parameter">NONPOWBS </span>set to <span class="userinput">Y</span>,</p>
+        <p>
+            <img src="../../Resources/Images_P-R/PL/PL_063201.png" />
+        </p>
+        <h2>Small Works Orders</h2>
+        <p>The workbench can recogn<MadCap:variable name="Variables.is" />e small works order numbers (which end with a WBS code) in an eInvoice XML message. If the EC parameter <span class="parameter">SWWBMEMO </span>is set to <span class="userinput">Y</span> then the workbench will first break down the order number found in the <span class="screentype">&lt;BuyersOrderNumber&gt;</span> tag in the XML according to the order number format and prefix set in the <span class="parameter">PO/PONUM1</span>, <span class="parameter">PO/POORDPFX </span>and <span class="parameter">PO/POPFXFST </span>parameters.</p>
+        <p>Having decided what the order number should look like the workbench then looks for another <strong>/</strong> character. If one is found then the workbench assumes that any characters after this are a WBS code. For example, M-v7w/0001/001 will be parsed as order number M-v7w/0001 and WBS code 001. If the order number is found in the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />, the "WBS code" value is stripped from the order number and placed at the front of the description field in the Details screen. The <MadCap:variable name="Variables.po variation" /> processing explained above doesn't happen.</p>
+        <p>In the example below, the PO number format is set to Contract/Prefix/OrderNumber. The invoice comes in with an order number v7w/HM/0003/001. V7w/HM/0003 is a valid committed order so the workbench has removed the ending /001 and put it into the description.</p>
+        <p>
+            <img src="../../Resources/Images_P-R/PL/PL_063202.png" />
+        </p>
+        <h2>Auto-correction of PO Numbers</h2>
+        <p>You can set rules that will endeavour to auto-correct any typing errors the <MadCap:variable name="Variables.pl supplier" /> may have made in the PO number. Set the parameter <span class="parameter">PL/FIXPONUM </span>to <span class="userinput">Y</span> and set the rules using <span class="function" title="Function:%EC2056">Order Number Heuristics</span>. Typical rules are shown below. The rules are processed in numerical sequence.</p>
+        <p>
+            <img src="../../Resources/Images_P-R/PL/PL_063203.png" />
+        </p>
+        <p>Here we replace any letter <strong>O</strong> (upper or lower case) in the first six characters or eleventh to fourteenth characters of the order number with the number <strong>0</strong> (zero). Use the wildcard character <strong>*</strong> to represent "any character"; the eighth character will always be replaced by the letter <strong>H</strong>. Use <strong>\</strong> to "escape" special characters <strong>\</strong> and <strong>*</strong>. The <strong>\</strong> on line 90 stops the <strong>*</strong> character from acting as a wildcard; only if the 9th character is a <strong>*</strong> will it be replaced by <strong>M</strong>. If we find a <strong>\</strong> as the seventh character we replace it with the <strong>/</strong> character.</p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_swwbmemo.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_nonpowbs.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_ponum1.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_poordpfx.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_popfxfst.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_fixponum.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

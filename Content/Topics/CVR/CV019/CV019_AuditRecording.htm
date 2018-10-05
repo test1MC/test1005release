@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="806" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Audit Recording Changes</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1"><MadCap:variable name="Variables.CVR caps" /> History Recording</h1>
+        <p class="Body"><MadCap:variable name="Variables.CVR caps" /> History is recorded for certain processing in the <span class="Function"><MadCap:variable name="Variables.CVR caps" /> Workbench</span> or in the <strong><MadCap:variable name="Variables.CVR caps"></MadCap:variable> Administration </strong>menu. This section gives you more details about recording and producing history records in both those areas.</p>
+        <h2 MadCap:autonum="1.1"><MadCap:variable name="Variables.CVR caps" /> Workbench</h2>
+        <h3 MadCap:autonum="1.1.1"><a name="Create"></a>Create <MadCap:variable name="Variables.CVR caps" />/Update <MadCap:variable name="Variables.CVR caps" /> Header</h3>
+        <p class="Body">If <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>parameter CV/CVRAUDIT is set to <strong>Y</strong>, the <MadCap:variable name="Variables.CVR caps" /> Header creates or updates history records each time you change the <MadCap:variable name="Variables.CVR caps" /> Header fields. All fields are copied to the history record.</p>
+        <ul>
+            <li class="ListBullet3">A new history record is <b>created</b> if:</li>
+        </ul>
+        <ul>
+            <li class="ListBullet4">A <MadCap:variable name="Variables.CVR caps" /> is created;</li>
+            <li class="ListBullet4">The	<MadCap:variable name="Variables.CVR caps" /> Status is changed (such as to Locked, or marked as Current, Latest, Complete, Author<MadCap:variable name="Variables.is" />ed, or Unauthor<MadCap:variable name="Variables.is" />ed);</li>
+            <li class="ListBullet4">Other <MadCap:variable name="Variables.CVR caps" /> fields are updated and the last history record exists with a different user ID or Date.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">A history record is <b>updated</b> if <MadCap:variable name="Variables.CVR caps" /> fields are updated and the last history record exists with the same user and date.</li>
+        </ul>
+        <p class="Body">If a <MadCap:variable name="Variables.CVR caps" /> has been copied or created with the <strong>Copy previous adjustment </strong>option, the source <MadCap:variable name="Variables.CVR caps" /> number is reflected in the event description.</p>
+        <h3 MadCap:autonum="1.1.2">Delete <MadCap:variable name="Variables.CVR caps" /></h3>
+        <p class="Body">The deletion of a <MadCap:variable name="Variables.CVR caps" /> is validated and only allowed when all integrity checks have been passed. All history records tied to the deleted <MadCap:variable name="Variables.CVR caps" /> are also deleted.</p>
+        <h3 MadCap:autonum="1.1.3">Mark <MadCap:variable name="Variables.CVR caps" /> as Current/Latest</h3>
+        <p class="Body">The <strong>Mark  as Current </strong>and <strong>Mark  as Latest </strong>actions on the <MadCap:variable name="Variables.Contract caps" /> <MadCap:variable name="Variables.CVR caps" />s screen cause a history record to either be created or updated, depending on the conditions set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref>.</p>
+        <h3 MadCap:autonum="1.1.4">Lock/Unlock <MadCap:variable name="Variables.CVR caps" /></h3>
+        <p class="Body">When the <strong>Locked </strong>flag on the Incomplete screen (see <MadCap:xref href="#LockedFlag" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>) is <MadCap:variable name="Variables.tick" />ed (locked) or un<MadCap:variable name="Variables.tick" />ed (unlocked), a history record is either created or updated, depending on the conditions set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="LockedFlag"></a>Locked Flag</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_A-C/CV/CV019_Images/LockedFlag.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.5">Mark <MadCap:variable name="Variables.CVR caps" /> as Complete/Incomplete</h3>
+        <p class="Body">The <strong>Mark  as Complete </strong>and <strong>Mark  as Incomplete </strong>actions on the <MadCap:variable name="Variables.CVR caps" /> Workbench screens cause a history record to either be created or updated, depending on the conditions set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref>.</p>
+        <h3 MadCap:autonum="1.1.6">Author<MadCap:variable name="Variables.is" />e/UnAuthor<MadCap:variable name="Variables.is" />e <MadCap:variable name="Variables.CVR caps" /></h3>
+        <p class="Body">The <strong>Mark  as UnAuthor<MadCap:variable name="Variables.is" />ed </strong>action on the Main <MadCap:variable name="Variables.CVR caps" /> Workbench screen causes a history record to either be created or updated, depending on the conditions set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref>.</p>
+        <h3 MadCap:autonum="1.1.7">Release <MadCap:variable name="Variables.CVR caps" /> for Author<MadCap:variable name="Variables.is" />ation</h3>
+        <p class="Body">The <strong>Release <MadCap:variable name="Variables.CVR caps" /> for Author<MadCap:variable name="Variables.is" />ation </strong>workflow action on the <MadCap:variable name="Variables.CVR caps" /> Workbench screens is recorded in <MadCap:variable name="Variables.CVR caps" /> History. The status of the fields in the history record are assigned in the same way as set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref>.</p>
+        <h3 MadCap:autonum="1.1.8">Update <MadCap:variable name="Variables.CVR caps" /> Items</h3>
+        <p class="Body">If parameter CV/CVRAUDIT is set to <strong>Y</strong>, the <strong>Update <MadCap:variable name="Variables.CVR caps" /> Items</strong> action on the <MadCap:variable name="Variables.CVR caps" /> Workbench screens results in the recording of the updated event in a <MadCap:variable name="Variables.CVR caps" /> history record, as follows:</p>
+        <ul>
+            <li class="ListBullet3">Fields in the history record are assigned in the same way as set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1.</i></MadCap:xref></li>
+            <li class="ListBullet3">The <strong>Description </strong>is set to<strong> <MadCap:variable name="Variables.CVR caps" /> Items Updated</strong> in the <MadCap:variable name="Variables.CVR caps" /> History browse.</li>
+            <li class="ListBullet3">A list of processed (updated) Items are recorded as history items.</li>
+        </ul>
+        <h3 MadCap:autonum="1.1.9">Generate Spreadsheet/Upload Spreadsheet</h3>
+        <p class="Body">If parameter CV/CVRAUDIT is set to <strong>Y</strong>, <strong>Generate Spreadsheet </strong>and <strong>Upload Spreadsheet </strong>actions on the <MadCap:variable name="Variables.CVR caps" /> Workbench screens record the event in <MadCap:variable name="Variables.CVR caps" /> history, as follows:</p>
+        <ul>
+            <li class="ListBullet3">Fields in the history record are assigned in the same way as set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1.</i></MadCap:xref></li>
+            <li class="ListBullet3">The <strong>Description </strong>is set to<strong> Generated Spreadsheet </strong>or<strong> Uploaded Spreadsheet</strong> in the <MadCap:variable name="Variables.CVR caps" /> History browse.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">An	XML spreadsheet file name is recorded in the <span class="Field">Spreadsheet File Name </span>field in the <MadCap:variable name="Variables.CVR caps" /> History browse.</li>
+        </ul>
+        <h3 MadCap:autonum="1.1.10">  Post <MadCap:variable name="Variables.CVR caps" /> Items</h3>
+        <p class="Body">Posting <MadCap:variable name="Variables.CVR caps" /> Items includes the <strong>Create GL Batch</strong> and <strong>Post Budgets and Memo Data</strong> actions on the <MadCap:variable name="Variables.CVR caps" /> Workbench screens. If parameter CV/CVRAUDIT is set to <strong>Y</strong>, the process of posting <span class="Function"><MadCap:variable name="Variables.CVR caps" style="font-weight: normal; font-style: normal;" /></span><i></i>Items<span class="Function"> </span>results in the recording of any event in <MadCap:variable name="Variables.CVR caps" /> History, as follows:</p>
+        <ul>
+            <li class="ListBullet3">New history records are generated for each posting, and fields are assigned in the same way as set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1.</i></MadCap:xref></li>
+            <li class="ListBullet3">The <strong>Description </strong>is created by using one of the Action Types (<strong>Create GL Batch </strong>with Reversing/Non-reversing option, <strong>Post Budgets</strong>, or <strong>Post to <MadCap:variable name="Variables.Contract caps" /> Store Data</strong>).</li>
+            <li class="ListBullet3">A list of processed (posted) Items are recorded as history items.</li>
+            <li class="ListBullet3">GL batch posting also stores a reverse flag and Batch number values in <MadCap:variable name="Variables.CVR caps" /> history record fields.</li>
+        </ul>
+        <h2 MadCap:autonum="1.2"><MadCap:variable name="Variables.CVR caps" /> Administration</h2>
+        <h3 MadCap:autonum="1.2.1">Post <MadCap:variable name="Variables.CVR caps" /> Items</h3>
+        <p class="Body"><i style="font-style: normal; font-weight: normal;">The</i><span class="Function"> Post <MadCap:variable name="Variables.CVR caps" /> Items</span> function under the Administration menu is processed against a number of <MadCap:variable name="Variables.Contracts caps" /> (the <MadCap:variable name="Variables.CVR caps" />s in the selected period). If parameter CV/CVRAUDIT is set to <strong>Y</strong>, the <span class="Function">Post <MadCap:variable name="Variables.CVR caps" /> Items </span>program records the <MadCap:variable name="Variables.CVR caps" /> history for each processed <MadCap:variable name="Variables.CVR caps" />.</p>
+        <h3 MadCap:autonum="1.2.2">Generate <MadCap:variable name="Variables.CVR caps" /> <MadCap:variable name="Variables.Enquiry caps" /> Data</h3>
+        <p class="Body">If<span class="Function"> </span>the<span class="Function"> Generate <MadCap:variable name="Variables.CVR caps" /> <MadCap:variable name="Variables.Enquiry caps" /> Data </span>function under the Administration menu processes a number of <MadCap:variable name="Variables.Contracts caps" />, <MadCap:variable name="Variables.CVR caps" />s are created as new or copied from a previous period <MadCap:variable name="Variables.CVR caps" />. If parameter CV/CVRAUDIT is set to <strong>Y</strong>, the <span class="Function">Generate <MadCap:variable name="Variables.CVR caps" /></span> program records <MadCap:variable name="Variables.CVR caps" /> history for each processed <MadCap:variable name="Variables.CVR caps" /> in the same way as set forth in Section <MadCap:xref href="#Create" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref>.</p>
+    </body>
+</html>

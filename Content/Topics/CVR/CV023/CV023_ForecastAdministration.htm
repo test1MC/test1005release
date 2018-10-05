@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>CV023_Forecast Administration</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles: </MadCap:conditionalText><MadCap:variable name="Variables.CVR caps" /> Administration</h1>
+        <p class="Body">This section includes information about functions found on the <i><MadCap:variable name="Variables.CVR caps" /> &gt;&#160;<MadCap:variable name="Variables.CVR caps" /> Administration</i> menu that were modified in v11.09 to allow the use of Model specific Items and Styles.
+</p>
+        <h2 MadCap:autonum="1.1"><MadCap:variable name="Variables.CVR caps" /> Items Snapshot</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, Items selection on the<span class="Function"> <MadCap:variable name="Variables.CVR caps" /> Item Snapshot</span> screen includes all Items specific to any of the existing Models valid for the Company.</p>
+        <h2 MadCap:autonum="1.2">Populate Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, and at least one <MadCap:variable name="Variables.CVR caps" /> Item/Style exists in the Company with a blank Model key, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Populate Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles </span>function is shown on the Administration menu. It allows Company specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles to be copied to each <MadCap:variable name="Variables.CVR caps" /> Model,  then deleted.</p>
+        <p class="Body">When you select this function from the menu, the screen displays a warning message, as shown in <MadCap:xref href="#PopulateModelItemsStyles" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="PopulateModelItemsStyles"></a>Populate Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_PopulateModelSpecificCVRItemsStyles.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Click the <span class="button">Next </span>button to proceed.</p>
+        <p class="Body">&#160;</p>
+        <ul>
+            <li class="ListBullet3">If the Item/Style exists in a Model with the same code, it is deleted and overridden by the Company specific Item/Style.</li>
+            <li class="ListBullet3">If copied successfully, all Company specific Items and Styles are deleted.</li>
+            <li class="ListBullet3">Processing generates a detailed report.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3">Populate Company Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is not set to <strong>Y</strong>, and at least one <MadCap:variable name="Variables.CVR caps" /> Item/Style exists in the Company with a non-blank Model key, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Populate Company Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles </span>function is shown on the Administration menu. It allows Model specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles to be moved to the Company level.</p>
+        <p class="Body">When you select this function from the menu, the screen displays a warning message, as shown in <MadCap:xref href="#PopulateCoCVRItemsStyles" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="PopulateCoCVRItemsStyles"></a>Populate Company Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_PopulateCoSpecificCVRItemsStyles.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Click the <span class="button">Next </span>button to proceed.</p>
+        <ul>
+            <li class="ListBullet3">If a Company specific Item/Style exists with the same code, it is deleted and overridden by the Model specific Item/Style.</li>
+            <li class="ListBullet3">If copied successfully, all Model specific Styles are deleted.</li>
+            <li class="ListBullet3">Processing generates a detailed report.</li>
+        </ul>
+        <h2 MadCap:autonum="1.4"><MadCap:variable name="Variables.CVR caps" /> Items and Styles Usage Reports</h2>
+        <p class="Body"><span class="Function"><MadCap:variable name="Variables.CVR caps" /> Items Usage Report </span>(see Section <MadCap:xref href="#Styles" class="Figurenumberonly"><i>4.4.1</i></MadCap:xref>) and <span class="Function"><MadCap:variable name="Variables.CVR caps" /> Styles Usage Report</span> (see Section <MadCap:xref href="#Items" class="Figurenumberonly"><i>4.4.2</i></MadCap:xref>) functions are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>found on the<i> <MadCap:variable name="Variables.CVR caps" /> &gt; Administration</i> menu. These reports are always available, irrespective of the <span class="parameter">CV/ITEMMODL</span> parameter setting.</p>
+        <h3 MadCap:autonum="1.4.1"><a name="Styles"></a><MadCap:variable name="Variables.CVR caps" /> Styles Usage Report</h3>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function"><MadCap:variable name="Variables.CVR caps" /> Styles Usage Report </span>is always based on all available Styles; it shows where and how each of them is used in the Models. The selection screen is shown in <MadCap:xref href="#CVRStylesUsageRpt" class="Figurenumberonly"><i>Figure 7</i></MadCap:xref>, and a sample Report is shown in <MadCap:xref href="#CVRStylesSampleRpt" class="Figurenumberonly"><i>Figure 8</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="CVRStylesUsageRpt"></a><MadCap:variable name="Variables.CVR caps" /> Styles Usage Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRStyleUsageRpt.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">List</p>
+        <p class="IndentFieldDef">Select whether you wish to display an <strong>All </strong>or <strong>Overlapping </strong>(the default) list on the report.</p>
+        <ul>
+            <li class="ListBullet4"><strong>All </strong>- contains all Items (used, unused)</li>
+            <li class="ListBullet4"><strong>Overlapping </strong>- Items that are not used or only used in a single Model will not appear in the list</li>
+        </ul>
+        <p class="IndentBold">Field Set</p>
+        <p class="IndentFieldDef">Select the Field Set that you wish to display on the report. Field sets are set up in <i>OA&#160;Reporting &amp;&#160;BI &gt;&#160;Field Sets &gt;&#160;Report Field Sets</i>.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="CVRStylesSampleRpt"></a>Sample Report</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_UsageStylesRptSample.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.4.2"><a name="Items"></a><MadCap:variable name="Variables.CVR caps" /> Items Usage Report</h3>
+        <p class="Body">The new <span class="Function"><MadCap:variable name="Variables.CVR caps" /> Items Usage Report </span>function is always based on all available Items; it shows where and how each of them is used in the Models. The selection screen is shown in <MadCap:xref href="#CVRItemsUsageRpt" class="Figurenumberonly"><i>Figure 9</i></MadCap:xref>, and a sample Report is shown in <MadCap:xref href="#CVRItemsSampleRpt" class="Figurenumberonly"><i>Figure 10</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="CVRItemsUsageRpt"></a><MadCap:variable name="Variables.CVR caps" /> Items Usage Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRItemsUsageRpt.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">List</p>
+        <p class="IndentFieldDef">Select whether you wish to display an <strong>All </strong>or <strong>Overlapping </strong>(the default) list on the report.</p>
+        <ul>
+            <li class="ListBullet4"><strong>All </strong>- contains all Items (used, unused)</li>
+            <li class="ListBullet4"><strong>Overlapping </strong>- Items that are not used or only used in a single Model will not appear in the list</li>
+        </ul>
+        <p class="IndentBold">Field Set</p>
+        <p class="IndentFieldDef">Select the Field Set that you wish to display on the report. Field sets are set up in <i>OA&#160;Reporting &amp;&#160;BI &gt;&#160;Field Sets &gt;&#160;Report Field Sets</i>.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="CVRItemsSampleRpt"></a>Sample Report</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRItemsUsageSampleRpt.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">The Item Code may be used in three different ways on this report, as follows:</p>
+        <ul>
+            <li class="ListBullet3">Used in multiple Models (there can be different setups in each Model in CV/ITEMMODL=Y configuration, or just reused with the same setup in any configuration.</li>
+            <li class="ListBullet3">Used in a single Model in any configuration</li>
+            <li class="ListBullet3">Not used for either configuration (exists but not used on fields)</li>
+        </ul>
+    </body>
+</html>

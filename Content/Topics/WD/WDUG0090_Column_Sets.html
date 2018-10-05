@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="3028" MadCap:lastWidth="1049">
+    <head><title>Column Sets</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Column Sets</h1>
+        <p>Column sets on a browse screen allow you to display different columns of data in the browse.&#160; These may be pre-defined sets of columns that your system administrator has set up, or you may be able to choose which columns you want to show.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">
+            <p>Column sets are not available on every browse screen, only on those that have been set up to allow them.</p>
+            <p>This feature will be added to existing screens, where appropriate,&#160;in future releases.</p>
+        </div>
+        <p MadCap:conditions="COINS.SupersededIn1105">If column sets are available, a <span class="field">Column Set </span>selector on the browse menu (at the top left&#160;of the browse screen) allows you to choose which column set to display.</p>
+        <p MadCap:conditions="COINS.v1107">If column sets are available, a circle containing the letter "i" is shown against the browse menu button (at the top left&#160;of the browse screen). When you move the mouse pointer over the button, a tooltip shows the number of column sets and the name of the current column set. </p>
+        <p MadCap:conditions="COINS.v1107">
+            <img src="../../Resources/Images/SY/SY_column_set_indicator.png" />
+        </p>
+        <p MadCap:conditions="COINS.v1107">A <span class="field">Column Set </span>selector on the browse menu allows you to choose which column set to display.</p>
+        <p align="center">
+            <img src="../../Resources/Images_S-U/UG_009001.png" MadCap:conditions="COINS.Superseded in 1107" />
+            <img src="../../Resources/Images_S-U/UG_009001_1107.png" MadCap:conditions="COINS.v1107" />
+        </p>
+        <p><MadCap:variable name="General.ProductName" /> displays the new set of columns immediately, and remembers which column set you chose so next time you use the same screen, the same columns will show.</p>
+        <div class="process">
+            <h2 class="print">To define your own column sets:</h2>
+            <p>If you have permission, you can create your own column sets.&#160; The&#160;Column Sets menu item&#160;will be available on&#160;the browse menu.</p>
+            <ol>
+                <li>
+                    <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1107">Move the mouse pointer over</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="COINS.v1107">Click</MadCap:conditionalText> the <img src="../../Resources/Images/COINS Graphics/SVG buttons/menu_off.svg" class="button" /> button.</li>
+                <li>Click Column Sets.</li>
+                <li>
+                    <p>The <span class="function" title="Function:%WSY2780BUCS">Column Sets</span> screen opens.&#160;</p>
+                    <p>
+                        <img src="../../Resources/Images_S-U/UG_009002.png" class="FullWidth" />
+                    </p>
+                </li>
+                <li>If you also have permission to create global column sets:
+<ul><li>To create a column set for yourself only, set the <span class="field">Type </span>selector at the bottom of the screen to <span class="userselect">User</span>, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/filter.svg" class="button" />.</li><li>To create a column set that other users can see, set the <span class="field">Type</span> selector to <span class="userselect">Global</span>, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/filter.svg" class="button" />.</li></ul><p>If you do not have permission to create global column sets, only the "User" list is available.</p></li>
+                <li>Add a line for the new column set.&#160;
+<p><img src="../../Resources/Images_S-U/UG_009003.png" class="FullWidth" /></p></li>
+                <li>Choose the columns you want to display.&#160; There is a standard set of columns that is selected by default (on the right-hand side), but you can remove columns from the list and add others from the list on the left.&#160;</li>
+                <li><MadCap:variable name="General.ProductName" /> will display the columns in the order in which they are shown in the <span class="field">Selected</span> list.&#160; Use the <img src="../../Resources/Images/COINS Graphics/SVG buttons/listup.svg" class="button" /> and <img src="../../Resources/Images/COINS Graphics/SVG buttons/listdown.svg" class="button" /> buttons to change the order.</li>
+                <li>If the<span class="field">&#160;Frozen Columns&#160;</span>field is updatable, this allows you to choose how many columns stay on the left of&#160;the screen while the other&#160;columns scroll left and right. &#160;For example, if you enter 2, the first two columns in the Selected list will always show, at the left of the browse screen.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+                <li>To return to the browse screen that you have set up the column set for:</li>
+                <ul>
+                    <li>To display the browse with the standard columns (or a previously-selected column set): in the header click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> or the link.</li>
+                    <li>To display the browse with a new column set applied (as shown in the example screenshot below): on the column set line click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> or the link.
+<p><img src="../../Resources/Images_S-U/UG_009004.png" class="FullWidth" /></p>
+If you have specified frozen columns, the column widths are resizable. &#160;Move the mouse pointer over the border between the columns; the border shows as a solid line and the pointer changes to a <span style="font-family: calibri, verdana, geneva;">↔</span> symbol. Click and drag to resize the columns.</li>
+                </ul>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Column Sets - Configuration</h2>
+            <p>Column sets are only available on those screens that have been configured by Construction Industry Solutions to use them, and only the columns defined by Construction Industry Solutions are available.</p>
+            <p>Use the <span class="parameter">SY/COLSETS </span>parameter to control whether users are able to use column sets.&#160; If you want to allow some users to use column sets but not others, set the <span class="field">Column Sets </span>field in <span class="function" title="Function:%WSYBSUR">Users</span> to override the <span class="parameter">COLSETS </span>setting for those users.</p>
+            <p MadCap:conditions="COINS.v1109">You can control what access users or groups have to individual columns on column sets using <span class="function">Column Set Fields Access Maintenance</span>.</p>
+            <p>You can create global column sets if you have access to function %WSY2780UUCS1.</p>
+            <p>To make one of your user column sets available to all users, in Column Set Maintenance select the column set line, select<span class="userselect"> Global </span>from the action list and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_colsets.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="747" MadCap:lastWidth="1162">
+  <head>
+    <title>UNIX Files</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />CIS Scheme - UNIX Files</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> creates ASCII text files during a submission attempt. The files will be held in a subdirectory of the eGovernment root directory specified by the <span class="parameter">EGOVRDIR </span>parameter. The subdirectory name is the same as the 'message class', and is created automatically. These are:</p>
+    <p>IR-CIS-CIS300MR - Monthly returns</p>
+    <p>IR-CIS-VERIFY - Subcontractor verification</p>
+    <p>Each submission attempt is given a sequential number, and all files associated with that submission attempt have names beginning with this 8 digit number.</p>
+    <p>The files created are:</p>
+    <ul>
+      <li>Log file (for example 00000001.log)<br />A log of what has happened during the submission attempt which can be used to trace problems.</li>
+      <li>Sent Files (for example 00000001pst1.xml)<br />XML messages sent ('posted') to the Government Gateway. The number following the 'pst' denotes the sequence in the protocol. Note a file is only created when a new message content is required, so there are likely to be gaps in the sequence. You will always have a 'pst1' which will contain the verification or monthly return data and 'pst2' which will be the next message, but when polling, the gateway requires the same message to be sent repeatedly, so new files aren't created.</li>
+      <li>Response files (for example 00000001get1.xml)<br />An XML message containing the response from the gateway.</li>
+      <li>Temporary File (for example 00000001.tmp)<br />This file is passed as an argument to the java procedure that 'transmits' the XML. It contains the URL and the name of the file to send to the URL.</li>
+      <li>IR mark files (for example, 00000001pst1.irmark.in, 00000001pst1.irmark.out)<br />These allow <MadCap:variable name="General.ProductName" /> to check that the data received is the same as the data that was sent and has not been tampered with.</li>
+    </ul>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SCUK/scuk_egovrdir.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

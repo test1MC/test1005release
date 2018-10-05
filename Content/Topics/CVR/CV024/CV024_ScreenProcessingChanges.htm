@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="591" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/Basic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Configuration</h1>
+        <p class="Body">Two <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>CV parameters let you choose background recalculations for the <MadCap:variable name="Variables.CVR caps" /> Spread.</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/Basic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column1" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="TableCell">CV/FCBGCALC</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p>Background recalculation for <MadCap:variable name="Variables.CVR caps" /> grid</p>
+                        <p>If enabled, the recalculation of dependent items is queued for background processing; this improves the responsiveness for the user.</p>
+                        <p>The queued recalculations can be processed by either a background process (via an ESB queue) or by running Recalculate Dependent Items from the <MadCap:variable name="Variables.CVR caps" /> input screen.</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p>CV/FCBGESBQ</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p>ESB Endpoint for background recalculation of <MadCap:variable name="Variables.CVR caps" /> items</p>
+                        <ul>
+                            <li>ESB Endpoint.  If not blank, an ESB process queue can be configured to process the <MadCap:variable name="Variables.CVR caps" /> dependency recalculations as they occur.</li>
+                            <li>May contain curly bracket expressions that will be replaced using jc_job fields, such as jc_job.jgr_group. This allows processing to be spread across multiple ESB endpoints and brokers.</li>
+                            <li>ESB Process Queues can be added to process the messages for the end points.  The process queue should run program cvuesb001.processMessage.</li>
+                            <li>The ESB Endpoint will only be considered if <span class="parameter">CV/FCBGCALC</span> is set to <strong>Y</strong>.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h1 MadCap:autonum="2">Background Processing Changes</h1>
+        <p class="Body">If the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="parameter">CV/FCBGCALC</span> parameter is set to <strong>Y</strong>, any updates to a <MadCap:variable name="Variables.CVR caps" /> cell in a Spread screen   (see <MadCap:xref href="#CVRSpreadBGProcessing" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>) within the <MadCap:variable name="Variables.CVR caps" /> Workbench are queued for later recalculation.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="CVRSpreadBGProcessing"></a><MadCap:variable name="Variables.CVR caps" /> Spread Screen Cell</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV024_Images/CV024_BGProcessCell.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.1"><MadCap:variable name="Variables.CVR caps" /> Completion</h2>
+        <p class="Body">If any queued records exist for  a <MadCap:variable name="Variables.CVR caps" />, it cannot be completed.  Also, a status message is shown in the <MadCap:variable name="Variables.CVR caps" /> Details tab to indicate that unprocessed background recalculation records exist, as shown in <MadCap:xref href="#RecordsExistMsg" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="RecordsExistMsg"></a>Unprocessed Records Exist Message</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV024_Images/CV024_RecordsExistMsg.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.2"><MadCap:variable name="Variables.CVR caps" /> Deletion</h2>
+        <p class="Body">When you delete a <MadCap:variable name="Variables.CVR caps" />, any queued records for that <MadCap:variable name="Variables.CVR caps" /> are also deleted.</p>
+        <h2 MadCap:autonum="2.3">Recalculate Dependent Items</h2>
+        <p class="Body">A <span class="Function">Recalculate Dependent Items </span>function is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the <MadCap:variable name="Variables.CVR caps" /> grid, as shown in <MadCap:xref href="#RecalcDepItems" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. You can use this function to manually recalculate the queued records (items) for a <MadCap:variable name="Variables.CVR caps" />.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="RecalcDepItems"></a>Recalculate Dependent Items</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV024_Images/CV024_ManualRecalOption.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.4">Automatic Recalculation</h2>
+        <p class="Body">The Enterprise Service Bus (ESB) can be used to define one or more queues for the background (automatic) recalculation of records.</p>
+        <h3 MadCap:autonum="2.4.1">ESB Process Queue</h3>
+        <p class="Body">One or more ESB Process Queues must be set up in <i>System &gt; Enterprise Service Bus &gt;&#160;ESB&#160;Process Queue</i> (see <MadCap:xref href="#ESBProcessQueue" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>). These queues should match the parameter value(s) in the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="parameter">CV/FCBGESBQ</span> parameter. This parameter can contain:</p>
+        <ul>
+            <li class="ListBullet3">The name of an ESB Process Queue; messages added to this queue indicate that a <MadCap:variable name="Variables.CVR caps" /> requires recalculation.</li>
+            <li class="ListBullet3">Fields that allow the processing to be spread across multiple queues and brokers.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="ESBProcessQueue"></a>ESB&#160;Process Queue</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV024_Images/CV024_ESBProcessQueue.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">The <span class="Field">Program </span>field should be set to <strong>cvuesb001.processMessage</strong>.</p>
+        <h3 MadCap:autonum="2.4.2">Background Process Configuration</h3>
+        <p class="Body"><span class="Function">Background Process Configuration</span> in <i>System &gt;&#160;System Setup</i> can be used to define one or more background processes (brokers) to process the ESB queues (endpoints), as shown in <MadCap:xref href="#BGProcessConfig" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>. The broker process can be started and stopped from this screen.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="BGProcessConfig"></a>Background Process Configuration</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_A-C/CV/CV024_Images/CV024_BackgroundProcessConfig.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <div class="notelabel">NOTE:</div>
+        <div class="note">A corresponding entry must be added to the <span class="parameter">SY/WEBLOGS</span> parameter to enable log file viewing.</div>
+    </body>
+</html>

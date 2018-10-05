@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1110">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />OCR&#160;– Processing Scanned Invoices</h1>
+        <p><MadCap:variable name="General.ProductName" /> can process scanned invoices to automatically match the invoice to the <MadCap:variable name="Variables.pl supplier" /> and create <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.Purchase Ledger caps" /> invoice record with some of the data fields populated by information from the scanned image.</p>
+        <p class="todo" MadCap:autonum=" ">To process a scanned invoice</p>
+        <ol>
+            <li>Prepare the files to be imported by placing them into a network scanner location.</li>
+            <li>Go to <span class="function">Import Scanned Images</span>.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot>Import Scanned Images Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../../Resources/Images_D-F/DM/DM OCR Invoices/Import Scanned Images Screen.png" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+            <li><MadCap:variable name="Variables.Tick caps" /> the <span class="field">OCR to P/L Invoice</span> box.</li>
+            <li>Select the Document Group to store the invoice against.</li>
+            <li>
+                <MadCap:snippetText src="../../../Resources/Snippets/Complete_Other_Fields.flsnp" />
+            </li>
+            <li>Click Next.</li>
+        </ol>
+        <p><span class="function">Import Scanned Images</span> runs as a report process. The report tells you which record or records it has created. The OCR process creates an invoice batch with the description “OCR&#160;DM&#160;Batch”.</p>
+        <ol>
+            <li>Go to <span class="function">Enter Invoices</span>.</li>
+            <li>Open the OCR&#160;DM&#160;Batch.</li>
+            <li>On the Invoices tab, the invoices show as ‘Not Validated’ with a red background if they have not been updated. <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Invoice Batch – Invoices Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../../Resources/Images_D-F/DM/DM OCR Invoices/Invoice Batch.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><p>The supplier reference, supplier account, invoice date and gross amount are shown if the OCR process has been able to determine them. Any values that break validation are shown with a red background.</p><p><img src="../../../Resources/Images_D-F/DM/DM OCR Invoices/Invoice Invalid Fields.png" class="FullWidth" /></p></li>
+            <li>Follow the <span class="field">Internal Reference</span> link for an invoice.</li>
+            <li>The invoice record opens and displays the scanned invoice. Any fields that the OCR process has been able to identify are populated and validated, so any errors are highlighted.</li>
+            <li>Fill in any remaining data and enter the invoice as normal.</li>
+        </ol>
+    </body>
+</html>

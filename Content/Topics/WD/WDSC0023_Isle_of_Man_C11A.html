@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Isle of Man C11A</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Isle of Man C11A</h1>
+    <p>The SCC11A (see also <a href="WDSC0022_Isle_of_Man_C11.html">Isle of Man C11</a>) is an Isle of Man (only) Tax Document.  It can be used to produce a substitute C11A form (that is, a substitute if that is agreed by the specific contractor with the Isle of Man authorities).   The C11A provides details of subcontractor's payments and tax deducted and provided a report to the Tax Authorities of the contractor's payments to subcontractors and tax deductions over a period.  Although the C11A is intended to be provided once a week, but since a contractor may have a specific agreement allowing them to produce it for a longer period, a weekly run is not enforced. </p>
+    <div class="process">
+      <h2 class="print">To configure an SCC11A document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>. </li>
+        <li>Use the <span class="userinput">SC Monthly C11A (IoM)</span> document type.</li>
+        <li>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </li>
+        <li>The following tables are available: sc_mast, sc_sc60, co_config.</li>
+        <li>The SCC11A has the following forms: </li>
+        <ul>
+          <li>The BODY form is not currently used on this document.  </li>
+          <li>The heart of the document is the Taxes Per Period Form (by default PERIODTAX) which shows a number of RO fields: RO_PeriodNum, RO_Date, RO_C11Unique, RO_Taxable, RO_Cost, RO_Deduct, RO_PeriodTaxStr.  These are all populated by calculations in the print program itself rather than being available as RO fields for a particular table. These fields are summaries of the values from the sc_sc60 for the subcontractor for each particular period requested for the print (period being tax periods ending on the 5th of the month). </li>
+          <li>The Total Taxes per Period (by default PERTOTAL) provides a total for all subcontractors on the report by tax period.  These are displayed using the RO fields: RO_LabourTotal, RO_MaterialTotal, RO_TaxTotal, RO_PeriodTaxTotal.</li>
+          <li>The Form Name Form (by default FORMNAME) simply provides the name of the Form as agreed with the Tax Authorities (typically Substitute C11A).</li>
+          <li>Totals Form (by default TOTAL).</li>
+          <li>The FOOT and CFOOT forms have a page count using the standard tokens.</li>
+        </ul>
+      </ol>
+    </div>
+  </body>
+</html>

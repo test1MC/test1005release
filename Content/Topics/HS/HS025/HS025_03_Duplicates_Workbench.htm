@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1110">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Removing Duplicate People Records</h1>
+        <p>The <span class="function">Duplicate Workbench</span> on the HB CRM Administration menu allows you to identify and merge duplicate people records.</p>
+        <ol>
+            <li>Go to <span class="function">Duplicates Workbench</span>.</li>
+            <li>From the Options menu, choose Search for Duplicates.</li>
+            <li>Choose output options for the report and click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/Next.flsnp" />.<p>This will search the People Information Workbench for potential duplicates against people related to the logged-in <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />.  This runs as a report, and may take some time if there are large numbers of PIW records.</p><p>When the search has completed, the browse shows any potential duplicate records, with the potential match and the fields that match between the two records. A potential pair of duplicate people records is only shown once in the browse.</p><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Duplicates Workbench Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../../Resources/Images_G-I/HS/HS025/Duplicate_Workbench.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><MadCap:dropDown><MadCap:dropDownHead><MadCap:dropDownHotspot>How duplicates are determined</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>A person will be flagged as a potential duplicate based on the following rules:
+</p><ul><li>Email address matches
+</li><li>Mobile telephone matches
+</li><li>Home telephone matches
+(see below)</li><li>Work telephone matches
+(see below)</li><li><MadCap:variable name="Variables.postal code" style="text-transform: capitalize;" /> matches
+(see below)</li></ul><p>As multiple people could have the same home telephone, work telephone or <MadCap:variable name="Variables.postal code" />, if these match further checks will be made to see if it’s a duplicate record.
+</p><ul><li>If the title and <MadCap:variable name="Variables.last name" /> match the record will be treated as a duplicate. 
+</li><li>Or if the first name and <MadCap:variable name="Variables.last name" /> match the record will be treated as a duplicate. 
+</li></ul></MadCap:dropDownBody></MadCap:dropDown></li>
+            <li>To see the details of the two records, click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/Detail.flsnp" />.</li>
+            <li>If the records are not duplicates, <a href="../../WD/WDUG0026_Selecting_Records.html">select</a> the row, choose Not a Duplicate from the Action Menu, and click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/ActionGo.flsnp" />.</li>
+            <li>If the records are duplicates: <ol><li>Click Merge (<img src="../../../Resources/Images/COINS Graphics/SVG buttons/merge.svg" class="icon24px" />).<p>This displays a screen which allows you to choose which information to keep when the records are merged. The record on the left will be kept; the record on the right will be deleted. </p></li><li>To keep any details from the record on the right, <MadCap:variable name="Variables.tick" /> the <span class="field">Update</span> box; these details will be added to the record (overwriting the details that already exist).</li><li>Click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/Process.flsnp" />.</li></ol></li>
+        </ol>
+    </body>
+</html>

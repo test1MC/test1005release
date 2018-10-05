@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2786" MadCap:lastWidth="610" MadCap:onlyLocalStylesheets="False" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Set Menu Security - Screen and Processing Changes</h1>
+        <p>Set Menu Security is available on the standard menus: <span class="Emphasis">System &gt; User Maintenance &gt; Function Security</span>. The report only shows information on menu security NOT function security.</p>
+        <p>The report lists those menus on which a user or group has functions that they are allowed to run but which are on menus that are not currently available to them. It does not show any menus the user or group already has access to. The report is designed to show only the changes that will take place, not confirm what is already there.</p>
+        <p>The report operates in three modes: report, update and undo.</p>
+        <h2>Report Mode</h2>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Set Menu Security_1.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Set Menu Security_1_1105.png" class="FullWidth" />
+        </p>
+        <p>If you select Report mode, the following input fields are available:</p>
+        <p><span class="Emphasis">User(s)/Group(s)</span>
+        </p>
+        <p>The Users and Groups you wish to check.</p>
+        <p><span class="Emphasis">Root Menu</span>
+        </p>
+        <p>The root or top menu at which the report should start. Typically this would be the main module level such as %WGL or %WPO.</p>
+        <p>The report will return, for each user or group, the</p>
+        <ul>
+            <li>The menu path checked.</li>
+            <li>The menus that the user(s) or group(s) will be granted access to.</li>
+            <li>Functions on these menus that the user(s) or group(s) currently have access to.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Set Menu Security_2.png" class="HalfWidth" />
+        </p>
+        <h2>Update Mode</h2>
+        <p>If you select update mode, the same input fields are available. When run, the user(s) or group(s) are granted access to the menus as appropriate. The report provides a unique reference for the update as well as listing all menus to which the user(s) or group(s) have been assigned access.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Set Menu Security_3.png" class="HalfWidth" />
+        </p>
+        <p>The unique reference, based on user, date and time, is used by the Undo Mode if necessary.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: Orange;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If the System Parameter UFACCESS is set, this must be reset following any changes made by this report</p>
+        <h2>Undo Mode</h2>
+        <p>Undo Mode is ONLY designed to work before any other changes to any Function Access Security are made. The Undo Reference is only valid until the next reference is generated.</p>
+        <p>This functionality is purely designed to undo any errors rather than roll-back changes at a later date.</p>
+        <p>If you select Update mode, the following input field is available:</p>
+        <p><span class="Emphasis">Reference</span>
+        </p>
+        <p>The reference number of the previous changes made.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Set Menu Security_4.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Set Menu Security_4_1105.png" class="FullWidth" />
+        </p>
+        <p>The report returns a list, for each user/group, of the access changes which have been undone.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Set Menu Security_5.png" class="SeventyFivePercent" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

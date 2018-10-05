@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/CHKDUPPC - PCard Transactions Duplicates Checks</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/CHKDUPPC - </span> PCard Transactions Duplicates Checks
+</div>
+<div class="param_def">
+<p>Whether or not COINS should perform a Duplicate Check during PCard load process (potential duplicates will be moved to the <span class="function" title="Function:%WPL1330BAPT">PCards Workbench - Quarantine</span>).</p>
+<p>If the parameter is blank, then no duplicate check is carried out, otherwise COINS will use specified checks to determine whether the transaction is a potential duplicate or not.</p>
+<p>COINS can use the following checks to determine whether some PCard transactions are identical:</p>
+<ol>
+<li><strong>Card Number</strong></li>
+<li><strong>Transaction Date</strong></li>
+<li><strong>Merchant</strong></li>
+<li><strong>Supplier's reference</strong></li>
+<li><strong>Buyer's reference</strong></li>
+<li><strong>Transaction Value</strong></li>
+</ol>
+<p>COINS will always check the <strong>Card Number</strong>, but 2 - 6 are optional, and could be specified in this parameter.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="636" MadCap:lastWidth="601" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Check that Pay Items Are Set Correctly</h1>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>This procedure also deletes Pay Item history records when they exceed the number of years to be retained as indicated by the Years History field on each Pay Item. When all Pay Items for an employee have been deleted in this way, the employee record is also deleted. Before running this procedure, please make sure that the Pay Item History fields are set appropriately. To avoid employee deletion set at least one common Pay Item to 99 years.</p>
+            </div>
+        </div>
+        <p class="Body">Prior to running the Year-End routine, to ensure you have a pay item with 99 history years assigned, go into pay item details via <MadCap:conditionalText MadCap:conditions="Documents.NotCOINSplus">Payroll menu &gt; Global Set up &gt; Pay Items.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="Documents.NotOA"><span class="Function">Payroll</span> &gt;&#160;Period<span class="Function"> Payroll</span> &gt;&#160;<span class="Function">Global Parameters</span> &gt;&#160;<span class="Function">Pay Items</span>.</MadCap:conditionalText></p>
+        <p class="Body" MadCap:conditions="Documents.NotCOINSplus">
+            <img src="../../../../Resources/Images_P-R/PR/PR YE/Check that Pay Items Are Set 2018.png" class="FullWidth" />
+        </p>
+        <p MadCap:conditions="Documents.NotOA" class="Body">
+            <img src="../../../../Resources/Images_P-R/PR/PR YE/Check that Pay Items Are Set COINSplus 2018.png" class="FullWidth" />
+        </p>
+        <p class="Body"><b style="font-style: italic;">Years History should equal 99 to ensure employees with this item in their pay sequence are not deleted due to zero history on all items.</b>
+        </p>
+        <p class="Body">Please note that the “Year End Clear” tickbox is a very important flag also in terms of year-end clearing. Statutory items such as Taxable, NI-able, and NI paid and Tax paid should have the box ticked as this is cumulative only for the tax year and should be reset to zero for the new tax year as of period 1. </p>
+        <p class="Body">Company items such as Holiday accrual (if run by calendar or year other than fiscal year) and staff loans reducing balance and calculated should have the box unticked as these balances should be brought forward to the new Tax Year. At this stage the Year End can be run.</p>
+    </body>
+</html>

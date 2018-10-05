@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MO - mCare"
+  Type="PDF"
+  Destinations=""
+  PatchHeadingLevels="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  MasterPageLayout="/Content/Resources/PageLayouts/PDF_Body_UK_2017.flpgl"
+  InjectEmptyPages="true"
+  ConditionTagExpression="include[COINS.1104 or COINS.Pre-v1105] exclude[COINS.v1105] "
+  conditions="COINS.PrintOnly"
+  InjectBookHeadings="true"
+  MasterToc="/Project/TOCs/Portal/Portal Sub-TOC/mCare.fltoc"
+  OutputFolder="C:\temp">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ConvertBookmarks="true" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes" />
+  </Destinations>
+  <Variables>
+    <Variable
+      Name="Document Variables/Version">2.0</Variable>
+    <Variable
+      Name="Document Variables/Doc Version">2.0</Variable>
+    <Variable
+      Name="Document Variables/File Name">LMDMO0001</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">LMDMO0001</Variable>
+    <Variable
+      Name="General/Year">2017</Variable>
+    <Variable
+      Name="Document Variables/Document Title">mCare User Guide</Variable>
+    <Variable
+      Name="Document Variables/Modules">COINS Mobile</Variable>
+  </Variables>
+  <Glossaries></Glossaries>
+</CatapultTarget>

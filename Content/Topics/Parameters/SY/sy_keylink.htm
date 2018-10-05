@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/KEYLINK - Tables for deeplink by key</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/KEYLINK - </span> Tables for deeplink by key
+</div>
+<div class="param_def">
+<p>A list of database tables for which you can specify deep links to COINS that contain key index strings instead of ROWIDs.</p>
+<p>Deep links that contain key indexes allow external systems to create a link to COINS for a specific record. For example, in the link: 
+<P></P><SPAN style="WORD-SPACING: -6px" class="screentype">http://195.40.14.50/cgi-bin/ wsdevrtb.cgi/ wocoins.p <SPAN class="nw">?TopMenu=%25WJC</SPAN> &amp;kco=1 &amp;jc_jobRowid=$1|1 &amp;MainArea=<SPAN class="nw">%WJC2300SJOB</SPAN></SPAN> 
+<P>the jc_jobRowid is replaced with $ and the unique key to the record (in this case kco=1 and job_num="1").</P>
+<P>If the table is not in the <SPAN class="parameter">KEYLINK</SPAN> list, the user will get an error. This prevents a user from constructing a query with a key that gets around <MadCap:variable name="Variables.jc contract"/> security, employee security, or GL security, for example.</P>
+<P class="yesnolist"><SPAN class="userinput">*</SPAN> = Users can link to any record. </P>
+<P class="yesnolist">blank = This feature is switched off.</P>
+<P>Function security still applies in all these situations.</P></p>
+</div>
+</body>
+</html>

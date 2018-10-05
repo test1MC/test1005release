@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SW/AUTOCOMP - Auto Complete Jobs when Task is completed</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SW/AUTOCOMP - </span> Auto Complete Jobs when Task is completed
+</div>
+<div class="param_def">
+<p>Whether to automatically mark an FM <MadCap:variable name="Variables.fm job"/> as Complete and/or Ready for Invoicing when the task is completed.</p>
+<p>When an FM task is completed, either from a COINS Mobile device or from <MadCap:snippetBlock src="../../../Resources/Snippets/COINSOA.flsnp"/>, if there are no other outstanding tasks on the <MadCap:variable name="Variables.fm job"/> and the <span class="parameter">AUTOCOMP</span> parameter is not set to None, COINS will update the status of the <MadCap:variable name="Variables.fm job"/> depending on the parameter setting.</p>
+<p class="yesnolist"><span class="userinput"><span class="userinput"><MadCap:variable name="Variables.Fm Job caps"/> </span>Complete</span> = The <MadCap:variable name="Variables.fm job"/> will be marked as Complete. (Operationally Complete and Pricing Complete).</p>
+<p class="yesnolist"><span class="userinput">Ready for Invoicing</span> = The <MadCap:variable name="Variables.fm job"/> (and all associated SOR Items) will be marked as Ready for Invoicing.</p>
+<p class="yesnolist"><span class="userinput"><span class="userinput"><MadCap:variable name="Variables.Fm Job caps"/> </span>Complete and Ready for Invoicing</span> = Both of the above will happen.</p>
+<p>The relevant <span class="nw">stage(s)</span> will be marked as having occurred, and a record will be written into the <MadCap:variable name="Variables.fm job"/> history.</p>
+</div>
+</body>
+</html>

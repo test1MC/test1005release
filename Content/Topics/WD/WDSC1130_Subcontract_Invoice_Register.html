@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Subcontract Invoice Register</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Subcontract Invoice Register</h1>
+        <p>The subcontract invoice register allows you to record invoices for <MadCap:variable name="Variables.vat" /> purposes.&#160; </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Summary of the process</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images_S-U/SC/SC_113001.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>The subcontract is set up as normal (either directly using <span class="function" title="Function:%WSC2010BSBS">Subcontract Maintenance</span> or from SC procurement).&#160; The billing type on the subcontract controls the type of transaction that can be registered. </p>
+        <ol>
+            <li>You receive from the subcontractor an invoice, credit note or application, and enter them as a registration batch using <span class="function" title="Function:%WSC1030BCOB">Enter Invoices and Credit Notes</span>, before distributing them to surveyors for checking and certification.&#160; </li>
+            <li>At this point the transactions can be provisionally costed, and you can post <MadCap:variable name="Variables.vat" /> entries for invoices and credit notes (applications will not make any <MadCap:variable name="Variables.vat" /> postings).&#160; </li>
+            <li>Then you post the registration batch: this makes the accounting entries and prevents the transactions being changed or deleted.&#160;</li>
+            <li>The treatment is different depending on whether you are dealing with an application for payment or an invoice.&#160; </li>
+            <ul>
+                <li>Invoices can be selected for certification (in full or in part) using <span class="function" title="Function:%WSC1060BSIV">Invoices Awaiting Certification</span>.&#160; Any uncertified part will be available for later certification (or cleared by a credit note for <MadCap:variable name="Variables.vat" /> purposes). Multiple invoices (and credit notes) can be added to a payment certificate which is processed as normal.&#160; </li>
+                <li>Registered applications can be selected for payment (in full or in part), and you can then generate payment certificates.&#160; The payment certificates (which can be either draft or final certificates) are then processed as normal.&#160;</li>
+            </ul>
+        </ol>
+        <div class="configuration">
+            <h2 class="print">Invoice register set up</h2>
+            <p><span class="function" title="Function:%WSC9000SSBC">SC Configuration</span>
+            </p>
+            <ol>
+                <li>Populate the "Invoice GL Account Details" tab with the relevant control account codes.&#160; Either <MadCap:variable name="Variables.tick" /><span class="field">Post Detail</span> against each control account to pass individual transactions to the control account, or un<MadCap:variable name="Variables.tick" /> to pass batch totals to the control account.&#160;&#160;<MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /><span class="field">Post Invoices to GL/JC</span>.</li>
+                <li>Open and save the SC Ledger Configuration page to automatically generate new the Batch Types required for SC Invoice Registration (see below).&#160;</li>
+            </ol>
+            <p><span class="function" title="Function:%WSC9000BCBT">SC Batch Configuration</span>
+            </p>
+            <ol>
+                <li>Check that Batch Types "SCINV" and "SCUNREG" exist.&#160; If not, open and save the <span class="function" title="Function:%WSC9000SSBC">SC Configuration</span> page.</li>
+                <li>Update the settings on these two new batch types if required.&#160;&#160;</li>
+            </ol>
+            <p><span class="function" title="Function:%WSCBCOJ">Transaction Types</span>
+            </p>
+            <ol>
+                <li>Create new Transaction Types as required for each of the new Batch Types, for example:</li>
+                <ul>
+                    <li>SCI&#160;&#160;&#160;&#160; SC Register Invoice (SCINV, Debit, Invoice)</li>
+                    <li>SCC&#160;&#160;&#160; SC Register Credit Note (SCINV, Credit, Invoice)</li>
+                    <li>SCA&#160;&#160;&#160; SC Register Application (SCINV, Debit, Application)</li>
+                    <li>SCUN SC Un-register Invoice (SCUNREG)</li>
+                </ul>
+                <li>Leave both control account fields on each transaction type blank.</li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_AUTOREFI.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_DISTTYPE.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_IGRSID.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_ILABID.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_INVDATE.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_INVINPER.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_INVTXNS.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_REFBASEI.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_REFFORMI.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_VATCOST.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_VATDISCI.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_VATREG.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

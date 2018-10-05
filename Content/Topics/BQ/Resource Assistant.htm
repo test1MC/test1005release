@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1110">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Resource Assistant</h1>
+        <p>When adding a new resource in <MadCap:variable name="Variables.Bq Bill of Quantities caps" />, various other records must exist first:</p>
+        <ul class="CompactList">
+            <li><MadCap:variable name="Variables.Cost Head caps" />
+            </li>
+            <li>Payment Stage</li>
+            <li>Package</li>
+            <li>Commodity</li>
+            <li>Estimating Section</li>
+        </ul>
+        <p><span class="function">Resource Assistant</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to add a new resource, and add the necessary records if they do not exist, all in one place. </p>
+        <p>(If you know that all the necessary records already exist, you can still add a new resource using the <span style="white-space: nowrap"><MadCap:snippetText src="../../Resources/Snippets/TextAndButtons/Add.flsnp" /></span> button on the <span class="function"><MadCap:variable name="Variables.Bq Bill caps" /> Resources</span> workbench.)</p>
+        <h1 MadCap:conditions="COINS.PrintOnly" style="page-break-before: always;">Screen and Processing Changes</h1>
+        <p MadCap:conditions="COINS.PrintOnly">A new function, <span class="function">Resource Assistant</span>, has been added to the <MadCap:variable name="Variables.Bq Bill of Quantities caps" /> menus.</p>
+        <p class="todo" MadCap:autonum=" ">To add a new resource</p>
+        <ol>
+            <li>Go to <MadCap:variable name="Variables.Bq Bill of Quantities caps" /> &gt;&#160;Setup &gt;&#160;Maintenance &gt;&#160;<span class="function">Resource Assistant</span>.</li>
+            <li>Select the <span class="field">Resource Type</span> to add (material or subcontract).</li>
+            <li>Enter or select the <MadCap:variable name="Variables.Cost Head caps" />, Payment Stage (if used), Estimating Section (if used), Commodity or Trade, and Package. <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Resource Assistant Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_A-C/BQ/Resource_Assistant.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><p>If any of these records do not exist:</p><ol><li>Click <span class="button">ADD</span> next to the field.<p>The relevant Add screen opens in a frame.</p></li><li>Add the details for the new record and click <MadCap:snippetText src="../../Resources/Snippets/TextAndButtons/Save.flsnp" />.<p>The frame closes and the field on <span class="function">Resource Assistant</span> is populated with the new record.</p></li></ol></li>
+            <li>When you have filled in all the details, click <MadCap:snippetText src="../../Resources/Snippets/TextAndButtons/Next.flsnp" />.<p>The standard <span class="function">Add Resource</span> page is displayed, with the values you entered on the <span class="function">Resource Assistant</span> screen populated.</p><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot>Resource Assistant – Add Resource</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_A-C/BQ/Resource_Assistant_1.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+            <li>Complete any additional fields as required and click <MadCap:snippetText src="../../Resources/Snippets/TextAndButtons/Save.flsnp" />.</li>
+        </ol>
+        <div class="configuration">
+            <h2>Configuration</h2>
+            <p>The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>BQ&#160;parameters need to be populated:</p>
+            <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                        <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                            <p>Parameter</p>
+                        </th>
+                        <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                            <p>Description</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                            <p>DEFMCAT</p>
+                        </td>
+                        <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                            <p>Default  cost category for material
+resources added using <span class="function">Resource Assistant</span>.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                            <p>DEFSCAT</p>
+                        </td>
+                        <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                            <p>Default
+ cost category for subcontract 
+resources added using <span class="function">Resource Assistant</span>.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

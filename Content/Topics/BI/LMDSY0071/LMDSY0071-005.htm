@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Workflow Template</h1>
+        <p>
+            <br />In Workflow Folder, navigate to Workflow Template.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-008-1108.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.1 ">Create new workflow template</h2>
+        <p>Click<MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-009-1108.png" class="FullWidth" />
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Field</p>
+                    </td>
+                    <td>
+                        <p>Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Workflow</p>
+                    </td>
+                    <td>
+                        <p>Add Workflow Name -&#160;&#160;&#160; E.g.&#160; WFPROJ1</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Description</p>
+                    </td>
+                    <td>
+                        <p>Add Workflow Description – E.g.: Project One – Order Approval</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Group</p>
+                    </td>
+                    <td>
+                        <p>Use the dropdown in Group to select the Group we created earlier E.g. Workflow Projects</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Status</p>
+                    </td>
+                    <td>
+                        <p>A workflow may have one of three status settings:</p>
+                        <p>Edit - The workflow is not live; you can still edit and test it.</p>
+                        <p>Live - The workflow is live and you can no longer edit it. Only Live templates can be initiated.</p>
+                        <p>Retired - The workflow is not live.</p>
+                        <p>As we are in the process of developing and testing our new workflow, ensure the status is set to Edit.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Documents</p>
+                    </td>
+                    <td>
+                        <p>This relates to the <MadCap:variable name="General.ProductName" /> database table associated with this workflow.&#160; In this workflow we are concentrating on Purchase orders and their header records so here we will enter po_hdr – the name of the Purchase Order Header table in the COINS database.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Initialise</p>
+                    </td>
+                    <td>
+                        <p>This section is used to set initial calculations for use within the workflow.&#160; Best practise is to set up at least one variable called $TASKID which can be used to track which documents are being processed by a given Workflow Activity (essential for resolving issues).</p>
+                        <p>We will assign the Order number (poh_ordno) from the order header table (po_hdr) to our TASKID so here we enter:</p>
+                        <p>$TASKID=po_hdr.poh_ordno;</p>
+                        <p>Our Workflow design requires the buyer to be emailed when his order is approved.&#160; We therefore need to set up some variables to handle this.</p>
+                        <p>We will need to capture the buyer (so we can get their email address – in this example we will hardcode the buyers userid so we can control where our emails go!), the order number (so they will know which order is approved) and also the URL of the <MadCap:variable name="General.ProductName" /> system so that we can send them a link to the order which they can open from the email</p>
+                        <p>Enter the following:</p>
+                        <p>$cURL=substring$(co_config.coc_sysparam^SY|WEBROOT + '/' + co_config.coc_sysparam^SY|WEBSCRPT,8,9999);</p>
+                        <p>$pob_code = 'Niglon';<br />$kco = po_hdr.kco<br />$poh_ordno = po_hdr.ordno;<br />$poh_mpo = po_hdr.poh_mpo;</p>
+                        <p>$tip_type = po_hdr.tip_type;</p>
+                        <p>&#160;</p>
+                        <p>Check you have a semi-colon after each calculation to separate them.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 ">Test Documents</h2>
+        <p>During the development of a Workflow, it is helpful to have a test document that can be run through the various stages whilst you test the logic of your design.&#160; The alternative is to create a new document each time – which can be time-consuming.</p>
+        <p>The Test field on the Details Tab can be used to reference the document to be processed, but first we need to get the unique ID (known as the RowID) of a suitable document.</p>
+        <p>Our Workflow will be processing uncommitted Purchase orders so we first need to go to Procurement and lookup an uncommitted order.&#160; Right-click on the hyperlink for an order number and select Copy Link</p>
+        <p>Paste the link details to notepad or a suitable text editor</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-010-1108.png" class="FullWidth" />
+        </p>
+        <p>NOTE: &#160; Save this as a text file– you will need it again later</p>
+        <p>In amongst the block of text you will find the po_hdrRowid which can then be used in the test area to manually launch the workflow whilst in testing mode.</p>
+        <p>So from the example above, we would copy just the text:</p>
+        <p>po_hdrRowid=0x000000000222fc04 into the test field.&#160;</p>
+        <p>&#160;</p>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;">
+            <colgroup>
+                <col style="width: 99px;" />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <td>
+                        <p>Field</p>
+                    </td>
+                    <td>
+                        <p>Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Test</p>
+                    </td>
+                    <td>
+                        <p>po_hdrRowid=0x000000000222fc04</p>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-011-1108.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

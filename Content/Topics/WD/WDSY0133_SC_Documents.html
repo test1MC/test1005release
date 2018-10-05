@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1329" MadCap:lastWidth="1814">
+    <head><title>Faxing/Emailing Subcontractor Documents in OA</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Faxing/Emailing Subcontractor Documents in OA</h1>
+        <p>For subcontractor certifcates and payment and deduction statements, you can generate multiple documents and fax or email them to the appropriate recipients:</p>
+        <ul>
+            <li>If you run <span class="function" title="Function:%WSC7530EMAIL">Email Statements of Deduction</span> or <span class="function" title="Function:%WSC1980EMAIL">Email Certificates</span>, <MadCap:variable name="General.ProductName" /> will email the documents to:</li>
+            <ul>
+                <li>All the subcontractors whose default print method is EMAIL.</li>
+                <li>All the subcontractors whose default print method is blank but who have an email address.</li>
+            </ul>
+            <li>If you run <span class="function" title="Function:%WSC7530FAX">Fax Statements of Deduction</span> or <span class="function" title="Function:%WSC1980FAX">Fax Certificates</span>, <MadCap:variable name="General.ProductName" /> will fax the documents to:</li>
+            <ul>
+                <li>All the subcontractors whose default print method is FAX.</li>
+                <li>All the subcontractors whose default print method is blank, and who have no email address is but have a FAX number.</li>
+            </ul>
+            <li>If you run <span class="function" title="Function:%WSC7530PRINT">Print Other Statements of Deduction</span> or <span class="function" title="Function:%WSC1980PRINT">Print Other Certificates</span>, <MadCap:variable name="General.ProductName" /> will print the document for:</li>
+            <ul>
+                <li>All the subcontractors whose default print method is PRINT.</li>
+                <li>All the subcontractors whose default print method is blank and who have no FAX number or email address.</li>
+            </ul>
+        </ul>
+        <p>In each case <MadCap:variable name="General.ProductName" /> produces a PDF output that shows all the transactions that were faxed, emailed or printed - which you can see using <span class="function" title="Function:%WSYBCRR">Report Status</span>. If the review feature is enabled you need to release faxes and emails in order to send them - see <a href="WDSY0134_Reviewing_Messages.html">Reviewing Messages</a>.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0132_Remittances.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <ol>
+                <li>In <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span>:</li>
+                <ul>
+                    <li>Set the <span class="field">Default Print Method </span>field on the individual subcontractor record.
+<p><img src="../../Resources/Images/SY/SY_013202.png" class="HalfWidth" /></p></li>
+                    <li>Make sure the <span class="field">Email </span>or <span class="field">Fax </span>fields are filled in with the appropriate email address or fax number.</li>
+                </ul>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">There is a utility function, <span class="function" title="Function:%WSC7070RSBM">Update default print method for Subcontractors</span>,&#160;that&#160;allows you to update the <span class="field">Default Print Method </span>in bulk.</div>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_DEFPRN.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

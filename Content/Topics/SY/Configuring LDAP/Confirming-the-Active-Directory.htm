@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Confirming the Active Directory Server Resolution</h1>
+        <p>The LDAP Directory user authentication implemented in <MadCap:variable name="General.ProductName" />, uses your network’s domain name services (DNS) lookup to identify all available directory servers that are available for user authentication.</p>
+        <p>The <MadCap:variable name="General.ProductName" /> server must be able to resolve directory servers using: _ldap._tcp.&lt;domain&gt; where &lt;domain&gt; is the domain name of your network. The following task shows the steps involved in testing the ability of your <MadCap:variable name="General.ProductName" /> server to identify available LDAP directory servers.</p>
+        <h2>Testing the directory server lookup</h2>
+        <p>Perform the following steps using the "root" account on your <MadCap:variable name="General.ProductName" /> server. </p>
+        <ol>
+            <li>
+                <p>Log into the <MadCap:variable name="General.ProductName" /> server using the root account login details.</p>
+            </li>
+            <li>
+                <p>There are two standard command lines that can be used to perform DNS name resolution from your <MadCap:variable name="General.ProductName" /> server. Issue the following commands, noting their output:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0001.png" class="FullWidth" />
+                </p>
+                <p>If the command is not found on your <MadCap:variable name="General.ProductName" /> system, the response from the whereis command will return:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0002.png" class="FullWidth" />
+                </p>
+                <p>If your <MadCap:variable name="General.ProductName" /> system supports the nslookup command, then continue to step 3.</p>
+                <p>If your <MadCap:variable name="General.ProductName" /> system supports the dig command, then skip to step 4.</p>
+            </li>
+            <li>
+                <p>Using the nslookup command to determine whether or not your <MadCap:variable name="General.ProductName" /> server can identify your network’s directory servers:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0003.png" class="FullWidth" />
+                </p>
+                <p>If your <MadCap:variable name="General.ProductName" /> server was unable to identify any LDAP directory servers, you will see the following output:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0004.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Using the dig command to determine whether or not your <MadCap:variable name="General.ProductName" /> server can identify your network’s directory servers:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0005.png" class="FullWidth" />
+                </p>
+                <p>If your <MadCap:variable name="General.ProductName" /> server was unable to identify any LDAP directory servers, you will see the following output:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0006.png" class="FullWidth" />
+                </p>
+                <p>If at this point your <MadCap:variable name="General.ProductName" /> server is unable to identify any LDAP directory servers on your network, then your <MadCap:variable name="General.ProductName" /> server will require additional configuration prior to continuing with this How To guide.</p>
+            </li>
+        </ol>
+        <h2>No LDAP directory servers</h2>
+        <p>If your <MadCap:variable name="General.ProductName" /> server is unable to identify any LDAP directory servers on your network, talk to your network administrator to determine whether or not your <MadCap:variable name="General.ProductName" /> server can be configured to access a domain name server that is able to identify LDAP directory servers on your network.</p>
+        <p class="note">The above option is outside of the scope of this How To guide.<br />Please refer this to your <MadCap:variable name="General.ProductName" /> server and/or network administrator for resolution.</p>
+    </body>
+</html>

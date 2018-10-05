@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/VATCOST - Only Post VAT When the Invoice is Costed</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/VATCOST - </span> Only Post VAT When the Invoice is Costed
+</div>
+<div class="param_def">
+<p>Whether to post <MadCap:variable name="Variables.vat"/> when the invoice is costed (<span class="userinput">Y</span>) or registered (<span class="userinput">N</span>).</p>
+<p class="yesnolist"><span class="userinput">Y</span> = Only post <MadCap:variable name="Variables.vat"/> when the invoice is costed.  If some <MadCap:variable name="Variables.vat"/> is non-recoverable, and can only be identified when the invoice is costed, set <span class="parameter">VATCOST</span> to <span class="userinput">Y</span> so that the <MadCap:variable name="Variables.vat"/> analysis of the invoice can be edited as part of the costing.</p>
+<p class="yesnolist"><span class="userinput">N</span> = Post <MadCap:variable name="Variables.vat"/> when the invoice is first posted onto the ledger.  The <MadCap:variable name="Variables.vat"/> analysis of the invoice cannot be edited after the registration batch has been posted.  If you are using invoice registration for some or all invoices, and you do not normally have non-recoverable <MadCap:variable name="Variables.vat"/>, set <span class="parameter">VATCOST</span> to <span class="userinput">N</span> so that <MadCap:variable name="Variables.vat"/> can be recovered on all invoices recorded on the ledger, based on the tax point date. </p>
+<p>The normal setting in the UK is <span class="userinput">Y</span> for house builders; <span class="userinput">N</span> for other clients. </p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../pl/pl_vatreg.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

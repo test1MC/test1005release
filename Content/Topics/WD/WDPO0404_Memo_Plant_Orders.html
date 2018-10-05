@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1059" MadCap:lastWidth="1142">
+  <head>
+    <title>Memorandum <MadCap:variable name="Variables.Pc Plant caps" /> Orders</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Memorandum <MadCap:variable name="Variables.Pc Plant caps" /> Orders</h1>
+    <p>"Memo <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Orders" serve as a simple "author<MadCap:variable name="Variables.is" />ation to proceed". They carry no value and so cannot produce a committed cost nor any form of accrued cost. Line details may be entered if required but no quantities, prices, <MadCap:variable name="Variables.pc offhire" /> dates etc will be entered. The main reasons for entering line details would be to provide an indication what type of <MadCap:variable name="Variables.pc plant" /> is to be <MadCap:variable name="Variables.pc hired" /> and to provide some default cost coding for the <MadCap:variable name="Variables.pl supplier" />'s invoice.</p>
+    <p>When entering a memo <MadCap:variable name="Variables.pc plant" /> order, you specify the <MadCap:variable name="Variables.pc plant" /> commodity code, override the description where required and enter any WBS code where relevant. Line input is simplified compared with full <MadCap:variable name="Variables.pc plant" /> orders, and only <MadCap:variable name="Variables.pc plant" />, text and clause line types are available. It is perfectly feasible that no line items details are entered at all.</p>
+    <p>Normally, if a valid purchase order number has been entered, a new tab called "Matching" appears once the initial entry screen has been saved. If the order specified is a Memo <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Order this Matching tab will not appear; instead the tab called "Costing Distribution" will be shown where you can enter the costing details manually.</p>
+    <h2>Committing Orders</h2>
+    <p>Just like any other order, memo <MadCap:variable name="Variables.pc plant" /> orders must be committed before invoices can be entered against them.</p>
+    <p>
+      <MadCap:variable name="General.ProductName" /> has the capability of sending order details electronically to a vendor (using the <MadCap:variable name="General.ProductName" />-<em>etc </em>Hub). Memo <MadCap:variable name="Variables.pc plant" /> orders will NOT be sent electronically (even if the vendor is configured as an electronic recipient of orders). This is because memo orders do not carry information that is sufficiently precise to enable electronic trading.</p>
+    <p>Some <MadCap:variable name="General.ProductName" /> systems have the PO parameter <span class="parameter">WARNUNPR </span>set to <span class="userinput">Y</span>. This issues a warning if a user attempts to commit a purchase order that contains an item with a zero price. This parameter will be ignored if the order being committed is a memo <MadCap:variable name="Variables.pc plant" /> order.</p>
+    <h2>
+      <MadCap:variable name="Variables.po variation" style="text-transform: capitalize;" /> Entry</h2>
+    <p>
+      <MadCap:variable name="Variables.po variations" style="text-transform: capitalize;" /> can be entered against memo <MadCap:variable name="Variables.pc plant" /> orders. The method of input is exactly the same as for the original order.</p>
+    <p>The only way to prevent further invoices from being entered against a memo <MadCap:variable name="Variables.pc plant" /> order is to use "Force Complete Orders".</p>
+    <div class="configuration">
+      <h2 class="print">Setup</h2>
+      <p>In <span class="function" title="Function:%WPO2010BPOT">Purchase Order Types</span>, add a new type of order to represent Memo <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Order.  You can use any spare letter to identify this order type (however, it is essential that the code used does not occur in the Subcontract Order Types table), and the description can be whatever you like.</p>
+      <p>Enter the code as the value of the PO parameter <span class="parameter">POMEMTYP</span>.</p>
+      <p>Note that Purchase Order Types apply to all purchase orders (apart from subcontract orders which have their own set of Subcontract Order Types).  Memo Orders cannot be used against any other major category of orders.  In other words we do not support Material Memo Orders, Overhead Memo Orders and so on.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_pomemtyp.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

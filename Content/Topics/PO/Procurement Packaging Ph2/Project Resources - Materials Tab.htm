@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Project Resources - Materials Tab</h1>
+        <h2>New and Updated Columns</h2>
+        <p class="Body">Two new columns have been added to the resource list browse, and the <span class="Field">Quantity</span> fields have been enhanced.</p>
+        <p class="Subtitle">Columns</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Quantity Requisitioned</div>
+                <div class="FieldDef">
+                    <p>If the <span class="Field">Quantity Requisitioned</span> exceeds the <span class="Field">Quantity</span>, the <span class="Field">Quantity Requisitioned</span> is shown with a red background (just like the <span class="Field">Quantity Ordered</span> column). </p>
+                    <p>A tooltip shows details of any issued requisitions that relate to the resource, and a link opens a new frame that shows a list of the requisitions shown in the tooltip.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p style="font-weight: normal;">Unlabelled</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A cell to the right of the <span class="Field">Quantity Requisitioned</span> column shows “UR” if  there are any unissued requisition lines relating to the resource.</p>
+                    <p>A tooltip shows details of the requisitions, and a link opens a new frame that shows a list of the requisitions shown in the tooltip.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Quantity Ordered</div>
+                <div class="FieldDef">A tooltip shows details of any committed orders that relate to the resource, and a link opens a new frame that shows a list of the orders shown in the tooltip.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p style="font-weight: normal;">Unlabelled	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A cell to the right of the <span class="Field">Quantity Ordered</span> column shows UO&#160;if there is at least one uncommitted order relating to the resource line.</p>
+                    <p>A tooltip shows details of the orders, and a link opens a new frame that shows a list of the orders shown in the tooltip.</p>
+                </div>
+            </div>
+        </div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Committed Orders with Tooltip</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/Procurement/Proc Packaging Ph2/Committed Orders Tooltip fullwidth.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Uncommitted Orders with Tooltip</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/Procurement/Proc Packaging Ph2/Uncommitted Orders Tooltip.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Links</h2>
+        <p class="Body">Links on both the <span class="Field">Quantity Ordered</span> field and the new “UO” field open a new desktop frame containing the list of orders shown in the corresponding tooltip.  This list contains the same fields as shown on the standard Material Orders workbench.  The Context area at the top of the frame shows details of the resource line selected. Just as with the standard Material Orders browse, it is possible to drill down into the order and carry out the normal actions available from the order’s summary screen.</p>
+        <p class="Body">Similar links on the Quantity Requisition field and the new “UR” fields open a frame containing the list of requisitions shown in the corresponding tooltip.</p>
+        <h2>Raise Requisition Action</h2>
+        <p class="Body">A new <span class="Function">Raise Requisition</span> action is available on the list of resources:</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Raise Requistion Action</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/Procurement/Proc Packaging Ph2/Raise Resources action.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">Once one or more resources have been selected the user is taken to the requisition header screen. The <span class="Field"><MadCap:variable name="Variables.Jc Contract caps"></MadCap:variable> Number</span> is pre-populated and is now display-only.</p>
+        <p class="Body">On saving the requisition header, the user is taken to the Requisition Lines screen where the selected resources and quantities are pre-populated.  All the standard requisition entry parameters are consulted, so, for example, if requisitions are allowed to be priced, the <span class="Field">Price</span> and <span class="Field">Per</span> columns are visible and available for input.</p>
+        <h2>Issue and Recall Requisition</h2>
+        <p class="Body">If a requisition is issued, or if an issued requisition is recalled, the <span class="Field">Quantity Requisitioned</span> column is updated to reflect the total quantity of the resource that has been requisitioned (and issued).</p>
+        <h1>Merging Lines into Budget Line</h1>
+        <p class="Body">If requisitions and orders are raised outside of the Resources &gt; Materials tab within the <span class="Function">Project Information Workbench</span>, <MadCap:variable name="General.ProductName" /> attempts to associate the requisition or order line with the corresponding budget line (where the <span class="Field">Via</span> column is “IMP”) on the resources list.  It does this by looking for a line one which the (commodity) code, the first 30 characters in the description and the unit of quantity are the same.  If it cannot locate this record, a new line is created with the <span class="Field">Via</span> column set to “ORD”.
+</p>
+        <p class="Body">A new action on the Materials tab allows you to associate requisitioned and/or ordered lines with the correct budget line. You may want to do this when <MadCap:variable name="General.ProductName" /> has been unable to locate the corresponding budget line itself (typically because the first 30 characters of the description are not identical to the description on the budget line).
+Select one (and only one budget line) and select one of more requisitioned or ordered lines.  The (commodity) code and unit of quantity of all selected lines must be identical. </p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Merging Order Lines</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/Procurement/Proc Packaging Ph2/Merge into Budget Line.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;">
+ 
+After merging the lines, the screen looks like this:</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Merged Lines</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/Procurement/Proc Packaging Ph2/Merged Lines.png" class="FullWidth" /><![CDATA[ 
+
+]]></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h1>Requisition Detail</h1>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;">If the requisition has not yet been issued, or if it is possible to make “Post Issue Changes” (and add new lines), a new <span class="Function">Tag Project Resources</span> option is available on the top right Options menu.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Tag Project Resources Option</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/Procurement/Proc Packaging Ph2/Tag Proj Resources Option.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;">On selecting this option, the user is taken to the list of project resources:</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Project Resources Browse</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/Procurement/Proc Packaging Ph2/List of Project Resources.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body"> On taking the new <span class="Function">Add to Requisition</span> action, all selected requisition lines are added to the requisition and the user is returned to the Requisition Lines screen.</p>
+    </body>
+</html>

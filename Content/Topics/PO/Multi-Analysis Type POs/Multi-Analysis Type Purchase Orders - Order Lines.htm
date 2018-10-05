@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="844" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h2 MadCap:autonum="0.1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Multi-Analysis Type Purchase Orders - </MadCap:conditionalText>Order Lines</h2>
+        <p class="Body">New columns have been added to the order lines browses.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Order Line Fields</p>
+        <p class="screenshot" MadCap:conditions="COINS.UKOnly">
+            <img src="../../../Resources/Images_P-R/Procurement/Multi-Analysis POs/Order Lines.png" class="FullWidth" />
+        </p>
+        <p class="screenshot" MadCap:conditions="COINS.USOnly">
+            <img src="../../../Resources/Images_P-R/Procurement/Multi-Analysis POs/Order Lines US.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Columns</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Analysis Type	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is available if multi-analysis is allowed on the major order type (see <MadCap:xref href="PO Multiple Analysis Types - Parameters.htm">1, <i>Multiple Analysis Types - Parameters</i></MadCap:xref>). The possible values in the <span class="Field">Analysis Type</span> list depend on the major type of order being entered.</p>
+                    <p>Material Orders:</p>
+                    <ul class="CompactList">
+                        <li><MadCap:variable name="Variables.Jc Contract caps" />
+                        </li>
+                        <li>Asset</li>
+                        <li><MadCap:variable name="Variables.St Stock caps" /> Location</li>
+                        <li>Dept</li>
+                    </ul>
+                    <p>Workshop Orders:</p>
+                    <ul class="CompactList">
+                        <li>Workshop Ref</li>
+                        <li>Asset</li>
+                        <li><MadCap:variable name="Variables.St Stock caps" /> Location</li>
+                    </ul>
+                    <p>Asset Orders:</p>
+                    <ul class="CompactList">
+                        <li>Asset</li>
+                        <li>Workshop Ref</li>
+                        <li><MadCap:variable name="Variables.St Stock caps" /> Location</li>
+                    </ul>
+                    <p><MadCap:variable name="Variables.St Stock caps" /> Orders:</p>
+                    <ul class="CompactList">
+                        <li><MadCap:variable name="Variables.St Stock caps" /> Location</li>
+                        <li>Dept</li>
+                    </ul>
+                    <p>If the purchase order’s Accrual Type means that GRNs are not required, the “<MadCap:variable name="Variables.St Stock caps" /> Location” option is omitted from the list. </p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Analysis<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The analysis code for the order line. The code, field lookup and validation are determined by the analysis type selected.</p>
+                    <p>This column is labelled <span class="Field">Analysis</span> if multi-analysis is allowed on the major order type (see <MadCap:xref href="PO Multiple Analysis Types - Parameters.htm">1, <i>Multiple Analysis Types - Parameters</i></MadCap:xref>). Otherwise, the field label relates to the major order type (for example, <span class="Field"><MadCap:variable name="Variables.Jc Contract caps" /></span>, <span class="Field">Workshop Ref</span>).</p>
+                </div>
+            </div>
+        </div>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>If you use a <MadCap:variable name="Variables.st stock" /> item on an order line with the analysis type of <MadCap:variable name="Variables.St Stock caps" /> Location, it is for <MadCap:variable name="Variables.st stock" />. If you use a <MadCap:variable name="Variables.st stock" /> item on a line with a different analysis type, it is treated as a product code.</p>
+            </div>
+        </div>
+        <h3 MadCap:autonum="0.1.1"><MadCap:variable name="Variables.Se Service Order caps" />-Related Orders</h3>
+        <p class="Body">On <MadCap:variable name="Variables.se service order" />-related orders, when updating an order line, if the <span class="Field">Analysis Type</span> chosen is <MadCap:variable name="Variables.Jc Contract caps" />, the <span class="Field">Analysis</span> field is disabled and the <span class="Field">Service Order Number</span>, <span class="Field">Allowable Work</span>, <span class="Field"><MadCap:variable name="Variables.Cost Head caps" /></span> and <span class="Field">Cost Category</span> fields are visible and available for input.</p>
+        <h2 MadCap:autonum="0.2">Gains and Losses</h2>
+        <p class="Body">The Gains and Losses tab only shows lines that relate to <MadCap:variable name="Variables.jc contracts" />.</p>
+        <p class="Body">Also, if the PO parameter <span class="parameter">POG&amp;L</span> is set so that the requirement to enter gains and losses is determined on a <MadCap:variable name="Variables.jc contract" />-by-<MadCap:variable name="Variables.jc contract" /> basis, only lines pertaining to qualifying <MadCap:variable name="Variables.jc contracts" /> will be included.</p>
+        <h2 MadCap:autonum="0.3">Item Summary</h2>
+        <p class="Body">If multi-analysis is allowed on the major order type (see <MadCap:xref href="PO Multiple Analysis Types - Parameters.htm">1, <i>Multiple Analysis Types - Parameters</i></MadCap:xref>), and only if the order contains more than one analysis type, the <span class="Field">Analysis Type</span> and <span class="Field">Analysis</span> columns (as on the order lines browse) are shown.</p>
+    </body>
+</html>

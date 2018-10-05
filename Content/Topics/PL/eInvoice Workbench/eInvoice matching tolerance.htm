@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />eInvoice Matching Tolerance</h1>
+        <p>When the AMTEXP flag in the PO/AUTCHK parameter is set to Y the parameter PL/ETOLAMT gives a tolerance for the extended line amount when matching invoices to Purchase Orders and GRNs. The amount entered is in <MadCap:variable name="Variables.co_curunit" /> so to include <MadCap:variable name="Variables.co_curdec" /> you need to include a decimal point e.g. 1.50 incorporates a tolerance level of <MadCap:variable name="Variables.$" />1.50. The extended line amount will be considered matched if </p>
+        <p style="font-weight: bold;">(PO Amount – ETOLAMT) &lt;= PL Amount &lt;= (PO Amount + ETOLAMT)</p>
+        <p>When the PRCEXP flag in the PO/AUTCHK parameter is set to Y the parameter PL/ETOLPRC gives a tolerance for the line price. If the figure entered is a number then it is treated as a monetary amount, so in the <MadCap:variable name="Variables.uk-usa" /> 0.10 will be 10 <MadCap:variable name="Variables.co_curdec" />. The parameter may also be a percentage<MadCap:footnote class="footnote"><p> Both monetary and percentage tolerances can be set in the parameter. Use a pipe separated pairing also showing the maximum PO line price for each tolerance eg in the <MadCap:variable name="Variables.uk-usa" /> 500,0.10|10000,0.10% would use a ten <MadCap:variable name="Variables.co_curdec" /> tolerance for prices up to <MadCap:variable name="Variables.$" />500, one-tenth of one percent for prices above <MadCap:variable name="Variables.$" />500 but below <MadCap:variable name="Variables.$" />10,000, and no tolerance would be used for prices <MadCap:variable name="Variables.$" />10,000 or above.</p></MadCap:footnote> of the PO line price: 0.10% will be one-tenth of one percent of the PO line price. For a monetary amount the line price will be considered matched if </p>
+        <p style="font-weight: bold;">(PO Price – ETOLPRC) &lt;= PL Price &lt;= (PO Price + ETOLPRC)</p>
+        <p>For a percentage the line price will be considered matched if </p>
+        <p style="font-weight: bold;">(PO Price – (PO Price * ETOLPRC / 100)) &lt;= PL Price &lt;= (PO Price + (PO Price * ETOLPRC / 100))</p>
+        <p style="font-weight: bold;">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>GL/MASKTRUN - Truncate masked account with no sub level</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">GL/MASKTRUN - </span> Truncate masked account with no sub level
+</div>
+<div class="param_def">
+<p>This determines what happens when COINS masks two accounts, where the resulting account has sub levels that are not required as specified by the GL element setup. If this is set to <SPAN class="userinput">Y</SPAN>, these elements will be removed from the resulting account. For example, if account <SPAN class="screentype">_ _._ _ _ _.XYZ</SPAN> is masked with account <SPAN class="screentype">00.1234._ _ _</SPAN> , and the element <SPAN class="screentype">1234</SPAN> does not require a sub element, and <SPAN class="parameter">MASKTRUN</SPAN>=<SPAN class="userinput">Y</SPAN>, the resulting account code <SPAN class="screentype">00.1234.XYZ</SPAN> would be truncated to <SPAN class="screentype">00.1234</SPAN></p>
+<p></p>
+</div>
+</body>
+</html>

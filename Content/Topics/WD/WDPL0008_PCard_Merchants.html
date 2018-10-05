@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1296" MadCap:lastWidth="709">
+  <head>
+    <title>Setting Up PCard Merchants</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Setting Up PCard Merchants</h1>
+    <p>
+      <strong>Merchants</strong> are the providers of goods and services as identified on the PCard transactions.  <MadCap:variable name="General.ProductName" /> needs to be able to map the merchant on a transaction to a <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span><MadCap:variable name="Variables.pl supplier" /> account code.</p>
+    <ol>
+      <li>Use <span class="function" title="Function:%WPL2100BCOI">PCard <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Aliases</span>.</li>
+      <li>Set up a default line (without specifying a <MadCap:variable name="Variables.kco company" />) to specify which <MadCap:variable name="Variables.pl supplier" /> each merchant name corresponds to.</li>
+      <li>If necessary, add lines to map the merchant names to different <MadCap:variable name="Variables.pl supplier" /> codes in individual <MadCap:variable name="Variables.kco companies" />.</li>
+      <li>If a transaction with a merchant name that is not in this list arrives on the PCard Workbench, the <span class="field"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /></span>field will be blank.  When the user selects the appropriate <MadCap:variable name="Variables.pl supplier" /> and saves the transaction, <MadCap:variable name="General.ProductName" /> will add this as new mapping line in <span class="function" title="Function:%WPL2100BCOI">PCard <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Aliases</span>.</li>
+    </ol>
+    <p>You may also want to set up one or more <strong>Miscellaneous <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /></strong>records in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, to allow users to allocate transactions even if the actual <MadCap:variable name="Variables.pl supplier" /> has not been set up.</p>
+    <p> </p>
+    <p>Each merchant has a <strong>Merchant Category Code </strong>(MCC) that describes the goods or services they provide.  You can map these to <MadCap:variable name="General.ProductName" /> detail commodity codes, to provide <MadCap:variable name="General.ProductName" /> with a default analysis for transactions that relate to the merchant.</p>
+    <ol>
+      <li>Use <span class="function" title="Function:%WPL2110BSTE">PCard Merchant Category Codes</span> to map merchant categories to commodities. You can use the bulk <a href="WDUG0047_Bulk_Add_Update_and_Copy.html">add/update feature</a> to import the master list of Merchant Category Codes. </li>
+      <li>For each merchant category, you can specify a maximum transaction threshold; if a transaction exceeds this amount, a warning will be displayed.</li>
+      <li>You can also specify that a particular MCC is not normally allowed (for example, if you would not expect card holders to purchase goods of that type).  Transactions for merchants with these merchant categories produce a warning on the PCard workbenches which the administrator must specifically "allow" through.</li>
+    </ol>
+    <h2>Merchant Levels</h2>
+    <p>There are three different levels of merchant; this relates to the transaction information they provide.</p>
+    <table>
+      <col style="width: 8em;" />
+      <col />
+      <tbody>
+        <tr>
+          <td>
+            <span class="nw">Level 1:</span>
+          </td>
+          <td>The incoming XML transaction message only gives the gross amount of the transaction.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="nw">Level 2: </span>
+          </td>
+          <td>The XML message gives the gross amount and the <MadCap:variable name="Variables.vat" /> amount; also (if the card holder provided one) a point of sale reference. The point of sale reference can be a <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.jc contract" /> code, an overhead department, or a <MadCap:variable name="Variables.jc contract" />/WBS code. <MadCap:variable name="General.ProductName" /> can then use these to work out the costing analysis for the transaction.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="nw">Level 3:</span>
+          </td>
+          <td>The XML message gives the gross amount, the <MadCap:variable name="Variables.vat" /> amount, the point of sale reference (if the card holder provided one), and also the line item details.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

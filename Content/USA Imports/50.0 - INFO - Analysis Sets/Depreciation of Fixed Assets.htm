@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Depreciation of Fixed Assets</h1>
+        <h2>Module: Fixed Assets</h2>
+        <p>This document describes how depreciation of fixed assets works in COINS.</p>
+        <p>For further reference, see the how-to documents for “Adding an Asset” and “Running Depreciation.”</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>How an asset depreciates is based on certain factors specified on the Asset:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Initial WDV (written down value):  The Book Value that  depreciates from</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Start Date: When the asset starts depreciating</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Depreciation Method: How the asset depreciates</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Minimum Book Value:&#160; The value an asset depreciates to (the salvage value)</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>We will demonstrate by adding an asset.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>If not using the AP Reconciliation for capital purchases - : When adding an asset, the Minimum Book Value is entered in the Purchase tab (Figure 1). (if using capital purchase reconciliation – please refer to the How To Document for Capital Purchase (Fixed Asset) Invoice Reconciliation</li>
+        </ol>
+        <p class="caption">Figure 1: Purchase Tab of Adding an Asset</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Depreciation of Fixed Assets.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 233px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>In the Depreciation tab, enter the Depreciation Method, the Initial WDV (which will default from the purchase price), and the Start Date (Figure 2).</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>Then, click Save (Figure 2).</li>
+        </ol>
+        <p class="caption">Figure 2: Depreciation Tab, Click Save</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Depreciation of Fixed Assets_1.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 301px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>Figure 3 shows how depreciation will be calculated based on the values entered below, assuming depreciation is calculated once a year on January 1st:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Initial WDV: $60,000</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Start Date: 01/01/2018</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Depreciation Method: SL6-Straight Line 6 Years</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Minimum Book Value: 0.00</li>
+        </ul>
+        <p class="caption">Figure 3: Depreciation of an Example Asset by Year</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Date/Year</p>
+                </td>
+                <td>
+                    <p>Yearly Depreciation</p>
+                </td>
+                <td>
+                    <p>Value of the Asset</p>
+                </td>
+                <td>
+                    <p>Accumulated Depreciation</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>01/01/2018 (Year 0)</p>
+                </td>
+                <td>
+                    <p>-</p>
+                </td>
+                <td>
+                    <p>$60,000</p>
+                </td>
+                <td>
+                    <p>$0</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>01/01/2019 (Year 1)</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+                <td>
+                    <p>$50,000</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>01/01/2020 (Year 2)</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+                <td>
+                    <p>$40,000</p>
+                </td>
+                <td>
+                    <p>$20,000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>01/01/2021 (Year 3)</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+                <td>
+                    <p>$30,000</p>
+                </td>
+                <td>
+                    <p>$30,000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>01/01/2022 (Year 4)</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+                <td>
+                    <p>$20,000</p>
+                </td>
+                <td>
+                    <p>$40,000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>01/01/2023 (Year 5)</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+                <td>
+                    <p>$50,000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>01/01/2024 (Year 6)</p>
+                </td>
+                <td>
+                    <p>$10,000</p>
+                </td>
+                <td>
+                    <p>$0.00</p>
+                </td>
+                <td>
+                    <p>$60,000</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

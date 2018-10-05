@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="2" MadCap:lastHeight="636" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />International Dialling Codes</h1>
+        <p style="page-break-after: avoid;page-break-inside: avoid;"><span class="Function">International Dialling Codes Maintenance</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been amended to allow </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">allows </MadCap:conditionalText>the standard ISO2 country code to be stored.  This is required when validating telephone numbers.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/PCA Predict Integration/Intl Dialling Codes.png" class="FullWidth" />
+        </p>
+        <p MadCap:conditions="COINS.PrintOnly">International dialling codes are provided as standard data so these will be populated automatically as part of the upgrade.</p>
+        <p><span class="Function">Maintain Countries</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has also been amended to allow </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">also allows </MadCap:conditionalText>the ISO2 code to be stored. This is used when validating phone numbers that are not prefixed with an international dialling code, or where there is no country on the page.   </p>
+        <p>
+            <img src="../../../Resources/Images/SY/PCA Predict Integration/Maintain Countries.png" class="FullWidth" />
+        </p>
+        <p>If there is no country, <MadCap:variable name="General.ProductName" /> looks at the country record from the company configuration record.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/PCA Predict Integration/Company Configuration.png" class="FullWidth" />
+        </p>
+        <p>If there is no ISO2 code associated with this country, it consults the CO parameter <span class="parameter">DEFCNT</span> to determine the country and uses the ISO2 code from the country specified in this parameter.</p>
+    </body>
+</html>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="3933" MadCap:lastWidth="1113">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>If you left the reference on the person node blank (as above) this will create a new person record as well.&#160; If you already have a person record available then you just supply the reference here and the person will be attached to the new prospect record.</p>
+        <p>Additional node details:</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Node</p>
+                </td>
+                <td>
+                    <p>Information</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Detail/LevelInterest</p>
+                </td>
+                <td>
+                    <p>This corresponds to the level of interest in <MadCap:variable name="General.ProductName" /> and is how a user ranks the prospect seriousness about buying.&#160; This is a validated field and will require a value to be specified.&#160; Depending on the users configuration of <MadCap:variable name="General.ProductName" /> this can have a value of either N, V or S.&#160; Alternatively the user can specify there own level of interest codes.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Detail/Status</p>
+                </td>
+                <td>
+                    <p>This is the prospect status (e.g first time buyer, house to sell, house sold etc)&#160; This is a validated field in <MadCap:variable name="General.ProductName" /> and corresponds to a code in the ‘Purchaser Status’ user defined lookup table in <MadCap:variable name="General.ProductName" />.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Detail/ToReview</p>
+                </td>
+                <td>
+                    <p>This allows you to flag the new prospect as requiring review in <MadCap:variable name="General.ProductName" />.&#160; There is then a separate process for reviewing these new prospects in <MadCap:variable name="General.ProductName" />.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Requirement/MoveStart</p>
+                    <p>Requirement/MoveEnd</p>
+                </td>
+                <td>
+                    <p>When adding a new prospect we prompt for the looking for move timescales as a range of months.&#160; In the above example this would indicate that the purchaser is looking to move in between 1 and 4 months time.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Requirement/MixReq1</p>
+                    <p>Requirement/MixReq2</p>
+                </td>
+                <td>
+                    <p>This is the prospects required market mix (e.g. terraced, semi detached, detached, flat etc).&#160; This is a validated field in <MadCap:variable name="General.ProductName" /> and corresponds to a code in the ‘Market Mix’ user defined lookup table in <MadCap:variable name="General.ProductName" />.&#160; These can be left blank.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Requirement/HouseType1</p>
+                    <p>Requirement/HouseType2</p>
+                </td>
+                <td>
+                    <p>The standard house type which a prospect is interested in.&#160; The house type is the style of house.&#160; This would only be used if the <MadCap:variable name="General.ProductName" /> user is using standard house types and can be left blank.&#160; You can have development specific house types in <MadCap:variable name="General.ProductName" />, you would specify these in the Event or Development section of the message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Requirement/LocationReq1</p>
+                    <p>Requirement/LocationReq2</p>
+                </td>
+                <td>
+                    <p>The locations in which a prospect is interested in purchasing.&#160; This corresponds to a user defined code in the contract location table in <MadCap:variable name="General.ProductName" />.&#160; The second location is optional and can be left blank.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>CurrentProperty/Mix</p>
+                    <p>&#160;</p>
+                </td>
+                <td>
+                    <p>Similar to Requirement/MixReq1 except it is the market mix of the prospect’s current property.&#160; All CurrentProperty fields are optional.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Event/UserCode</p>
+                </td>
+                <td>
+                    <p>This is the user code for the event that is to be created on the prospect’s history.&#160; This allows a record to be created in the history detailing the initial contact.&#160; Most likely the <MadCap:variable name="General.ProductName" /> administrator will create a specific enquiry event for recording contact via their website.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Event/Contract</p>
+                    <p>Event/Plot1</p>
+                    <p>Event/Plot1</p>
+                    <p>Event/HouseType1</p>
+                    <p>Event/HouseType1</p>
+                </td>
+                <td>
+                    <p>The development, plot(s) and house type(s) a prospect has enquired about.&#160; To record these the UserCode event must be configured in <MadCap:variable name="General.ProductName" /> to be VISIT or ENQUIRY system event.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Event/AddRequired</p>
+                </td>
+                <td>
+                    <p>Determines whether the development details entered on this event are automatically added to the prospect’s required development list.&#160; If you set to N then these can specified manually using the Developments section of this message.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>EnquirySources/Source/Code</p>
+                </td>
+                <td>
+                    <p>This is the code that maps to a valid source of enquiry in <MadCap:variable name="General.ProductName" />.&#160; Most likely a specific source of enquiry will be setup for website enquiries.&#160; Note whether multiple sources of enquiry are allowed is determined by the configuration of the HS module. </p>
+                    <p>&#160;</p>
+                    <p>The source of enquiry is only recorded if UserCode event is configured in <MadCap:variable name="General.ProductName" /> to be VISIT or ENQUIRY system event. </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>MoveReasons/Reason/Code</p>
+                </td>
+                <td>
+                    <p>The reason for buying code.&#160; This maps to a user defined code in the ‘Reason for Buying’ table in <MadCap:variable name="General.ProductName" />.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Developments/Development</p>
+                </td>
+                <td>
+                    <p>This allows you record the development(s), plot(s) and house type(s) a prospect is actually interested in.&#160; These are added to the Prospects Required Development list.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>People/Person</p>
+                </td>
+                <td>
+                    <p>Contains the personal details (name, address etc) for the person being attached to the prospect record.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Captions/Caption</p>
+                </td>
+                <td>
+                    <p>This allows you to specify the value for a prospect captions.&#160; These are user defined fields in <MadCap:variable name="General.ProductName" />.&#160; The code and number attributes refer to the unique code given to the caption group and the number is the relative number of the caption in the group (maximum of 10 per group).</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>If the add was successful this would return a XML message with the following format:</p>
+    </body>
+</html>

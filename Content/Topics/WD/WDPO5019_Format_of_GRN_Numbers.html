@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Format of GRN Numbers</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Format of GRN Numbers</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> gives each delivery (GRN) a unique reference number. These GRN numbers are always generated automatically by <MadCap:variable name="General.ProductName" />, but you can control the format of the numbers. </p>
+    <p>The format of GRN numbers is determined by the PO parameters <span class="parameter">GRNDELIM </span>and <span class="parameter">GRNFORM</span>. The number is made up of the <MadCap:variable name="Variables.jc contract" /> code, followed by the delimiter specified in <span class="parameter">GRNDELIM</span>, followed by a sequence number as determined by <span class="parameter">GRNFORM</span>. For overhead orders, the number is made up of the delimiter and the sequence number only. </p>
+    <p>For example, if <span class="parameter">GRNDELIM </span>is <span class="userinput">/</span> and <span class="parameter">GRNFORM </span>is <span class="userinput">GR9999</span>, the first GRN number for <MadCap:variable name="Variables.jc contract" /> A100 will be <span class="userinput">A100/GR0001</span>. The twentieth GRN for an overhead order will be <span class="userinput">/GR0020</span>. </p>
+    <p>Note that users may be more likely to use the <MadCap:variable name="Variables.pl supplier" />'s delivery ticket number to identify the delivery. </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_grndelim.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_grnform.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="779" MadCap:lastWidth="914">
+  <head>
+    <title>Wrapping and Truncating Data in a Configurable Document</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Wrapping and Truncating Data in a Configurable Document</h1>
+    <p>Normally, data will wrap within the width you set for the field, so that the "cell" will expand vertically and push the following lines down. So for example if you configure a company name field to display in an area, say, 25mm wide, you might get the following output for two different companies:</p>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width: 25mm;" valign="top">
+            <p>
+              <span style="font-family: Times;">
+                <strong>A company<br />with a very<br />long name </strong>
+              </span>
+            </p>
+            <p>
+              <span style="font-family: Times;">
+                <strong>The address </strong>
+              </span>
+            </p>
+          </td>
+          <td> </td>
+          <td style="width: 25mm;" valign="top">
+            <p>
+              <span style="font-family: Times;">
+                <strong>Short name </strong>
+              </span>
+            </p>
+            <p>
+              <span style="font-family: Times;">
+                <strong>The address </strong>
+              </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>But you might want to ensure that the address line is always printed in the same place (to go on pre-printed stationery, for example, or simply to prevent the header from expanding and pushing the body and footer lines down). </p>
+    <p>To do this, you can truncate the display of the company name; If you add:</p>
+    <blockquote style="margin-right: 0px;" dir="ltr">
+      <p>overflow=hidden,wrap-option=no-wrap</p>
+    </blockquote>
+    <p>to the extra formatting of the field, there will be no wrap and the field contents will be truncated at the field width:</p>
+    <table>
+      <tbody>
+        <tr>
+          <td style="width: 25mm;overflow: hidden;" valign="top">
+            <div style="width: 25mm;overflow: hidden;">
+              <p>
+                <span style="white-space: nowrap;font-weight: bold;">
+                  <span style="font-family: Times;">A company with a very long name</span>
+                </span>
+              </p>
+            </div>
+          </td>
+          <td> </td>
+          <td style="width: 25mm;" valign="top">
+            <p>
+              <strong>
+                <span style="font-family: Times;">Short name</span>
+              </strong>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>
+              <strong>
+                <span style="font-family: Times;">The address </span>
+              </strong>
+            </p>
+          </td>
+          <td> </td>
+          <td valign="top">
+            <p>
+              <span style="font-family: Times;">
+                <strong>The address</strong>
+              </span>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">Unexpected wrapping is VERY BAD on documents that are split and sent to different recipients (e.g. payslips, remittances etc.) as it can throw out the page breaks which results in wrong document going to each recipient.</div>
+    <p>Please note that on BODY lines, <MadCap:variable name="General.ProductName" /> needs to keep track of the number of lines, so if you DO want a long description to wrap, use <span class="field">View As</span><span class="userinput">Editor</span> and enter a <span class="field">Format </span>- for example: <span class="userinput">x(25)</span> - to specify where you want to wrap.</p>
+  </body>
+</html>

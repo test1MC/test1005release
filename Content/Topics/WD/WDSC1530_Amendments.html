@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1103" MadCap:lastWidth="1136">
+    <head><title>Amending a Contract Notification</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Amending a Contract Notification</h1>
+        <p>If you need to change the end date or the value of a relevant contract that has been notified, create a notification amendment.</p>
+        <div class="process">
+            <h2 class="print">To amend a contract notification electronically:</h2>
+            <ol>
+                <li>Go to:</li>
+                <ul>
+                    <li><span class="function" title="Function:%WSC2010BSBS">Subcontract Maintenance</span>,</li>
+                    <li><span class="function" title="Function:%WSC1370BSBS">Subcontract RCT Details Review/Update</span>,
+<p>or</p></li>
+                    <li><span class="function" title="Function:%WSC1360BSBM">Subcontractor RCT Details Review/Update</span> (for an ongoing contract)</li>
+                </ul>
+                <li>Select the subcontract or subcontractor whose notification you want to amend.</li>
+                <li>Choose <span class="userselect">Create Contract Notification Amendment </span>from the action list.</li>
+                <li>Go to <span class="function" title="Function:%WSC1510BSFY">Current</span>.</li>
+                <li>Select the notification amendment record.</li>
+                <li>Choose <span class="userselect">Submit to Revenue </span>from the action list.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">To amend a contract notification for an order paid through PL, complete the Contract Notification Amendment outside of <MadCap:variable name="General.ProductName" /> (directly through ROS).&#160; Then amend the details in <MadCap:variable name="General.ProductName" /> on the order or the next invoice against the order.</div>
+            <h2>To amend a contract notification manually:</h2>
+            <ol>
+                <li>Amend the contract on ROS.</li>
+                <li>Open the subcontract record in <span class="function" title="Function:%WSC2010BSBS">Subcontract Maintenance</span>.
+<p class="noteheader">NOTE</p><div class="note">You can use <span class="function" title="Function:%WSC1370BSBS">Subcontract RCT Details Review/Update</span>if you find it more convenient.</div></li>
+                <li>Amend the following fields as required:
+<ul><li><span class="field">Contract ID</span>: This is the unique identifier for the Relevant Contract as allocated by Revenue at Contract Notification.&#160; This needs to be included in the Payment Notification for every payment under that contract.&#160;&#160;</li><li>End Date of Work (<span class="field">End Date </span>field): This is mandatory for subcontracts which are Relevant Contracts as Payment Notifications will not be accepted by Revenue more than six months after the end date.&#160;</li></ul><p class="noteheader">NOTE</p><div class="note">Only users identified in the <span class="parameter">OVRUSERS</span> parameter are able to amend the Contract ID and End Date on subcontracts where the contract notification was submitted electronically from <MadCap:variable name="General.ProductName" />.</div></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SCIRE/scire_ovrusers.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

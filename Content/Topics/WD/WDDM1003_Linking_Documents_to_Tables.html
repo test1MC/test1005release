@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2895" MadCap:lastWidth="1419">
+    <head><title>Linking Documents to Tables</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Linking Documents to Tables</h1>
+        <p>To allow users to attach documents to a <MadCap:variable name="General.ProductName" /> record type, you need to set up a Document Management link for the corresponding database table. This enables the "Attach Documents" icon on the relevant page. </p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/DM_100302.gif" MadCap:conditions="COINS.Pre-v1105" class="HalfWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/DM-100302-1106.png" class="HalfWidth" />
+        </p>
+        <div class="process">
+            <h2 class="print">Setting up documents:</h2>
+            <p>Set up the tables you wish to attach documents to:</p>
+            <ol>
+                <ol>
+                    <li>Go to <span class="function" title="Function:%WSY2530BSTB">Document Management Links</span>.
+<p><img src="../../Resources/Images_D-F/DM/DM_100301.gif" MadCap:conditions="COINS.Pre-v1105" class="FullWidth" /></p><p><img src="../../Resources/Images_D-F/DM/dm-100301-1106.png" class="FullWidth" MadCap:conditions="COINS.v1106" /><br /></p></li>
+                    <li>For each table you want to attach documents to, enter the table name.</li>
+                    <li>In the <span class="field">Base URL </span>field, enter <span class="userinput"><MadCap:variable name="General.ProductName" /></span> unless you are not using <MadCap:variable name="General.ProductName" /><span class="module">Document Management </span>to store the attached documents.&#160;
+<p class="noteheader">NOTE</p><div class="note">This only works if the page has the table you want to attach documents to as one of the header tables. If the table you want to attach documents to is a body table, you will need to add a column to the browse to show a button next to each record.</div></li>
+                </ol>
+            </ol>
+            <p MadCap:conditions="COINS.Pre-v1105">To identify the base table name, click on the page header title, such as <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> - <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> Invoice Details.</p>
+            <p>To identify the base table name, navigate to the page required, such as  <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> - <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> Invoice Details. On the page use the keyboard shortcut of CTRL-Shift-Z</p>
+            <p>
+                <img src="../../Resources/Images_D-F/DM/DM_100303.gif" MadCap:conditions="COINS.Pre-v1105" class="FullWidth" />
+            </p>
+            <p>
+                <img src="../../Resources/Images_D-F/DM/dm-100303-1106.png" class="FullWidth" MadCap:conditions="COINS.v1106" />
+            </p>
+            <p>&#160;</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>Create a Unix directory as the base directory for documents that have been attached; for example, "attached" under ../var/data. Ensure this directory has full rwx permissions&#160;- <span class="userinput nw">chmod 777 attached</span>. Use <span class="function" title="Function:%WDM2010bdst"><a href="WDDM1017_Disk_Maintenance.html">Disk Maintenance</a></span> to specify the path to this directory.&#160; </p>
+            <p>Ensure that the upload script and directory are set correctly: see <a href="WDSY0077_File_Uploads.html">File Uploads</a>.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/DM/dm_pooldef.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

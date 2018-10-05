@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/INSMAND - Subcontractor insurance details mandatory</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/INSMAND - </span> Subcontractor insurance details mandatory
+</div>
+<div class="param_def">
+<p>This allows you to make certain fields mandatory when entering <MadCap:variable name="Variables.sc insurance"/> details for a new subcontractor.</p>
+<p>If you are using <MadCap:variable name="Variables.sc insother"/> (<span class="parameter">EXTINS</span> = <span class="userinput">Y</span>) you can set up any number of <MadCap:variable name="Variables.sc insurance"/> types (that is, you are not restricted to the four fixed insurance types). In this case, if <span class="parameter">INSMAND</span> is set to <span class="userinput">Y</span> then for any <MadCap:variable name="Variables.sc scheme"/> with the category 'insurance', the <MadCap:variable name="Variables.sc insurance"/> provider, policy number, and <MadCap:variable name="Variables.expiry"/> dates must be entered.  For dated items, the <MadCap:variable name="Variables.expiry"/> date must be entered.</p>
+<p>If <strong>not using </strong><MadCap:variable name="Variables.sc insother"/> (<MadCap:snippetBlock src="../../../Resources/Snippets/coinsplus.flsnp"/> only; <span class="parameter">EXTINS</span> = <span class="userinput">N</span>) then <span class="parameter">INSMAND</span> can have up to four entries (in a pipe-separated list):</p>
+<ul>
+<li>If entry 1 is set to <span class="userinput">Y</span> then the public liability <MadCap:variable name="Variables.expiry"/> date must be entered.</li>
+<li>If entry 2 is set to <span class="userinput">Y</span> then the employer's liability <MadCap:variable name="Variables.expiry"/> date must be entered.</li>
+<li>If entry 3 is set to <span class="userinput">Y</span> then contractor's all-risk <MadCap:variable name="Variables.expiry"/> date must be entered.</li>
+<li>If entry 4 is set to <span class="userinput">Y</span> then professional indemnity <MadCap:variable name="Variables.expiry"/> date must be entered.</li>
+</ul>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sc/sc_extins.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

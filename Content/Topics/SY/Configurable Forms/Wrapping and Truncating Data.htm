@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1202" MadCap:lastWidth="1267">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Wrapping and Truncating Data</h1>
+        <p>Normally, data will wrap within the width you set for the field, so that the "cell" will expand vertically and push the following lines down. So for example if you configure a company name field to display in an area, say, 25mm wide, you might get the following output for two different companies: </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>A company<br></br>with a very<br></br>long name </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Short name </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>The address </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>The address </p>
+                </td>
+            </tr>
+        </table>
+        <p>But you might want to ensure that the address line is always printed in the same place (to go on pre-printed stationery, for example, or simply to prevent the header from expanding and pushing the body and footer lines down). To do this, you can truncate the display of the company name using the Format field.</p>
+        <p>
+            <img src="../../../Resources/Images/Configurable Forms/Defining the Content of the_7.png" class="FullWidth">
+            </img>
+        </p>
+        <p>If you give it a format of, say x(12), you would get: </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>A company wi </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Short name</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>The address </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>The address </p>
+                </td>
+            </tr>
+        </table>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">On BODY lines, <MadCap:variable name="General.ProductName" /> needs to keep track of the number of lines, so if you want a long description to wrap, use View As Editor and use the Format to specify where you want to wrap. </p>
+        <p>To summarise, Format can be used for dividing up (wrapping) text if it's View As Editor, and for truncating text if not. </p>
+        <p>&#160;</p>
+    </body>
+</html>

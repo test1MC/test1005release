@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="968" MadCap:lastWidth="904">
+  <head>
+    <title>Reserved Styles</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Reserved Styles</h1>
+    <p>There are a number of special formats you can apply to text.  These are:</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>Field</td>
+          <td>Field labels. Example: <span class="field">Account No.</span></td>
+        </tr>
+        <tr>
+          <td>Field Name</td>
+          <td>Name of a database field. Example: <span class="fieldname">avm_num</span></td>
+        </tr>
+        <tr>
+          <td>Key</td>
+          <td>Keyboard keys like <span class="key">Ctrl</span>, or on-screen text buttons like <span class="key">OK</span>.</td>
+        </tr>
+        <tr>
+          <td>Module</td>
+          <td>
+            <MadCap:variable name="General.ProductName" /> module names.  Example: <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span>.</td>
+        </tr>
+        <tr>
+          <td>Parameter</td>
+          <td>
+            <MadCap:variable name="General.ProductName" /> parameter names.  Example: <span class="parameter">PL/AUTOREF</span>.</td>
+        </tr>
+        <tr>
+          <td>Screen Type</td>
+          <td>Text displayed on the screen. Example: <span class="screentype">Loading. Please wait.</span></td>
+        </tr>
+        <tr>
+          <td>User Input</td>
+          <td>Text that the user types. Example: <span class="userinput">myfile.doc</span></td>
+        </tr>
+        <tr>
+          <td>User Select</td>
+          <td>Option that the user selects from a menu or drop down. Example: <span class="userselect">Apply Changes</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <div class="process">
+      <h2 class="print">To apply a reserved style:</h2>
+      <ol>
+        <li>Highlight the text you want to apply the style to.</li>
+        <li>Click Styles drop down (the first one).</li>
+        <li>Choose the name of the style from the drop down list.</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Reserved styles - configuration</h2>
+      <p>The reserved styles are set up in the style sheet. </p>
+      <p>If you want to use additional styles, edit the <em>docuser.css</em> style sheet (in the /styles/ directory of the <MadCap:variable name="General.ProductName" /> installation).  For example, to add a red, underlined style called <strong>ulred</strong>, you would enter:</p>
+      <p>
+        <span class="screentype">SPAN.ulred{<br />    color:red;<br />    text-decoration:underline;<br />}</span>
+      </p>
+      <p>in the style sheet. </p>
+      <p>To get the styles to appear in the drop down, add the style name to <span class="function" title="Function:%WSY2037BSTE">HTML Span</span>.</p>
+    </div>
+  </body>
+</html>

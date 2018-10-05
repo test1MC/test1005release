@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />IF&#160; </h1>
+        <p>An IF statement is split into two separate areas and all parameters of the 'If statement' are separated with commas</p>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="1">
+            <p>The Test</p>
+            <p>The Result</p>
+        </ol>
+        <p style="font-weight: normal;"><b>The TEST</b><![CDATA[
+        ]]></p>
+        <p>&#160; The first section of an 'if statement' can be referred to as the 'Test' it has to compare two numerical values. If the field that is being tested is a character value then that field has to be converted into a numerical value to do the 'Test'. (see calculations on character values)</p>
+        <p style="font-weight: bold;"><span style="font-weight: normal;">The RESULT</span>
+        </p>
+        <p>&#160; The result will either be a true or false answer.&#160; Without the specification of any true and false results an if statement will automatically return a 1 if true and a 0 if false. Therefore it may be a simple test between two numbers and can be defined as follows:</p>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Simple examples of an 'IF statement'.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Example">IF(a,EQ,b);&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; returns 1 if true / 0 if false<br />IF(a,EQ,b,truevalue,falsevalue);&#160; returns truevalue if true /falsevalue if false.<br /><img src="../../../Resources/Images_A-C/BI/OA Report Writer/IF.png" style="left: 0; width: 329px; height: 207px;" class="FullWidth" /><br /></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>The operands available for use within the IF function are :</p>
+        <table style="margin-left: 0; margin-right: auto;">
+            <col style="width: 80px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>EQ</td>
+                    <td>Equal To</td>
+                </tr>
+                <tr>
+                    <td>NE</td>
+                    <td>Not Equal To</td>
+                </tr>
+                <tr>
+                    <td>LT</td>
+                    <td>Less Than</td>
+                </tr>
+                <tr>
+                    <td>GT</td>
+                    <td>Greater Than</td>
+                </tr>
+                <tr>
+                    <td>LE</td>
+                    <td>Less Than or Equal To</td>
+                </tr>
+                <tr>
+                    <td>GE</td>
+                    <td>Greater Than or Equal To</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If the'Result' of an IF statement needs to be a character value then the IF statement must be encapsulated within $ signs.&#160; </p>
+        <p class="Example">$IF$(a,eq,b,"Yes","No")</p>
+        <p>If a variable is to be assigned then the variable will be situated between the first $ sign and the IF statement. </p>
+        <p class="Example"> $var=IF$(a,eq,b,"Yes","No") </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/IF_1.png" style="visibility: visible;mso-wrap-style: square;width: 378px;height: 263px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>NB : Using an IF statement to create a simple Flag, in the example below the calculation is setting a variable, dFlag, to either 1 or 0 depending on the comparison of the Valuation Due Date against the Report Selection Date passed through to the report - this flag can be used to multiply values in other fields.</p>
+        <p>dFlag = IF(datestring(cs_valcert.cvc_duedate),LT,datestring('{RS_date__2}'),1,0);</p>
+        <p>Note : Date format fields require special consideration – please see below.</p>
+        <p>Example of above:</p>
+        <p>Field1={RO_ContractCosts^TD} * dFlag</p>
+        <p>Field2={RO_ContractRevenue^TD} * dFlag</p>
+        <p>Field3=({RO_ContractRevenue^TD} - {RO_ContractCosts^TD}) * dFlag</p>
+        <p>This means that only when the dFlag is true will these figures for Field1,Field2 &amp; Field 3 will appear as a multiplication by Zero will return value of Zero.</p>
+    </body>
+</html>

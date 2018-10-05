@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Pools</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Pools</h1>
+        <p>When you scan documents, <MadCap:variable name="General.ProductName" /> places them in a pool until they are indexed.&#160;You must set up at least one pool, and may want to set up more than one, for example, to keep documents scanned by different departments separate. </p>
+        <div class="process">
+            <h2 class="print">Pool Maintenance</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WDM2010BDMP">Pool Maintenance</span>.</li>
+                <li>Create a pool for OA CIM (scanning/<MadCap:variable name="Variables.purchase ledger" /> invoice indexing). 
+<p /><img src="../../Resources/Images_D-F/DM/DM_100501.gif" /></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>Set the <span class="parameter">POOLDEF </span>parameter and create the Unix directory - we recommend creating it under $BASE (for example, "dmshare" under $BASE/var/). Ensure the directory has full rwx permissions, for example: <span class="userinput nw">chmod 777 dmshare </span></p>
+            <p>
+                <img src="../../Resources/Images_D-F/DM/DM_100304.gif" />
+            </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/DM/dm_pooldef.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

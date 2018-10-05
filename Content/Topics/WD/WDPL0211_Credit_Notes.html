@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Credit Notes</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Credit Notes</h1>
+    <p>Credit notes are basically entered in the same way as <a href="WDPL0210_Invoices.html">invoices</a>.   Choose a transaction type that represents credit notes, and enter the amounts as positive values (same as invoices).  However, when completing the batch header for a batch of credit notes, if the <a href="WDUG0054_Batch_Control_Totals.html">control total fields</a> are set up to be input fields, enter the batch control amounts as negative values. </p>
+    <p>After you have entered the credit note, you can allocate it to offset invoice values.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDPL0318_Matching_Credit_Notes.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To allocate credit notes to invoices:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WPL1500BCOB">Allocate Credits</span>.</li>
+        <li>Enter a new batch.</li>
+        <li>Enter a new allocation transaction for each <MadCap:variable name="Variables.pl supplier" />.</li>
+        <li>If you are running a sector-based ledger, you must specify the sector to which you want to apply the payment.
+<p><MadCap:variable name="General.ProductName" /> displays credit notes and outstanding transactions for the <MadCap:variable name="Variables.pl supplier" />. </p><p>Before allocating (matching) a credit note to a transaction, you can check the invoice or credit note status and other details, by clicking the link in the <span class="field">Internal Reference </span>column.  Click <strong>Back</strong> to return to the list of transactions.</p></li>
+        <li>Select the credit notes and the invoices to match (allocate) them to. You can allocate a credit note to pay part of an invoice. The allocation amount must equal zero.
+<p class="noteheader">NOTE</p><div class="note">This procedure does not allow you to leave a credit amount unallocated. If there is a remaining balance, it must be used to pay another invoice. The amount of the selected credit <span class="nw">note(s)</span> must match the amount of the selected <span class="nw">invoice(s)</span> that you want to pay. </div></li>
+        <li>
+          <a href="WDUG0056_Posting_a_Batch.html">Post</a> the allocation batch. 
+<p><MadCap:variable name="General.ProductName" /> generates a payment reference number for each payment allocated, whether it was made by a <MadCap:variable name="Variables.cheque" /> or a credit transaction. </p><p>The details of the payment batch are then processed in order to update the <span class="module">General Ledger</span>.</p></li>
+      </ol>
+    </div>
+  </body>
+</html>

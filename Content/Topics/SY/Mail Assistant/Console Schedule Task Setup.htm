@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Setting up a Scheduled Task<MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"> for Outlook Integration</MadCap:conditionalText></h1>
+        <p class="Body">If the integration is being run as a console program (rather than as a Windows service), it will run once and then terminate.&#160; To enable regular replication, the replication software needs to be set up as a scheduled task, running as the replication account. Use the Console Schedule Task Setup screen during the installation to set up the task schedule.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/COINS Mail Assistant/Console Schedule Task Setup.png" class="FullWidth" />
+        </p>
+        <ol>
+            <li>In the Account Name, PW and Domain fields, enter the name, password and domain for the replication account.</li>
+            <li>Choose how often you want the scheduled task to run.</li>
+            <li>Click Create to create the schedule.</li>
+        </ol>
+        <p class="Body">If the account that the scheduled task will use does not exist, click the Launch Task Scheduler button and set up the account.</p>
+        <p class="Body">The installation routine will create the initial schedule, but if you need to make any changes to the schedule later, use the Launch Task Scheduler to make the changes using the Task Scheduler.</p>
+        <p class="Body">The installation process will also create a desktop shortcut that allows you to run the integration program directly. On the Polling Interval screen, select how often you want the integration program to poll the Exchange server:</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/COINS Mail Assistant/Polling Interval.png" />
+        </p>
+        <p class="Body">Click Next. The final screen allows you to confirm that you want to install the application.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/COINS Mail Assistant/InstallShieldBeginInstallation.png" />
+        </p>
+        <p class="Body">When you click Install, the installer creates the necessary files, sets up the schedule and creates a desktop icon to run the integration as a console program.</p>
+    </body>
+</html>

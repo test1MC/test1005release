@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2981" MadCap:lastWidth="1101">
+    <head><title>Reviewing Electronic Invoices</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Reviewing Electronic Invoices</h1>
+        <p>The <span class="function" title="Function:%WPL9010SCTL">Loaded File Details</span> (Review screen) shows a list of the individual invoices in a message.&#160; It allows you to correct errors and review invoices that have been marked as 'held'.&#160; You can get to this screen by:</p>
+        <ul>
+            <li>Using the <span class="userinput">Load </span>action to load a message on the first screen of <span class="function" title="Function:%WPL9011BSMP">Electronic Invoice Workbench</span>.&#160; If there are exceptions in the message, the Review screen opens straight away; if there are no exceptions <MadCap:variable name="General.ProductName" /> gives you the option to open the Review screen.</li>
+            <li>Clicking <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> against a loaded message on the first screen of <span class="function" title="Function:%WPL9011BSMP">Electronic Invoice Workbench</span>.</li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To review invoices:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL9010SCTL">Loaded File Details</span>.
+<p><img src="../../Resources/Images_P-R/PL/PL_063101.png" /></p></li>
+                <li>An invoice that, for whatever reason, cannot be moved to the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> will be flagged as ERR in the <span class="field">Status </span>column: an error (or more precisely an exception). You can use the filter to see only those invoices that have been flagged as exceptions. By pointing to the <span class="field">Status </span>column you can see what the exception is for a particular invoice. Erroneous purchase order numbers and duplicated <MadCap:variable name="Variables.pl supplier" /> invoice numbers can be corrected in the workbench.</li>
+                <li>If the invoice is associated with a purchase order, you can see the order&#160;by clicking the <span class="field">PO Number </span>link.</li>
+                <li>To see the XML source of an invoice, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/xml.svg" class="button" />.&#160; To see a human-readable view of the XML invoice, rendered using a stylesheet, click <img src="../../Resources/Images/render.gif" class="button" />.&#160; If the EC parameter <span class="parameter">SHOWINV </span>is set to <span class="userinput">Y</span> and you have dual monitors, the rendered view will appear on the second monitor.&#160; The image has a <span class="key">Print</span>&#160;button to produce a hardcopy of the image.&#160;
+<p><img src="../../Resources/Images_P-R/PL/PL_063102.png" /></p></li>
+                <li>You can reject individual invoices using the <span class="userinput">Reject </span>action.&#160; This completely removes the invoice from the workbench.</li>
+                <li>To see more detail about an invoice and, if possible, resolve any exceptions, click the <span class="field"><MadCap:variable name="Variables.supplier reference" style="text-transform: capitalize;" /></span>link.&#160; If an exception can't be resolved the invoice will remain in the workbench.&#160;
+<p><img src="../../Resources/Images_P-R/PL/PL_063103.png" /></p></li>
+                <li>In the Details screen, you can:</li>
+                <ul>
+                    <li>View the invoice line details&#160;- click the Lines&#160;tab.</li>
+                    <li>View the Invoice To and Deliver To addresses as sent in the XML message - click the Addresses tab.</li>
+                    <li>Change the order number and the invoice transaction type. A unique invoice reference number for the <MadCap:variable name="Variables.pl supplier" /> and a valid <MadCap:variable name="Variables.jc contract" /> will be required. Some <MadCap:variable name="Variables.pl suppliers" /> may be able to send you costing information in the XML message; if so the costing distribution can also be entered using the data sent by the <MadCap:variable name="Variables.pl supplier" /> and preset defaults (see <a href="../WDPL0637_Convert_PINV_to_PINN.html">How To Change eInvoice PINVs to PINNs</a>).&#160; You can also change the <MadCap:variable name="Variables.vat" /> distribution and the financial hold code (see <a href="../PL/eInvoice Workbench/How to Hold eInvoices.htm">How To Hold eInvoices</a>).</li>
+                </ul>
+                <li>If an invoice is associated with a <MadCap:variable name="Variables.pl supplier" /> that is also linked to a subcontractor record in the same <MadCap:variable name="Variables.kco company" /> (they share the same account code), or the associated PO is flagged to be for operated <MadCap:variable name="Variables.pc plant" />, then you can note a <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Content component on the invoice. If the <span class="parameter">PL/LABCONT%</span> parameter has a value, <MadCap:variable name="General.ProductName" /> uses this to determine what percentage of the total invoice value will be allocated as a <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Content value.</li>
+                <li>It is possible to hold back or retain an invoice in the workbench. These held invoices cannot be moved to the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>.&#160; There are parameters that allow a whole selection of invoices to be put on hold based on the invoice value as they come into the workbench.
+<p class="noteheader">NOTE</p><div class="note">This is not related to financial or commercial hold codes.</div>
+Held invoices are flagged with a <MadCap:variable name="Variables.tick" /> in the <span class="field">Held </span>column.&#160;</li>
+                <ul>
+                    <li>To hold an invoice, use the <span class="userinput">Hold </span>action.</li>
+                    <li>To release an invoice so it can be moved to the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, use the <span class="userinput">Off Hold </span>action.&#160;</li>
+                    <li>To hold or release all invoices in the message, click the Options button and use the <span class="userinput">Hold All </span>or <span class="userinput">Off Hold All </span>options.&#160;</li>
+                </ul>
+                <li>When you have reviewed the invoices, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> to return to the main <span class="function" title="Function:%WPL9011BSMP">Electronic Invoice Workbench</span> screen, where you can create an invoice batch.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>The PL parameter <span class="parameter">ACCNODEF</span>H determines how the <MadCap:variable name="Variables.pl supplier" /> account is sought. If set to PO and the invoice XML refers to a valid purchase order in the current <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />, the <MadCap:variable name="Variables.pl supplier" /> account is drawn from the purchase order. The workbench will use the PL account number derived from the PO even if it is for a <MadCap:variable name="Variables.pl supplier" /> other than the one sending the message. In this case an exception is indicated. If set to MSG, the contractor's <MadCap:variable name="Variables.pl supplier" /> account code is thought to be known to the <MadCap:variable name="Variables.pl supplier" />, or the ETC hub, and it is contained in the <span class="screentype">&lt;BuyersCodeForSupplier&gt;</span> tag in the XML.</p>
+            <p>The transaction type is set initially from the BASDA-<MadCap:variable name="General.ProductName" /> mapping and typically it is one that requires the invoice to reference a Purchase Order (commonly called INV or PINV transactions).</p>
+            <h2>Hold codes for eInvoices</h2>
+            <p>Set the following PL parameters so that a default hold code appears when creating the batch from the eInvoice workbench:</p>
+            <ul>
+                <li><span class="parameter">PL/DEFHOLD</span> to <span class="userinput">Y</span></li>
+                <li><span class="parameter">PL/DEFHCODE </span>to the default code you require</li>
+                <li>If you want all registered invoices to be held, then set <span class="parameter">PL/HLDREGIN </span>to <span class="userinput">Y</span>. Registered invoices (that is, any that have not been able to be costed but are not in error) on the workbench will be put on hold.</li>
+            </ul>
+            <p>Default values for the financial hold code are enabled by the PO parameters <span class="parameter">HLDOKCRN </span>and <span class="parameter">HLDOKINV</span>. The PL parameters <span class="parameter">EAUTOMHI </span>and <span class="parameter">EAUTOMHC </span>if set blank will overrule <span class="parameter">HLDOKINV </span>and <span class="parameter">HLDOKCRN</span>, treating them always as NO.</p>
+            <p>For costed invoices, anything above the <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Author<MadCap:variable name="Variables.is" />ation limit (in <span class="function" title="Function:%WPL2000BAVM"><MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /></span>) will be put on hold, otherwise not.</p>
+            <p>The <span class="parameter">PL/INVINPER </span>parameter is used to ensure that only transactions dated in the current period are allowed through the manual entry. The workbench respects this parameter as well.<br /></p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_lovalhld.htm" />
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_lovalinv.htm" />
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_showinv.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_accnodef.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhcode.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhold.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_eautomhc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_eautomhi.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_hldregin.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_invinper.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_labcont_25.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_hldokcrn.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_hldokinv.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

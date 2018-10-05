@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Single Form Order Entry - Header Fields</title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Single Form Order Entry - </MadCap:conditionalText>Header Fields</h1>
+        <p class="Body">Most of the fields behave in the same way as the fields on the standard entry screens. The comments below highlight any differences.</p>
+        <p class="Subtitle">Top Left Pane – New Material Order</p>
+        <p class="FieldLabel"><span class="Field">PO Number</span><![CDATA[	]]></p>
+        <p class="IndentFieldDef">	This field only appears if the PO parameter POALLWMN is set to Y.  Field validation ensures that any value entered in this field does not already exist as a purchase order number. (Currently in standard PO Entry this validation only takes place when the order header screen is saved.)</p>
+        <p class="FieldLabel"><span class="Field">Immediate Commit?</span><![CDATA[	]]></p>
+        <p class="IndentFieldDef">This is a <MadCap:variable name="Variables.tick" />box field. If <MadCap:variable name="Variables.tick" />ed, when the order is saved it is committed automatically. This field does not appear if the PO parameter COMMETH is set to P.</p>
+        <p class="IndentBold">Immediate Release?	</p>
+        <p class="IndentFieldDef">This is a <MadCap:variable name="Variables.tick" />box field that appears if workflow is turned on for the Major Order Type. If <MadCap:variable name="Variables.tick" />ed, once the order has been created <MadCap:variable name="General.ProductName" /> launches the relevant workflow.</p>
+        <p class="FieldLabel"><span class="Field">Type</span>
+        </p>
+        <p class="IndentFieldDef">		The drop-down list excludes the following Order Types which are not supported at the moment:</p>
+        <ul>
+            <li>BoQ Orders (as dictated by the PO parameter BQPRICE)</li>
+            <li>eCommerce Open Orders (as dictated by the PO parameters OPENTYPE, OPBKTYPE and OPAGTYPE)</li>
+            <li><span style="text-transform: capitalize;"><MadCap:variable name="Variables.pc plant" /></span> Memo Orders (as dictated by the PO parameter POMEMTYP)</li>
+        </ul>
+        <p class="FieldLabel"><span class="Field"><MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> Number</span>
+        </p>
+        <p class="IndentFieldDef">Including “Phase” if required (only shown on Material Orders).  The <MadCap:variable name="Variables.jc contract" /> number entered here defaults into the <MadCap:variable name="Variables.jc contract" /> number fields on the Material Lines Pane (but only if the value in the target field is blank).</p>
+        <p class="FieldLabel"><span class="Field">Default WBS Code</span>
+        </p>
+        <p class="IndentFieldDef">This appears immediately below the <span class="Field"><MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> Number </span>field if the <MadCap:variable name="Variables.jc contract" />uses WBS codes (only shown on Material Orders).  The WBS code entered here defaults into the <span class="Field">WBS Code</span> fields on the Material Lines Pane (but only if the value in the target field is blank).</p>
+        <p class="FieldLabel"><span class="Field">Department</span>
+        </p>
+        <p class="IndentFieldDef">	Only shown on Overhead Orders.  The department entered here defaults into the <span class="Field">Department </span>fields on the Overhead Lines Pane (but only if the value in the target field is blank).</p>
+        <p class="FieldLabel"><span class="Field">Department/Location</span>
+        </p>
+        <p class="IndentFieldDef">Only shown on <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Orders.  The department/location entered here defaults into the <span class="Field">Location </span>fields on the <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Lines Pane (but only if the value in the target field is blank).</p>
+        <p class="FieldLabel"><span class="Field">Workshop Ref</span><![CDATA[	]]></p>
+        <p class="IndentFieldDef">Only shown on Workshop Orders.  The workshop reference entered here defaults into the <span class="Field">Workshop Ref</span> fields on the Workshop Lines Pane (but only if the value in the target field is blank).</p>
+        <p class="FieldLabel"><span class="Field">Asset Code</span><![CDATA[	]]></p>
+        <p class="IndentFieldDef">Only shown on Asset Orders.  The asset code entered here defaults into the <span class="Field">Asset Code </span>fields on the Material Lines Pane (but only if the value in the target field is blank).</p>
+        <p class="FieldLabel"><span class="Field">Buyer</span>
+        </p>
+        <p class="IndentFieldDef">			This field is shown on the “standard” entry screen but is not shown on the “single form” version.  However, the PO parameter POBUYRST is still consulted.  If this parameter is set to Y then the logged-in user must have a buyer record.</p>
+        <p class="Subtitle">Top Middle Pane – Deliver To</p>
+        <p class="FieldLabel"><span class="Field">Additional Charges</span>
+        </p>
+        <p class="IndentFieldDef">	If the CO parameter TAXTYPE is set to SALES then the recently-introduced Freight and Additional Charges fields, if configured, are shown.  Unlike the standard screen, there is no facility to choose whether these charges are “fixed” or not.  On this screen, all and any additional charges are taken to be “fixed”.</p>
+        <p class="FieldLabel"><span class="Field">Ship Via	</span>
+        </p>
+        <p class="IndentFieldDef">	Only shown if any “Ship Via” records have been set up.</p>
+        <p class="FieldLabel"><span class="Field">FOB</span><![CDATA[		]]></p>
+        <p class="IndentFieldDef">Only shown if any “FOB” records have been set up.</p>
+        <p class="Subtitle">Top Right Pane – Order To</p>
+        <p class="FieldLabel"><span class="Field">Use Order Form</span>
+        </p>
+        <p class="IndentFieldDef">This field is shown or hidden depending on the setting of the PO parameter FRMSELEC.</p>
+        <p class="Subtitle">Bottom Panes</p>
+        <p class="Caption">Single Form Order Entry - Bottom Fields</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/Procurement/OA-CE-PO009-OrderEntryImprovements/Single_Form_Orders-Bottom_Fields.png" class="FullWidth" />
+        </p>
+        <p class="Body">Less frequently entered data relating to the order as a whole is entered via a series of panes rendered below all of the line details panes. </p>
+        <p class="Body">The appearance of the above panes and certain fields within each pane is governed by standard parameter settings.  So, for example, if the PO parameter POHCODE is set to N, the "Hold" pane will not be visible.  Conversely, if the PO parameter POHCODE is set to B , the pane will appear as illustrated above.</p>
+        <p class="FieldLabel"><span class="Field">On Save, Go to Order Summary</span>
+        </p>
+        <p class="IndentFieldDef">If you want to visit the summary screen for newly created order (for example, if you want to add further lines to the order or enter data in clause "plugs"), <MadCap:variable name="Variables.tick" /> this box.</p>
+    </body>
+</html>

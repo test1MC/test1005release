@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Appendix</h1>
+        <p>&#160;</p>
+        <h2>Applications</h2>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Application can be created by SC QS user when the order is shared by MC QS</li>
+            <li style="list-style-type: disc;">Several applications can be created during the same valuation period, but the latest will override all previously saved. This means that the latest application can be modified and submitted.</li>
+            <li style="list-style-type: disc;">Application Details:<br />Cumulative Amount - the cumulative value which SC QS wants to apply for<br />Previously Submitted - Cumulative Amount from previously submitted application<br />This Period - the difference between Cumulative Amount and Previously Submitted amount.</li>
+        </ul>
+        <h2>Payment Notices</h2>
+        <p>Payment Notice can be created:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">in current valuation period only AND</li>
+            <li style="list-style-type: disc;">payment notice has NOT been already created for this period AND</li>
+            <li style="list-style-type: disc;">payless notice has not been submitted for this period</li>
+        </ul>
+        <p>Payment Notice can NOT be created if:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">payment notice has been already created in current period</li>
+            <li style="list-style-type: disc;">payLESS notice has been submitted for this period</li>
+            <li style="list-style-type: disc;">Payment Notice Due has expired for current valuation period (Payment Due = Valuation Date + Payment Notice Due Date offset)</li>
+            <li style="list-style-type: disc;">no current period is available (last Valuation Date is in the past)</li>
+            <li style="list-style-type: disc;">Payment Notice Total exceeds Original Order Value</li>
+        </ul>
+        <h2>Payment Notice details:</h2>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">if submitted application exists for current period, Cumulative Amount, Previously Submitted, This Period and Anticipated Final Accounts are taken from it</li>
+            <li style="list-style-type: disc;">if there is no submitted application for current period:<br />Cumulative Amount is taken from the latest submitted application<br />Previously Submitted = Cumulative Amount<br />This Period = 0 to indicate there is no applied amount during this period</li>
+        </ul>
+        <h2>Payless Notices</h2>
+        <p>Payment Notice can be created in previous and current valuation periods.</p>
+        <p>In previous if:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">payless notice has NOT been already created for previous and current periods AND</li>
+            <li style="list-style-type: disc;">payment notice has NOT been already submitted for current period AND</li>
+        </ul>
+        <p>In current if:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">payless notice has NOT been already created for current periods AND</li>
+        </ul>
+        <p>Payless Notice can NOT be created if:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">payless notice has been already created for selected period</li>
+            <li style="list-style-type: disc;">Last date to send Payless Notice has expired (=Last Valuation Date + Payment Due Date offset + Last dat to send a Payless Notice offset)</li>
+            <li style="list-style-type: disc;">if Payless Notice has been created in the last valuation period</li>
+            <li style="list-style-type: disc;">Payment Notice Total exceeds Current Order Value (TBD in <a href="https://coins.visualstudio.com/COINS-Global/_workitems/edit/5186">Task 5186<span class="Hyperlink">: </span>Total Adjusted Net Valuation &gt; Current Order Value</a>)</li>
+            <li style="list-style-type: disc;">Total Gross Valuation &lt; Discount + Retention</li>
+            <li style="list-style-type: disc;">Total Gross Valuation &lt; Discount</li>
+            <li style="list-style-type: disc;">Total Gross Valuation &lt; Retention</li>
+        </ul>
+        <p>Payless Notice details:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">If submitted Payment Notice exists in selected period, Previous Payment Notices Values = MC Cumulative Amount from this Payment Notice</li>
+            <li style="list-style-type: disc;">If there is no submitted Payment Notice, Previous Payment Notices Values = 0</li>
+        </ul>
+        <h2>OA Development:</h2>
+        <p>The following PDRs should be done for SC Portal app:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">PDR 25132 - Subcontractor publish to SC Portal</li>
+            <li style="list-style-type: disc;">PDR 25133 - Subcontract Certificate Definition publish to SC Portal</li>
+            <li style="list-style-type: disc;">PDR 25134 - Subcontract Order handling with SC Portal</li>
+            <li style="list-style-type: disc;">PDR 25135 - Subcontract Certificates handling with SC Portal</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

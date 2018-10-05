@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Posting a <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Posting a <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return</h1>
+    <p>After the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return has been submitted, it must be posted.</p>
+    <h2 class="section">To post the Return:</h2>
+    <ol>
+      <li>Go to <span class="function" title="Function:%WVT2010HVTN"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Returns Workbench</span>.</li>
+      <li>On the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Returns tab, select the Return.</li>
+      <li>Choose the <span class="function" title="Function:%WVT1020BVTR">Post <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return to GL</span> action.</li>
+    </ol>
+    <p>Posting a <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return will transfer the returned balances from the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> control accounts to a separate <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Debtor/Creditor Account. The balance on this account will then be cleared by posting of the cash payment/receipt to/from HMRC. This process avoids the need to allow manual postings to the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> control accounts for this monthly/quarterly cash posting.</p>
+    <p>Only unposted returns can be posted. This will create and post a GL batch with one line per unique GL control account for <MadCap:variable name="Variables.vat" /> codes (excluding non-recoverable <MadCap:variable name="Variables.vat input" /> <MadCap:variable name="Variables.vat" /> codes) included in the return with a value of the total <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> for <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes linked to that GL Control Account (Positive <MadCap:variable name="Variables.vat output" /> <MadCap:variable name="Variables.vat" /> creates a Debit entry and Positive <MadCap:variable name="Variables.vat input" /> <MadCap:variable name="Variables.vat" /> creates a Credit Entry). The total of these lines is then reversed and posted to the Creditor/Debtor Account for the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Registration. The Posting Status for the Return is changed to "Posted".</p>
+    <p>A posted return can be unposted.</p>
+    <ol>
+      <li>Go to <span class="function" title="Function:%WVT2010HVTN"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Returns Workbench</span>.</li>
+      <li>On the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Returns tab, select the Return.</li>
+      <li>Choose the <span class="function" title="Function:%WVT1021BVTR">Unpost <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return to GL</span> action.</li>
+    </ol>
+    <p>This makes the reverse entries to those that were made when the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return was posted.</p>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Ireland List of Employees</h1>
+        <p>For Ireland as part of the steps towards implementing PAYE Modernisation in Jan 2019 the Revenue want to ensure the employee data on employers’ and on their own systems are in agreement. To help them do this they will be requiring employers to submit a new List of Employees report in 2018. To support this, new employee fields have been added, and a new report provided to produce the required data file.</p>
+        <h2>Employee Maintenance</h2>
+        <p>New fields have been added to the  National Details tab.</p>
+        <p>
+            <img src="../../Resources/Images_P-R/PR/IRE_Ee_Nat_Details.png" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Concurrency Stream<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>A sequence number used to distinguish concurrent employments.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Previous Payroll<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The company and pay frequency of the previous employee record for this person.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Previous Employee</p>
+                </div>
+                <div class="FieldDef">
+                    <p> The previous employee number.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Previous Employee Transition Type</div>
+                <div class="FieldDef">To indicate whether this was a transfer or a separate employment.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Next Payroll</div>
+                <div class="FieldDef">The company and pay frequency of the next employee record for this person.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Next Employee</div>
+                <div class="FieldDef">The next employee number.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Next Employee Transition Type</div>
+                <div class="FieldDef">To indicate whether this was a transfer or a separate employment.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Employment ID</div>
+                <div class="FieldDef">A unique ID required by the Revenue to distinguish separate employments for the same person.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Exclusion Order Start Date</div>
+                <div class="FieldDef">The start date for an exclusion order.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Exclusion Order End Date</div>
+                <div class="FieldDef">The end date for an exclusion order.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Proprietary Director</div>
+                <div class="FieldDef">A tickbox to indicate whether a director is a proprietary director, which is the company’s beneficial owner or a director who can control directly or indirectly more than 15% of the company’s ordinary share capital.</div>
+            </div>
+        </div>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>The employment history fields (<span class="field">Previous</span> and <span class="field">Next Employee</span> fields, <span class="field">Concurrency Stream</span> and <span class="field">Employment ID</span>) will be initial<MadCap:variable name="Variables.is" />ed automatically.</p>
+            </div>
+        </div>
+        <p>For more details, consult the side-frame help. Equivalent fields have been added in COINSplus.</p>
+        <h2>Preparation</h2>
+        <p>There is a small amount of data entry for customers to do before producing the file:</p>
+        <ol>
+            <li>Go through current employees who are directors and tick the new <span class="field">Proprietary Director</span> tickbox where applicable.</li>
+            <li>Go through current employees with an exclusion order and enter the exclusion order start and end dates where known.</li>
+        </ol>
+        <h2>ROS List of Employees
+</h2>
+        <p>The new ROS List of Employee report has been added to the Global Reports menu.</p>
+        <p>
+            <img src="../../Resources/Images_P-R/PR/ROS_List_of_Employees.png" class="FullWidth" />
+        </p>
+        <p>The report selection consists of the employer registration number and the date to run the report for. The report includes all employees who were in employment on the date selected.
+
+ 
+When run this creates an XML file under My Files for submission to ROS, as well as a PDF report of the employee data for users to look at.
+</p>
+        <p>If this report when run produces a status of <b>Complete(with errors)</b>,  the XML file will not be created or available in My Files. Refer to the Messages section in the report, which lists details of any errors. These will need to be corrected first  before recreating  the report which will in turn also produce the XML file in My Files.
+
+		</p>
+    </body>
+</html>

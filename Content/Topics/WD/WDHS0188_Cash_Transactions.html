@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="1054" MadCap:lastWidth="668">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Cash Transactions</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Cash Transactions</h1>
+    <p>Cash transactions in House Sales are entered as batches, in the same way as other <MadCap:variable name="General.ProductName" /> financial transactions.  </p>
+    <p>The cash can be allocated to one of four types of account, using the analysis:</p>
+    <p />
+    <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Account type</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Analysis</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+            <p class="TableHeader">Example</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <ul>
+              <li>A plot</li>
+            </ul>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <em>
+              <MadCap:variable name="Variables.vp site" />(.phase).plot.transaction-category</em>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>2006.039.EX</p>
+            <p>You must enter the full plot code (for example, 039 not 39).</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <ul>
+              <li>A part-exchange</li>
+            </ul>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">PX.<em>part-exchange-reference.transaction-category</em></td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">PX.128.MS</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <ul>
+              <li>A cancellation</li>
+            </ul>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">CA.<em>cancellation-reference.transaction-category</em></td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">CA.24.RF</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <ul>
+              <li>A pre-release reservation</li>
+            </ul>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">PR.<em>reservation-reference.transaction-category</em></td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">PR.240.DE</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="noteheader">NOTE</p>
+    <div class="note">You can enter PX, CA or PR and use the lookup to find the appropriate reference and category.</div>
+    <p>When you enter the transaction, you can allocate it to a memo cash event.  (Sales staff would use a memo cash event to record the receipt or payment; financial staff would then enter the transaction and allocate it to the appropriate event.)</p>
+    <p>If you enter a transaction for a ground rent or service charge transaction category, you can allocate the transaction to pay off the charge, either using the <span class="function" title="Function:%WHS1101BHTR">Allocation to Charge   </span> tab, or afterwards using <span class="function" title="Function:%WHS1280BCOB">Allocate Cash to Charges</span>.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDUG0053_Beginning_a_Batch.html" />
+        <MadCap:relatedTopic src="WDUG0056_Posting_a_Batch.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print">Cash transactions - configuration</h2>
+      <p>
+        <span class="function" title="Function:%WHS2160BHCT">Transaction Categories</span> allows you to set up the codes that identify different categories of transaction within House Sales Financials. These specify which General Ledger control accounts the transactions are posted to, and other settings.</p>Each category can apply either to plots or part exchange properties or both.
+</div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="756" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>SE057 Screen and Processing Changes</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1"><MadCap:variable name="Variables.Se Visit caps" /> Transfer Utility</h1>
+        <h2 MadCap:autonum="1.1">Menu Option</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function"><MadCap:variable name="Variables.Se Visit caps" /> Transfer</span> utility option is available on the <i>Service Management &gt;&#160;<MadCap:variable name="Variables.Se Visits caps" /> </i>menu, as shown in <MadCap:xref href="#MenuOption" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. Functional security is used to allow limited access  to this utility for selected users.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="MenuOption"></a>Menu Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE057_Images/SE057_VisitTransferMenu.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2">Conditions When Utility Cannot Be Used</h2>
+        <p class="Body">The <span class="Function"><MadCap:variable name="Variables.Se Visit caps" /> Transfer</span> utility has a number of conditions under which it cannot be used. These include the following:</p>
+        <ul>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Visit caps" /> is not Schedule Complete.</li>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Visit caps" /> is Billing Complete.</li>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Service Order caps" /> of the <MadCap:variable name="Variables.Se Visit caps" /> is Billing Complete. Review of the original <MadCap:variable name="Variables.Se Service Order caps" /> may be required to determine if any over billing exists.</li>
+            <li class="ListBullet3">If the <MadCap:variable name="Variables.Se Visit caps" /> references a timesheet, the timesheet must be in Signed status. No changes can be pending on the mobile device.</li>
+            <li class="ListBullet3"><MadCap:variable name="Variables.Se Visit caps" /> <MadCap:variable name="Variables.Labour caps" /> cannot be transferred to PR. The cost analysis on the PR time card will be incorrect.</li>
+            <li class="ListBullet3"><MadCap:variable name="Variables.Se Visit caps" /> Detail cannot have a generated Detail Line. The billing on the original <MadCap:variable name="Variables.Se Service Order caps" /> cannot be started.</li>
+            <li class="ListBullet3"><MadCap:variable name="Variables.Se Visit caps" /> Detail cannot have a generated <MadCap:variable name="Variables.St Stock caps" /> transaction. The costing analysis on the <MadCap:variable name="Variables.St Stock caps" /> transaction will be incorrect.</li>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Visit caps" /> cannot have any processed On-Site Payments. The utility will not move the <MadCap:variable name="Variables.Se Service Order caps" /> payment to a new order.</li>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Visit caps" /> cannot have any PO Items with non-zero quantities. Purchase Order data follows the <MadCap:variable name="Variables.Se Service Order caps" /> Number; therefore, no PO data should be involved. It is the user’s responsibility to determine the state of the PO Lines on the new <MadCap:variable name="Variables.Se Service Order caps" />. Manual processing of returns and other <MadCap:variable name="Variables.St Stock caps" /> transfers is required. The system removes any PO Item records when moving the <MadCap:variable name="Variables.Se Visit caps" /> to the new <MadCap:variable name="Variables.Se Service Order caps" />.</li>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Visit caps" /> cannot have any Task List Items marked as DONE. This will be a manual process of updating the Task List for the new <MadCap:variable name="Variables.Se Service Order caps" />.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3">Browse Screen</h2>
+        <p class="Body">When you click the <span class="Function"><MadCap:variable name="Variables.Se Visit caps" /> Transfer</span> option from the SE&#160;<MadCap:variable name="Variables.Se Visits caps" /> menu, a browse screen appears, as shown in <MadCap:xref href="#VisitTransferBrowse" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>. By using this browse screen, you can build a column set showing the fields that may be useful in locating and updating a <MadCap:variable name="Variables.Se Visit caps" />.       This browse emphasizes the work performed by a <MadCap:variable name="Variables.Se Technician caps" /> on a particular date.    </p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="VisitTransferBrowse"></a><MadCap:variable name="Variables.Se Visit caps" /> Transfer Browse Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE057_Images/SE057_VisitTransferBrowse.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4">Transfer <MadCap:variable name="Variables.Se Visit caps" /> Action</h2>
+        <p class="Body">A<strong> Transfer <MadCap:variable name="Variables.Se Visit caps" /></strong> action is found at the bottom of the <MadCap:variable name="Variables.Se Visit caps" /> Transfer browse screen, as shown in <MadCap:xref href="#TransferVisitAction" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. This action lets you select and submit a <MadCap:variable name="Variables.Se Visit caps" /> for transfer to a different <MadCap:variable name="Variables.Se Service Order caps" />.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="TransferVisitAction"></a>Transfer <MadCap:variable name="Variables.Se Visit caps" /> Action</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE057_Images/SE057_TransferVisitAction.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">A <MadCap:variable name="Variables.Se Visit caps" /> must be Schedule Complete and not Billing Complete in order to qualify for transfer to a different <MadCap:variable name="Variables.Se Service Order caps" />. If the <MadCap:variable name="Variables.Se Visit caps" /> meets these two conditions and therefore can be transferred, the following is also considered:</p>
+        <ul>
+            <li class="ListBullet3">If the <MadCap:variable name="Variables.Se Visit caps" /> references Serviced <MadCap:variable name="Variables.Se Assets caps" />, or any of the <MadCap:variable name="Variables.Se Visit caps" /> details reference an <MadCap:variable name="Variables-US.Se Asset caps" />, the Location of the old and new <MadCap:variable name="Variables.Se Service Order caps" /> must be the same.</li>
+            <li class="ListBullet3">The new <MadCap:variable name="Variables.Se Service Order caps" /> must have one Type of Work record, which is used as the new value to assign to the <MadCap:variable name="Variables.Se Visit caps" /> Detail. All of the <MadCap:variable name="Variables.Cost Heads caps" /> and <MadCap:variable name="Variables.Cost Head caps" /> Groups referenced within <MadCap:variable name="Variables.Se Visit caps" /> Detail must be on file for the new <MadCap:variable name="Variables.Se Service Order caps" />.</li>
+        </ul>
+        <p class="Body">Once all conditions are met, you can select a <MadCap:variable name="Variables.Se Service Order caps" /> from the browse screen and apply the <strong>Transfer <MadCap:variable name="Variables.Se Visit caps" /></strong> action. You are then directed to a Transfer <MadCap:variable name="Variables.Se Visit caps" /> screen, as shown in <MadCap:xref href="#TransferVisitScreen" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>. Here you can transfer the <MadCap:variable name="Variables.Se Visit caps" /> to the <MadCap:variable name="Variables.Se Service Order caps" /> that is entered in the <span class="Field">Transfer to <MadCap:variable name="Variables.Se Service Order caps" /></span> field.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="TransferVisitScreen"></a>Transfer <MadCap:variable name="Variables.Se Visit caps" /> Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE057_Images/SE057_TransferVisitScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

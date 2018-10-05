@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Commodity Code and Inventory Link</h1>
+        <h2>Module: Procurement / Inventory</h2>
+        <p>&#160;</p>
+        <p>Every inventory item needs to be linked to a “commodity code” in procurement in order to</p>
+        <p>allow entry of purchase orders to replenish stock of that inventory item. This commodity code needs to be set up in the procurement module, and it will define GL accounts to use for certain transactions related to Inventory.</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="1">
+            <li>Go to Procurement &gt; Commodity, Trade, Equipment Workbench &gt; Materials. Click the green “ADD” button on the bottom of the screen</li>
+        </ol>
+        <p class="caption">Figure 1: Materials Commodities</p>
+        <p>
+            <img src="../../Resources/Images/15.0 - PRIME ST - Adding Inventory Locations/Commodity Code and Inventory.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 294px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="2">
+            <li>This will pull up the main screen for Commodity Workbench – Add. Enter in a unique Commodity Code and Description</li>
+        </ol>
+        <p class="caption">Figure 2: Add Material Commodity</p>
+        <p>
+            <img src="../../Resources/Images/15.0 - PRIME ST - Adding Inventory Locations/Commodity Code and Inventory_1.png" style="visibility: visible;mso-wrap-style: square;width: 623px;height: 92px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="3">
+            <li>Enter in the “Units of Quantity” and “Units of Price” (include the same list of units in each). Your commodity code must be set to allow all types of units used on all of the different inventory items that will link to this commodity code. You may allow up to 5 types of units per commodity code</li>
+        </ol>
+        <p class="caption">Figure 3: Add Commodity Main Screen</p>
+        <p>
+            <img src="../../Resources/Images/15.0 - PRIME ST - Adding Inventory Locations/Commodity Code and Inventory_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 257px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="4">
+            <li>“G/L Mask (Overheads)” must be entered in order to use this code for Inventory Orders</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 144pt;" start="1">
+            <li>If your GL account structure includes multiple elements, you should only enter the natural account on your commodity code. Use ___ for all other GL elements</li>
+        </ol>
+        <ol style="list-style-type: lower-roman;margin-left: 162pt;" start="1">
+            <li>Use the field “GL Mask” PO Overhead Department to define any GL elements other than the natural account (Procurement &gt; Setup &gt; Technical Information System &gt; Overhead Departments)</li>
+        </ol>
+        <ol style="list-style-type: lower-alpha;margin-left: 144pt;" start="2">
+            <li>If you are posting Inventory Receipts in the Procurement module or the Inventory module, check your inventory Groups, and look for a “Receipt Control Account.” You should enter that same GL account as the commodity code “G/L Mask (Overheads)”</li>
+        </ol>
+        <ol style="list-style-type: lower-roman;margin-left: 162pt;" start="1">
+            <li>AP invoices post as DEBITs to the GL account on the commodity code. </li>
+            <li>Inventory Receipts post as CREDITs to the GL account on the Inventory Group Receipt Control Account</li>
+            <li>This process happens automatically if you are entering and posting Inventory Receipts) </li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="5">
+            <li>If you are not posting Inventory Receipts in COINS, then nothing will ever post to the “Receipt Control Account” from the inventory group. In that case, set the “G/L Mask (Overheads)” on your commodity code to the “Inventory Account” used to hold the total book value of your inventory </li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="6">
+            <li>If you want to use this same commodity code for direct-to-job purchase orders that do not go through the inventory module, then enter the default cost type to use for such purchases. </li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 90pt;">
+            <li><span style="margin-right: 0pt;">a. </span>“Construction” will be the cost type used by default on a PO to a non-service job</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 90pt;">
+            <li><span style="margin-right: 0pt;">b. </span>“Service” will be the cost type used by default when ordering to a service order</li>
+        </ol>
+        <p class="caption">Figure 4: Commodity Code - Cost Types</p>
+        <p>
+            <img src="../../Resources/Images/15.0 - PRIME ST - Adding Inventory Locations/Commodity Code and Inventory_3.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 311px;" />
+        </p>
+        <p class="caption">Figure 5: Inventory Group Record – Receipt Control Account (for Reference)</p>
+        <p>
+            <img src="../../Resources/Images/15.0 - PRIME ST - Adding Inventory Locations/Commodity Code and Inventory_4.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 282px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="7">
+            <li>Click on the save button in the bottom right hand corner of the screen to save your new Commodity Code</li>
+        </ol>
+        <p class="caption">Figure 7: Save Button</p>
+        <p>
+            <img src="../../Resources/Images/15.0 - PRIME ST - Adding Inventory Locations/Commodity Code and Inventory_5.png" style="visibility: visible;mso-wrap-style: square;width: 128px;height: 101px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 50pt;" start="8">
+            <li>You will now be able to add a new inventory item or update an existing inventory item, linking it to this commodity code you have just created.</li>
+        </ol>
+        <p class="caption">Figure 8: Item Details – Focus on Commodity Code</p>
+        <p>
+            <img src="../../Resources/Images/15.0 - PRIME ST - Adding Inventory Locations/Commodity Code and Inventory_6.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 330px;" />
+        </p>
+        <p>&#160;</p>
+        <p>Note – the “cost type” on this screen will be charged by default when issuing this item from inventory to a job (contrast to the cost type(s) and GL mask on the commodity code, which is used when ordering inventory items from external vendors)</p>
+        <p>&#160;</p>
+    </body>
+</html>

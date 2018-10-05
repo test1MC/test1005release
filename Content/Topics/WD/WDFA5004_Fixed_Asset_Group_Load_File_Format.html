@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2989" MadCap:lastWidth="806">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Fixed Asset Group Load File Format</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Fixed Asset Group Load File Format</h1>
+    <p>This file format is used by <span class="function" title="Function:%WFA7510RFAG">Fixed Asset Group Load</span>. </p>
+    <div>
+      <p>The file must contain only data lines (no header line), and fields must be separated by a comma or a space (you specify which separator is used when you load the file). If columns are separated by spaces, all alphanumeric fields must be enclosed in quotation marks (" ").</p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <thead>
+          <tr class="TableStyle-COINSBasic-Head-Header1">
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Column<br />Number </th>
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Description</th>
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Format </th>
+            <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+              <MadCap:variable name="General.ProductName" /> Field</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasic-Body-Body1"></tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">1</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Group Code</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_code</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">2</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Description</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(30)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_desc</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">3</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Asset Type (P/V/A)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(1)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_type</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">4</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Group Base</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_base</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">5</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Costs</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_costs</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">6</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Return Status</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_retstat</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">7</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Costs Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_costacct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">8</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Revenue Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_revenacct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">9</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Revaluation Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_revacct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">10</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Revaluation Reserve Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_revracct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">11</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <MadCap:variable name="Variables.cost head" style="text-transform:capitalize;" />.Category</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_jccccat</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">12</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Purchase Control Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_puracct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">13</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Disposal Control Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_dispacct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">14</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">B/S Capital Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_bsacct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">15</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">B/S Depreciation Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_bsdepn</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">16</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">P&amp;L Depreciation Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_depnacct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">17</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">P&amp;L on Sale Account</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(19)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_p&amp;lacct</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">18</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Depreciation Method</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fdm_code</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">19</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Min BV Method (yes=percentage,no=value)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_method</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">20</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Min BV</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_minbv</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">21</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Min BV (%)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_minbvpc</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">22</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Classes</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_chclass</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">23</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Default Per (Dispatch)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_defper</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">24</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Weekly <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /> Basis (5-7 days)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">9</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_wbasis</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">25</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Charge Holidays</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_chghol</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">26</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Percentage for 1 Day <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /></td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_wperc[1]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">27</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Percentage for 2 Day <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /></td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_wperc[2]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">28</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Percentage for 3 Day <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /></td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_wperc[3]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">29</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Percentage for 4 Day <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /></td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_wperc[4]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">30</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Percentage for 5 Day <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /></td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_wperc[5]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">31</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Percentage for 6 Day <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /></td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_wperc[6]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">32</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Is this a road-going asset (values: yes/no/possible)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Y/N/P</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_road</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">33</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">MID Category</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_midcat</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">34</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Depreciation <MadCap:variable name="Variables.cost head" style="text-transform:capitalize;" /></td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_depnch</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">35</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">WEEKLY RATES: Internal Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[1]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">36</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Number of Weeks for Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_period[1]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">37</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Internal Secondary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[2]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">38</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">External Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[7]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">39</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Number of Weeks for Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_period[3]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">40</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">External Secondary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[8]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">41</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Minimum Number of Weeks</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_minweeks</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">42</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">DAILY RATES: Internal Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[4]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">43</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Number of Days for Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_period[2]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">44</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Internal Secondary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[5]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">45</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">External Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[10]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">46</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Number of Days for Primary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;9</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_period[4]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">47</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">External Secondary</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[11]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">48</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Lump Sum RATES: Internal <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /> Rate</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[6]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">49</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">External <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /> Rate</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[12]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">50</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">HOURLY RATES: Rate 1</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[1]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">51</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 2</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[2]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">52</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 3</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[3]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">53</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 4</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[4]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">54</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 5</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[5]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">55</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 6</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[6]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">56</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 7</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[7]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">57</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 8</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[8]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">58</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 9</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[9]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">59</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate 10</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[10]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">60</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 1</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[1]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">61</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 2</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[2]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">62</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 3</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[3]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">63</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 4</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[4]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">64</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 5</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[5]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">65</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 6</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[6]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">66</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 7</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[7]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">67</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 8</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[8]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">68</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 9</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[9]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">69</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operator Rate 10</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_xrate[10]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">70</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Triggers</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(30)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">xch1</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">71</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Ownership Charge (US)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_ownrate</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">72</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Ownership Period (US)</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(1)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_ownfreq</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">73</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Second Depreciation</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_2depn</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">74</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Second Depreciation Method</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fdm_code2</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">75</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Rate Start Date</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_from</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">76</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">MONTHLY RATES: Internal <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /> Rate</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[3]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">77</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">External <MadCap:variable name="Variables.pc hire" style="text-transform:capitalize;" /> Rate</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">pgr_rate[9]</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">78</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">TRANSPORT: Scheduled</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_sched</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">79</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Operated</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_opertated</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">80</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Footprint</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(30)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_footprint</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">81</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Transport Type</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_trantype</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">82</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Transport Class</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_tranclass</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">83</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Maximum Load</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;,&gt;&gt;9.99</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_maxload</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">84</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Load Area</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(30)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">fag_loadarea</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">85</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Cargo</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">cmc_cargo</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">86</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Preferred Transport</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">cmc_preftran</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">87</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Analysis Code 1</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">cmc_anal1</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">88</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Analysis Code 2</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">cmc_anal2</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">89</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Analysis Code 3</td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">cmc_anal3</td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">90</td>
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Analysis Code 4</td>
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">x(8)</td>
+            <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">cmc_anal4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

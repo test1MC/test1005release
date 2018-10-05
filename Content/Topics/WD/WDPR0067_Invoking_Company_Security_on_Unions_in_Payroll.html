@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Invoking <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Security on Unions in Payroll</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Invoking <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Security on Unions in Payroll</h1>
+        <p>
+    
+In OA <span class="null"><span class="module">Payroll</span></span>, Unions, Union Rates, and Union Calculations are global files. They are maintained and accessible across all <MadCap:variable name="Variables.kco companies" /> under <strong>Global Setup</strong>. In order to restrict union access by <MadCap:variable name="Variables.kco company" />, the process described below can be implemented.
+
+    </p>
+        <div class="process">
+            <h2 class="print">How to Set Up <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Security on Unions:</h2>
+            <p>By following the process below, you can define the Union Group codes that will be valid for a <MadCap:variable name="Variables.kco company" />.</p>
+            <ol>
+                <li>The screenshot below depicts all of the unions on file in <span class="function" title="Function:%WPR220BQRU"><MadCap:variable name="Variables.pr unions" style="text-transform: capitalize;" /></span> without <MadCap:variable name="Variables.kco company" /> restrictions. Note the types of Union Group codes listed for each union, such as <span class="screentype">g1</span>, <span class="screentype">Dutchess</span>, <span class="screentype">ff</span>.<p><img src="../../Resources/Images_P-R/PR/PR_006701.png" /></p><p>For this example, we want to restrict the <MadCap:variable name="Variables.kco company" />'s unions to those with Union Group codes containing <strong>a1</strong>, <strong>g1</strong>, and <strong>u</strong>.</p></li>
+                <li>Go to the <span class="parameter">UNIONBR </span>parameter in <span class="function" title="Function:%WCO0000BSYP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters</span>. We will use this parameter to define the valid Union Group codes for the <MadCap:variable name="Variables.kco company" />.</li>
+                <li>Select the <span class="parameter">UNIONBR </span>parameter.</li>
+                <li>Under <span class="field">Choose Action</span>, select <span class="userinput"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific </span>and enter the value(s) to be unique for the <MadCap:variable name="Variables.kco company" />. In our example, the entries will be <span class="userinput">*A1*,*g1* ,*u*</span> (see the screenshot below), meaning that a valid match for the Union Group can be any value that contains <strong>A1</strong>, any value that contains <strong>g1</strong>, or any value that contains the letter <strong>U</strong>.<p><img src="../../Resources/Images_P-R/PR/PR_006702.png" /></p><p>The value(s) entered are compared to the value(s) entered in the <span class="field">Union Group </span>field in <span class="function" title="Function:%WPR220BQRU"><MadCap:variable name="Variables.pr unions" style="text-transform: capitalize;" /></span>. Matches can include wild cards (*), exceptions (!), and can-do or comma separated lists.</p></li>
+                <li>If you return to <span class="function" title="Function:%WPR220BQRU"><MadCap:variable name="Variables.pr unions" style="text-transform: capitalize;" /></span>, you can see that the list of Unions for all users in the <MadCap:variable name="Variables.kco company" /> has now been limited based on the values you entered in <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameter <span class="parameter">UNIONBR</span>.&#160;The screenshot below gives you an example of this limited list.<p><img src="../../Resources/Images_P-R/PR/PR_006703.png" /></p></li>
+            </ol>
+        </div>
+    </body>
+</html>

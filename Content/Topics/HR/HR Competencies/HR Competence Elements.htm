@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1799" MadCap:lastWidth="2083">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />HR Competence Elements</h1>
+        <p>&#160;</p>
+        <h2>Simple Structures</h2>
+        <p>A competency could have a simple one-to-one relationship with a training course. For example a Training course could exist for ‘Health and Safety Forklift’. This is linked to a competency of the same name and then applied to a Job Title called ‘Forklift Truck Driver’. The competency will simply check if the person has achieved the training course (where they have confirmed attendance and completion of the training course) – if they have achieved this then the competence is ‘valid’, if not the competence is ‘required’ of them.</p>
+        <p>If the Health and Safety Forklift Training course is set up to be valid for only 365 days, then the competence will expire on the 365th day of taking the course - and show as ‘required’ again.</p>
+        <p>&#160;</p>
+        <p>Taking this one step further – it is likely that Health and Safety Forklift is also a formal</p>
+        <p>qualification. For example a new employee may have this already as a qualification, negating the need to attend a training course. The following configuration would be needed to allow for this:</p>
+        <p>&#160;</p>
+        <p>Create a Qualification called ‘Health and Safety Forklift’</p>
+        <ul>
+            <li>Link the Training Course to this qualification (course templates allows you to link a course attendance to a qualification)</li>
+            <li>Link the Qualification as an ‘Element’ to the competency ‘Health and Safety Forklift’.</li>
+            <li>Take off the original training course element ‘Health and Safety Forklift’ from the competency</li>
+        </ul>
+        <p>The last step is needed because the qualification has been linked to the training course, therefore achieving the course generates the qualification by default, which in turn achieves the competency.</p>
+        <p>Alternatively it is feasible that a competency, such as a driving skill, may not feature a qualification at all but instead requires the person to first sit a training course (for road safety) and a driver assessment. In this case the competency would have 2 ‘Elements’. One element for the course and one for the assessment (an assessment would need to exist for it in the set-up table).</p>
+        <p>&#160;</p>
+        <h2>More Complex Structures</h2>
+        <p>&#160;</p>
+        <p>A competency could also represent an entire job role. For example a Job Title ‘Advanced Welder’ has a competency called ‘Advanced Welder’ linked to it. The Competence in turn has 10 CR Elements of various welding courses and various assessments.</p>
+        <p>Once the individual achieves the set of courses and assessments they achieve the single overall competency of Advanced Welder.</p>
+    </body>
+</html>

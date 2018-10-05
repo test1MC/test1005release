@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Batch Configuration</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Batch Configuration</h1>
+        <p><span class="function" title="Function:%WDPL5040">Batch Configuration</span> is used to define the standard characteristics for each type of batch transaction. The frame shows only those batch types that apply to <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>. </p>
+        <div class="process">
+            <h2 class="print">To configure batches in <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WDPL5040">Batch Configuration</span>. 
+<p /><MadCap:variable name="General.ProductName" /> displays the Batch Configuration frame (similar to the one shown, but without data): 
+<p /><img src="../../Resources/Images_P-R/PL/PL_504001.gif" /></li>
+            </ol>
+            <p>The batch types available in <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> are: </p>
+            <p />
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Batch type code </th>
+                        <th>Used for </th>
+                    </tr>
+                    <tr>
+                        <td>PLAPPLY</td>
+                        <td><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> apply payments batches </td>
+                    </tr>
+                    <tr>
+                        <td>PLCANCHQ</td>
+                        <td><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /><MadCap:variable name="Variables.cancelled" /> <MadCap:variable name="Variables.cheque" /> batches</td>
+                    </tr>
+                    <tr>
+                        <td>PLCHQ</td>
+                        <td><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /><MadCap:variable name="Variables.cheque" /> batches </td>
+                    </tr>
+                    <tr>
+                        <td>PLCOST</td>
+                        <td><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> costing batches</td>
+                    </tr>
+                    <tr>
+                        <td>PLINV</td>
+                        <td><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> invoices </td>
+                    </tr>
+                    <tr>
+                        <td>PLMAN</td>
+                        <td><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> manual payments </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The batch numbers for PLCHQ, PLMAN and PLCANCHQ are controlled by the <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>batch types CBTR and CBCAN, and are shared with other ledgers that enter cash. </p>
+            <p>The control totals fields on <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> batch headers, are identified by the following numbers: </p>
+            <ol>
+                <li>Gross Value (for Credit/Debit/Invoice transactions) or Cash Value (for Cash transactions) </li>
+                <li><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Value </li>
+                <li>Net Value </li>
+                <li>Number of Transactions </li>
+            </ol>
+            <p>See <a href="WDUG0052_Batch_Input.html">Batch Input</a> for further details about batches. </p>
+        </div>
+    </body>
+</html>

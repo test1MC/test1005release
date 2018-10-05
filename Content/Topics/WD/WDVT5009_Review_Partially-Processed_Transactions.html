@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="847" MadCap:lastWidth="601">
+    <head><title>Review Partially-Processed Transactions</title>
+    </head>
+    <body>
+        <div class="overview">
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Review Partially-Processed Transactions</h1>
+            <p>In Subcontract Ledger and <MadCap:variable name="Variables.Contract Sales" /> Ledger, it is possible to input transactions for which the tax point date for <MadCap:variable name="Variables.vat" /> purposes will be based on the date of payment. If these remain unpaid after the rates change, they may include an incorrect <MadCap:variable name="Variables.vat" /> code.</p>
+            <h2>Subcontract Ledger</h2>
+            <p>In Subcontract Ledger, the handling of the tax point date for <MadCap:variable name="Variables.vat" /> depends on the Billing Type. The billing type is set for each Subcontractor (with an optional override for each Subcontract). There are three billing types used in the UK (I=Invoice, S=Self Billing and A=Authenticated Receipt), and two in Ireland &#160;(I=Invoice and S=Self Billing).</p>
+            <ul>
+                <li>For <strong>Invoices,</strong> there should be no issue as the invoice is received from the subcontractor and the Invoice Date is input on the Subcontract Certificate and this will always be the tax point date for <MadCap:variable name="Variables.vat" />.</li>
+                <li>For <strong>Self Billing</strong>, the Contractor produces the invoice on behalf of the Subcontractor at the time of payment. Thus for self-billing subcontract&#160;certificates the tax point date for tax purposes can only be determined at payment -- and this will dictate the <MadCap:variable name="Variables.vat" />&#160;rate to be applied.&#160;</li>
+                <li>For <strong>Authenticated Receipt</strong>, the Contractor produces a receipt at the time of payment. Thus for authenticated receipt subcontract certificates the tax point date for tax purposes can only be determined at payment -- and this will dictate the <MadCap:variable name="Variables.vat" />&#160;rate to be applied. Please note that the date of signing of the authenticated receipt has no effect on the tax point date (or the rate to be applied) – this is always calculated from the date of payment.
+<p>If certificates are still on the draft certificates workbench or are in an unposted batch then they can be edited by the user to correct the <MadCap:variable name="Variables.vat" /> coding.</p>
+It is not possible within <MadCap:variable name="General.ProductName" /> to change the <MadCap:variable name="Variables.vat" /> code on a posted subcontract certificate (even if it is unpaid). Any such unpaid transactions which include an incorrect <MadCap:variable name="Variables.vat" /> code will need to be reversed out and re-input by users.
+<p>If processing spans the date of the rate change, please refer to HMRC/Revenue guidance.</p></li>
+            </ul>
+            <h2><MadCap:variable name="Variables.Contract Sales" /> Ledger</h2>
+            <p>In <MadCap:variable name="Variables.Contract Sales" /> Ledger, the handling of the tax point date for <MadCap:variable name="Variables.vat" /> depends on the Transaction Type. The transaction type is set for each <MadCap:variable name="Variables.Contract Sales" /> Series (with an optional override for each transaction). There are two Transaction Types used in the UK and Ireland: I=Invoice and C= Certificate (used for Self Billing, and in the UK for Authenticated Receipt).</p>
+            <ul>
+                <li>For Invoices, there should be no issue as the invoice sent to the client bears the Invoice Date which will always be the tax point date for <MadCap:variable name="Variables.vat" />.</li>
+                <li>For Self Billing Certificates and Authenticated Receipts, the Client produces the invoice or receipt on behalf of the Contractor at the time of payment. Thus for self-billing <MadCap:variable name="Variables.Contract Sales" /> certificates the tax point date for tax purposes can only be determined at payment – and this will dictate the <MadCap:variable name="Variables.vat" /> rate to be applied.
+<p>If certificates are still in an unposted batch then they can be edited by the user to correct the <MadCap:variable name="Variables.vat" /> coding.</p>
+It is not possible within <MadCap:variable name="General.ProductName" /> to change the <MadCap:variable name="Variables.vat" /> code on a posted <MadCap:variable name="Variables.Contract Sales" /> certificate (even if it is unpaid). Any such unpaid transactions which include an incorrect <MadCap:variable name="Variables.vat" /> code will need to be reversed out and re-input by users.
+<p>If processing spans the date of the rate change, please refer HMRC/Revenue guidance.&#160;</p></li>
+            </ul>
+        </div>
+    </body>
+</html>

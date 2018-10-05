@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Tolerances</h1>
+        <p>There are a number of reasons why the invoice amount may be greater than expected.&#160; Some examples are listed below, but the means of dealing with them are the same.</p>
+        <p>Example 1:&#160; An order is raised for <MadCap:variable name="Variables.$" />1000.00 of materials.&#160; The supplier has invoiced you <MadCap:variable name="Variables.$" />1050.00 because they have added a delivery charge in error.</p>
+        <p>Example 2:&#160; The supplier raised their prices in-between the order being raised and the goods being delivered.</p>
+        <p>Your business will have defined an upper tolerance – either a value or % amount higher than the original order under which they will accept the payment of the invoice or beyond which approval must be sought before the system will allow payment.</p>
+        <h2>Scenario 5 – The Invoice Amount is greater than the Order Amount (In Tolerance)</h2>
+        <p>Example 1:&#160; An order is raised for <MadCap:variable name="Variables.$" />1000.00 of materials.&#160; The supplier has invoiced you <MadCap:variable name="Variables.$" />1050.00 because they have added a delivery charge in error.</p>
+        <p>Example 2:&#160; The supplier raised their prices in-between the order being raised and the goods being delivered.</p>
+        <ol>
+            <li>Open the appropriate matching line and change the Invoice Price to that shown on the invoice or select the Override Value field and amend the Invoice Value </li>
+            <li>Save the line</li>
+            <li>You will be prompted that the Invoice Amount is in excess of expected, but that it is within tolerance.</li>
+            <li><MadCap:variable name="General.ProductName" /> will automatically allocate a Hold Code indicating the within tolerance condition but this will be for memorandum and reporting purposes only and will not physically place the invoice on hold.</li>
+            <li>The Quantity Invoiced column will update.&#160; The Matched amount at the bottom of the screen should now be populated and the Difference should be zero.</li>
+        </ol>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" />to return to the batches listing screen.</p>
+        <h2>Scenario 6 – The Invoice Amount is greater than the Order Amount (Outside Tolerance)</h2>
+        <ol>
+            <li>Open the appropriate matching line and change the Invoice Price to that shown on the invoice or select the Override Value field and amend the Invoice Value </li>
+            <li>Save the line</li>
+            <li>You will be prompted that the Invoice Amount is in excess of expected, and that it is not within tolerance.&#160; </li>
+        </ol>
+        <p class="note">The <MadCap:variable name="General.ProductName" /> system can be set to not allow entry of lines that exceed tolerances.&#160; If this is the case for your business, you will not be able to continue with the entry of this invoice.</p>
+        <p><MadCap:variable name="General.ProductName" /> will automatically allocate a Hold Code indicating the outside tolerance condition and the invoice will be placed on hold.&#160; </p>
+        <p>The buyer will need to be consulted regarding the price difference and identify the reason for it.&#160; Possible scenarios are:</p>
+        <ol>
+            <li>The Purchase Order is correct and a Credit Note must be requested from the supplier</li>
+            <li>The Invoice is correct</li>
+        </ol>
+        <p>In order to pay the invoice, one of the following actions will need to be taken:</p>
+        <ol>
+            <li>Request a Credit note from the supplier and amend the Hold code on the invoice to indicate this is the case.&#160; Enter the credit note when received.</li>
+            <li>Amend the order and take it off hold.&#160; </li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

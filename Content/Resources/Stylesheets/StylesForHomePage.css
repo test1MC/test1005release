@@ -1,0 +1,826 @@
+/*<meta />*/
+
+/* Home Page General Styles*/
+
+@import url('latostyle.css');
+
+@import url('latofonts.css');
+
+body
+{
+	font-family: "LatoWeb";
+	line-height: 1.5em;
+	margin-bottom: 5px;
+}
+
+a.BlackText
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+h1
+{
+	font-size: 2.75em;
+	font-family: "LatoWeb";
+	color: #c0c0c0;
+	font-weight: normal;
+}
+
+h3
+{
+	font-size: 1.6785em;
+}
+
+h3.SubCenter
+{
+	text-align: center;
+}
+
+img.Hyperlinked
+{
+	border-style: none;
+}
+
+img.Slideshow
+{
+	border-style: none;
+	margin-bottom: 15px;
+}
+
+p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	/* font-family: Lato; */
+	color: #808080;
+}
+
+p.Copyright
+{
+	font-size: 0.9em;
+	text-align: left;
+	color: #888888;
+	line-height: 1.6em;
+	margin: 0 0 10px 0;
+}
+
+.centered-text
+{
+	text-align: center;
+}
+
+.center
+{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	float: none !important;
+	text-align: center;
+}
+
+.whiteheader
+{
+	color: #ffffff;
+	font-weight: normal;
+}
+
+.row.nav-search
+{
+	display: none;
+}
+
+.main-section > .row.outer-row
+{
+	max-width: 100%;
+	padding: 0;
+}
+
+/* Home Page Button Styles */
+
+.button
+{
+	cursor: pointer;
+	background-color: transparent;
+	width: 200px;
+	height: 35px;
+	font-weight: bold;
+	-webkit-transition: all 200ms;
+	-moz-transition: all 200ms;
+	-ms-transition: all 200ms;
+	-o-transition: all 200ms;
+	transition: all 200ms;
+}
+
+.button.black
+{
+	border: solid 2px black;
+	color: black;
+}
+
+.button.black:hover
+{
+	background-color: #ccc;
+}
+
+.button a
+{
+	display: block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+
+/* Responsive Header Styles*/
+
+#contentBody > .responsive-header
+{
+	background-color: transparent;
+}
+
+/*==Home Tiles section==*/
+
+div.home-tiles	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+div.home-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	/*Adds transition animation when switching between screen sizes*/
+	-moz-border-radius: 20x;
+	-webkit-border-radius: 20px;
+	border: 1px solid #d3d3d3;
+	padding: 10px 10px;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: transparent;
+	color: #000000;
+	border-radius: 10px;
+}
+
+div.home-tiles > div:hover	/*When hovering over a home-tile, these properties apply*/
+{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+div.home-tiles > div:nth-child(1)
+{
+	width: 15%;
+	margin-left: 25%;
+}
+
+div.home-tiles > div:nth-child(2)
+{
+	width: 15%;
+	margin-left: 1%;
+	border-radius: 10px;
+}
+
+div.home-tiles > div:nth-child(3)
+{
+	width: 15%;
+	margin-left: 1%;
+}
+
+/*=Elements for text contained within each home-tile=*/
+
+p.tile-title
+{
+	text-align: center;
+	color: #ffffff;
+	font-size: 1.4em;
+}
+
+p.tile-content
+{
+	text-align: center;
+	color: #ffffff;
+	font-size: 0.8em;
+}
+
+p.tile-items
+{
+	color: #ffffff;
+	font-size: 0.7em;
+	text-align: center;
+}
+
+div.home-tiles a	/*Complex Selector: Any anchor (links) tags that are within div.home-tiles will have the following properties*/
+{
+	text-decoration: none;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	color: #000000;
+	border-radius: 10;
+}
+
+div.home-tiles a:hover	/*Complex Selector: When hovering over links within the home tiles the following properties will apply.*/
+{
+	color: #7469b9;
+}
+
+div.InternalHome a:hover
+{
+	color: #7469b9;
+}
+
+/* Content Section */
+
+#content-section
+{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #e6e6e6;
+	margin-top: -50px;
+}
+
+#content-section h3
+{
+	font-weight: normal;
+}
+
+.right-section div.button-group,
+.left-section div.button-group
+{
+	margin-top: 20px;
+}
+
+#content-section .left-section
+{
+	padding-right: 20px;
+}
+
+#content-section .right-section
+{
+	padding-left: 20px;
+}
+
+.left-section .left-content,
+.right-section .right-content
+{
+	height: 270px;
+}
+
+#content-section .right-section .table-images:first-of-type
+{
+	margin-bottom: 20px;
+}
+
+#content-section.mc-blurb p
+{
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+#content-section.mc-blurb .mc-bullets
+{
+	margin-top: 10px;
+	padding-left: 30px;
+	padding-right: 10px;
+}
+
+#content-section.mc-blurb .mc-bullets > li
+{
+	color: #5a5a5a;
+	list-style-image: url('../Images/Misc/Bullet1.png');
+	font-size: 14px;
+	margin-top: 8px;
+	line-height: 1.6em;
+}
+
+/* Home Page Topic Hero section*/
+
+div.topichero
+{
+	padding-top: 20px;
+	padding-bottom: 150px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+	background-image: none;
+}
+
+div.topichero h1
+{
+	font-size: 3.6em;
+	margin-top: 1.11em;
+	margin-bottom: 0.5em;
+	line-height: 100%;
+}
+
+div.topichero h3
+{
+	font-size: 1.8em;
+	margin-bottom: 80px;
+	line-height: 100%;
+}
+
+.search,
+.search-bar
+{
+	margin: 0 auto;
+}
+
+/* Home Page slide show */
+
+div.slidingshow
+{
+	margin-top: -79px;
+	margin-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
+}
+
+.mc-wrapper .mc-caption
+{
+	background: none;
+}
+
+/* Home Page Video Section */
+
+.video-section
+{
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.video-section img
+{
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.video-wrapper
+{
+	padding-bottom: 56.25%;
+	/* 16:9 */
+	position: relative;
+}
+
+.video-section iframe
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-section .columns
+{
+	margin-bottom: 20px;
+}
+
+/* Home Page Footer */
+
+.footer
+{
+	background-color: transparent;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.footer a
+{
+	text-decoration: none;
+	color: #DADADA;
+}
+
+.footer > div.row
+{
+	line-height: 30px;
+	padding: 0;
+}
+
+.footer-logo
+{
+	max-width: 100%;
+}
+
+.footer-links
+{
+	text-align: left;
+}
+
+.footer-links a
+{
+	padding-right: 15px;
+}
+
+.footer-icons
+{
+	text-align: right;
+}
+
+.footer-icons > a:first-of-type
+{
+	padding-right: 10px;
+}
+
+/* Mad Cap proxy/editor assigned styles */
+
+MadCap|searchBarProxy
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	float: none;
+	width: 50%;
+}
+
+MadCap|topicToolbarProxy
+{
+	float: none;
+}
+
+p.TOC2
+{
+	margin-left: 20px;
+	display: none;
+}
+
+MadCap|menuProxy.menu1
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+MadCap|menuProxy.menu2
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+MadCap|slideshow
+{
+	border-style: none;
+	box-shadow: none;
+}
+
+MadCap|slideshowCaption
+{
+	background: none;
+	color: #000000;
+	padding: 0px;
+	padding-top: 0px;
+}
+
+html.HomePage
+{
+	mc-master-page: url('../MasterPages/HomePage.flmsp');
+	mc-community-features: disabled;
+}
+
+footer
+{
+	bottom: 0;
+	width: 100%;
+}
+
+html
+{
+	
+}
+
+div.InternalHome	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+div.InternalHome::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.InternalHome::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.InternalHome > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #6F9DCE;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	-moz-border-radius: 20x;
+	-webkit-border-radius: 20px;
+	border-radius: 0px;
+	border: 1px solid #d3d3d3;
+	padding: 10px 10px;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div.InternalHome > div:hover
+{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+div.InternalHome > div:nth-child(1)
+{
+	width: 15%;
+	margin-left: 25%;
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+div.InternalHome > div:nth-child(2)
+{
+	width: 15%;
+	margin-left: 1%;
+}
+
+div.InternalHome > div:nth-child(3)
+{
+	width: 15%;
+	margin-left: 1%;
+}
+
+div.InternalHome a
+{
+	text-decoration: none;
+	color: #ffffff;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div.InternalHome > div.home-hidden
+{
+	border-width: 0px;
+	background-color: transparent;
+	width: 15%;
+}
+
+div.InternalHome > div.home-hidden:hover
+{
+	box-shadow: none;
+}
+
+/* Medium Layout */
+
+@media only screen and (max-width: 64.063em)
+{
+	#content-section .right-section,
+	#content-section .left-section
+	{
+		padding: 0;
+	}
+
+	div.slidingshow
+	{
+		width: 100%;
+	}
+
+	.left-section div.button-group > div
+	{
+		margin-bottom: 20px;
+	}
+
+	.footer
+	{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+/* Small Layout */
+
+@media screen and (max-width: 40em)
+{
+	MadCap|searchBarProxy.homeSearchBar
+	{
+		width: 100%;
+	}
+
+	div.topichero h1
+	{
+		font-size: 2em;
+	}
+
+	div.topichero h3
+	{
+		font-size: 1.2em;
+	}
+
+	#content-section
+	{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.video-section
+	{
+		padding-top: 30px;
+	}
+
+	.video-section .columns
+	{
+		padding: 0;
+	}
+
+	.footer-links,
+	p.Copyright,
+	.footer-icons
+	{
+		text-align: center;
+	}
+}
+
+div.footer
+{
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 0;
+	padding-top: 10px;
+	background-image: none;
+	position: relative;
+	background-size: contain;
+}
+
+.tab-bar .menu-icon span
+{
+	background-color: #F47322;
+	border-radius: 100%;
+}
+
+.right-off-canvas-menu
+{
+	background-color: #67A3C7;
+}
+
+ul.off-canvas-list li a
+{
+	background-color: #67A3C7;
+	color: #FFFFFF;
+}
+
+MadCap|bodyProxy
+{
+	max-width: 62em;
+}
+
+@media tablet
+{
+	div.footer
+	{
+		background-size: 100%;
+	}
+}
+
+@media non-print
+{
+	div.topichero
+	{
+		padding-top: 20px;
+		width: 100%;
+		padding-bottom: 400px;
+		height: auto;
+		background-size: stretch;
+		background-attachment: fixed;
+		background-image: none;
+	}
+
+	MadCap|bodyProxy
+	{
+		
+	}
+
+	div.slidingshow
+	{
+		height: auto;
+		color: #000000;
+	}
+
+	MadCap|slideshowCaption
+	{
+		background-color: transparent;
+		color: #696969;
+	}
+
+	MadCap|slideshow
+	{
+		color: #000000;
+		background-color: #f5f5f5;
+	}
+
+	MadCap|slide
+	{
+		color: #000000;
+	}
+
+	h1
+	{
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-left-style: solid;
+		border-left-width: 3px;
+		border-right-style: solid;
+		border-right-width: 3px;
+		border-top-width: 3px;
+		border-bottom-style: solid;
+		border-bottom-width: 3px;
+		border: none 0px #000000;
+		background-color: transparent;
+		color: #f18240;
+		/* font: Lato;
+		font-family: "LatoWeb"; */
+		font-size: 18pt;
+		font-weight: bold;
+	}
+
+	MadCap|dropDown
+	{
+		mc-open-image: url('../Images/Menu_Open_1105.png');
+		mc-closed-image: url('../Images/Menu_Closed_1105.png');
+		border-radius: 5px;
+		background-color: transparent;
+	}
+
+	MadCap|dropDownHead
+	{
+		background-color: #ffffff;
+		font-family: "LatoWeb";
+		border-radius: 0px;
+	}
+
+	MadCap|dropDownBody
+	{
+		background-image: none;
+		background-color: transparent;
+	}
+
+	h2
+	{
+		color: #595959;
+		/* font: Lato;
+		font-family: "LatoWeb"; */
+		font-size: 16pt;
+		font-weight: bold;
+	}
+}
+
+@media mobile
+{
+	MadCap|slideshowCaption
+	{
+		color: #0000ff;
+		background-color: transparent;
+	}
+}
+
+/* Quick fix to centre "Portal Search" tile on external home page,
+by putting a div either side and making them invisible. */
+
+div.home-tiles > div.home-hidden
+{
+	border-width: 0px;
+	background-color: transparent;
+	width: 15%;
+}
+
+div.home-tiles > div.home-hidden:hover
+{
+	box-shadow: none;
+}
+

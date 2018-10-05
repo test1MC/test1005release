@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="817" MadCap:lastWidth="948">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Curly Braces</h1>
+        <p>The functionality of {}'s is to specify a place holder in fields and calculations into which a value can be passed.. When using {}'s around a field the use of quotes is required if the field is a character field. The use of double or single quotes is acceptable. </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">The only thing to be aware of is that when using '{field}' replacement on a character field is that if the information within the field could contain an apostrophe (for example-  J O'Connor) then the apostrophe  would cause close to the single quote and you will get a symbol not found(Connor) Error. To overcome this error the use of double quotes "{field}" is the answer.</p>
+        <p>The use of {}'s in calculations is possible on all field values <b>except within the DataSets and the calculate conditions on a report</b>.  In these instances it is necessary to always qualify out the field with the table name.</p>
+        <p class="Example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">
+            <br />{RO_ContractCosts^TD|0|{RS_glp_fdate__2}}<br />would be written as:<br />jc_job.RO_ContractCosts^TD|0|{RS_glp_fdate__2}.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">The use of the table name is allowed in all calculations but whereas in most instances the formatting of the result is suppressed, within the calculate condition it is not and therefore the comma in a result of a figure in excess of 1,000 may result in an error in syntax in a calculation. (NB. Please note that the replacement on parameters of an RO field is still acceptable).</p>
+        <p>Within the OA reporter/screens we use curly braces {} as a method to pass values to a query or a report or a page. Enclosed within the curly braces you specify the commands, RS_fields, or other data you need to communicate across or within objects.  {kco} is a common usage, and is used to place the current logged in company number into the query.</p>
+        <p>The next example gets information from jc_job and inherits the Company Number from the system, retrieving the company number the user is logged into.</p>
+        <p>&#160;</p>
+        <p class="Example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">FOR&#160;EACH jc_job WHERE jc_job.kco = {kco}</p>
+    </body>
+</html>

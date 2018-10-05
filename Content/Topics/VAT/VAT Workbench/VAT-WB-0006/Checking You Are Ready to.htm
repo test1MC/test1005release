@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="6" MadCap:lastHeight="5575" MadCap:lastWidth="967">
+    <head><title></title>
+        <link href="../../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Reports and Reconciliation</h1>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>The VAT Module has the following Reports:</p>
+        <ul>
+            <li>VAT Report - produces a report that gives details of VAT transactions, arranged by VAT code.</li>
+            <li>VAT Report By Ledger - produces a report that gives details of VAT transactions, arranged by VAT code.</li>
+            <li>VAT Return Report - allows you to produce a report based on the latest VAT Return. It provides:<ul><li>A summary for the details in the 12 VAT boxes.</li><li>Details on each VAT transaction (VAT Code, Company , Sector, Financial date, Source, Type, Batch, Contract, Reference, Tax Date, Net Amount, VAT Amount, Supplier Name, Registration No, Extra Reference)</li></ul></li>
+            <li>VAT Exception Report - is designed to help you identify any transactions on which the calculated VAT amount has been manually overridden, so that you can check these overrides are appropriate.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <h2 MadCap:autonum="1.1 ">VAT Reconciliation Report</h2>
+        <p>&#160;</p>
+        <p>The VAT Reconciliation Report can be used to reconcile VAT Transactions to the VAT control accounts in the General Ledger. This Report is only available after a VAT report has been created.</p>
+        <p>&#160;</p>
+        <ul>
+            <li>The report runs for a single VAT registration and selects the companies and/or sectors linked to that VAT registration&#160;- for both the VAT transactions and the GL balances to include.</li>
+            <li>The layout of the report follows a concept similar to a bank reconciliation.&#160;</li>
+            <li>The report reconciles either the latest VAT return on the system (if you <MadCap:variable name="Variables.tick" /> Current Period) or the latest VAT return dated on or before the&#160;General Ledger&#160;period selected.&#160;</li>
+            <li>The report always includes a summary section.&#160; You can also choose to include sections giving transactional details of various figures from the summary.</li>
+            <li>VAT transactions with non-recoverable VAT codes are ignored.&#160;</li>
+            <li>The sign convention is as for the General Ledger, <ul><li>debit GL balances are shown as positive</li><li>credit GL balances as negative.&#160;</li></ul></li>
+            <p style="list-style-type: disc;">For VAT transactions,<ul><li>VAT input&#160;VAT is shown as positive </li><li>VAT&#160;output VAT as negative.</li></ul></p>
+        </ul>
+        <p>&#160;</p>
+        <p>The report is based on the following assumptions:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">The amounts which have been returned are transferred out of the&#160;VAT control accounts in the period following that in which the return ends.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">No direct manual postings are made to the VAT control accounts other than the transfer of returned amounts as detailed above.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">If the business makes VAT returns to more than one jurisdiction (country) from within one <MadCap:variable name="General.ProductName" /> company then separate&#160;VAT codes and separate GL control accounts are used for each jurisdiction.</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">To run the VAT Reconciliation Report:</h2>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Go to VAT Returns Workbench. </li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li>On the Company Summary tab, select the registration you want to reconcile. </li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li>Choose the VAT Reconciliation Report action.</li>
+            <li>
+                <img src="../../../../Resources/Images/VWB013.png" />
+            </li>
+        </ol>
+        <p>The most likely reason for differences is direct postings to the VAT control accounts. &#160;If this is the case, <MadCap:variable name="General.ProductName" /> recommend reversing out such postings and re-input them as VAT journals (with a VAT code analysis rather than being coded to the VAT control accounts). &#160;To prevent this happening in future, the VAT control accounts should be set to not to allow manual postings. </p>
+        <p>&#160;</p>
+        <p>This can be done either in Account Maintenance or in GL Elements, depending on the settings in Configuration.</p>
+        <h2 MadCap:autonum="1.3 ">Review returned transactions</h2>
+        <p>You should check for any exceptional transactions before creating the VAT Return.</p>
+        <h2 MadCap:autonum="1.4 ">To review unreturned transactions:</h2>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Go to VAT Returns Workbench</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li>Click the Unreturned Transactions tab.</li>
+        </ol>
+        <p>
+            <p>Transactions can be output to excel or a file</p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0006/Checking You Are Ready to_1.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2 MadCap:autonum="1.5 ">Vat Return Report</h2>
+        <p>The Detailed transactions for the VAT return can be listed by running the VAT report.</p>
+        <p>VAT Return:</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0006/Checking You Are Ready to_2.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Run the VAT Return Report</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0006/Checking You Are Ready to_3.png" class="FullWidth" />
+        </p>
+        <p>Sample of output:</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0006/Checking You Are Ready to_4.png" class="FullWidth" />
+        </p>
+        <p>Summary page:</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0006/Checking You Are Ready to_5.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

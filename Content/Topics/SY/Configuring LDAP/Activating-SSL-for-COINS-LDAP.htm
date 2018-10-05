@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="805" MadCap:lastWidth="854">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Activating SSL for <MadCap:variable name="General.ProductName" /> LDAP user authentication</h1>
+        <p>After you have installed and verified the corporate LDAP Directory servers’ certificate
+authority certificates, you are in a position to activate secure connections from <MadCap:variable name="General.ProductName" /> to your corporate LDAP Directory servers.
+</p>
+        <p>&#160;</p>
+        <p class="note">Do not proceed with this task if you have not been able to successfully complete the steps outlined in <MadCap:xref href="Testing-the-installed-certificates.htm">Testing the installed certificates</MadCap:xref>. If the installed certificates are not correct, then <MadCap:variable name="General.ProductName" /> may refuse access to all <MadCap:variable name="General.ProductName" /> accounts that have been modified to use the LDAP Directory user authentication mechanism.</p>
+        <p>&#160;</p>
+        <p>Complete this task using <MadCap:variable name="General.ProductName" /> OA.</p>
+        <ol>
+            <li>Log into the <MadCap:variable name="General.ProductName" /> OA using an administrative account that has the ability to alter system parameters.</li>
+            <li>Navigate to <span class="Function">System module &gt; System Setup &gt; SY Parameters</span>.</li>
+            <li>Find the LDAPCERT parameter and update it such that it refers to the path of the <MadCap:variable name="General.ProductName" /> certificate repository, as created in <MadCap:xref href="Installing-certificates-for-COINS.htm">Installing Certificates for COINS</MadCap:xref></li>
+        </ol>
+        <p>Once the entered value has been saved, <MadCap:variable name="General.ProductName" /> will attempt secured communications with the corporate LDAP Directory servers.</p>
+        <p>If you need to disable secured communications with your corporate LDAP Directory servers, simply clear this parameter so that it has no value.</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="5" MadCap:lastHeight="754" MadCap:lastWidth="624">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="OA Designer;Topics" />Syuds.TimeSlice()</h1>
+        <p>
+            <MadCap:concept term="Datasets" />This is a new method in syuds.p to manipulate an input dataset or datasets in to a new summarized dataset which has a date/time element.</p>
+        <p>The method can be called like any other post processing method on a dataset, for example</p>
+        <p>method('syuds.timeslice','FOR EACH ttStats','TimeStats','{fromtime}','{totime}',{interval},'{timeunit}','moe_key1,moe_key2','moc_snapshot','')</p>
+        <p>The parameters are as follows:</p>
+        <table>
+            <tr>
+                <td>
+                    <p>1</p>
+                </td>
+                <td>
+                    <p>Query</p>
+                </td>
+                <td>
+                    <p>The query to be run against existing dataset(s) which will return a set of record containing the data that is to be time sliced</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>2</p>
+                </td>
+                <td>
+                    <p>TableName</p>
+                </td>
+                <td>
+                    <p>The output table name</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>3</p>
+                </td>
+                <td>
+                    <p>From Date/Time</p>
+                </td>
+                <td>
+                    <p>A string containing a valid from date or date/time (depending on the units being used).&#160; If omitted then the time range will not be completed and records will only exist for the data being processed</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>4</p>
+                </td>
+                <td>
+                    <p>To Date/Time</p>
+                </td>
+                <td>
+                    <p>Same as From date/time</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>5</p>
+                </td>
+                <td>
+                    <p>Interval</p>
+                </td>
+                <td>
+                    <p>An integer value to be used in conjunction with the time unit field to allow the creation of the complete set of time records</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>6</p>
+                </td>
+                <td>
+                    <p>Time Unit</p>
+                </td>
+                <td>
+                    <p>“S”econds (for date/time), “D”ay, “W”eek,”M”onth,”Y”ear</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>7</p>
+                </td>
+                <td>
+                    <p>Keys</p>
+                </td>
+                <td>
+                    <p>The key fields used to summarise the data.&#160; Can be left blank and just the time element will be used</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>8</p>
+                </td>
+                <td>
+                    <p>Time Key</p>
+                </td>
+                <td>
+                    <p>The field in the source data that contains the date/time field to be used to slice the data</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>9</p>
+                </td>
+                <td>
+                    <p>Fields</p>
+                </td>
+                <td>
+                    <p>The fields from the source data to be aggregated.&#160; If left blank then ALL decimal fields in the source tables will be aggregated.</p>
+                    <p>For each field that is aggregated the total, max, min and average values for the time slice will be evaluated.</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>If the Time Unit field is “S” for seconds then the Interval is the number of seconds for each time slice and the start and end date/time values are date/time format strings. E.g. From=15/01/16 08:00&amp;To=15/01/16 18:00&amp;Interval=3600 would produce hourly slices from 8am until 6pm.</p>
+        <p>If the Time Unit field is “D” for days then the interval is not used and single day records are produced between the from and to dates.</p>
+        <p>If the Time Unit field is “W” for weeks then the interval indicates the day of the week for the week ending i.e. 1 for Sunday to 6 for Saturday.&#160; Week end dates for that day are then produced between the start and end dates.</p>
+        <p>If the Time Unit is “M” for months then the interval is ignored and calendar month end dates are used between the start and end dates.</p>
+        <p>If the Time Unit is “Y” for years then the interval is ignored and calendar year end dates are used between the start and end dates.</p>
+        <p>The results dataset will contain four fields for each of the aggregated fields (one of the same name for the total and then extensions min, max and avg for the other three values).&#160; A count is always added plus the unique grouping key and key date/time.</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE HTML>
+<SCRIPT>
+cHotCodes="";
+</SCRIPT>
+<HTML>
+<HEAD>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <LINK REL="SHORTCUT ICON" HREF="/coins/dev11/20170228132137/skin/v1105/images/coins.ico">
+  <TITLE>Dev - System - 001 - CONTRACTOR MASTER</TITLE>
+  <SCRIPT>
+  iUserRefresh=30000;
+  cEnv="dev";
+  iKco=1;
+  pvJob="";
+  bDesktopFrame=false;
+  bFrameBanner=false;
+  bTileMaint=true;
+  </SCRIPT>
+  <script src="/coins/dev11/20170228132137/scripts/lib/jquery/jquery.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/lib/jquery-ui/jquery-ui.js"></script>
+  <link rel="STYLESHEET" type="text/css" href="/coins/dev11/20170228132137/scripts/lib/jquery-ui/jquery-ui.css">
+  <script src="/coins/dev11/20170228132137/scripts/lib/jquery.layout/jquery.layout.js"></script>
+  <link rel="STYLESHEET" type="text/css" href="/coins/dev11/20170228132137/scripts/lib/jquery.layout/jquery.layout.css">
+  <script src="/coins/dev11/20170228132137/scripts/lib/jquery.colour/js/evol.colorpicker.js"></script>
+  <link rel="STYLESHEET" type="text/css" href="/coins/dev11/20170228132137/scripts/lib/jquery.colour/css/evol.colorpicker.css">
+  <script src="/coins/dev11/20170228132137/scripts/lib/ddslick/ddslick.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/lib/multiselect/jquery.multiselect.js"></script>
+  <link rel="STYLESHEET" type="text/css" href="/coins/dev11/20170228132137/scripts/lib/multiselect/jquery.multiselect.css">
+  <LINK id="CoinsStyle_coins" rel="stylesheet" type="text/css" href="woustatic.p?type=css&var=Y&kco=1&webstyle=dev11/20170228132137/skin/v1105&webimgs=dev11/20170228132137/skin/v1105&files=coins-v1105src.css">
+  <link rel="STYLESHEET" type="text/css" href="/coins/dev11/style/fonts.css">
+  <script src="woutext.p?kco=1&language="></script>
+</HEAD>
+<BODY style="display:none" class="wocoins">
+  <SCRIPT>
+  cWebBase="dev11/20170228132137";
+  cWebImgs="dev11/20170228132137/skin/v1105";
+  cWebStyle="dev11/20170228132137/skin/v1105";
+  cStyleVar="v1105/hi";
+  bNewUI=true;
+  oPalette={theme:"#67A3C7",light:"#89B8D2",lighter:"#DFECF2",text:"#ffffff",button:"#333333",normal:"#333333"}
+  cUID="DONBAR";
+  COINSMainFrame=true;
+  window.name="COINSMainFrame";
+  hCOINSMain=window;
+  </SCRIPT>
+  <script src="/coins/dev11/20170228132137/scripts/common.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/fieldMethods.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/csbforms.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/keypress.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/coinsmain.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/woside.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/help.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/ajax.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/ajaxtree.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/wocoins.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/jdialog.js"></script>
+  <script src="/coins/dev11/20170228132137/scripts/tabs.js"></script>
+  <LINK id="CoinsStyle_wocoins" rel="stylesheet" type="text/css" href="woustatic.p?type=css&var=Y&kco=1&webstyle=dev11/20170228132137/skin/v1105&webimgs=dev11/20170228132137/skin/v1105&files=wocoins-v1105src.css">
+  <script>
+  clearLocalStorage();
+  </script>
+  <div id="coinslog" style="display:none" title="Console">
+  </div>
+  <div class="ui-layout-centre">
+    <div class="inner-layout-centre">
+      <iframe name="mainarea" id="mainarea" frameborder="0" width="100%" height="100%"></iframe>
+      <SCRIPT>
+      lchref="woframe.p?MainArea=%WD1020bSYW&program=wou005.p&kco=1&TopMenu=%25WSY&closeAfterPost=yes&noframeset=Y&Button=action:open:0x000000000166bd00&syw_type=overview"
+      if(window==top) {
+        lchref=lchref.setQueryValue("pvFrame","W," + $(window).width() + "," + $(window).height());
+      } else {
+        lchref=lchref.setQueryValue("pvFrame","F," + $(window).width() + "," + $(window).height());
+      }
+      if(mainarea.document) mainarea.document.location.href=lchref;
+      </SCRIPT>
+    </div>
+    <div class="inner-layout-north" style="padding:0px;width:100%">
+    <div class="desktopheader">
+    <TABLE id="headerTitle" class="headertitle window" width="100%">
+    <TR class="headertitle">
+    <TD width="0" class="headertitle menu-control"><button class="buttonanchor image-button" id="hidemenu" onClick="hCOINSMain.showMenu();return false;" href="hidemenu" title="Toggle Menu"><IMG src="wousvg.p?style=v1105/hi&colour=%23ffffff&icon=hidemenu$.svg"  id="button1" class="button" border="0"></button></TD>
+    <TD class="headertitle page-title" width="100%">
+    <ul><li><span><IMG src="/coins/dev11/20170228132137/skin/v1105/images/hom.svg" border="0"></span></li><li class="company-selector"><span><div id="companyCombo"><div class="styled-select"><select onChange="hCOINSMain.selectCompany(this, '1.ON001.Y');" class="company" id="companySelector" name="companySelector"><option value="0">000 - Country Codes</option><option value="1" selected >001 - CONTRACTOR MASTER</option><option value="2">002 - Guernsey</option><option value="3">003 - HOUSEBUILDER MASTER</option><option value="5">005 - Irish</option><option value="7">007 - Gryffindor</option><option value="8">008 - Wampus</option><option value="10">010 - Contractors QA</option><option value="11">011 - Data removed by DDL</option><option value="12">012 - Data Removed by DDL</option><option value="13">013 - Data Removed by DDL</option><option value="20">020 - Housebuilders QA</option><option value="21">021 - Suriname</option><option value="22">022 - Data Only Payroll</option><option value="23">023 - UK Payroll Sacrifice</option><option value="24">024 - CAS Company 5</option><option value="25">025 - Copy of Kco 10</option><option value="28">028 - Multi Curr GBP base</option><option value="29">029 - Multi Curr EUR base</option><option value="30">030 - Multi Curr USD base</option><option value="31">031 - Set Currency query</option><option value="40">040 - Australian QA</option><option value="41">041 - Australian QA Co 2</option><option value="50">050 - US OA on TI (107c2.stage db n2)</option><option value="51">051 - COINS USA</option><option value="52">052 - US Environment for Intercompany</option><option value="53">053 - Canadian Company for Payroll Development</option><option value="55">055 - Canadian Company</option><option value="60">060 - Al Habtoor Leighton Group (AHLG)-ME</option><option value="61">061 - Al Habtoor Test 2</option><option value="70">070 - Mac-Mic</option><option value="90">090 - Training Company</option><option value="91">091 - VAT Testing Co</option><option value="101">101 - Vinci Construction UK</option><option value="105">105 - Vinci Plant</option><option value="111">111 - Vinci Civil Engineering</option><option value="200">200 - Kier Remote login</option><option value="220">220 - HB Replans Master</option><option value="221">221 - HB Replans Test</option><option value="222">222 - HB Move Site Master</option><option value="223">223 - HB Move Site Test</option><option value="300">300 - Crowder-Murray QA</option><option value="305">305 - Ruth - RCT (origwas1025)</option><option value="310">310 - old1025 - RCT newsrv</option><option value="315">315 - 10.25 - Zara - RCT</option><option value="320">320 - 10.25 - Dave - RCT</option><option value="330">330 - Irish Tax</option><option value="390">390 - mikwel uk</option><option value="391">391 - mikwel ire2</option><option value="392">392 - Mikwel uk vapdata</option><option value="393">393 - mikwel USA</option><option value="394">394 - mikwel CIS month end</option><option value="401">401 - Vinci IHP JV</option><option value="402">402 - For ELIBEC Use only</option><option value="410">410 - UK Ltd</option><option value="420">420 - Shaylor Weekly Cost</option><option value="427">427 - COINS Eastern</option><option value="430">430 - Shaylor Mgt Services</option><option value="500">500 - Dextrys</option><option value="600">600 - Internal Development </option><option value="601">601 - mCDR Test Company</option><option value="666">666 - Support GBP</option><option value="998">998 - Test Copycomp</option><option value="999">999 - Test Copycomp to</option></select></div></div></li>
+    <li class="role-selector"><span>
+    <div id="userroleCombo">
+    <div class="styled-select"><select onchange="selectRole(this);">
+    <option value="DONBAR" selected>Don's Desktop</option>
+    <option value="DONBAR2">DONBAR2 Desktop</option>
+    </select></div>
+    </div>
+    </span></li>
+    </ul>
+    </TD>
+    <td id="bannerright"><div class="banner">
+    <div id="search">
+    <button class="buttonanchor" onclick="hCOINSMain.globalSearch();return false;" id="globalsearch" title="CTRL+SHIFT+?"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/search.svg"  class="button" border="0"></button>
+    </div>
+    <div id="desktop">
+    <A  onclick="hCOINSMain.toggleDesktop();return false;" class="toggle-desktop" title="CTRL+SHIFT+!" onmouseover="hCOINSMain.statusOver()" onmouseout="hCOINSMain.statusOut()" id="desktop" href="woframe.p?kco=1&TopMenu=%25WSY"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/desktop.svg"  class="button" border="0"><div style="position:relative"><div class="minframes outstandingnumber" style="display:none"></div></div></A>
+    </div>
+    <div id="reports" onmouseover="hCOINSMain.popupListOver()" onmouseout="hCOINSMain.popupListOut()">
+    <A  onmouseover="hCOINSMain.showPopupListOver('showReports',this)" onmouseout="hCOINSMain.showPopupListOut('showReports',this)" href="woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WSYBCRR" target="reportStatus" id="reportStatus" onclick="return hCOINSMain.clickTile(this);" data-apptype="frame" data-title="Report Status" data-menuitem="%WSYBCRR"><IMG id="reportStatusImg" src="/coins/dev11/20170228132137/skin/v1105/images/repstatus.svg"><div style="position:relative"><div class="backgroundTasks outstandingnumber" style="display:none"></div><div class="unreadReports outstandingnumber" style="display:none"></div></div></A></div>
+    <div id="user-header" onmouseover="hCOINSMain.userPopupOver(this)" onmouseout="hCOINSMain.userPopupOut(this)"><div id="user-name">Don</div><div id="menu_closed"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/menu_closed.svg"></div>
+    <div style="position:relative"><div id="user-image" class="accountimage" style="background-image: url(/coins/dev11/custimage/sysuser/donbar.jpg?mod-date=040316&mod-time=55595)"></div><div class="newTasks outstandingnumber" style="display:none"></div></div></div>
+    <A href="wocoins.p?kco=1&TopMenu=%25WSY" id="desktopLogo">
+    <div id="logo"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/logo_coins.svg"></div>
+    </A>
+    </div></td>
+    </TR></TABLE>
+    <div class="nav-header" id="nav-header">
+    <div id="nav-header-tracker" class="nav-header-tracker" style="width:0px; margin-left:0px"></div>
+    <div class="tab on"><a href="#paneDONBART1" class="navbar" id="tabDONBART1">Documentation</a></div>
+    <div class="tab"><a href="#paneDONBART2" class="navbar" id="tabDONBART2">System</a></div>
+    </div>
+    </div>
+    <div class="desktop"  style="background-image:url(/coins/dev11/images/bg/coins_hongkong.jpg)">
+    <div class="sitemiddleinner open" id="paneDONBART1">
+    <div class="taskbar" style="height:53px">
+    <div class="taskbarheader" id="DONBART1S1">
+    <A style="display:none" id="preferences" href="woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WSY2582BMSI&ms_menuRowid=0x0000000004087781&sysuserRowid=0x00000000019b7282" title="Documentation / Documentation"></A>
+    <div class="taskbarbtn"></div>
+    <h2>Documentation</h2>
+    </div>
+    <div class="taskbarinnerwrapper">
+    <div class="taskbarinner transparent">
+    <div class="box small nobanner" style="background-color:#2A83B5;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYW&appwidth=1416&appheight=745" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#2A83B5" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYW&appwidth=1416&appheight=745" data-title="Help Maintenance" data-menuitem="0x00000000040ca40e" id="0x00000000040ca40e-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Help Maintenance</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca40e-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-maintenance"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#3094CB;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY1020SSYW&INLFUNC=%WSY1025BSYW&treeItem=%WDOCNOMENU&appwidth=1117&appheight=657" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#3094CB" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY1020SSYW&INLFUNC=%WSY1025BSYW&treeItem=%WDOCNOMENU&appwidth=1117&appheight=657" data-title="Topic Maintenance" data-menuitem="0x00000000040ca40f" id="0x00000000040ca40f-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Topic Maintenance</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca40f-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-book"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#35A4E2;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY1220FXXX&appwidth=1087&appheight=651" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#35A4E2" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY1220FXXX&appwidth=1087&appheight=651" data-title="Search & Replace" data-menuitem="0x00000000040ca410" id="0x00000000040ca410-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Search & Replace</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca410-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="fa fa-binoculars"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#3BB6FB;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSHA&appwidth=891&appheight=455" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#3BB6FB" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSHA&appwidth=891&appheight=455" data-title="Help Alias Maintenance" data-menuitem="0x00000000040ca411" id="0x00000000040ca411-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Help Alias Maintenance</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca411-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="fa fa-retweet"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#4FBDFB;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYW6&syw_type=TERM&appwidth=1510&appheight=602" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#4FBDFB" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYW6&syw_type=TERM&appwidth=1510&appheight=602" data-title="Terminology" data-menuitem="0x00000000040ca412" id="0x00000000040ca412-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Terminology</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca412-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="fa fa-globe"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#62C5FC;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYW3&syw_type=stdtext&appwidth=1180&appheight=759" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#62C5FC" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYW3&syw_type=stdtext&appwidth=1180&appheight=759" data-title="Standard Text" data-menuitem="0x00000000040ca413" id="0x00000000040ca413-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Standard Text</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca413-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-tick"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#76CCFC;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY2035BSTE&sta_rtype=HTMLSNIP" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#76CCFC" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY2035BSTE&sta_rtype=HTMLSNIP" data-title="HTML Snippet" data-menuitem="0x00000000040ca414" id="0x00000000040ca414-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">HTML Snippet</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca414-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-maintenance"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#89D3FD;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTBDOCDUMP&appwidth=1820&appheight=810" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#89D3FD" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTBDOCDUMP&appwidth=1820&appheight=810" data-title="Dump OA Documentation" data-menuitem="0x00000000040ca684" id="0x00000000040ca684-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Dump OA Documentation</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca684-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-process"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#f79646;color:#1f497d;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WDOCEXP&appwidth=1204&appheight=645" target="mainarea" data-size="small" data-apptype="frame" data-fg="#1f497d" data-bg="#f79646" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WDOCEXP&appwidth=1204&appheight=645" data-title="Export OA Documentation" data-menuitem="0x0000000001516f04" id="0x0000000001516f04-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#1f497d;">Export OA Documentation</p>
+      <p class="type" style="color:#1f497d;"></p>
+      <p id="T0x0000000001516f04-" class="value" style="color:#1f497d;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#1f497d;"><i class="ci ci-book"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#f79646;color:#244061;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WPAREXPREP&appwidth=1820&appheight=802" target="mainarea" data-size="small" data-apptype="frame" data-fg="#244061" data-bg="#f79646" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WPAREXPREP&appwidth=1820&appheight=802" data-title="Parameter Export" data-menuitem="0x0000000004aaf484" id="0x0000000004aaf484-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#244061;">Parameter Export</p>
+      <p class="type" style="color:#244061;">WIP</p>
+      <p id="T0x0000000004aaf484-" class="value" style="color:#244061;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#244061;"><i class="ci ci-report"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#ff6600;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WFUNEXPREP" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#ff6600" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WFUNEXPREP" data-title="Function Export" data-menuitem="0x0000000004d73002" id="0x0000000004d73002-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Function Export</p>
+      <p class="type" style="color:#ffffff;">System</p>
+      <p id="T0x0000000004d73002-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-report"></i></div>
+     </div></A>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="taskbar" style="height:53px">
+    <div class="taskbarheader" id="DONBART1S2">
+    <A style="display:none" id="preferences" href="woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WSY2582BMSI&ms_menuRowid=0x0000000004087782&sysuserRowid=0x00000000019b7282" title="Documentation / Release Documentation"></A>
+    <div class="taskbarbtn"></div>
+    <h2>Release Documentation</h2>
+    </div>
+    <div class="taskbarinnerwrapper">
+    <div class="taskbarinner transparent">
+    <div class="box small nobanner" style="background-color:#28597E;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTBDOC&appwidth=1240&appheight=548" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#28597E" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTBDOC&appwidth=1240&appheight=548" data-title="Task Documentation" data-menuitem="0x00000000040ca416" id="0x00000000040ca416-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Task Documentation</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x00000000040ca416-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-cancelation"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#3D6A8B;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=BIRTBMULTI&RS_taskdoc=*&RS_docrevstat=*&RS_External=EXT&noinfo=Y&rtn_code=BIRTBMULTIPDR,BIRTBMULTITASK,BIRTBMULTIOBJ&appwidth=1053&appheight=525" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#3D6A8B" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=BIRTBMULTI&RS_taskdoc=*&RS_docrevstat=*&RS_External=EXT&noinfo=Y&rtn_code=BIRTBMULTIPDR,BIRTBMULTITASK,BIRTBMULTIOBJ&appwidth=1053&appheight=525" data-title="Release Notes Extract" data-menuitem="0x00000000014fa600" id="0x00000000014fa600-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Release Notes Extract</p>
+      <p class="type" style="color:#ffffff;">(Spreadsheet)</p>
+      <p id="T0x00000000014fa600-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-report"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#537A98;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTBFIXPACKS&appwidth=1350&appheight=624" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#537A98" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTBFIXPACKS&appwidth=1350&appheight=624" data-title="Fixes and Service Packs" data-menuitem="0x000000000393198b" id="0x000000000393198b-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Fixes and Service Packs</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x000000000393198b-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-process"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#548dd4;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTB5900BXXX&appwidth=289&appheight=721" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#548dd4" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=WRTB5900BXXX&appwidth=289&appheight=721" data-title="Development Support Workbench" data-menuitem="0x000000000404d318" id="0x000000000404d318-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Development Support Workbench</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x000000000404d318-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-enquiry"></i></div>
+     </div></A>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="sitemiddleinner" id="paneDONBART2">
+    <div class="taskbar" style="height:53px">
+    <div class="taskbarheader" id="DONBART2S1">
+    <A style="display:none" id="preferences" href="woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WSY2582BMSI&ms_menuRowid=0x0000000004087784&sysuserRowid=0x00000000019b7282" title="System / System"></A>
+    <div class="taskbarbtn"></div>
+    <h2>System</h2>
+    </div>
+    <div class="taskbarinnerwrapper">
+    <div class="taskbarinner transparent">
+    <div class="box small nobanner" style="background-color:#b7dde8;color:#000000;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSUR&appwidth=1212&appheight=716" target="mainarea" data-size="small" data-apptype="frame" data-fg="#000000" data-bg="#b7dde8" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSUR&appwidth=1212&appheight=716" data-title="Users" data-menuitem="0x0000000004087887" id="0x0000000004087887-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#000000;">Users</p>
+      <p class="type" style="color:#000000;">System</p>
+      <p id="T0x0000000004087887-" class="value" style="color:#000000;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#000000;"><i class="ci ci-edit-user"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#e36c09;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBMSF&csb_taskdataTLA=csb01&rtb_taskTLA=rtb01&appwidth=1102&appheight=654" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#e36c09" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBMSF&csb_taskdataTLA=csb01&rtb_taskTLA=rtb01&appwidth=1102&appheight=654" data-title="Function Maintenance" data-menuitem="0x0000000004087884" id="0x0000000004087884-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Function Maintenance</p>
+      <p class="type" style="color:#ffffff;">System</p>
+      <p id="T0x0000000004087884-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-spanner-switch"></i></div>
+     </div></A>
+    </div>
+    <div class="box small" style="background-color:#ccc1d9;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSFS" target="mainarea" data-size="small" data-apptype="frameb" data-fg="#ffffff" data-bg="#ccc1d9" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSFS" data-title="Document Designer" data-menuitem="0x0000000004087883" id="0x0000000004087883-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Document Designer</p>
+      <p class="type" style="color:#ffffff;">System</p>
+      <p id="T0x0000000004087883-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-maintenance"></i></div>
+     </div></A>
+    </div>
+    <div class="box small" style="background-color:#9bbb59;color:#1f497d;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSTN&csb_taskdataTLA=csb01&rtb_taskTLA=rtb01&appwidth=1374&appheight=698" target="mainarea" data-size="small" data-apptype="frameb" data-fg="#1f497d" data-bg="#9bbb59" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSTN&csb_taskdataTLA=csb01&rtb_taskTLA=rtb01&appwidth=1374&appheight=698" data-title="Page Designer" data-menuitem="0x0000000004087885" id="0x0000000004087885-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#1f497d;">Page Designer</p>
+      <p class="type" style="color:#1f497d;">System</p>
+      <p id="T0x0000000004087885-" class="value" style="color:#1f497d;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#1f497d;"><i class="ci ci-notes"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#749FCB;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wourun&MainArea=%WSY1150WRTN&prog=syw1150" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#749FCB" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wourun&MainArea=%WSY1150WRTN&prog=syw1150" data-title="Report Builder" data-menuitem="0x0000000004087886" id="0x0000000004087886-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Report Builder</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x0000000004087886-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-edit-chart"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#c0504d;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WXLBXLL&appwidth=804&appheight=443" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#c0504d" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WXLBXLL&appwidth=804&appheight=443" data-title="Translations" data-menuitem="0x000000000404cb86" id="0x000000000404cb86-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Translations</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x000000000404cb86-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="fa fa-globe"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#ac8dc6;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBCOM&appwidth=1645&appheight=725" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#ac8dc6" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBCOM&appwidth=1645&appheight=725" data-title="Message Maintenance" data-menuitem="0x0000000003d21f8b" id="0x0000000003d21f8b-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Message Maintenance</p>
+      <p class="type" style="color:#ffffff;"></p>
+      <p id="T0x0000000003d21f8b-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-maintenance"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#c3d69b;color:#c0504d;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY0000BSYP&stn_code=%WSYBSYP&syp-mod=SY&appwidth=1200&appheight=706" target="mainarea" data-size="small" data-apptype="frame" data-fg="#c0504d" data-bg="#c3d69b" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY0000BSYP&stn_code=%WSYBSYP&syp-mod=SY&appwidth=1200&appheight=706" data-title="SY Parameters" data-menuitem="0x00000000040ca901" id="0x00000000040ca901-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#c0504d;">SY Parameters</p>
+      <p class="type" style="color:#c0504d;"></p>
+      <p id="T0x00000000040ca901-" class="value" style="color:#c0504d;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#c0504d;"><i class="ci ci-configuration"></i></div>
+     </div></A>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="taskbar" style="height:53px">
+    <div class="taskbarheader" id="DONBART2S2">
+    <A style="display:none" id="preferences" href="woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WSY2582BMSI&ms_menuRowid=0x0000000004087785&sysuserRowid=0x00000000019b7282" title="System / Reports & Enquiries"></A>
+    <div class="taskbarbtn"></div>
+    <h2>Reports & Enquiries</h2>
+    </div>
+    <div class="taskbarinnerwrapper">
+    <div class="taskbarinner transparent">
+    <div class="box small nobanner" style="background-color:#5f497a;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY5000WXXX&appwidth=1820&appheight=810" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#5f497a" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY5000WXXX&appwidth=1820&appheight=810" data-title="Database Enquiry" data-menuitem="0x0000000004087889" id="0x0000000004087889-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Database Enquiry</p>
+      <p class="type" style="color:#ffffff;">System</p>
+      <p id="T0x0000000004087889-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-enquiry"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYL&appwidth=1820&appheight=810" target="mainarea" data-size="small" data-apptype="frame" data-fg="" data-bg="" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBSYL&appwidth=1820&appheight=810" data-title="Current Users" data-menuitem="0x000000000408788a" id="0x000000000408788a-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="">Current Users</p>
+      <p class="type" style="">System</p>
+      <p id="T0x000000000408788a-" class="value" style=""></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style=""><i class="ci ci-people"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#a0fe9e;color:#000000;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY5110BSYP&appwidth=1292&appheight=493" target="mainarea" data-size="small" data-apptype="frame" data-fg="#000000" data-bg="#a0fe9e" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSY5110BSYP&appwidth=1292&appheight=493" data-title="Parameter Enquiry" data-menuitem="0x000000000408788b" id="0x000000000408788b-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#000000;">Parameter Enquiry</p>
+      <p class="type" style="color:#000000;">System</p>
+      <p id="T0x000000000408788b-" class="value" style="color:#000000;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#000000;"><i class="ci ci-configuration"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#fc9e53;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBCRR&info=cosval.reports&initContainer=%25WSY2130BCRR" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#fc9e53" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYBCRR&info=cosval.reports" data-title="Report Status" data-menuitem="0x000000000408788c" id="0x000000000408788c-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Report Status</p>
+      <p class="type" style="color:#ffffff;">System</p>
+      <p id="T0x000000000408788c-" class="value" style="color:#ffffff;"><span class="smallvalues"><span class="value" title="Unread">12</span> | <span class="value" title="Generating">0</span></span><span class="normalvalues"><span class="label">Unread:&nbsp;</span><span class="value">12</span><BR><span class="label">Generating:&nbsp;</span><span class="value">0</span></span></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="fa fa-area-chart"></i></div>
+     </div></A>
+    </div>
+    <div class="box small nobanner" style="background-color:#9bbb59;color:#ffffff;">
+    <a href="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYW002&theQuery=&theFields=&theDataSet=&theCondition=&theResults=&theTimeout=&isRun=&theStore=&theDesc=&appwidth=1820&appheight=815" target="mainarea" data-size="small" data-apptype="frame" data-fg="#ffffff" data-bg="#9bbb59" data-basehref="woframe.p?kco=1&TopMenu=%25WSY&program=wou005&MainArea=%WSYW002&theQuery=&theFields=&theDataSet=&theCondition=&theResults=&theTimeout=&isRun=&theStore=&theDesc=&appwidth=1820&appheight=815" data-title="Query Editor" data-menuitem="0x0000000003b3fe87" id="0x0000000003b3fe87-" onClick="return clickTile(this);">
+     <div class="boxinner">
+      <p class="name" style="color:#ffffff;">Query Editor</p>
+      <p class="type" style="color:#ffffff;">System</p>
+      <p id="T0x0000000003b3fe87-" class="value" style="color:#ffffff;"></p>
+      <div class="icon-image"></div>
+      <div class="icon-font" style="color:#ffffff;"><i class="ci ci-enquiry"></i></div>
+     </div></A>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <DIV id="tileDialog" title="Edit Tile">
+    <FORM name="tiledialogform">
+    <input type="hidden" name="ms_menuitemRowid">
+    <input type="hidden" name="id">
+    <TABLE>
+    <TR><TD align="right">
+    <label for="RW_msi_title" id="labelRW_msi_title">Title</label>
+    </TD><TD>
+    <input type="text" name="RW_msi_title" id="RW_msi_title" size="20" data-inputSeq="1" onfocus="hThisField=this;"/>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="RW_msi_modov" id="labelRW_msi_modov">Override</label>
+    </TD><TD>
+    <input type="checkbox" name="RW_msi_modov" id="RW_msi_modov" value="yes"  onclick="tiledialogform.RW_msi_subtitle.disabled=!this.checked" data-inputSeq="2" onfocus="hThisField=this;"/>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="RW_msi_subtitle" id="labelRW_msi_subtitle">Subtitle</label>
+    </TD><TD>
+    <input type="text" name="RW_msi_subtitle" id="RW_msi_subtitle" size="20" data-inputSeq="3" onfocus="hThisField=this;"/>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="msi_size" id="labelmsi_size">Size</label>
+    </TD><TD>
+    <select name="msi_size" data-inputSeq="4" onfocus="hThisField=this;" id="msi_size">
+    <option value="big"">Big</option>
+    <option value="full"">Full</option>
+    <option value="half"">Half</option>
+    <option value=""">Normal</option>
+    <option value="small"">Small</option>
+    <option value="tall"">Tall</option>
+    <option value="wide"">Wide</option>
+    </select>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="msi_apptype" id="labelmsi_apptype">Open In</label>
+    </TD><TD>
+    <select name="msi_apptype" data-inputSeq="5" onfocus="hThisField=this;" id="msi_apptype">
+    <option value=""">Main Area</option>
+    <option value="window"">Window</option>
+    <option value="frame"">Frame</option>
+    <option value="frameb"">Frame with Banner</option>
+    <option value="inline"">Inline</option>
+    </select>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="msi_fg" id="labelmsi_fg">Foreground</label>
+    </TD><TD>
+    <input type="text" name="msi_fg" id="msi_fg" size="10" class="colourpicker" style="width:80px" data-inputSeq="6" onfocus="hThisField=this;"/>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="msi_bg" id="labelmsi_bg">Background</label>
+    </TD><TD>
+    <input type="text" name="msi_bg" id="msi_bg" size="10" class="colourpicker" style="width:80px" data-inputSeq="7" onfocus="hThisField=this;"/>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="RO_msi_icon" id="labelRO_msi_icon">Icon</label>
+    </TD><TD>
+    <select name="RO_msi_icon" data-inputSeq="8" onfocus="hThisField=this;" id="RO_msi_icon">
+    <option value=""">&lt;i class=&quot;fa-2x ci&quot; style=width:40px&gt;&amp;nbsp;&lt;/i&gt;</option>
+    <option value="ci-administration"">&lt;i class=&quot;fa-2x ci ci-administration&quot; style=width:40px&gt;&lt;/i&gt;ci-administration</option>
+    <option value="ci-award"">&lt;i class=&quot;fa-2x ci ci-award&quot; style=width:40px&gt;&lt;/i&gt;ci-award</option>
+    <option value="ci-book"">&lt;i class=&quot;fa-2x ci ci-book&quot; style=width:40px&gt;&lt;/i&gt;ci-book</option>
+    <option value="ci-browse"">&lt;i class=&quot;fa-2x ci ci-browse&quot; style=width:40px&gt;&lt;/i&gt;ci-browse</option>
+    <option value="ci-builder"">&lt;i class=&quot;fa-2x ci ci-builder&quot; style=width:40px&gt;&lt;/i&gt;ci-builder</option>
+    <option value="ci-cancelation"">&lt;i class=&quot;fa-2x ci ci-cancelation&quot; style=width:40px&gt;&lt;/i&gt;ci-cancelation</option>
+    <option value="ci-cart"">&lt;i class=&quot;fa-2x ci ci-cart&quot; style=width:40px&gt;&lt;/i&gt;ci-cart</option>
+    <option value="ci-chart"">&lt;i class=&quot;fa-2x ci ci-chart&quot; style=width:40px&gt;&lt;/i&gt;ci-chart</option>
+    <option value="ci-checkout"">&lt;i class=&quot;fa-2x ci ci-checkout&quot; style=width:40px&gt;&lt;/i&gt;ci-checkout</option>
+    <option value="ci-chevrons"">&lt;i class=&quot;fa-2x ci ci-chevrons&quot; style=width:40px&gt;&lt;/i&gt;ci-chevrons</option>
+    <option value="ci-circle-ring"">&lt;i class=&quot;fa-2x ci ci-circle-ring&quot; style=width:40px&gt;&lt;/i&gt;ci-circle-ring</option>
+    <option value="ci-configuration"">&lt;i class=&quot;fa-2x ci ci-configuration&quot; style=width:40px&gt;&lt;/i&gt;ci-configuration</option>
+    <option value="ci-delete"">&lt;i class=&quot;fa-2x ci ci-delete&quot; style=width:40px&gt;&lt;/i&gt;ci-delete</option>
+    <option value="ci-delivery"">&lt;i class=&quot;fa-2x ci ci-delivery&quot; style=width:40px&gt;&lt;/i&gt;ci-delivery</option>
+    <option value="ci-design"">&lt;i class=&quot;fa-2x ci ci-design&quot; style=width:40px&gt;&lt;/i&gt;ci-design</option>
+    <option value="ci-design-undo"">&lt;i class=&quot;fa-2x ci ci-design-undo&quot; style=width:40px&gt;&lt;/i&gt;ci-design-undo</option>
+    <option value="ci-digger"">&lt;i class=&quot;fa-2x ci ci-digger&quot; style=width:40px&gt;&lt;/i&gt;ci-digger</option>
+    <option value="ci-edit-chart"">&lt;i class=&quot;fa-2x ci ci-edit-chart&quot; style=width:40px&gt;&lt;/i&gt;ci-edit-chart</option>
+    <option value="ci-edit-user"">&lt;i class=&quot;fa-2x ci ci-edit-user&quot; style=width:40px&gt;&lt;/i&gt;ci-edit-user</option>
+    <option value="ci-enquiry"">&lt;i class=&quot;fa-2x ci ci-enquiry&quot; style=width:40px&gt;&lt;/i&gt;ci-enquiry</option>
+    <option value="ci-expenses"">&lt;i class=&quot;fa-2x ci ci-expenses&quot; style=width:40px&gt;&lt;/i&gt;ci-expenses</option>
+    <option value="ci-finance"">&lt;i class=&quot;fa-2x ci ci-finance&quot; style=width:40px&gt;&lt;/i&gt;ci-finance</option>
+    <option value="ci-folder"">&lt;i class=&quot;fa-2x ci ci-folder&quot; style=width:40px&gt;&lt;/i&gt;ci-folder</option>
+    <option value="ci-for-sale"">&lt;i class=&quot;fa-2x ci ci-for-sale&quot; style=width:40px&gt;&lt;/i&gt;ci-for-sale</option>
+    <option value="ci-form"">&lt;i class=&quot;fa-2x ci ci-form&quot; style=width:40px&gt;&lt;/i&gt;ci-form</option>
+    <option value="ci-hardhat"">&lt;i class=&quot;fa-2x ci ci-hardhat&quot; style=width:40px&gt;&lt;/i&gt;ci-hardhat</option>
+    <option value="ci-home"">&lt;i class=&quot;fa-2x ci ci-home&quot; style=width:40px&gt;&lt;/i&gt;ci-home</option>
+    <option value="ci-home-maintenance"">&lt;i class=&quot;fa-2x ci ci-home-maintenance&quot; style=width:40px&gt;&lt;/i&gt;ci-home-maintenance</option>
+    <option value="ci-input"">&lt;i class=&quot;fa-2x ci ci-input&quot; style=width:40px&gt;&lt;/i&gt;ci-input</option>
+    <option value="ci-internet-cart"">&lt;i class=&quot;fa-2x ci ci-internet-cart&quot; style=width:40px&gt;&lt;/i&gt;ci-internet-cart</option>
+    <option value="ci-layout"">&lt;i class=&quot;fa-2x ci ci-layout&quot; style=width:40px&gt;&lt;/i&gt;ci-layout</option>
+    <option value="ci-let"">&lt;i class=&quot;fa-2x ci ci-let&quot; style=width:40px&gt;&lt;/i&gt;ci-let</option>
+    <option value="ci-maintenance"">&lt;i class=&quot;fa-2x ci ci-maintenance&quot; style=width:40px&gt;&lt;/i&gt;ci-maintenance</option>
+    <option value="ci-menu"">&lt;i class=&quot;fa-2x ci ci-menu&quot; style=width:40px&gt;&lt;/i&gt;ci-menu</option>
+    <option value="ci-menu-big"">&lt;i class=&quot;fa-2x ci ci-menu-big&quot; style=width:40px&gt;&lt;/i&gt;ci-menu-big</option>
+    <option value="ci-meter"">&lt;i class=&quot;fa-2x ci ci-meter&quot; style=width:40px&gt;&lt;/i&gt;ci-meter</option>
+    <option value="ci-network"">&lt;i class=&quot;fa-2x ci ci-network&quot; style=width:40px&gt;&lt;/i&gt;ci-network</option>
+    <option value="ci-notes"">&lt;i class=&quot;fa-2x ci ci-notes&quot; style=width:40px&gt;&lt;/i&gt;ci-notes</option>
+    <option value="ci-people"">&lt;i class=&quot;fa-2x ci ci-people&quot; style=width:40px&gt;&lt;/i&gt;ci-people</option>
+    <option value="ci-percent"">&lt;i class=&quot;fa-2x ci ci-percent&quot; style=width:40px&gt;&lt;/i&gt;ci-percent</option>
+    <option value="ci-person"">&lt;i class=&quot;fa-2x ci ci-person&quot; style=width:40px&gt;&lt;/i&gt;ci-person</option>
+    <option value="ci-plot"">&lt;i class=&quot;fa-2x ci ci-plot&quot; style=width:40px&gt;&lt;/i&gt;ci-plot</option>
+    <option value="ci-process"">&lt;i class=&quot;fa-2x ci ci-process&quot; style=width:40px&gt;&lt;/i&gt;ci-process</option>
+    <option value="ci-protect"">&lt;i class=&quot;fa-2x ci ci-protect&quot; style=width:40px&gt;&lt;/i&gt;ci-protect</option>
+    <option value="ci-refresh"">&lt;i class=&quot;fa-2x ci ci-refresh&quot; style=width:40px&gt;&lt;/i&gt;ci-refresh</option>
+    <option value="ci-refresh-cart"">&lt;i class=&quot;fa-2x ci ci-refresh-cart&quot; style=width:40px&gt;&lt;/i&gt;ci-refresh-cart</option>
+    <option value="ci-report"">&lt;i class=&quot;fa-2x ci ci-report&quot; style=width:40px&gt;&lt;/i&gt;ci-report</option>
+    <option value="ci-rings"">&lt;i class=&quot;fa-2x ci ci-rings&quot; style=width:40px&gt;&lt;/i&gt;ci-rings</option>
+    <option value="ci-sales"">&lt;i class=&quot;fa-2x ci ci-sales&quot; style=width:40px&gt;&lt;/i&gt;ci-sales</option>
+    <option value="ci-schedule"">&lt;i class=&quot;fa-2x ci ci-schedule&quot; style=width:40px&gt;&lt;/i&gt;ci-schedule</option>
+    <option value="ci-search"">&lt;i class=&quot;fa-2x ci ci-search&quot; style=width:40px&gt;&lt;/i&gt;ci-search</option>
+    <option value="ci-sections"">&lt;i class=&quot;fa-2x ci ci-sections&quot; style=width:40px&gt;&lt;/i&gt;ci-sections</option>
+    <option value="ci-spanner-left"">&lt;i class=&quot;fa-2x ci ci-spanner-left&quot; style=width:40px&gt;&lt;/i&gt;ci-spanner-left</option>
+    <option value="ci-spanner-switch"">&lt;i class=&quot;fa-2x ci ci-spanner-switch&quot; style=width:40px&gt;&lt;/i&gt;ci-spanner-switch</option>
+    <option value="ci-stock"">&lt;i class=&quot;fa-2x ci ci-stock&quot; style=width:40px&gt;&lt;/i&gt;ci-stock</option>
+    <option value="ci-switch"">&lt;i class=&quot;fa-2x ci ci-switch&quot; style=width:40px&gt;&lt;/i&gt;ci-switch</option>
+    <option value="ci-tick"">&lt;i class=&quot;fa-2x ci ci-tick&quot; style=width:40px&gt;&lt;/i&gt;ci-tick</option>
+    <option value="ci-wip"">&lt;i class=&quot;fa-2x ci ci-wip&quot; style=width:40px&gt;&lt;/i&gt;ci-wip</option>
+    <option value="ci-workbench"">&lt;i class=&quot;fa-2x ci ci-workbench&quot; style=width:40px&gt;&lt;/i&gt;ci-workbench</option>
+    <option value="fa-android"">&lt;i class=&quot;fa-2x fa fa-android&quot; style=width:40px&gt;&lt;/i&gt;fa-android</option>
+    <option value="fa-apple"">&lt;i class=&quot;fa-2x fa fa-apple&quot; style=width:40px&gt;&lt;/i&gt;fa-apple</option>
+    <option value="fa-area-chart"">&lt;i class=&quot;fa-2x fa fa-area-chart&quot; style=width:40px&gt;&lt;/i&gt;fa-area-chart</option>
+    <option value="fa-bank"">&lt;i class=&quot;fa-2x fa fa-bank&quot; style=width:40px&gt;&lt;/i&gt;fa-bank</option>
+    <option value="fa-bar-chart-o"">&lt;i class=&quot;fa-2x fa fa-bar-chart-o&quot; style=width:40px&gt;&lt;/i&gt;fa-bar-chart-o</option>
+    <option value="fa-bed"">&lt;i class=&quot;fa-2x fa fa-bed&quot; style=width:40px&gt;&lt;/i&gt;fa-bed</option>
+    <option value="fa-binoculars"">&lt;i class=&quot;fa-2x fa fa-binoculars&quot; style=width:40px&gt;&lt;/i&gt;fa-binoculars</option>
+    <option value="fa-briefcase"">&lt;i class=&quot;fa-2x fa fa-briefcase&quot; style=width:40px&gt;&lt;/i&gt;fa-briefcase</option>
+    <option value="fa-car"">&lt;i class=&quot;fa-2x fa fa-car&quot; style=width:40px&gt;&lt;/i&gt;fa-car</option>
+    <option value="fa-chain"">&lt;i class=&quot;fa-2x fa fa-chain&quot; style=width:40px&gt;&lt;/i&gt;fa-chain</option>
+    <option value="fa-cloud"">&lt;i class=&quot;fa-2x fa fa-cloud&quot; style=width:40px&gt;&lt;/i&gt;fa-cloud</option>
+    <option value="fa-code"">&lt;i class=&quot;fa-2x fa fa-code&quot; style=width:40px&gt;&lt;/i&gt;fa-code</option>
+    <option value="fa-envelope-o"">&lt;i class=&quot;fa-2x fa fa-envelope-o&quot; style=width:40px&gt;&lt;/i&gt;fa-envelope-o</option>
+    <option value="fa-eyedropper"">&lt;i class=&quot;fa-2x fa fa-eyedropper&quot; style=width:40px&gt;&lt;/i&gt;fa-eyedropper</option>
+    <option value="fa-fire"">&lt;i class=&quot;fa-2x fa fa-fire&quot; style=width:40px&gt;&lt;/i&gt;fa-fire</option>
+    <option value="fa-futbol-o"">&lt;i class=&quot;fa-2x fa fa-futbol-o&quot; style=width:40px&gt;&lt;/i&gt;fa-futbol-o</option>
+    <option value="fa-globe"">&lt;i class=&quot;fa-2x fa fa-globe&quot; style=width:40px&gt;&lt;/i&gt;fa-globe</option>
+    <option value="fa-institution"">&lt;i class=&quot;fa-2x fa fa-institution&quot; style=width:40px&gt;&lt;/i&gt;fa-institution</option>
+    <option value="fa-mortar-board"">&lt;i class=&quot;fa-2x fa fa-mortar-board&quot; style=width:40px&gt;&lt;/i&gt;fa-mortar-board</option>
+    <option value="fa-paint-brush"">&lt;i class=&quot;fa-2x fa fa-paint-brush&quot; style=width:40px&gt;&lt;/i&gt;fa-paint-brush</option>
+    <option value="fa-print"">&lt;i class=&quot;fa-2x fa fa-print&quot; style=width:40px&gt;&lt;/i&gt;fa-print</option>
+    <option value="fa-recycle"">&lt;i class=&quot;fa-2x fa fa-recycle&quot; style=width:40px&gt;&lt;/i&gt;fa-recycle</option>
+    <option value="fa-reddit"">&lt;i class=&quot;fa-2x fa fa-reddit&quot; style=width:40px&gt;&lt;/i&gt;fa-reddit</option>
+    <option value="fa-reorder"">&lt;i class=&quot;fa-2x fa fa-reorder&quot; style=width:40px&gt;&lt;/i&gt;fa-reorder</option>
+    <option value="fa-retweet"">&lt;i class=&quot;fa-2x fa fa-retweet&quot; style=width:40px&gt;&lt;/i&gt;fa-retweet</option>
+    <option value="fa-send-o"">&lt;i class=&quot;fa-2x fa fa-send-o&quot; style=width:40px&gt;&lt;/i&gt;fa-send-o</option>
+    <option value="fa-warning"">&lt;i class=&quot;fa-2x fa fa-warning&quot; style=width:40px&gt;&lt;/i&gt;fa-warning</option>
+    <option value="im-books"">&lt;i class=&quot;fa-2x im im-books&quot; style=width:40px&gt;&lt;/i&gt;im-books</option>
+    <option value="im-calendar"">&lt;i class=&quot;fa-2x im im-calendar&quot; style=width:40px&gt;&lt;/i&gt;im-calendar</option>
+    <option value="im-coin-dollar"">&lt;i class=&quot;fa-2x im im-coin-dollar&quot; style=width:40px&gt;&lt;/i&gt;im-coin-dollar</option>
+    <option value="im-compass"">&lt;i class=&quot;fa-2x im im-compass&quot; style=width:40px&gt;&lt;/i&gt;im-compass</option>
+    <option value="im-connection"">&lt;i class=&quot;fa-2x im im-connection&quot; style=width:40px&gt;&lt;/i&gt;im-connection</option>
+    <option value="im-database"">&lt;i class=&quot;fa-2x im im-database&quot; style=width:40px&gt;&lt;/i&gt;im-database</option>
+    <option value="im-mail5"">&lt;i class=&quot;fa-2x im im-mail5&quot; style=width:40px&gt;&lt;/i&gt;im-mail5</option>
+    <option value="im-man-woman"">&lt;i class=&quot;fa-2x im im-man-woman&quot; style=width:40px&gt;&lt;/i&gt;im-man-woman</option>
+    <option value="im-star-empty"">&lt;i class=&quot;fa-2x im im-star-empty&quot; style=width:40px&gt;&lt;/i&gt;im-star-empty</option>
+    <option value="im-stats-bars2"">&lt;i class=&quot;fa-2x im im-stats-bars2&quot; style=width:40px&gt;&lt;/i&gt;im-stats-bars2</option>
+    <option value="im-sun"">&lt;i class=&quot;fa-2x im im-sun&quot; style=width:40px&gt;&lt;/i&gt;im-sun</option>
+    <option value="im-undo"">&lt;i class=&quot;fa-2x im im-undo&quot; style=width:40px&gt;&lt;/i&gt;im-undo</option>
+    <option value="im-wallet"">&lt;i class=&quot;fa-2x im im-wallet&quot; style=width:40px&gt;&lt;/i&gt;im-wallet</option>
+    <option value="im-warning"">&lt;i class=&quot;fa-2x im im-warning&quot; style=width:40px&gt;&lt;/i&gt;im-warning</option>
+    <option value="im-xing"">&lt;i class=&quot;fa-2x im im-xing&quot; style=width:40px&gt;&lt;/i&gt;im-xing</option>
+    <option value="im-yahoo"">&lt;i class=&quot;fa-2x im im-yahoo&quot; style=width:40px&gt;&lt;/i&gt;im-yahoo</option>
+    </select>
+    <input type="hidden" id="msi_iconvalues" value=",ci-administration,ci-award,ci-book,ci-browse,ci-builder,ci-cancelation,ci-cart,ci-chart,ci-checkout,ci-chevrons,ci-circle-ring,ci-configuration,ci-delete,ci-delivery,ci-design,ci-design-undo,ci-digger,ci-edit-chart,ci-edit-user,ci-enquiry,ci-expenses,ci-finance,ci-folder,ci-for-sale,ci-form,ci-hardhat,ci-home,ci-home-maintenance,ci-input,ci-internet-cart,ci-layout,ci-let,ci-maintenance,ci-menu,ci-menu-big,ci-meter,ci-network,ci-notes,ci-people,ci-percent,ci-person,ci-plot,ci-process,ci-protect,ci-refresh,ci-refresh-cart,ci-report,ci-rings,ci-sales,ci-schedule,ci-search,ci-sections,ci-spanner-left,ci-spanner-switch,ci-stock,ci-switch,ci-tick,ci-wip,ci-workbench,fa-android,fa-apple,fa-area-chart,fa-bank,fa-bar-chart-o,fa-bed,fa-binoculars,fa-briefcase,fa-car,fa-chain,fa-cloud,fa-code,fa-envelope-o,fa-eyedropper,fa-fire,fa-futbol-o,fa-globe,fa-institution,fa-mortar-board,fa-paint-brush,fa-print,fa-recycle,fa-reddit,fa-reorder,fa-retweet,fa-send-o,fa-warning,im-books,im-calendar,im-coin-dollar,im-compass,im-connection,im-database,im-mail5,im-man-woman,im-star-empty,im-stats-bars2,im-sun,im-undo,im-wallet,im-warning,im-xing,im-yahoo">
+    <input type="hidden" name="msi_icon" id="msi_icon">
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="msi_appoption" id="labelmsi_appoption">Options</label>
+    </TD><TD>
+    <select name="msi_appoption" data-inputSeq="9" onfocus="hThisField=this;" id="msi_appoption">
+    </select>
+    </TD></TR>
+    <TR><TD align="right">
+    <label for="msi_appvalue" id="labelmsi_appvalue">Values</label>
+    </TD><TD>
+    <TABLE class="orderedlist"><TR><TD class="formlabel">Available:</TD><TD></TD><TD class="formlabel">Selected:</TD><TD align="right"><button class="buttonanchor image-button" id="msi_appvalup" onClick="buttonListUp(this);return false;" href="listup" title="Move Up"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/listup.svg"  id="button2" class="button" border="0"></button><button class="buttonanchor image-button" id="msi_appvaldo" onClick="buttonListDown(this);return false;" href="listdown" title="Move Down"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/listdown.svg"  id="button3" class="button" border="0"></button></TD></TR><TR><TD><SELECT id="msi_appvalSource" style="display:none">
+    </SELECT><SELECT id="msi_appvalLeft" size="5" multiple style="width:120px" ondblclick="msi_appvalad.click();"></SELECT><BR><INPUT type="text"  id="msi_appvalFilter" style="width:120px" onkeyup="filterList(msi_appvalSource,msi_appvalLeft,msi_appvalFilter.value,thisForm.msi_appval.value)"></TD><TD><button class="buttonanchor image-button" id="msi_appvalad" onClick="addToRightList(this,false);return false;" href="listadd" title="Add"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/listadd.svg"  id="button4" class="button" border="0"></button><BR><button class="buttonanchor image-button" id="msi_appvalaa" onClick="addToRightList(this,true);return false;" href="listaddall" title="Add All"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/listaddall.svg"  id="button5" class="button" border="0"></button><BR><button class="buttonanchor image-button" id="msi_appvalde" onClick="addToLeftList(this,false);return false;" href="listdel" title="Delete"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/listdel.svg"  id="button6" class="button" border="0"></button><BR><button class="buttonanchor image-button" id="msi_appvalda" onClick="addToLeftList(this,true);return false;" href="listdelall" title="Delete All"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/listdelall.svg"  id="button7" class="button" border="0"></button><BR></TD><TD colspan="2"><SELECT id="msi_appvalRight" onFocus="fieldOnFocus(this);" data-errorcodes=",," inputSeq="1" dataType="CH" size="7" multiple style="width:120px" ondblclick="msi_appvalde.click()" class="">
+    </SELECT></TD></TR></TABLE><INPUT type="hidden"name="msi_appval" id="msi_appval"  value="" >
+    
+    </TD></TR>
+    </TABLE>
+    </FORM>
+    </DIV>
+    <DIV id="searchDialog" title="Search">
+    <div id="searchHeader">
+    <TABLE width="100%"><TR><TD>
+    <input type="search" class="search" placeholder="Search" id="globalSearch" onfocus="hThisField=null" onkeyup="globalSearchKeyUp.call(this,event)" value="">
+    </TD><TD align="right">
+    <div id="searchType"><select id="searchType" multiple="multiple" onchange="globalSearchKeyUp.call(el$('globalSearch'),event)"><option value="FUNCTION">Functions</option><option value="%HS_ACTION">Activity Workbench</options><option value="%CS_CERTIFICATE">Applications/Certificates</options><option value="%SV_ITEM">BOQ Items</options><option value="%SV_RES">BOQ Resources</options><option value="%CB_TDET">Cash Book Cheques</options><option value="%CI_COMPANY">Companies</options><option value="%CS_CHECK">Contract Sales Cash</options><option value="%JC_JOB">Contracts</options><option value="%AR_CUST">Customers</options><option value="%PT_DAILY">Daily Report</options><option value="COINSDOC">Documentation</options><option value="%DM_DOCUMENT">Documents</options><option value="%PT_DRAWREV">Drawing Revisions</options><option value="%PT_DRAWSET">Drawing Sets</options><option value="%PT_DRAWING">Drawings</options><option value="%EMPLOYEE_US">Employees</options><option value="%FA_ASSET">Fixed Assets</options><option value="%SW_INVHEAD">FM Invoices</options><option value="%SW_JOB">FM Jobs</options><option value="%SW_LOCATION">FM Locations</options><option value="%SW_PERSONNEL">FM Operatives</options><option value="%PT_ISSUE">Issues</options><option value="%MK_JOURNAL">Journals</options><option value="%MK_JOURNAL_PT">Journals</options><option value="%PT_LETTER">Letters</options><option value="%CI_COMPANY_MK">Marketing Companies</options><option value="%PP_CONTACT">Marketing Contacts</options><option value="%PT_MEETING">Meeting</options><option value="%PT_MEETING_ITEM">Meeting Items</options><option value="%PP_PERSON">People</options><option value="%MK_PERSONNEL">Personnel</options><option value="%AP_INVOICE">PL Invoices</options><option value="%AP_CHECK">PL Payments</options><option value="%CO_EMAIL_VWB">Plot Emails</options><option value="%VP_WBSDEF">Plots</options><option value="%PO_LINE">PO Lines</options><option value="%PO_HDR">POs</options><option value="employee">PR Employees</options><option value="%PI_PROJECT">Project</options><option value="%PT_PTTASKS">PT Tasks</options><option value="%PT_PTWP">PT Work Packages</options><option value="%PT_RFI">RFIs</options><option value="%SC_CERTIFICATE">SC Certificates</options><option value="%SC_CHECK">SC Payments</options><option value="%SE_AGREE">SE Agreements</options><option value="%SE_PO">SE Cust Blanket POs</options><option value="%SE_LOCATION">SE Locations</options><option value="%SE_ORDER">Service Orders</options><option value="%AR_CHECK">SL Cash</options><option value="%AR_INVOICE">SL Invoices</options><option value="%PT_CLOSEOUT">Snag List</options><option value="%ST_ITEM">Stock Items</options><option value="%SV_RES_SC">Subcontract Resources</options><option value="%SV_ITEM_SC">Subcontract Variation Items</options><option value="%SV_VARISC">Subcontract Variations</options><option value="%SC_MAST">Subcontractors</options><option value="%SC_SUBCON">Subcontracts</options><option value="%PT_SUBPKG">Submittal Packages</options><option value="%PT_SUBMITTAL">Submittals</options><option value="%AP_VENDOR">Suppliers</options><option value="SYMDATA">sy_mdata TEST</options><option value="%PT_TASKLIST">Tasks</options><option value="%TI_SERVICETRADE">Trades</options><option value="%PT_TRANSMITTAL">Transmittals</options><option value="STETEST">UD Tables</options><option value="%SYSUSER">Users</options><option value="%SV_VARI">Variations</options><option value="WIKI">Wiki</options></select></div>
+    </TD></TR></TABLE>
+    </div>
+    <div id="searchResults">
+    <div id="searchList" style="float:left"></div>
+    <div id="searchDetail" style="float:left"></div>
+    </div>
+    </DIV>
+    <DIV id="popupList" style="display:none" onmouseout="popupListOut()" onmouseover="popupListOver()"></DIV>
+    <div id="userpopup" class="popupmenu" onmouseout="hCOINSMain.userPopupOut()" onmouseover="hCOINSMain.userPopupOver()"><div class="title"><IMG src="wousvg.p?style=v1105/hi&colour=%23ffffff&icon=user$.svg">Don</div>
+    <A  onmouseover="hCOINSMain.showPopupListOver('showActivity',this)" onmouseout="hCOINSMain.showPopupListOut('showActivity',this)" href="woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WHS1150SHSA" target="activityworkbench" onclick="return clickTile(this);" data-apptype="frame" data-title="Activity Workbench" data-menuitem="%WHS1150SHSA" id="activityWorkbench"><div class="option"><div class="optionitem optionicon"><IMG name="activityWorkbench" src="/coins/dev11/20170228132137/skin/v1105/images/workbench.svg" border="0" id="activityWorkbenchImg"><div style="position:relative"><div  class="newTasks outstandingnumber" style="display:none"></div></div></div><div class="optionitem">Activity Workbench</div></div></A>
+    <A href="woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WSY2590SSUR&sysuserRowid=0x00000000019b7282&hidesidemenu=Y&appwidth=697&appheight=759&appmax=N" target="preferences" id="preferences" onclick="return clickTile(this);" data-apptype="frame" data-title="User Preferences" data-menuitem="%WSY2590SSUR"><div class="option"><div class="optionitem optionicon"><IMG name="preferences" src="/coins/dev11/20170228132137/skin/v1105/images/pref.svg" id="preferencesImg" border="0" title="User Preferences"></div><div class="optionitem">User Preferences</div></div></A>
+    <div class="option" onClick="hCOINSMain.desktopDialog('Change Profile','woframe.p?kco=1&TopMenu=%25WSY&MainArea=%WSY2584FSUR&appheight=200',reloadUserImg);return false;"><div class="optionitem optionicon"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/user.svg"></div><div class="optionitem">Change Profile</div></div>
+    <A  onmouseover="hCOINSMain.showPopupListOver('showHistory',this)" onmouseout="hCOINSMain.showPopupListOut('showHistory',this)"><div class="option"><div class="optionitem optionicon"><IMG name="history" src="/coins/dev11/20170228132137/skin/v1105/images/history.svg" border="0" id="showHistoryImg"></div><div class="optionitem">History</div></div></A>
+    <A href="Email" onClick="emailLink();return false;" id="emailbutn"><div class="option"><div class="optionitem optionicon"><IMG name="emailbutn" src="/coins/dev11/20170228132137/skin/v1105/images/mail.svg" border="0" id="emailbutnImg"></div><div class="optionitem">Email Link</div></div></A>
+    <A href="wocoins.p?kco=1&TopMenu=%WDOC&DocModule=Y" target="documentation" id="documentation"><div class="option"><div class="optionitem optionicon"><IMG id="documentationImg" src="/coins/dev11/20170228132137/skin/v1105/images/docn.svg" border="0"></div><div class="optionitem">Documentation</div></div></A>
+    <A href="ShowHelp" id="togglehelp" onclick="showHelpFrame();return false;" style="display:none"><div class="option"><div class="optionitem optionicon"><IMG id="togglehelp" border="0" src="/coins/dev11/20170228132137/skin/v1105/images/help.svg"></div><div class="optionitem">Toggle Help</div></div></A>
+    <A href="#null" onClick="minimizeDesktopFrames();return false;" id="minimizeFrames"><div class="option"><div class="optionitem optionicon"><IMG border="0" src="/coins/dev11/20170228132137/skin/v1105/images/minimize.svg"></div><div class="optionitem">Minimise Frames</div></div></A>
+    <A href="#null" onClick="restoreDesktopFrames();return false;" id="restoreFrames"><div class="option"><div class="optionitem optionicon"><IMG border="0" src="/coins/dev11/20170228132137/skin/v1105/images/restore.svg"></div><div class="optionitem">Restore Frames</div></div></A>
+    <div class="option" onClick="hCOINSMain.coinsConfirm('Logout?',bind(this,function(){if(typeof forgetUserID=='object' && forgetUserID.checked) clearLocalStorage('RemID');clearLocalStorage('tile,content,userInfo');hCOINSMain.location.href='wologin.p?type=logout'}))"><div class="optionitem optionicon"><IMG src="/coins/dev11/20170228132137/skin/v1105/images/logout.svg"></div><div class="optionitem">Log Out</div></div>
+    </div>
+    <div class="inner-layout-east" id="helpframe">
+    <VAR id="help"></VAR>
+    <VAR id="appendHelp"></VAR>
+    <VAR id="popupHelp"></VAR>
+    </div>
+  </div>
+  <div class="ui-layout-west" id="sidemenu">
+    <div id="selectors">
+      <div id="functionSearchInput"><table width="100%"><tr><td><INPUT id="functionSearch" placeholder="Menu Search" type="search"></td><td width="1"><IMG src="wousvg.p?style=v1105/hi&colour=%23ffffff&icon=search$.svg" id="searchicon"><IMG src="wousvg.p?style=v1105/hi&colour=%23ffffff&icon=close$.svg" id="clearicon"></td></tr></table></div>
+      <div id="taskCombo"><select onChange="selectTask(this);" class="module selectGhost" style="width:100%"><option value=""></option></select></div>
+      <div id="closeAll" onClick="treeCloseAll();" title="Collapse All Menus"></div>
+      </div>
+      <div id="treeView"><div id="menuTree"></div><div id="functionSearchList"></div></div>
+      <div id="loading" style="display:none;"><span class="loading">Loading...</span></div>
+      </div>
+    <SCRIPT>
+    var hMainLayout;
+    $(document).ready(function () {
+      document.body.style.display="";
+      hMainLayout=$("body").layout({
+        enableCursorHotkey: false,
+        onopen: onlayoutopen,
+        onclose: onlayoutclose,
+        center__paneSelector:".ui-layout-centre",
+        west__paneSelector:".ui-layout-west",
+        west__onresize: function(name,element,state) {
+          document.cookie = "menusize=" + state.size + ";path=/";
+        },
+        west__size:290,
+        west__initClosed:false,
+        west__togglerTip_open:"Toggle Menu",
+        west__togglerTip_closed:"Toggle Menu",
+        spacing_open:4,
+        maskContents:true,
+        center__childOptions: {
+          enableCursorHotkey: false,
+          onopen: onlayoutopen,
+          onclose: onlayoutclose,
+          center__paneSelector:".inner-layout-centre",
+          north__paneSelector:".inner-layout-north",
+          north__size:2000,
+          north__fxName:"fade",
+          north__fxSpeed: 500,
+          north__resizable:false,
+          north__spacing_open:0,
+          north__spacing_closed:0,
+          north__initClosed: true ,
+      north__childOptions: {
+        enableCursorHotkey: false,
+        north__size:102,
+        north__resizable:false,
+        north__spacing_open:0,
+        north__paneSelector:".desktopheader",
+        center__paneSelector:".desktop"
+      },
+          east__paneSelector:".inner-layout-east",
+          east__size:250,
+          east__spacing_open:4,
+          east__spacing_closed:0,
+          east__initClosed: true,
+          east__initHidden: false,
+          south__paneSelector:".inner-layout-south",
+          south__size:30,
+          south__resizable:false,
+          south__spacing_open:0,
+          spacing_open:4,
+          maskContents:true
+        }
+      });
+      bDesktop=true;
+      $("div.taskbarheader").click(taskBarClick);
+      $("a.navbar").click(navBarClick);
+      $("div.nav-header div.tab").click(navDivClick);
+      setNavDefaults();
+      resizeMenuW3C();
+      window.onresize = resizeMenuW3C;
+      ajaxObject="syamsf";
+      buildTree("menuTree","%WMAIN","%WD1020bSYW");
+      setFunctionSearch();
+      setMenuCombos();
+      $("select#searchType").multiselect({selectedList:3,selectedText:"# types selected",checkAllText:"Select All",uncheckAllText:"Remove Filter",noneSelectedText:"All",height: "360"});
+      buildTileDialog();
+      try {
+      resizeSelect(companySelector);setMenuStatus()
+      } catch(e) {}
+      coinsDocumentReady();
+      moveNavTracker();
+    });
+    iframeData = new Array;
+
+    fieldData = new Array;
+
+    fieldData["msi_appvalRight"]={inputSeq:1,dataType:"CH"}
+
+    $("#detaildialogtabs").tabs()
+    $("div.sectionbarheader").click(sectionBarClick);
+    try {
+    setLocalStorage("desktop|bg","%coins_hongkong.jpg")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca40e-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca40f-","small|cosval.values||INLFUNC=%WSY1025BSYW&treeItem=%WDOCNOMENU|")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca410-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca411-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca412-","small|cosval.values||syw_type=TERM|")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca413-","small|cosval.values||syw_type=stdtext|")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca414-","small|cosval.values||sta_rtype=HTMLSNIP|")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca684-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x0000000001516f04-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004aaf484-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004d73002-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca416-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x00000000014fa600-","small|cosval.values||RS_taskdoc=*&RS_docrevstat=*&RS_External=EXT&noinfo=Y&rtn_code=BIRTBMULTIPDR,BIRTBMULTITASK,BIRTBMULTIOBJ|")
+    } catch(e) {}
+    try {
+    addTile("0x000000000393198b-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x000000000404d318-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004087887-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004087884-","small|cosval.values||csb_taskdataTLA=csb01&rtb_taskTLA=rtb01|")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004087883-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004087885-","small|cosval.values||csb_taskdataTLA=csb01&rtb_taskTLA=rtb01|")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004087886-","small|cosval.values||prog=syw1150|")
+    } catch(e) {}
+    try {
+    addTile("0x000000000404cb86-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x0000000003d21f8b-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x00000000040ca901-","small|cosval.values||stn_code=%WSYBSYP&syp-mod=SY|")
+    } catch(e) {}
+    try {
+    addTile("0x0000000004087889-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x000000000408788a-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x000000000408788b-","small|cosval.values|||")
+    } catch(e) {}
+    try {
+    addTile("0x000000000408788c-","small|cosval.reports|UNREAD,GEN|info=cosval.reports|")
+    } catch(e) {}
+    try {
+    addTile("0x0000000003b3fe87-","small|cosval.values||theQuery=&theFields=&theDataSet=&theCondition=&theResults=&theTimeout=&isRun=&theStore=&theDesc=|")
+    } catch(e) {}
+    try {
+    filterList(thisForm.msi_appvalSource,thisForm.msi_appvalLeft,thisForm.msi_appvalFilter.value,thisForm.msi_appval.value)
+    } catch(e) {}
+    try {
+    $("select#RO_msi_icon").ddslick({    height:180,    width:200,    onSelected: function(data) {      el$("msi_icon").value=data.selectedData.value;    }  });
+    } catch(e) {}
+    
+    </SCRIPT>
+    </BODY>
+    </HTML>

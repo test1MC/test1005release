@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>HS/CSVALREL - Error/Warn if stage completed &gt; build release stage</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">HS/CSVALREL - </span> Error/Warn if stage completed &gt; build release stage
+</div>
+<div class="param_def">
+<p>How COINS responds if a construction stage is marked as complete but is greater than the current release stage for the plot.</p>
+<p>If <span class="parameter">CSVALREL </span>is not blank, then when a construction stage is recorded as complete through input of a construction stage event (either directly or indirectly), COINS validates that the stage is no greater than the current build release stage for the plot. If this validation fails, COINS responds depending on the setting below:</p>
+<p class="yesnolist"><span class="userinput">Error</span> = The user will be prevented from completing the input and will receive a message "<span class="sysmsg">Error: Stage cannot be completed ? this plot is only build released to stage &lt;stage&gt;</span>".</p>
+<p class="yesnolist"><span class="userinput">Warning</span> = The user will be able to complete the input but will receive a message "<span class="sysmsg">Warning: this plot is only build released to stage &lt;stage&gt;</span>".</p>
+<p class="yesnolist">blank = COINS does not validate the construction progress against the build release.</p>
+</div>
+</body>
+</html>

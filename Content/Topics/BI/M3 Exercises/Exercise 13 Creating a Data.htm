@@ -1,0 +1,1856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Exercise 13 - Creating a Data Mart</h1>
+        <p>This exercise takes you through the steps to create a Data Mart.&#160; Some important things to keep in mind when creating Data Marts:</p>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">A Data Mart is company specific. If a cross company Data Mart is required it is probably best to create a 'Reporting Company' as the source.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">A Data Mart is a stored snap-shot of information so a decision has to be made on when the Data Mart can be run and the frequency of the data. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">To get the best results in a Data Mart the information should be gathered at a static period (i.e. overnight).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">Snapshots of the data are a quick way to view figures and report on information at consolidated views.</li>
+        </ul>
+        <p>The minimum requirements for setting up a Data Set are: </p>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">Data Set Code and Description.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">Data Set Query.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">Data Set table name.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">Data Set fields </li>
+        </ul>
+        <p class="warning">The data mart exercises are designed to be run on the Sample FirstLearn environment in the <MadCap:variable name="General.ProductName" /> training room.&#160; Special Care must be taken if the training is done outside of this environment as customers may have a large number of contracts available and the data may be unmanageable and excessive disk space may be used if care is not taken to control the number of records being extracted.</p>
+        <h2>Creating the Data Set</h2>
+        <p>In Designer, navigate to Data Set Definitions.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>Enter a Data Set name and description for the data set.&#160; For this exercise use your initials followed by WJC_PROF.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_1.png" style="left: 0;" class="FullWidth" />
+            <br />
+        </p>
+        <p>The Notes section is there to allow you to document the purposes of the Data Set so that you can refer to this in the future. </p>
+        <p>In the Query box, enter:</p>
+        <p>FOR EACH jc_job WHERE jc_job.kco = {kco}{jobSelect}</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_2.png" style="left: 0;" class="FullWidth" />
+            <br />{jobSelect} is being specified here as we will be creating a page to pass a standard contract selection later on.</p>
+        <p>We need to create an identifier for the Data Set table name.&#160; In this example call your table jcprof.&#160; <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_3.png" class="FullWidth" /></p>
+        <p>&#160;</p>
+        <h3>Adding the Fields</h3>
+        <p>On the Fields Tab, click Add <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data.png" style="visibility: visible;mso-wrap-style: square;width: 20px;height: 19px;" /> and key in the following fields:</p>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Data Type</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Format</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Source</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Integer</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.kco</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_num</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Number</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.job_num</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.job_name</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_StDate</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Start Date of Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>99/99/99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.job_condate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_EnDate</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Complete Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>99/99/99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.compdate</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Complete</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Complete</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Logical</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Y/N</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Jc_job.job_complete</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Grp</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Group</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.jgr_group</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Grp_Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Group Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.Jgr_desc</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Typ</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.jty_type</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Typ_Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Type Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.jty_desc</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Loc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Location</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.jcl_loc</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Loc_Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Location Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>x(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.jcl_desc</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs_TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs to Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.RO_ContractCosts^TD|0|{RS_glp_fdate__2}&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Costs_TD=this;</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs_TP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs This Period</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.RO_ContractCosts^TP|0|{RS_glp_fdate__2}&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Costs_TP=this;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs_TY</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Cost This Year</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.RO_ContractCosts^TY|0|{RS_glp_fdate__2}</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Costs_TY=this;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue_TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue This Period</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal &#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.RO_ContractRevenue^TD|0|{RS_glp_fdate__2}&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Rev_TD=this;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue_TP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue To Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal &#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.RO_ContractRevenue^TP|0|{RS_glp_fdate__2}&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Rev_TP=this;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue_TY</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue This Year</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>jc_job.RO_ContractRevenue^TY|0|{RS_glp_fdate__2}&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Rev_TY=this;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit_TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit To date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Profit_TD=Rev_TD - Costs_TD;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit_TP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit This Period</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calculation : Profit_TP=Rev_TP - Costs_TP;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit_TY</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit This Year</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="5" class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Calculation : Profit_TY=Rev_TY - Costs_TY;</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_4.png" class="FullWidth" />
+        </p>
+        <h2>Creating the report to populate the Data Mart</h2>
+        <p>A report is needed to populate a Data Mart from the Data Set.&#160; The report will not contain any visual result as it is merely the means to an end.</p>
+        <h3>Create the Function</h3>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Function Code</td>
+                    <td>Initials + WJC_PROF&#160;&#160;  Eg&#160;&#160;&#160; NLWJC_PROF</td>
+                </tr>
+                <tr>
+                    <td>Function Name </td>
+                    <td>Description identifier Data Mart Populate</td>
+                </tr>
+                <tr>
+                    <td>Function Type</td>
+                    <td>Function</td>
+                </tr>
+                <tr>
+                    <td>Function Module</td>
+                    <td>Contract Status</td>
+                </tr>
+                <tr>
+                    <td>Function Category</td>
+                    <td>Report</td>
+                </tr>
+                <tr>
+                    <td>Function Context</td>
+                    <td>Leave as defaulted from the Function Description.</td>
+                </tr>
+                <tr>
+                    <td>Function Program</td>
+                    <td>wou005</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_5.png" class="FullWidth" />
+        </p>
+        <h2><span style="margin-right: 0pt;">13.3 </span>Create the Page</h2>
+        <p>No Header or Body tables are required and the FSP should be set to the module appropriate to the data in the Data Set.&#160; In this case we will be using JCFREP.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_6.png" class="FullWidth" />
+        </p>
+        <p>Add an Update form and add the following two fields for the selection criteria – a date field is an essential element as it will reference to the extract date:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_7.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_8.png" class="FullWidth" />
+        </p>
+        <h3>Create the Report</h3>
+        <p>The report need only contain the following fields populated (other than the std Page Layout and Class assignment)</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col style="width: 178px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Data Set Definition</td>
+                    <td>Enter the name of your Data Set (xxWJC_PROF)</td>
+                </tr>
+                <tr>
+                    <td>Data Marts</td>
+                    <td>The name of your Data Mart, =,&#160; and the name of the Data Set Temp Table.&#160; In the next step we will be creating a Data Mart called xxWJC_PROF so for our exercise set this to xxWJC_PROF=ttjcprof</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_9.png" class="FullWidth" />
+        </p>
+        <h2><span style="margin-right: 0pt;">13.4 </span>Creating the Data Mart</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_10.png" style="left: 0;" class="FiftyPercentMaxWidth" />
+            <br />Data Marts is found on the OA &amp; BI reporting menu under the sub-folder called Data Warehouse</p>
+        <p>&#160;</p>
+        <p>Select the Data Marts option and click the New icon.&#160; Remember that Data Marts are kco specific so ensure you are in the right company when you click new!</p>
+        <p>Enter the data Mart code – use the same name used in the Report Data Mart Field</p>
+        <p>Enter a description for the data Mart</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_11.png" class="FiftyPercentMaxWidth" />
+        </p>
+        <p>Data Mart Tab</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Data Mart table - dw_fact.</li>
+            <li style="list-style-type: disc;">Extract – as a variable {RS_glp_fdate__2}.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">This will be the date on the update page of the populate report. It is the key to how the Data Mart is stored. (i.e. Will it be stored on a Daily/Weekly/Monthly Basis). This Date should reflect the requirement. The Data Mart will overwrite until a new extract date is reached when a new extract will be created.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Extract Format – 99/99/99&#160;&#160;&#160;&#160;&#160; Standard date format.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_12.png" class="FullWidth" />
+        </p>
+        <p>Click Save and move onto the Columns Tab.</p>
+        <p>Columns Tab</p>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">Use dwf_key1 through dwf_key9 for groupings. The Keys are the levels which are shown on the Enquiry on the Organisation Tab. These keys should be created in the order in which they wil appear on the Organisation Tab. There are 9 key fields but if more are required then standard dwf_cha fields can be used.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">The Source is the field name in the Data Set</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">The Data Type should reflect the datatype in the Data Set</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">The Label is a default Label for the Field</li>
+        </ul>
+        <p>Set up the following fields:</p>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Source</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Data Type</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Format</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_key1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_key2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Num</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_key3</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Grp</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Group</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_key4</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Typ</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_key5</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Loc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Location</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>dwf_key6</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Contract_Complete</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Contract Complete</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_13.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">There are 100 of each of the following types of fields - Each field in the Data Set should be mapped to one of the following fields.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 111pt;">
+            <li style="list-style-type: circle;">Characterdwf_cha__1&#160;&#160;&#160; to dwf_cha__100</li>
+            <li style="list-style-type: circle;">Integerdwf_int__1to dwf_int__100</li>
+            <li style="list-style-type: circle;">Decimaldwf_dec__1to dwf_dec__100</li>
+            <li style="list-style-type: circle;">Logicaldwf_log__1to dwf_log__100</li>
+            <li style="list-style-type: circle;">Datedwf_dat__1todwf_dat__100</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 75pt;">
+            <li style="list-style-type: disc;">Aggregates: the options available for the fields are "Total, Max, Min, Avg &amp; Common".&#160; This will decide how a field is handled when more than one item is added together for an analysis. (ie&#160; Should the totals be added together (Total) or should they remain as constants where they are the same&#160; (Common).</li>
+        </ul>
+        <p>&#160;</p>
+        <p class="note">Character fields are usually common and Decimal fields are usually Totalled. However an Integer field could be Common for example the Company number.</p>
+        <p>&#160;</p>
+        <p>Continue setting up the following fields:</p>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Data Type</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Format</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Aggregate</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_num</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Number</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Name</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__3</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Grp</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Group</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__4</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Grp_Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Group Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__5</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Typ</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__6</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Typ_Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Type Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__7</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Loc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Location</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_cha__8</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_Loc_Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Character</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract Location Desc</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>X(8)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dat__1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_StDate</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Start Date of Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>99/99/99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dat__2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Contract_EnDate</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Date of Completion of Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>99/99/99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs_TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs To Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue_TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue To Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__3</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit_TD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit To Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__4</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit % To Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calc</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="6" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p>Calculation:</p>
+                                </td>
+                                <td>
+                                    <p>(tt.dwf_dec__2 / tt.dwf_dec__3) * 100</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>&#160;</p>
+                                </td>
+                                <td>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__5</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs_TP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs This Period</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__6</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue_TP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue This Period</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__7</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit_TP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit This Period</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__8</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit % This Month</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calc</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="6" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p>Calculation:</p>
+                                </td>
+                                <td>
+                                    <p>(tt.dwf_dec__6 / tt.dwf_dec__7) * 100</p>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__9</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs_TY</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs This Year</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__10</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue_TY</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue This Year</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__11</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit_TY</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit This Year</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_dec__12</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Decimal</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit % This Year</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Calc</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="6" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p>Calculation:</p>
+                                </td>
+                                <td>
+                                    <p>(tt.dwf_dec__10 / tt.dwf_dec__11) * 100</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>&#160;</p>
+                                </td>
+                                <td>
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>dwf_int__1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Integer</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>dwf_log__1</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Contract_Complete</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Logical</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Contract Complete</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Y/N</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Common</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_14.png" class="FullWidth" />
+        </p>
+        <h3>Keys Tab</h3>
+        <p>Keys are created as a way to drill down through the Data Mart.&#160; They should always correspond to the number of entries in the key.</p>
+        <ul style="list-style-type: disc;margin-left: 90pt;">
+            <li style="list-style-type: disc;">The suggested best practice is to use three letter acronyms for key names (ie: COM for COMpany, GRP for GROUP – This makes identification easier). </li>
+            <li style="list-style-type: disc;">Remember to always create a drill down summary in steps without jumping levels. (E.g. you could not create TOTCUSREF without creating a TOTCUS level).</li>
+            <li style="list-style-type: disc;">The default tab is which Tab you want the key to default to.&#160; Options are the 'Browse,Form,Time,default'</li>
+        </ul>
+        <p>Set up the following Keys -all with Default Tab ‘Browse’:</p>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Key</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Fields</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCO</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOCOM</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Complete</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key6</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOCOMJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Complete-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key6, dwf_key2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOGRP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Group</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOGRPJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Group-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf-key1, dwf_key3, dwf_key2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOGRPTYP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Group-Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key3, dwf_key4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOGRPTYPJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Group-Type-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key3, dwf_key4, dwf_key2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOGRPTYPLOC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Group-Type-Location</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key3, dwf_key4, dwf_key5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOGRPTYPLOCJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Group-Type_Location-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key3, dwf_key4, dwf_key5, dwf_key2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOLOC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Location</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOLOCJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Location-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key5, dwf_key2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOTYP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOTYPJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Type-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key4, dwf_key2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>KCOTYPLOC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company-Type-Location</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_key1, dwf_key4, dwf_key5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>KCOTYPLOCJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Company-Type-Location-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>dwf_key1, dwf_key4, dwf_key5, dwf_key2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Views Tab</p>
+        <p>Views are required to allow navigation through the data.&#160; Select the Views Tab and set the selector to browse:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_15.png" class="FullWidth" />
+        </p>
+        <p>Enter the following fields:</p>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Levels</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Fixed Columns</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Fields</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Main Browse</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>*</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_dec*</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Costs</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>*</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_dec__1,dwf_dec__5,dwf_dec__8</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Revenue</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>*</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_dec__2,dwf_dec__6,dwf_dec__10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>*</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_dec__3,dwf_dec__7,dwf_dec__11</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Profit%</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>*</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>dwf_dec__4,dwf_dec__8,dwf_dec__12</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>*JOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>!dwf_cha__1,!dwf_cha__2,dwf_cha__*,dwf_dec*</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Populating the Data Mart</p>
+        <p>Run the function xxWJC_PROF:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_16.png" class="FullWidth" />
+        </p>
+        <p>&#160;
+        <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_17.png" style="left: 0; width: 190px; height: 89px;" class="FiftyPercentMaxWidth" /><br /></p>
+        <p>After the report has completed, go To the Data Warehouse Menu and select Data Mart Enquiry</p>
+        <p>&#160;</p>
+        <p>Set the Filter to your initials and apply.</p>
+        <p>You should see the Data Mart and the Last extract Column should show your selected date:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_18.png" class="FullWidth" />
+        </p>
+        <p>Click on the link to the Data Mart</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_19.png" class="FullWidth" />
+        </p>
+        <p>Continue to drill down through the Data Mart and explore the data it contains.</p>
+        <h2><span style="margin-right: 0pt;">13.5 </span>Adding a Custom Display Page</h2>
+        <p><span style="margin-right: 0pt;">13.5.1 </span>Create The Page</p>
+        <p>Create a Page called xxWJC_PROFDASH (replace xx with your initials.</p>
+        <p>Set both Header and Body tables to dw_anal</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_20.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 152px;" />
+        </p>
+        <p>Add a Footer Form</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_21.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 285px;" />
+        </p>
+        <h3><span style="margin-right: 0pt;">13.5.2 </span>Add the Fields</h3>
+        <p>Add the following fields to the Footer Form:</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field</p>
+                </td>
+                <td>
+                    <p>Label</p>
+                </td>
+                <td>
+                    <p>View As</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>TEXT^Current Extract</p>
+                </td>
+                <td>
+                    <p>&#160;</p>
+                </td>
+                <td>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>dwf_dec__4</p>
+                </td>
+                <td>
+                    <p>Profit TD</p>
+                </td>
+                <td>
+                    <p>Gauge-Circular</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>dwf_dec__8</p>
+                </td>
+                <td>
+                    <p>Profit TP</p>
+                </td>
+                <td>
+                    <p>Gauge-Circular</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>dwf_dec__12</p>
+                </td>
+                <td>
+                    <p>Profit TY</p>
+                </td>
+                <td>
+                    <p>Gauge-Circular</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_22.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 277px;" />
+        </p>
+        <h3><span style="margin-right: 0pt;">13.5.3 </span>Add the Page to the Data Mart</h3>
+        <p>Go back to your Data Mart design and go to the Views Tab.</p>
+        <p>Set Type filter at the bottom of the screen to Form</p>
+        <p>Enter the following field:</p>
+        <p>Description:Profit Dashboard</p>
+        <p>Levels:*</p>
+        <p>Function:xxWJC_PROFDASH (Replace xx with your initials)</p>
+        <p>Return to the Data Mart Enquiry and drill into your Data Mart.&#160; On the Summary Tab, select Profit Dashboard.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_23.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 229px;" />
+        </p>
+        <p>&#160;</p>
+        <h2><span style="margin-right: 0pt;">13.6 </span>Adding a Time View</h2>
+        <p>A time view is usually used for graphical views of the data over a period of time or extracts.</p>
+        <p>Each field that is added to the screen will be shown as that field for each extract which has been run.</p>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="1">
+            <p>Run your extract report for several periods of time.</p>
+            <p>On the Views Tab for your Data Mart change the filter to Type “Time” <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 13 Creating a Data_24.png" style="visibility: visible;mso-wrap-style: square;width: 141px;height: 32px;" /></p>
+            <p>Add the following fields:</p>
+        </ol>
+        <p>&#160;</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Description</p>
+                </td>
+                <td>
+                    <p>Levels</p>
+                </td>
+                <td>
+                    <p>Fixed Columns</p>
+                </td>
+                <td>
+                    <p>Fields</p>
+                </td>
+                <td>
+                    <p>Chart</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Profit Percentages</p>
+                </td>
+                <td>
+                    <p>*</p>
+                </td>
+                <td>
+                    <p>0</p>
+                </td>
+                <td>
+                    <p>dwf_dec__4,dwf_dec__8,dwf_dec__12</p>
+                </td>
+                <td>
+                    <p>LineM2-MS Line (Type 2)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>To Date</p>
+                </td>
+                <td>
+                    <p>*</p>
+                </td>
+                <td>
+                    <p>0</p>
+                </td>
+                <td>
+                    <p>dwf_dec__1,dwf_dec__2,dwf_dec__3</p>
+                </td>
+                <td>
+                    <p>3DSTACK-3D Stacked Columns</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>This Period</p>
+                </td>
+                <td>
+                    <p>*</p>
+                </td>
+                <td>
+                    <p>0</p>
+                </td>
+                <td>
+                    <p>dwf_dec__5,dwf_dec__6,dwf_dec__7</p>
+                </td>
+                <td>
+                    <p>3DSTACK-3D Stacked Columns</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Profit</p>
+                </td>
+                <td>
+                    <p>*</p>
+                </td>
+                <td>
+                    <p>0</p>
+                </td>
+                <td>
+                    <p>dwf_dec__9,dwf_dec__10,dwf_dec__11</p>
+                </td>
+                <td>
+                    <p>3DSTACK-3D Stacked Columns</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 72pt;" start="4">
+            <p>Return to your Data Mart enquiry and select the Time Tab and view the results.</p>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

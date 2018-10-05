@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Format W (Handelsbankken)</h1>
+        <p>This is a standard CSV format file. The fields are as follows:</p>
+        <ul>
+            <li>Account</li>
+            <li>Transaction Date</li>
+            <li>Description</li>
+            <li>Debt Value</li>
+            <li>Credit Value</li>
+        </ul>
+        <p>There is no sort code to be imported as it is hard-coded in the program as 40-51-62.</p>
+        <p>The currency is hard-coded as GBP.</p>
+        <p><MadCap:variable name="Variables.Cheques caps" /> are identified as follows:</p>
+        <ul>
+            <li>First 4 chars of Description must be “CHQ.”</li>
+            <li>Next 6 chars of the Description is the <MadCap:variable name="Variables.cheque" /> number.</li>
+        </ul>
+        <p>For example, a <MadCap:variable name="Variables.cheque" /> with <MadCap:variable name="Variables.cheque" /> number of 1078 would have Description of “CHQ.001078”.</p>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="657" MadCap:lastWidth="1279">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Conditional Formatting</h1>
+        <p>Fields can be printed on documents based on conditions set in the Build field. </p>
+        <p>
+            <img src="../../../Resources/Images/Configurable Forms/Defining the Content of the_16.png" class="HalfWidth">
+            </img>
+        </p>
+        <p>Fields can be conditionally printed based on the <MadCap:variable name="General.ProductName" /> Company you are printing from.</p>
+        <p>For example:</p>
+        <p>The following build would print the field when printing the document from <MadCap:variable name="General.ProductName" /> companies 001, 005 &amp; 011. It would ignore the field if the document was printed in any other <MadCap:variable name="General.ProductName" /> company.</p>
+        <p style="font-weight: bold;"> sys003.buildVarValid^kco|1,5,11</p>
+        <p>Fields can be conditionally printed based on the information contained within the record you are printing.</p>
+        <p>For example:</p>
+        <p>The following build would print the field when the record being selected to print is coded to General Ledger Sector 01. It would ignore the field if the record being printed related to any other Sector.</p>
+        <p style="font-weight: bold;">sys003.build^EQ||{gan_code}||01</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

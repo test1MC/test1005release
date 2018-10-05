@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="3273" MadCap:lastWidth="802">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Fixed Asset Load File Format</title>
+    <style>/*<![CDATA[*/
+td.mandatory
+{
+	background-color: #a4a400;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Fixed Asset Load File Format</h1>
+    <p>The following file format is used by <span class="function" title="Function:%WFA7530RFAA">Fixed Asset Load</span> if non-configurable is selected when loading the file.</p>
+    <p>The file must contain only data lines (no header line), and fields must be separated by a comma or a space (you specify which separator is used when you load the file). If columns are separated by spaces, all alphanumeric fields must be enclosed in quotation marks (" ").</p>
+    <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Column<br />Number</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Description</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Format</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">
+              <MadCap:variable name="General.ProductName" /> Field</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+            <p class="TableHeader">Comments</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">1</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Asset Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">If the FA parameter <span class="parameter">ASSFORM</span> is not blank, the asset code is auto-generated; leave this column blank.</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">2</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Description</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(30)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_desc</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Mandatory if <span class="field">Mandatory Description</span> is <MadCap:variable name="Variables.tick" />ed when loading.</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">3</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Group Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fag_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Validated against the Asset Group table (fa_group).</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">4</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Department Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fad_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Validated against the Asset Department table (fa_dept).</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">5</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Home Depot</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_home</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">6</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Current Depot</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_depot</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">7</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Serial Number</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(20)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_serialno</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Validated to be unique if <span class="field">Serial No Validation</span> is <MadCap:variable name="Variables.tick" />ed when loading</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">8</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Part Of</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_base</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The asset code of which this asset is a part. If the other asset is being loaded at the same time, it must come earlier in the file.  </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">9</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Subgroup</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(4)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_sub</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">10</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.pl supplier" style="text-transform:capitalize;" /> code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_num</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">11</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Purchase Reference</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(12)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_pchref</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">12</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Purchase Date</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_pchdate</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Mandatory if creating a purchase batch on load.</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">13</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Price</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_price</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">14</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Minimum Book Value</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_minbv</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">15</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Depreciation Method</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fdm_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">16</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Initial WDV</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_wdvinit1</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">17</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Current WDV</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_wdv</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">18</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Car Registration</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(10)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_regno</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">19</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Make</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fmk_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">20</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Model</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fam_code</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">21</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">New</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_new</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">22</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.colour" style="text-transform:capitalize;" />
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(20)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_<MadCap:variable name="Variables.colour" /></td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">23</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trim</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(20)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_trim</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">24</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Radio</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(20)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_radio</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">25</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Key Number</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(20)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_keyno</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">26</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Fuel Card</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(20)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_fuelcard</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">27</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Current Miles</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;&gt;&gt;&gt;&gt;&gt;9</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_currmiles</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">28</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Current Mile Date</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">flt_currmidat</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">29</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Code 1</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fat_code[1]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">30</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Value 1</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">As in Trigger</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_value[1]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">31</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Date of Value 1</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_lastupd[1]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">32</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger <MadCap:variable name="Variables.expiry" style="text-transform:capitalize;" /> 1</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_exp[1]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The value at which the trigger expires. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">33</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger code 2</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fat_code[2]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">34</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Value 2</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">As in Trigger</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_value[2]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">35</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Date of Value 2</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_lastupd[2]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">36</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger <MadCap:variable name="Variables.expiry" style="text-transform:capitalize;" /> 2</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_exp[2]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">37</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Code 3</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fat_code[3]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">38</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Value 3</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">As in Trigger</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_value[3]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">39</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Date of Value 3</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_lastupd[3]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">40</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger <MadCap:variable name="Variables.expiry" style="text-transform:capitalize;" /> 3</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_exp[3]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">41</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger code 4</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fat_code[4]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">42</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger value 4</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">As in Trigger</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_value[4]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">43</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Date of Value 4</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_lastupd[4]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">44</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger <MadCap:variable name="Variables.expiry" style="text-transform:capitalize;" /> 4</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_exp[4]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">45</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger code 5</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fat_code[5]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">46</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Value 5</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">As in Trigger</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_value[5]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">47</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger Date of Value 5</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_lastupd[5]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">48</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Trigger <MadCap:variable name="Variables.expiry" style="text-transform:capitalize;" /> 5</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ftv_exp[5]</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">49</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">First Analysis Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">analysis 1</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">50</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Second Analysis Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">analysis 2</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">51</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Third Analysis Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">analysis 3</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">52</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Fourth Analysis Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">analysis 4</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">53</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Depreciation Start Date</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_dsdate1</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">54</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Extended Description</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(30)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_xdesc</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">55</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">MID Status</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(1)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_road</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> Whether this is a road-going vehicle [values: Y(es)/N(o)/P(ossible)]</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">56</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">MID Category</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_midcat</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">57</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Leased</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">yes/no</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">leased</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">58</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Depreciation <MadCap:variable name="Variables.cost head" style="text-transform:capitalize;" /></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">depnch</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">59</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">2nd Depreciation Method Code</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fdm_code2</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">60</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">2nd Initial WDV</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_wdvinit2</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">61</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">2nd Current WDV</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_wdv2</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">62</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">2nd Depreciation Start Date</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_dsdate2</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">63</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Asset Status</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">faa_status</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">64</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Ownership Charged To Date</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">99/99/99</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">faa_ownchgto</td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

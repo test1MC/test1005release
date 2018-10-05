@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Positive Pay –</MadCap:conditionalText>Bank Accounts</h1>
+        <p style="page-break-after: avoid;">Bank account setup has been changed to add extra fields related to positive pay. These fields are only displayed if the CB parameter <span class="parameter">USEPOSPY</span> is set to Yes.</p>
+        <p>A new “Positive Pay” tab has been added to Bank Summary to display these new fields.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Bank Accounts – Positive Pay Fields</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="margin-bottom: 15px;">
+                    <img src="../../../Resources/Images_A-C/CB/Positive_Pay/Bank_Account_Pos_Pay_Fields.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <div class="FieldTable">
+            <div class="ListHead" style="page-break-after: avoid">
+                <div class="ColHead">
+                    <p>Field</p>
+                </div>
+                <div class="ColHead">
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="FieldBlock" style="page-break-inside: avoid">
+                <div class="FieldLabel" style="page-break-after: avoid">
+                    <p style="page-break-after: avoid">Export Checks</p>
+                </div>
+                <div class="FieldDef" style="page-break-before: avoid">
+                    <p style="page-break-before: avoid">Whether this bank requires positive pay information. If <MadCap:variable name="Variables.tick" />ed, posted <MadCap:variable name="Variables.cheques" /> will be recorded in the <MadCap:variable name="Variables.cheque" /> log, and the fields below are enabled.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Export Unposted Payroll</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Indicates whether unposted payroll <MadCap:variable name="Variables.cheques" /> are recorded in the <MadCap:variable name="Variables.cheque" /> log.</p>
+                    <ul class="CompactList">
+                        <li>
+                            <p>None – Unposted payroll <MadCap:variable name="Variables.cheques" /> are not recorded.</p>
+                        </li>
+                        <li>
+                            <p>Printed – <MadCap:variable name="Variables.Cheque caps" /> details are recorded when printed.</p>
+                        </li>
+                        <li>
+                            <p>Manual – Manual <MadCap:variable name="Variables.cheque" /> details are recorded when they are created.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Override Account Number</p>
+                </div>
+                <div class="FieldDef">
+                    <p>An account number. This allows Positive Pay to report a different account number than is printed on <MadCap:variable name="Variables.cheque" />, if requested by the bank.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Control Record</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The Control Record that is exported as the first line of the extract, if specified by the bank.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Format</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The positive pay format to use. (The formats are configured using the Positive Pay (CB - USA) form type in <span class="function">Document Designer</span>.)</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Default File Name</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The file name to use for the positive pay extract file.</p>
+                    <p>If the bank requires a particular file name format, you can specified it using the following components:</p>
+                    <ul>
+                        <li>
+                            <p>Text</p>
+                        </li>
+                        <li>
+                            <p>%d<i>&lt;format&gt;</i>% - today’s date; for example: %dMMDDCCYY%</p>
+                        </li>
+                        <li>
+                            <p>%s<i>&lt;format&gt;</i>% - sequence number; for example: %s99%</p>
+                        </li>
+                        <li>
+                            <p>%b% - bank ID</p>
+                        </li>
+                    </ul>
+                    <p>Example file name: mypospay-pnc-%dMMDDYY%%s99%.txt.</p>
+                    <p>If you don’t specify a file name, <MadCap:variable name="General.ProductName" /> uses the default format “pprpt-xx-yymmdd-nn.txt”, where xx = bank id and yymmdd = today’s date and nn = sequence number for today.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Additional Format</p>
+                </div>
+                <div class="FieldDef">
+                    <p>An alternative positive pay format (some banks require a summary file).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Auto Transmit File via FTP</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether the bank file should be sent automatically. If this is <MadCap:variable name="Variables.tick" />ed, the fields below are enabled.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>FTP Protocol</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The transfer protocol to use when sending the bank file (currently only FTP is supported).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Username</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The FTP username.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Password</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The password associated with the username.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Remote Host</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The IP address of the remote host to which the bank file will be sent.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Port</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The port to use when sending the bank file. The default value depends on the protocol selected, but the port can be changed if a custom port is required.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Remote Path</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The path on the remote server to which the bank file will be sent.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Remote Filename</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The filename to use for the bank file on the remote server. If this is left blank, <MadCap:variable name="General.ProductName" /> will transmit the file using the name it was created with (see the <span class="field">Default File Name</span> field).</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

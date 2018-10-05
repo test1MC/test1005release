@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="8" MadCap:lastHeight="758" MadCap:lastWidth="1092">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Checking Resource Budgets - </MadCap:conditionalText>Parameters</h1>
+        <p>The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>parameters affect the <MadCap:variable name="Variables.behaviour" /> of the functionality to check resource budgets during requisition and order entry.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>POBUDTXT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Warning text that is shown at the top of the tooltip if the ordered quantity exceeds the approved quantity. The approved quantity is assumed to be the greater of the budget quantity and the requisitioned quantity.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>POCHKRBD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Whether <MadCap:variable name="General.ProductName" /> checks the ordered quantity against the approved quantity when you enter an order. The approved quantity is assumed to be the greater of the budget quantity and the requisitioned quantity.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">RBATOL%</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">The tolerance percentage to use when checking resource budget amounts. This is only consulted by <a href="Checking Resource Budgets - Calculation Fields.htm">calculation fields</a> (which are intended for use in workflow).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">RBATOLAM</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">The tolerance amount to allow when checking resource budget amounts. This is only consulted by calculation fields (which are intended for use in workflow).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">RBQTOL%</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">The tolerance percentage to use when checking resource budget quantities. This is only consulted by calculation fields (which are intended for use in workflow).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">RBQTOLAM</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">The tolerance amount to allow when checking resource budget quantities. This is only consulted by calculation fields (which are intended for use in workflow).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>RQBUDTXT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Warning text that is shown at the top of the tooltip if the requisitioned quantity exceeds the budget amount.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>RQCHKRBD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Whether <MadCap:variable name="General.ProductName" /> checks the requisitioned quantity against the budget quantity when you enter a requisition.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">RQPOQTY</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Whether to allow the ordered quantity to exceed the requisitioned quantity. The options are:</p>
+                        <ul>
+                            <li>P = Prevent the ordered quantity from exceeding the requisitioned quantity (this is the default).</li>
+                            <li>V = Allow the ordered quantity to exceed the requisitioned quantity (but only using a <MadCap:variable name="Variables.po variation" />).</li>
+                            <li>A = Allow the ordered quantity to exceed the requisitioned quantity.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

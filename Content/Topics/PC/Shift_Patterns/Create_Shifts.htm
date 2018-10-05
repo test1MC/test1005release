@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Creating Shifts</h1>
+        <p><span class="function">Create Personnel Shifts</span> is a <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1110">new </MadCap:conditionalText>report process that creates empty shift records for personnel who are working on a shift pattern, and where they have an active status (as specificed by <span class="parameter">HR/STATACT</span>). You specify on the report how many days in to the future to create shifts for. This report could be scheduled to run overnight on a weekly basis.</p>
+        <p>These shift records define who is available to <MadCap:variable name="Variables.fulfil" /> an operator or <MadCap:variable name="Variables.labour" /> shift requirement. </p>
+        <ul>
+            <li>If someone is a qualified operator, their shifts will be tied to the depot they work for. (A qualified operator is someone qualified to operate one or more groups of equipment, and who has been flagged as such using the <span class="function">Qualified Operator Report</span> process.) </li>
+            <li>If they are not a qualified operator, and their job title is linked to a <MadCap:variable name="Variables.Labour caps" /> Code that is in the web <MadCap:variable name="Variables.catalogue" /> (in their company), then shift records will be created and they can <MadCap:variable name="Variables.fulfil" /> a <MadCap:variable name="Variables.labour" /> requirement.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0004,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OA Designer - Creating A Contract Listing Report</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Discovery BI0004 - Creating a Contract Listing Report</h1>
+        <p>&#160;</p>
+        <p>This contract report includes totals, sorting, header and footer forms, and a calculation.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/A Contract Report.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>Create the Function </h2>
+        <p>Set up the function to run the report.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Code </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Initials + M1 + Exercise No.e.g. NLM1Exercise7</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Name </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Description identifier.e.g. NLM1Exercise7</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Type </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Function</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Module</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Contract Status</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Category</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Report</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Context</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Leave as defaulted from the Function Description.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <br />Function Program</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">wou005</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Set up a second function with the same code but followed by a "T", this function will be used for additional selection criteria for the report.</p>
+        <p class="Example">For example:<br /><br />Function Name = NLM1Exercise7<br />Tab Function = NLM1Exercise7T</p>
+        <h2>&#160;</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-1-1107.png" class="FullWidth" />
+        </p>
+        <h2>Create the Page</h2>
+        <p>Set up the page section to prompt for the selection criteria. The Form Service Procedure for Contract Selection is jcfrep.p. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-2-1107.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <h2>Add the Page Section Forms</h2>
+        <p>Select the Form tab and add an Update form to use Update Fields.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-3-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Click the Save Button to create the form.</p>
+        <h2>Add the Page Fields</h2>
+        <p>&#160;</p>
+        <p>In the Field Tab go to the FORM selector at the bottom of the page, select Update and click Apply Filter.</p>
+        <p class="note">You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>The FSP (form service procedure) already has a function to build the standard selection criteria. </p>
+        <p>Add a new field, and in the Tab field, enter the function code of the second function (i.e. the one followed by a 'T') created in Stage 1 above. This puts the standard contract selection criteria on a different named tab from Main.  </p>
+        <p>NOTE: Once you have started to use Tab names you cannot leave any further Tab fields blank.</p>
+        <p>In the Generate field, enter jcfrep.jobSelectionGenerate.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-4-1107.png" class="FullWidth" />
+        </p>
+        <h2>Create the report section</h2>
+        <p>Go to Report Designer:</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> and fill in the details as follows:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 151px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Report Section</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Give the report section the same name as the function created.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Header Tables</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Enter the Header Table – using a configuration header (such as co_config) allows the Page&#160; access to additional tables to the main Body Table.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Body Table</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Enter the name of the database table being reported on; in this case, jc_job.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Body Query</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        Enter the query.&#160; This will select which records are shown on the report.&#160; Enter the following:
+                        <br /><br /><b>FOR EACH jc_job</b><br style="font-weight: bold;" /><b>WHERE jc_job.kco = {kco}{jobSelect}</b><br /><br />This selects each contract in the current company that matches the selection criteria chosen when the report is run.                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Page Layout</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> %A4RLAND-A4 Report Landscape</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Class</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">8pt Standard</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-5-1107.png" class="FullWidth" />
+        </p>
+        <h2>Sorting the Report</h2>
+        <p>The report will sort and subtotal by Contract Group, then by Type, then by Contract Code, so on the sort tab, enter the following fields in the Sort fields:</p>
+        <p>jgr_group+<br />jty_type+<br />job_num+</p>
+        <p>A + after the fieldname means sort in ascending order; a - means sort in descending order. </p>
+        <p>Note: By using a – you can break the index so be aware you may slow down your report.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-6-1107.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <h2>Create the Report Forms</h2>
+        <p>Set up the forms for the report.&#160; </p>
+        <p>The report will have subtotals for contract type and contract group (shown in Footer Column forms), as well as totals for the whole report (shown in a Total Columns form).&#160; Also, we can show information about each new group and type at the beginning of each section, using Header Forms. </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Create the Report Forms.png" style="width: 602px; height: 213px;" class="FullWidth" />
+        </p>
+        <p>Set up the following forms (select Forms from the drop-down menu):</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">&#160;</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">&#160;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Body</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This will show the details for each record in the body query; in this case, one per contract.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Footer 1 Columns</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This will show subtotals for the first field being sorted by; in this case, contract group (jgr_group).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Footer 2 Columns</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This will show subtotals for the second field being sorted by; in this case, contract type (jty_type).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Header 1 Form</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This will show a header for the first field being sorted by.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Header 2 Form</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This will show a header for the second field being sorted by.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Total Columns</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">This will show grand totals for the whole report.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-7-1107.png" class="FullWidth" />
+        </p>
+        <h2>Add the Fields</h2>
+        <p>In the Field Tab go to the FORM selector at the bottom of the page, select the Body form type and click Apply Filter.</p>
+        <p>&#160;</p>
+        <p class="note">You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>For each of the fields to be shown on the report, fill in the following:</p>
+        <p>&#160;</p>
+        <p class="note">For Report column widths you must specify the unit of measure – we will use mm).</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Width</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">job_num</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Code </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">15mm</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">job_name </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">35mm</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jcl_desc</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Location </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">35mm</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_ContractCosts^TD</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Costs to Date</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> 20mm</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">RO_ContractRevenue^TD</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Revenue to Date </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">20mm</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The RO Fields will display the costs and Revenue to date for the default date when the report is run.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-8-1107.png" class="FullWidth" />
+        </p>
+        <h2>Add Totals to the Report</h2>
+        <p>To show the subtotal (for group and type) and total values on the report, <MadCap:variable name="Variables.tick" /> the Total field for the columns to be totalled: in this case, the Costs to Date and Revenue to Date.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0004-9-1107.png" class="HalfWidth" />
+        </p>
+        <p>It is not necessary to define any fields for the Header Form, Footer Column or Total forms.&#160; <MadCap:variable name="General.ProductName" /> will automatically display the labels, and lines up the total and subtotal values up with the columns in the body.&#160; However, to override the standard layout (to show the total columns in different places, or to put more information in the headers), this is possible by specifying the fields for the relevant form.</p>
+        <p>The side labels that <MadCap:variable name="General.ProductName" /> shows on the headers and footers are set up using Default Report Labels.&#160; Labels for most of the common fields have already been set up, so it is not necessary to add anything.</p>
+        <p>But if the report sorts by a field that does not already have a default label, the report will show Sort n, and it will be necessary to set up a default label for the field.</p>
+        <h2>Run the report</h2>
+        <p>Run your report for Exercise 7 and check you get output similar to:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Create the Report Forms_4.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

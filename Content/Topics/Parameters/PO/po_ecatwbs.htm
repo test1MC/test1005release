@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/ECATWBS - eCatalogue WBS list length</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/ECATWBS - </span> eCatalogue WBS list length
+</div>
+<div class="param_def">
+<p>The maximum number of WBS codes that will be sent to the e<MadCap:variable name="Variables.Catalogue caps"/>.</p>
+<P>When raising an order using the e<MadCap:variable name="Variables.Catalogue caps"/> for a <MadCap:variable name="Variables.jc contract"/> that uses WBS codes, a list of WBS Codes and descriptions is sent to the e<MadCap:variable name="Variables.Catalogue caps"/> server when the user first connects. For each product ordered the user can then pick relevant WBS codes from a list inside the e<MadCap:variable name="Variables.Catalogue caps"/> application (rather than going through all order lines again when back in COINS). There is an upper limit for the length of messages to/from the e<MadCap:variable name="Variables.Catalogue caps"/> server, so a long list of WBS codes can exceed this limit.  If COINS attempts to send a list that is too long then the user will be told that COINS cannot connect to the e<MadCap:variable name="Variables.Catalogue caps"/>. A diagnostic message will appear in the e<MadCap:variable name="Variables.Catalogue caps"/> message log (as specified by the EC parameter <FONT color="#000000"><SPAN class="parameter">TRACECAT</SPAN>).</FONT></P>
+<P><FONT color="#000000"><SPAN class="parameter">ECATWBS </SPAN>allows you to avoid this error.  For any given <MadCap:variable name="Variables.jc contract"/>, if the number of active WBS codes for the <MadCap:variable name="Variables.jc contract"/> exceeds the parameter value, no WBS list will be sent and the user must revisit order lines when back in COINS to assign WBS codes. </FONT></P>
+<P>No check is done if <FONT color="#000000"><SPAN class="parameter">ECATWBS </SPAN>is blank.</FONT></P>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../ec/ec_tracecat.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

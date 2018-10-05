@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="3129.333" MadCap:lastWidth="1064" MadCap:conditions="COINS.Redacted">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Report Tokens Tab </h1>
+        <p>The <span style="font-weight: bold;">Report Tokens</span> tab enables filters to be created giving the user selections and filter to use when running the report. The <span style="font-weight: bold;">Report Token </span>tab enables you to define the filters to be used in the <span style="font-weight: bold;">Report Rows</span> or <span style="font-weight: bold;">Report Columns</span>. i.e. you might produce a single report that can be run for individual departments or sectors within the business (choosing which department or sector when you run the report).</p>
+        <p>A token is designated by a $ (dollar) sign followed a character to differentiate it. For example, $A = one token, $B = another token.</p>
+        <p>To use tokens effectively, you must embed them in your report CONSISTENTLY throughout the rows where (for example) <MadCap:variable name="General.ProductName" /> makes an account selection.</p>
+        <p>For example, the account selection:</p>
+        <p><span style="font-weight: bold;">00.0000</span> to <span style="font-weight: bold;">00.9999</span></p>
+        <p>would just select accounts for department 00. But the selection:</p>
+        <p><span style="font-weight: bold;">$A.0000</span> to <span style="font-weight: bold;">$A.9999</span></p>
+        <p>would allow the user to choose which department when they run the report. <MadCap:variable name="General.ProductName" /> will print information regarding the selection automatically on the heading of a report containing tokens.</p>
+        <p>You could also use different tokens, to allow the user to select a range of departments; for example:</p>
+        <p><span style="font-weight: bold;">$A.0000</span> to <span style="font-weight: bold;">$B.9999</span></p>
+        <p>Tokens can be embedded either in account rows or in columns within a report. Whichever option is used, they MUST then be used consistently throughout the report.</p>
+        <h2>Adding a Token </h2>
+        <p>The tokens can be used and selected from the type, which is either a filter used from the account record, or from the contract record. </p>
+        <p>You can see the Type dropdown list will display either the account details or the contract details. </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab.png" style="visibility: visible;mso-wrap-style: square;width: 407px;height: 158px;" />
+        </p>
+        <p>The token is usually starts with a $ sign to show that this is a filter to be used. </p>
+        <p>Once you have decided what Tokens you want to have in the report, we can add the lines to the token tab. </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab_1.png" style="visibility: visible;mso-wrap-style: square;width: 465px;height: 122px;" />
+        </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Field:</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description:</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Token:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The token name that is used in the report definition.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Description:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The description of the token that will be displayed as a run-time prompt when the report is run. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>List:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The token can be used as a list of items. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Blank:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Leave blank, if a blank value is not allowed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Type:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>The type of value that should be assigned to the token at run-time.&#160; This will depend where the token has been used in the report definition. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Tokens defined in <span style="font-weight: bold;">Report Rows</span> or <span style="font-weight: bold;">Column Rows</span> will be generated and displayed on the <span style="font-weight: bold;">Report Token</span><span style="font-weight: bold;">s</span> browse screen.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab_2.png" style="visibility: visible;mso-wrap-style: square;width: 316px;height: 65px;" />
+        </p>
+        <p>When you run the report you will be able to select the Sector or use a Lookup to select the correct option required. </p>
+        <h2>Adding a Token in a Report Row</h2>
+        <p>For example if you wanted to specify the Sectors for the report at run-time enter <span style="font-weight: bold;">$ </span>followed by a character e.g. <span style="font-weight: bold;">S</span> to represent sectors i.e. enter <span style="font-weight: bold;">$S</span> in the Sector field of an <span style="font-weight: bold;">Account Line</span><span style="font-weight: bold;">.</span></p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab_3.png" style="visibility: visible;mso-wrap-style: square;width: 542px;height: 102px;" />
+        </p>
+        <ol>
+            <li>Use the <span style="font-weight: bold;">Open</span> button to amend the required. 
+            <p>For example <span style="font-weight: bold;">$S</span> could be entered in Matches to enable Sectors to be entered at run-time.</p></li>
+        </ol>
+        <h2>Adding a Token in a Report Column</h2>
+        <p>For example if you wanted to specify the Budget code for the report at run-time enter <span style="font-weight: bold;">$ </span>followed by a character e.g. <span style="font-weight: bold;">B</span> to represent sectors i.e. enter <span style="font-weight: bold;">$</span><span style="font-weight: bold;">B</span> in the Sector field of an <span style="font-weight: bold;">Account Line</span><span style="font-weight: bold;">.</span></p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab_4.png" style="visibility: visible;mso-wrap-style: square;width: 593px;height: 222px;" />
+        </p>
+        <ol>
+            <li>Use the <span style="font-weight: bold;">Open</span> button to amend the required line.<p>For example <span style="font-weight: bold;">$S</span> could be entered into a <span style="font-weight: bold;">Budget </span><span style="font-weight: bold;">Line </span>in the <span style="font-weight: bold;">Report Column</span> and a token entered in the Budget Field i.e. $B, to enable the budget code to be entered at run-time.</p></li>
+            <li><span style="font-weight: bold;">Save</span> the changes to the <span style="font-weight: bold;">Report Column</span>.</li>
+        </ol>
+        <h2>To Generate Report Tokens</h2>
+        <ol>
+            <li>Select the <span style="font-weight: bold;">Report Tokens Tab</span><span style="font-weight: bold;">.</span><p>If no report tokens have already been created a blank browse will displayed.</p><p><img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab_5.png" style="visibility: visible;mso-wrap-style: square;width: 522px;height: 114px;" /></p></li>
+            <li>To generate the <span style="font-weight: bold;">Report Tokens</span> configured in the report use the <span style="font-weight: bold;">Generate Report Token</span> function on the <span style="font-weight: bold;">Options</span> menu.&#160; <p><img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab_6.png" style="visibility: visible;mso-wrap-style: square;width: 469px;height: 143px;" /></p><p>Tokens defined in <span style="font-weight: bold;">Report Rows</span> or <span style="font-weight: bold;">Column Rows</span> will be generated and displayed on the <span style="font-weight: bold;">Report Tokens</span> browse screen.</p></li>
+            <li>Use the <span style="font-weight: bold;">Open</span> button on the browse screen to add a label for the <span style="font-weight: bold;">Report T</span><span style="font-weight: bold;">oken</span><span style="font-weight: bold;">s</span>, and optionally modify how they are presented.<p><img src="../../../Resources/Images_G-I/GL/GL Reporter/Report Tokens Tab_7.png" style="visibility: visible;mso-wrap-style: square;width: 507px;height: 106px;" /></p></li>
+            <li>Enter the required information for the <span style="font-weight: bold;">Report Tokens</span>.</li>
+            <li><span style="font-weight: bold;">Save</span> the Token details.</li>
+            <li class="ListParagraph">When the report is complete use the <span style="font-weight: bold;">Next</span> button to move to the next screen.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="3026" MadCap:lastWidth="1220" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="OA Designer;Datasets;Topics" />Syuds.GroupQuery </h1>
+        <p><b>GroupQuery</b> came about because of report builder and is similar to sum except that they do multiple sums at different levels. </p>
+        <p>For example:<br /><br />group by kco by jgr_group by job_num would create a summary record for:<br /><br />level 0 (grand total),<br /> level 1 (kco), <br />Level 2 (group), <br />Level 3 (job_num). &#160;<br /><br />It equates the footer forms in the report builder and the report footer (level 0).</p>
+        <p><b>GroupQuery</b> allows multi table query and takes the form:</p>
+        <p class="Example">Method('syuds.GroupQuery','[query string]','[output table]','[keys]','[sum fields]' </p>
+        <p><b>Group</b> is just a simpler form of GroupQuery (for a single table).</p>
+        <p><b>Group</b> takes the form:</p>
+        <p class="Example">Method('syuds.Group','[Source Table]','[Condition]','[output table]','[keys]','[sum fields]' <br /><br />It actually then runs groupQuery with “FOR EACH XXX WHERE condition”&#160;</p>
+        <p class="Example">Example:<br /><br />Method('syuds.group','Source','drev&gt;1000','pcTable','pcKeys','SumFields');</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"> Leaving fields to sum blank will do all decimals </p>
+        <p>Example:</p>
+        <p>Dataset Query:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_3.png" class="FullWidth">
+            </img>
+        </p>
+        <p>Dataset Post Calculation:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_group_3.png" class="FullWidth" />
+        </p>
+        <p>Dataset Fields:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_2.png" class="FullWidth" />
+        </p>
+        <p>Output:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_group_1.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_group_2.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

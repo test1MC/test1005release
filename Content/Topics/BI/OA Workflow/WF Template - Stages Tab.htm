@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="788" MadCap:lastWidth="600">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />WF Template - Stages Tab</h1>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+            </img>
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_3_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">Workflow Template Stages allows you to define the stages that make up the workflow.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:pattern="1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Label</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Label of the stage. Used to link other stages to this one.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Description of the stage. This is the text that will appear in the user's Activity Workbench, along with the general description of the workflow and the task ID.<br /><br />If another stage links to this stage, this description will appear on the Next Stage list for the stage that links to it.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Role</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The role that must action this stage.&#160; (You can use a role calculation to manipulate this further.)</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Type</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The type of stage process that should be performed (see Workflow Stage Types).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Link(s)</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A list of the labels of other stages that are linked to this stage.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">End</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">Whether this stage is an end stage. The workflow stops if it reaches an end stage.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="Body">There are currently 10 types of workflow stage available, each will require a Label and a Description. The description will appear as the description in the Activity Workbench for the stage (with the Workflow TaskID reference). The label is used to determine the links between stages. The Id which is shown on screen will be automatically assigned and is useful when debugging the workflow with the tools on the Check tab (see documentation further on in this document).</p>
+        <p class="Body">The workflow role will determine who will be assigned a stage or task in the workflow. A role can be one of three options:</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Role</td>
+                <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">When a stage is assigned to a role <MadCap:variable name="General.ProductName" /> will cross reference the Role and the associated Responsibilities and assign the stage to the appropriate User(s). It will then perform the Role Calculation.</td>
+            </tr>
+            <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Group</td>
+                <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The person who is handing on the task may select an individual, or assign it to everyone in the list. <br /><br />When a workflow stage is assigned to a Group, the appropriate activity will be assigned to every member of the group and will appear on each member’s Activity Workbench.</td>
+            </tr>
+            <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Individual</td>
+                <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Any stage can simply be assigned to an individual.<p class="Body">&#160;</p></td>
+            </tr>
+        </table>
+        <p class="Body">If the role calculation result is a list, the user who is handing on the task must first select one individual from the list to be the person to action the task.</p>
+        <p class="Body">An individual can also be calculated from the Workflow document or ‘hard-coded’ into the role calculation.</p>
+        <p class="Body">If any stage is assigned to more than one user, the task will appear on each user's workbench. As soon as one user assigns their task to a status of anything other than ‘Not Started’ the corresponding tasks on all other users Workbenches will be completed. It will remain available for view and will be automatically updated with the progress and user of who has started the task.&#160; If they put the status back to “Not Started” then the task will be replaced on all the users in the group again.</p>
+        <p class="Body">Once any of the tasks are completed all tasks on other user’s workbenches are then completed.</p>
+        <p class="Body">An individual being assigned a task from any of the options above must be a valid <MadCap:variable name="General.ProductName" /> User and must be licensed for Workflow.</p>
+        <p class="Body">If an Email stage is being used, a valid email address needs to be assigned either against the User ID, or if appropriate, the associated <MadCap:variable name="General.ProductName" /> HR Personnel record. If an SMS stage is to be used it is necessary to have an associated HR record so that <MadCap:variable name="General.ProductName" /> can access the appropriate mobile telephone number.</p>
+    </body>
+</html>

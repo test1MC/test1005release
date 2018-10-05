@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>eRCT - Manual Payment</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">eRCT - Manual Payment</h1>
+        <p>If you make a manual payment to a subcontractor (that is, a payment that has not been processed through <MadCap:variable name="General.ProductName" />), you need to make the payment notification directly on ROS, and enter the author<MadCap:variable name="Variables.is" />ation details when you record details of the manual payment in <MadCap:variable name="General.ProductName" />.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">All manual payments should be made using the Manual Payment function in <span class="module">Subcontract Ledger </span>or <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, and not using <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>.</div>
+        <br />
+        <div class="process">
+            <h2 class="print">To make a manual payment under RCT:</h2>
+            <ol>
+                <li>Notify the payment on ROS.</li>
+                <li>Go to:</li>
+                <ul>
+                    <li><span class="function" title="Function:%WSC1090BCOB">Manual Payment Entry</span>
+                        <p>or</p>
+                    </li>
+                    <li><span class="function" title="Function:%WPL1050BCOB">Manual Payments</span>
+                    </li>
+                </ul>
+                <li>Enter the payment batch in the usual way.</li>
+                <li>Enter the payment in the usual way.</li>
+                <li>On the To Allocate tab, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> to enter the author<MadCap:variable name="Variables.is" />ation details.</li>
+                <li>Enter:
+<ul><li><span class="field">Deduction Author<MadCap:variable name="Variables.is" />ation Number </span>(mandatory);</li><li><span class="field">Actual Tax Amount </span>(defaults from the tax amount on the transaction - you will need to amend this to agree with the figure you have obtained from ROS).</li><li><span class="field">Amount Paid </span>which defaults from the net payment on the transaction.&#160; You will need to amend this if you have amended the <span class="field">Actual Tax Amount</span>.</li></ul><p><img src="../../Resources/Images_S-U/SC/SC_150801.png" /></p></li>
+                <li>
+                    <p>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</p>
+                </li>
+            </ol>
+            <p class="noteheader">NOTES</p>
+            <div class="note">
+                <p>You will not be able to allocate payments to certificates for subcontracts that fail the RCT validation (for example, contract not notified or notification expired).</p>
+                <p>You cannot use the Pay Certificates action to mark certificates as paid if you need to enter notification details for them. You can only use the Pay Certificates action for certificates that do not require notification; see <a href="WDSC1506_Making_Payments.html">eRCT - Making Payments</a>.</p>
+            </div>
+        </div>
+    </body>
+</html>

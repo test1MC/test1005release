@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2340" MadCap:lastWidth="971">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Pivot Table Viewer - </MadCap:conditionalText>Data Mart Maintenance</h1>
+        <h2>Data Mart Tab</h2>
+        <p class="Body">There is a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText> flag on the Data Mart tab in <span class="Function">Data Mart Maintenance</span>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Data Mart Maintenance Data Mart Tab</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SY Pivot Table Viewer/Data Mart Maintenance Main Tab.png" class="FullWidth" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Pivot Table<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>This enables the pivot table functionality for the data mart.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Columns Tab</h2>
+        <p class="Body">If the <span class="Field">Pivot Table</span> flag on the Data  Mart tab is <MadCap:variable name="Variables.tick" />ed then another field will appear on the body update of the columns browse to allow the user to select whether the column is available for filtering and viewing in the pivot table. The default is <MadCap:variable name="Variables.tick" />ed. </p>
+        <p class="Caption" MadCap:autonum="Figure 2: ">Data Mart Maintenance Columns Tab</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SY Pivot Table Viewer/Data Mart Maintenance Columns Tab.png" class="FullWidth" />
+        </p>
+        <h2>Extracts Tab</h2>
+        <p class="Body">If the <span class="Field">Pivot Table</span> flag on the Data  Mart tab is <MadCap:variable name="Variables.tick" />ed, two <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>columns show on the Extracts browse:</p>
+        <p class="Caption" MadCap:autonum="Figure 3: ">Data Mart Maintenance Extracts Tab</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SY Pivot Table Viewer/Data Mart Maintenance Extracts Tab.png" class="FullWidth" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    Pivot Extract
+                </div>
+                <div class="FieldDef">
+                    <p>This indicates that a Pivot Table data file has been created for the extract.</p>
+                    <p>The pivot data file is saved in $BASE/var/datamarts and is named as follows: dw_{kco}_{dwt_type}_{dwe_seq}.json.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    Pivot Viewer
+                </div>
+                <div class="FieldDef">
+                    <p>If a Pivot Extract exists then a button is available to allow the user to launch the Pivot Table viewer for that extract.</p>
+                </div>
+            </div>
+        </div>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Generate Pivot Table Data</span> action on the Extracts browse can be used to recreate the pivot table data file for the extract – this needs to be done if the data mart configuration has changed.</p>
+        <p class="Body">The <span class="Function">Delete Extract</span> action <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>deletes the pivot table data file associated with the extract if it exists.</p>
+    </body>
+</html>

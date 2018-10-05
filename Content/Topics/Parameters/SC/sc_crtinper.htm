@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/CRTINPER - Cert date in entered or next batch period</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/CRTINPER - </span> Cert date in entered or next batch period
+</div>
+<div class="param_def">
+<p>Whether to prevent users from entering a certificate date outside the batch period or the following one. This helps prevent user typing errors.</p>
+<P>If this is set to Y then the certificate date entered cannot be earlier than the start of the batch period, or later than the <MadCap:variable name="Variables.pr effective date"/> of the period following the batch period. For example, if the batch period is 'January 2005', then the next period is 'February 2005' with <MadCap:variable name="Variables.pr effective date"/> 28/02/05. Any certificate dates later than 28/02/05 would be disallowed. </P>
+<P>This helps prevent errors such as putting 02/02/07 instead of 02/02/05. If the wrong date is entered then the $P$AT|VAT$P$ is posted into the wrong tax point and cannot be reclaimed in the correct one. </P>
+<P>If the certificate date is before the start date of the batch period, COINS issues a warning.</P>
+</div>
+</body>
+</html>

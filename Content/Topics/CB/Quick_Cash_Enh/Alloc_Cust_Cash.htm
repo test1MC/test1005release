@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Allocate Customer Cash</h1>
+        <p>The following changes have been made to <span class="function">Allocate Customer Cash</span>.</p>
+        <h2><MadCap:variable name="Variables.Cheque caps" /> Analysis</h2>
+        <p>It is now possible to write off small differences between the invoiced and received amounts by posting the difference to the <span class="module">General Ledger</span>.</p>
+        <p>On the <MadCap:variable name="Variables.Cheque caps" /> Analysis Lines entry screen, the <span class="field">Ledger</span> drop-down has a new entry:&#160;<span class="userselect">GL</span>. This allows you to enter a GL&#160;account to which the balance of customer cash is posted.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Analysis Lines Ledger Drop-Down</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody>
+        <p>
+            <img src="../../../Resources/Images_A-C/CB/Quick_Cash_Enh/GL_Drop-Down.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h2>Preventing Unallocated Ledger Cash</h2>
+        <p>A new feature (enabled by setting the new CB&#160;parameter <span class="parameter">LVCCPACB</span> to Yes) makes it impossible to leave an amount fully or partially unallocated in either <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or <span class="module"><MadCap:variable name="Variables.Contract Sales caps" /></span>. Instead the unallocated amount will post in <span class="module"><MadCap:variable name="Variables.Cash Book caps" /></span> as customer cash.</p>
+        <p>Further if <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or <span class="module"><MadCap:variable name="Variables.Contract Sales caps" /></span> line is entered and the amount is not fully allocated, then during posting the <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or <span class="module"><MadCap:variable name="Variables.Contract Sales caps" /></span> amount will be automatically updated to equal only the amount of the line that was actually allocated.</p>
+        <p>When you post the batch, <MadCap:variable name="General.ProductName" /> displays a warning message to inform you that the customer cash has not been fully allocated; if you continue, <MadCap:variable name="General.ProductName" /> automatically creates a customer cash analysis line for the unallocated amount.</p>
+        <p>For example:</p>
+        <ul>
+            <li>
+                <p>You select customer cash of <MadCap:variable name="Variables.$" />1000 and enter <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> line for <MadCap:variable name="Variables.$" />900 (leaving <MadCap:variable name="Variables.$" />100 unallocated). During posting a CC line of <MadCap:variable name="Variables.$" />100 will be created.</p>
+            </li>
+            <li>
+                <p>You select customer cash of <MadCap:variable name="Variables.$" />1000 and enter <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> line for <MadCap:variable name="Variables.$" />1000, but only allocate <MadCap:variable name="Variables.$" />900. During posting a CC line of <MadCap:variable name="Variables.$" />100 will be created and the <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> line amount will be updated from <MadCap:variable name="Variables.$" />1000 to <MadCap:variable name="Variables.$" />900.</p>
+            </li>
+        </ul>
+        <p>New warning messages are displayed when you click Next to leave the allocation screen with an amount not fully allocated, and when posting the batch with <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or <span class="module"><MadCap:variable name="Variables.Contract Sales caps" /></span> cash that is not fully allocated.</p>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="794" MadCap:lastWidth="600">
+    <head>
+        <MadCap:changeData>
+            <MadCap:AddChange MadCap:userName="Don Barwick" MadCap:initials="DJB" MadCap:id="1" MadCap:timestamp="2016-12-02T14:45:08.3325357+00:00" />
+            <MadCap:AddChange MadCap:userName="Don Barwick" MadCap:initials="DJB" MadCap:id="2" MadCap:timestamp="2016-12-02T14:46:45.4642479+00:00" />
+        </MadCap:changeData>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />Mobile Forms Document Design Notes</h1>
+        <p class="Body">Document designs for mobile forms can be complex or simple.  You can choose to link the document to a specific mobile form. Doing this means you can set up document forms (Header and Body) for each section of the form.  It also allows you to have Images and Workflow forms against sections if you want to have these next to the section they pertain to.  The alternative is to have Image and Workflow sections at the end of the document (or not at all).</p>
+        <h2 MadCap:autonum="1.1"><a name="Simple" MadCap:changes="1"></a>Simple</h2>
+        <p class="Body">A simple document could be configured with a HEAD form only, and not be linked to a specific mobile form.</p>
+        <p class="Body"><span class="fieldname">RW_smk_field</span> can be used to pull values from the fields of the form. By default it gives the field value, but it can alternatively return the values of associated checklist, comments on the field, or the field label.</p>
+        <p class="Body">Parameters are either:</p>
+        <p class="Body"><span class="fieldname">&lt;Section#&gt;|&lt;element#&gt;|&lt;field#&gt; [|&lt;alternative field&gt;]</span>
+        </p>
+        <p class="Body">or</p>
+        <p class="Body"><span class="fieldname">&lt;FID&gt; [|&lt;alternative field&gt;]</span>
+        </p>
+        <p class="Body">Alternative field options are</p>
+        <ul>
+            <li>Blank to get the field value (<span class="fieldname">sme_value</span>)</li>
+            <li><span class="fieldname" style="font-style: italic;">sme_text</span> to get the field comments</li>
+            <li><span class="fieldname" style="font-style: italic;">sme_xlist</span> for checklist values (code and description)</li>
+            <li><span class="fieldname" style="font-style: italic;">sme_xlist_codes</span> for checklist (just codes)</li>
+            <li><span class="fieldname" style="font-style: italic;">label</span> for the label from the mobile form</li>
+        </ul>
+        <h2 MadCap:autonum="1.2"><a name="Complex" MadCap:changes="2"></a>Complex</h2>
+        <p class="Body">Even with a complex mobile form you could use a single HEADER form and use RW_smk_field to access values from fields.  You have full control of field placement, but it does mean you need to define every field you use.  If you use the section HEAD and BODY forms you can define less and use the same definition repeatedly.</p>
+        <p class="Body">The HEADER form for a section can use field <span class="fieldname">smg_title</span> to show the section title.</p>
+        <p class="Body">The body table for a section will be elements if they are used, otherwise the fields of the section.</p>
+        <p class="Body"><span class="fieldname">RO_RowFile^&lt;section#&gt;|&lt;field#&gt;</span> can be used to print images like signatures.</p>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;margin-left: 0.5in;"><b>BODY - Section Using Elements</b>
+        </p>
+        <p class="Body">Field <span class="fieldname">smy_desc</span> gives the element text and the <span class="fieldname">RO_sme_*</span> fields used to access fields of the section and element.</p>
+        <ul>
+            <li><span class="fieldname">RO_sme_value__<i>n</i></span> with return the value for the <i>n</i>th field in the section.</li>
+            <li><span class="fieldname">RO_sme_text__<i>n</i></span> returns field comment</li>
+            <li><span class="fieldname">RO_sme_xlist__<i>n</i></span> returns checklist (code and description)</li>
+            <li><span class="fieldname">RO_sme_xlist_codes__<i>n</i></span> returns checklist (codes only)</li>
+        </ul>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;margin-left: 0.5in;"><b>BODY  - Section Without Elements</b>
+        </p>
+        <p class="Body">When the body table is the fields you can use <span class="fieldname">sme_value</span>, <span class="fieldname">sme_text</span>, etc.</p>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;margin-left: 0.5in;"><b>Workflow</b>
+        </p>
+        <p class="Body">For a workflow BODY form – of a section or the overall – the body table is sy_mobcwf and you can use fields:</p>
+        <ul>
+            <li><span class="fieldname">wfp_code</span> - the workflow template</li>
+            <li><span class="fieldname">smw_due</span> the due date</li>
+            <li><span class="fieldname">smw_text</span> – comments</li>
+            <li><span class="fieldname">RO_smw_origin</span> – combined section and element the workflow belongs to</li>
+            <li><span class="fieldname">RO_smw_smy_desc</span> – the element the workflow belongs to</li>
+            <li><span class="fieldname">RO_smw_smg_title</span> – section the workflow belongs to</li>
+        </ul>
+        <p class="Body" style="page-break-after: avoid;text-indent: 0;margin-left: 0.5in;"><b>Image Sections</b>
+        </p>
+        <p class="Body">The <span class="fieldname">dm_pagelist</span> and <span class="fieldname">dm_document</span> RSP are primed for each document/image linked to this mobile form, with the exception of those that have already been displayed with <span class="fieldname">RO_RowFile^</span>.</p>
+    </body>
+</html>

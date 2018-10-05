@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Configurable P45 Document</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable P45 Document</h1>
+    <p>The document type P45 (PR) is used to print the UK P45.</p>
+    <p>Use <span class="function" title="Function:%WPR1196FEMP">Print P45s</span>, etc. to print the P45s.</p>
+    <div class="process">
+      <h2 class="print">To configure P45 forms:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>.</li>
+        <li>Use the <span class="userinput">P45 (PR)</span> document type.</li>
+        <li>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents.</li>
+        <li>The P45 document does not use a BODY form; set the <span class="field">Body Rows </span>and <span class="field">Continuation Body Rows </span>fields to <span class="userinput">0</span>, and set up all the fields in the HEAD form.</li>
+        <li>Fields from the Employee table are available. For UK you can also use fields from the sy_table for the tax reference.</li>
+        <li>Additionally there are a number of special fields:</li>
+        <ul>
+          <li>
+            <span class="field">RO_P45Title</span> - the employee title, e.g. MR or MS.</li>
+          <li>
+            <span class="field">RO_P45GenderIs</span> -<span class="field">RO_P45GenderIs^Male</span> returns an 'X' for a man and blank for a woman. <span class="field">RO_P45GenderIs^Female</span> returns an 'X' for a woman and blank for a man.</li>
+          <li>
+            <span class="field">RO_P45WeekLeft</span> - the week the employee left for a weekly, <MadCap:variable name="Variables.2-weekly" style="text-transform: capitalize;" /> or <MadCap:variable name="Variables.4-weekly" style="text-transform: capitalize;" /> employee. Blank for a monthly employee.</li>
+          <li>
+            <span class="field">RO_P45MonthLeft</span> - the month the employee left for a monthly employee. Blank for a weekly, <MadCap:variable name="Variables.2-weekly" style="text-transform: capitalize;" /> or <MadCap:variable name="Variables.4-weekly" style="text-transform: capitalize;" /> employee.</li>
+          <li>
+            <span class="field">RO_P45PayYTD</span> - the year to date pay when taxed on a cumulative basis. Blank when taxed on a week 1 basis.</li>
+          <li>
+            <span class="field">RO_P45TaxYTD</span> - the year to date tax when taxed on a cumulative basis. Blank when taxed on a week 1 basis.</li>
+          <li>
+            <span class="field">RO_P45PayThisEmployment</span> - the pay in this employment where this is not given by <span class="field">RO_P45PayYTD</span>. Blank if this is the same as <span class="field">RO_P45PayYTD</span>.</li>
+          <li>
+            <span class="field">RO_P45TaxThisEmployment</span> - the tax in this employment where <span class="field">RO_P45PayThisEmployment</span> is not blank. Blank if <span class="field">RO_P45PayThisEmployment</span> is blank.</li>
+          <li>
+            <span class="field">RO_P45TaxCode</span> - the tax code at the time of leaving.</li>
+          <li>
+            <span class="field">RO_P45Week1</span> - true if taxed on a week 1 basis at the time of leaving. False if taxed on a cumulative basis.</li>
+          <li>
+            <span class="field">RO_DatePart</span> - the day, month or year of a date. <br />Parameter is:<br />   the name of the field of the employee that holds the date or "TODAY"<br />   D, M or Y <br />   Optional format <br />For example <span class="field">RO_DatePart^d-o-b|Y|9999</span></li>
+        </ul>
+      </ol>
+    </div>
+  </body>
+</html>

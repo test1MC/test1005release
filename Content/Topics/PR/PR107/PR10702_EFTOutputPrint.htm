@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>[%=Variables.eft%] Output and Print</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 "><MadCap:variable name="Variables.eft" /> Output and Print</h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Use Bank Account on Timesheet </span><MadCap:variable name="Variables.tick" />box is found on the <span class="Function"><MadCap:variable name="Variables.eft" /> Output and Print</span> screen. This box is <MadCap:variable name="Variables.tick" />ed by default (see <MadCap:xref href="#BACSOutputandPrint" class="ImageRef"><i> [%=Variables.eft%] Output and Print (Box [%=Variables.tick%]ed)</i></MadCap:xref>). If it is un<MadCap:variable name="Variables.tick" />ed, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">From Bank Account </span>combo box appears (see <MadCap:xref href="#EFTOutputPrintUnselected" class="ImageRef"><i> [%=Variables.eft%] Output and Print (Box un[%=Variables.tick%]ed)</i></MadCap:xref>), which shows the Company Bank Accounts configured against PR parameter <span class="parameter">BNKONCHK</span>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="BACSOutputandPrint"></a><MadCap:variable name="Variables.eft" /> Output and Print (Box <MadCap:variable name="Variables.tick" />ed)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR107_Images/PR107_EFTOutputPrint.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="EFTOutputPrintUnselected"></a><MadCap:variable name="Variables.eft" /> Output and Print (Box un<MadCap:variable name="Variables.tick" />ed)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR107_Images/PR107_EFTOutputPrintUnselectedBox.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">When a Bank code from this combo is selected, all of the timesheet Bank Accounts are updated with that code. When the <MadCap:variable name="Variables.eft" /> process is run, this Bank code is found in the <span class="Field">From Bank Account </span>field.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">If the <span class="parameter">BACSFILE </span>parameter does not have [IBANBANK] in its filename, the<span class="Field"> Use Bank Account on Timesheet </span>and <span class="Field">From Bank Account </span>fields discussed above are not shown. Instead, the <span class="Field">From Bank Account </span>code set in the <span class="parameter">PR/CASHBANK</span> parameter is used.</div>
+    </body>
+</html>

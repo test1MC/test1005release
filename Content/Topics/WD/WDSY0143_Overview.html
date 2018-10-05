@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="786" MadCap:lastWidth="601">
+  <head>
+    <title>Function Security Overview</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Function Security Overview</h1>
+    <p>Function security relates to the level of access that users have to <MadCap:variable name="General.ProductName" /> functions.  A function in <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" /> can be: a menu, a menu item, a tab, an option or action item, and so on.  Also, many of the features that allow you to update information on a screen  - such as buttons - also have associated functions that can be used to control access.</p>
+    <p>Each function can be made secure so that only users of appropriate authority are able to access it. If a user is not permitted to run a particular function then it will not appear on their screen. So for example:</p>
+    <ul>
+      <li>If a user does not have access to a menu item, it will not appear on their menu.</li>
+      <li>You can prevent a user from updating records on a screen by denying them access to the update function associated with that screen.</li>
+    </ul>
+    <p>There are various ways to maintain user access permissions:</p>
+    <ol>
+      <li>You can set permissions for <strong>groups</strong>. Users inherit the permissions of the group (or groups) they belong to.</li>
+      <li>You can build up permissions for groups from permissions that are specified on sub groups.</li>
+      <li>At both group and sub group level, you can grant or deny access to functions by using wildcards; this provides a “broad brush” control over which functions are available. You can also specify access to individual functions.</li>
+      <li>You can set permissions for <strong>users</strong>; these override the permissions the user inherits from the group.</li>
+      <li>If you use Menu Item Security, you can grant read-only or update access, or deny access, at the level of menu items; <MadCap:variable name="General.ProductName" /> automatically determines the appropriate permissions for any functions or other options within the menu item. You can do this for users, groups or sub groups.</li>
+    </ol>
+    <p>You can also control access to individual fields; see <a href="WDSY0009_Access_to_Fields.html">Access to Fields</a>. </p>
+    <p> </p>
+    <h2 MadCap:autonum="1.1 ">Recommended Approach</h2>
+    <p>We recommend that you:</p>
+    <ul>
+      <li>Set up main groups that correspond to the job positions in your organisation. Do not set up any access permissions on the main groups.  If you introduce a new position with different responsibilities, set up a new group.</li>
+      <li>Set up sub groups to group together the functions that relate to the business processes each job position requires.   In particular, set up separate groups for input and enquiry.</li>
+      <li>If you have Menu Item Security enabled, Use System &gt; User Maintenance &gt; Function Security &gt; Main Menu Security to set up access permissions on each sub group that provide access to the menu items required for the process.</li>
+      <li>Use the other function security options (roles, group security maintenance, Interactive Security Maintenance) to fine tune the access permissions for the sub groups.</li>
+      <li>Add the sub groups to the appropriate groups and process each group to copy the access permissions from the sub groups.</li>
+      <li>For each user, assign one main group according to their job position.</li>
+    </ul>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0138_Menu_Item_Security.html" />
+        <MadCap:relatedTopic src="WDSY0017_How_Function_Access_Works.html" />
+        <MadCap:relatedTopic src="WDSY0066_Setting_Function_Access.html" />
+      </MadCap:relatedTopics>
+    </p>
+  </body>
+</html>

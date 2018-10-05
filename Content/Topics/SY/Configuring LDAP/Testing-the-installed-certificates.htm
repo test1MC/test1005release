@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Testing the installed certificates</h1>
+        <p>To avoid any potential issues with <MadCap:variable name="General.ProductName" /> user authentication, we recommend that the installed Certificate Authority certificates are tested before use. You can then be confident that any connectivity issues with the network LDAP directory servers are not due to certificate issues.</p>
+        <p>Before proceeding with this sub-task, you will need to know the host name or IP address of each of the LDAP directory servers. The test requires connecting to the server and verifying the certificate use.</p>
+        <p>Perform the following steps </p>
+        <ol>
+            <li>
+                <p>Log into the <MadCap:variable name="General.ProductName" /> server using the root account login details.</p>
+            </li>
+            <li>
+                <p>Navigate to the created <MadCap:variable name="General.ProductName" /> certificate repository. In this How To guide we are using: /usr/local/etc/coins/certs</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0038.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>For all of the installed certificates, you will need to attempt a connection to the associated LDAP directory server as shown below. Replace the &lt;LDAP Server&gt; token (in the command below) with the host name or IP address of the LDAP directory server. Also note that the highlighted certificate file name (the argument to the –CAfile parameter) needs to be the same as that created from the associated LDAP server’s Certificate Authority’s certificate.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0039.png" class="FullWidth" />
+                </p>
+                <p>If the secure sockets layer connection was successful, the output of the above command will show a Verify return code of zero. If the installed certificate cannot be used to verify the secure sockets layer connections, then you will see a Verify return code of non-zero, for example:</p>
+                <p>Verify return code: 21 (unable to verify the first certificate)</p>
+                <p>If there are any failures in verifying the usability of a particular certificate file, then <MadCap:variable name="General.ProductName" /> will not be able to utilise secure sockets layer when communicating with the respective LDAP directory server. You will need to contact the LDAP directory server’s administrator to ensure that the correct Certificate Authority’s certificate has been extracted for that particular LDAP directory server.</p>
+            </li>
+        </ol>
+    </body>
+</html>

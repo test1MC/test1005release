@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Configuring ETC to Store Images in OA Document Management</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Configuring ETC to Store Images in OA Document Management</h1>
+        <p>
+This topic explains the steps that need to be taken to store rendered images of XML documents from <MadCap:variable name="General.ProductName" />-etc in OA <span class="module">Document Management</span>.
+
+    </p>
+        <div class="process">
+            <h2 class="print">ETC Images in Document Management</h2>
+            <ol>
+                <li>Ensure that basic OA DM functionality is working correctly; that is, ensure that you can upload an image against a PL Invoice and that it is then possible to view the image. If this is not working, refer to the How-To guide HOW TO&#160;... CONFIGURE OA to enable the attaching of documents for information about how to set this up.</li>
+                <li>The xsl style sheets must be available under the WebServer in order for the Invoice xml to be rendered correctly. <br />They will exist in the directory that the EC parameter <span class="parameter">XSLLOC </span>points to, usually $BASE/var/ECDir/style. <br />Create a link directory under the WebServer base directory /coins/{environment name}/xsl to $BASE/var/ECDir/style.</li>
+                <li>Copy all .xsl style sheets into the $BASE/var/ECDir/style directory. The standard ones we deploy can be copied from $BASE/app/xcode/db/xsl.</li>
+                <li>Set the EC parameter <span class="parameter">XSLLOCOA</span> to {Webserver Host Name}/coins/{environment name}/xsl</li>
+                <li>Set the EC parameter <span class="parameter">OADMIMPT </span>to Y.</li>
+                <li>Set the EC parameter <span class="parameter">CIMDIR</span>. (This must be set - although the value is not actually important when using OADM.)<br /></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_xslloc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_xsllocoa.htm" />
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_oadmimpt.htm" />
+                    <MadCap:relatedTopic src="../Parameters/EC/ec_cimdir.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="2" MadCap:lastHeight="859" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">
+                <MadCap:concept term="Topics" />Direct Debit Processing - </MadCap:conditionalText>Resolving Problems</h1>
+        <p style="page-break-after: avoid;">The following sections identify potential problems with advice on how to resolve them. </p>
+        <h2 MadCap:autonum="1.1 ">Direct Debit Data Created Incorrectly</h2>
+        <p>If the direct debit data process has been run from <span class="function">Statement Print</span> but is still at a status of To Email, then the process can be rerun multiple times. </p>
+        <p>If the process was run in error or for a specific customer that should not be processed in the current <MadCap:variable name="Variables.financial period" />, the best way to resolve this is to use the Cancel Extract action on the <span class="function">Approval Workbench</span>, which will remove the Direct Debit records. Then amend the direct debit customer records (to <MadCap:variable name="Variables.tick" /> or un<MadCap:variable name="Variables.tick" /> the Direct Debit flag) and re-run the <span class="function">Statement Print</span> for Direct Debit Records.</p>
+        <h2 MadCap:autonum="1.2 ">Generate Extract Incorrect</h2>
+        <p>If Generate Extract has been run and the record status is still at To Approve, you can run the Cancel Extract action to remove all Direct Debit records, and start the whole process once again. </p>
+        <p>This needs to be done with care:&#160;if the created file has been approved by the bank, you need to make sure that the banking software has some controls to prevent loaded data for the current <MadCap:variable name="Variables.financial period" /> from being re-processed (by using some unique reference). </p>
+        <h2 MadCap:autonum="1.3 ">Direct Debit Cash Batch Incorrect</h2>
+        <p>If the Approve Extract action has been run and a <MadCap:variable name="Variables.Sales Ledger caps" /> batch has been created, then the following process can be followed:</p>
+        <h3 MadCap:autonum="1.3.1 "> Parameter SL/DDPOST=N</h3>
+        <p>If the cash batch exists and has not been processed yet, you can cancel (delete) the batch in <span class="function">Cash Entry - Batches</span>, which resets the Direct Debit record for the <MadCap:variable name="Variables.financial period" /> to a status of To Approve and clears the batch number.</p>
+        <h3 MadCap:autonum="1.3.2 ">Parameter SL/DDPOST=Y or Batch Posted</h3>
+        <p>If the cash batch exists and has been posted, you need to use <span class="Function">Cancel Posted Cash</span> to cancel the batch, then use the Reset Status action to reset the Direct Debit record for the <MadCap:variable name="Variables.financial period" /> to a status of To Approve and clear the batch number.</p>
+        <h2 MadCap:autonum="1.4 "><a name="Batch"></a>Batch Status in Posting</h2>
+        <p>If the Direct Debit generated batch is stuck in a posting state, you need to go to the <span class="function">Approval Workbench</span> and click the Batch Number to view the Batch Detail. View the transactions for the batch to find which transactions have a status of not posted. Review these transactions to determine why they were not posted - you can use the Report Status Log file to help identify the issues. Once this is resolved you should be able to post the batch. </p>
+        <p>If you cannot post the batch because a particular transaction for a customer has an issue, you need to identify and correct the issue and ideally not delete the transaction in error, because if it is deleted the invoice will be reset to unpaid and will be picked up to be re-processed in the following month. The only way to resolve such a situation is to amend the customer so they are not processed via Direct Debit and then create a <MadCap:variable name="Variables.Sales Ledger caps" /> cash batch manually and enter the receipt for the invoice in question (this assumes that the issue stopping the transaction previously has now been resolved).  </p>
+    </body>
+</html>

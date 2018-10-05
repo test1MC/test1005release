@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="837" MadCap:lastWidth="601">
+  <head>
+    <title>Displaying Dates in Full on Configurable Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Displaying Dates in Full on Configurable Documents</h1>
+    <p>Most date fields that are available on configurable documents display the date as numbers; for example, 21/11/08.  If you need to display the dates as text (for example, as 21 November 2008) you can do this using the RO_monthName field.</p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">To configure dates on the document:</h2>
+      <p>You can use the field <span class="field">co_config.RO_monthName^{<i>field</i>}|<em>offset</em>|<em>style</em></span> to display a date in various formats, where:</p>
+      <table style="margin-left: 1cm;">
+        <tbody>
+          <tr>
+            <td>
+              <em>offset</em> =</td>
+            <td>a positive or negative number of months by which to offset the current month</td>
+          </tr>
+          <tr>
+            <td>
+              <em>style</em> =</td>
+            <td>
+              <p>
+                <strong>SHORT </strong>displays the month in short form (Jan, Mar);</p>
+              <p>
+                <strong>FULL</strong> displays the month in full (January, March);</p>
+              <p>
+                <strong>MIXED</strong> displays short month plus the year (Mar 2008);</p>
+              <p>
+                <strong>LONG</strong> displays the day, short month and year (27 Mar 2008);</p>
+              <p>
+                <strong>LONGFULL</strong> displays the day, month in full and year (27 March 2008).</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>So to display the date from po_hdr.poh_odate as a date with the month in short form (21 Nov 2008), put the following in the <span class="field">Field </span>field:</p>
+      <p style="margin-left: 1cm;">
+        <span class="field">co_config.RO_monthName^{po_hdr.poh_odate}|0|LONG</span>
+      </p>
+      <p> </p>
+      <p>To display the date using a format not covered above, use a calculation.  The following calculations are useful:</p>
+      <table style="margin-left: 1cm;">
+        <tbody>
+          <tr>
+            <td>
+              <span class="field">
+                <span class="nw">dateString(string)</span>  </span>
+            </td>
+            <td>Converts a date string (such as from an input field or a database field) to an integer</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="field">day(a)</span>
+            </td>
+            <td>Returns the date in the month if 'a' is the integer value of a date.</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="field">year(a)</span>
+            </td>
+            <td>Returns the year (as a four-digit integer) if 'a' is the integer value of a date.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>So if you want to display the month name followed by the date in the month, then the year (March 27, 2008), put the following in the <span class="field">Calculation </span>field (remember to leave the <span class="field">Field </span>field blank):</p>
+      <div class="Code">theDate=dateString("{po_hdr.poh_odate}");<br />theDay=day(theDate);<br />$theMonth= co_config.RO_monthName^{po_hdr.poh_odate}|0|FULL;<br />theYear=year(theDate);<br />$theMonth + ' ' + theDay + ', ' + theYear;</div>
+      <p class="noteheader">NOTE</p>
+      <div class="note">
+        <p>
+          <strong>theDate</strong> holds the value of po_hdr.poh_date as an integer (for example, 21/11/08 is stored as 2454793).<br /><strong>theDay </strong>and <strong>theYear </strong>hold the day and the year (as integers) calculated from <strong>theDate</strong>.<br /><strong>theMonth</strong> holds the month name and year from poh_date; the <strong>$</strong> at the start of the line means the line is a character 'calculation'.<br /><strong>theDate</strong>, <strong>theDay</strong>, <strong>theMonth </strong>and <strong>theYear </strong>are all user-defined variable names - you could use other names.<br />The final line appends <strong>theMonth</strong>, <strong>theDay</strong> and <strong>theYear</strong> (as a character string) with spaces between.</p>
+        <p>Note the sequence of brackets and quotation marks in the <strong>dateString</strong> calculation: <strong>( " { field } " )</strong></p>
+      </div>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDBI0317_Time_and_Date_Calculations.html" />
+          <MadCap:relatedTopic src="WDSY0508_Combining_Fields.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

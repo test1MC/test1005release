@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2452" MadCap:lastWidth="1290">
+    <head>&#160;</head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Record Service Procedures</h1>
+        <p>Every table in the coins database has a RSP (Record Service Procedure). Each of these RSP's provides the OA Reporting tool with the business logic required to extract the appropriate data from the database.</p>
+        <p>In the Database Enquiry you can see the RSP under the Table Code and its Label. The RSP's have a naming convention –</p>
+        <p>{table-ID}-rsp.p.</p>
+        <p>Where the Table ID is as shown in the Database Enquiry (you may also hear this referred to as the Table Acronym or TLA).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RSP_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RSP_1_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>RSP’s  control, amongst other things, the basic table update functions for that table.  Each RSP has a common set of methods that define standard behaviour for the object.  They control record scope and locking, security, default values on creation, data integrity rules etc.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RSP_2.png" class="FullWidth" />
+        </p>
+        <p>The RSP can also extend the database table to produce a logical view of data for the business logic to work with.  A by-product of this is that we are to provide an XML field on every record in the database in which the user can configure their own extended fields for use in the presentation layer.  This enables client-specific fields to be added to screens and included on reports.  The RSP handles the translation of the data from the logical record buffer to the physical fields in the physical database.</p>
+        <p>The RSP is also able to de-normalise the database for the purposes of logical data access.  For example, the contract record (jc_job) in the database is linked to many other tables including the contract group table (jc_cgroup).  To show the group description on a screen or report it might be expected that the interface designer would have to build a query to link the contract record with the appropriate group record and then display the group description from that record.  The RSP extends (for read-only purposes) the table and de-normalises the data and makes the contract group description available as just another field on the contract table.  The data remains physically in the jc_cgroup table in the database, but to the business logic and presentation layers it is shown in a more logical place which is on the contract record.</p>
+        <p>The same principle is applied to more complex calculation fields.  For example, the value of accruals on a contract is a highly complex calculation involving many tables (purchase orders, order lines, goods received notes, etc).  Again, this data is made available in the logic buffer in the RSP so that to the interface designer it is just another field on the contract record.  They are simply able to paste, say, the contract number, contract name, group description, and accrual value on to a page without any need to know where each of the bits of data is coming from.</p>
+        <p>The RSP is also able to simplify the database for updates.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RSP_3.png" class="FullWidth" />
+        </p>
+        <p>There are instances where common database tables are reused in many areas of the application.  An example is the address table sy_address.  This holds the address details for an employee record in the HR system.  In this instance the RSP is able to link the two records together, presenting a single logical table to the business logic and presentation layers.  The updates are performed on this logical buffer in the RSP and it is only the RSP that knows that the data is split into two separate records when written back to the database.</p>
+        <p>The RSP also has an audit layer so that as the logical record is committed back to the database, changes on the logical table can be recorded in the audit records.  Auditing can be performed as part of the managed data source through the use of triggers, but in this instance the audit records created are an audit of the physical data and it is much more difficult to reconstruct the separate physical table and field audit records in to a logical view of the record at a later stage.</p>
+        <p>The RSP controls all data access through to the database.  <MadCap:variable name="General.ProductName" /> can insert bespoke trigger code in that RSPs that can act on data as it is committed back to the database.  For example, this can be used to push changes in business data in <MadCap:variable name="General.ProductName" /> out to a data warehouse application by creating XML messages from <MadCap:variable name="General.ProductName" /> that are then consumed by a data warehouse load interface.  In this way it is possible to keep a data warehouse up to date with live business data.</p>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2674" MadCap:lastWidth="720">
+  <head>
+    <title>Conditional Exchange</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Conditional Exchange</h1>
+    <p>If there are conditions to the exchange of contracts, you can record these as a conditional exchange event in the <span class="function" title="Function:%WHS1010SHCG">Sales Workbench</span>.  When a condition has been met, you record the date in the sales history; when all conditions have been met, <MadCap:variable name="General.ProductName" /> automatically records an unconditional exchange.</p>
+    <p>The plot must be reserved before you can record exchange of contracts.</p>
+    <div class="process">
+      <h2 class="print">To record a conditional exchange:</h2>
+      <ol>
+        <li>Open the plot record.</li>
+        <li>From the Options menu, click the option your system administrator has configured for "conditional exchange of contracts".</li>
+        <li>Enter the details of the exchange.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+        <li>On the Condition tab, fill in the details of the conditions using the standard line maintenance options.</li>
+      </ol>
+      <h2>To record that a condition has been discharged: </h2>
+      <ol>
+        <li>Open the plot record.</li>
+        <li>Click the history tab.</li>
+        <li>Click the link in the <span class="field">Date </span>column of the Conditional Exchange event.</li>
+        <li>Click the Condition tab.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> next to the condition that has been met.</li>
+        <li>Enter the date in the <span class="field">Discharged </span>column.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p />When you have entered Discharged dates for all conditions; <MadCap:variable name="General.ProductName" /> flags the plot as "exchanged".</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Conditional exchange - configuration</h2>
+      <p>You need to set up an EXCHANGE event, set the <span class="field">Conditional </span>flag to <span class="userinput">Y</span>, and enter the corresponding unconditional exchange event (which <MadCap:variable name="General.ProductName" /> runs automatically when the exchange conditions are discharged); see <a href="WDHS0128_Sales_Events.html">Sales Events</a>.</p>
+    </div>
+  </body>
+</html>

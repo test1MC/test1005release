@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="869" MadCap:lastWidth="601">
+    <head><title>Consider Handling of Future Retention Releases</title>
+    </head>
+    <body>
+        <div class="overview">
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Consider Handling of Future Retention Releases</h1>
+            <p>The <MadCap:variable name="Variables.vat" /> regulations provide for two different situations with regard to <MadCap:variable name="Variables.vat" /> on retention releases:</p>
+            <p style="padding-left: 30px;"><strong>"Where an invoice is raised for the full consideration, including retention, <MadCap:variable name="Variables.vat" /> liability arises on the full consideration when that invoice is raised."</strong>
+            </p>
+            <p style="padding-left: 60px;">In this case, you should already be using a subcontract certificate definition within <MadCap:variable name="General.ProductName" /> which calculates <MadCap:variable name="Variables.vat" /> before retention. Any retention release is then effectively outside the scope of <MadCap:variable name="Variables.vat" /> since the <MadCap:variable name="Variables.vat" /> has already been accounted for.</p>
+            <p style="padding-left: 60px;">Likewise, if this applies to your sales, you should already be using a <MadCap:variable name="Variables.Contract Sales" />certificate definition within <MadCap:variable name="General.ProductName" /> which calculates <MadCap:variable name="Variables.vat" /> before retention. Any retention release is then effectively outside the scope of <MadCap:variable name="Variables.vat" /> since the <MadCap:variable name="Variables.vat" /> has already been accounted for.</p>
+            <p style="padding-left: 30px;"><strong>"Where retention is not invoiced until the retention is paid liability on the retention arises on payment."</strong>
+            </p>
+            <p style="padding-left: 60px;">In this case, you should already be using a subcontract certificate definition within <MadCap:variable name="General.ProductName" /> which calculates <MadCap:variable name="Variables.vat" /> after retention. Any retention release is then liable to <MadCap:variable name="Variables.vat" /> at the date of that release. Provided that the default <MadCap:variable name="Variables.vat" /> code on the Subcontract has been updated to the new <MadCap:variable name="Variables.vat" /> rate as appropriate, <MadCap:variable name="General.ProductName" /> should then automatically apply the correct rate to future transactions (except where there is a split <MadCap:variable name="Variables.vat" /> analysis on the subcontract where manual intervention will be required by users).</p>
+            <p style="padding-left: 60px;">Likewise, if this applies to your sales, you should already be using a <MadCap:variable name="Variables.Contract Sales" /> certificate definition within <MadCap:variable name="General.ProductName" /> which calculates <MadCap:variable name="Variables.vat" /> after retention. Any retention release is then liable to <MadCap:variable name="Variables.vat" /> at the date of that release. Provided that the default <MadCap:variable name="Variables.vat" /> code on the <MadCap:variable name="Variables.Contract Sales" /> series has been updated to the new <MadCap:variable name="Variables.vat" /> rate as appropriate, <MadCap:variable name="General.ProductName" /> should then automatically apply the correct rate to future transactions (except where there is a split <MadCap:variable name="Variables.vat" /> analysis on the <MadCap:variable name="Variables.jc contract" /> where manual intervention will be required by users).</p>
+        </div>
+    </body>
+</html>

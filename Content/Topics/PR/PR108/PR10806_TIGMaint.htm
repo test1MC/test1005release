@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Timesheet Input Group Maintenance</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Timesheet Input Group Maintenance</h1>
+        <p class="Body">For v11.08, PR <span class="Function">Group Maintenance</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates Timesheet Input Groups, as discussed in this section.</p>
+        <h2 MadCap:autonum="1.1 ">Browse Screen</h2>
+        <p class="Body">When you select the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Group Maintenance </span>menu option in <i>Payroll &gt; [selected Frequency]</i>, a browse screen appears, as shown in <MadCap:xref href="#TSInputGroups_GrpMaint" class="ImageRef"><i>Figure 1:  Browse Screen</i></MadCap:xref>.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">Note:</p>
+        <div class="note">The <span class="Function">Timesheet Input Groups </span>menu section and <span class="Function">Group Maintenance </span>are always shown for the US and Canadian regions regardless of whether the company is set up to use TS Input Groups. If TS Input Groups are not in use for the company, and you attempt to enter a group, the following error message appears: <i>Timesheet Input Groups are not in use for PR Company …. You cannot add or update TS Input Groups</i>.</div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="TSInputGroups_GrpMaint"></a>Browse Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputGroups_GrpMaint.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Input Group</p>
+        <p class="IndentFieldDef">The name of the TS Input Group. This cannot be updated after it has been entered.</p>
+        <p class="IndentBold">Group Description</p>
+        <p class="IndentFieldDef">The description of the TS Input Group. It can be entered or updated manually for your own groups and subordinate groups.</p>
+        <p class="IndentBold">Group Owner</p>
+        <p class="IndentFieldDef">This is set to User ID when a group is created. The owner of the TS Input Group is the ID of the user with permission to access the company. This can be updated manually but only for your own groups and subordinate groups. You cannot change the owner to another user who is not on the subordinate list.</p>
+        <p class="IndentBold">Period</p>
+        <p class="IndentFieldDef">A period will be set once a time card has been entered for the group. The <span class="Function">Post Batches </span>function on the Costing Workbench can use this to retrieve all groups that need to be deleted. You cannot enter or edit this field manually.</p>
+        <p class="IndentBold">Year</p>
+        <p class="IndentFieldDef">The Payroll year.</p>
+        <p class="IndentBold">Validated</p>
+        <p class="IndentFieldDef">This field indicates whether the TS Input Group is validated or not. The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Validate Timesheet Input Group report sets this field for the selected groups in the current Regular/Adjusting period. The Validate Timesheet Input Group is similar to Validate Batches on the Costing Workbench, but limits the review of data to only those <MadCap:variable name="Variables.cheques" />/timecards in the group. The PR <span class="Function">Calculation </span>and PR <span class="Function">Reset </span>functions can reset this flag. You cannot enter or edit this field manually.</p>
+        <p class="IndentBold">Frozen</p>
+        <p class="IndentFieldDef">This indicates whether a Timesheet Input Group is frozen to TS Entry and Reset. A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Group Administration </span>tool can set this field. You cannot enter or edit this field manually.</p>
+        <h2 MadCap:autonum="1.2 ">Body Detail Screen</h2>
+        <p class="Body">The fields shown in <MadCap:xref href="#TIGMaint_BodyDet" class="ImageRef"><i>Figure 2:  Body Detail Screen</i></MadCap:xref> are visible on the Body Detail section of the Timesheet Input Group Maintenance screen. These fields calculate total amounts for time cards and <MadCap:variable name="Variables.cheques" /> that are part of the Timesheet Input Group and provide Pay Salary Security, Employee Timesheet Security, and Employee Timecard Rate Security. This information is only available for the group's owners or subordinates to the group's owner.</p>
+        <ul>
+            <li>You can only enter or update your groups and the groups of your subordinate users. You do not have permission to enter or update groups of another user.</li>
+            <li>You cannot change your own or subordinate groups' owner to another user who is not on the subordinate list.</li>
+            <li>You will receive an error if you attempt to enter a blank owner.</li>
+            <li>You will receive an error if you attempt to change the owner to another user who does not have permission to access the PR Company.</li>
+            <li>You can only delete your own group if the group does not have associated <MadCap:variable name="Variables.cheques" /> or time cards; otherwise, you receive an error. If you need to delete the group of a subordinate user, you must first change the owner of the group to yourself.</li>
+            <li>Empty groups (such as associated <MadCap:variable name="Variables.cheques" />) cannot be deleted, but they will be deleted when the payroll is posted.</li>
+            <li>Groups cannot be deleted if they are frozen.</li>
+            <li>A group cannot be entered if it is already entered for another pay frequency. In this case, the following error message appears: <i>Record already exists (pr_tsgroup). You have tried to create a record which already exists</i>.</li>
+            <li>An error message appears if you attempt to enter any of the following in the <span class="Field">Input Group </span>field: an asterisk (*), a comma (,), or a group with a blank description.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="TIGMaint_BodyDet"></a>Body Detail Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TIGMaint_BodyDet.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

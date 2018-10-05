@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1220" MadCap:lastWidth="1220">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Outer-Join</h1>
+        <p>Specifies a left outer join between record and the table (or join) specified by the previous Record phrase(s) of an OPEN QUERY statement. A left outer join combines and returns data from the specified tables in two ways. First, the records selected for the table (or join) on the left side combine with each record selected using the OF or WHERE options from the table on the right (record). Second, the records selected for the table (or join) on the left side combine with unknown values (?) for the fields from the table on the right (record) for which no records are selected using the OF or WHERE options. The join is ordered according to the given sort criteria starting with the left-most table in the query.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Query Language/Outer-Join.png" class="HalfWidth" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If you specify the OUTER-JOIN option, you must also specify the OUTER-JOIN option in all succeeding Record phrases of the query to obtain a left outer join. That is, for multiple Record phrases, all joins in the query following your first left outer join must also be left outer joins. Otherwise, the result is an inner join for all records up to the last inner join in the query. </p>
+        <p>The OUTER-JOIN option is supported only in Record phrases specified after the first Record phrase in the query. If you specify OUTER-JOIN, you must also specify the OF option, WHERE option, or any combination of the OF and WHERE options. These options are required to select record (the right-most table) for the specified left outer join.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Query Language/Outer-Join_2.png" class="HalfWidth" />
+        </p>
+        <p>This query specifies a left outer join between customer and order, and also between that join and order-line. Thus, for each customer record that has no orders or has no orders with an order-num less than 50, the query returns the customer fields and ? for all fields of the order and order-line tables. In addition, if there are no order-line records with item-num less than 15 for any selected customer and order, the query returns ? for all fields of order-line. Otherwise, it returns each customer record along with its first selected order record and order-line record.</p>
+        <p>In all statements where multiple Record phrases are allowed, the default join (without the OUTER-JOIN option) is an inner join between record and the table (or join) specified by the previous Record phrase(s). An inner join returns the records selected for the table (or join) on the left side combined with each selected record from the table on the right (record). For an inner join, no records are returned for the table (or join) on the left for which no record is selected from the table on the right (record).</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If you specify a Record phrase as an inner join, the current Record phrase and all preceding Record phrases in the query participate in contiguous inner joins, even if prior Record phrases specify the OUTER-JOIN option. Thus, for multiple Record phrases, all joins in the query up to the right-most inner join result in contiguous inner joins.</p>
+    </body>
+</html>

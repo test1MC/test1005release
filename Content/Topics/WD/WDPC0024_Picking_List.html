@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Picking List</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Picking List</h1>
+    <p>The picking list feature is useful if you fulfil the majority of <MadCap:variable name="Variables.pc plant" /> requests using your own <MadCap:variable name="Variables.pc plant" />.  </p>
+    <p>From the <span class="function" title="Function:%WPC1300HXXX"><MadCap:variable name="Variables.pc hire desk" style="text-transform: capitalize;" /></span> you can send the details of a <MadCap:variable name="Variables.pc plant" /> request to the <span class="function" title="Function:%WPC1901BCXC">Picking List Workbench</span>.  Staff can record which items are assigned to fulfil each request, and can then confirm the assignments so that the request can be completed as normal.</p>
+    <p>On asset groups and <MadCap:variable name="Variables.st stock" /> groups, you can identify where the items are to be picked from, and against <MadCap:variable name="Variables.pc plant" /> users you can specify which picking areas they work in.</p>
+    <div class="process">
+      <h2 class="print">To record the items that have been picked:</h2>
+      <ol>
+        <li>For assets, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> and enter the asset you have allocated.</li>
+        <li>For <MadCap:variable name="Variables.st stock" /> items:</li>
+        <ul>
+          <li>If the full quantity is available, <a href="WDUG0026_Selecting_Records.html">select</a> the line and choose <span class="userselect">Fulfil from <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /></span>from the Choose Action list.</li>
+          <li>If the full quantity is not available, open the line using <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />, and enter the quantity picked.</li>
+        </ul>
+        <li>If an item is not available, you can pass it back to the <MadCap:variable name="Variables.pc hire desk" style="text-transform: capitalize;" />: select the line and choose <span class="userselect">Set to Not Available </span>from the Choose Action list.</li>
+        <li>If an item is not yet available but you expect it to be available soon, select the line and choose <span class="userselect">Set to Held by Picking </span>from the Choose Action list.</li>
+        <li>When you have completed the picking, you can print out the picking list using the button at the top of the screen.  </li>
+        <li>Then, select the completed lines (which will have status T - Picked but not confirmed), and choose <span class="userselect">Confirm Picking </span>from the Choose Action list. </li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Configuration</h2>
+      <p>Use the PC parameter <span class="parameter">PICKFLD </span>to nominate one of the asset analysis sets to hold the picking areas.  (Asset groups and <MadCap:variable name="Variables.st stock" /> groups use the same analysis sets.)</p>
+      <p>Use <span class="function" title="Function:%WPC2060BCTL"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Users</span> to specify which picking area (or areas) a <MadCap:variable name="Variables.pc plant" /> user works in.</p>
+      <p>When maintaining asset groups or <MadCap:variable name="Variables.st stock" /> groups, use the analysis set to identify where the item should be picked from.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PC/PC_PICKLIST.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_PICKSTAT.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_PICKFLD.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

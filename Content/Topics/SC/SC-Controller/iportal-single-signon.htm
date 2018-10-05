@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="848" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />IPORTAL Single Sign on
+
+</h1>
+        <p>Each Tenant will have a link to the relevant URL for IPORTAL entry (Main Contractor and Subcontractor).</p>
+        <p>To be able to click on a link from <MadCap:variable name="General.ProductName" /> Construction Cloud, land on a page within an external system, and be automatically authenticated.
+</p>
+        <p>
+A credential check via an API or WS would provide a way for the external system to carry out an authentication check without knowing whether the person has a <MadCap:variable name="General.ProductName" /> passport log in.
+</p>
+        <ul>
+            <li>The WS should be fast.
+</li>
+            <li>The exchange should be server to server and protected from DDoS.
+</li>
+            <li>The exchange should be encrypted / protected.
+</li>
+        </ul>
+        <h2 MadCap:autonum="1.1 ">Flow	
+</h2>
+        <p>The following assumes that the user has previously linked their account to the external system
+</p>
+        <ul>
+            <li>User visits the external system from a “clear” browser.
+o	No redirects possible as we have know who the person is or could be.
+</li>
+            <li>External site check whether credentials from own user list.</li>
+            <li>	If not valid credentials in the external system. </li>
+            <li>
+	External system make a direct HTTP call to;
+<ul><li>	https://coco-sso.com/verify/
+</li><li>Payload of JWT, include username and password
+</li></ul></li>
+        </ul>
+        <div style="background-color: #add8e6;">
+            <div class="FieldBlock">{</div>
+            <div class="FieldBlock">username: [USER-NAME],</div>
+            <div class="FieldBlock">password: [PASSWORD]</div>
+            <div class="FieldBlock">}</div>
+        </div>
+        <ul>
+            <li>COCO responds with another JWT confirming the user (if valid)</li>
+        </ul>
+        <div>
+            <div class="FieldBlock" style="background-color: #add8e6;">{</div>
+            <div class="FieldBlock" style="background-color: #add8e6;">userid: [COCO-USER-ID],</div>
+            <div class="FieldBlock" style="background-color: #add8e6;">}</div>
+        </div>
+        <ul>
+            <li>External system should (if they recognise the userid) create a authentication session for the user.</li>
+        </ul>
+    </body>
+</html>

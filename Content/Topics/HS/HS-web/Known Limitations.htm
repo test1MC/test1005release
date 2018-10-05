@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><span style="margin-right: 0pt;">3 </span>Known Limitations</h1>
+        <p>The following limitations apply to the <MadCap:variable name="General.ProductName" /> web services at the time of writing:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <p style="list-style-type: disc;">The Microsoft .NET “Web References” feature cannot be used with this web service – you must manually construct the XML string to post to the service and manually parse the XML response.</p>
+            <p style="list-style-type: disc;">There is no means to distinguish between an empty query result set and an error running the query on the dbQuery method.</p>
+            <p style="list-style-type: disc;">There are several issues around character encoding. You should use the native encoding of your progress database in XML calls at the moment. If the response string is to be loaded into the Microsoft XML parser a search and replace should be used to remove the encoding=”UTF-8” from the response header and replace it with the actual database encoding in order to ensure the response is parsed correctly. Also, you cannot currently use UTF-8 through the .NET interface as the StreamWriter emits marker bytes that the <MadCap:variable name="General.ProductName" /> web service cannot interpret (unless you manually convert the Unicode text to a UTF-8 encoded byte array and write that byte array to a binary stream).</p>
+        </ul>
+    </body>
+</html>

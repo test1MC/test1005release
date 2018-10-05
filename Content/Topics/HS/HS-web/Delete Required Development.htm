@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="1744" MadCap:lastWidth="1179" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Delete Required Development (deleteDevelopment)</h1>
+        <p>&#160;</p>
+        <p>A sample XML message to delete an existing required development on a prospect’s&#160; record is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswshvi1" method="deleteDevelopment"&gt;</p>
+        <p class="code">&lt;Prospect reference="487"&gt;</p>
+        <p class="code">&lt;Development reference="00044207"&gt; </p>
+        <p class="code">&lt;/Development&gt; </p>
+        <p class="code">&lt;/Prospect&gt;</p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>If the delete was successful the following message will be returned:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswshvi1" method="deleteDevelopment"&gt;</p>
+        <p class="code">&lt;ProspectCompany&gt;001&lt;/ProspectCompany&gt; </p>
+        <p class="code">&lt;ProspectReference&gt;000487&lt;/ProspectReference&gt; </p>
+        <p class="code">&lt;DevelopmentReference&gt;00044207&lt;/DevelopmentReference&gt; </p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+    </body>
+</html>

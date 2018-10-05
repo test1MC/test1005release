@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>House Builders - HSFREP</h1>
+        <p>Program : hsfrep.p</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1">
+            </col>
+            <col class="TableStyle-COINSBasic-Column-Column1">
+            </col>
+            <col class="TableStyle-COINSBasic-Column-Column1">
+            </col>
+            <col class="TableStyle-COINSBasic-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Tables</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Page Generate</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Query Replace</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Batch</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> co_batch</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> cobSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> {cobSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Standard Sales Extras</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">  hs_stndextra</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">hseSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">  {hseSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> taskSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> {taskSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> Plot</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> vp_wbsdef</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> vwbSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> {vwbSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Plot		</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">vp_wbsdef	</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">iwPlotSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">			{iwPlotSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Plot</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">  vp_wbsdef</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> PropertiesSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> {propertySelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Plot</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">wp_wbsdef</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">PlotSelectionGenerate </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{PlotSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> Contract/Phase</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> jc_job,vp_site</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> ContractSelectionGenerate </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>{jobSelect} &amp; {vsiSelect}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Note : PlotSelectionGenerate</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The Plot Selection generate should be used in future as the preference.      The old vwbSelectionGenerate only gave you the Plot   From/to/Matches. and did not take into account the Developments that you have chosen.</p>
+                <p>This means that the standard query for House Sales Reports should be</p>
+                <p><span class="userinput">FOR EACH jc_job WHERE jc_job.kco = {kco} {jobSelect},<br></br>EACH vp_site OF jc_job WHERE TRUE {vsiSelect},<br></br>EACH vp_wbsdef OF vp_site WHERE vp_wbsdef.vwb_sale = TRUE {PlotSelect}</span>
+                </p>
+                <p>The new PlotSelectionGenerate will work  -   ONLY when you only select one development   -  But it then gives you many more options for Plots relevant to that selection.</p>
+                <p>e.g.         If you leave the Development Selection with more than one development….  You will get the following error on the Plot Selection if you select one of the lookups.</p>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BI/OA Designer/hsfrep-0001.png" class="HalfWidth" />
+                </p>
+                <p>However if you choose one development.</p>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BI/OA Designer/hsfrep-0002.png" class="FullWidth" />
+                </p>
+                <p>Then when you go to the Plot Selection  which has MANY more option to choose from when you hit the lookup button on say House Type:</p>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BI/OA Designer/hsfrep-0003.png" class="FullWidth" />
+                </p>
+                <p>You can see that you have filter at the bottom of the screen where you can select  -   Standard House Types   or  Development Specific House Types</p>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BI/OA Designer/hsfrep-0004.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

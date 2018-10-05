@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="2633" MadCap:lastWidth="1186">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Installation Instructions</h1>
+        <ol>
+            <li>Use Internet Explorer to go to <a href="https://secure.gateway.gov.uk/submission"><span class="Hyperlink">https://secure.gateway.gov.uk/submission</span></a>. The following page will be displayed. </li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/A new digital certificate.png" class="FullWidth" />
+            </p>
+            <li>Click the Padlock Icon so the following is displayed:</li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon.png" class="FullWidth" />
+            </p>
+            <li>Click &#160;View certificates.</li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_1.png" class="FullWidth" />
+            </p>
+            <li>Click the Details tab.</li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_2.png" class="FullWidth" />
+            </p>
+            <p class="Body">If <span class="Button">Copy to File </span>is greyed out, add the following to your trusted sites. </p>
+            <p class="Body">(In Internet Options, Security, Trusted Sites) <br /><a href="https://secure.gateway.gov.uk/submission"><span class="Hyperlink">https://secure.gateway.gov.uk/submission</span></a></p>
+            <li>Click <span class="Button">Copy to File </span>and then click <span class="Button">Next</span>. The following screen will be displayed; leave the format as the default.</li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_3.png" class="FullWidth" />
+            </p>
+            <li>When you click <span class="Button">Next </span>you will have the option to Browse. </li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_4.png" class="FullWidth" />
+            </p>
+            <li>Click <span class="Button">Browse </span>and save the file to your desktop or a suitable area on your “C” drive or network.&#160; The example below saves the file on a desktop. </li>
+            <p class="Body">You will need to name the file; name it <b>newcert2016 </b>.</p>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_5.png" class="FullWidth" />
+            </p>
+            <li>Click <span class="Button">Next.</span></li>
+            <li>Then click<span class="Button"> Finish.</span></li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_6.png" class="FullWidth" />
+            </p>
+            <li>Log into <MadCap:variable name="General.ProductName" /> as root, as only the root user can import the certificate.</li>
+            <li>FTP the file from your desktop (or wherever you have saved the file) into the /tmp directory on the server.</li>
+            <li>Check the setting of the JAVAHOME parameter for Payroll or Subcontract Ledger, and make a note of this. <b>Please note this version should be java1.6 or higher.</b></li>
+            <li>Change directory (cd) to the location of jre as in the JAVAHOME&#160;parameter.</li>
+            <li>Run the following command to install the certificate:</li>
+            <p class="Body">./bin/keytool –import –keystore ./lib/security/cacerts/ -alias govtalk2 –file /tmp/newcert2016.cer </p>
+            <li>You will be asked for the Keystore password. The password is <b>changeit</b>.</li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_7.png" class="FullWidth" />
+            </p>
+            <li>At the <b class="Field">Trust this certificate? </b>prompt, enter <span class="span_4">Y</span>.</li>
+            <p class="Body">
+                <img src="../Images/how to install the new certificate for submissions_2016/Click on the Padlock Icon_8.png" class="FullWidth" />
+            </p>
+            <li>If you get an error message stating it already exists run the following command to remove the existing one and then re-run the command above :</li>
+            <p class="Body">./bin/keytool –delete –keystore ./lib/security/cacerts/ -alias govtalk2</p>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Infrastructure</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Infrastructure</h1>
+    <p>The exact requirements will vary slightly from server to server and environment to environment, but in broad terms the requirements are as follows:</p>
+    <ul>
+      <li>Your <b>network</b> must be connected to the internet (that is, you can connect to the internet from a PC on your network)</li>
+      <li>Your <MadCap:variable name="General.ProductName" /> server must:</li>
+      <ul>
+        <li>Have Java 1.3 (+ security add-ins) or Java 1.4 installed. If you do not, installation of this will require a system re-boot.</li>
+        <li>Have DNS installed</li>
+        <li>Have a Digital certificate installed to access the Government Gateway</li>
+      </ul>
+    </ul>
+    <p>
+      <MadCap:variable name="General.ProductName" /> uses Java to make the secure connection from your server to the Government Gateway, via the Internet. In setting up the connection, the Government Gateway issues a Digital Certificate (DC), which verifies it is the Government Gateway. Java has to recogn<MadCap:variable name="Variables.is" />e this certificate as a "trusted certificate" for things to proceed.</p>
+    <p>Without going in to the technicalities, you do not need to trust the actual certificate, but you must have the appropriate root certificate of the Certificate Authority (CA) to verify the DC. The CA in the case of the Government Gateway is Entrust (web site <a href="http://www.entrust.net/">http://www.entrust.net</a> ).</p>
+  </body>
+</html>

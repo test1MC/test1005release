@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1><MadCap:variable name="General.ProductName" /> Dates Explained</h1>
+        <h2>Module: <MadCap:variable name="Variables.Purchase Ledger caps" /></h2>
+        <p>Dates referenced in this section:</p>
+        <ul style="list-style-type: disc;">
+            <li style="list-style-type: disc;"><MadCap:variable name="Variables.Financial Period caps" />
+            </li>
+            <li style="list-style-type: disc;">Transaction Date</li>
+            <li style="list-style-type: disc;">Invoice Date</li>
+            <li style="list-style-type: disc;">Due Date</li>
+            <li style="list-style-type: disc;">Discount Date</li>
+            <li style="list-style-type: disc;">Effective Date</li>
+            <li style="list-style-type: disc;">Payment Date</li>
+            <li style="list-style-type: disc;">Payment Transfer Date</li>
+        </ul>
+        <ol style="list-style-type: decimal;" start="1">
+            <li>Batch Entry.<ul style="list-style-type: disc;"><li style="list-style-type: disc;"><MadCap:variable name="Variables.Financial Period caps" />: The end date of the <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" /> that all the transactions in this batch will be posted to. This will be the last day of the month and is used for grouping transactions in reports and <MadCap:variable name="Variables.enquiries" />. The batch <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" /> will become the GL Batch <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" /> once this <MadCap:variable name="Variables.mod PL" /> batch is posted. </li><li style="list-style-type: disc;">Transaction Date: The date for transactions in the batch. <MadCap:variable name="General.ProductName" /> uses the transaction date you enter in the batch header as the default transaction date for all the transactions, but you can choose a different transaction date for individual transactions. This will also be the date that the GL batch posts with if Parameter <span class="parameter">GL/BATTDATE</span> is set to Y.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Batch Entry</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images/2.14 - PRIME AP - Financial Date Explainations/Coins Dates Explained.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li></ul></li>
+            <li>Invoice Entry<ul style="list-style-type: disc;"><li style="list-style-type: disc;">Invoice Date: The date of the invoice.</li><li style="list-style-type: disc;">Due Date: The date when the invoice is due. Used as an option on reports to age invoices by this date. An option to select <MadCap:variable name="Variables.cheque" /> for payment based on this date.</li><li style="list-style-type: disc;">Discount Date: The date any discount must be taken by.</li><li style="list-style-type: disc;">Effective Date: The cost-effective date (the date within a <MadCap:variable name="Variables.jc contract" /> cost period to which a transaction belongs. Cost periods can be different from <MadCap:variable name="Variables.Financial Periods caps" style="text-transform: lowercase;" />) of the batch. Cost periods = fiscal period for Reconstruction Experts<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Invoice Entry</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images/2.14 - PRIME AP - Financial Date Explainations/Coins Dates Explained_1.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li></ul></li>
+            <li>Payment<ul style="list-style-type: disc;"><li style="list-style-type: disc;">Payment Date: Enter the <MadCap:variable name="Variables.cheque" /> date. <MadCap:variable name="General.ProductName" /> enters today's date by default, but you can change this. This will be the date Printed on the <MadCap:variable name="Variables.cheque" />. This will be the date for reconciling the payment in <MadCap:variable name="Variables.Cash Book caps" /> if not using a different payment transfer date.</li><li style="list-style-type: disc;">Payment Transfer Date: The date on which the payment transfer is to be made. Can be different from payment date depending on Parameter setting. The Parameter <span class="parameter">SC/XFRDATE</span> sets weather or not this field is available for entry.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Payment Dates</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images/2.14 - PRIME AP - Financial Date Explainations/Coins Dates Explained_2.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li></ul></li>
+        </ol>
+    </body>
+</html>

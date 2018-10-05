@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Ti PR Changes</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Ti PR&#160;Employee File</h1>
+        <p class="Body" MadCap:conditions="COINS.ScreenOnly">This section describes the Ti PR functionality related to Leave of Absence (LOA)&#160;processing.</p>
+        <h2 MadCap:autonum="1.1 ">Employee Layoff Date</h2>
+        <p class="Body">OA&#160;HR <span class="Function">Employment History </span>is updated with a record type of HRLOA and uses the <span class="Field">Layoff Date </span>and <span class="Field">Term Reason </span>entered in <i>Ti Payroll &gt; Employee File</i>, as shown in <MadCap:xref href="#TiPREmpFile" class="ImageRef"><i>Figure 1:  Ti PR&#160;Employee File Screen</i></MadCap:xref>. After entering the <span class="Field">Layoff Date </span>and <span class="Field">Term Reason</span>, the <span class="Field">Active </span>flag in Ti is set to <strong>N</strong>, and the Ti PR Employee Layoff Date is sent to OA as a separate piece of information (rather than as the Term Date).</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="TiPREmpFile"></a>Ti PR&#160;Employee File Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/PRTiEmpFile.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 "><a name="Employee"></a>Employee Rehire Date</h2>
+        <p class="Body">When an Employee returns from a Leave of Absence, the <span class="Field">Rehire Date </span>is entered on the Ti PR Employee record in <i>Ti Payroll &gt; Employee File</i>, as shown in <MadCap:xref href="#TiPREmpRehireDate" class="ImageRef"><i>Figure 2:  Ti PR&#160;Employee File - Rehire Date</i></MadCap:xref>. The <span class="Field">Layoff Date </span>and <span class="Field">Term Reason </span>fields are removed in both <MadCap:variable name="General.ProductName" /> Ti and OA, and the <span class="Field">Active </span>flag is set to <strong>Y</strong>. When Ti PR -&gt; OA PR -&gt; OA HR syncing occurs, a Rehire Employment History record is automatically created.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="TiPREmpRehireDate"></a>Ti PR&#160;Employee File - Rehire Date</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/TiPREmpRehireDate.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

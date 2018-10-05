@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Decimal [%=Variables.Cv cvr caps%] Items</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Decimal <MadCap:variable name="Variables.Cv cvr caps" /> Items</h1>
+        <p class="Body">Decimal <MadCap:variable name="Variables.Cv cvr caps" /> Items were stored using 2 decimal digits precision. This precision <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>been </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">was </MadCap:conditionalText>increased to 6 decimal digits. You can also configure precision on a <MadCap:variable name="Variables.Cv cvr caps" /> Item.<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> This section describes what has been done in <MadCap:variable name="General.ProductName" />&#160;OA to accommodate this change.</MadCap:conditionalText></p>
+        <h2 MadCap:autonum="1.1 "><MadCap:variable name="Variables.Cv cvr caps" /> Items</h2>
+        <h3 MadCap:autonum="1.1.1 ">Data Type Field</h3>
+        <p class="Body">The <span class="Field">Data Type </span>combo field, which was previously only enabled on Manual, Calculated <MadCap:variable name="Variables.Cv cvr caps" /> Items<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">, has been updated as follows</MadCap:conditionalText>:</p>
+        <ul>
+            <li>Appears on the Update form for all Items.</li>
+            <li>Is enabled if the Item is a Manual, Calculated type.</li>
+            <li>Is dynamically resolved from the Item type (such as Costs, Revenue, Accruals, etc.) or from the RSP field entered.</li>
+        </ul>
+        <h3 MadCap:autonum="1.1.2 "><MadCap:variable name="Variables.Cv cvr caps" /> Item Properties</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Decimal Places </span>field appears on the <MadCap:variable name="Variables.Cv cvr caps" /> Item properties screen, as shown in <MadCap:xref href="#DecimalPlacesField" class="ImageRef"><i>Figure 1:   Decimal Places Field</i></MadCap:xref>. It is only shown when the <span class="Field">Data Type </span>is <strong>Decimal</strong>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "> Decimal Places Field<a name="DecimalPlacesField"></a></p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV014_Images/DecimalPlaceField.png" style="width: 248px; height: 47px;" class="FullWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.3 "><MadCap:variable name="Variables.Cv cvr caps" /> Items	Export</h3>
+        <p class="Body">The <strong>Export </strong>action on the <MadCap:variable name="Variables.Cv cvr caps" /> Items browse <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>allows you to export Items using the standard <MadCap:variable name="General.ProductName" />&#160;OA&#160;<span class="button">Export </span>button.</p>
+        <h2 MadCap:autonum="1.2 "><MadCap:variable name="Variables.Cv cvr caps" /> Workbench</h2>
+        <h3 MadCap:autonum="1.2.1 "><MadCap:variable name="Variables.Cv cvr caps" /> Manual Input</h3>
+        <p class="Body">When entering data for a <MadCap:variable name="Variables.Cv cvr caps" />, <MadCap:variable name="Variables.Cv cvr caps" /> Item values are saved, and dependent <MadCap:variable name="Variables.Cv cvr caps" /> Items are then recalculated. The recalculation of these dependent Items <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been changed to accommodate </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">accommodates </MadCap:conditionalText>the precision setting of decimal Items, as follows:</p>
+        <ul>
+            <li>Item value evaluation is done using precision (no rounding).</li>
+            <li>Item values are rounded to the desired precision before being stored in the database.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.2 "><MadCap:variable name="Variables.Cv cvr caps" /> Manual Breakdown Input</h3>
+        <p class="Body">A <MadCap:variable name="Variables.Cv cvr caps" /> Item configured for breakdown input uses calculation<i> qty*rate</i> to store the value. The result of this calculation result is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>rounded as per the Item’s precision.</p>
+        <h3 MadCap:autonum="1.2.3 "><MadCap:variable name="Variables.Cv cvr caps" /> Update</h3>
+        <p class="Body"><span class="Function"><MadCap:variable name="Variables.Cv cvr caps" /> Update</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been modified to allow </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">allows </MadCap:conditionalText>for Item precision, as follows:</p>
+        <ul>
+            <li>Item value evaluation is done using precision (no rounding).</li>
+            <li>Item values are rounded to the desired precision before being stored in the database.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.4 ">	Generate <MadCap:variable name="Variables.Cv cvr caps" /> Spread</h3>
+        <p class="Body"><span class="Function">Generate <MadCap:variable name="Variables.Cv cvr caps" /> Spread</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>allows for <MadCap:variable name="Variables.Cv cvr caps" /> Item decimal precision.</p>
+        <h3 MadCap:autonum="1.2.5 "><MadCap:variable name="Variables.Cv cvr caps" /> Items Snapshot</h3>
+        <p class="Body">Changes made in <span class="Function"><MadCap:variable name="Variables.Cv cvr caps" /> Update</span> and <span class="Function">Generate <MadCap:variable name="Variables.Cv cvr caps" /> Spread</span> also apply to <MadCap:variable name="Variables.Cv cvr caps" /> Items Snapshot data.</p>
+    </body>
+</html>

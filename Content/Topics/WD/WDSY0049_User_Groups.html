@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>User Groups</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">User Groups</h1>
+        <p>You can set permissions for several users together using groups.  Each user belongs to one or more groups.  Each group specifies the functions that members of the group have access to (and may also specify functions that members of the group are denied access to).</p>
+        <p>You can define the permissions on a group by building them up from the permissions on other groups.  This means you can create sub groups that give access to related functions, and list the appropriate sub groups on each "main" group.  See Main Groups and Subgroups.</p>
+        <p>You can specify groups of functions, using wildcards, to provide a "broad brush" set of access permissions; you can then "fine tune" this by specifying additional functions to which the group has or does not have access.</p>
+        <p>
+        </p>
+        <p class="Example"><b>For example:</b>
+            <br />You might set up a group for people using <MadCap:variable name="Variables.Purchase Ledger caps" />, allowing them access to all except the Maintenance, Administration and Set-up options. Everyone who belongs to this group would, by default, be able to access these options. You might have one user in the group who only needs to use the <MadCap:variable name="Variables.enquiries" /> options, so you would restrict the individual access for that user. You might also have a <MadCap:variable name="Variables.hr supervisor" />, who needs access to the Maintenance, Administration and Set-up options, so you could extend the individual access for that user. How to do this is explained in <a href="WDSY0051_Menus.html">Menus</a>.</p>
+        <h2>Prime Groups</h2>
+        <p>Each user is assigned to a prime group. In conjunction with the user's security level, this controls whether the user has access to reports and batches created by other users. You have access to another users' reports and batches if:</p>
+        <ul>
+            <li>that user's prime group is included in your group list, and</li>
+            <li>your security level is higher than the other user's security level (or the security levels are equal, if the SY parameter <span class="parameter">EQUACESS </span>is set to <span class="userinput">Y</span>).</li>
+        </ul>
+        <p>Because of this, we recommend that you have separate groups for data access (batches and reports) and for function access.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0017_How_Function_Access_Works.html" />
+                <MadCap:relatedTopic src="WDSY0019_Group_Access_Permissions.html" />
+            </MadCap:relatedTopics>
+        </p>
+    </body>
+</html>

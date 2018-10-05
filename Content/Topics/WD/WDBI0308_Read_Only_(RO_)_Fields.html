@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Read Only (RO_) Fields</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Read Only (RO_) Fields</h1>
+        <p>In addition to the standard tables and fields in the <MadCap:variable name="General.ProductName" /> database, Open Architecture also uses the RSPs to provide access to certain calculated and non standard fields. These are known as 'RO' or Read Only fields and are also fully documented in the Database <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" />.&#160; </p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_030801.gif" />
+        </p>
+        <p>Although these fields have certain restrictions, they are incredibly powerful when used in <MadCap:variable name="Variables.enquiries" /> and reports. </p>
+        <p>In most instances RO_ fields will provide information from related tables to the main queried table&#160;- for example, summary cost information at <MadCap:variable name="Variables.Jc Contract caps" /> Level, or descriptions from an associated Lookup Table without the Page or Report designer having to query and access many tables from the <MadCap:variable name="General.ProductName" /> database.</p>
+        <p>Many of the calculated fields reflect similar fields to the coins + Configurable Reporter, such as Accruals, Costs and Revenue fields. These fields can then be passed parameters to enhance the information returned to a report. Typically these fields can be limited by dates, values and <MadCap:variable name="Variables.financial periods" /> as well simply parameters such as 'TD' for a To Date value.</p>
+        <p>In the Database <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /> RO_ fields are shown in a format as the example below. Any parameters immediately after the caret are mandatory, each parameter is then separated by a pipe. Any parameters which are encapsulated in square brackets are optional.</p>
+        <p>RO_ContractCosts^&lt;PeriodType&gt;[|&lt;PeriodOffset&gt;[|&lt;FDate&gt;[|PhaseMasks[|CostcodeMasks[|CategoryMasks[|AnalysisMask]]]]]<br /></p>
+        <p>There are certain restrictions on the use of RO fields, especially in relation to sorting and filtering. Details of these restrictions are covered in the appropriate documents.</p>
+    </body>
+</html>

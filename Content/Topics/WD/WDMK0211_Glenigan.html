@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Glenigan</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Glenigan</h1>
+        <p>If you subscribe to Glenigan, you can use Glenigan leads to create or update details of <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.mk projects" />.&#160; You can also create new companies or contacts in <MadCap:variable name="General.ProductName" />.</p>
+        <p>You first load the Glenigan raw data from a file into the Glenigan Workbench.&#160; You can then create new <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.mk projects" /> from any relevant leads.&#160;</p>
+        <div class="process">
+            <h2 class="print">To load a Glenigan file:</h2>
+            <p>This loads Glenigan <MadCap:variable name="Variables.mk projects" /> into the <span class="function" title="Function:%WSYBCRR">Report Status</span> workbench; it does not load them as <MadCap:variable name="Variables.mk projects" /> into <MadCap:variable name="General.ProductName" />.</p>
+            <ol>
+                <li>Export the leads you are interested in from Glenigan, (using the CSV with titles format).</li>
+                <li>Copy the Glenigan data file to a location that you can access from your computer.</li>
+                <li>Go to <span class="function" title="Function:%WMK4000HGLN">Glenigan</span> and click the New Load tab.</li>
+                <li>Browse for the Glenigan data file.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays the <span class="function" title="Function:%WSYBCRR">Report Status</span> workbench.&#160; This shows the progress of the data load - you may need to click <img src="../../Resources/Images/COINS Graphics/SVG buttons/reload.svg" class="button" /> to update the display.&#160; <MadCap:variable name="General.ProductName" /> loads the data as a background process.</p></li>
+            </ol>
+            <h2>To look at the Glenigan <MadCap:variable name="Variables.mk projects" /> you have loaded:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WMK4000HGLN">Glenigan</span> and click the Glenigan Loads tab.
+<p>This shows each of the data loads.</p></li>
+                <li>Click the link in the <span class="field">Load Number </span>column.
+<p>&#160;</p>
+This shows a list of the <MadCap:variable name="Variables.mk projects" /> included in the data load.</li>
+                <li>You can look at details of individual <MadCap:variable name="Variables.mk projects" /> by clicking the links:</li>
+                <ul>
+                    <li>The link in the <span class="field">Name </span>column shows the details of the Glenigan <MadCap:variable name="Variables.mk project" />.</li>
+                    <li>The link in the <span class="field"><MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.mk project" /></span> column shows details of the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.mk project" />, if the <MadCap:variable name="Variables.mk project" /> has already been imported into <MadCap:variable name="General.ProductName" />.</li>
+                </ul>
+            </ol>
+            <p>Before you import a <MadCap:variable name="Variables.mk project" /> into <MadCap:variable name="General.ProductName" />, you should check whether any of the companies, offices and contacts on the Glenigan <MadCap:variable name="Variables.mk project" /> already exist in <MadCap:variable name="General.ProductName" />.&#160; If so, you should link them to the corresponding <MadCap:variable name="General.ProductName" /> record.</p>
+            <h2>To link contacts, companies or offices to existing <MadCap:variable name="General.ProductName" /> records:</h2>
+            <ol>
+                <li>Look at the <MadCap:variable name="Variables.mk project" /> Details of the Glenigan <MadCap:variable name="Variables.mk project" />.</li>
+                <li>Click the Companies tab.</li>
+                <li>Open the company record you want to link to an existing company in <MadCap:variable name="General.ProductName" />.</li>
+                <li>Use the lookups to select the company and office in <MadCap:variable name="General.ProductName" /> to link this company to, and the contact to link the contact to.</li>
+                <li>Save the company record.</li>
+            </ol>
+            <h2>To import a Glenigan <MadCap:variable name="Variables.mk project" /> into <MadCap:variable name="General.ProductName" />:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WMK4000HGLN">Glenigan</span> and click the Glenigan Loads tab.</li>
+                <li>Click the link in the <span class="field">Load Number </span>column.</li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the <span class="nw"><MadCap:variable name="Variables.mk project" />(s)</span> you want to import.</li>
+                <li>Select "Create <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.mk project" />" from the Choose Action list.
+<p><MadCap:variable name="General.ProductName" /> imports the <MadCap:variable name="Variables.mk project" /> information and displays a link to the <MadCap:variable name="Variables.mk project" /> in the <span class="field"><MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.mk project" /></span> column.</p></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>You need to use <span class="function" title="Function:%WMK2150BCRT">Glenigan Company Types</span> to map the numeric Glenigan codes to the equivalent company types you are using in <MadCap:variable name="General.ProductName" />.</p>
+            <p>Consider the setting of the parameters <span class="parameter">PRSTAT </span>and <span class="parameter">PRTYPE</span>.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Currently you also need to set the parameter <span class="parameter">PRSTDEP </span>to <span class="userinput">N</span>.</div>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/MK/mk_glencode.htm" />
+                    <MadCap:relatedTopic src="../Parameters/MK/mk_prstat.htm" />
+                    <MadCap:relatedTopic src="../Parameters/MK/mk_prtype.htm" />
+                    <MadCap:relatedTopic src="../Parameters/MK/mk_prstdep.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />WF Template - Details Tab</h1>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_1_1106.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Workflow</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Workflow template code.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The workflow template description.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Group</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The workflow group code. Use this code to group roles and workflow templates.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Status</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The status of the template.<br /><br />Edit - The workflow is not live; you can still edit and test it. NB. Edit has a limit of 25 active records before requiring a purge of transactions or changing the status of the workflow to Live.<br /><br />Live - The workflow is live and you can no longer edit the logical fields involved in the workflow.&#160;&#160; There is a limited number of fields which are editable. <br /><br />Retired - The workflow is no longer live leaving the active stages to continue but not allowing new workflows to be launched.Your <MadCap:variable name="Variables.licence" /> limits the number of live workflows you can have. If you want to change an existing workflow, you must retire the original, copy it in edit mode and edit the copied workflow. (See Appendix A for details on Workflow Licensing).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Documents</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The <MadCap:variable name="General.ProductName" /> table(s) that are to be associated with the workflow.<br /><br />If this is filled in, the user must select a record from this table in order to run this workflow. The workflow can be independent of any particular table, in which case this can be blank.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Prepare</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">This is a calculation that takes place prior to the document load and can be used to assign specific RSP if not that of the standard table.&#160; This would be on recommendation and advice from <MadCap:variable name="General.ProductName" /> BI Team.&#160; This is not a field that would normally be used in workflow. </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Initialise</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The initial calculations that are performed at the initiation of the workflow.<br /><br />A variable of $TaskID must be initialised on each workflow. This will be the identifier for each instance of the workflow and is shown in the description of stage tasks, for example the internal reference of a transaction.<br /><br />The initialisation uses standard <MadCap:variable name="General.ProductName" /> calculation syntax (see associated documentation) and can also use standard <MadCap:variable name="General.ProductName" /> Methods.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Monitor</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The user who <MadCap:variable name="General.ProductName" /> should alert with a duplicate task if a stage extends beyond the expected duration. The monitor specified on the template will be used unless there is a specific monitor specified on the stage itself. – see Workflow Monitors below for more detail.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Monitor Status</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A check box which will indicate if the workflow is to appear on the Monitor Tab on the Workflow Monitor.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Test</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">The URL/ROWID to be processed if the workflow is started for test purposes when in edit mode.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="Body">Below is an example of a workflow template; including examples of initialisation calculations which may be required and a Test Invoice which will enable to launch a test workflow.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_2_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

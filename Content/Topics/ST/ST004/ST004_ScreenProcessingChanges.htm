@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Configuration</h1>
+        <h2>CO/TAXTYPE Parameter</h2>
+        <p class="Body">Parameter <span class="parameter">CO/TAXTYPE</span> must be set to <strong>SALES </strong>in order for the <MadCap:variable name="Variables.St Stock caps" /> Sales Tax functionality discussed in this document to work correctly.</p>
+        <h2>ST/TXBYITEM Parameter</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>parameter called <span class="parameter">TXBYITEM </span>has been added to the <MadCap:variable name="Variables.St Stock caps" /> module. When set to <strong>Y</strong>, dual taxability options are switched on.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 110px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">TXBYITEM</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Whether to enable functionality to exempt certain items from sales tax.<br /></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>ST Screen and Processing Changes</h1>
+        <h2><MadCap:variable name="Variables.St Stock caps" /> Locations</h2>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">An </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new </MadCap:conditionalText><span class="Field">Exempt Tax Code </span>field has been added to the <i>Setup &gt;&#160;Maintenance &gt; <MadCap:variable name="Variables.St Stock caps" /> Locations </i>screen, as shown in <MadCap:xref href="#ExemptTaxCode" class="ImageRef">Figure: <i>Exempt Tax Code Field</i></MadCap:xref>. This field only appears when parameter <span class="parameter">ST/TXBYITEM </span>is set to <strong>Y</strong>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="ExemptTaxCode"></a>Exempt Tax Code Field</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/ST/ST004_Images/InvLoc_ExemptTaxCode.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h2><MadCap:variable name="Variables.St Stock caps" /> Items</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Purchase Exempt Tax </span>field has been added to the <i><span class="Function"><MadCap:variable name="Variables.St Stock caps" /> Items</span> </i>screen, as shown in <MadCap:xref href="#PurchaseExemptTax" class="ImageRef"><i>Figure 2:  Purchase Exempt Tax Field</i></MadCap:xref>. This field is used to record if an item is exempt from Sales Tax upon purchasing.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="PurchaseExemptTax"></a>Purchase Exempt Tax Field</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/ST/ST004_Images/InvItems_PurchExemptTax.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h2><MadCap:variable name="Variables.St Stock caps" /> Issuing Process</h2>
+        <p class="Body">The <MadCap:variable name="Variables.St Stock caps" /> issuing process for defaulting a Tax Code <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>works as follows:</p>
+        <ul>
+            <li class="ListBullet3">If <MadCap:variable name="Variables.St Stock caps" /> Item is not exempt on purchase and issuing  to a <MadCap:variable name="Variables.Jc Contract caps" />, the <MadCap:variable name="Variables.Jc Contract caps" />’s Exempt Tax Code is used.</li>
+            <li class="ListBullet3">If <MadCap:variable name="Variables.St Stock caps" /> Item is not exempt on purchase and not issuing  to a <MadCap:variable name="Variables.Jc Contract caps" />, the Location's Exempt Tax Code is used.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">If <MadCap:variable name="Variables.St Stock caps" /> Item is exempt on purchase and issuing  to a <MadCap:variable name="Variables.Jc Contract caps" />, entered Analysis dictates a Tax Code. A Tax Code is used from<i> <MadCap:variable name="Variables.Jc Contract caps" /> Status &gt; <MadCap:variable name="Variables.Jc Contracts caps" /> &gt; specific <MadCap:variable name="Variables.Jc Contract caps" /> &gt;&#160;Cost Code Maintenance &gt;&#160;Tax Code for used Cost Code and Category</i>.</li>
+            <li class="ListBullet3">If <MadCap:variable name="Variables.St Stock caps" /> Item is exempt on purchase and not issuing  to a <MadCap:variable name="Variables.Jc Contract caps" />, the Location's Sales/Use Tax Code is used.</li>
+        </ul>
+        <ul>
+            <li class="Listabc3">You can override the default Tax Code on the line.</li>
+        </ul>
+        <h2><MadCap:variable name="Variables.St Stock caps" /> Transfer</h2>
+        <p class="Body"><MadCap:variable name="Variables.St Stock caps" /> Transfer currently has no Sales Tax on Location Transfers and its processing therefore remains the same.</p>
+        <h1>Other Screen and Processing Changes</h1>
+        <h2>PO <MadCap:variable name="Variables.St Stock caps" /> Orders</h2>
+        <p class="Body">When using<span class="Function"> <MadCap:variable name="Variables.St Stock caps" /> Orders</span> in <i>Procurement &gt; More Orders</i>, the Item Code <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>defaults as a blank value but is overridden to the appropriate Tax Code from the Location based on the <MadCap:variable name="Variables.St Stock caps" /> Item setting after saving:</p>
+        <ul>
+            <li class="ListBullet3">If <MadCap:variable name="Variables.St Stock caps" /> Item is not exempt on purchase, the Location's Sales/Use Tax Code is used.</li>
+            <li class="ListBullet3">If <MadCap:variable name="Variables.St Stock caps" /> Item is exempt on purchase, the Location's Exempt Tax Code is used.</li>
+        </ul>
+        <h2>PO Add <MadCap:variable name="Variables.St Stock caps" /> Order - Single Form Entry</h2>
+        <p class="Body">When using <span class="Function">Add <MadCap:variable name="Variables.St Stock caps" /> Order - Single Form Entry</span> in <i>Procurement &gt; More Orders &gt; Orders (Single Form)</i>, the Item Code <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>defaults in the appropriate Tax Code from the Location based on the <MadCap:variable name="Variables.St Stock caps" /> Item setting.</p>
+        <h2>PO Import Options</h2>
+        <p class="Body">If the supplied data for a PO&#160;Import has blank Sales Tax, the Item Code <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>defaults in the appropriate Tax Code from the Location based on the <MadCap:variable name="Variables.St Stock caps" /> Item setting.</p>
+        <h2> Enterprise Service Bus (ESB)</h2>
+        <p class="Body">If the supplied data for an ESB has blank Sales Tax, the Item Code <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>defaults in the appropriate Tax Code from the Location based on the <MadCap:variable name="Variables.St Stock caps" /> Item setting.</p>
+        <h2> Copy <MadCap:variable name="Variables.St Stock caps" /> Order from Template</h2>
+        <p class="Body">When copying an <MadCap:variable name="Variables.St Stock caps" /> Order from a template, the Item Code is overwritten with the appropriate Tax Code from the Location based on the <MadCap:variable name="Variables.St Stock caps" /> Item setting.</p>
+    </body>
+</html>

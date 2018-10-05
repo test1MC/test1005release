@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Batch Input</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Batch Input</h1>
+    <p>The procedure for entering batches of transactions is similar for every <MadCap:variable name="General.ProductName" /> module, so it is described here.</p>
+    <p>In <MadCap:variable name="General.ProductName" />, you enter most financial transactions (such as invoices or payment certificates) in batches, even if there is only one transaction. Each batch of transactions has a batch number (which <MadCap:variable name="General.ProductName" /> generates) and a reference (which you give it), either of which you can use later to refer to the batch.</p>
+    <p>The details of the transactions are held in a batch file, in the order in which you enter them, but <MadCap:variable name="General.ProductName" /> does not actually update the database until you post the batch. This means that you do not have to complete the batch immediately; you can save the work you have done so far, to complete it at a later stage, or you can change, add or delete the entries in the batch before committing them to the database.</p>
+    <p>At any time until the batch is posted, you can generate a <strong>listing report</strong> showing the contents of the batch. Once the batch has been posted, you can generate a <strong>posting report</strong> (which is the audit trail for that batch). To generate either report, use the <span class="function">Posting Reports </span>procedure in the relevant module.</p>
+    <p>Each batch has a status, which shows which stage the input of the batch has reached.</p>
+    <table>
+      <tbody>
+        <tr>
+          <td valign="top">
+            <strong>Unposted</strong>
+          </td>
+          <td valign="top">
+            <p>The batch has been entered and is ready for posting.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">
+              <ol>
+                <li>A batch that contains no transactions is still counted as 'ready for posting'.</li>
+                <li>If the batch control totals and actual totals do not agree you will only be able to post the batch if it can be forced.</li>
+              </ol>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Posting</strong>
+          </td>
+          <td valign="top">
+            <MadCap:variable name="General.ProductName" /> is currently posting the batch (or possibly, the batch has failed due to a technical problem with your computer).</td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Posted</strong>
+          </td>
+          <td valign="top">
+            <MadCap:variable name="General.ProductName" /> has updated the master records, and you cannot make any further changes. Other <MadCap:variable name="General.ProductName" /> modules can only "see" transactions once they have been posted.</td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <strong>Cancelled</strong>
+          </td>
+          <td valign="top">The batch has been cancelled, and the contents of the batch have been deleted.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Some batches have a status of <strong>'Incomplete'</strong>. This represents a batch that was entered using<MadCap:snippetText src="../../Resources/Snippets/COINSplus.flsnp" /> in which the control and actual totals do not agree (for example, not all transactions have been entered).</p>
+    <div class="configuration">
+      <h2 class="print">Batch configuration</h2>
+      <p>There is a batch configuration function in each financial module which allows you to define the standard characteristics for each type of batch transaction, including:</p>
+      <ul>
+        <li>Which control totals are used.</li>
+        <li>Whether the batch can be forced.</li>
+        <li>Whether <MadCap:variable name="General.ProductName" /> posts the batch automatically.</li>
+        <li>Whether <MadCap:variable name="General.ProductName" /> generates a posting report.</li>
+      </ul>
+    </div>
+  </body>
+</html>

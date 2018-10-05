@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Prevailing Wage Schedules</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Prevailing Wage Schedules</h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Prevailing Wage Schedules </span>maintenance function is found in <i>Payroll &gt; Company Setup</i>, as shown in <MadCap:xref href="#PWSchedules" class="ImageRef"><i> Prevailing Wage Schedules</i></MadCap:xref>. It allows you to create Prevailing Wage Schedules for Payroll Calculations. Each schedule contains its own PW Calculations and Rates.</p>
+        <ul>
+            <li>The <span class="Field">Schedule Code </span>cannot be blank.</li>
+            <li>The Prevailing Wage Schedules are company specific.</li>
+            <li>The <span class="Field">Schedule Code </span>has a hyperlink that directs you to the Prevailing Wage Calculations screen, as discussed in the Prevailing Wage Calculations Screen section.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="PWSchedules"></a>Prevailing Wage Schedules</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWSchedules.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.1 "><a name="Prevaili2"></a>Prevailing Wage Calculations Screen</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Prevailing Wage Calculations </span>maintenance function is reached by clicking the <span class="Field">Schedule Code </span>hyperlink on the Prevailing Wages Schedules screen (<MadCap:xref href="#PWSchedules" class="ImageRef"><i> Prevailing Wage Schedules</i></MadCap:xref> above). It appears as the first of two tabs, as shown in <MadCap:xref href="#PWCalcsScreen" class="ImageRef"><i> Prevailing Wage Calculations Screen</i></MadCap:xref>, and allows you to set up calculations for Prevailing Wages.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="PWCalcsScreen"></a>Prevailing Wage Calculations Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWCalcsTab.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Trade</p>
+        <p class="IndentFieldDef">This is the PW Trade code. These codes are set up in <i>Payroll &gt; Global Setup &gt; Prevailing Wage Trades</i>.</p>
+        <p class="IndentBold">Calc No.</p>
+        <p class="IndentFieldDef">This is the number code of the calculation used for the Prevailing Wage. It has a hyperlink that directs you to the Prevailing Wage Calculations Summary screen, as described in<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> the Prevailing Wage Calculations Summary section</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"> Section <MadCap:xref href="#Prevaili3" class="Figure"><i>1.1.1 Prevailing Wage Calculations Summary</i></MadCap:xref></MadCap:conditionalText>.</p>
+        <p class="IndentFieldDef">When a calculation has new calculation rates, effective after the original date, copy the original calculation number and update the Effective Date and rates.   Do NOT create another calculation or it will use both calculations when processing payroll. It is recommended not to make the original calculation dormant. It will not be accessible if a timecard is entered for the prior effective period.</p>
+        <p class="IndentBold">Effective Date</p>
+        <p class="IndentFieldDef">The date that the calculation is effective.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">Description</p>
+        <p class="IndentFieldDef">A description of what the calculation is used for.</p>
+        <p class="IndentBold">Fringe or Deduction</p>
+        <p class="IndentFieldDef">Whether this is a Fringe or a Deduction calculation. The options are: <strong>Fringe Included in Pay</strong>, <strong>Fringe Not Included in Pay</strong>, <strong>Deduction</strong>.</p>
+        <p class="IndentBold">Group Code</p>
+        <p class="IndentFieldDef">The PW Group Code, which can be blank or one of a valid set of codes for the Prevailing Wage. These Group&#160;Codes are set up in <i>Payroll &gt; Global Setup &gt; US&#160;Specifics &gt; Calculation Groups</i>.</p>
+        <p class="IndentBold">Percent</p>
+        <p class="IndentFieldDef">The percentage of the calculation, if applicable.</p>
+        <p class="IndentBold">Flat Amount</p>
+        <p class="IndentFieldDef">The flat amount for the calculation, if applicable.</p>
+        <p class="IndentBold">Rate per Day</p>
+        <p class="IndentFieldDef">The rate per day if the calculation is not a flat amount or a percentage of the gross amount.</p>
+        <p class="IndentBold">Amount per Regular Hour<br />Amount per Overtime Hour<br />Amount per Double Time Hour</p>
+        <p class="IndentFieldDef">The calculations as amounts per Regular, Overtime, and Double Time Hour.</p>
+        <p class="IndentBold">	Item</p>
+        <p class="IndentFieldDef">The&#160;Pay Item number, 1 - 999.</p>
+        <p class="IndentBold">Dormant</p>
+        <p class="IndentFieldDef">Whether the calculation is dormant.</p>
+        <h3 MadCap:autonum="1.1.1 "><a name="Prevaili3"></a>Prevailing Wage Calculations Summary</h3>
+        <p class="Body">When you click the <strong>Calc No </strong>column hyperlink on the Prevailing Wage Calculations screen, a new Prevailing Wage Calculations Summary screen appears, as shown in <MadCap:xref href="#Prevaili" class="ImageRef"><i> Prevailing Wage Calculations Summary</i></MadCap:xref>. It also appears if you use the Add, Copy, or Update buttons on this screen.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 3: "><a name="Prevaili"></a>Prevailing Wage Calculations Summary</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWCalcsSummary_Main.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">The Prevailing Wage Calculations Summary screen contains the following 3 tabs:</p>
+        <ul>
+            <li><strong>Main</strong>
+            </li>
+            <li><strong>Participation Rules</strong>
+            </li>
+            <li><strong>Taxable Details </strong>- This tab is not available when using Add or Copy for a PW Calculation.</li>
+        </ul>
+        <h4 MadCap:autonum="1.1.1.1 "><a name="Main"></a>Main Tab</h4>
+        <p class="Body">The Main tab of the PR Prevailing Wage Calculations Summary screen is shown in <MadCap:xref href="#Main2" class="ImageRef"><i> Main Tab</i></MadCap:xref>. It displays general information, rates, monthly calculation periods, amounts per hour, maximum amounts and hours, taxable information, and W-2 information.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 4: "><a name="Main2"></a>Main Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWCalcsSummary_Main.png" alt="" title="" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">General Info Fields</p>
+        <p class="IndentBold">Description</p>
+        <p class="IndentFieldDef">A description of what the calculation is used for.</p>
+        <p class="IndentBold">Fringe or Deduction</p>
+        <p class="IndentFieldDef">Whether this is a fringe or deduction calculation. The options are: <strong>Fringe Included in Pay</strong>, <strong>Fringe Not Included in Pay</strong>, <strong>Deduction</strong>.</p>
+        <p class="IndentBold">Calculation Type</p>
+        <p class="IndentFieldDef">To classify the type of Prevailing Wage calculation, if needed.</p>
+        <p class="IndentBold">	Item</p>
+        <p class="IndentFieldDef">The Pay Item number, 1 - 999.</p>
+        <p class="IndentBold">Group Code</p>
+        <p class="IndentFieldDef">The PW Group&#160;Code, which can be blank or one of a valid set of codes for the Prevailing Wage.</p>
+        <p class="IndentBold">Dormant</p>
+        <p class="IndentFieldDef">Whether the calculation is dormant.</p>
+        <p class="Subtitle">Monthly Calculation Periods Applicable Fields</p>
+        <p class="IndentFieldDef">There are six checkboxes in this layout. You can check any of these boxes to indicate whether a particular Cost Period (from 1 through 6) is applicable to this Prevailing Wage calculation.</p>
+        <p class="Subtitle">Rates Fields</p>
+        <p class="IndentBold">	Percent</p>
+        <p class="IndentFieldDef">The percentage of the calculation, if applicable.</p>
+        <p class="IndentBold">	Percent Basis</p>
+        <p class="IndentFieldDef">The basis of the percentage rate. The options are: <strong>Item Current Amount</strong>, <strong>Gross by Worked Hours</strong>, <strong>Gross by Paid Hours</strong>, <strong>Gross by Regular Hours</strong>. </p>
+        <p class="IndentBold">Percent Basis Item</p>
+        <p class="IndentFieldDef">The number of the item for the percent basis. This field is disabled if you selected any of these options for the <span class="Field">Percent Basis </span>field: <strong>Gross by Worked Hours</strong>, <strong>Gross by Paid Hours</strong>, <strong>Gross by Regular Hours</strong>.</p>
+        <p class="IndentBold">Flat Amount</p>
+        <p class="IndentFieldDef">The flat amount for the calculation, if applicable.</p>
+        <p class="IndentBold">Flat Amount Spread Basis</p>
+        <p class="IndentFieldDef">The spread basis for the flat amount. The options are: <strong>Total Gross </strong>and <strong>Regular Gross</strong>.</p>
+        <p class="IndentBold">Rate per Day</p>
+        <p class="IndentFieldDef">The rate per day if the calculation is not a flat amount or a percentage of the gross amount.</p>
+        <p class="Subtitle">Amount Per Hour Fields</p>
+        <p class="IndentBold">Regular<br />Overtime<br />Double Time</p>
+        <p class="IndentFieldDef">The calculation as an amount per Regular hour, Overtime hour, and Double Time hour.</p>
+        <p class="IndentBold">Offset with Item</p>
+        <p class="IndentFieldDef">The pay item where qualifying fringes are accumulated to reduce the minimum fringe calculation.</p>
+        <p class="IndentBold">Offset with Gross</p>
+        <p class="IndentFieldDef">Whether the calculation should be offset with the time card's gross. Valid options are: <strong>(blank) - Not Applicable</strong>; <strong>W - Gross by Worked Hours</strong>; <strong>P - Gross by Paid Hours</strong>; <strong>R - Gross by Regular Hours</strong>.</p>
+        <p class="Subtitle">Maximum Amount Fields</p>
+        <p class="IndentBold">Per Period<br />Per Month<br />Per Year</p>
+        <p class="IndentFieldDef">The maximum amount to be allowed per pay period, per month, or per year for the Prevailing Wage calculation.</p>
+        <p class="IndentBold">or Item Current Amount</p>
+        <p class="IndentFieldDef">The current amount of this item.</p>
+        <p class="Subtitle">Maximum Hours Fields</p>
+        <p class="IndentBold">Per Period</p>
+        <p class="IndentFieldDef">The maximum hours allowed per pay period for the Prevailing Wage calculation.</p>
+        <p class="IndentBold">	Period Maximum Basis</p>
+        <p class="IndentFieldDef">The basis for the maximum hours to be allowed per pay period. The options are:&#160;<strong>Worked Hours</strong>, <strong>Paid Hours</strong>, <strong>Regular Hours</strong>, <strong>Percent Basis</strong>.</p>
+        <p class="IndentBold">Per Month</p>
+        <p class="IndentFieldDef">The maximum hours to be allowed per month for the Prevailing Wage calculation.</p>
+        <p class="IndentBold">Month Maximum Basis</p>
+        <p class="IndentFieldDef">Select the basis for the maximum hours to be allowed per month. The options are: <strong>Worked Hours</strong>, <strong>Paid Hours</strong>, <strong>Regular Hours</strong>, <strong>Percent Basis</strong>.</p>
+        <p class="Subtitle">Taxable Info Fields</p>
+        <p class="IndentBold">	Federal Taxable<br />FICA Taxable<br />FUTA&#160;Taxable</p>
+        <p class="IndentFieldDef"> These fields are US&#160;specific. They show you whether the Federal, FICA, and FUTA&#160;deductions should be taxable.</p>
+        <p class="Subtitle">W-2 Info Fields (for US&#160;only)</p>
+        <p class="IndentFieldDef">These fields only show for a US company.</p>
+        <p class="IndentBold">Appear Separately on W-2</p>
+        <p class="IndentFieldDef">Whether the calculation should appear separately on the W-2 form.</p>
+        <p class="IndentBold">	W-2 Box</p>
+        <p class="IndentFieldDef">Select the appropriate box for W-2 reporting, if applicable. You can refer to the W-2 instructions provided by the IRS for more information.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">W-2 Code</p>
+        <p class="IndentFieldDef">Select the code that represents a description of what is to appear separately in Box 12 of the W-2, if applicable.</p>
+        <p class="Subtitle"> Info layout (for Canada only)</p>
+        <p class="Body">For the Canadian region, the W-2 Info layout is replaced with a T4/RL-1 Info layout, as shown in <MadCap:xref href="#T4RL1Info" class="ImageRef"><i> T4/RL-1 Info Layout (Canada only)</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 5: "><a name="T4RL1Info"></a>T4/RL-1 Info Layout (Canada only)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWCalcsSummary_MainCATax.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="IndentBold">Appear Separately on T4</p>
+        <p class="IndentFieldDef">Whether the earning/calculation should appear separately on the T4 Form.</p>
+        <p class="IndentBold">T4 Box	</p>
+        <p class="IndentFieldDef">The T4 Box that the earning/calculation corresponds to on the T4 form, if applicable.</p>
+        <p class="IndentBold">Other Information Code	</p>
+        <p class="IndentFieldDef">The Other Information Code that the earning/calculation corresponds to on the T4 Form, if applicable.</p>
+        <p class="IndentBold">RPP/DPSP Registration Number</p>
+        <p class="IndentFieldDef">If the T4 Box is set to 20, the RPP/DPSP Registration Number must be entered.</p>
+        <p class="IndentBold">Appear Separately on RL-1</p>
+        <p class="IndentFieldDef">Whether the earning/calculation should appear separately on the RL-1 Form.</p>
+        <p class="IndentBold">	RL-1 Box</p>
+        <p class="IndentFieldDef">The RL-1 Box that the earning/calculation corresponds to on the RL-1 Form, if applicable.</p>
+        <p class="IndentBold">Code O Box</p>
+        <p class="IndentFieldDef">A valid Code O Box when the RL-1 Box is set to O.</p>
+        <p class="IndentBold">	Additional Information Code</p>
+        <p class="IndentFieldDef">The Additional Information Code that the earning/calculation corresponds to on the RL-1 Form, if applicable.</p>
+        <h4 MadCap:autonum="1.1.1.2 "><a name="Particip"></a>Participation Rules Tab</h4>
+        <p class="Body">The Participation Rules tab of the PR Prevailing Wage Calculations Summary screen is shown in <MadCap:xref href="#PartRulesTab" class="ImageRef"><i> Participation Rules Tab</i></MadCap:xref>. It contains the following can-do list fields for the calculation: valid Costing Companies, Earning Categories, Prevailing Wage Skills, Service Departments, Service Order Groups, and Service Order Types.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 6: "><a name="PartRulesTab"></a>Participation Rules Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWCalcsSummary_PartRules.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h4 MadCap:autonum="1.1.1.3 "><a name="Taxable"></a>Taxable Details Tab</h4>
+        <p class="Body">The Taxable Details tab of the PR Prevailing Wage Calculations Summary screen for the US&#160;only is shown in <MadCap:xref href="#TaxDetailsTab" class="ImageRef"><i> Taxable Details Tab (US only)</i></MadCap:xref>, and the screen for Canada only is shown in <MadCap:xref href="#TaxDetailsCA" class="ImageRef"><i> Taxable Details Tab (for Canada only)</i></MadCap:xref>. You can use this tab to  set up taxable information for a Prevailing Wage calculation.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 7: "><a name="TaxDetailsTab"></a>Taxable Details Tab (US only)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWCalcsSummary_TaxDetails.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">US Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Tax Authority Type</p>
+        <p class="IndentFieldDef">The options for US&#160;Tax Authority Types are <strong>State</strong> and <strong>Locality</strong>.</p>
+        <p class="IndentBold">Tax Authority Pattern</p>
+        <p class="IndentFieldDef">You can use wildcards: “*” to match any characters and “.” to match any single character. For the US, this field has  a lookup for States or Localities (for Counties, Cities, or Schools) for the Tax Authority Type.</p>
+        <p class="IndentBold">SUTA Taxable<br />DBL&#160;Taxable<br />Work Comp Taxable</p>
+        <p class="IndentFieldDef">Whether SUTA, DBL, and Work Comp are taxable for this tax authority.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 8: "><a name="TaxDetailsCA"></a>Taxable Details Tab (for Canada only)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWCalcsSummary_TaxDetailsCA.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">CA Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Tax Authority Type</p>
+        <p class="IndentFieldDef">The only option for Canadian Tax Authority Types is <strong>Province</strong>.</p>
+        <p class="IndentBold">Tax Authority Pattern</p>
+        <p class="IndentFieldDef">You can use wildcards: “*” to match any characters and “.” to match any single character. For Canada, this field only has a lookup for Provinces.</p>
+        <p class="IndentBold">CPP/QPP Taxable<br />PPIP/QPIP&#160;Taxable<br />EI&#160;Taxable</p>
+        <p class="IndentFieldDef">Whether CPP/QPP, PPIP/QPIP, and EI are taxable for this tax authority.</p>
+        <h2 MadCap:autonum="1.2 ">Prevailing Wage Rates</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Prevailing Wage Rates </span>maintenance function is reached by clicking the <span class="Field">Schedule Code </span>hyperlink on the Prevailing Wages Schedules screen (<MadCap:xref href="#PWSchedules" class="ImageRef"><i> Prevailing Wage Schedules</i></MadCap:xref>). It appears as the second of two tabs, as shown in <MadCap:xref href="#PWRates" class="ImageRef"><i> Prevailing Wage Rates</i></MadCap:xref>, and allows you to set up and maintain Prevailing Wage Rates for specific PW Trade/PW Skill Level combinations for applicable Earning Categories.</p>
+        <p class="Body">These rates are used on jobs for employees who have been associated with this Prevailing Wage Schedule.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 9: "><a name="PWRates"></a>Prevailing Wage Rates</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR092_Images/PWRatesTab.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Trade</p>
+        <p class="IndentFieldDef">The PW Trade must be entered.</p>
+        <p class="IndentFieldDef">Prevailing Wage Trades are set up in<i> Payroll &gt; Global Setup &gt; Prevailing Wage Trades</i> (see <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Section <MadCap:xref href="PR09202_PWTrades.htm" class="Numbered_Heading">1, Prevailing Wage Trades</MadCap:xref> </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">the Prevailing Wage Trades section</MadCap:conditionalText>).</p>
+        <p class="IndentBold">Skill Level Pattern</p>
+        <p class="IndentFieldDef">The PW Skill Level of the employee must be entered. This is used with a PW Schedule and PW Trade to determine Prevailing Wage rates/calculations.</p>
+        <p class="IndentFieldDef">Valid PW Skill Levels are set up in <i>Payroll &gt; Global Setup &gt; Prevailing Wage Skill Levels</i> (see <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Section <MadCap:xref href="PR09201_PWSkillLevel.htm" class="Numbered_Heading">1, Prevailing Wage Skill Level </MadCap:xref></MadCap:conditionalText><MadCap:xref href="PR09201_PWSkillLevel.htm" class="Numbered_Heading" MadCap:conditions="COINS.ScreenOnly">the Prevailing Wage Skill Level section</MadCap:xref>).</p>
+        <p class="IndentBold">Effective Date</p>
+        <p class="IndentFieldDef">The date the PW Rate becomes effective.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">Description</p>
+        <p class="IndentFieldDef">A description of the PW Rate for the Earning Category.</p>
+        <p class="IndentBold">Dormant</p>
+        <p class="IndentFieldDef">Whether this PW Rate is dormant.</p>
+        <p class="code">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/Stylesheets/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Configuration</h1>
+        <p class="Body">Two new parameters have been added to COINS&#160;OA&#160;Service Management to provide Comment Types for Consolidated Problem Codes and Resolutions. </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">CMPROBCN</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">Comment Type for <MadCap:variable name="Variables.Se Service Order caps" /> Problem Code Consolidated Log Entry</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">CMRESCN</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p class="TableCell">Comment Type for <MadCap:variable name="Variables.Se Service Order caps" /> Resolution Consolidated Log Entry</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">The <i>Comment Type </i>referenced in these parameters is used for Consolidated comments and is considered to be an <strong>Invoice Comment</strong> (set up in the <span class="Function">Comment Types </span>function, as shown in <MadCap:xref href="#CommentTypeSetup" class="ImageRef"><i>Figure 1:  Comment Types Setup</i></MadCap:xref>).       During the invoice generation process, Invoice Comments are copied to the <span class="Function">Invoices </span>function and can be further edited before printing the invoice.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="CommentTypeSetup"></a>Comment Types Setup</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE033_Images/CommentTypeSetup.png" class="FullWidth" />
+        </p>
+        <div class="notelabel" MadCap:conditions="COINS.PrintOnly">NOTE:</div>
+        <div class="note">SE Parameters <span class="parameter">CMPROBCD </span>and <span class="parameter">CMRESOL</span> are <strong>not </strong>affected by this functionality. The <i>Comment Type </i>referenced in these parameters will continue to be used only for Source comments and is not considered to be an <strong>Invoice Comment</strong>.</div>
+        <div>&#160;</div>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">CMPROBCD</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">Comment Type for <MadCap:variable name="Variables.Se Service Order caps" /> Problem Code Log Entry</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">CMRESOL</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p class="TableCell">Comment Type for <MadCap:variable name="Variables.Se Service Order caps" /> Resolution Log Entry</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

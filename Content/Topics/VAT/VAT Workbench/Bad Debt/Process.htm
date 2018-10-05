@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+        <link href="../../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />VAT Bad Debt Process Overview</h1>
+        <p>&#160;</p>
+        <p>There are rules governing the reclaim  /  repayment of VAT aged over six months. Those that are relevant to processing within <MadCap:variable name="General.ProductName" /> are as follows:</p>
+        <p>For Outputs (that is, sales):</p>
+        <ul>
+            <li>You must have written off the debt in your day-to-day VAT accounts and transferred it to a separate bad debt account.</li>
+            <li>The debt must have remained unpaid for a period of six months after the later of the time payment was due and payable and the date of the supply.</li>
+        </ul>
+        <p>For Inputs (that is, purchases):</p>
+        <ul>
+            <li>You are required to repay input tax if you do not pay for the supplies within six months of the relevant date (that is, the later of the date of supply and the due date for payment).</li>
+        </ul>
+        <p>The basic process for creating a Bad Debt Batch is the same for each of the four ledgers affected (<MadCap:variable name="Variables.Sales Ledger caps" />, <MadCap:variable name="Variables.Purchase Ledger caps" />, Subcontract Ledger, <MadCap:variable name="Variables.Contract Sales caps" /> Ledger):</p>
+        <ol>
+            <li>Select the transactions which will be flagged as bad debt.</li>
+            <li>Create a “bad debt” batch from the selection.</li>
+            <li>Print a batch listing report (optional).</li>
+            <li>Post the batch.</li>
+            <li>Print a batch posting report (optional).</li>
+        </ol>
+        <p>Only one unposted bad debt batch can exist for each ledger.  The selection can be run multiple times, each time will clear out the contents from the previous run.  Transactions using VAT codes set up to be “VAT at pay” cannot be selected, as the VAT transactions have not yet been created.</p>
+        <p>Posting the batch will do the following:</p>
+        <ul>
+            <li>Flag the transaction as “bad debt”.  This will prevent it from being selected in future bad debt selection.</li>
+            <li>Transfer the outstanding balance from the ledger’s control account to the bad debt control account</li>
+            <li>Create reversing VAT transactions for the outstanding balance</li>
+            <li>Transfer the outstanding VAT amount from the VAT suspense account to the bad debt VAT suspense account</li>
+        </ul>
+        <p>Example of batch postings:</p>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Batch Type</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Account Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Account</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Debit</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Credit</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Notes / Parameter</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PL PLBDVAT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - PL Control</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7800</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>£240</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - PL Bad Debt Contrl</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7898</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>-£240</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;PL/BDACCT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - VAT Input</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7C02</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>-£40</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - VAT Bad Debt</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7C04</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>£40</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;CO/BDACCT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SL SLBDVAT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - SL Control</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.6804</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>-1200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - SL Bad Debt Contrl</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.6899</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>£1200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;SL/BDACCT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - VAT Output</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7C01</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>£200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - VAT Bad Debt</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7C04</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>-£200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;CO/BDACCT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>S/C Bad Debt</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - SC Control</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7804</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>240</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - SC Bad Debt Contrl</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7899</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>-£240</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;SC/BDACCT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - VAT Input</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7C02</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>-£40</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - VAT Bad Debt</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7C04</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>£40</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;CO/BDACCT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>C/S Bad Debt</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - CS Control</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.6800</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>-1200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - CS Bad Debt Contrl</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.6898</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>£1200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>&#160;CS/BDACCT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00 - VAT Output</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>00.7C01</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>£200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>00 - VAT Bad Debt</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>00.7C04</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>-£200</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>&#160;CO/BDACCT</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>If a payment is later made to a transaction flagged as “bad debt” then the following will happen: 
+ 	</p>
+        <ul>
+            <li>a VAT transaction will be created when the payment is posted (for example, as if the VAT code was set up as “VAT at pay”). </li>
+            <li>
+ 	the VAT amount will be transferred from the VAT bad debt suspense account (rather than the standard VAT suspense account). 
+ 	</li>
+            <li>the payment amount will be transferred from the ledger’s bad debt control account (rather than the ledger’s control account). 
+</li>
+        </ul>
+        <h2><MadCap:variable name="Variables.Purchase Ledger caps" />
+        </h2>
+        <h3>Selecting Invoices</h3>
+        <p>Run <span class="function">Process Bad Debt Invoices</span> (%WPL3460RAIN):</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT Bad Debt/Selecting Invoices.png" class="FullWidth" />
+        </p>
+        <p>A report will be generated, showing which invoices have been selected.</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT Bad Debt/Invoices Report.png" class="FullWidth" />
+        </p>
+        <h3>Creating the Bad Debt Batch</h3>
+        <p>Re-run the selection with the <span class="field">Create Batch</span> box <MadCap:variable name="Variables.tick" />ed.  The report will include the batch number.</p>
+        <h3>Posting the Bad Debt Batch</h3>
+        <p>From the list of bad debt batches (%WPL1250BCOB) select the batch and run the “Post Batches” action.</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT Bad Debt/Posting Bad Debt.png" class="FullWidth" />
+        </p>
+        <h3>Batch Posting Report</h3>
+        <p>Run <span class="function">PL Bad Debt Posting Report</span> (%WPL3470RCOB):</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT Bad Debt/Posting Report.png" />
+        </p>
+        <h3>Bad Debt Listing Report</h3>
+        <p>A listing of <MadCap:variable name="Variables.Purchase Ledger caps" /> Bad Debt Invoices can be obtained by running the <span class="function">Open Item Detailed Report – Current</span> and selecting Bad Debts Only.</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT Bad Debt/Listing Report.png" class="FullWidth" />
+        </p>
+        <h2><MadCap:variable name="Variables.Sales Ledger caps" />
+        </h2>
+        <h3>Selecting Invoices</h3>
+        <p>Run <span class="function">Process Bad Debt Invoices</span> (%WSL3540RRIN).</p>
+        <h3>Creating the Bad Debt Batch</h3>
+        <p>Re-run the selection with the <span class="field">Create Batch</span> box <MadCap:variable name="Variables.tick" />ed.  The report will include the batch number.</p>
+        <h3>Posting the Bad Debt Batch</h3>
+        <p>From the list of bad debt batches (%WSL1200BCOB) select the batch and run the “Post Batches” action.</p>
+        <h3>Batch Posting Report</h3>
+        <p>Run <span class="function">Bad Debt Posting Report</span> (%WSL3550RCOB).</p>
+        <h3>Bad Debt Listing Report</h3>
+        <p>A listing of <MadCap:variable name="Variables.Sales Ledger caps" /> Bad Debt Invoices can be obtained by running the <span class="function">Open Item Detailed Report – Current</span> and selecting Bad Debts Only.</p>
+        <h2>Subcontract Ledger</h2>
+        <h3>Selecting Certificates</h3>
+        <p>Run <span class="function">Process Bad Debt Certificates</span> (%WSC3690RSBP).</p>
+        <h3>Creating the Bad Debt Batch</h3>
+        <p>Re-run the selection with the <span class="field">Create Batch</span> box <MadCap:variable name="Variables.tick" />ed.  The report will include the batch number.</p>
+        <h3>Posting the Bad Debt Batch</h3>
+        <p>From the list of bad debt batches (%WSC1340BCOB) select the batch and run the “Post Batches” action.</p>
+        <h3>Batch Posting Report</h3>
+        <p>Run <span class="function">Bad Debt Posting Report</span> (%WC3700RCOB).</p>
+        <h3>Bad Debt Listing Report</h3>
+        <p>A listing of Subcontract Ledger Bad Debt Invoices can be obtained by running the <span class="function">SC Current Aged Detail by <MadCap:variable name="Variables.Jc Contract caps" /></span>and selecting Bad Debts Only.</p>
+        <h2><MadCap:variable name="Variables.Contract Sales caps" /> Ledger</h2>
+        <h3>Selecting Certificates</h3>
+        <p>Run <span class="function">Process Bad Debt Certificates</span> (%WCS3230RCST).</p>
+        <h3>Creating the Bad Debt Batch</h3>
+        <p>Re-run the selection with the <span class="field">Create Batch</span> box <MadCap:variable name="Variables.tick" />ed.  The report will include the batch number.</p>
+        <h3>Posting the Bad Debt Batch</h3>
+        <p>From the list of bad debt batches (%WCS1160RCOB) select the batch and run the “Post Batches” action.</p>
+        <h3>Batch Posting Report</h3>
+        <p>To run the report manually, run the <span class="function">Bad Debt Posting Report</span> (%CS324).</p>
+        <p>Run <span class="function">Bad Debt Posting Report</span> (%WCS3240RCOB).</p>
+        <h3>Bad Debt Listing Report</h3>
+        <p>A listing of <MadCap:variable name="Variables.Contract Sales caps" /> Ledger Bad Debt Certificates can be obtained by running the <span class="function">CS Open Item Report - Detail - Current</span> and selecting Bad Debts Only.</p>
+        <h2>Functions</h2>
+        <table style="mc-table-style: url('../../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Function </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Description </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WSY1013UCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Post
+ Bad Debt Batch </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WPL3460RAIN </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>PL
+ Select/Process Bad Debt Invoices </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WPL1250BCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>PL
+ Bad Debt Batches </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WPL3470RCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>PL Bad Debt Batch
+ Listing/Posting Report </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WSL3540RRIN </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SL Select/Process Bad Debt
+ Invoices </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WSL1200BCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SL
+ Bad Debt Batches </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WSL3550RCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SL
+ Bad Debt Batch Listing/Posting Report </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WSC3690RSBP </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SC
+ Select/Process Bad Debt Certificates </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WSC1340BCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SC
+ Bad Debt Batches </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WSC3700RCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>SC Bad Debt Batch
+ Listing/Posting Report </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WCS3230RCST </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>CS Select/Process Bad Debt
+ Certificates </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>%WCS1160BCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>CS
+ Bad Debt Batches </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>%WCS3240RCOB </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>CS Bad Debt Batch
+ Listing/Posting Report </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

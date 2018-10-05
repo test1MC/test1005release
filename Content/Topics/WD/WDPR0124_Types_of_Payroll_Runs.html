@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Types of Payroll Runs</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Types of Payroll Runs</h1>
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge">&#160;</td>
+                    <td><span style="color: #000000;"><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></span>
+                    </td>
+                    <td class="Edge">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><MadCap:variable name="General.ProductName" /> OA has three different types of Payroll Runs in <MadCap:variable name="General.ProductName" /> OA and four different types of Timesheets. They were developed to solve various business problems that the Payroll Department is presented with on a regular basis. In addition to Regular Periods and Regular Timesheets, <MadCap:variable name="General.ProductName" /> has incorporated Future Periods and Timesheets, Adjusting Periods and Timesheets, and Recurring Timesheets.</p>
+        <p><MadCap:variable name="General.ProductName" /> allows for 999 Payroll Periods for any <MadCap:variable name="Variables.kco company" />. Every Regular, Adjusting, or Future Period is assigned a Period Number. The period numbers automatically increment without respect to Payroll Frequency. For example, Period 1 may be used with a weekly payroll cycle, Period 2 may be a 2-Weekly payroll, etc.</p>
+        <p>You can update or change the Period End Date, <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Date, Payroll Month, <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" />, or Monthly Calculation Period anytime before the payroll is posted. If timesheets exist, their status must equal <strong>Start</strong>.</p>
+        <p>The Payroll Periods are grouped and reserved as follows:</p>
+        <ul>
+            <li><strong>1-899</strong> - REGULAR and ADJUSTING Payroll Periods</li>
+            <li><strong>900-998</strong> - FUTURE Payroll Periods</li>
+            <li><strong>999</strong> - RECURRING Period used to associate Recurring Timesheets</li>
+        </ul>
+        <p>&#160;</p>
+        <p>Details on each of these Payroll Periods are described below.</p>
+        <div class="process">
+            <h2 class="print">Types of Payroll Runs</h2>
+            <p>&#160;</p>
+            <p><strong><span style="color: #f37321;">Timesheets and Periods</span></strong>
+            </p>
+            <p>Regular Periods are used to represent the standard payroll cycle. Generally, there are 52 regular periods for Weekly, 26 regular periods for 2-Weekly, etc.</p>
+            <p>Regular Timesheets can be Computer, Manual, Adjusting, or <MadCap:variable name="Variables.cancel" style="text-transform: capitalize;" /><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" />. Manual <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> represent payments previously made to an employee. You cannot generate payslips or <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> transfers for Manual or&#160;<MadCap:variable name="Variables.cancelled" style="text-transform: capitalize;" /><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" />. When Calculations prepares timesheets for Tax Withholdings and Accruals, Manual and <MadCap:variable name="Variables.cancelled" style="text-transform: capitalize;" /><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> are always evaluated first. Computer and Adjusting <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> calculations are always based on the posted Year to Date amount plus Manual <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> when evaluating limits and additional amounts to withhold.</p>
+            <p>&#160;</p>
+            <p><strong><span style="color: #f37321;">Adjusting Periods</span></strong>
+            </p>
+            <p>Adjusting Periods are used to make corrections and adjustments to a previously posted payroll or to process an interim payroll -- one not related to any payroll cycle. You may reuse a prior period's information when creating an Adjusting Period in Period Maintenance.</p>
+            <p>This functionality allows you to run a 2nd or 3rd payroll using the same criteria as the original payroll run to enter missed time, layoffs, or other adjustments. Processing is the same as Regular periods. Regular and Adjusting Periods can be combined for reports such as Certified Payroll, Union Reports, or Tax Reports. There is no need to generate two separate reports and aggregate totals.</p>
+            <p>&#160;</p>
+            <p><strong><span style="color: #f37321;">Future Periods and Timesheets</span></strong>
+            </p>
+            <p>You have the option to use Future Periods when processing payroll. Future Periods allow for the entry of Computer, Adjusting, <MadCap:variable name="Variables.cancel" style="text-transform: capitalize;" />, and Manual <MadCap:variable name="Variables.cheques" /> into a period that is not ready for calculations.</p>
+            <p>A Future Period is assigned a Period End Date. When a Regular or Adjusting Period is started using that date, any timesheets in the Future Period are made current and available for processing. This is very useful for any user who may wish to process proactively, such as entering timesheets daily, making adjustments for Retroactive Pay to be processed at a later date, or entering Bonus Payments while not interrupting regular payroll processing.</p>
+            <p>You can open as many concurrent Future Periods as necessary. For example, let's assume we are currently processing for Regular Weekly Period 8, Week Ending 1/20/08. This payroll was calculated and <MadCap:variable name="Variables.cheques" /> were printed on 1/22/08. You can create a Future Period 900 with a <MadCap:variable name="Variables.pr effective date" style="text-transform: capitalize;" /> of 1/27/08 (see&#160;screen below) and enter the daily transactions for 1/21/08 and 1/22/08 while continuing to process Period Ending 1/20/08.</p>
+            <p align="center">
+                <img src="../../Resources/Images_P-R/PR/PR_012401.png" />
+            </p>
+            <p>The recommended procedure is to leave the Future Period open until you are ready to calculate it. This gives you the flexibility to process other Adjusting Payrolls while preparing the next Regular Period's transactions.&#160;</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /> <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">GL&#160;Reporter – </MadCap:conditionalText>Adding a Report</h1>
+        <p>In most cases it is recommended that you <a href="Copy Reports.htm">copy an existing report</a> and make any amendments required. Using this method means you can use a report that is similar to your requirements. However there are situations when you may want to start from the beginning.</p>
+        <div class="process">
+            <h2 class="print">To create a GL report:</h2>
+            <ol>
+                <li>
+                    <p>Go to <span class="function" title="Function:%WGL2970BSYR">Reporter Configuration</span>.</p>
+                    <p>The <span style="font-weight: bold;">Reporter Configuration</span> browse screen will be displayed showing all the reports that have been configured.</p>
+                    <p>
+                        <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2.png" class="FullWidth" />
+                    </p>
+                </li>
+                <li>
+                    <p>Click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/Add.flsnp" /> to configure a new report.</p>
+                </li>
+                <li>
+                    <p>Give the report a code and a title.&#160;</p>
+                    <p>
+                        <img src="../../../Resources/Images_G-I/GL/GL Reporter/Adding a Report_2.png" />
+                    </p>
+                    <p>These are used to identify the report, for example when choosing from a list which report to run.&#160; The code is the only part of the report that you cannot change directly once you have chosen it. If you need to rename a report you must copy it.&#160; The title will be printed on the report.</p>
+                </li>
+                <li>
+                    <p>Click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/Save.flsnp" />.</p>
+                </li>
+                <li>
+                    <p>On the Configuration tab, enter the settings that determine the overall appearance of the report, such as the page layout and font class to use.&#160;</p>
+                    <p>
+                        <img src="../../../Resources/Images_G-I/GL/GL Reporter/Configuration Tab.png" class="FullWidth" />
+                    </p>
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Click here for details of the fields</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <div class="FieldTable">
+                                <div class="ListHead">
+                                    <div class="ColHead">
+                                        <p>Field</p>
+                                    </div>
+                                    <div class="ColHead">
+                                        <p>Description</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Divide By</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>The number that the values on the report should be divided by.</p>
+                                        <p>For example, set this to 1000 or 1000000 if you want to report in thousands or millions. Set this to 2 if you want to report on a company you manage in COINS but only have a 50% share in. 1 is the default, meaning that values will show as they actually are.</p>
+                                        <p>Zero or blank means do not divide.</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Round</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>The precision to round the values on the report to. If zero or blank then no rounding is performed. Typically 1 or 1000.</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Page Layout</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>The pre-defined page layout to use for the report.</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Class</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>The pre-defined report class that defines the text formatting to use for the report.</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Highlight Style</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>The class variant to be used for the report font.</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Extra</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>Extra formatting to be applied to the report font.</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Column Ratio</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>The number of printing points to be used for each column of the report layout. If left blank then a standard ratio will be used.</p>
+                                        <p>Normally leave this value blank unless the standard ratio is not suitable. Using the standard ratio, one column is approximately the point size multiplied by 0.22mm (so at 10pt, one column would be about 2.2mm wide).</p>
+                                    </div>
+                                </div>
+                                <div class="FieldBlock">
+                                    <div class="FieldLabel">
+                                        <p>Page Length</p>
+                                    </div>
+                                    <div class="FieldDef">
+                                        <p>The number of lines of the body of the report that will fit on a page.</p>
+                                        <p>This allows the report output to be split on to pages correctly. The number of lines to use will depend on the page layout and the font class used.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </li>
+                <li>
+                    <p>Click <MadCap:snippetText src="../../../Resources/Snippets/TextAndButtons/Save.flsnp" />.</p>
+                </li>
+                <li>
+                    <p>Then set up the report rows and columns.&#160;</p>
+                    <ul>
+                        <li>
+                            <p>The rows control the structure of the report. There&#160;are different row types, such as Account row, Total row, Text row.&#160; Account rows (and <MadCap:variable name="Variables.jc contract" /> rows) specify the selection of <span class="module">General Ledger</span> accounts (or a selection of <MadCap:variable name="Variables.jc contracts" />) to report on.&#160; Other row types determine where other lines such as subtotals and text lines come. See <a href="../../WD/WDGL0011_Report_Rows.html">GL Reporter - Report Rows</a>.</p>
+                        </li>
+                        <li>
+                            <p>The columns control what information is shown on each line.&#160; You can select from a number of different data items, and specify which row types each one is shown on. See <a href="../../WD/WDGL0017_Columns.html">GL Reporter - Columns.</a></p>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div MadCap:conditions="COINS.Redacted">
+            <p class="Body">
+                <img src="../../../Resources/Images_G-I/GL/GL Reporter/Adding a Report.png" style="visibility: visible;mso-wrap-style: square;width: 446px;height: 182px;" />
+            </p>
+            <ol>
+                <li class="ListParagraph">
+                    <p>Select the <span style="font-weight: bold;">Add</span>button to configure a new report.</p>
+                    <p>The <span style="font-weight: bold;">Add Report</span> screen is displayed.</p>
+                    <p>
+                        <MadCap:annotation MadCap:comment="Old screenshot" MadCap:createDate="2018-07-20T10:20:39.788Z" MadCap:creator="don.barwick@coins-global.com" MadCap:creatorCentralUserId="b71d4522-cdd3-421f-8552-0134bb6ac8b8" MadCap:editDate="2018-07-20T10:20:46.587Z" MadCap:editor="don.barwick@coins-global.com" MadCap:guid="5d46e265-d48a-461c-9947-17cc119c874c" MadCap:initials="DB">
+                            <img src="../../../Resources/Images_G-I/GL/GL Reporter/Adding a Report_1.png" style="visibility: visible;mso-wrap-style: square;width: 309px;height: 121px;" />
+                        </MadCap:annotation>
+                    </p>
+                    <p>The screen has two sections, the header, containing the report code and title and the lower half has the initial configuration information with details about the page layout, length etc.</p>
+                </li>
+                <li class="ListParagraph">
+                    <p>Enter an abbreviated name of the report in the <span style="font-weight: bold;">Report</span> field.</p>
+                    <p>
+                        <img src="../../../Resources/Images_G-I/GL/GL Reporter/Adding a Report_2.png" style="visibility: visible;mso-wrap-style: square;width: 383px;height: 66px;" />
+                    </p>
+                    <p>Try and keep the code meaningful to the type of report you are creating. Use capital letters, no spaces and avoid the &amp; character, as it is a Code. In our example we have entered PL_DETAIL = profit and Loss detailed Report. The report code must be a unique report name and can be up to 8 characters. This report code cannot be changed once this report is saved. If you need to rename this report will need to make a copy of the report.</p>
+                </li>
+                <li class="ListParagraph">
+                    <p>Enter the full name of the report in the <span style="font-weight: bold;">Title</span> field. You should be able to tell what the report is about if you look at the Title and Description. Do not use symbols, for example <span style="font-weight: bold;">&amp;</span>, always use <span style="font-weight: bold;">and</span>.</p>
+                    <p class="ListParagraph">It is recommended that the name given is meaningful to the report and bears some relation to the report code e.g. Profit and Loss Detailed Report = PL_DETAIL. The details of the layout for the report can be entered in the <span style="font-weight: bold;">Configuration Tab</span>.</p>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>

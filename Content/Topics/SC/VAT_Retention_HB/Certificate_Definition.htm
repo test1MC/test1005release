@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Changes to Standard Certificate Definition</h1>
+        <p>The <span class="field">CITB Deduction</span> field on the Main tab has been re<MadCap:variable name="Variables.labelled" /> <span class="field">Contractual Training Contribution</span>.</p>
+        <p>The Body Update on the Detail tab has been redesigned, and several new fields have been added.</p>
+        <p class="caption">Standard Certificate Definition – Line Update</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/VAT_on_Retention/Std_Cert_Body_Update.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Update if Invoicing</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a <MadCap:variable name="Variables.tick" />box. If <MadCap:variable name="Variables.tick" />ed, the line can only be updated if the billing
+ type is I (Invoicing) (overriding the setting of the <span class="field">Update</span> field).  This is so that where the
+ subcontractor has submitted an invoice, the user can adjust the <MadCap:variable name="Variables.vat" /> to agree
+ to the invoice while preventing override of <MadCap:variable name="Variables.vat" /> calculations where a
+ Self-Billing Invoice or Authenticated Receipt is being produced from the
+ certificate.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Calculate Only if Paid Net of CIS Tax</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a <MadCap:variable name="Variables.tick" />box. This allows training recovery or similar deductions to
+ only be applied where tax is deductible.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Display Only if Paid Net of CIS Tax</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a <MadCap:variable name="Variables.tick" />box. This allows training recovery, materials or similar
+ lines to only be displayed where tax is deductible.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>
+                        <MadCap:annotation MadCap:createDate="2018-05-22T15:31:44.6801658+01:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="Q: I'm not sure how the Account Type works or what it's for. Where do you set up the second cost, and why?" MadCap:editor="Don Barwick" MadCap:editDate="2018-05-22T15:32:33.8970486+01:00">Account Type</MadCap:annotation>
+                    </p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a drop-down selector with the options <span class="userselect">GL Account</span> and <span class="userselect">Use 2nd Cost</span>. If this is set to GL&#160;Account, it will use the account specified in the <span class="field">Account</span> field. If this is set to Use 2nd Cost, it will use 2nd Cost if set up on the subcontract and
+valid, otherwise it will use the account specified in the <span class="field">Account</span> field.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Negative This Period Error</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a drop-down selector with the options <span class="userselect">No Message</span>, <span class="userselect">Warning</span> and <span class="userselect">Error</span>.</p>
+                    <p>Set this to <span class="userselect">Warning</span> on items which would not normally be
+ negative this payment (such as tax).  This
+ will avoid the need to have another line with a calculation to reverse the
+ value and check that it does not exceed 0.01.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Negative Cumulative Error</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a drop-down selector with the options <span class="userselect">No Message</span>, <span class="userselect">Warning</span> and <span class="userselect">Error</span>.</p>
+                    <p>Set this to <span class="userselect">Error</span> on items which should never be negative
+ cumulative (such as tax).  This will
+ avoid the need to have another line with a calculation to reverse the value
+ and check that it does not exceed 0.01.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p><MadCap:variable name="Variables.Vat caps" /> Pro-Rate  Analysis</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a drop-down selector with the options <span class="userselect">blank</span>, <span class="userselect">TP (This Period)</span> and <span class="userselect">CUM (Cumulative)</span>. This is only displayed if the Certificate Definition is included in the parameter
+ <span class="parameter">VP/VAL-CERT.</span></p>
+                    <p>This allows lines which are
+ included in the <MadCap:variable name="Variables.vat" />able amount calculation to use the <MadCap:variable name="Variables.vat" /> distribution  pro-rated from the <MadCap:variable name="Variables.vat" /> distribution
+ on preceding certificate lines (mainly from VAP).  This would be used on a Cumulative basis
+ for retentions or on a This Payment basis for discounts and training levy
+ deductions or similar.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Non-Recoverable  Analysis</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The costing analysis for <MadCap:variable name="Variables.vat" /> proration. This is only available on a <MadCap:variable name="Variables.vat" /> line and is only displayed if <span class="field">Pro-Rate <MadCap:variable name="Variables.Vat caps" /> Analysis</span> is set to This Payment or
+ Cumulative. </p>
+                    <p>This consists of a selector for the type of analysis (C – <MadCap:variable name="Variables.Jc Contract caps" /> or G – GL Account, and an input field for the analysis code.</p>
+                    <p>This allows the costing of the negative non-recoverable
+ <MadCap:variable name="Variables.vat" /> on retentions taken to a fixed code.  This will then be offset by the positive non-recoverable <MadCap:variable name="Variables.vat" /> when the
+ retention is released.  </p>
+                    <p>Similarly the costing of the negative non-recoverable <MadCap:variable name="Variables.vat" />
+ on discounts, training contributions, etc. will be to a fixed code.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Default <MadCap:variable name="Variables.Vat caps" /> Code if <MadCap:variable name="Variables.Vat caps" /> Registered</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.Vat caps" /> code to which any amounts not attributed to a <MadCap:variable name="Variables.vat" /> code are added if the subcontractor is registered for <MadCap:variable name="Variables.vat" />.</p>
+                    <p>This allows automated <MadCap:variable name="Variables.vat" /> distribution for lines which are
+ included in the <MadCap:variable name="Variables.vat" />able amount calculation.  This would also be a fail-safe for <MadCap:variable name="Variables.Vat caps" /> Apportionment
+ calculations.  This must be an input
+ <MadCap:variable name="Variables.vat" /> code and cannot be non-recoverable.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Default <MadCap:variable name="Variables.Vat caps" /> Code if Not <MadCap:variable name="Variables.Vat caps" /> Registered</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.Vat caps" /> code to which any amounts not attributed to a <MadCap:variable name="Variables.vat" /> code are added if the subcontractor is not registered for <MadCap:variable name="Variables.vat" />.</p>
+                    <p>This allows automated <MadCap:variable name="Variables.vat" /> distribution for lines which are
+ included in the <MadCap:variable name="Variables.vat" />able amount calculation.  This would also be a fail-safe for <MadCap:variable name="Variables.Vat caps" /> Apportionment calculations.
+ This must be an input <MadCap:variable name="Variables.vat" /> code and must have a rate of 0%.  </p>
+                    <p>This must be populated if <span class="field">Default <MadCap:variable name="Variables.Vat caps" />
+ Code if <MadCap:variable name="Variables.Vat caps" /> Registered</span> is populated; either both fields or  neither must be populated.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Standard Certificate Definition Check</h2>
+        <p>A <MadCap:annotation MadCap:createDate="2018-05-22T15:34:18.9977568+01:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="Q: Does the Standard Certificate Definition Check help identify problems relating to VAT on retention?" MadCap:editor="Don Barwick" MadCap:editDate="2018-05-22T15:35:27.9521188+01:00">new action</MadCap:annotation> – <span class="function">Standard Certificate Definition Check</span> – on the <span class="function">Standard Certificate Definition</span> browse checks that the selected certificate definitions have been updated consistently within themselves and with other relevant <MadCap:variable name="General.ProductName" /> configurations. This produces a report that lists any exceptions to <MadCap:annotation MadCap:createDate="2018-05-22T15:33:16.5421490+01:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="Q: Does the documentation need to state what the rules are?" MadCap:editor="Don Barwick" MadCap:editDate="2018-05-22T15:33:44.0920648+01:00">pre-defined rules</MadCap:annotation>. There may be good reasons for some of these exceptions; equally, even if no exceptions are reported, this does not guarantee that the certificate definition will work correctly.</p>
+        <h2>Update of Standard Certificate Definition</h2>
+        <p>If a standard certificate definition is already in use – that is, if certificates already exist for that definition – update of the definition is prevented unless the day password has been set. This is to prevent support issues caused by changes to definitions that are in use.</p>
+        <p class="Caption">Error Displayed When Attempting to Update a Definition that is in Use</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/VAT_on_Retention/Std_Cert_Update_Error.png" />
+        </p>
+    </body>
+</html>

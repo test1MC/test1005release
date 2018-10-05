@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>EC/CHKWELLF - LOAD checks for well-formed XML</title>
+    </head>
+    <body>
+        <div class="param_id">
+            <MadCap:concept term="Parameters" /><span class="parameter">EC/CHKWELLF</span> LOAD checks for well-formed XML
+</div>
+        <div class="param_def">
+            <p>Whether <MadCap:variable name="General.ProductName" /> checks that incoming messages use well-formed XML (<SPAN class="userinput">Y</SPAN> or <SPAN class="userinput">N</SPAN>).</p>
+            <p>
+                <P class="yesnolist">
+                    <SPAN class="userinput">Y</SPAN> = If a document fails the check for well-formed XML, <MadCap:variable name="General.ProductName" /> moves it to the $ECDIR/REJECT directory.  The System Administrator should monitor this directory.</P>
+                <P class="yesnolist">
+                    <SPAN class="userinput">N</SPAN> = The check is bypassed, which may save a few milliseconds per transaction.  Only set this to <SPAN class="userinput">N </SPAN>if you are confident that you will only receive well-formed XML messages.</P>
+            </p>
+        </div>
+    </body>
+</html>

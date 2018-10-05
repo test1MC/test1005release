@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Other Timesheet Processing</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Other Timesheet Processing</h1>
+        <p class="Body">All processes relating to Timesheet Entry <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>support TS Input Groups. The relevant functions are listed below. To learn more about how TS Input Groups are supported for a particular function, click the link next to that function. <strong>Note:</strong> Information in this section only applies if TS Input Groups are in use for the company.</p>
+        <ul>
+            <li>Convert Future Timesheets</li>
+            <li>Convert From Recurring Timesheets</li>
+            <li>Transfer Employee Self Service TS</li>
+            <li>Transfer FM Worksheets</li>
+            <li>Transfer SE Visit Details</li>
+            <li>Transfer Daily Reports</li>
+            <li>Load Timesheets</li>
+            <li>Load Timecard Overrides</li>
+            <li>Void <MadCap:variable name="Variables.Cheques caps" /></li>
+            <li>Move Employee Timesheets</li>
+            <li>Weekly Process Automatic Regular Hour Overtime</li>
+            <li>Weekly Process Blended Overtime Rates</li>
+            <li>Weekly Process Days Worked</li>
+            <li>Convert to Manual <MadCap:variable name="Variables.Cheques caps" /></li>
+        </ul>
+        <h2 MadCap:autonum="1.1 "><a name="Convert"></a>Convert Future Timesheets</h2>
+        <p class="Body">The <span class="Function">Convert Future Timesheets </span>function in <i>Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#ConvertFutureTS" class="ImageRef"><i>Figure 1:  Convert Future Timesheets Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <ul>
+            <li>A <span class="Field">Convert to Group</span> field determines the target Timesheet Input Group for processing. The converted <MadCap:variable name="Variables.cheques" /> are under this target group.</li>
+            <li>A Timesheet Input Groups ordered list determines which groups should be converted. It includes all of your own and subordinate frozen and unfrozen groups for the selected Future period and the blank group.<ul><li>The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li>Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li>If the group exists, it should be an unfrozen group associated with the current unposted Regular/Adjusting period for the PR Frequency; otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li>This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field: </i>If the target Timesheet Input Group for Convert Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="ConvertFutureTS"></a>Convert Future Timesheets Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_ConvertFutureTS.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 "><a name="Convert2"></a>Convert From Recurring Timesheets</h2>
+        <p class="Body">The <span class="Function">Convert From Recurring Timesheets </span>function in<i> Payroll &gt; Frequency &gt; Input </i>(<MadCap:xref href="#ConvertRecurTS" class="ImageRef"><i>Figure 2:  Convert From Recurring Timesheets Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <ul>
+            <li>A <span class="Field">Convert to Group </span>field determines the target Timesheet Input Group for processing. The converted <MadCap:variable name="Variables.cheques" /> are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the current unposted Regular/Adjusting period for the PR Frequency; otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field: </i> If the target Timesheet Input Group for Convert Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="ConvertRecurTS"></a>Convert From Recurring Timesheets Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_ConvertRecurTS.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.3 "><a name="Transfer"></a>Transfer Employee Self Service TS</h2>
+        <p class="Body">The <span class="Function">Transfer Employee Self Service TS </span>function in <i>Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#TransEmpSSTS" class="ImageRef"><i>Figure 3:  Transfer Employee Self Service TS Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">Both of the fields described below are for Transfer Mode only.</div>
+        <ul>
+            <li>A <span class="Field">Transfer to Group </span>field determines the target Timesheet Input Group for processing. The transferred <MadCap:variable name="Variables.cheques" /> are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the entered unposted period (Regular/Adjusting or Future) for the PR Frequency; otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field:</i> If the target Timesheet Input Group for Transfer Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 3: "><a name="TransEmpSSTS"></a>Transfer Employee Self Service TS Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TransEmpSSTS.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.4 "><a name="Transfer2"></a>Transfer FM Worksheets</h2>
+        <p class="Body">The <span class="Function">Transfer FM Worksheets </span>function in <i>Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#TransFMWorksheets" class="ImageRef"><i>Figure 4:   Transfer FM Worksheets Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <ul>
+            <li>A <span class="Field">Transfer to Group </span>field determines the target Timesheet Input Group for processing. The transferred <MadCap:variable name="Variables.cheques" /> are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the current unposted Regular/Adjusting period for the PR Frequency; otherwise, it should not be associated with any periods. This should be also be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field:</i> If the target Timesheet Input Group for Transfer Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 4: "><a name="TransFMWorksheets"></a>Transfer FM Worksheets Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TransFMWorksheets.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.5 "><a name="Transfer3"></a>Transfer SE Visit Details</h2>
+        <p class="Body">The <span class="Function">Transfer SE Visit Details </span>function in <i>Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#TransferSEVisitDet" class="ImageRef"><i>Figure 5:  Transfer SE Visit Details Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">Both of the fields described below are for Transfer Mode only.</div>
+        <ul>
+            <li>A <span class="Field">Transfer to Group </span>field determines the target Timesheet Input Group for processing. The transferred <MadCap:variable name="Variables.cheques" /> are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the entered unposted period (Regular/Adjusting or Future) for the PR Frequency; otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field:</i> If the target Timesheet Input Group for Transfer Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 5: "><a name="TransferSEVisitDet"></a>Transfer SE Visit Details Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TransferSEVisitDet.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.6 "><a name="Transfer4"></a>Transfer Daily Reports</h2>
+        <p>The <span class="Function">Transfer Daily Reports </span>function in<i> Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#TransDailyRpts." class="ImageRef"><i>Figure 6:  Transfer Daily Reports Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">Both of the fields described below are for Transfer Mode only.</div>
+        <ul>
+            <li>A <span class="Field">Transfer to Group </span>field determines the target Timesheet Input Group for processing. The transferred <MadCap:variable name="Variables.cheques" /> are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the entered unposted period (Regular/Adjusting or Future) for the PR Frequency; otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description</span> field:</i> If the target Timesheet Input Group for Transfer Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 6: "><a name="TransDailyRpts."></a>Transfer Daily Reports Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TransDailyRpts.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.7 "><a name="Load"></a>Load Timesheets</h2>
+        <p class="Body">The <span class="Function">Load Timesheets </span>function in <i>Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#LoadTS" class="ImageRef"><i>Figure 7:  Load Timesheets Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">Both of the fields described below are available only for Load Mode and Regular, Adjusting, and Future periods.</div>
+        <p class="Body">When the time cards are loaded into the selected Timesheet Input Group, it may cause the <MadCap:variable name="Variables.cheque" /> to be in multiple groups.</p>
+        <ul>
+            <li>The <span class="Field">Period Type </span>field works as follows:<ul><li class="li">If there is a current unposted Regular or Adjusted period, the Period Type (Regular or Adjusting) is used; otherwise, this item is not found. The period is set up in the current period number; it cannot be updated.</li><li class="li">If there are future non-MCC periods, the Future Period Type is available. For this item, the period is set up in the first found future non-MCC period number. It can be updated.</li><li class="li">The Recurring Period Type is always available. The period is set up in 999; it cannot be updated.</li></ul></li>
+            <li>A <span class="Field">Load to Group </span>field determines the target Timesheet Input Group for processing. The loaded timesheets are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the entered unposted period (Regular/Adjusting or Future) for the PR Frequency; otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field:</i> If the target Timesheet Input Group for Load Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 7: "><a name="LoadTS"></a>Load Timesheets Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_LoadTS.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.8 "><a name="Load2"></a>Load Timecard Overrides</h2>
+        <p class="Body">The <span class="Function">Load Timecard Overrides </span>function in <i>Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#LoadTCOverrides" class="ImageRef"><i>Figure 8:  Load Timecard Overrides Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">Both of the fields described below are available only for Transfer Mode and Regular, Adjusting, and Future periods.</div>
+        <ul>
+            <li>The <span class="Field">Period Type </span>field works as follows:<ul><li class="li">If there is a current unposted Regular or Adjusted period, the Period Type (Regular or Adjusting) is used; otherwise, this item is not found. The period is set up in the current period number; it cannot be updated.</li><li class="li">If there are future non-MCC periods, the Future Period Type is available. For this item, the period is set up in the first found future non-MCC period number. It can be updated.</li><li class="li">The Recurring Period Type is always available. The period is set up in 999; it cannot be updated.</li></ul></li>
+            <li>A <span class="Field">Load to Group </span>field determines the target Timesheet Input Group for processing. The loaded timesheets are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li></ul><ul><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the entered unposted period (Regular/Adjusting or Future) for the PR Frequency. Otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field:</i> If the target Timesheet Input Group for Load Overrides is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 8: "><a name="LoadTCOverrides"></a>Load Timecard Overrides Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_LoadTCOverrides.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.9 "><a name="Void"></a><MadCap:variable name="Variables.Cancel caps" /> <MadCap:variable name="Variables.Cheques caps" /></h2>
+        <p class="Body">The <span class="Function"><MadCap:variable name="Variables.Cancel caps" /> <MadCap:variable name="Variables.Cheques caps" /> </span>function in<i> Payroll &gt; Frequency &gt; Input</i> (<MadCap:xref href="#VoidChecks" class="ImageRef"><i>Figure 9:  [%=Variables.Cancel caps%] [%=Variables.Cheques caps%] Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <ul>
+            <li>A <span class="Field">Timesheet Input Group</span> field determines the target Timesheet Input Group for processing. The created <MadCap:variable name="Variables.cancel" /> <MadCap:variable name="Variables.cheque" /> is under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the entered unposted <MadCap:variable name="Variables.Cancel caps" /> period (Regular/Adjusting or Future) for the PR Frequency. Otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field:</i> If the target Timesheet Input Group for the <MadCap:variable name="Variables.Cancel caps" /> <MadCap:variable name="Variables.Cheque caps" /> is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 9: "><a name="VoidChecks"></a><MadCap:variable name="Variables.Cancel caps" /> <MadCap:variable name="Variables.Cheques caps" /> Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_VoidChecks.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.10 "><a name="Move"></a>Move Employee Timesheets</h2>
+        <p class="Body">The <span class="Function">Move Employee Timesheets </span>function in <i>Payroll &gt; Frequency &gt; Input </i>(<MadCap:xref href="#MoveEmpTS" class="ImageRef"><i>Figure 10:  Move Employee Timesheets Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <ul>
+            <li>The Timesheet Input Groups ordered list determines which groups should be moved. It includes all of your own and subordinate groups for the current unposted Regular/Adjusting period and the blank group.</li>
+            <li>A <span class="Field">Move to Group </span>field determines the target Timesheet Input Group for processing. The converted <MadCap:variable name="Variables.cheques" /> are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file. If it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li></ul><ul><li class="li">If the group exists, it should be an unfrozen group associated with the current unposted Regular/Adjusting period for the PR Frequency. Otherwise, it should not be associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <span class="Field">Group Description </span>field:</i> If the target Timesheet Input Group for Move Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 10: "><a name="MoveEmpTS"></a>Move Employee Timesheets Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_MoveEmpTS.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.11 "><a name="Weekly"></a>	Weekly Process Automatic Regular Hour Overtime</h2>
+        <p class="Body">The <span class="Function">Weekly Process Automatic Regular Hour Overtime </span>function in <i>Payroll &gt; Weekly &gt; Processing</i> (<MadCap:xref href="#WeekAutoRegHrOT" class="ImageRef"><i>Figure 11:  Weekly Process Automatic Regular Hour Overtime Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below. This process runs timesheets under selected groups only, and any processed timesheets remain in the same groups.</p>
+        <ul>
+            <li>The Timesheet Input Groups ordered list determines which groups should be processed. It includes all of your own and subordinate unfrozen groups for the current unposted Regular/Adjusting period.</li>
+            <li>An employee in multiple Timesheet Input Groups cannot be processed. An error message appears when this occurs.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 11: "><a name="WeekAutoRegHrOT"></a>Weekly Process Automatic Regular Hour Overtime Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_WeekAutoRegHrOT.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.12 "><a name="Weekly2"></a>Weekly Process Blended Overtime Rates</h2>
+        <p class="Body">The <span class="Function">Weekly Process Blended Overtime Rates </span>function in <i>Payroll &gt; Weekly &gt; Processing</i> (<MadCap:xref href="#WeekBlendOTRates" class="ImageRef"><i>Figure 12:  Weekly Process Blended Overtime Rates Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below. This process runs timesheets under selected groups only, and any processed timesheets remain in the same groups.</p>
+        <ul>
+            <li>The Timesheet Input Groups ordered list determines which groups should be processed. It includes all of your own and subordinate unfrozen groups for the current unposted Regular/Adjusting period.</li>
+            <li>An employee in multiple Timesheet Input Groups cannot be processed. An error message appears when this occurs.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 12: "><a name="WeekBlendOTRates"></a>Weekly Process Blended Overtime Rates Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_WeekBlendOTRates.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.13 "><a name="Weekly3"></a>Weekly Process Days Worked</h2>
+        <p class="Body">The <span class="Function">Weekly Process Days Worked </span>function in <i>Payroll &gt; Weekly &gt; Processing</i> (<MadCap:xref href="#WeekDaysWorked" class="ImageRef"><i>Figure 13:  Weekly Process Days Worked Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below. This process runs timesheets under selected groups only, and any processed timesheets remain in the same groups.</p>
+        <ul>
+            <li>The Timesheet Input Groups ordered list determines which groups should be processed. It includes all of your own and subordinate unfrozen groups for the current unposted Regular/Adjusting period.</li>
+            <li>An employee in multiple Timesheet Input Groups cannot be processed. An error message appears when this occurs.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 13: "><a name="WeekDaysWorked"></a>Weekly Process Days Worked Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_WeekDaysWorked.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.14 "><a name="Convert3"></a>Convert to Manual <MadCap:variable name="Variables.Cheques caps" /></h2>
+        <p class="Body">The <span class="Function">Convert to Manual <MadCap:variable name="Variables.Cheques caps" /> </span>function in <i>Payroll &gt; Frequency &gt; Processing</i> (<MadCap:xref href="#ConvertToManCks" class="ImageRef"><i>Figure 14:  Convert to Manual [%=Variables.Cheques caps%] Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below. This process runs timesheets under selected groups only, and any processed timesheets remain in the same groups.</p>
+        <ul>
+            <li>The Timesheet Input Groups ordered list determines which groups should be processed. It includes all of your own and subordinate unfrozen groups for the current unposted Regular/Adjusting period.</li>
+            <li>An employee in multiple Timesheet Input Groups cannot be processed. An error message appears when this occurs.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 14: "><a name="ConvertToManCks"></a>Convert to Manual <MadCap:variable name="Variables.Cheques caps" /> Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_ConvertToManCks.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

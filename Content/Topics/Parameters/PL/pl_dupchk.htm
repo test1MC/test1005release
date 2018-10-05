@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>PL/DUPCHK - PCard Duplicate Check Directives (pipe list)</title>
+    </head>
+    <body>
+        <div class="param_id">
+            <MadCap:concept term="Parameters" /><span class="parameter">PL/DUPCHK - </span> PCard Duplicate Check Directives (pipe list)
+</div>
+        <div class="param_def">
+            <p>
+                <p>When PCard transaction is received, which of the optional checks do you want <MadCap:variable name="General.ProductName" /> to use to determine whether this transaction is a potential duplicate?</p>
+            </p>
+            <p>
+                <p><MadCap:variable name="General.ProductName" /> can use the following checks to determine whether some PCard transactions are identical:</p>
+                <ol>
+                    <li>Card Number</li>
+                    <li>Transaction Date</li>
+                    <li>Merchant</li>
+                    <li><MadCap:variable name="Variables.pl supplier" style="text-transform:capitalize;" />'s reference</li>
+                    <li>Buyer's reference</li>
+                    <li>Transaction Value</li>
+                </ol>
+                <p><MadCap:variable name="General.ProductName" /> will always check the Card Number, but 2 - 6 are optional. This parameter takes a pipe-separated list indicating which of these checks to include or omit. For example: TRANDATE<span class="screentype" style="word-spacing: -6pt;">=Y|MERCHANT=Y|SUPREF=Y|BUYERREF=N|TRANVAL=Y</span></p>
+                <p>If the parameter is blank or any of the tokens (TRANDATE, MERCHANT, SUPREF, BUYERREF, TRANVAL) are not present, then no duplicate check is carried out.</p>
+            </p>
+            <p>
+                <MadCap:relatedTopics target="_self" style="mc-label: 'Related Parameters';mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="pl_chkduppc.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="700" MadCap:lastWidth="1036">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />INLIST</h1>
+        <p>An IF statements can perform comparisons on numerical values only, therefore when the Testing field is a character it is necessary to turn the value into a number so that a comparison can be made. The INLIST function can be used to perform as such on character values. INLIST must be used is making an exact match and should be used in the format :</p>
+        <p>INLIST("field1","Test1,Test2") </p>
+        <p>It will return 1 for a true result and 0 for a false result.</p>
+        <p>Therefore </p>
+        <p>INLIST("a","a,b,c")would return 1</p>
+        <p>INLIST("a","b,c")would return 0</p>
+        <p>&#160;</p>
+        <p style="font-weight: bold;">Using INLIST to assign text values to a column </p>
+        <p>The following example checks the database field on a Purchase Order Header which is a logical field and instead of returning a TRUE or FALSE value will return either E-Commerce or Standard</p>
+        <p>$IF$(INLIST(po_hdr.poh_xmtd,"yes"),EQ,1,"E-Commerce","Standard");</p>
+        <p>In the next example (Where po_hdr.poh_mpo is the type of the Purchase Order&#160; -for example, M - Material, P - Plant, O - Overhead, I - Stock, W - Workshop, A - Asset, S – Subcontract), the type of PO is checked against a list of possibilities and the test Material or Trade is output<br></br></p>
+        <p>$IF$(INLIST(po_hdr.poh_mpo,"M,P,O,I,W,A"),EQ,1,"Material","Trade");</p>
+        <p>The inlist statement becomes equivalent to the 'a' variable in the Test sections of the 'if statement' (See Reference earlier in documentation)as this will result in value of either 1 or zero it can now be tested within the numeric test.&#160; The $ signs are around the $IF$ purely because the results of the 'if statement' are characters.</p>
+    </body>
+</html>

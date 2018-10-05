@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CB/VATIOMSG - VAT input/output message is warning (module list)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CB/VATIOMSG - </span> VAT input/output message is warning (module list)
+</div>
+<div class="param_def">
+<p>This allows you to enter transactions with $P$AT|VAT$P$ code types (that is, <MadCap:variable name="Variables.vat input"/> or <MadCap:variable name="Variables.vat output"/>) that are non-standard. </p>
+<p>Normally if you enter a $P$AT|VAT$P$ code of the wrong type, COINS displays an error message. Enter a can-do list that includes <span class="userinput">O</span> and/or <span class="userinput">I</span> to switch the message to a warning for <MadCap:variable name="Variables.vat output"/> or <MadCap:variable name="Variables.vat input"/>, or include the module to change to a warning for that module.  For example: <span class="userinput">I,SL</span> means you can enter <MadCap:variable name="Variables.vat input"/> codes in <span class="module"><MadCap:variable name="Variables.Sales Ledger caps"/></span>; <span class="userinput">I,O,SL,PL</span> means you can enter both <MadCap:variable name="Variables.vat input"/> and <MadCap:variable name="Variables.vat output"/> codes in both <span class="module"><MadCap:variable name="Variables.Sales Ledger caps"/></span> and <span class="module"><MadCap:variable name="Variables.Purchase Ledger caps"/></span>. </p>
+<p>This is intended to deal with occasional situations where you need to post to a non-standard $P$AT|VAT$P$ code, for example a <MadCap:variable name="Variables.vat input"/> code in <span class="module"><MadCap:variable name="Variables.Sales Ledger caps"/></span>. You would only change this temporarily while you post a non-standard $P$AT|VAT$P$ code - afterwards you would change it back.</p>
+</div>
+</body>
+</html>

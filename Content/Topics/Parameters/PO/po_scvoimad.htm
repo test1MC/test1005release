@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/SCVOIMAD - When importing SC VOs: Always create new lines</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/SCVOIMAD - </span> When importing SC VOs: Always create new lines
+</div>
+<div class="param_def">
+<p>When importing a <MadCap:variable name="Variables.po variation"/> to an SOR order, whether to add the imported lines to the existing order.</p>
+<p><span class="userinput">Y</span> = Imported <MadCap:variable name="Variables.po variation"/> lines are added to the bottom of the order.</p>
+<p class="yesnolist"><span class="userinput">N</span> = The line values of lines on the original order are updated from the corresponding imported lines.  This assumes that either:</p>
+<ul>
+<ul>
+<li>The imported line is marked with a "pseudo-product code" (pol_artcode) in column I of the import file which uniquely matches pol_artcode on the original line.  (For pol_artcode to be populated, the original order must have been imported or must come via eCommerce.)</li>
+<li>The imported line contains the line number of the original line in column M of the import file.</li>
+</ul>
+</ul>
+</div>
+</body>
+</html>

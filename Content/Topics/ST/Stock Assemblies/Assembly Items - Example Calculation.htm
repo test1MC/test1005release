@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="764" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />Assembly Items - Example Calculation</h1>
+        <p class="Body">The example below shows a calculation for a guardrail.</p>
+        <p class="Body"><code>1 FootRun = Quantity;</code>
+            <br /><code>2 POSTS = Round(FootRun / 6.25,0) + 1;</code>
+            <br /><code>3 WB25 = TRUNCATE(FootRun / 25,0);</code>
+            <br /><code>4 FootRun = FootRun - 25 * WB25;</code>
+            <br /><code>5 WB12 = TRUNCATE(FootRun / 12.5,0);</code>
+            <br /><code>6 FootRun = FootRun - 12.5 * WB12;</code>
+            <br /><code>7 WB6 = TRUNCATE(FootRun / 6.25,0);</code>
+            <br /><code>8 WB = WB25 + WB12 + WB6;</code>
+            <br /><code>9 NUTS = 8 * WB + POSTS;</code>
+        </p>
+        <p class="Body">The variable Quantity holds the amount entered on the transaction; in this case, the length of guardrail required, in feet . </p>
+        <p class="Body">Line 1 stores the quantity in a new variable, FootRun.</p>
+        <p class="Body">Line 2 calculates the number of posts required (with posts at 6¼ foot intervals) and stores it in a new variable:&#160;POSTS.</p>
+        <p class="Body">Lines 3-7 calculate the number of 25 foot, 12½ foot and 6¼ foot rails required (using the longest lengths) and store them in new variables WB25, WB12 and WB6. After calculating the number of each length of rail, the total length required (in the variable FootRun) is reduced (lines 4 and 6).</p>
+        <p class="Body">Line 8 stores the total number of rails in a new variable WB.</p>
+        <p class="Body">Line 9 calculates the number of nuts required (8 per rail plus one per post) and stores this in a new variable NUTS.</p>
+        <p class="Body">The variables POSTS, WB25, WB12, WB6 and NUTS can then be used on the Component Browse to determine the quantity of each item. Note that the same variable can be used to provide the quantity for more than one item, and an additional multiplier can be applied using the <span class="Field">Fixed</span> field: as in the case of item GR4160 in the example below.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Assembly Item Component Browse</p>
+        <p class="screenshot">
+            <img src="../../../Images/Stock Assemblies/Stock Assembly Compontent Browse.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

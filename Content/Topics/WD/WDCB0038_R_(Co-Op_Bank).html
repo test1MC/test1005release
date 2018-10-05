@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="476" MadCap:lastWidth="528">
+  <head>
+    <title>Format R (Co-Op Bank)</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Format R (Co-Op Bank)</h1>
+    <p>
+      <span style="PADDING-BOTTOM: 3px;BACKGROUND-COLOR: #038ebf;PADDING-LEFT: 3px;PADDING-RIGHT: 3px;FLOAT: right;COLOR: white;PADDING-TOP: 3px;">
+        <img src="../../Resources/Images/coop_logo_top.gif" />
+      </span>The first 4 lines are header lines which the load program ignores. The remaining lines each contain a single character string with data in fixed positions. </p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Characters  </th>
+          <th>Field</th>
+        </tr>
+        <tr>
+          <td>1-6 </td>
+          <td>
+            <MadCap:variable name="Variables.sort code" style="text-transform: capitalize;" />
+          </td>
+        </tr>
+        <tr>
+          <td>7-14 </td>
+          <td>Account number</td>
+        </tr>
+        <tr>
+          <td>16-17 </td>
+          <td>Transaction type</td>
+        </tr>
+        <tr>
+          <td>36-46 </td>
+          <td>Amount</td>
+        </tr>
+        <tr>
+          <td>65-82 </td>
+          <td>Description<br />If transaction type = 11 this contains the <MadCap:variable name="Variables.cheque" /> number</td>
+        </tr>
+        <tr>
+          <td>101-106 </td>
+          <td>Transaction date (YYMMDD)</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

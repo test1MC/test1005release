@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="569" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" /><a name="top"></a>Active Directory Replication Account</h1>
+        <p class="Body">A replication user account is required to do the actual replication. The OA&#160;Outlook Integration Application connects to Exchange using the replication user account, and impersonates (see <MadCap:xref href="Impersonation.htm">1, Impersonation</MadCap:xref>) the actual user to retrieve email messages.</p>
+        <p class="Body"> Create a domain user account in Active Directory. Pick a meaningful name, for example, "coins_exchange".</p>
+        <p class="Body">Account settings:</p>
+        <ul>
+            <li>User must change password at next login - un<MadCap:variable name="Variables.tick" />ed</li>
+            <li>Password never expires - <MadCap:variable name="Variables.tick" />ed</li>
+        </ul>
+        <p class="Body">The password is used on the task schedule (see <MadCap:xref href="Scheduling.htm#_Ref290884126">1, Scheduling</MadCap:xref>). “Never expires” is the preferred setting, otherwise the replication will stop working at some stage with little indication of why (there will be nothing in the replication log file as the process will not run). If your policy requires you to allow the password to expire, you will need to ensure that you change the password on the task schedule before it expires.</p>
+        <p class="Body">To help with setup and debugging, the account should be a member of Remote Desktop Users. If you want to run the replication immediately rather than through a schedule, this allows you to log in as the <MadCap:variable name="General.ProductName" />_Exchange account and run it with no login credentials specified.</p>
+        <p class="Body">Make sure the <b>Logon as batch job</b> policy is set for the user. This policy is accessible by opening the <b>Control Panel</b>, <b>Administrative Tools</b>, and then <b>Local Security Policy</b>. In the <b>Local Security Policy</b> window, click <b>Local Policy</b> , <b>User Rights Assignment</b>, and then <b>Logon as batch job</b>.</p>
+    </body>
+</html>

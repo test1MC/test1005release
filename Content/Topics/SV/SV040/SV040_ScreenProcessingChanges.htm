@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Configuration and Changes</title>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="1.1 ">Configuration</h2>
+        <p class="Body">The SV Parameter <span class="parameter">PROPDET </span><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been added to </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">is found in</MadCap:conditionalText> the <MadCap:variable name="Variables.Commercial Manager caps" /> module.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 101px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 519px;" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">PROPDET</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Unique Proposal Number on <MadCap:variable name="Variables.Sv Variations caps" /> either by <MadCap:variable name="Variables.Jc Contract caps" /> or by Series.</p>
+                        <p>The options for this parameter are:</p>
+                        <p class="IndentFieldDef">Blank value - Proposal Number is not used.</p>
+                        <p class="IndentFieldDef">CSS - Proposal Number will be unique by <MadCap:variable name="Variables.Contract Sales" />.</p>
+                        <p class="IndentFieldDef">JOB - Proposal Number will be unique by <MadCap:variable name="Variables.Jc Contract caps" />.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 "><MadCap:variable name="Variables.Sv Variation caps" /> Status Maintenance</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Proposal Details </strong>column is available as a <MadCap:variable name="Variables.tick" />box on the <MadCap:variable name="Variables.Sv Variation caps" /> Status
+Maintenance screen in <i><MadCap:variable name="Variables.Commercial Manager caps" /> &gt; Global Config</i>, as shown in <MadCap:xref href="#CRStatusMaint" class="ImageRef"><i>Figure 1:  [%=Variables.Sv Variation caps%] Status Maintenance</i></MadCap:xref>. It only
+appears when SV Parameter <span class="parameter">PROPDET </span>is not blank. You can select this field when you wish to set
+up a <MadCap:variable name="Variables.Sv Variation caps" /> Status that will show proposal details (Proposal Name and Proposed
+Number).</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="CRStatusMaint"></a><MadCap:variable name="Variables.Sv Variation caps" /> Status Maintenance</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV040_Images/CRStatusMaint.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 "><MadCap:variable name="Variables.Sv Variation caps" /> Type Maintenance</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Proposal Details </strong>column is available as a <MadCap:variable name="Variables.tick" />box on the <MadCap:variable name="Variables.Sv Variation caps" /> Type Maintenance screen in <i><MadCap:variable name="Variables.Commercial Manager caps" /> &gt; Global Config</i>, as shown in <MadCap:xref href="#CRTypeMaint" class="ImageRef"><i>Figure 2:  [%=Variables.Sv Variation caps%] Type Maintenance</i></MadCap:xref>. It only appears when SV Parameter <span class="parameter">PROPDET </span>is not blank. You can select this field when you wish to set up a <MadCap:variable name="Variables.Sv Variation caps" /> Type that will show proposal details (Proposal Name and Proposed Number).</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CRTypeMaint"></a><MadCap:variable name="Variables.Sv Variation caps" /> Type Maintenance</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV040_Images/CRTypeMaint.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4 "><MadCap:variable name="Variables.Sv Variations caps" /> <MadCap:variable name="Variables.Sv Register caps" /></h2>
+        <h3 MadCap:autonum="1.4.1 "><MadCap:variable name="Variables.Sv Variation caps" /> Details</h3>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Proposal Number </span>and <span class="Field">Proposed Date </span>fields appear in the Last Change Date layout box on the <MadCap:variable name="Variables.Sv Variation caps" /> Details screen in <i><MadCap:variable name="Variables.Commercial Manager caps" /> &gt; [working <MadCap:variable name="Variables.Jc Contract caps" />] &gt; <MadCap:variable name="Variables.Sv Variations caps" /></i>, as shown in <MadCap:xref href="#CRDetails" class="ImageRef"><i>Figure 3:  [%=Variables.Sv Variation caps%] Details</i></MadCap:xref>. They only appear when:</p>
+        <ul>
+            <li class="ListBullet3">The SV Parameter <span class="parameter">PROPDET </span>is not blank.</li>
+            <li class="ListBullet3">The Proposal Number is zero.</li>
+            <li class="ListBullet3">The Proposal Details <MadCap:variable name="Variables.tick" />box on the corresponding <MadCap:variable name="Variables.Sv Variation caps" /> Type or Status is <MadCap:variable name="Variables.tick" />ed.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="CRDetails"></a><MadCap:variable name="Variables.Sv Variation caps" /> Details</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV040_Images/CRDetails.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">Proposal Number</p>
+        <p class="IndentFieldDef">A sequential number is generated either by the <MadCap:variable name="Variables.Contract Sales" /> Series or by the <MadCap:variable name="Variables.Jc Contract caps" />, depending on SV parameter <span class="parameter">PROPDET</span>. It cannot be changed.</p>
+        <p class="IndentBold">Proposed Date</p>
+        <p class="IndentFieldDef">This defaults to today’s date, but it can be changed.</p>
+        <h3 MadCap:autonum="1.4.2 "><MadCap:variable name="Variables.Sv Variations caps" /> Browse</h3>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Proposal Number </span>and <span class="Field">Proposed Date </span>fields <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">have been added </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">are found </MadCap:conditionalText>on the <MadCap:variable name="Variables.Sv Variations caps" /> Browse screen in <i><MadCap:variable name="Variables.Commercial Manager caps" /> &gt; [working <MadCap:variable name="Variables.Jc Contract caps" />] &gt; <MadCap:variable name="Variables.Sv Variations caps" /></i>, as shown in <MadCap:xref href="#CRBrowse" class="ImageRef"><i>Figure 4:  [%=Variables.Sv Variations caps%] Browse Screen</i></MadCap:xref>. They only appear when SV Parameter <span class="parameter">PROPDET </span>is not blank.</p>
+        <p class="Body">In addition, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Proposed <MadCap:variable name="Variables.Sv Variations caps" /></strong> option <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been added to the</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">is available as </MadCap:conditionalText>a Named Filter; it filters only the <MadCap:variable name="Variables.Sv Variations caps" /> with a Proposal Number.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="CRBrowse"></a><MadCap:variable name="Variables.Sv Variations caps" /> Browse Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV040_Images/CRBrowse.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.5 ">Update <MadCap:variable name="Variables.Sv Variation caps" /> Status Action</h2>
+        <p class="Body">When a <MadCap:variable name="Variables.Sv Variation caps" /> Status is updated by using the <strong>Update <MadCap:variable name="Variables.Sv Variation caps" /> Status </strong>action on the <MadCap:variable name="Variables.Sv Variations caps" /> browse screen (see <MadCap:xref href="#UpdateCRStatus" class="ImageRef"><i>Figure 5:  Update [%=Variables.Sv Variation caps%] Status Action</i></MadCap:xref>), the Proposal Number and Proposed Date are assigned to that <MadCap:variable name="Variables.Sv Variation caps" /> under the following conditions:</p>
+        <ul>
+            <li class="ListBullet3">The SV Parameter <span class="parameter">PROPDET </span>is not blank.</li>
+            <li class="ListBullet3">The Proposal Number is zero.</li>
+            <li class="ListBullet3">The Proposal Details <MadCap:variable name="Variables.tick" />box on the corresponding <MadCap:variable name="Variables.Sv Variation caps" /> Type or Status is <MadCap:variable name="Variables.tick" />ed.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="UpdateCRStatus"></a>Update <MadCap:variable name="Variables.Sv Variation caps" /> Status Action</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV040_Images/UpdateCRStatus.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.6 ">Workflow-Controlled <MadCap:variable name="Variables.Sv Variation caps" /> Status Update</h2>
+        <p class="Body">When the <MadCap:variable name="Variables.Sv Variation caps" /> Status is updated via workflow, the Proposal Number and Proposed Date are saved on the <MadCap:variable name="Variables.Sv Variation caps" /> under the following conditions:</p>
+        <ul>
+            <li class="ListBullet3">The SV Parameter <span class="parameter">PROPDET </span>is not blank.</li>
+            <li class="ListBullet3">The Proposal Number is zero.</li>
+            <li class="ListBullet3">The Proposal Details <MadCap:variable name="Variables.tick" />box on the corresponding <MadCap:variable name="Variables.Sv Variation caps" /> Type or Status is <MadCap:variable name="Variables.tick" />ed.</li>
+        </ul>
+        <h2 MadCap:autonum="1.7 "><MadCap:variable name="Variables.Sv Variation caps" /> History</h2>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Proposal Number </span>and <span class="Field">Proposed Date </span>fields on a <MadCap:variable name="Variables.Sv Variation caps" /> are copied to the <MadCap:variable name="Variables.Sv Variation caps" /> History record.</p>
+    </body>
+</html>

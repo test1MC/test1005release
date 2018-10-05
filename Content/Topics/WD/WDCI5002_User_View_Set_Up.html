@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1993" MadCap:lastWidth="614">
+    <head><title>User View Set Up</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">User View Set Up</h1>
+        <p>User views allow different users to see different lists of companies and projects. For example, <MadCap:variable name="General.ProductName" /> may hold information about thousands of companies, but staff at a local office may only need to see companies that they deal with.&#160; Staff at a different local office may need to see a different list of companies, and staff at a regional office may need to see a larger list that includes all the companies visible to the local offices.</p>
+        <p>Views relate to an organ<MadCap:variable name="Variables.is" />ational hierarchy.&#160; For example:</p>
+        <p>
+            <img src="../../Resources/Images/CI_500202.gif" />
+        </p>
+        <p>The names for the different levels (operating company, region, office in the example above) will depend on the way your system has been set up. You can have up to five levels. The top level view shows the entire database; the lowest view might be the site level.&#160; A view is based on a combination of the level and the entity at that level.&#160; For example, one view might be "Level 3 - Southern Region" and another view might be "Level 4 - Slough Office".</p>
+        <p>A user's view is the lowest level at which they are able to view the database.&#160; The user can always change their view to see the views at higher levels (for example a user whose view is "Level 4 - Slough Office" will be able to change their view to see the companies and projects that are visible in "Level 3 - Southern Region".&#160; They can add companies and projects from higher levels to their view.</p>
+        <p>In general, all users with the same view will see the same data.&#160; So if users Smith and Jones both have the Slough office view, and Smith adds a company to the view, Jones will also see that company.&#160; However, an individual user's view can be restricted to only see companies of certain types; for example, user Thomas may only need to see the <MadCap:variable name="Variables.pl suppliers" /> that the Slough office deals with, and not subcontractors. </p>
+        <div class="process">
+            <h2 class="print">To set up a user's views:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBSUR2">Maintain User Views</span>.</li>
+                <li>Find the user whose views you want to set up and click the link in the <span class="field">User</span> column.</li>
+                <li>For each view you want the user to have, enter a separate record.&#160;
+<p>
+Note that you can only set up one view within any "<MadCap:variable name="Variables.kco company" />" (that is, any level 2 entity).&#160; So if you set up a user with the "Slough office" view within the Southern Region of <MadCap:variable name="Variables.kco company" /> 1, you cannot also set up that user with a "Northern region" view within <MadCap:variable name="Variables.kco company" /> 1.&#160;</p></li>
+                <li>For each view, enter the user's base level for that view, the <MadCap:variable name="Variables.kco company" /> that the view is for, and the entity for that level.
+<p><img src="../../Resources/Images_A-C/CI/CI_500203.png" class="HalfWidth" /></p><p>
+If you are using "status by view" (that is, <span class="parameter">SRM/STATVIEW </span>is set to a level) you have to select the entities at each intervening level.</p><p><img src="../../Resources/Images_A-C/CI/CI_500204.png" class="HalfWidth" /></p></li>
+                <li>To restrict this user's view to particular types of <MadCap:variable name="Variables.kco company" /> only, enter a list of "module" codes that you have used to identify <MadCap:variable name="Variables.kco company" /> types, or a list of <MadCap:variable name="Variables.kco company" /> types, or both.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">User views - configuration</h2>
+            <p>Use <span class="function" title="Function:%WCI2150BCIT">Company Types</span> to set up a list of company types and the "module" codes they belong to (as used by <span class="function" title="Function:%WSYBSUR2">Maintain User Views</span>).</p>
+            <p>If you are using the <span class="module"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Relationship Management </span>"status by view" feature (that is, <span class="parameter">SRM/STATVIEW </span>is set to a level), you need to use <span class="function" title="Function:%WCI9001BCRG">Organ<MadCap:variable name="Variables.is" />ation Structure</span> to define the structure of your organ<MadCap:variable name="Variables.is" />ational views.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDSRM0011_Views_of_Suppliers.html" />
+                </MadCap:relatedTopics>
+            </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_levelcom.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_level1.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_statview.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Faxing Orders in COINSplus - Multiple Copies</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Faxing Orders in COINSplus - Multiple Copies</h1>
+        <p>
+            <MadCap:snippetBlock src="../../Resources/Snippets/C+TOPIC.flsnp" />
+        </p>
+        <p>You can fax a PO to multiple fax numbers. For example, you can fax a copy to the accounts office as well as the <MadCap:variable name="Variables.pl supplier" />.</p>
+        <div class="process">
+            <h2 class="print">To fax an order to several recipients:</h2>
+            <ol>
+                <li>Go to the order print function and select Fax, as normal.
+<p>If multi-faxing has been enabled, <MadCap:variable name="General.ProductName" /> presents you with a list of fax recipients:</p><p><img src="../../Resources/Images/SY/SY_009701.png" /></p></li>
+                <li>Move the highlight and press <span class="key">F9</span> to select each of the recipients you want to send to, or press <span class="key">Ctrl</span>+<span class="userinput">A</span> to select all recipients.
+<p>A <strong>T</strong> at the end of the row shows that you have selected that recipient.</p></li>
+                <li>Press <span class="key">F1</span>.
+<p>For each recipient in turn, <MadCap:variable name="General.ProductName" /> displays the Fax Details screen, on which you can change the details, then the Additional Text screen, then the <span class="field">Send Fax to: </span>prompt.</p></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>Use <span class="function" title="Function:%TI2464">Multi-fax PO Maintenance</span> to set up fax details for each recipient (for example, accounts dept.). These are the fax details that are used when multi-faxing orders.</p>
+            <p>
+                <img src="../../Resources/Images/SY/SY_009702.png" />
+            </p>
+            <p>The <span class="field">Code</span> field contains the codes that should be put in <span class="parameter">DEFFAX</span>/<span class="parameter">DEFEFAX</span>.</p>
+            <p>Two of these codes are always present: SITE, and SUPP. The fax details for these cannot be maintained in <span class="function" title="Function:%TI2464">Multi-fax PO Maintenance</span> as they come from the details on the PO being faxed.</p>
+            <p>SITE details are as follows:</p>
+            <p>Fax Number: pi_project.pij_fax (site fax number) <br />Organ<MadCap:variable name="Variables.is" />ation: pi_project.pij_name <br />Contact: pi_project.pij_siteqs (site quantity surveyor)</p>
+            <p>Fax number and contact can be maintained in the Project Workbench (Further details &gt; Site details).</p>
+            <p>SUPP details are:</p>
+            <p>Fax Number: ci_office.cio_fax (or failing that ap_vendor.avm_fax) <br />Organ<MadCap:variable name="Variables.is" />ation: po_hdr.poh_name <br />Contact: po_hdr.poh_attention</p>
+            <p>The values for these are entered when the order is raised.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_multifax.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_deffax.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_defefax.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

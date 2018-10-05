@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Creating the Overlays for Uploading into VSI-Fax</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Creating the Overlays for Uploading into VSI-Fax</h1>
+        <p>In order for VSI-Fax to be able to format a <MadCap:variable name="General.ProductName" /> print file with the associated overlay it is necessary to create the overlay in a format which can be read by VSI-Fax and then upload this overlay into the VSI-Fax database.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">You may need to create a VSI-Fax overlay that is slightly different from the original (printed) overlay; for example, if the document is printed on headed paper, you will need to include the details from the headed paper, such as the company logo, on the VSI-Fax overlay.</div>
+        <div class="process">
+            <h2 class="print">To create an overlay:</h2>
+            <ol>
+                <li>Create a .prn file of your overlay from its original document (for example, MS Word). Firstly ensure in Windows you have the print driver for your laser printer setup; this should ideally be using a PCL5 emulation although you can get away with PCL4. (This should be your standard HP Printer Driver).</li>
+                <ol>
+                    <li>Open the source document (for example, using Excel or Word), and choose "Print".</li>
+                    <li>In the print <MadCap:variable name="Variables.dialogue" /> box, select the PCL printer.</li>
+                    <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field">Print to File </span>box (shown below).&#160;
+<p><img src="../../Resources/Images/SY/SY_009001.png" /></p></li>
+                    <li>Click <span class="key">OK</span>.&#160;</li>
+                    <li>Save the file to a location you can access later.&#160;</li>
+                </ol>
+                <li>As the VSI-Fax Administrator user in UNIX, ftp this .prn file into the overlay directory of the appropriate <MadCap:variable name="General.ProductName" /> environment (for example, $BASE/app/overlays/).</li>
+                <li>When logged in to the host UNIX server as the VSI-Fax administrator, convert the .prn file to a TIFF file using a VSI-Fax standard command:<br />&#160;
+<div class="Code">$pcltotif -E fine -o order.tif order.prn</div><p>The resulting TIFF file is in the appropriate format for uploading into VSI-Fax.</p><p>Next you need to <a href="WDSY0091_Uploading_the_Overlay_File.html">upload the file</a>, then <a href="WDSY0092_Directing_COINS_to_the_Overlay.html">create a .dat file</a> to tell <MadCap:variable name="General.ProductName" /> which TIFF file to use.</p></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PM/pm_testdir.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

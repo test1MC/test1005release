@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2234" MadCap:lastWidth="2065">
+    <head>
+        <link href="../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Luckins Notes</h1>
+        <h2>General</h2>
+        <p>Current version of Luckins supplied data is – LUCKINS DATAPLUS.</p>
+        <p>It is the USER’S responsibility to load the Luckins files to Unix files in the user’s Home Directory (user being the user who is to do the Luckins load to <MadCap:variable name="General.ProductName" />)</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">The Luckins and Steel Stock modules are mutually exclusive in the same <MadCap:variable name="General.ProductName" /> company. If switching Luckins on, then you must ensure that the Steel Stock parameter is switched off</p>
+        <p>Luckins data is loaded into the <MadCap:variable name="General.ProductName" /> stock tables. (N.B. these records would not normally be used as real stock items.)</p>
+        <h2>Configuration</h2>
+        <p>Stock Configuration &gt; Parameters &gt; Luckins.</p>
+        <p>(No other configuration is required)</p>
+        <table class="TableStyle-COINSBasic" style="mc-table-style: url('../Resources/TableStyles/COINSBasic.css');width: 100%;" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">LUCKINS?</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>	Set to 	“Y”   to switch the Luckins facilities on.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">LUCKENT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>	Luckins provides several prices. This parameter stipulates which of these prices you want to use as the base cost price; that is the price you would apply all the discounts and agreements to and ultimately use when placing orders.</p>
+                        <p>For the system to automatically use the Lowest price(greater than zero), leave this parameter blank (recommended).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">LUCKLOW</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>	If you have left LUCKENT blank to use the lowest price, then you need to set this parameter to “Y”.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">LUCKPCE	</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">You can set one of the standard stock sales prices to be labeled as the LUCKINS price. Entering the price number here will label that price with the word Luckins on the stock record. As we do not normally use these stock records as real stock items  this is somewhat irrelevant so this parameter can be left blank.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">LUCKVAR</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">The system is able to report on incoming new price variances. Set the level of variance here over which you want exceptions reported.. (Select the Luckins Variance Check enquiry to see these variances). (e.g. 10% would report on all products who’s price has increased by 10% or more over the existing price).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><![CDATA[	]]></p>
+        <h2>Preparation</h2>
+        <p>Prior to the initial load of Luckins Data, it is necessary to establish a table of allowable units of price/measure. Unfortunately Luckins does not supply this information so we have to enter these units manually. In addition, <MadCap:variable name="General.ProductName" /> does not use these units when placing orders etc, so we have to map the Luckins units to the <MadCap:variable name="General.ProductName" /> standard units. (a list of Luckins units of measure is included in these notes.)</p>
+        <p>Loading the Luckins Data Files.</p>
+        <p>It is the user’s responsibility to load the luckins data files from CD or disc, to the user’s home unix directory.</p>
+        <p>The loading process is the same whether doing the initial load or the weekly update.</p>
+        <p>Luckins supplies nine files as follows:-</p>
+        <p>A0701234.CTL		Control File</p>
+        <p>B0701234.CRV		Item Details</p>
+        <p>C0701234.CRV		Supplier Index</p>
+        <p>D0701234.CRV		Product Range</p>
+        <p>E0701234.CRV		Commodity Codes</p>
+        <p>F0701234.CRV		Price Qualifiers</p>
+        <p>G0701234.CRV</p>
+        <p>H0701234.CRV</p>
+        <p>I0701234.BLN		Bulletin Details</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">It is not absolutely necessary  to load the A or the I file but you may as well load them for information.</p>
+        <p>Take care to load the files in the following sequence:-</p>
+        <p>A, I, C, D, E, F, G, H, B</p>
+        <p>You have to load each file discreetly by repeating the Load Luckins Data option and entering the individual file names at the prompt.</p>
+        <p>As the data is loaded relevant reports are generated.</p>
+        <h2>Additional products (Non Luckins)</h2>
+        <p>You are able to add non Luckins records to the database. It may be that you are aware of products which are not included in the Luckins data or you may not have selected certain data sets from Luckins in the first place. You are allowed to create your own product range records and your own product records. The system recognizes these items and automatically numbers them. In so doing it guarantees no duplicate keys are created. You are also able to add your own Manufacturer records.</p>
+    </body>
+</html>

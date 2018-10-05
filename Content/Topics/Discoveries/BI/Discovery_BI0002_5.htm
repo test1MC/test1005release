@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="3563" MadCap:lastWidth="1104" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0002.5,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Adding a Body Selector</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Discovery BI0002.5 - Adding a Body Selector</h1>
+        <p>&#160;</p>
+        <p>This exercise is to modify the contract browse screen to include Body Selectors and to apply the selection to fields</p>
+        <h2>Adding a Body Selector Section </h2>
+        <p>Edit the page section for xxM1Exercise1.</p>
+        <p>Select the Form tab create a Body Selector form to use Body Selector Fields.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-5-0001-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>In the Field Tab go to the Form selector at the bottom of the page, select Body Selector and click Apply Filter.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> to Add a new field to this screen. Add the following field :</p>
+        <p>&#160;</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Populate</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>View-As</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">EndPeriod</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">To Period</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">glp-rsp.glp_fdate</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Combo</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-5-0002-1107.png" class="HalfWidth" />
+        </p>
+        <p class="note"> EndPeriod &amp; StartPeriod have default behaviour in that by selecting the view-as as combo the description/value will always appear.&#160; If you did choose Combo description/value then the description would be duplicated.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> after adding the field.</p>
+        <h2>Using the Body Selector value</h2>
+        <p>In the Field Tab go to the FORM selector at the bottom of the page, select the Body Form Type and click Apply Filter.</p>
+        <p>NOTE : You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>In the Body Form create the fields :</p>
+        <table style="width: 100%;caption-side: top;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Label</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_ContractCosts^TD|0|{EndPeriod}</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Costs to Date</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">RO_ContractRevenue^TD|0|{EndPeriod}</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Revenue to Date </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note">This will display the costs and Revenue to date for the date entered when the report is run.&#160; <br /><br />The fields take three parameters:- the type of cost (TD = to date; TP = this period; TY = this year; TO = total)<br /><br />- the offset from the period selected.&#160; For example: 0 = the period selected (no offset); -1 = the period before the one selected; !12-0 = period twelve in the year of the period selected; !1203 = period 12 in 2003.<br /><br />- the period to report on.&#160; This is the value selected on the report selection.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-5-0003-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>You will need to adjust your Body Span fields to reflect the new columns and adjust your field widths</p>
+        <p>Now run the function.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-5-0004-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Change the To Period value and check your final two column figures change.</p>
+        <p>&#160;</p>
+    </body>
+</html>

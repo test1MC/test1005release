@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="649" MadCap:lastWidth="1036">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Limit</h1>
+        <p>The LIMIT function will return values dependant on where the value falls in relation to the lower and upper limit values. The limit function is useful is reports scores where you cannot allow scores to fall outside the limit of valid scores eg 1 to 10. The format for using LIMIT is:</p>
+        <p>LIMIT(value,lowerlimit,uperlimit)</p>
+        <p>If the value is below the lower limit, the function returns the lower limit value, if it is within the range it returns the value itself, if above the upper limit it will return the upper limit value.</p>
+        <p>Example</p>
+        <p>
+            <MadCap:keyword term="limit() function">&#160;</MadCap:keyword>LIMIT(X,A,B)&#160;&#160;&#160;&#160;&#160;&#160; would return x if x is in the range a-b, otherwise return a if x&lt;a, or b if x&gt;b.</p>
+        <p>LIMIT(1,5,10)&#160;&#160;&#160;&#160;&#160;&#160; would return 5&#160;&#160; (FALSE returns lowerlimit)</p>
+        <p>LIMIT(11,5,10)would return 10 (FALSE returns upperlimit)</p>
+        <p>LIMIT(6,5,10)&#160; would return 6&#160; (TRUE&#160; returns value)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Limit.png" style="visibility: visible;mso-wrap-style: square;width: 378px;height: 199px;" />
+        </p>
+    </body>
+</html>

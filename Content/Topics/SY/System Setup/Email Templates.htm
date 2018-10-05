@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1715" MadCap:lastWidth="896">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Email Templates</h1>
+        <p>&#160;</p>
+        <p>The function <span class="function">Email Templates</span> (on the System &gt; System Setup menu) allows you to configure templates for the email messages that are sent when emailing documents and reports, and with other email utilities in <MadCap:variable name="General.ProductName" />. </p>
+        <p>As at v11.07, the following template types are available (these are hard-coded and not user definable):</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY System Setup/EmailTemplates_1.png" class="AbsolutePosition" />
+        </p>
+        <p>Tokens of the form {table.field} can be included in the email; these are replaced with the appropriate value. For example, {ar_cust.rcm_name} will be replaced with the customer name.</p>
+        <p>&#160;</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Email Templates Maintenance Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images/SY/SY System Setup/EmailTemplates_2.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 170px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader" style="text-align: center;">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader" style="text-align: center;">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The type of email template. This indicates where this template is used in the software</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Template</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">A code to identify the template.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">A description of the template. <MadCap:variable name="General.ProductName" /> shows this on the Template dropdown that allows users to select which template to use when emailing a document.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Subject</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Enter the subject of the email template.</p>
+                        <p>This will be used as the subject of the emails that are sent.  It can contain <MadCap:variable name="General.ProductName" /> field names (in the format {table.field}), which will be replaced with the appropriate values when the email is sent; for example, {ar_invoice.rin_inv} would be replaced by the relevant invoice number.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Message</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>The content of the message.</p>
+                        <p>The message content field uses the HTML field editor, allowing you to use formatting such as bold, underline, <MadCap:variable name="Variables.colour" /> and different text sizes.</p>
+                        <p>The template can include tokens for fields from the <MadCap:variable name="General.ProductName" /> database, in the form {table.field}, which are replaced with the correct value when the email is generated.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

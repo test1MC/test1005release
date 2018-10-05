@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1717" MadCap:lastWidth="886" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Asset Captions</h1>
+        <p>Captions are fields that allow you to record information about an asset that would not normally be held in the <MadCap:variable name="General.ProductName" /> system as standard, and for which fields are not provided.</p>
+        <p>Captions on their own are for information only; you can enquire and report on them, but there is no processing associated with them.  However, you can link asset captions to triggers, so that when you update a caption, <MadCap:variable name="General.ProductName" /> updates the triggers linked to it.  This means <MadCap:variable name="General.ProductName" /> can issue warnings, or stop users selecting the asset, when certain expiry conditions have been met (for example, when a service or insurance renewal is due); see Linking Triggers to Captions.</p>
+        <h2>To set up captions:</h2>
+        <ol>
+            <li>Set up caption groups (using Fixed Assets &gt; Setup &gt; Maintenance &gt; Maintain Caption Groups).</li>
+        </ol>
+        <p>Caption groups can be configured as:</p>
+        <ul>
+            <li>Update - you can link triggers to the captions in the group, and update the captions at various stages in the plant hire process.</li>
+            <li>Warn - the caption will be displayed at selected points in the plant hire process.</li>
+            <li>No Action - you can only update these captions on the asset itself.</li>
+        </ul>
+        <ol start="2">
+            <li>Use Fixed Assets &gt; Setup &gt; Maintenance &gt; Caption Maintenance to set up Captions.</li>
+        </ol>
+        <ul>
+            <li>The Group and Type you select on the caption govern the additional tabs available after you click Save.</li>
+            <li>For character captions, you can update a list of allowable values. If you want to allow any value (in other words, to make the caption a free-text field) leave the list blank.</li>
+            <li>For captions that belong to groups configured as Update or Warn, specify which functions allow you to update the caption: Dispatch, Return, Workshop Job Card, Timesheet, Daily Timesheet, Picking List Workbench.</li>
+        </ul>
+        <p>For captions that belong to groups configured as Update, add the triggers.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Workshop Job Card already allows update of an Odometer field. If you want to use the odometer reading to update a trigger, use a caption for odometer and ignore (or hide) the existing Odometer field.</p>
+        <ol start="3">
+            <li>On Fixed Assets &gt; Setup &gt; Maintenance &gt; Asset Groups (if SHOWCAPS = OnlyWithDef) select which captions in each caption group are appropriate on assets in the asset group. The group default record is required for the caption to be available on an asset. When you add a new asset, you update only the captions that are set up on the asset group. So on cherry pickers you could have captions for height, reach, safe working load; on compressors you could have maximum pressure, etc.</li>
+        </ol>
+        <h2>Caption Defaults</h2>
+        <p>You can configure default values for captions (that is, the values that the captions have when you add a new asset).</p>
+        <ul>
+            <li>You can set a default on the asset group; this takes precedence.</li>
+            <li>If there is no default on the asset group, <MadCap:variable name="General.ProductName" /> uses the value set up in Fixed Assets &gt; Setup &gt; Maintenance &gt; Asset Captions Defaults.</li>
+            <li>If both of these are blank, <MadCap:variable name="General.ProductName" /> uses the default on the caption.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

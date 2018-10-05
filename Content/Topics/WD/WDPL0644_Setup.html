@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1297" MadCap:lastWidth="949">
+    <head><title>Problem Invoice Workbench - Setup</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Problem Invoice Workbench - Setup</h1>
+        <p>For the Problem Invoice Workbench to be effective, you must put registered invoices on hold:</p>
+        <ul>
+            <li>Set <span class="parameter">PL/DEFHOLD </span>to <span class="userinput">Y</span>.</li>
+            <li>Set <span class="parameter">PL/DEFHCODE </span>to a valid hold code.</li>
+        </ul>
+        <p>You should also consider putting invoices on hold if there are any problems in invoice matching (otherwise the Problem Invoice Workbenches will not pick up price and quantity queries):</p>
+        <ul>
+            <li>Set <span class="parameter">PL/APPRCOST </span>to <span class="userinput">Y</span>.</li>
+            <li>Set <span class="parameter">PL/DEFHCODI </span>to a valid hold code.</li>
+            <li>Set <span class="parameter">PL/DEFHCODC </span>to a valid hold code.</li>
+            <li>Set <span class="parameter">PO/HLDOKINV </span>to <span class="userinput">N</span>.</li>
+            <li>Set <span class="parameter">PO/HLDOKCRN </span>to <span class="userinput">Y</span> (this assumes that if an invoice is on hold because of invoice matching problems, you are waiting for a credit note, so you would want the credit note to be put on hold so the invoice and credit note can be processed at the same time).</li>
+        </ul>
+        <p>You should also consider preventing staff who will give site or buying approval from accessing the Update Invoice function (%WPL1010SAINU).</p>
+        <h2>Invoice matching roles</h2>
+        <p>Set up invoice matching roles using <span class="function" title="Function:%WCI9010BWFE">User Roles</span>.&#160; </p>
+        <p>
+            <img src="../../Resources/Images_P-R/PL/PL_064401.png" />
+        </p>
+        <p><span class="function" title="Function:%WCI9010BWFE">User Roles</span> allows you to specify the users who are responsible for dealing with different types of invoice matching queries.&#160; These are used to assign the owner of the invoice on <span class="function" title="Function:%WPL9020BAIQ">Problem Invoices</span> and <span class="function" title="Function:%WPL9021BAIQ">Problem Invoices (Accounts)</span>.</p>
+        <ol>
+            <li>
+                <p>Using the <span class="userinput">Type </span>selector, select which type of user role (<MadCap:variable name="Variables.jc contract" />, asset or department) you are going to maintain.</p>
+            </li>
+            <li>
+                <p>Set default users for each role (Accounts, Buying or Site) - leave the <MadCap:variable name="Variables.Jc Contract caps" /> (or Asset or Department) field blank.&#160; These are the users who will deal with invoices if there is no <MadCap:variable name="Variables.jc contract" />-specific (or asset-specific or department-specific) user assigned.</p>
+            </li>
+            <li>
+                <p>Then set <MadCap:variable name="Variables.jc contract" />-specific (or asset-specific or department-specific) users for each role; these are the users who <MadCap:variable name="General.ProductName" /> will identify as the owners of problem invoices for that <MadCap:variable name="Variables.jc contract" /> (or asset or department).</p>
+            </li>
+        </ol>
+        <p><MadCap:variable name="General.ProductName" /> assigns invoices with a site or buying query to the owner specified here.&#160; However, the accounts role is only consulted when a user specifically refers the invoice to accounts using the workbench; when an invoice is first entered, the owner is the person who entered it.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">You only need to set up one user for each role on each <MadCap:variable name="Variables.jc contract" />.&#160; If there is more than one user set up, <MadCap:variable name="General.ProductName" /> will pick the first user for the relevant role.</div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhold.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhcode.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_apprcost.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhcodi.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhcodc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_hldokinv.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_hldokcrn.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_ovrowner.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1><span style="margin-right: 0pt;">1 </span>Proposed Firstbase Configuration</h1>
+        <p>It is proposed that Firstbase should be updated to include entries for each type of Reverse Charge (including Acquisition Tax) – details of the proposed configuration are include below.&#160; It is not proposed to configure Firstbase for Partially Recoverable or Partially Zero Rated VAT codes since these would be dependent on the circumstances of each client and on their agreements with HMRC.</p>
+        <h2><span style="margin-right: 0pt;">1.1 </span>VAT Codes</h2>
+        <p>The new Firstbase VAT Codes proposed to be added are as follows:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <p>Code</p>
+                    </th>
+                    <th>
+                        <p>Description</p>
+                    </th>
+                    <th>
+                        <p>Rate</p>
+                    </th>
+                    <th>
+                        <p>Input/Output</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>P1RD</p>
+                    </td>
+                    <td>
+                        <p>Purch Std 20% Dom.Rev.Chg</p>
+                    </td>
+                    <td>
+                        <p>0</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>P1RS</p>
+                    </td>
+                    <td>
+                        <p>Purch Std 20% EU Serv.Rev.Chg</p>
+                    </td>
+                    <td>
+                        <p>0</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>P1RA</p>
+                    </td>
+                    <td>
+                        <p>Purch Std 20% EU Goods Acqn.</p>
+                    </td>
+                    <td>
+                        <p>0</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>R1DI</p>
+                    </td>
+                    <td>
+                        <p>Rev.Chg. Dom 20% Input</p>
+                    </td>
+                    <td>
+                        <p>20</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>R1DO</p>
+                    </td>
+                    <td>
+                        <p>Rev.Chg. Dom 20% Output</p>
+                    </td>
+                    <td>
+                        <p>20</p>
+                    </td>
+                    <td>
+                        <p>Output</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>R1SI</p>
+                    </td>
+                    <td>
+                        <p>Rev.Chg. EU Serv. 20% Input</p>
+                    </td>
+                    <td>
+                        <p>20</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>R1SO</p>
+                    </td>
+                    <td>
+                        <p>Rev.Chg. EU Serv. 20% Output</p>
+                    </td>
+                    <td>
+                        <p>20</p>
+                    </td>
+                    <td>
+                        <p>Output</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>R1AI</p>
+                    </td>
+                    <td>
+                        <p>Rev.Chg. EU Goods 20% Input</p>
+                    </td>
+                    <td>
+                        <p>20</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>R1AO</p>
+                    </td>
+                    <td>
+                        <p>Rev.Chg. EU Goods 20% Output</p>
+                    </td>
+                    <td>
+                        <p>20</p>
+                    </td>
+                    <td>
+                        <p>Output</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>The first three codes (beginning with P) are the ones which users would select when inputting the transaction in <MadCap:variable name="Variables.Purchase Ledger caps" />, Subcontract Ledger or <MadCap:variable name="Variables.Cash Book caps" />.&#160; The other six codes (beginning with R) are the ones which would be substituted in place of those first three when the transactions are posted.&#160; It is the codes beginning with R which would be included in the VAT Return – the three codes beginning with P should never appear in a VAT Return as they would have been substituted before then.</p>
+        <p>&#160;</p>
+        <h2><span style="margin-right: 0pt;">1.2 </span>VAT Code Substitutions</h2>
+        <p>The initial substitutions proposed to be setup in Firstbase are as follows:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <p>Source VAT Code</p>
+                    </th>
+                    <th>
+                        <p>Target VAT Code</p>
+                    </th>
+                    <th>
+                        <p>Net Amount Percentage</p>
+                    </th>
+                    <th>
+                        <p>VAT Calculation</p>
+                    </th>
+                    <th>
+                        <p>Output/ Input</p>
+                    </th>
+                    <th>
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>P1RD</p>
+                    </td>
+                    <td>
+                        <p>R1DI</p>
+                    </td>
+                    <td>
+                        <p>100.00</p>
+                    </td>
+                    <td>
+                        <p>Calculate from Target Net Amount at Target Rate</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                    <td>
+                        <p>Input VAT Recoverable on Domestic Reverse Charge Purchases</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>P1RD</p>
+                    </td>
+                    <td>
+                        <p>R1DO</p>
+                    </td>
+                    <td>
+                        <p>0.00</p>
+                    </td>
+                    <td>
+                        <p>Calculate from Source Net Amount at Target Rate</p>
+                    </td>
+                    <td>
+                        <p>Output</p>
+                    </td>
+                    <td>
+                        <p>Output VAT Payable on Domestic Reverse Charge Purchases</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>P1RS</p>
+                    </td>
+                    <td>
+                        <p>R1SI</p>
+                    </td>
+                    <td>
+                        <p>100.00</p>
+                    </td>
+                    <td>
+                        <p>Calculate from Target Net Amount at Target Rate</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                    <td>
+                        <p>Input VAT Recoverable on EU Services Reverse Charge Purchases</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>P1RS</p>
+                    </td>
+                    <td>
+                        <p>R1SO</p>
+                    </td>
+                    <td>
+                        <p>100.00</p>
+                    </td>
+                    <td>
+                        <p>Calculate from Target Net Amount at Target Rate</p>
+                    </td>
+                    <td>
+                        <p>Output</p>
+                    </td>
+                    <td>
+                        <p>Output VAT Payable on EU Services Reverse Charge Purchases</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>P1RA</p>
+                    </td>
+                    <td>
+                        <p>R1AI</p>
+                    </td>
+                    <td>
+                        <p>100.00</p>
+                    </td>
+                    <td>
+                        <p>Calculate from Target Net Amount at Target Rate</p>
+                    </td>
+                    <td>
+                        <p>Input</p>
+                    </td>
+                    <td>
+                        <p>Input VAT Recoverable on EU Goods Acquisition Tax Purchases</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>P1RA</p>
+                    </td>
+                    <td>
+                        <p>R1AO</p>
+                    </td>
+                    <td>
+                        <p>100.00</p>
+                    </td>
+                    <td>
+                        <p>Calculate from Target Net Amount at Target Rate</p>
+                    </td>
+                    <td>
+                        <p>Output</p>
+                    </td>
+                    <td>
+                        <p>Output VAT Payable on EU Goods Acquisition Tax Purchases</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

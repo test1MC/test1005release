@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2>
+            <MadCap:concept term="Topics" /><span style="margin-right: 0pt;">2.2 </span>Query Editor</h2>
+        <p>
+            <MadCap:keyword term="Query Editor">&#160;</MadCap:keyword>The Query Editor allows you to try out 4GL queries against the <MadCap:variable name="General.ProductName" /> database and sample the data returned. This function can be useful to test queries before being used in reports or enquiries.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Query Editor.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 190px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p>To use the query editor simply enter the query, and (optionally) any fields required - space separated - and select Run.&#160; The system will return an error if any part of the query is incorrect – and a sample of data if the query compiles OK.&#160; If the fields section was left blank, all fields will be displayed.&#160; If field names were specified, only those fields will be shown.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Query Editor_1.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 380px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p>&#160;</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Data Set</p>
+                    </td>
+                    <td>
+                        <p>A Data Set definition can be entered here to display the information created in the data set (No query or fields are required for this).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Condition Field</p>
+                    </td>
+                    <td>
+                        <p>A function that determines whether a record should be included or not. The function returns a logical value: yes to include the record, no to exclude it.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Maximum Rows</p>
+                    </td>
+                    <td>
+                        <p>Allows the query to fun faster by only displaying a maximum number of rows per query.&#160; 10.23 onwards, this defaults to 10</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Extra Parameters (10.23 onwards)</p>
+                    </td>
+                    <td>
+                        <p>Where a dataset has been specified, this field allows entry of&#160; of parameters&#160; (URL) that are needed by the dataset query.</p>
+                        <p>e.g. </p>
+                        <p>The parameterised fields are so that you don't have to 'hard code' queries in the dataset to get it to run in the query editor – particularly if there are date replacements etc with fields like {RS_glp_fdate__2}.&#160;&#160; Or another useful reason for using these parameters is so that you can test results in a efficient way&#160; for instance:&#160; if you have a query on the dataset&#160; which reads: </p>
+                        <p>FOR EACH jc_job WHERE jc_job.kco = {kco} {jobSelect}</p>
+                        <p>You could call the dataset from within the query editor and in the parameters say&#160;&#160;&#160;&#160;&#160; jobSelect=and jc_job.job_num = 'XXXX'&#160;&#160; (where XXXX is a vailid contract number). </p>
+                        <p>That way the dataset would run but for only contract XXXX&#160; -&#160;&#160; This is good to save time in checking the validation of fields in the dataset as you don't have to wait till the whole dataset evaluates prior to getting a response back.</p>
+                        <p>If you have more than one {} replacement in your dataset then you would separate the parameters with a &amp; symbol&#160;&#160;&#160;&#160;&#160; Eg:&#160;&#160; Dataset query might read :</p>
+                        <p>FOR EACH jc_job WHERE jc_job.kco = {kco} {jobSelect},</p>
+                        <p>&#160;&#160; EACH jc_costcode of jc_job WHERE TRUE {jccSelect}</p>
+                        <p>You could call the dataset from within the query editor and in the parameters say&#160;&#160;&#160;&#160;&#160; jobSelect=and jc_job.job_num = 'XXXX' &amp;jccSelect= and jc_costcode.jcc_cc = 'YYYY'&#160;&#160;&#160; (where XXXX is a vailid contract number and YYYY is a valid Costcode).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

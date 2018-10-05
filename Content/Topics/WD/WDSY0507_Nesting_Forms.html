@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Nesting Configurable Document Forms</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Nesting Configurable Document Forms</h1>
+        <p>&#160;</p>
+        <p>You can include one form in another. This allows you to:&#160;</p>
+        <ul>
+            <li>Apply formatting (for example, borders and shading) to several fields together.</li>
+            <li>Define blocks of fields that you can arrange relative to each other.</li>
+            <li>Define blocks of fields or text that you can use more than once (for example, on both a header and a continuation header).</li>
+        </ul>
+        <p>For example, if you want to show the <MadCap:variable name="Variables.jc contract" /> name and address in different boxes, like this:</p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_doc-addr.gif" />
+        </p>
+        <p>You could set up a form for the <MadCap:variable name="Variables.jc contract" /> name, and a form for the address:</p>
+        <table border="1" width="91%" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th>
+                        <p><strong>Form</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p><strong>Row</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p><strong>Col</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p><strong>Text</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p><strong>Field</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p><strong>Width</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p><strong>Height</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p><strong>Class</strong>
+                        </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTADD</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>
+                        <p>Address:</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>90mm</p>
+                    </td>
+                    <td>
+                        <p>12pt</p>
+                    </td>
+                    <td>
+                        <p>Arial8pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTADD</p>
+                    </td>
+                    <td>
+                        <p>2</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>job_shipaddr__1</p>
+                    </td>
+                    <td>
+                        <p>90mm</p>
+                    </td>
+                    <td>
+                        <p>12pt</p>
+                    </td>
+                    <td>
+                        <p>Arial10pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTADD</p>
+                    </td>
+                    <td>
+                        <p>3</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>job_shipaddr__2</p>
+                    </td>
+                    <td>
+                        <p>90mm</p>
+                    </td>
+                    <td>
+                        <p>12pt</p>
+                    </td>
+                    <td>
+                        <p>Arial10pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTADD</p>
+                    </td>
+                    <td>
+                        <p>4</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>job_shipaddr__3</p>
+                    </td>
+                    <td>
+                        <p>90mm</p>
+                    </td>
+                    <td>
+                        <p>12pt</p>
+                    </td>
+                    <td>
+                        <p>Arial10pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTADD</p>
+                    </td>
+                    <td>
+                        <p>5</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>job_shipaddr__4</p>
+                    </td>
+                    <td>
+                        <p>90mm</p>
+                    </td>
+                    <td>
+                        <p>12pt</p>
+                    </td>
+                    <td>
+                        <p>Arial10pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTRACT</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>
+                        <p><MadCap:variable name="Variables.Jc Contract caps" />:</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>95mm</p>
+                    </td>
+                    <td>
+                        <p>12pt</p>
+                    </td>
+                    <td>
+                        <p>Arial8pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTRACT</p>
+                    </td>
+                    <td>
+                        <p>2</p>
+                    </td>
+                    <td>
+                        <p>1</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>job_num</p>
+                    </td>
+                    <td>
+                        <p>25mm</p>
+                    </td>
+                    <td>
+                        <p>10mm</p>
+                    </td>
+                    <td>
+                        <p>Arial18pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTRACT</p>
+                    </td>
+                    <td>
+                        <p>2</p>
+                    </td>
+                    <td>
+                        <p>2</p>
+                    </td>
+                    <td>
+                        <p>-</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>5mm</p>
+                    </td>
+                    <td>
+                        <p>10mm</p>
+                    </td>
+                    <td>
+                        <p>Arial18pt</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>CONTRACT</p>
+                    </td>
+                    <td>
+                        <p>2</p>
+                    </td>
+                    <td>
+                        <p>3</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>job_name</p>
+                    </td>
+                    <td>
+                        <p>65mm</p>
+                    </td>
+                    <td>
+                        <p>10mm</p>
+                    </td>
+                    <td>
+                        <p>Arial18pt</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Then include them on a line in the HEAD form, adding a border and extra formatting (see <a href="WDSY0504_Adding_Formatting.html">Adding Formatting to a Document Field</a>):</p>
+        <p>�</p>
+        <table border="1" width="100%" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th style="width: 7%;" width="7%">
+                        <p><strong>Form</strong>
+                        </p>
+                    </th>
+                    <th style="width: 7%;">
+                        <p><strong>Row</strong>
+                        </p>
+                    </th>
+                    <th style="width: 7%;" width="5%">
+                        <p><strong>Col</strong>
+                        </p>
+                    </th>
+                    <th style="width: 7%;" width="15%">
+                        <p><strong>Include Form</strong>
+                        </p>
+                    </th>
+                    <th style="width: 7%;">
+                        <p><strong>Border</strong>
+                        </p>
+                    </th>
+                    <th style="width: 7%;">
+                        <p><strong>Width</strong>
+                        </p>
+                    </th>
+                    <th style="width: 7%;">
+                        <p><strong>Height</strong>
+                        </p>
+                    </th>
+                    <th style="width: 7%;" width="40%">
+                        <p><strong>Extra Formatting</strong>
+                        </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td width="7%">
+                        <p>HEAD</p>
+                    </td>
+                    <td>
+                        <p>5</p>
+                    </td>
+                    <td width="5%">
+                        <p>1</p>
+                    </td>
+                    <td width="15%">
+                        <p>CONTRACT</p>
+                    </td>
+                    <td>
+                        <p>
+                            <img src="../../Resources/Images/Misc/tick1.gif" />
+                        </p>
+                    </td>
+                    <td>
+                        <p>100mm</p>
+                    </td>
+                    <td>
+                        <p>25mm</p>
+                    </td>
+                    <td width="40%">
+                        <p>background-color=#aaaaaa, padding=2mm</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="7%">
+                        <p>HEAD</p>
+                    </td>
+                    <td>
+                        <p>5</p>
+                    </td>
+                    <td width="5%">
+                        <p>2</p>
+                    </td>
+                    <td width="15%">&#160;</td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>5mm</p>
+                    </td>
+                    <td>
+                        <p>40mm</p>
+                    </td>
+                    <td width="40%">&#160;</td>
+                </tr>
+                <tr>
+                    <td width="7%">
+                        <p>HEAD</p>
+                    </td>
+                    <td>
+                        <p>5</p>
+                    </td>
+                    <td width="5%">
+                        <p>3</p>
+                    </td>
+                    <td width="15%">
+                        <p>CONTADD</p>
+                    </td>
+                    <td>
+                        <p>
+                            <img src="../../Resources/Images/Misc/tick1.gif" />
+                        </p>
+                    </td>
+                    <td>
+                        <p>90mm</p>
+                    </td>
+                    <td>
+                        <p>40mm</p>
+                    </td>
+                    <td width="40%">
+                        <p>padding=2mm</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>(Note the second line, which defines a blank space between the two boxes.)</p>
+    </body>
+</html>

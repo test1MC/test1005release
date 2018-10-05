@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2>&#160;</h2>
+        <p>To identify the person you can supply either the person’s unique reference or their email address.&#160; </p>
+        <p>This request would return a XML message with the following format:</p>
+        <p>&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p>&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p>&lt;env:Body&gt;</p>
+        <p>&lt;call object="hswsppe1" method="fetchLinks" id="0987654321"&gt;</p>
+        <p>&lt;Person&gt;</p>
+        <p>&lt;Email&gt;paul.cocks@coins-global.com&lt;/Email&gt; </p>
+        <p>&lt;Reference&gt;000219&lt;/Reference&gt; </p>
+        <p>&lt;/Person&gt;</p>
+        <p>&lt;Plots&gt;</p>
+        <p>&lt;Plot&gt;</p>
+        <p>&lt;Company&gt;001&lt;/Company&gt; </p>
+        <p>&lt;Contract&gt;2000&lt;/Contract&gt; </p>
+        <p>&lt;Phase&gt;3&lt;/Phase&gt; </p>
+        <p>&lt;Plot&gt;p006&lt;/Plot&gt; </p>
+        <p>&lt;AddressLine1&gt;&lt;/AddressLine1&gt; </p>
+        <p>&lt;SalesStatus&gt;RE&lt;/SalesStatus&gt; </p>
+        <p>&lt;/Plot&gt;</p>
+        <p>&lt;Plot&gt;</p>
+        <p>&lt;Company&gt;001&lt;/Company&gt; </p>
+        <p>&lt;Contract&gt;2000&lt;/Contract&gt; </p>
+        <p>&lt;Phase&gt;5&lt;/Phase&gt; </p>
+        <p>&lt;Plot&gt;006&lt;/Plot&gt; </p>
+        <p>&lt;AddressLine1&gt;&lt;/AddressLine1&gt; </p>
+        <p>&lt;SalesStatus&gt;RE&lt;/SalesStatus&gt; </p>
+        <p>&lt;/Plot&gt;</p>
+        <p>&lt;/Plots&gt;</p>
+        <p>&lt;Prospects&gt;</p>
+        <p>&lt;Prospect&gt;</p>
+        <p>&lt;Company&gt;001&lt;/Company&gt; </p>
+        <p>&lt;Reference&gt;000282&lt;/Reference&gt; </p>
+        <p>&lt;/Prospect&gt;</p>
+        <p>&lt;/Prospects&gt;</p>
+        <p>&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p>&lt;/call&gt;</p>
+        <p>&lt;/env:Body&gt;</p>
+        <p>&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>For a plot this returns the company, contract, phase and plot which are the unique identifiers for a plot in <MadCap:variable name="General.ProductName" />.&#160; For a prospect the company number and prospect reference are returned which again are the unique identifiers for a prospect in <MadCap:variable name="General.ProductName" />.&#160; Note the prospect reference is not the same as the person reference.</p>
+        <p>&#160;</p>
+        <p>If the person could not be found then the following message will be returned:</p>
+        <p>&#160;</p>
+        <p>&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p>&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p>&lt;env:Body&gt;</p>
+        <p>&lt;env:Fault&gt;</p>
+        <p>&lt;env:Code&gt;</p>
+        <p>&lt;env:Value&gt;env:Sender&lt;/env:Value&gt; </p>
+        <p>&lt;/env:Code&gt;</p>
+        <p>&lt;env:Reason&gt;</p>
+        <p>&lt;env:Text&gt;Person does not exist (Email xpaul.cocks@coins-global.com) [SY885]&lt;/env:Text&gt; </p>
+        <p>&lt;/env:Reason&gt;</p>
+        <p>&lt;/env:Fault&gt;</p>
+        <p>&lt;/env:Body&gt;</p>
+        <p>&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+    </body>
+</html>

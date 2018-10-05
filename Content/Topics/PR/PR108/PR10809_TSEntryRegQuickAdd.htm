@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Timesheet Entry (Regular and Quick Adds)</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Timesheet Entry (Regular and Quick Adds)</h1>
+        <p class="Body">This section describes how Timesheet Input Groups are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>used during Regular and&#160;Quick Add Timesheet Entry.</p>
+        <h2 MadCap:autonum="1.1 ">Regular Timesheet Entry</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Group </span>field is found on the browse screen of Timesheets, as shown in <MadCap:xref href="#TSInputScreen" class="ImageRef"><i>Figure 1:   Timesheet Input Screen</i></MadCap:xref>. It is available for entry when in Add mode and can only be changed using the <span class="Function">Merge </span>function. The lookup lists the owner’s own group and subordinate groups.</p>
+        <ul>
+            <li>Payroll <MadCap:variable name="Variables.cheques" /> can be under multiple groups at the same time, which means that a <MadCap:variable name="Variables.cheque" /> record might be shown on the screen several times (one instance per each group). When this occurs, the <span class="Field">Multiple Groups </span>flag is set to let the user know this situation exists.   Additional Filters are available at the bottom of the Timesheets browse screen that allows the user to filter on Timesheets in Multiple Groups, as shown in <MadCap:xref href="#TSInputGroupFilters" class="ImageRef"><i>Figure 2:  Group Filters</i></MadCap:xref>.</li>
+            <li>Once a group is entered for a <MadCap:variable name="Variables.cheque" />, the group can no longer be updated on this screen. However, you can enter the same <MadCap:variable name="Variables.cheque" /> under another group, which means a new <MadCap:variable name="Variables.cheque" /> is not created, and a new group is added to the comma-separated Check TS Input Group List.</li>
+        </ul>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">Note:</p>
+        <div class="note">The time cards for an employee <MadCap:variable name="Variables.cheque" /> may be under multiple Timesheet Input Groups during Timesheet Entry. Before Calculations are run, these time cards MUST reside in one Timesheet Input Group. The PR <MadCap:variable name="Variables.Cheque caps" /> record has the <span class="Field">Multiple Groups </span>field, which is <MadCap:variable name="Variables.tick" />ed if the time cards for the <MadCap:variable name="Variables.cheque" /> are in multiple groups.</div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="TSInputScreen"></a>Timesheet Input Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Group Body Details Screen</h2>
+        <p class="Body">The Group Body Details screen (shown above in <MadCap:xref href="#TSInputScreen" class="ImageRef"><i>Figure 1:   Timesheet Input Screen</i></MadCap:xref>) displays when you select the <span class="button">Detail </span>button on a Timesheet Input record. Since groups cannot be entered for recurring <MadCap:variable name="Variables.cheques" />, the <span class="Field">Group </span>field for those <MadCap:variable name="Variables.cheques" /> is disabled and remains blank. However, if Timesheet Input Groups are in use in the Company, non-recurring (Regular, Adjusting, and Future) <MadCap:variable name="Variables.cheques" /> cannot be entered without groups, and the Body Details section only contains group and owner information.</p>
+        <ul>
+            <li>A <MadCap:variable name="Variables.cheque" /> cannot be entered under a frozen group. Time cards and Overrides may not be entered, updated, or deleted under a frozen group.</li>
+            <li>Once you enter a <MadCap:variable name="Variables.cheque" /> under a group not associated with the PR Period and Year, the group becomes associated with the PR Period and Year of that <MadCap:variable name="Variables.cheque" />.</li>
+            <li>If you delete all <MadCap:variable name="Variables.cheques" /> under a group, the Group PR Period and Year are zeroed out, and the group can be used for the same or another period.</li>
+            <li>During a Timesheet entry session, the group entered defaults to the next <MadCap:variable name="Variables.cheque" />, along with the Period.</li>
+            <li>Only <MadCap:variable name="Variables.cheques" /> under your own groups, subordinate groups, and blank groups (recurring <MadCap:variable name="Variables.cheques" />) are available for you on this screen.</li>
+            <li>You can enter non-recurring <MadCap:variable name="Variables.cheques" /> under your own groups or under subordinate groups.</li>
+            <li class="ListBullet3">You can only delete recurring <MadCap:variable name="Variables.cheques" /> or <MadCap:variable name="Variables.cheques" /> under your own unfrozen groups that are not under multiple groups.</li>
+            <li class="ListBullet3">You can enter or update only recurring <MadCap:variable name="Variables.cheques" /> or <MadCap:variable name="Variables.cheques" /> under your own or subordinate unfrozen groups that are not under multiple groups.</li>
+            <li class="ListBullet3">When entering a non-recurring <MadCap:variable name="Variables.cheque" />, the group should exist for the PR Frequency, Period, and Year, the group should be unfrozen, and you should have permission to enter <MadCap:variable name="Variables.cheques" /> under the entered group.</li>
+            <li class="ListBullet3">If TS Input Groups are in use for the company, the following items appear on the screen:</li>
+            <li class="ListBullet4">Filters: All Groups/My Groups/All Non-Blank Groups/Blank Group/Multiple Groups/Frozen Groups/Unfrozen Groups (<MadCap:xref href="#TSInputGroupFilters" class="ImageRef"><i>Figure 2:  Group Filters</i></MadCap:xref>)</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="TSInputGroupFilters"></a>Group Filters</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputGroupFilters.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <ul>
+            <li class="ListBullet4">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Exclude Recurring </strong>option under the Period Types named filter (<MadCap:xref href="#TSInputPerTypesFilters" class="ImageRef"><i>Figure 3:  Period Types Filter</i></MadCap:xref>)</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 3: "><a name="TSInputPerTypesFilters"></a>Period Types Filter</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputPerTypesFilters.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <ul>
+            <li class="ListBullet4">
+                <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">New </MadCap:conditionalText>Group Browse filters for Group and Employee Timesheet Group Merge Code (<MadCap:xref href="#TSInputBrowseFilters" class="ImageRef"><i>Figure 4:  Browse Filters</i></MadCap:xref>)</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 4: "><a name="TSInputBrowseFilters"></a>Browse Filters</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputBrowseFilters.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.3 ">Time Cards and Overrides Tabs</h2>
+        <p class="Body">When you click the <strong>Employee </strong>link on the Timesheet Input screen, a Time Cards screen appears with the following two tabs: <strong>Time Cards </strong>(<MadCap:xref href="#TSInputTCsTab" class="ImageRef"><i>Figure 5:  Time Cards Tab</i></MadCap:xref>) and <strong>Overrides </strong>(<MadCap:xref href="#TSInputOverridesTab" class="ImageRef"><i>Figure 6:   Overrides Tab</i></MadCap:xref>). These tabs can be used to enter time cards and/or overrides. Upon entry, a group is assigned to all time cards/overrides that are entered.</p>
+        <ul>
+            <li><span class="Field"><MadCap:variable name="Variables.Cheque caps" /> Groups</span> and <span class="Field">Current Group </span>have been added to the top section of the Time Cards and Overrides tabs.</li>
+            <li><span class="Field">Timesheet Input Group </span>has been added as a read-only field to the Time Card Details layout of the Body Detail section on the Time Cards tab.</li>
+            <li>Only time cards and overrides for the current group can be present or entered on the Time Cards and Overrides tabs.</li>
+            <li>You can enter or update <MadCap:variable name="Variables.cheques" /> under your own or subordinate unfrozen groups. The <MadCap:variable name="Variables.cheque" /> under frozen groups cannot be entered or updated.</li>
+            <li>When you enter time cards/overrides for a non-recurring <MadCap:variable name="Variables.cheque" />: (1) the group should exist for the PR Frequency, Period, and Year; (2) the group should be unfrozen; and (3) you should have permission to enter <MadCap:variable name="Variables.cheques" />/time cards/overrides under the current group.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 5: "><a name="TSInputTCsTab"></a>Time Cards Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputTCsTab.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 6: "><a name="TSInputOverridesTab"></a>Overrides Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputOverridesTab.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.4 ">Quick Add Timesheets</h2>
+        <p class="Body">The Quick Add Timesheets functions (<span class="Function">Timesheet – by Job</span>, <span class="Function">Timesheet – by Employee</span>, and <span class="Function">Timesheet – by Multiple Employee</span>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>allow for TS Input Groups.</p>
+        <h3 MadCap:autonum="1.4.1 ">Screen 1</h3>
+        <p class="Body">Screen 1 of each Quick Add Timesheet function (see <span class="Function">Timesheet - by Job</span> (<MadCap:xref href="#TSbyJob_Screen1" class="ImageRef"><i> Timesheet - by Job (Screen 1)</i></MadCap:xref>), <span class="Function">Timesheet - by Employee</span> (<MadCap:xref href="#TSbyEmployee_Screen1" class="ImageRef"><i> Timesheet - by Employee (Screen 1)</i></MadCap:xref>), and <span class="Function">Timesheet - by Multiple Employee</span> (<MadCap:xref href="#TSbyMultEmp_Screen1" class="ImageRef"><i> Timesheet - by Multiple Employee (Screen 1)</i></MadCap:xref>)) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes the following:</p>
+        <ul>
+            <li>A Group column</li>
+            <li>Only records under your own group and subordinate groups</li>
+            <li>A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Group Browse filter</li>
+            <li>A read-only <span class="Field">Group </span>field in the Body Detail section</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 7: "><a name="TSbyJob_Screen1"></a>Timesheet - by Job (Screen 1)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyJob_Screen1.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 8: "><a name="TSbyEmployee_Screen1"></a>Timesheet - by Employee (Screen 1)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyEmployee_Screen1.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 9: "><a name="TSbyMultEmp_Screen1"></a>Timesheet - by Multiple Employee (Screen 1)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyMultEmp_Screen1.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3 MadCap:autonum="1.4.2 ">Screen 2</h3>
+        <p class="Body">Screen 2 of each Quick Add Timesheet function (see <span class="Function">Timesheet - by Job</span> (<MadCap:xref href="#TSbyJob_Screen2" class="ImageRef"><i>Figure 10:  Timesheet - by Job (Screen 2)</i></MadCap:xref>), <span class="Function">Timesheet - by Employee</span> (<MadCap:xref href="#TSbyEmployee_Screen2" class="ImageRef"><i> Timesheet - by Employee (Screen 2)</i></MadCap:xref>), and <span class="Function">Timesheet - by Multiple Employee</span> (<MadCap:xref href="#TSbyMultEmp_Screen2">- Timesheet Entry (Regular and Quick Adds)</MadCap:xref>)) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes the following:</p>
+        <ul>
+            <li>A Group column</li>
+            <li>Only records under your own group and subordinate groups</li>
+            <li>A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Group Browse filter</li>
+            <li>An updatable <span class="Field">Group </span>field in the Body Detail section</li>
+        </ul>
+        <p class="Body">The group entered on this screen is validated to see if it exists for the PR Frequency, Period, and Year. You must have permission to enter <MadCap:variable name="Variables.cheques" />/time cards/overrides under the group.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 10: "><a name="TSbyJob_Screen2"></a>Timesheet - by Job (Screen 2)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyJob_Screen2.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 11: "><a name="TSbyEmployee_Screen2"></a>Timesheet - by Employee (Screen 2)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyEmployee_Screen2.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 12: "><a name="TSbyMultEmp_Screen2"></a>Timesheet - by Multiple Employee (Screen 2)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyMultEmp_Screen2.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3 MadCap:autonum="1.4.3 ">Screen 3</h3>
+        <p class="Body">Screen 3 of each Quick Add Timesheet function (see <span class="Function">Timesheet - by Job</span> (<MadCap:xref href="#TSbyJob_Screen3" class="ImageRef"><i>Figure 13:  Timesheet - by Job (Screen 3)</i></MadCap:xref>), <span class="Function">Timesheet - by Employee</span> (<MadCap:xref href="#TSbyEmployee_Screen3" class="ImageRef"><i>Figure 14:  Timesheet - by Employee (Screen 3)</i></MadCap:xref>), and <span class="Function">Timesheet - by Multiple Employee</span> (<MadCap:xref href="#TSbyMultEmp_Screen3" class="ImageRef"><i> Timesheet - by Multiple Employee (Screen 3)</i></MadCap:xref>)) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes the following:</p>
+        <ul>
+            <li>A <span class="Field">Group </span>field that comes from either:<ul><li>The second screen (if you use the green buttons labeled <span class="button">Add New Job Timesheets</span>/<span class="button">Add New Employee Timesheets</span> on the first screen); or</li><li>The record on the first screen (if you use the Job/Employee column hyperlink to enter the timesheets).</li></ul></li>
+            <li>The time cards with this group. If you enter a new time card, it is automatically entered under this group.</li>
+            <li>A read-only <span class="Field">Group </span>field in the Columns Fields section. When you enter a new time card, it defaults to the <span class="Field">Current Group </span>from the header.</li>
+        </ul>
+        <p class="Body">Timesheets are validated to see if they exist for the PR Frequency, Period, and Year. You must have permission to enter Timesheets under the group.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 13: "><a name="TSbyJob_Screen3"></a>Timesheet - by Job (Screen 3)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyJob_Screen3.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 14: "><a name="TSbyEmployee_Screen3"></a>Timesheet - by Employee (Screen 3)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyEmployee_Screen3.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 15: "><a name="TSbyMultEmp_Screen3"></a>Timesheet - by Multiple Employee (Screen 3)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSbyMultEmp_Screen3.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

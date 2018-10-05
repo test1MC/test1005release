@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Manual [%=Variables.Cheque caps%] Calculator</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Manual <MadCap:variable name="Variables.Cheque caps" /> Calculator</h1>
+        <p class="Body">Timesheet Input Groups are not applicable for <MadCap:variable name="Variables.cheques" /> in the <span class="Function">Manual <MadCap:variable name="Variables.Cheque caps" /> Calculator </span>(MCC) function. However, several changes made to MCC apply only if Timesheet Input Groups are in use for the company. <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">These changes are discussed below.</MadCap:conditionalText></p>
+        <h2 MadCap:autonum="1.1 ">Convert to Manual <MadCap:variable name="Variables.Cheques caps" /> for MCC</h2>
+        <p class="Body">The Selected Employee action screen in the <span class="Function">Convert to Manual <MadCap:variable name="Variables.Cheques caps" /></span> function for MCC in <i>Payroll &gt; Frequency &gt; Manual <MadCap:variable name="Variables.Cheque caps" /> Calculator &gt; Convert to Manual <MadCap:variable name="Variables.Cheques caps" /> action</i> (<MadCap:xref href="#ConvertToManCksActionScreen" class="ImageRef"><i> MCC Convert to Manual [%=Variables.Cheques caps%] for Selected Employee Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups.</p>
+        <ul>
+            <li>A <span class="Field">Convert to Group </span>field determines the target Timesheet Input Group for processing. The converted <MadCap:variable name="Variables.cheques" /> are under this target group.<ul><li class="li">The target Timesheet Input Group does not need to be on file; if it is not on file, a new Timesheet Input Group is created.</li><li class="li">Whoever runs the process becomes the owner of the newly created Timesheet Input Group.</li><li class="li">If the group exists, it should be an unfrozen group associated with the entered unposted Regular, Adjusting, or Future period for the PR Frequency; otherwise, it should be not associated with any periods. This should be your own or a subordinate group.</li><li class="li">This field cannot be blank.</li></ul></li>
+            <li><i>A <strong>Group Description </strong>field: </i>If the target Timesheet Input Group for the Convert Timesheets is not on file, a new Timesheet Input Group is created. The description is assigned to the new Timesheet Input Group; otherwise, this field is ignored.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="ConvertToManCksActionScreen"></a>MCC Convert to Manual <MadCap:variable name="Variables.Cheques caps" /> for Selected Employee Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_ConvertToManCksActionScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Quick Add Time Cards</h2>
+        <p class="Body">The Quick Add Time Cards tab in the <span class="Function">Convert to Manual <MadCap:variable name="Variables.Cheques caps" /></span> function for MCC in <i>Payroll &gt; Frequency &gt; Manual <MadCap:variable name="Variables.Cheque caps" /> Calculator </i>(<MadCap:xref href="#MCCQuickAddTCs" class="ImageRef"><i> MCC Quick Add Time Cards Screen</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>accommodates TS Input Groups as outlined below.</p>
+        <ul>
+            <li>A Group column, <span class="Field">Multiple Groups </span><MadCap:variable name="Variables.tick" />box, and <span class="Field">Frozen Group </span><MadCap:variable name="Variables.tick" />box are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the MCC Quick Add Time Cards tab screen.</li>
+            <li>The following items appear in the named filters on the screen: All Groups/My Groups/All Non-Blank Groups/Blank Group/Multiple Groups/Frozen Groups/Unfrozen Groups.</li>
+            <li>Only Time Card records under the blank group, your own group, and the subordinate groups are available on this screen.</li>
+            <li>You cannot create time cards for the <span class="Function">Manual <MadCap:variable name="Variables.Cheque caps" /> Calculator </span>from Future, Regular, or Adjusting time cards if they are under a frozen group or multiple groups.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="MCCQuickAddTCs"></a>MCC Quick Add Time Cards Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_MCCQuickAddTCs.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

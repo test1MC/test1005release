@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Selecting Invoices for Payment</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Selecting Invoices for Payment</h1>
+        <p><MadCap:variable name="General.ProductName" /> allows you to select outstanding transactions for a <MadCap:variable name="Variables.pl supplier" />. The amounts will then be automatically calculated to create a payment (<MadCap:variable name="Variables.cheque" /> or <MadCap:variable name="Variables.eft" />) for the total amount. Credit transactions (indicated by a negative amount) can also be selected, which will adjust the payment total accordingly. </p>
+        <p style="MARGIN-BOTTOM: 6pt;">There are two procedures available that allow you to select invoices for payment. </p>
+        <ul>
+            <li><span class="function" title="Function:%WPL1110BAPY">Select/Deselect Invoices (Manual)</span> - allows you to create payments by manually selecting outstanding invoices for one <MadCap:variable name="Variables.pl supplier" /> at a time. You can also use this for part-payment of invoices. See <MadCap:xref href="WDPL0412_Selecting_Invoices_Manually.html">Select/Deselect Invoices (Manual)</MadCap:xref>.</li>
+            <li><span class="function" title="Function:%WPL1100RAIN">Select/Deselect Invoices (Batch)</span> - automatically selects (or deselects) outstanding transactions for one or more <MadCap:variable name="Variables.pl suppliers" />, according to the selection criteria you specify.&#160; For example, you can select invoices by due date.&#160; Depending on how <MadCap:variable name="General.ProductName" /> has been configured, you may or may not be able to use <span class="function" title="Function:%WPL1100RAIN">Select/Deselect Invoices (Batch)</span> to select held or registered invoices, or those where unallocated payments exist.&#160;See <MadCap:xref href="../PL/Processing Payments/Selecting Payments (Batch).htm">Selecting Invoices for Payment (Batch).</MadCap:xref></li>
+        </ul>
+        <p style="MARGIN-BOTTOM: 6pt;">Because both the procedures interact, you can use either method of selection, or you can combine manual and batch selection: for example, you can select a group of invoices using batch selection, and then deselect individual invoices manually to stop them being paid. </p>
+        <p>Regardless of which selection procedure you use, one payment will be created for each <MadCap:variable name="Variables.pl supplier" />, to create a payment batch. <br /></p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDPL0412_Selecting_Invoices_Manually.html" />
+                <MadCap:relatedTopic src="WDPL0413_Selected_Not_Selected_Report.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_selint.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_alwunal.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_payrega.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_payholda.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

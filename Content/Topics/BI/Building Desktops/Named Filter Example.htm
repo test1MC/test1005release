@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:sourceDocument="C:\Users\niglon\Desktop\Document WIP\HOW TO...Build COINS Desktops (LMVSY0063).docx" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="4081" MadCap:lastWidth="1186" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><a name="_Toc440873579"></a>NamedFilter Example</h1>
+        <p>The NamedFilter parameter allows a Tile Option to access any existing Named Filters on a function and to pre-populate (and apply) them with values before building the browse.</p>
+        <p>NamedFilter affects the URL, so must always be preceded by “&amp;” when used so that it correctly becomes a parameter in the URL.</p>
+        <h2><a name="_Toc440873580"></a>Desktop Tile Options</h2>
+        <p>%WPO101ATPHL is the Function for the Material Orders Workbench.&#160; This function has a two sets of pre-defined Named Filters for the Types of Order (Committed, Uncommitted etc.) and The Buyers (All or My Orders)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_6.png" class="FullWidth" />
+        </p>
+        <p>On my desktop I want to have three tiles, one for All Orders, one for My Committed Orders and one for my uncommitted orders.&#160; Running the function alone should give me All orders by default (subject to my filter recall settings).&#160; So I only need to set up two Tile Value Options against %WPO101ATPHL.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_6_1.png" class="FullWidth" />
+        </p>
+        <p>For the first, the parameter will be:</p>
+        <p>&amp;NamedFilter=CommittedOrdersOnly,MyOrders</p>
+        <p>This sets the First Named Filter to Committed Orders Only and the second filter to My Orders.</p>
+        <p>The second function entry has a similar parameter, but sets the first filter to UnCommitted Orders.</p>
+        <h2><a name="_Toc440873581"></a>Desktop</h2>
+        <p>On our Example Desktop %WPO101ATPHL has three separate Tiles defined.</p>
+        <ul>
+            <li>For the first entry, the Title is set to All Orders and the Option is left as default.&#160; </li>
+            <li>For the second Entry the Title is set to My Committed Orders and the Option is set to My Committed Orders.&#160; </li>
+            <li>For the third Entry the Title is My Uncommitted Orders, the Option is set to My Uncommitted orders </li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_6_2.png" class="FullWidth" />
+        </p>
+        <p>The refreshed Desktop now looks like this:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_6_3.png" class="FullWidth" />
+        </p>
+        <p>Clicking the first tile we get all orders and all buyers</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_6_4.png" class="FullWidth" />
+        </p>
+        <p>The second tile will automatically give us Committed orders, my orders</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_6_5.png" class="FullWidth" />
+        </p>
+        <p>The final tile will automatically display Uncommitted Orders, My Orders</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Build COINS Desktops_6_6.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

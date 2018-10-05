@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Adding a New Company</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Adding a New Company</h1>
+        <p>Module: Central Repository</p>
+        <p>This explains how to add a new company (for example, a <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> or Subcontractor) to the Central Repository. (You can also add other types of Company, for example an Architect, depending on the Company Type you select when adding the new Company). </p>
+        <p>A new company should be created if it has a <MadCap:conditionalText MadCap:conditions="COINS.USOnly">Tax Identification Number</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">Company Registration Number</MadCap:conditionalText> different from any other company in the system. If it has the same <MadCap:conditionalText MadCap:conditions="COINS.USOnly">TIN</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">CRN</MadCap:conditionalText>, refer to <a href="../CI/Adding Companies/Adding Offices to a Company.htm">Adding Offices to a Company</a>.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDCI5002_User_View_Set_Up.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To add a new <MadCap:variable name="Variables.pl supplier" /> or subcontractor:</h2>
+            <ol>
+                <li>Go to Central Repository &gt; <span class="function" title="Function:%WCI2000BCIM">Companies</span>.
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Company Workbench</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p MadCap:conditions="COINS.UKOnly"><img src="../../Images/PO/PO_001301.png" class="HalfWidth" /></p><p MadCap:conditions="COINS.USOnly"><img src="../../Resources/USA Imports/1.0 - PRIME CI - Creating a Company/Setting Up a New Company.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>Click <MadCap:snippetText src="../../Resources/Snippets/TextAndButtons/Add.flsnp" />.
+<p><MadCap:variable name="General.ProductName" /> displays a screen with a prompt for various details, such as the company name and <MadCap:variable name="Variables.postal code" />. (This is used to check for potential duplicates amongst existing company records).</p></li>
+                <li>Enter whichever information you have about the new company, and click <span class="key">Check Duplicates</span>.
+<p><MadCap:variable name="General.ProductName" /> displays a list of potential duplicate companies:</p><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Potential Duplicates</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p MadCap:conditions="COINS.UKOnly"><img src="../../Images/PO/PO_001302.png" class="HalfWidth" /></p><p MadCap:conditions="COINS.USOnly"><img src="../../Resources/USA Imports/1.0 - PRIME CI - Creating a Company/Setting Up a New Company_2.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>If the new company is in this list click the link and if necessary update the details of the existing company. Otherwise, click <MadCap:snippetText src="../../Resources/Snippets/TextAndButtons/Next.flsnp" /> to add the new company.
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Add New Company Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p MadCap:conditions="COINS.UKOnly"><img src="../../Images/PO/PO_001303.png" class="HalfWidth" /></p><p MadCap:conditions="COINS.USOnly"><img src="../../Resources/USA Imports/1.0 - PRIME CI - Creating a Company/Setting Up a New Company_3.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>On the Main tab, select the office type of the main office, and enter the name and address details.
+<p>Here you can select the status code for the new company. If you leave the status code blank, <MadCap:variable name="General.ProductName" /> assigns the default Status Code.</p></li>
+                <li>On the Types tab, select the appropriate Company <span class="nw">Type(s).</span><ul><li>To make this company available as <MadCap:snippetText src="../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.Purchase Ledger caps" /> customer, <MadCap:variable name="Variables.tick" /> the <span class="field">Customer</span> box. </li><li>To make this company available as a Subcontract Ledger subcontractor, <MadCap:variable name="Variables.tick" /> the <span class="field">Subcontractor</span> box. </li><li>To make this company available as <MadCap:snippetText src="../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.Sales Ledger caps" /> supplier, <MadCap:variable name="Variables.tick" /> the <span class="field">Supplier</span> box.</li><li style="list-style-type: disc;">The <MadCap:variable name="Variables.tick" />boxes other than <span class="field">Customer</span>, <span class="field">Subcontractor</span> and <span class="field">Supplier</span> are user-defined options so the below image may vary.</li></ul><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Add New Company – Types Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p MadCap:conditions="COINS.UKOnly"><img src="../../Images/PO/PO_001304.png" class="HalfWidth" /></p><p MadCap:conditions="COINS.USOnly"><img src="../../Resources/USA Imports/1.0 - PRIME CI - Creating a Company/Setting Up a New Company_4.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><p>(Parameters specify which of these company types relate to customers, subcontractors, and <MadCap:variable name="Variables.pl suppliers" />.)</p></li>
+                <li>The General tab is more relevant to <MadCap:variable name="Variables.pl suppliers" /> than subcontractors. If you have views in other <MadCap:variable name="General.ProductName" /> companies, then by <MadCap:variable name="Variables.tick" />ing <span class="field">Add To Other Views</span>, this <MadCap:variable name="Variables.pl supplier" />/subcontractor will also be added to your views in these other <MadCap:variable name="General.ProductName" /> companies.
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Add New Company – General Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p MadCap:conditions="COINS.UKOnly"><img src="../../Images/PO/PO_001305.png" class="HalfWidth" /></p><p MadCap:conditions="COINS.USOnly"><img src="../../Resources/USA Imports/1.0 - PRIME CI - Creating a Company/Setting Up a New Company_5.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+            </ol>
+        </div>
+        <h2>Central Repository Views</h2>
+        <p>The Central Repository can be separated into up to five levels of view, from Database/Group (Level 1), down to Region, or even Office level (Level 5 being the lowest level). Users are set up with a base view, between levels 2-5. A user will have access to go up levels, to view larger subsets of the Central Repository. When adding a new <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />/Subcontractor, it will be added to your base view as well as the levels above it. For example for a level 3 user (for example, Regional view), the new <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />/Subcontractor will be added to level 3, and also to level 2 (Company) and level 1 (Group/Database).</p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_scd-rec.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_subtypes.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_suptypes.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

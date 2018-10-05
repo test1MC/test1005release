@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Rate Type Validations</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Rate Type Validations</h1>
+        <p class="Body">Validations <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>exist to suppress changes to Rate Types used for <MadCap:variable name="Variables.Sv Valuations caps" /> at the Series or <MadCap:variable name="Variables.Jc Contract caps" /> level. These validations are discussed in the sections below.</p>
+        <h2 MadCap:autonum="1.1 "><MadCap:variable name="Variables.Jc Contract caps" /> Maintenance</h2>
+        <p class="Body">Rate Type changes at the <MadCap:variable name="Variables.Jc Contract caps" /> level (with no restrictions) are only allowed under the following conditions:</p>
+        <ul>
+            <li class="ListBullet3">No Rate Type is defined on any Sales Series.</li>
+            <li class="ListBullet3">No <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Valuation caps" /> transactions exist.</li>
+        </ul>
+        <p class="Body">This means that changes are only allowed to a new Rate Type with the same source types and Extra Payroll Groups.</p>
+        <h2 MadCap:autonum="1.2 ">Series Maintenance</h2>
+        <p class="Body">Rate Type changes at the Series level are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>allowed for a new Rate Type with the same source types and Extra Payroll Groups at the <MadCap:variable name="Variables.Jc Contract caps" /> level or if blank.</p>
+        <h2 MadCap:autonum="1.3 ">Rate Types Maintenance</h2>
+        <h3 MadCap:autonum="1.3.1 ">Main Screen</h3>
+        <p class="Body">In <i> <MadCap:variable name="Variables.Commercial Manager caps" /> &gt; Company Config &gt;&#160;Rate Maintenance</i>, any changes to Rate Type sources on the main Rate Types Maintenance screen in the columns <span class="Field">Payroll Transactions from</span>, <span class="Field"><MadCap:variable name="Variables.Jc Contract caps" /> Status Timesheet Transactions from</span>, and <span class="Field"><MadCap:variable name="Variables.Pc Plant caps" /> Transactions from</span> (see <MadCap:xref href="#RateMaintScreen" class="ImageRef"><i>Figure 1:  Rate Types Maintenance Main Screen</i></MadCap:xref>) are allowed only if Rate Type is not used at the <MadCap:variable name="Variables.Jc Contract caps" /> or Series level.</p>
+        <p class="Body">Also, you are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>prevented from deleting a Rate Type and will receive an error message if the Rate Type is used at the <MadCap:variable name="Variables.Jc Contract caps" /> or Series level.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="RateMaintScreen"></a>Rate Types Maintenance Main Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV042_Images/RateTypesMaint.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.2 ">Extra Payroll Groups Tab</h3>
+        <p class="Body">Changes on the <strong>Extra Payroll Groups </strong>tab on the Rate Type Summary browse screen in <span class="Function">Rate Types Maintenance </span>(see <MadCap:xref href="#ExtraPRGroups" class="ImageRef"><i>Figure 2:  Extra Payroll Groups Screen</i></MadCap:xref>) are only allowed if the Rate Type is not used at the <MadCap:variable name="Variables.Jc Contract caps" /> or Series level.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="ExtraPRGroups"></a>Extra Payroll Groups Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV042_Images/RateMain_ExtraPRGps.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.3 ">Used In Tab</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Used In </strong>tab <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been added </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">is found </MadCap:conditionalText>on the Rate Type Summary browse screen in <span class="Function">Rate Types Maintenance</span>, as shown in <MadCap:xref href="#UsedInTab" class="ImageRef"><i>Figure 3:  Used In Tab</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="UsedInTab"></a>Used In Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV042_Images/RateTypeMaint_UsedInTab.png" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="1294" MadCap:lastWidth="1266">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Small works orders</h1>
+        <p>If the EC/SWWBMEMO parameter is set to Y then the workbench will first break down the order number found in the &lt;BuyersOrderNumber&gt; tag in the XML according to the order number format and prefix set in the PO/PONUM1, PO/POORDPFX and PO/POPFXFST parameters. Having decided what the order number should look like the workbench then looks for another / character. If one is found then the workbench assumes that any characters after this is a WBS code, for example M-v7w/0001/001 will be parsed as order number M-v7w/0001 and WBS code 001. If the order number is found in the <MadCap:variable name="General.ProductName" /> company the “WBS code” value is stripped from the order number and placed at the front of the description field in the Details screen. The variation order processing explained above doesn’t happen.</p>
+        <p>In the example below, the PO number format is set to Contract/Prefix/OrderNumber. The invoice comes in with an order number v7w/HM/0003/001. V7w/HM/0003 is a valid committed order so the workbench has removed the ending /001 and put it into the description.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">COINSplus Small works WBS code</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/Small works orders.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

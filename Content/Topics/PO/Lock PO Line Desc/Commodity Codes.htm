@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109" MadCap:lastBlockDepth="7" MadCap:lastHeight="978" MadCap:lastWidth="1135">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Locking the Description on PO Lines - </MadCap:conditionalText>Commodity Codes</h1>
+        <p>If any of the <a href="Parameters.htm">parameters used to lock order line descriptions</a> are set to Y, the following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>fields are available on <span class="function">Commodity Workbench</span>.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/Procurement/Lock PO Line Desc/Commodity Codes.png" class="FullWidth" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Additional Description Rule<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether any additional text is required when using this commodity on an order.</p>
+                    <p>The options are:</p>
+                    <ul>
+                        <li>Default to Header Code (the rule on the header code applies; this is only available on detail commodity codes)</li>
+                        <li>Not Required (the additional text box is not visible on order line entry)</li>
+                        <li>Mandatory (the additional text box cannot be left blank during order line entry)</li>
+                        <li>Optional (the additional text box can be left blank during order line entry)</li>
+                    </ul>
+                    <p>For example, you may have a header code for bricks on which the <span class="field">Additional Description Rule</span> is set to Mandatory.  Typically, you may set every detail code below that head code to “Default to Header Code”.  In this way, you are minim<MadCap:variable name="Variables.is" />ing the maintenance effort.  However, you can then visit certain detail commodity codes within that same header code and set their Rule to, say, “Optional”.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Coaching Label for Additional Description<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Text explaining to the user that they should enter additional information specific to the selected commodity code.  So, for example, on a commodity code that represented some sort of conduit you might set this text to “Please specify size (e.g. 10m) and finish (e.g. Steel)”.  </p>
+                    <p>Note that you may not want to enter any coaching text on certain detail commodity codes because their related header code’s coaching text should suffice.  During order entry <MadCap:variable name="General.ProductName" /> display the coaching text from the header code if the selected commodity code’s coaching text is blank.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="3301" MadCap:lastWidth="854" MadCap:conditions="COINS.Internal">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Administration</h1>
+        <h2>Grades</h2>
+        <p>Found in JC&gt;Timesheets&gt;Set Up menu. Grade list for UK shown below:</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Administration.png" class="FullWidth" />
+        </p>
+        <p>Example of CONS grades</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Administration_1.png" class="FullWidth" />
+        </p>
+        <p>…and many more CON* timesheet activities. Then there are the following: </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Administration_2.png" class="FullWidth" />
+        </p>
+        <p>…and also OH* activities (all zero cost rate), first few shown below:</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Administration_3.png" class="FullWidth" />
+        </p>
+        <p>Note that other DEV* and TEC* activities are not in above list, preventing consultants (that have the Grade CONS) from using DEV* (except DEVPDR) and TEC* timesheet activities. </p>
+        <p>Similar logic applies to other departments.</p>
+        <h2>Timesheet Activities </h2>
+        <p>Found in JC &gt;Timesheets&gt;Set Up menu. Example below</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Administration_4.png" class="FullWidth" />
+        </p>
+        <h2>Employee Departments </h2>
+        <p>Found in JC &gt;Timesheets&gt;Set Up menu. Example below. Note that this list is independent of the General Ledger GL Element 1 list of departments. The list below is used primarily for Timesheet Approvals, or for sorting / listing JC timesheet employees. </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Administration_5.png" class="FullWidth" />
+        </p>
+        <h2>Setting up a new department and allocating employees </h2>
+        <p>The following steps need to be followed:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Identify / create GL Element 1 for the department.</li>
+            <li style="list-style-type: disc;">Create HR / Payroll department and JC Timesheet employee department. </li>
+            <li style="list-style-type: disc;">Create T* contract for the new department.</li>
+            <li style="list-style-type: disc;">Create X* contract for the new department (to allow cross charging into the new department). May need to create I* contracts also. </li>
+            <li style="list-style-type: disc;">Create any new <MadCap:variable name="Variables.Cost Heads caps" /> (if required). Create any new Professional Billing Products (if required) to match the new Cost Heads. </li>
+            <li style="list-style-type: disc;">Always create Contract Specific Cost Code(s) for the new contracts.  </li>
+            <li style="list-style-type: disc;">Create any new Timesheet Activities specifically required for that department. This will likely include a single CHGx* activity for cross department charging. Map the timesheet activities to the appropriate debit and credit Analysis Codes (i.e. <MadCap:variable name="Variables.Cost Heads caps" />).</li>
+            <li style="list-style-type: disc;">Create Grade for new department, and allocate Timesheet Activities &amp; cost rates.</li>
+            <li style="list-style-type: disc;">Create / allocate employees into new department, ensuring that appropriate Grade and Analysis are added in JC Timesheet Employee maintenance, and the corresponding Payroll set up is done (so that Payroll is costed to the correct GL Element 1 department).</li>
+        </ul>
+        <h2>Employee role changes </h2>
+        <p>Use the following as a checklist:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Is the employee changing department? If yes, then:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">Amend payroll costing</li>
+            <li style="list-style-type: circle;">Amend JC Timesheet Employee record – department, grade and analysis (T contract)</li>
+            <li style="list-style-type: circle;">Contract security – amend code to new T contract, or just enter T if no longer entering timesheets</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Contract Manager – if applicable, check that person is set up and user id is linked</li>
+            <li style="list-style-type: disc;">User maintenance – amend user groups if required</li>
+            <li style="list-style-type: disc;">Is the employee a leaver? If yes:</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 72pt;">
+            <li style="list-style-type: circle;">Contract security – blank out entries to remove access and remove of current employee list</li>
+            <li style="list-style-type: circle;">User security – remove access</li>
+            <li style="list-style-type: circle;">JC Timesheet employee maintenance – mark as a leaver and enter leaving date. </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

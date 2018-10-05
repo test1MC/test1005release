@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Configurable Accident Forms</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable Accident Forms</h1>
+    <p>The Accident Form document type allows you to configure documents for printing accident forms.</p>
+    <p>Define the layout of accident forms using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <div class="process">
+      <h2 class="print">To configure accident forms:</h2>
+      <ol>
+        <li>Use the document type <span class="userinput">Accident Forms (H&amp;S)</span>.</li>
+        <li>Configure the BODY form to print details of any witness records. This uses the table pp_orgtype.</li>
+        <li>Configure an additional form (give it a name on the Extras tab) to print any images linked to the accident record using <MadCap:variable name="General.ProductName" /> Document Storage. GIF, TIFF and JPG files will be printed, PDF will be appended. Use the field <span class="field">RO_ExtrFile^Ext</span>.</li>
+      </ol>
+      <p>Accident forms use the following tables: <br /> hr_incident - the accident record<br /> pp_accidents - association of the accident record and injured person with injury details<br /> pi_people - H&amp;S record of the person on site<br /> pp_orgtype - witnesses (this is the body record)</p>
+    </div>
+  </body>
+</html>

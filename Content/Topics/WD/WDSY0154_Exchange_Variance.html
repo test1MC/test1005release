@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1037" MadCap:lastWidth="810">
+  <head>
+    <title>Exchange Variance</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Exchange Variance</h1>
+    <p> </p>
+    <p>This is a standard accounting concept. If you receive an invoice today from a <MadCap:variable name="Variables.pl supplier" /> who you work with in Russian Roubles (RUB), your account and invoice document will be in RUB. Assume the exchange rate today with GBP is 50. An invoice for RUB 50,000 will be held as this value in account and document currencies, but in base will be converted to GBP 1,000.</p>
+    <p>When you subsequently come to pay the invoice some time later, the exchange rates may have changed. The rate may now be 40. You still need to pay the Russian <MadCap:variable name="Variables.pl supplier" /> RUB 50,000, but this is now GBP 1,250, so there is a difference of GBP 250. The cost of this is accounted for in the Exchange Variance account in the <span class="mODULE">General Ledger </span>postings. There are a range of points in <MadCap:variable name="General.ProductName" /> where this account can be posted to.</p>
+    <p />
+    <table style="border-collapse: collapse; font-size: 80%" cellpadding="3">
+      <tbody>
+        <tr>
+          <td style="font-size: 100%; border: 2px navy outset; background-color: #ffffa4; width: 20mm; height: 3cm; text-align: center; vertical-align: middle;" rowspan="4">Invoice<br />50,000 RUB<br />Entered in <br /><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></td>
+          <td rowspan="4"> </td>
+          <td style="border: 1px solid black;">Base Currency (GBP)</td>
+          <td style="border: 1px solid black;"> 1,000.00</td>
+          <td> </td>
+          <td>Posted to GL </td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">
+            <MadCap:variable name="Variables.Jc Contract caps" /> Currency (GBP)</td>
+          <td style="border: 1px solid black;"> 1,000.00</td>
+          <td> </td>
+          <td>Posted to <MadCap:variable name="Variables.Jc Contract caps" /> Status</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">Account Currency (RUB)</td>
+          <td style="border: 1px solid black;">50,000.00</td>
+          <td />
+          <td>Posted to account in ledger (in this case, PL)</td>
+        </tr>
+        <tr>
+          <td colspan="4">   </td>
+        </tr>
+        <tr>
+          <td colspan="3">Exchange Rate: 50</td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="border-collapse: collapse; font-size: 80%" cellpadding="3">
+      <tbody>
+        <tr>
+          <td style="font-size: 100%; border: 2px navy outset; background-color: #ffffa4; width: 20mm; height: 3cm; text-align: center; vertical-align: middle;" rowspan="4">Payment<br />raised for<br />50,000 RUB</td>
+          <td rowspan="4"> </td>
+          <td style="border: 1px solid black;">Base Currency (GBP)</td>
+          <td style="border: 1px solid black; text-align: right">1,250.00</td>
+          <td />
+          <td>Posted to GL</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">
+            <MadCap:variable name="Variables.Jc Contract caps" /> Currency (GBP)</td>
+          <td style="border: 1px solid black; text-align: right">1,250.00</td>
+          <td> </td>
+          <td>Posted to <MadCap:variable name="Variables.jc contract" /> cash</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">Account Currency (RUB)</td>
+          <td style="border: 1px solid black;">50,000.00</td>
+          <td />
+          <td>Posted to account in ledger (in this case, PL)</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black;">
+            <span style="color: red;">Exchange Variance (GBP) </span>
+          </td>
+          <td style="border: 1px solid black;" class="amount">
+            <span style="color: red;">250.00</span>
+          </td>
+          <td> </td>
+          <td>Posted to exchange gains and losses account </td>
+        </tr>
+        <tr>
+          <td colspan="3">Exchange Rate: 40</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Unreal<MadCap:variable name="Variables.is" />ed Exchange Variance</h2>
+    <p>Because the exchange rate movements such as above can be significant, it is normal to check periodically the transactions held on the system in foreign currencies, to get early warning of significant differences, and to make provisions for them.</p>
+    <p>You can report on the unreal<MadCap:variable name="Variables.is" />ed variance using the Unreal<MadCap:variable name="Variables.is" />ed Variance Reports in the appropriate ledger.</p>
+    <p>Using the Unreal<MadCap:variable name="Variables.is" />ed Variance Reports, you can also create unreal<MadCap:variable name="Variables.is" />ed variance journals. These are balance sheet liability transactions, which are backed out in the following period. They can give you early warning of significant exchanges losses (or gains!). Unreal<MadCap:variable name="Variables.is" />ed variance amounts produced by these journals are posted to the unreal<MadCap:variable name="Variables.is" />ed variance account specified on the currency record.<br /></p>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Microsoft-Active-Directory</h1>
+        <p>This sub-task covers the process required to extract the signing Certificate Authority’s certificate from an Active Directory server.</p>
+        <ol>
+            <li>
+                <p>Using a domain or local administrator account, log into the Active Directory server.</p>
+            </li>
+            <li>
+                <p>From the Windows Start icon, select “<b>Run</b>” and enter: <b>mmc</b></p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0014.png" class="FullWidth" />
+                </p>
+                <p>Press Enter to launch the Microsoft Management Console. If prompted for User Account Control verification, accept it with a “Yes” response.</p>
+            </li>
+            <li>
+                <p>From the displayed console, select File → Add/Remove Snap-in... as shown below:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0015.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>From the Add or Remove Snap-ins window, highlight Certificates and then click the Add button</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0016.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Select Service account and click the Next button</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0017.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Select the Local computer option and click the Next button</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0018.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Highlight Active Directory Domain Services and click the Finish button.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0019.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>The Certificates - Service (Active Directory Domain Services) snap-in should now be added to the console. Click the OK button to accept the added snap-in.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0020.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Open the Certificates tree on the left of the screen and navigate to NTDS\Personal→ Certificates. You need to identify the Issuer of the certificate used for the SSL connection. If there are no certificates listed, as shown below, then it appears that Windows uses the first available Server Authentication certificate found on the local computer. If you see a certificate listed, skip to step 11.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0021.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Repeat steps 4 to 6, this time selecting Local Computer at step 5. Find the first certificate within Personal → Certificates that contains an intended purpose of Server Authentication</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0022.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Identify the certificate issuer as shown below:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0023.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Navigate to <span class="Function">Certificates – Service (Active Directory Domain Services) → NTDS\Trusted Root Certification Authorities →Certificates</span> and locate the Issuer’s certificate</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0024.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Double-click on the Issuer’s certificate and in the opened window click the Details tab.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0025.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Click Copy to File and then select Next on the opened window.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0026.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Select DER encoded binary X.509 (.CER) and click the Next button</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0027.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Enter a file location on disk to use to store the certificate and then click the Next button. Use a meaningful name for the certificate file so that it is easy to identify</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0028.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Review the export request and click the Finish button.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0029.png" class="FullWidth" />
+                </p>
+                <p>If the export was successful an acknowledgement message will be displayed. The generated certificate file will contain the Certification Authority’s certificate (or CA cert for short). This file must be transferred to your <MadCap:variable name="General.ProductName" /> server for use by <MadCap:variable name="General.ProductName" /> in making a secured connection to the Active Directory server.</p>
+                <p>If there are many Active Directory servers within your domain, then this process must be completed for each Active Directory server that <MadCap:variable name="General.ProductName" /> is required to use. You will only be required to extract Issuer certificates where the Issuer certificate is different from ones previously extracted.</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<body>
+<STYLE>
+body\<MadCap:variable name="Variables.font-size:11px"/>
+div.graphic\<MadCap:variable name="Variables.
+height: 430px;
+width: 700px;"/>
+div.graphic\<MadCap:variable name="Variables.
+position:relative;
+"/>
+div.group\<MadCap:variable name="Variables.
+position:absolute;
+display:run-in;
+width:200px;
+min-height:100px;
+padding:10px;
+margin:10px
+"/>
+div.group.int\<MadCap:variable name="Variables.
+   border:solid 1px black;
+background-color: #53555a;
+color: #ffffff;
+border-radius: 10px;
+" style="text-transform:capitalize;"/>
+div.group.ext\<MadCap:variable name="Variables.
+border:none;
+background-color:transparent;
+"/>
+div.company\<MadCap:variable name="Variables.
+border:solid 1px black;
+background-color: #ffffff;
+border-radius: 10px;
+width:110%;
+min-height:50px;padding:10px;margin:10px;
+color:#97999b;
+" style="text-transform:capitalize;"/>
+div.company li\<MadCap:variable name="Variables.list-style:none;
+border:solid 1px black;
+background-color: #f47322;
+color: #000000;
+border-radius: 10px;
+min-height:30px;
+width: 100%;
+margin-left:100px;
+padding:10px;
+margin:10px
+" style="text-transform:capitalize;"/>
+div.ext li\<MadCap:variable name="Variables.
+margin-left:-50px;
+"/>
+</STYLE>
+<div class="graphic">
+<canvas id='myCanvas' height="430" width="700"></canvas>
+<script>
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.strokeStyle="#FF0000";
+ctx.moveTo(310,120);
+ctx.lineTo(370,120);
+ctx.lineTo(360,115);
+ctx.moveTo(360,125);
+ctx.lineTo(370,120);
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle='#0066ff';
+ctx.moveTo(370,230);
+ctx.lineTo(310,230);
+ctx.lineTo(320,225);
+ctx.moveTo(310,230);
+ctx.lineTo(320,235);
+ctx.fillText('Purchase Order',305,110);
+ctx.fillText('Invoice',325,220);
+ctx.stroke();
+</script>
+<div class="group int" style="top: 10px; left: 10px;">XYZ Group
+<div class="company">XYZ Civils &amp; Construction
+<ul>
+<li>XYZ Civils &amp; Construction<br />North Division</li>
+<li>XYZ Civils &amp; Construction<br />South Division</li>
+<li>XYZ Civils &amp; Construction<br />Accounts Dept. - <MadCap:variable name="Variables.purchase ledger" style="text-transform:capitalize;"/></li></ul>
+</div>
+<div class="company">XYZ Developments<!-- End Company--></div>
+<!-- End Group--></div>
+<div class="group ext" style="top: 20px; left: 375px;">
+<div class="company">ABC Materials
+<ul>
+<li>Bolton Branch</li>
+<li>Portsmouth Branch</li>
+<li>Manchester Payment <MadCap:variable name="Variables.centre" style="text-transform:capitalize;"/> Branch</li>
+<li>Reading Payment <MadCap:variable name="Variables.centre" style="text-transform:capitalize;"/> Branch</li>
+<li>Northampton Head Office</li></ul>
+<!-- End Company--></div>
+</div>
+ </div>
+
+</body>
+</html>

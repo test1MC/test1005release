@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CB/LVCCPACB - Leave any Customer Cash that has been partially allocated in Cash Book</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CB/LVCCPACB - </span> Leave any Customer Cash that has been partially allocated in Cash Book
+</div>
+<div class="param_def">
+<p>Y = When Customer Cash is distributed to either the <MadCap:variable name="Variables.Sales Ledger caps"/> or <MadCap:variable name="Variables.Contract Sales caps"/> Ledger and the amount  entered does not get fully allocated, then the portion that is left will post to the <MadCap:variable name="Variables.Cash Book caps"/> as Customer Cash. I.e. The unallocated amount will stay in <MadCap:variable name="Variables.Cash Book caps"/>.</p>
+<p>N = When Customer Cash is distributed to either the <MadCap:variable name="Variables.Sales Ledger caps"/> or <MadCap:variable name="Variables.Contract Sales caps"/> Ledger and the amount  entered does not get fully allocated, then the portion that is left will post to either the <MadCap:variable name="Variables.Sales Ledger caps"/> or <MadCap:variable name="Variables.Contract Sales caps"/> Ledger as unallocated cash.</p>
+<p>When the parameter is set to Y, then if any Customer Cash is selected but cannot be fully distributed then there is no need to enter a 'CC' analysis line, as during posting the Customer Cash line will be generated automatically. This is designed to enable faster allocation of Customer Cash.</p>
+</div>
+</body>
+</html>

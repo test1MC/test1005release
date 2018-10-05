@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="3716" MadCap:lastWidth="610">
+    <head><title>Importing Order Lines From Excel</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Importing Order Lines From Excel</h1>
+        <p>Although features exist in <MadCap:variable name="General.ProductName" /> for&#160;<a href="WDPO0333_Template_Orders.html">Template Orders</a> (usually order type T), some users find it more convenient to retain the framework or manage the build-up of orders off-line.&#160; For instance, you may have material order schedules held in one or more spreadsheets.</p>
+        <p>In addition, if for example you know the <MadCap:variable name="Variables.pl supplier" />'s product code, you can add this detail to the order.</p>
+        <h2>Limitations</h2>
+        <p>The import is not available for the following types of order: <MadCap:variable name="Variables.pc rehire" />, asset, workshop, <MadCap:variable name="Variables.pc plant" /> memo (specified by PO parameter <span class="parameter">POMEMTYP</span>), lump sum, open orders (specified by PO parameters <span class="parameter">OPKTYPE</span>, <span class="parameter">OPAGTYPE</span>, <span class="parameter">OPENTYPE</span>), <MadCap:variable name="Variables.pc plant" /> orders (except that import is allowed on <MadCap:variable name="Variables.pc plant" /> template orders where the <span class="field">Qty Class</span> is "hidden" or "no hide"), subcontract orders which are not non-VAP matrix or schedule rate (specified by PO parameters <span class="parameter">SCNVPMTX</span>, <span class="parameter">SCSORTYP</span>).</p>
+        <div class="process">
+            <h2 class="print">To import order lines:</h2>
+            <ol>
+                <ol>
+                    <li>Start entering a Material Order <a href="WDPO0311_Entering_an_Order.html">in the normal way</a>.&#160;
+<p>You can also import order lines onto an existing order; click the <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> on the <span class="function" title="Function:%WPO101ATPHL">Material Orders</span> browse.</p></li>
+                    <li>Fill in the header details on the&#160;Main tab.</li>
+                    <li>From the Options menu, select <span class="userselect">Import Lines</span>.</li>
+                    <li>Fill in details of the file that contains the lines you wish to import:
+<p><img src="../../Images/PO/PO_032501.png" class="FullWidth" /></p></li>
+                    <ul>
+                        <li>Commodity code is the 'fill-in' code used for any lines on your spreadsheet which have no code. (This must be a valid commodity code in the environment you are importing to.&#160; It is not needed if all lines have a commodity code!)</li>
+                        <li>Initial text is&#160;used to create a simple text line as the first order line on the order.</li>
+                        <li>If you intend to take your file directly from your PC then choose "Local" option and browse for the file or enter the path and file name - ensuring that your path name is correct AND that the file in question is closed.
+<p>If, when importing from your PC, you get the error "File Does not Exist"&#160;- this is either caused by you not entering the PC File name correctly (which is why we suggest you always use the same one) or it may be a permission problem with your home directory.&#160;</p></li>
+                        <li>If you want to import from a file on the <MadCap:variable name="General.ProductName" /> Host, select "Host" and enter the path and filename.&#160; Remember that file names are case sensitive.</li>
+                    </ul>
+                    <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays the message:</p>
+&#160; &#160; &#160;<strong>An Import PO Lines process is still running. Please refresh this page in 10-15 sec.&#160;</strong></li>
+                    <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/reload.svg" class="button" /> to refresh the page&#160;and see the lines that have been imported.
+<p>When refreshed you should see your lines.&#160; If the order lines have not been imported, look at the <em>PO Lines Import Results</em> report on <span class="function" title="Function:%WSY2130BCRR">Report Status</span> to find out why.&#160; Notice that the <MadCap:variable name="Variables.pl supplier" />'s product codes (from the CSV file) are inserted at the front of the Description.</p></li>
+                    <li>The order can now be edited in the normal way.</li>
+                </ol>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Set up</h2>
+            <p>There are no specific set-up requirements for this feature; however your spreadsheet for importing needs to be in CSV format with the following layout:</p>
+            <ul>
+                <li>The first row of the file is treated as caption headings.</li>
+                <li>The remaining rows must have columns as follows:
+<p>&#160;</p><ul><li>A: Commodity code (this can be blank, in which case the default commodity code will be used)</li><li>B: Description (up to 720 characters; a row with only a description becomes a text line)</li><li>C: Quantity</li><li>D: Unit of Quantity (these must be <MadCap:variable name="General.ProductName" /> codes)</li><li>E: Price</li><li>F: Per</li><li>G: Discount</li><li>H: WBS code (if you are not using WBS codes, you must still have a (blank) column for this)</li><li>I: <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> product code (optional)</li><li>J: <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> code (if you supply a non-blank value in this column then you must leave the Commodity Code blank)</li><li>K: <MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" /> (optional)</li><li>L: <MadCap:variable name="Variables.bq boq" style="text-transform: capitalize;" /> Resource code (only on <MadCap:variable name="Variables.bq boq" style="text-transform: capitalize;" />-type orders)</li><li>M: Original Order Item Number.&#160; This is optional and is used when importing <MadCap:variable name="Variables.po variation" /> lines; it is ignored when importing order lines for a new order.&#160; See below.</li><li class="coTAXTYPEsales redc">N: Sales Code. &#160;This overrides any defaults from the commodity code. &#160;
+<p class="coTAXTYPEsales redc">(If the sales code in the import file is blank, then for <MadCap:variable name="Variables.jc contract" />-based orders (that is, <MadCap:variable name="Variables.pc plant" />, material, subcontract, <MadCap:variable name="General.ProductName" /> uses&#160;the sales code from the cost code related to the commodity code; for&#160;non-<MadCap:variable name="Variables.jc contract" />-based order (that is, overhead, workshop, <MadCap:variable name="Variables.st stock" />), <MadCap:variable name="General.ProductName" /> uses&#160;the sales tax code from the order.)</p></li></ul><img src="../../Resources/Images_P-R/Procurement/PO_032401.png" /></li>
+            </ul>
+            <p>Note: Even if you do not use certain items, like Discount, WBS and Product code they need to be present as empty fields.</p>
+            <h3>Importing <MadCap:variable name="Variables.po variation" style="text-transform: capitalize;" /> Lines</h3>
+            <p>If you are importing lines for a <MadCap:variable name="Variables.po variation" />, you can use either the product code or the item number on the original order to identify the lines on the original order to which the imported <MadCap:variable name="Variables.po variation" /> lines refer.&#160; If you are not using product codes or are using non-unique product codes, you must use the item number concept to apply changes to existing order lines.</p>
+            <p>If a value is specified in column M (Item Number), then <MadCap:variable name="General.ProductName" /> will&#160;check that the value is unique to the CSV file. If it is not unique then an error is generated. If the value is unique then <MadCap:variable name="General.ProductName" /> will attempt to find the order line with that item number. If no order line can be found then an error will be generated.</p>
+            <p>If no value is specified in column M, then <MadCap:variable name="General.ProductName" /> will attempt to find the order line based upon the value in column I (the <MadCap:variable name="Variables.pl supplier" /> product code) if there is a value in column I. However, to find the order line this value must be unique to the order.</p>
+            <p>If no order line can be found then the assumption is that a new order line is being added to the <MadCap:variable name="Variables.po variation" />.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_scvoimad.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

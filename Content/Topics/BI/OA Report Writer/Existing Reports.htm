@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="4754" MadCap:lastWidth="1152">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Existing Reports</h1>
+        <p>If you are returning to an existing report to maintain fields, you can access each field individually or add a new field as required.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports_1105.png" class="FullWidth" />
+        </p>
+        <p>To Add fields to the Report simply click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" />from the selection of icons on the bottom of the screen. </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports_2_1105.png" class="FullWidth" />
+        </p>
+        <p>Choose the <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports_3.png" style="visibility: visible;mso-wrap-style: square;width: 18px;height: 17px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" /> Button to choose from a list fields available to appear on the report. </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports_4_1105.png" class="FullWidth" />
+        </p>
+        <p>Use the <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Existing Reports_5.png" style="visibility: visible;mso-wrap-style: square;width: 24px;height: 24px;" MadCap:conditions="COINS.Pre-v1105" /> <img src="../../../Resources/Images/COINS Graphics/SVG buttons/choose.svg" class="icon24px" />Button to select the appropriate field.</p>
+        <table style="width: 100%;">
+            <col style="width: 145px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Variable</td>
+                    <td>If the field is required to be used in a calculation then a variable can be assigned</td>
+                </tr>
+                <tr>
+                    <td>Label</td>
+                    <td>The Name which will appear on the top of each column on the report.</td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td><MadCap:variable name="General.ProductName" /> Report Writer will create default column widths, these can be overridden as required by entering a value (in mm). (Note that the fields should not exceed the number of mm assigned in the page layout i.e. Standard A4 Landscape Report Layout is 297mm).</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>
+                        <p>If you require the field to be totalled at the end of each column then <MadCap:variable name="Variables.tick" /> the box. In conjunction with this field you can select from the Total Types as to which type of Total you want to see. </p>
+                        <p>Available Options are the Maximum, Minimum, Average, Distinct Values or you can count the number of records by using the Count Option – By default all totals will Add.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hidden</td>
+                    <td>You can now hide a field, so if you require the information from a field (e.g.:- to be used in a calculation) but you do not necessarily want this field to appear on the report then <MadCap:variable name="Variables.tick" /> this box.</td>
+                </tr>
+                <tr>
+                    <td>X &amp; Y</td>
+                    <td>These two fields are the axes for the graph.&#160; </td>
+                </tr>
+                <tr>
+                    <td>Calculation</td>
+                    <td>
+                        <p>You can now put complex or simple calculations into fields. Example of a simple calculation would be after assigning two fields to variables a and b – a third field can be added displaying the sum of these two fields by entering a + b into the calculation field. </p>
+                        <p>
+                            <MadCap:xref href="../Calculations/Calculations Overview.htm" target="_blank" MadCap:conditions="COINS.ScreenOnly">Calculations Overview</MadCap:xref>
+                        </p>
+                        <p MadCap:conditions="COINS.ScreenOnly">
+                            <MadCap:xref href="../Calculations/OA Calculation Syntax.htm">OA Calculation Syntax</MadCap:xref>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>
+                        <p>The format of a field will take on the default format as seen in the Database Enquiry however if you use a calculation a format will have to be defined on the field if the information is required to be standardised on the report.&#160; </p>
+                        <p>Some example formats are:</p>
+                        <p>-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9to display monetary values without pence</p>
+                        <p>(&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99)to display negatives with parentheses</p>
+                        <p>-&gt;&gt;9.99%to display values as percentages</p>
+                        <p>&#160;</p>
+                        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;"> Always ensure your formats allow for negative values.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        </p>
+        <p>After all the fields within the field tab are defined click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>&#160;</p>
+    </body>
+</html>

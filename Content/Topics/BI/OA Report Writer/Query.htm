@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="796" MadCap:lastWidth="602">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" /> Report Data Source Definitions</h1>
+        <p>Information from RDBMS systems is retrieved using query languages. Progress RDBMS (The database used by coins) uses Progress 4GL query language. In response to a query, the database returns a result set, which is just a list of rows containing the answers. The simplest query is just to return all the rows from a table, but more often, the rows are filtered in some way to return just the answer wanted.</p>
+        <p>Example Query on the coins database to retrieve all contracts (jc_job) that belong to company 1:</p>
+        <p class="Example">FOR EACH jc_job WHERE jc_job .kco = 1</p>
+        <p>Often, data from multiple tables gets combined into one, by doing a join. Conceptually, this is done by taking all possible combinations of rows (the "cross-product"), and then filtering out everything except the answer. </p>
+        <p>Example Query on the coins database to retrieve all costheads (jc_costcode) that belong to contracts (jc_job) that belong to company 1:</p>
+        <p class="Example">FOR EACH jc_job WHERE jc_job .kco = 1,<br></br>EACH jc_costcode OF jc_job</p>
+        <p>The flexibility of relational databases allows programmers to write queries that were not anticipated by the database designers. As a result, relational databases can be used by multiple applications in ways the original designers did not foresee, which is especially important for databases that might be used for decades. This has made the idea and implementation of relational databases very popular with businesses.</p>
+        <p><MadCap:variable name="Variables.CompanyName" /> OA uses a simplified version of the 4GL query language in combination with the RSP’s to extract the data for reports and enquiries (for further information on RSP’s – Record Service Procedures – see the relevant <MadCap:variable name="General.ProductName" /> BI documentation). </p>
+        <p><MadCap:variable name="Variables.CompanyName" /> OA uses the query to decide which records are accessed from the coins database from the database. The Page Design (Report Design) will determine which fields from these records are displayed (either on screen or in a report).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/Query.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../Report_Data_Source_1_1105.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 630px;" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Notes</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Notes or technical information about the query.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Query</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>4GL code that will select the appropriate records in a query.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Condition</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Query condition method for the query. The method specified is called and if the returned logical value is false then the record is excluded from the query.</p>
+                        <p>Conditions provide a means of giving additional functionality to the Query, but these must be pre-defined by <MadCap:variable name="General.ProductName" /> in order to be used and are stored in certain Record Service Procedures.&#160; If you have a requirement to access information in the data tables that does not appear to be straight-forward to put into standard Progress 4GL, please contact <MadCap:variable name="General.ProductName" /> for advice on possible Conditions that may be available.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Calculate Condition</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">A calculate condition is used to limit the range of data returned to a report. The calculation is performed on each line of the report to determine whether the record should be included or not. The calculation should return either a 1 for true (i.e. display the line) or a 0 for false (do not display the line). The calculation should be a valid calculation on fields available to the report. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Input Form</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The input form used to prompt for run-time selection criteria for this report query. This is optional. </p>
+                        <p>It is possible to associate a Report Writer query with selections criteria, either standard or user defined. &#160; User Defined forms are created using the Page Designer Tool.The query must include the appropriate {tttSelect} token.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Data Set Definition</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The data set definition(s) to be used for this query.</p>
+                        <p>A comma separated list of data set definition codes.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Field List</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The list of fields that will be visible to the user of this query from the available fields in the query.</p>
+                        <p>You can enter a CAN-DO list of fields to be shown.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Post Processing</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

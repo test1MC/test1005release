@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="792" MadCap:lastWidth="601">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>
+      <MadCap:variable name="Variables.Future Payments/Receipts caps" /> Configuration</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">
+      <MadCap:variable name="Variables.Future Payments/Receipts caps" /> Configuration</h1>
+    <p>In the Middle East it is a normal business practice that for substantial purchases, house sales and tenancy agreements a series of Post Dated <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> (PDCs) is handed over.  For example, for twelve monthly payments a company would send twelve separate <MadCap:variable name="Variables.cheques" /> with dates in the future.  </p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDCB0042_Future_Payments___Receipts.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print" MadCap:autonum="1.1 ">
+        <MadCap:variable name="Variables.Future Payments/Receipts caps" /> Configuration</h2>
+      <p>To enable the <MadCap:variable name="Variables.future payments/receipts" /> feature, set the <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>parameter <span class="parameter">FUTRPR </span>to <span class="userinput">Y</span>.</p>
+      <p>In PL parameters, specify a hold code for <MadCap:variable name="Variables.future payments" />: set <span class="parameter">FUTRPYHC </span>to the hold code that <MadCap:variable name="General.ProductName" /> will give to invoices that have <MadCap:variable name="Variables.future payments" /> assigned to them.  Make sure that <span class="parameter">PL/USEFINH </span>parameter is set to <span class="userinput">Y </span>as this is required to be able to use financial hold.</p>
+      <p>There is a Print <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> action on the <MadCap:variable name="Variables.future payments/receipts" style="text-transform: capitalize;" /> browses that allows you to print a <MadCap:variable name="Variables.cheque" /> for one or more future payments.  Configure a new document in <span class="function" title="Function:%WSYBSFS">Document Designer</span> using the Future Payments (CB) document type.</p>
+      <p>The following terminology tokens allow for appropriate terminology:</p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <thead>
+          <tr class="TableStyle-COINSBasic-Head-Header1">
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <p class="TableHeader">Term</p>
+            </th>
+            <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+              <p class="TableHeader">Current Display Text</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">future payment/receipt</td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <MadCap:variable name="Variables.future payment/receipt" />
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">future payments/receipts  </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <MadCap:variable name="Variables.future payments/receipts" />
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">future payment </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <MadCap:variable name="Variables.future payment" />
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">future payments  </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <MadCap:variable name="Variables.future payments" />
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">future receipt </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <MadCap:variable name="Variables.future receipt" />
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">future receipts  </td>
+            <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+              <MadCap:variable name="Variables.future receipts" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>You can use <span class="function" title="Function:%WSYBSYW6">Terminology</span> to change the display text for these so that screens display the terms you require (for example 'Post Dated Cheques' or 'Post Dated Checks').</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/CB/cb_futrpr.htm" />
+          <MadCap:relatedTopic src="../Parameters/PL/pl_futrpyhc.htm" />
+          <MadCap:relatedTopic src="../Parameters/PL/pl_usefinh.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

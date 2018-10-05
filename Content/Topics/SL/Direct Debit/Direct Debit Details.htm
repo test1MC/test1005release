@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="7" MadCap:lastHeight="825" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Direct Debit Details Screen</h1>
+        <p>A link on the <span class="field"><MadCap:variable name="Variables.Financial Date caps"></MadCap:variable></span> field of the <span class="Function">Direct Debit Approval Workbench</span> opens the <span class="Function">Direct Debit Details</span> screen. This shows the Direct Debit details that were created during the <span class="function">Statement Print</span> process.</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/Direct Debits/DD Details.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Customer Code</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.Sales Ledger caps" /> account code for the customer.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Customer Name</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The customer’s name.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Int Ref</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The internal reference of the invoice to be paid.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Invoice Date</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The date of the invoice.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>To Pay Amount</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The amount to be paid in this transaction. If the total amount of the invoices is greater than the customer’s Direct Debit limit, this may not be the full amount of the invoice.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Discount Amount</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The amount of any discount applied.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Bank</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The bank account that will be credited by this payment.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Status</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The status of the detail record.</p>
+                    <ul>
+                        <li>To Email - The extract has not been generated (or emailed).</li>
+                        <li>To Approve - The extract has been created and is awaiting approval (which also creates a cash batch).</li>
+                        <li>Incomplete - An unposted cash batch has been created.</li>
+                        <li>Posted - The payment has been posted. </li>
+                        <li>To Cancel - <span class="function"><MadCap:variable name="Variables.cancel" style="text-transform: capitalize;" /> Posted Cash</span> has been used to <MadCap:variable name="Variables.cancel" /> the corresponding payment but the <MadCap:variable name="Variables.cancellation" /> batch has not yet been posted.</li>
+                        <li>Cancelled - The <MadCap:variable name="Variables.cancellation" /> batch has been posted and the Reset Status action can be run.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

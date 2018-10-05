@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="1619" MadCap:lastWidth="828">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Operation</h1>
+        <p>Prior to displaying the screen below, <MadCap:variable name="General.ProductName" /> carries out the following:</p>
+        <ul>
+            <li>Is the current PL period set?&#160; If this is not the case then the following error message is displayed: “No current PL period available for company x”.</li>
+            <li>Is there an unposted Shared Service PL invoice batch (PLINVSS) for the current user and the current PL financial period in the current user’s prime company?&#160; If this is not then case then a batch is created. </li>
+        </ul>
+        <p>The user is taken directly to the list of invoices without the need to create a batch header record.&#160; As many PL Invoice [PLINV] batches as required; are created automatically in the companies derived from the PO Number or Cost Analysis Code.&#160; These batches are marked specifically as Non-scanned Shared Service PLINV batches.</p>
+        <p>The list of invoices remains available for amendment and/or deletion until such time as the “Post Invoices” option is taken.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/Operation.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 167px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" colspan="2" style="font-weight: bold;">
+                        <p><span class="size16">In the header area:</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Period</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The current PL period (display only)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Post invoices button</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Button available for posting the various PL batches that may have been created</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" colspan="2">
+                        <p><span class="size16" style="font-weight: bold;">In the body area:</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">PO Number</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>PO number if present</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Analysis Selector</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Cost Analysis (e.g. contract, overhead department etc )</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">==&gt;</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Company Pointer</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Co</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The company number derived from the PO No or cost analysis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Supplier Account</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Supplier Account no</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Supplier Name</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Supplier Name</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Internal reference</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p> Internal reference no</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Supplier reference</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Supplier reference no</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Txn Type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Transaction Type</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Invoice Date</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Invoice Date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Gross Amount</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Gross Amount of invoice</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Currency</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Currency</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Status</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>As per standard</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">PL Batch</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>The PL invoice batch no in which this invoice is currently located. If the invoice is amended &amp;, by virtue of the new PO no or cost analysis being changed, the company is different; then the invoice will be moved to a different batch in the new company</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        </p>
+        <p>
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

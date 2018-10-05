@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Budget Patterns</h1>
+        <p>Budget Pattern Maintenance allows you to set up budget patterns which act as templates defining how the total budget for an account is applied across the financial periods of a year. Once you assign a budget pattern to an account, you can change the value for any financial period.</p>
+        <p>Navigate to <span class="Function">General Ledger &gt; Budgets &gt; Budgets Setup Maintenance &gt; Budget Patterns</span></p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL-Budgets-0002-1107.png" class="FullWidth" />
+        </p>
+        <p>To add a new pattern Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" />.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL-Budgets-0003-1107.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The code for the budget pattern.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The description for the budget pattern.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Period 1</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">For each of the financial periods, enter a value to represent what proportion of the budget is assigned to that period. <MadCap:variable name="General.ProductName" /> calculates the individual budget figures by dividing the annual budget total by the total in the budget pattern, and multiplying the result by the value in this field.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Total</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">The total of the budget proportions.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For example, the following pattern will assign a 1/12 proportion of the budget to each period</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL-Budgets-0004-1107.png" class="FullWidth" />
+        </p>
+        <p>Therefore If your budget was <MadCap:variable name="Variables.$" />12,000 using this example would apportion <MadCap:variable name="Variables.$" />1,000 to each month.</p>
+        <p>You can also enter a ‘1’ in the periods you only want to have budget data assigned to (for example entering ‘1’ in the first 6 months. Using this method - If your budget was <MadCap:variable name="Variables.$" />12,000, <MadCap:variable name="General.ProductName" /> would apportion <MadCap:variable name="Variables.$" />2,000 into P1-P6</p>
+        <p>and leave P7-P12 blank</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" />.</p>
+    </body>
+</html>

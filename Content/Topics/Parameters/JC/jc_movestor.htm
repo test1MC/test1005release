@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>JC/MOVESTOR - Monthly movement datastores with types</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">JC/MOVESTOR - </span> Monthly movement datastores with types
+</div>
+<div class="param_def">
+<p>A list of data stores that COINS uses to determine whether to generate a <MadCap:variable name="Variables.cv cvr"/> for a <MadCap:variable name="Variables.jc contract"/>.</p>
+<P>For example:</P>
+<P>If <FONT color="#000000"><SPAN class="parameter">MOVESTOR </SPAN>= <SPAN class="userinput">storea|td</SPAN>, then for every <MadCap:variable name="Variables.jc contract"/> <span class="function" title="Function:%WCM3000RJOB">Generate <MadCap:variable name="Variables.Cv cvr caps"/></span> will evaluate the TD value of StoreA for the Open OA <MadCap:variable name="Variables.Commercials caps"/> period. If the value is 0, no <MadCap:variable name="Variables.cv cvr"/> will be generated for that <MadCap:variable name="Variables.jc contract"/>. </FONT></P>
+<P>If <SPAN class="parameter">MOVESTOR </SPAN>= <SPAN class="userinput">storea,storeb|tp,ty </SPAN>then <span class="function" title="Function:%WCM3000RJOB">Generate <MadCap:variable name="Variables.Cv cvr caps"/></span> will evaluate the TP and TY values of StoreA and StoreB (with respect to the OA <MadCap:variable name="Variables.Commercials caps"/> period), and if all four values are 0, no <MadCap:variable name="Variables.cv cvr"/> will be generated.</P>
+</div>
+</body>
+</html>

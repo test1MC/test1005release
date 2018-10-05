@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="7" MadCap:lastHeight="852" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Quick Budget Entry - </MadCap:conditionalText>Standard <MadCap:variable name="Variables.Cost Heads caps" /></h1>
+        <p>Changes have been made to <span class="function">Standard <MadCap:variable name="Variables.Cost Heads caps" /></span> to allow you to specify the budget input method and rate. If using cost code/category data, these are entered at <MadCap:variable name="Variables.cost head" />/category level, otherwise they are entered at <MadCap:variable name="Variables.cost head" /> level.</p>
+        <h2 MadCap:autonum="1.1 "><MadCap:variable name="Variables.Cost Head caps" /> Details</h2>
+        <p>
+            
+            If the JC parameter <span class="parameter">USECCCAT</span> is not set to <span class="userinput">All</span> or <span class="userinput">Used</span>, <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>fields are available on the <MadCap:variable name="Variables.Cost Head caps" /> Details tab.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Quick Budget Entry/Cost Head Mtce.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Budget Input Method	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is a drop-down selector with the following options.</p>
+                    <ul class="CompactList">
+                        <li>Blank - budget costs cannot be entered against the corresponding cost code.</li>
+                        <li>Value - the default when the default category is not <MadCap:variable name="Variables.Labour caps" />.</li>
+                        <li>Hour - the default when the default category is <MadCap:variable name="Variables.Labour caps" />.</li>
+                        <li>Quantity.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Rate	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>If the <span class="field">Budget Input Method</span> is <span class="userselect">Hour</span> or <span class="userselect">Quantity</span>, this is available; it is a drop-down selector with the following options:</p>
+                    <ul class="CompactList">
+                        <li>Actual.</li>
+                        <li>Initial Budget.</li>
+                        <li>	Approved Budget.</li>
+                        <li>Current Budget.</li>
+                        <li>Forecast at Completion.</li>
+                        <li>Each of the calculation programs specified in <span class="parameter">SY/BUDCALC</span>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum="1.2 ">Forecasting Tab</h2>
+        <p>If the JC parameter <span class="parameter">USECCCAT</span> is set to <span class="userinput">All</span> or <span class="userinput">Used</span>, a new section Budget Input Method is displayed. </p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Quick Budget Entry/Cost Head Forecasting Tab.png" class="FullWidth" />
+        </p>
+        <p>This shows a drop-down selector for each cost category defined in <span class="function">JC Configuration</span>. These have the following options.</p>
+        <ul class="CompactList">
+            <li>Blank - budget costs cannot be entered against the corresponding cost category.</li>
+            <li>Value.</li>
+            <li>Hour.</li>
+            <li>Quantity.</li>
+        </ul>
+        <p>If the <span class="field">Budget Input Method</span> is <span class="userselect">Hour</span> or <span class="userselect">Quantity</span>, the <span class="field">Rate</span> field is available for the corresponding category; it is a drop-down selector with the following options:</p>
+        <ul class="CompactList">
+            <li>Actual.</li>
+            <li>Initial Budget.</li>
+            <li>	Approved Budget.</li>
+            <li>Current Budget.</li>
+            <li>Forecast at Completion.</li>
+            <li>Each of the calculation programs specified in <span class="parameter">SY/BUDCALC</span>.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 "><MadCap:variable name="Variables.Cost Head caps" /> Browse</h2>
+        <p>The following columns have been added to the <MadCap:variable name="Variables.Cost Head caps" /> browse. If the JC&#160;parameter <span class="parameter">USECCCAT</span> is set to <span class="userselect">All</span> or <span class="userselect">Used</span>, the columns show fields for each category; otherwise only one field is shown.</p>
+        <p><span class="field">Budget Input</span>
+        </p>
+        <p><span class="field">Hourly Rate</span>
+        </p>
+        <p><span class="field">Qty Rate</span>
+        </p>
+    </body>
+</html>

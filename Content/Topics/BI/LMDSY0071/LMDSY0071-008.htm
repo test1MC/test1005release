@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Workflow Template (multiple Roles)</h1>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template multiple.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>In this template example there are multiple roles which are defined as different authorisation levels required for a Purchase Order dependant on the value of the Order.&#160; As the value of the order is important in this example it should be one of the variables which are defined on launch of the order. Therefore we need to capture this in the initial calculation. Once defined the variable poh_orderval is available to be used within calculation syntax.</p>
+        <h2>Role definition</h2>
+        <p>Copy the Role definition to include the three Levels of authorisation required for this example.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-044-1108.png" class="FullWidth" />
+        </p>
+        <h2>Responsibility definition</h2>
+        <p>&#160;</p>
+        <p>Add the responsibility for each of these roles.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-045-1108.png" class="FullWidth" />
+        </p>
+        <h2>Workflow Template definition (TRPROJ3)</h2>
+        <p>Refer to the workflow template&#160;&#160; TRPROJ3.&#160; See details below:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-046-1108.png" class="FullWidth" />
+        </p>
+        <p>Within the First Fork statement there is calculation syntax allocated which sends the workflow down the correct 'flow route'.&#160;&#160;&#160; Calculation syntax should equate to a TRUE / FALSE (1/0) statement.&#160; For further information on Calculation syntax refer to your designer Module 1 course notes. If the calculation equates to TRUE (1) then the Link will execute otherwise the option will not be available.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-047-1108.png" class="FullWidth" />
+        </p>
+        <p>You will also note that within this workflow template the option to either Commit (P1) /Reject (P2) is dependent upon the value of the order. If the value is below the amount check for the authorisation level the option to Commit (P1) will appear however, if the value of the order exceeds this limit (5K), the option to send an email (E3) of the Order up the chain to authorisation level 2 will appear instead of the Commit Option (P1). &#160; The Option to Reject (P2) will always be available as there is no calculation condition against that option.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-048-1108.png" class="FullWidth" />
+        </p>
+        <p>The path for this workflow template shows the 'flow route' available.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-049-1108.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

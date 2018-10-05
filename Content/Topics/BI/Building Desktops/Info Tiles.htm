@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="4801" MadCap:lastWidth="1220" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><a name="_Toc440873574"></a>Info Tiles</h1>
+        <p>In the previous example, we used Tiles to link to functions that allowed us to work with data in <MadCap:variable name="General.ProductName" />.</p>
+        <p>Another type of Tile, called an Info Tile, can be used to simply display information.&#160; This is essentially a detail page presented as a tile.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">It is important to note that Info Tiles do not automatically refresh – the data displayed will remain static until a manual refresh of the desktop is done.&#160; For this reason, they may not be suitable on a dashboard screen where dynamic data is required.&#160; </p>
+        <p>Create a new function called SYAPLHAINF1.&#160; For this to work correctly, it is IMPORTANT that the Category used is INF – Information Tile and the program is set as wou005.</p>
+        <p>The description for now can be simply Information.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Info Tiles.png" class="FullWidth" />
+        </p>
+        <p>Save this new function, and then add it to the Menu Tab SYALPHAT1S1, setting the size to Normal.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Info Tiles_1.png" class="FullWidth" />
+        </p>
+        <p>Refresh the Desktop to see the result – you should now have an empty Info Tile displayed on the Utilities section.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Now we need to define the.png" class="FullWidth" />
+        </p>
+        <p>Now we need to define the Detail Page that will populate the tile.</p>
+        <p>By default, when a user logs into <MadCap:variable name="General.ProductName" />, tables such as co_config, sysuser and menuparm are already available, so for our first Info Tile we will build a simple tile that displays the details of the logged in user.</p>
+        <p>In Page Designer, create a new Page Section also called SYALPHAINF1.</p>
+        <p>Set the Header Table as sysuser.</p>
+        <p>Click Save and add a Detail Form to the Page.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Now we need to define the_1.png" class="FullWidth" />
+        </p>
+        <p>On the Fields Tab, set the Form filter to Detail and apply the filter.</p>
+        <p>Now on the Details Form add the fields su-userid and su-name</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Now we need to define the_2.png" class="FullWidth" />
+        </p>
+        <p>Again, refresh the Desktop to see the changes.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Now we need to define the_3.png" class="FullWidth" />
+        </p>
+        <p>All of the functionality of a standard Detail Page are available to be used on Info Tiles.</p>
+        <p>To demonstrate this we will add a layout to the data.</p>
+        <p>Create a new field on the Detail Form call LAY1, with the Label of User Details and set View AS to Layout.&#160;&#160; In the Class, enter LAYA.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Now we need to define the_4.png" class="FullWidth" />
+        </p>
+        <p>Save the new field and then for su-userid and su-name, set the Layout field to LAY1.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Now we need to define the_5.png" class="FullWidth" />
+        </p>
+        <p>Refresh the Desktop to see the changes.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Now we need to define the_6.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Draft Certificate Batches</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Draft Certificate Batches</h1>
+    <p>You can <MadCap:variable name="Variables.enquire" /> on the draft certificates that are ready to be batched, using <span class="function" title="Function:%WSC1315BSBP">Certificates to Batch</span>.</p>
+    <p>You can create batches from draft certificates at level 2 or level 3, using <span class="function" title="Function:%WSC1316FSBP">Create Batch</span>. </p>
+    <p>This allows you to create a batch of 'actual' certificates from a set of author<MadCap:variable name="Variables.is" />ed draft certificates.  These batches can then be posted to the ledgers <a href="WDUG0056_Posting_a_Batch.html">in the standard <MadCap:variable name="General.ProductName" /> way</a>.  Once a certificate has been batched it cannot be recalled or rejected as a draft.</p>
+    <p>
+      <span class="function" title="Function:%WSC1316FSBP">Create Batch</span> uses standard <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.jc contract" /> security and not the draft certificate security levels. </p>
+    <p>You will be prompted for a cut-off date. This date is based on the certificate date. Any draft certificates prior to (and including) this date will be batched (the batch number is auto-generated). </p>
+    <p>The processing is in contract/order/transaction number order to ensure that the certificates are not posted out of order.</p>
+    <p>Each draft certificate being processed is checked for whether an existing unposted 'actual' certificate already exists for the same order.  If it does <MadCap:variable name="General.ProductName" /> informs you of order/transaction/batch number, and the draft certificate is excluded from the batch.</p>
+    <p>A certificate number is auto-generated for each processed certificate, based on the last certificate for the order where the certificate number contained an integer.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">This means that any 'adjustment' certificates entered via the 'standard' certificate entry route would have a user-entered certificate number containing at least one letter.</div>
+    <p>
+      <br />Once all valid draft certificates have been processed, <MadCap:variable name="General.ProductName" /> displays the standard certificate batch input screen.  You can amend the details of the batch or the transactions.  The certificates on the batch are now treated as unposted 'standard' certificates (No new draft certificates will be allowed to be added or posted for the related orders until they are posted). </p>
+    <p>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> to move on to the batch browse.  From here you can post the batch as normal.  </p>
+  </body>
+</html>

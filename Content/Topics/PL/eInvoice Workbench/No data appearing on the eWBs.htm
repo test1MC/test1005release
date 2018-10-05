@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="4205" MadCap:lastWidth="1305">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />No data appearing on the eWBs</h1>
+        <h2>ECU routing programs</h2>
+        <p>This applies to all forms of electronic data being received.<br /><MadCap:variable name="General.ProductName" /> ‘ECU brokers’ control the flow both inbound and outbound. The brokers are started/stopped by a cronjob usually under the ‘coins’ user. E.g</p>
+        <p># OpenAS2 for eCommerce</p>
+        <p>00 07 * * * /u/coins/learn/var/ECDir/start_ecommerce.sh</p>
+        <p>00 20 * * * /u/coins/learn/var/ECDir/stop_ecommerce.sh</p>
+        <p>55 06 * * * /u/coins/live/var/ECDir/start_ecommerce.sh</p>
+        <p>05 20 * * * /u/coins/live/var/ECDir/stop_ecommerce.sh</p>
+        <p>The Unix command “ps –ef|grep ‘ecu00’ will show if the brokers (ecu002,003,004) are running and for which environment. </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/No data appearing on the eWBs.png" class="FullWidth" />
+        </p>
+        <p>Usual practice is for them to run on Live &amp; Copy of Live. </p>
+        <p>
+            <br />If the ECU programs are not running, it is wise to check the receiver.log &amp; router.log file in the $BASE/var/ECDir directory to see if any errors have occurred.<br /><br />The $BASE/var/ECDir/LOAD directory should also be checked as this is where the incoming data sits before being picked up by the routing programs, sometimes file permissions, file size or file content (bad XML) can cause the ECU programs to break.<br /><br />If “ps –ef|grep ‘ecu00’” returns no results, the ./start_ecommerce.sh script should be run to start the ECU routing programs, data from the LOAD directory should then disappear (moved to the IN) as the ECU programs route the data.<br /><br />If the ECU programs fail to start check the log files to see if they indicate any errors, if this can’t be resolved revert to an eCommerce developer. </p>
+        <p>&#160;</p>
+        <h2>Manual message routing (HUB records)</h2>
+        <p>eCommerce messages contain a ‘FROM’ code within the XML, this ‘FROM’ code is also entered against the supplier in <MadCap:variable name="General.ProductName" /> using the ‘HUB’ record under the ci1010.p menu.<br /></p>
+        <p>When a ‘FROM’ code is not found in any supplier HUB records the message will sit in ‘Manual Message Routing’ (ec100.p).&#160; <br />Here the message can be viewed and routed correctly.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/No data appearing on the eWBs_1.png" class="FullWidth" />
+        </p>
+        <p>Ctrl + V to show the XML message.</p>
+        <p>‘FROM’ code highlighted red. The XML also contains further data such as supplier name and which <MadCap:variable name="General.ProductName" /> kco the message belongs to.<br />If you are unsure which supplier the data belongs to by viewing the ‘FROM’ code the ETC Project Manager will be able to assist.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/No data appearing on the eWBs_2.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>A ‘HUB’ record shoud be setup against the <MadCap:variable name="General.ProductName" /> supplier e.g</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/No data appearing on the eWBs_3.png" class="FullWidth" />
+        </p>
+        <p>ExchUser – Contains the ‘FROM’ code</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/No data appearing on the eWBs_4.png" class="FullWidth" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">The ‘TO’ code of the XML message should match the ec\EXCHUSER parameter value, if they do not match seek advice from the ETC Project Manager.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/No data appearing on the eWBs_5.png" class="FullWidth" />
+        </p>
+        <h2>AS2 service</h2>
+        <p>AS2 Protocol is used to transfer data inbound/outbound from the Unix system, this service must be running only once.<br />Check AS2 is running using the command “ps –ef|grep ‘AS2’”, you should see similar results as the image below.<br />If AS2 is not running it issue should be referred to the internal tech team or system administrator to be started from ‘coins’ user cron.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/No data appearing on the eWBs_6.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

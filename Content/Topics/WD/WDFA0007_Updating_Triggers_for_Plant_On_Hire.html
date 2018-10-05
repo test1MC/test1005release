@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/Browse.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Updating Triggers for <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /><MadCap:variable name="Variables.pc onhire" style="text-transform: capitalize;" /></title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Updating Triggers for <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> <MadCap:variable name="Variables.pc onhire" style="text-transform: capitalize;" /></h1>
+        <p>Triggers allow you to keep track of when events related to <MadCap:variable name="Variables.pc plant" /> or vehicle assets are due. You can automatically update hourly and daily triggers for <MadCap:variable name="Variables.pc plant" /> which is <MadCap:variable name="Variables.pc onhire" />. </p>
+        <p>For example, suppose you have a <MadCap:variable name="Variables.pc plant" /> item which you want to inspect when it has been <MadCap:variable name="Variables.pc onhire" /> for 60 days or more. Using <span class="function" title="Function:%WFA2114BFAT&quot;">Asset Maintenance</span>.</p>
+        <table class="TableStyle-Browse" style="mc-table-style: url('../../Resources/TableStyles/Browse.css');" cellspacing="0">
+            <col class="TableStyle-Browse-Column-Column1" />
+            <col class="TableStyle-Browse-Column-Column1" />
+            <col class="TableStyle-Browse-Column-Column1" />
+            <col class="TableStyle-Browse-Column-Column1" />
+            <col class="TableStyle-Browse-Column-Column1" />
+            <col class="TableStyle-Browse-Column-Column1" />
+            <col class="TableStyle-Browse-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Browse-Head-Header1">
+                    <th class="TableStyle-Browse-HeadE-Column1-Header1">Trigger</th>
+                    <th class="TableStyle-Browse-HeadE-Column1-Header1">Description</th>
+                    <th class="TableStyle-Browse-HeadE-Column1-Header1">TT</th>
+                    <th class="TableStyle-Browse-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-Browse-HeadE-Column1-Header1">Expires</th>
+                    <th class="TableStyle-Browse-HeadE-Column1-Header1">Last Reset</th>
+                    <th class="TableStyle-Browse-HeadD-Column1-Header1">Last </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Browse-Body-Body1">
+                    <td class="TableStyle-Browse-BodyB-Column1-Body1">INSP-60D</td>
+                    <td class="TableStyle-Browse-BodyB-Column1-Body1">60 Days <MadCap:variable name="Variables.pc onhire" style="text-transform: capitalize;" /> Insp</td>
+                    <td class="TableStyle-Browse-BodyB-Column1-Body1">GE</td>
+                    <td class="TableStyle-Browse-BodyB-Column1-Body1">0.0</td>
+                    <td class="TableStyle-Browse-BodyB-Column1-Body1">60.0</td>
+                    <td class="TableStyle-Browse-BodyB-Column1-Body1">10/06/11</td>
+                    <td class="TableStyle-Browse-BodyA-Column1-Body1">10/06/11</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>You should update the daily (and hourly) triggers periodically, and before reporting on trigger <MadCap:variable name="Variables.expiry" /> dates, for example. This will update the value of the trigger; when this value reaches (or exceeds) the Expires value (60 in this example), the trigger will fire, and will appear on the&#160;<span class="function" title="Function:%WFA5011BFTV&quot;">Asset Triggers</span> Report.<br /></p>
+        <div class="process">
+            <h2 class="print">To update triggers:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPC7040RFAA&quot;">Update <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> On <MadCap:variable name="Variables.pc hire" style="text-transform: capitalize;" /> Triggers</span> to update the same trigger.&#160; You could have different triggers that use the different methods; so you could use <span class="parameter">TRIGHOUR </span>to drive hourly-based servicing, and have a trigger for <MadCap:variable name="Variables.pc offhire" /> inspection status updated by a caption.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PC/pc_trigday.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PC/pc_trighour.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

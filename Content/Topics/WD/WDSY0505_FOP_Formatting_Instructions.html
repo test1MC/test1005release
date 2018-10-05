@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>FOP Formatting Instructions</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">FOP Formatting Instructions</h1>
+    <p>Additional formatting for <MadCap:variable name="General.ProductName" /> configurable documents is based on the FOP (Formatting Objects Processor) standard. The full standard provides for a wide range of formatting options, many of which are not relevant to <MadCap:variable name="General.ProductName" /> configurable documents. You can read more about it at: <a class="LinkPopupDestinationTopic" href="http://xml.apache.org/fop/" target="_blank">http://xml.apache.org/fop/</a>.</p>
+    <p>The following table shows some of the formatting instructions you are more likely to need.</p>
+    <table border="1" width="100%" cellspacing="0">
+      <tbody>
+        <tr>
+          <td width="11%">
+            <p>
+              <MadCap:variable name="Variables.colour" style="text-transform: capitalize;" />
+            </p>
+          </td>
+          <td width="30%">
+            <p>color=<em>&lt;<MadCap:variable name="Variables.colour" />&gt;</em></p>
+            <p>background-color=<em>&lt;<MadCap:variable name="Variables.colour" />&gt;</em></p>
+          </td>
+          <td width="35%">
+            <p>
+              <em>&lt;<MadCap:variable name="Variables.colour" />&gt;</em> can be a <MadCap:variable name="Variables.colour" /> name, like <strong>blue</strong>, or a red/green/blue code, like <strong>#55AC9B</strong>. See <a href="WDSY0510_Colours_in_HTML_and_FOP.html">About <MadCap:variable name="Variables.colours" style="text-transform: capitalize;" /> in HTML and FOP</a>.</p>
+          </td>
+          <td width="22%">
+            <p>color=cyan</p>
+            <p>color=#00FFFF</p>
+            <p>background-color=gold</p>
+            <p>background-color=#FFD700</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="11%">
+            <p>Borders</p>
+          </td>
+          <td width="30%">
+            <p>border=<em>&lt;style&gt; &lt;<MadCap:variable name="Variables.colour" />&gt; &lt;measure&gt;</em></p>
+            <p>border-left-color=<em>&lt;<MadCap:variable name="Variables.colour" />&gt;</em></p>
+            <p>border-left-style=<em>&lt;style&gt;</em></p>
+            <p>border-left-width=<em>&lt;measure&gt;</em></p>
+            <p>(Similarly -right-, -top-, -bottom-)</p>
+          </td>
+          <td width="35%">
+            <p>
+              <em>&lt;style&gt;</em> the border style; only <strong>solid</strong> works</p>
+            <p>
+              <em>&lt;measure&gt;</em> is usually in points; for example; <strong>1.5pt</strong></p>
+          </td>
+          <td width="22%">
+            <p>border=solid green 1.5pt</p>
+            <p>border-bottom-style=solid,border-bottom-color=red</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="11%">
+            <p>Typeface</p>
+          </td>
+          <td width="30%">
+            <p>font-size=<em>&lt;measure&gt;</em></p>
+            <p>font-family=<em>&lt;family-name&gt;</em></p>
+            <p>font-variant=<em>&lt;variant&gt;</em></p>
+          </td>
+          <td width="35%">
+            <p class="NormalWeb">
+              <em>&lt;family-name&gt;</em> depends on the fonts installed on your system. By default, Helvetica, Times Roman, Courier, Dingbats and Symbol fonts are available. But it is possible to add any other licensed true-type font required (see <a href="WDSY0121_Install_FOP_Fonts.html">How To Add Custom Fonts to FOP</a>). </p>
+            <p>
+              <em>&lt;variant&gt;</em> can be <strong>normal </strong>or <strong>small-caps</strong></p>
+          </td>
+          <td width="22%">
+            <p>font-family=Times Roman</p>
+            <p>font-family=Helvetica, font-size=24pt</p>
+            <p>font-variant=small-caps</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="3" width="11%">
+            <p>Bold, italic, underline</p>
+          </td>
+          <td width="30%">
+            <p>font-weight=<em>&lt;weight&gt;</em></p>
+          </td>
+          <td width="35%">
+            <p>
+              <em>&lt;weight&gt;</em> can be <strong>normal</strong> or <strong>bold</strong></p>
+          </td>
+          <td width="22%">
+            <p>font-weight=bold</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">
+            <p>font-style=<em>&lt;style&gt;</em></p>
+            <p> </p>
+          </td>
+          <td width="35%">
+            <p>
+              <em>&lt;style&gt;</em> can be <strong>normal</strong> or <strong>italic</strong></p>
+            <p> </p>
+          </td>
+          <td width="22%">
+            <p>font-style=normal</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">
+            <p>text-decoration=&lt;<em>decoration&gt;</em></p>
+          </td>
+          <td width="35%">
+            <p>&lt;<em>decoration&gt;</em> can be <strong>none</strong>, <strong>underline</strong>, <strong>overline</strong> or <strong>line-through</strong></p>
+          </td>
+          <td width="22%">
+            <p>text-decoration=overline</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="11%">
+            <p>Padding (gap between border and text)</p>
+          </td>
+          <td width="30%">
+            <p>padding-left=<em>&lt;measure&gt;</em></p>
+            <p>(Similarly -right-, -top-, -bottom-)</p>
+          </td>
+          <td width="35%">
+            <p>
+              <em>&lt;measure&gt;</em> - see above</p>
+          </td>
+          <td width="22%">
+            <p>padding-left=2pt,padding-top=1pt</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

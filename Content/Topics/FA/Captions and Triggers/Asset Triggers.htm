@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1036" MadCap:lastWidth="886" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Asset Triggers</h1>
+        <p>Triggers let you keep track of when events related to plant or vehicle assets are due. For example, safety inspections which are due after a given number of months, or services which are due after a given mileage.</p>
+        <p><MadCap:variable name="General.ProductName" /> tests the current or most recent value of the trigger to see whether it has expired, that is, when the event which the trigger refers to is due. For example, when a vehicle has reached a given mileage or when a plant item has been used for a given number of hours. You can update the value of the trigger:</p>
+        <ul>
+            <li>Manually from the Triggers option in Fixed Assets &gt; FA Asset Workbench.</li>
+            <li>By updating a linked caption (in Fixed Assets &gt; FA Asset Workbench or during one of several processing functions).</li>
+            <li>For mileage triggers: from the mileage on the asset record using FL Process Mileage Triggers in Fleet Manager.</li>
+            <li>For "time on hire" triggers: using Plant Control &gt; Processing &gt; Update Plant On Hire Triggers in Plant Manager.</li>
+            <li>The value of date triggers is always today.</li>
+        </ul>
+        <p>If the value of a trigger meets the expiry conditions, the trigger will fire. This means that the event which the trigger refers to is due, and the asset shows up on reports and enquiries about that trigger.</p>
+        <p>You can fire a trigger manually (that is, mark it as expired even though it may not have met the expiry criteria). You would do this, for example, to indicate that a plant item is to be inspected even though the inspection is not yet due. Once you have fired a trigger, it remains expired until you reset it.</p>
+        <p>When the event which the trigger refers to has happened (or when for some other reason you want to start counting again), you reset the trigger. This resets the Expires value; the trigger type and the reset value determine what the trigger is reset to.</p>
+        <p>You can reset triggers manually, or set up <MadCap:variable name="General.ProductName" /> to reset them automatically using workshop cost head elements (see Resetting Triggers).</p>
+    </body>
+</html>

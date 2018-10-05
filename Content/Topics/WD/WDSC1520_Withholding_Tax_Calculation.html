@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="841" MadCap:lastWidth="601">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Withholding Tax Calculation</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Withholding Tax Calculation</h1>
+    <h2 MadCap:autonum="1.1 ">SC Certificate Input</h2>
+    <p>The tax calculation and validations are dependent on the tax scheme of the subcontractor as follows:</p>
+    <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Tax Scheme</th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Other Conditions</th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>X </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>U </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>No certificates may be input.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax rate set on the subcontract.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is calculated using the percentage for that tax rate.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is no tax rate set on the subcontract.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>No certificates may be input.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>V </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax card which is valid on today's date.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>V</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>There is no tax card or it has expired or not yet started.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+            <p>No certificates may be input.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <h2 MadCap:autonum="1.2 ">SC Payment Run</h2>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">N </span>then the tax amount at the time of input will be used.  </p>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">Y </span>then the tax amount will be recalculated as follows:</p>
+    <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Tax Scheme</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Other Conditions</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <p class="TableHeader">Result</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>X </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>U </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The certificate may not be paid.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax rate set on the subcontract.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated using the percentage for that tax rate.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is no tax rate set on the subcontract.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The certificate may not be paid.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>V </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax card which is valid on today's date.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>V</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>There is no tax card or it has expired or not yet started.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+            <p>The certificate may not be paid.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <h2 MadCap:autonum="1.3 ">SC Manual Payments</h2>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">N </span>then the tax amount at the time of input will be used.  </p>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">Y </span>then the tax amount will be recalculated as follows:</p>
+    <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Tax Scheme</th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Other Conditions</th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>X </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>U </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The certificate may not be paid.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax rate set on the subcontract.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated using the percentage for that tax rate.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is no tax rate set on the subcontract.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The certificate may not be paid.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>V </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax card which is valid on today's date.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>V</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>There is no tax card or it has expired or not yet started.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+            <p>The certificate may not be paid.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <h2 MadCap:autonum="1.4 ">PL Invoice Entry</h2>
+    <p>The tax calculation and validations are dependent on the tax scheme of the <MadCap:variable name="Variables.pl supplier" /> as held on the linked subcontractor account as follows:</p>
+    <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Tax Scheme</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Other Conditions</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <p class="TableHeader">Result</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>X </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>U </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>No invoices may be input.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is calculated using the percentage for the tax rate selected for this invoice.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>V </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax card which is valid on today's date.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>V</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>There is no tax card or it has expired or not yet started.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+            <p>No invoices may be input.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The rules for calculation of the default value in the <span class="field"><MadCap:variable name="Variables.Labour caps" /></span>field follow the standard application of parameter <span class="parameter">SC/DEFTAXSC</span>.</p>
+    <p> </p>
+    <h2 MadCap:autonum="1.5 ">PL Payment Run</h2>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">N </span>then the tax amount at the time of input will be used.</p>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">Y </span>then the tax amount will be recalculated as follows:</p>
+    <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Tax Scheme</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Other Conditions</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <p class="TableHeader">Result</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>X </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>U </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The invoice may not be paid.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated using the percentage for the tax rate held on the invoice.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>V </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax card which is valid on today's date.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>V</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>There is no tax card or it has expired or not yet started.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+            <p>The invoice may not be paid.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <h2 MadCap:autonum="1.6 ">PL Manual Payments</h2>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">N </span>then the tax amount at the time of input will be used.</p>
+    <p>If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">Y </span>then the tax amount will be recalculated as follows:</p>
+    <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Tax Scheme</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Other Conditions</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <p class="TableHeader">Result</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>X </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>U </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The invoice may not be paid.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>T </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>None</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated using the percentage for the tax rate held on the invoice.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>V </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>There is a tax card which is valid on today's date.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>The tax amount is recalculated as zero.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>V</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>There is no tax card or it has expired or not yet started.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+            <p>The invoice may not be paid.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/sc_TAXATPAY.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_DEFTAXSC.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2972" MadCap:lastWidth="1020">
+    <head><title>Configuring a User's Desktop</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Configuring a User's Desktop</h1>
+        <p>The <a href="WDUG0094_COINS_Desktop.html"><MadCap:variable name="General.ProductName" /> Desktop</a> gives users a custom<MadCap:variable name="Variables.is" />able screen from which they can run a selection of <MadCap:variable name="General.ProductName" /> functions. Each user can have their own desktop, or several users can be given access to the same desktop.</p>
+        <p>This page explains how to configure users' desktops.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0187_Desktop_Setup.html" />
+                <MadCap:relatedTopic src="WDUG0099_Smart_Tiles.html" />
+                <MadCap:relatedTopic src="WDUG0100_Chart_Tiles.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">Desktop Structure</h2>
+            <p>The desktop is built using a menu structure:</p>
+            <ul>
+                <li>The top level menu is the desktop itself.</li>
+                <li>The second level contains one or more menus which correspond to the tabs on the desktop.</li>
+                <li>Each tab menu contains one or more menu functions which&#160;correspond to the collapsible sections on the desktop.</li>
+                <li>The menu items on the section menu correspond to the tiles.
+<p class="noteheader">NOTE</p><div class="note">If users configure their own desktop, <MadCap:variable name="General.ProductName" /> creates tab functions with&#160;the same code as the top-level menu, but with <span class="userinput" data-mce-mark="1">T1</span>, <span class="userinput" data-mce-mark="1">T2</span> etc at the end; for example: <span class="userinput" data-mce-mark="1">JSMITHT1</span>, <span class="userinput" data-mce-mark="1">JSMITHT2</span>, and sections with the same code as the tab, but with <span class="userinput" data-mce-mark="1">S1</span>, <span class="userinput" data-mce-mark="1">S2</span> etc at the end; for example: <span class="userinput" data-mce-mark="1">JSMITHT1S1, JSMITHT1S2.</span>&#160;</div><p><img src="../../Resources/Images/SY/SY_018301.png" /></p></li>
+            </ul>
+            <h2>Ownership of Desktops</h2>
+            <p>A desktop belongs to a user if the menu, tab and section codes begin with the code specified in the <span class="field">Desktop</span> field on that user's user record. A user can modify a desktop which belongs to them.&#160;</p>
+            <p>A desktop can belong to more than one user (that is, if they all have the same desktop code specified on their user record), in which case each user can modify the desktop, and all the other users will see the changes.</p>
+            <p>If a desktop contains components (for example, tabs or sections) which do not begin with the code specified on the user record, the user will not be able to modify those components. This means you can configure and maintain standard desktop components that users cannot change.&#160;</p>
+            <h2>Desktop Configuration - Alternatives</h2>
+            <p>You have various alternatives, depending on how much control you want to give users over their own desktops. For example:</p>
+            <ul>
+                <li>You can allow each user to <a href="WDUG0095_Configuring_Your_Desktop.html">configure their own desktop</a> from scratch.</li>
+                <li>You can set up standard desktops that can be assigned to the appropriate users.&#160;</li>
+                <li>You can set up templates that users can copy to use as a starting point for configuring their own desktop.</li>
+                <li>You can give several users access to the same desktop, but use function security to control who can modify it.</li>
+            </ul>
+            <h3>To configure a desktop:</h3>
+            <ol>
+                <li>In <span class="function" title="Function:%WSYBMSF">Function Maintenance</span>, if the desktop does not already exist, create a new menu function for the top-level desktop menu.&#160;Set the&#160;<span class="field">Type</span> set to <span class="userselect">Menu</span>.</li>
+                <li>Create menu functions for each tab on the desktop. Set the&#160;<span class="field">Type</span>&#160;to <span class="userselect">Desktop Tab</span>.</li>
+                <li>Add these tab functions as Menu Items on the top-level desktop menu.</li>
+                <li>Create menu functions for each section on the tabs. Set the <span class="field">Type</span> to <span class="userselect" data-mce-mark="1">Desktop Section.</span>&#160;</li>
+                <li>Add these section functions as Menu Items on the tab functions.</li>
+                <li>On the section menu, add the functions that each tile will run. Choose how you want the tile to be displayed (for example, the title, <MadCap:variable name="Variables.colours" /> and size).
+<p>If available, you can also choose values to display on the tile (such as the number of new items or the total value of invoices).</p></li>
+                <li>You can also include the contents of other sections.&#160;This allows you to maintain standard sets of functions independently and add them as a common component to users' desktops. Enter the code of the section menu as a menu item on the section where you want to include it; the tiles on the included section will appear on the desktop as if they had been added individually.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">If you have existing Desktops that were set up before v11.04 of <MadCap:variable name="General.ProductName" />, the <span class="field">Type</span> on the tab functions and section functions will not be correct. These functions will still work, but will not appear in the relevant lookups, therefore you should use <span class="function" title="Function:%WSYBMSF">Function Maintenance</span> to change the <span class="field">Type</span> field on these functions to <span class="userselect">Desktop Tab</span> or <span class="userselect">Desktop Section</span>.</div>
+            <h3>To configure a desktop template:</h3>
+            <p>If you want users to be able to select a desktop to use as a template for creating their own desktop, it must belong to a user ID (because the&#160;Desktop Setup Wizard only allows users to copy another user's desktop). So you need to set up a desktop, and either&#160;assign the desktop to an existing user, who will be the owner of the desktop, or&#160;create a user record (which does not need to be a named user) to be&#160;a "template user" and assign the desktop to that user ID.&#160;</p>
+            <p>When a user copies another user's desktop, <MadCap:variable name="General.ProductName" /> copies the desktop structure using the desktop code that is assigned to the user who is copying. If the original desktop contains tabs or sections that do not belong to the original user, they are also copied but the new user will not be able to modify them.</p>
+            <h3>To give a user access to a desktop:</h3>
+            <ol>
+                <li>In <span class="function" title="Function:%WSYBSUR">Users</span>, open the user record.</li>
+                <li>In the <span class="Field">Current Desktop</span> field on the Preferences tab, enter the code for the top-level desktop menu for this user. This could be same as the user's user ID, but it does not have to be.
+<ul><li>If the code is for a&#160;desktop menu that already exists, when the user next logs in they will see that desktop.</li><li>If the code is for a desktop menu that does not exist, the user will have an empty desktop and will be able to configure it themselves using the Desktop Setup Wizard. They can copy a desktop from another user.&#160;</li></ul></li>
+                <li>Save the user record.
+<p>If the desktop menu does not already exist, <MadCap:variable name="General.ProductName" /> creates an empty desktop menu&#160;automatically.</p><p class="noteheader">NOTES</p><div class="note"><ol><li>If the user has a <a href="WDUG0060_Home_Pages.html">user home page</a> set up, they will see that home page when they log in to <MadCap:variable name="General.ProductName" />, but they will still be able to display the desktop.</li><li>Unless you prevent them (using function access permissions -&#160;see below), all users that have the same desktop can modify that&#160;desktop&#160;and will all see each others' changes. &#160;</li></ol></div></li>
+            </ol>
+            <h2>Function Access</h2>
+            <p>If you do not want users to be able to modify the content of their desktop, do not give them access to:</p>
+            <ul>
+                <li>The <span class="function" title="Function:%WSY2590SSUR">User Preferences</span> Desktop tab: <span class="nw" data-mce-mark="1">%WSY2581SSUR</span>.</li>
+                <li>The <span class="function" title="Function:%WSY2582BMSI">Desktop Item Maintenance</span> function: %WSY2582BMSI.</li>
+                <li>The <span class="function" title="Function:%WSY2583BMSI">Desktop Tab Maintenance</span> function: %WSY2583BMSI.</li>
+                <li>The <span class="function" title="Function:%WSY2584BMSI">Desktop Section Maintenance</span> function: %WSY2584BMSI.</li>
+            </ul>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Users will still be able to select their desktop background image.</div>
+            <p>If you do not want users to be able to add functions to their desktop from the History menu, do not give them access to the Add to Desktop function (<span class="nw" data-mce-mark="1">%WSY2583FMSI</span>).</p>
+        </div>
+    </body>
+</html>

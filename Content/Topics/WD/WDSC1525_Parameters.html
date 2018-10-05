@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1605" MadCap:lastWidth="1136">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>eRCT Parameters</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">eRCT Parameters</h1>
+    <p>The following standard <a href="WDSC0003_SC_Parameters.html">Subcontract Ledger Parameters</a> need to be set:</p>
+    <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p align="center">Parameter</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p align="center">Description</p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <p align="center">Action</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>
+              <span class="parameter">DEFTAXSC </span>
+            </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>Default Subcontractor Tax Scheme.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>Under IRE2, this should be set to <span class="userinput">U</span> or <span class="userinput">V</span>.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>
+              <span class="parameter">SBSTAX </span>
+            </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>Show in/out tax scheme on subcontract.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>Set this to <span class="userinput">Y </span>if you have some subcontractors who have some subcontracts that are not Relevant Contracts. This makes extra fields available in <span class="function" title="Function:%WSC2010BSBS">Subcontract Maintenance</span>.</p>
+            <p>Set this to <span class="userinput">N </span>if, for all subcontractors who are not exempt, every subcontract is a relevant contract.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>
+              <span class="parameter">TAXATPAY </span>
+            </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>Recalculate PAYE at Payment.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>Set this to <span class="userinput">Y</span>.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>
+              <span class="parameter">TAXRSELR </span>
+            </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p>Recalculate Tax on <span class="function" title="Function:%WSC3110RCUR">Certificates Selected/Not Selected Report</span></p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p>We advise you set this to <span class="userinput">Y</span>.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>
+              <span class="parameter">TAXRULES </span>
+            </p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+            <p>Country Tax Rules.</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+            <p>Set this to <span class="userselect">IRE2</span>.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <p>In addition, the following <a href="WDSC0005_Irish_Tax_Parameters.html">Irish Subcontractor Tax Parameters</a> need to be set:</p>
+    <table class="type1">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">AUTOCRCN</span>
+            </p>
+          </td>
+          <td>
+            <p>RCT Auto create contract notification.</p>
+          </td>
+          <td>
+            <p>We advise you to set this so that <MadCap:variable name="General.ProductName" /> creates notification records when orders are committed for payment.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">LOCNSRCE</span>
+            </p>
+          </td>
+          <td>
+            <p>RCT Default location of work field.</p>
+          </td>
+          <td>
+            <p>Set this to the field on the JC <MadCap:variable name="Variables.jc contract" /> record (or a related field) you want to use as the default location of work on new contract notifications.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">LTAXRATE </span>
+            </p>
+          </td>
+          <td>
+            <p>Standard (Lower) Tax Rate (%).</p>
+          </td>
+          <td>
+            <p>Set this to <span class="userinput">20</span>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">PRINNAME </span>
+            </p>
+          </td>
+          <td>
+            <p>Principal's Main Name.</p>
+          </td>
+          <td>
+            <p>Set this to the name as held on Revenue records.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">REGNO </span>
+            </p>
+          </td>
+          <td>
+            <p>Tax Registration Number.</p>
+          </td>
+          <td>
+            <p>Set this to the Principal Contractor's tax reference as held on Revenue records.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">RETFREQ </span>
+            </p>
+          </td>
+          <td>
+            <p>RCT Return Frequency. </p>
+          </td>
+          <td>
+            <p>Set this to the frequency (monthly or quarterly) as advised by Revenue.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">RPTQUEUE </span>
+            </p>
+          </td>
+          <td>
+            <p>RCT Submission Report Queue.</p>
+          </td>
+          <td>
+            <p>If you are using report servers, set this to a queue on the main <MadCap:variable name="General.ProductName" /> server, where the digital certificate is loaded.  Otherwise, leave blank. </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">STOPEXP </span>
+            </p>
+          </td>
+          <td>
+            <p>Certify or Invoice against Expired Contract.</p>
+          </td>
+          <td>
+            <p>How you set this will depend on your internal processes. For example, you might set it to <span class="userinput">Warning</span> if one person enters certificates and someone else deals with contract notification.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">STOPUNPO </span>
+            </p>
+          </td>
+          <td>
+            <p>Un-Notified Mat/Plant Orders with Labour.</p>
+          </td>
+          <td>
+            <p>We recommend you set this to <span class="userinput">Warning</span>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">STOPUNRG </span>
+            </p>
+          </td>
+          <td>
+            <p>Certify or Invoice against Un-Notified Contract.</p>
+          </td>
+          <td>
+            <p>How you set this will depend on your internal processes. For example, you might set it to <span class="userinput">Warning </span>if one person enters certificates and someone else deals with contract notification.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">TAXRATE </span>
+            </p>
+          </td>
+          <td>
+            <p>The higher rate of tax, which will be deducted from unregistered and non-compliant subcontractors.</p>
+          </td>
+          <td>
+            <p>Set this to <span class="userinput">35</span>.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

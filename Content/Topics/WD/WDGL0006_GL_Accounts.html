@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1844" MadCap:lastWidth="823">
+    <head><title>GL Accounts</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">GL Accounts</h1>
+        <p>&#160;</p>
+        <h2>Elements</h2>
+        <p>Each <span class="module">General Ledger </span>account code is made up of a maximum of four elements, to reflect the structure of your general ledger.</p>
+        <p>For example, an account could consist of one 6-digit element: <span class="userinput">019954</span>, or of three elements such as <span class="userinput">Division</span>, <span class="userinput">Department</span> and <span class="userinput">Account</span>: <span class="userinput">01.SALES.3324</span>.</p>
+        <p>Elements can be made up either of digits only, or of alphanumeric characters. An individual element can be up to 16 characters long, and the entire account code can have a maximum of 19 characters. The elements are separated by <MadCap:variable name="Variables.full stop" />s. Different types of account can have a different number of elements (for example, Balance Sheet accounts can be simpler than Profit &amp; Loss accounts).</p>
+        <p align="center">
+            <img src="../../Resources/Images_G-I/GL/GL_elements.png" />
+        </p>
+        <p>Different <MadCap:variable name="Variables.kco companies" /> can have different account structures, but this is not recommended if you require cross-<MadCap:variable name="Variables.kco company" /> consolidation. Note that once you have defined the structure for a given <MadCap:variable name="Variables.kco company" />, you cannot change it without technical assistance.</p>
+        <p>Use <span class="function" title="Function:%WGL2030BGAN">GL Elements</span> to set up the valid codes for each element.</p>
+        <h2>Fixed elements</h2>
+        <p>If your account structure has fixed elements, you must specify the combinations of elements that are valid for your accounts. <MadCap:variable name="General.ProductName" /> will not create accounts that do not match the list of valid fixed elements.</p>
+        <p>For example, if your account structure is fixed at element 2, you must specify the valid combinations of elements 1 and 2.</p>
+        <p>Use <span class="function" title="Function:%WGL2080BGFX">Fixed Elements</span> to set up fixed elements.</p>
+        <h2>Generating accounts</h2>
+        <p><span class="module">General Ledger </span>accounts are generated in one of two ways:</p>
+        <ul>
+            <li>If a transaction is posted to an account which has not been used before (provided the account elements within the code used in the transaction are valid and provided the parameter <span class="parameter">AUTOGEN </span>is set to <span class="userinput">Y</span>), <MadCap:variable name="General.ProductName" /> creates the account record automatically. In this case, you may need to use <span class="function" title="Function:%WGL2000BGLA">Account Maintenance</span> to update the account record to include any information which is not generated automatically.</li>
+            <li>Using <span class="function" title="Function:%WGL2000BGLA">Account Maintenance</span> to generate accounts manually.</li>
+        </ul>
+        <h2>Short codes</h2>
+        <p>Your system can have short codes set up for some <span class="module">General Ledger </span>accounts. Short codes are "aliases" for accounts. If you enter a short code, <MadCap:variable name="General.ProductName" /> automatically replaces the short code with the account code. You can use short codes to speed up input of data.</p>
+        <p>When entering a <span class="module">General Ledger </span>account number on a transaction the following logic applies:</p>
+        <ol>
+            <li>Does the account already exist?</li>
+            <li>Can it be assembled from the elements?</li>
+            <li>Is it in the Short Code list, in which case the actual code will be substituted for the short code you entered.</li>
+            <li>If none of the above, the code is invalid.</li>
+        </ol>
+        <p>Use <span class="function" title="Function:%WGL2090BGSH">Short Codes</span> to set up GL short codes.</p>
+    </body>
+</html>

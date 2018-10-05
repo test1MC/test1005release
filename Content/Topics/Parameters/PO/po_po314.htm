@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/PO314 - Parameters for Order Placing Schedule</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/PO314 - </span> Parameters for Order Placing Schedule
+</div>
+<div class="param_def">
+<p>This allows you to print user-defined data (such as total budget for material costs and subcontract costs) at the head of each <MadCap:variable name="Variables.jc contract"/> on the Order Placing Schedule.</p>
+<p>The first entry is the name of a horizontal report which needs to be separately defined.  There can be up to six further entries, which identify the sequence numbers of columns from that report.  For example: <span class="userinput">ALLOWNCE,3,5,8</span>. The labels and values from the horizontal report will be included above the details for each <MadCap:variable name="Variables.jc contract"/> in the <span class="procedure">Order Placing Schedule</span> or <span class="procedure">Order Placing Extract</span>.  These would typically refer to stored data that had been manually entered, but could refer to calculated amounts.</p>
+<p>The first and second values (that is, the second and third entries in the parameter) must be the allowance for materials and subcontractors respectively; after each section (material/plant and subcontractors) of the report, there will be a line showing the outstanding balance, which is the difference between this allowance and the value of orders placed so far. </p>
+</div>
+</body>
+</html>

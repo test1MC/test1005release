@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="2" MadCap:lastHeight="691" MadCap:lastWidth="624">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="OA Designer;Datasets;Topics" />Repeat</h1>
+        <p>This method removes repeated fields from a temp table.&#160; Typical usage is if the data set contains header and detail data and the repeating header details only want to be shown (and aggregated) once.&#160; This method will allow you to manipulate the dataset so that repeated values only appear once.</p>
+        <p>Method('syuds.repeatsource','Source','kco,job_num');<br />Method('syuds.repeatfields','1','kco,coc_name');<br />Method('syuds.repeatfields','2','job_num,job_name,RO_job_costs^TD');<br />Method('syuds.repeatExec');</p>
+        <p>The ttSource table will be replaced with a copy where the repeating fields kco, coc_name and job_num,job_name are shown once per kco and job_num sort sequence.</p>
+        <p>repeatSource specifies the source table and the sort fields to be used.</p>
+        <p>repeatFields specifies for each of the sort sequence the fields that should be shown just once</p>
+        <p>In this example RO_job_costs^TD (and job_num and job_name) are shown only once for each job_num within kco.&#160; This would allow this column to be aggregated on the report.</p>
+        <p>repeatExec actually performs the repeat field blanking and saves the temp table overwriting the original source data.</p>
+    </body>
+</html>

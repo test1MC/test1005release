@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="680" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Employee Auto-Numbering - </MadCap:conditionalText>HR Personnel Workbench</h1>
+        <p class="Body">When adding a new personnel record, if the HR <span class="Field">ID</span> is left blank then:</p>
+        <ul>
+            <li>If the person has a <MadCap:variable name="General.ProductName" /> payroll type and <span class="parameter">EMPAUTON</span> is not blank, the HR <span class="Field">ID</span> will be auto-generated according to the Payroll parameters.</li>
+            <li>If the person has a non-<MadCap:variable name="General.ProductName" /> payroll type and <span class="parameter">AUTOID</span> is not blank, the HR <span class="Field">ID</span> will be auto-generated according to the HR parameters.</li>
+        </ul>
+        <p class="Body">If a personnel record is updated so that the payroll type changes from non-<MadCap:variable name="General.ProductName" /> payroll to <MadCap:variable name="General.ProductName" /> payroll or vice versa and/or the company is changed, and the HR <span class="Field">ID</span> is not changed at the same time then:</p>
+        <ul>
+            <li>If the person now has a <MadCap:variable name="General.ProductName" /> payroll type, <span class="parameter">EMPAUTON</span> is not blank and the HR <span class="Field">ID</span> does not already comply with the standard validation rules, the HR <span class="Field">ID</span> will be automatically re-generated according to the Payroll parameters.</li>
+            <li>If the person now has a non-<MadCap:variable name="General.ProductName" /> payroll type, <span class="parameter">AUTOID</span> is not blank and the HR <span class="Field">ID</span> does not already comply with the standard validation rules, the HR <span class="Field">ID</span> will be automatically re-generated according to the HR parameters.</li>
+        </ul>
+        <p class="Body">If the user sets the HR <span class="Field">ID</span> (add or update) and either the person has a <MadCap:variable name="General.ProductName" /> payroll type and <span class="parameter">EMPAUTON</span> is ‘ALWAYS’, or the person has a non-<MadCap:variable name="General.ProductName" /> payroll type and <span class="parameter">AUTOID</span> is ‘ALWAYS’, then they will get an error.</p>
+        <p class="Body">When auto-generating an HR <span class="Field">ID</span>&#160;or when checking the validity of an auto-generated or manually-entered ID, the function checks for any clash with either another HR personnel ID or another Payroll employee number .</p>
+        <h2 MadCap:autonum="1.1">Personnel Data Load</h2>
+        <p class="Body">When creating or updating a person via the <span class="Function">Personnel Data Load</span> the same rules will apply as when using the <span class="Function">Personnel Workbench</span>.</p>
+    </body>
+</html>

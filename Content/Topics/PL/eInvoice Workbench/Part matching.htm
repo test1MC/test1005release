@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Part matching</h1>
+        <p>The workbench will also attempt to part match Purchase Orders to invoices. That is to say, in general, a line on an invoice will part match the order the invoice refers to if there is an order line matching where the outstanding quantity is greater or equal to the invoice quantity. A part match might not be achieved if the ETOLAMT parameter is set.</p>
+        <p>The following examples show where part matches can be expected.  </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Scenario 1: </p>
+                    <p>We have a PO with two lines and an Invoice with two identical lines in the same order. Each PL line price differs from the PO price by no more than ETOLPRC. We expect each line of the PL to match the PO. The PO will be marked as “complete”.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;font-family: 'Arial Black';">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/2</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product B</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>25 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />250.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;font-family: 'Arial Black';">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;font-family: 'Arial Black';">
+                    <p>
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>1/2</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product B</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>25 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />250.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;font-family: 'Arial Black';">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Scenario 2: </p>
+                    <p>We have a PO with two lines and an Invoice with two identical lines in reverse order. Each PL line price differs from the PO price by no more than ETOLPRC. </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/2</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>25 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />250.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>25 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />250.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: 'Arial Black';">X</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>1/2</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: 'Arial Black';">X</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Scenario 3: </p>
+                    <p>We have a PO with two lines and two Invoices each with one line identical to a line in the PO. The order the Invoices are received does not matter. Each PL line price differs from the PO price by no more than ETOLPRC. We expect each line of the PL to match the PO. The PO will be marked as “complete”.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/2</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>25 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />250.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>25 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />250.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>2/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Scenario 4: </p>
+                    <p>We have a PO with two lines and four Invoices each with one line identical to a line in the PO except for a variation in quantity. Each PL line price differs from the PO price by no more than ETOLPRC. We expect each line of the PL to match the PO.</p>
+                    <p>PL&#160; lines 1/1, 2/1, 3/1 part match to PO line 1/1 (87 of 100 matched) and PL line 4/1 matches PO line 2/1 which is complete.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/2</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>2/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>3/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>4/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Scenario 5: </p>
+                    <p>We have a PO with two lines and five Invoices each with one line identical to a line in the PO except for a variation in quantity. Each PL line price differs from the PO price by no more than ETOLPRC. We expect each line of the PL to match the PO.</p>
+                    <p>PL line 1/1 matches PO line 1/1 which is complete. PL lines&#160; 2/1, 3/1, 4/1 part match to PO line 1/2 (87 of 100 matched). PL line 5/1 does not match.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>PO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>1/2</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>100 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #87ceeb;">
+                    <p><MadCap:variable name="Variables.$" />1000.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #87ceeb;">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>1/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>2/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>3/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>4/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: Wingdings 2;">
+                        <img src="../../../Resources/Images/COINS Graphics/Icons 1104/choose.gif" />
+                    </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>PL </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>5/1</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>Product&#160; A</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p>29 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />10.00 ea</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="background-color: #ffa07a;">
+                    <p><MadCap:variable name="Variables.$" />290.00</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="background-color: #ffa07a;">
+                    <p style="font-family: 'Arial Black';">X</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="7" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

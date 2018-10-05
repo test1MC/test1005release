@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Pay Items Within US Payroll</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Pay Items Within US Payroll</h1>
+        <p>&#160;</p>
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge">&#160;</td>
+                    <td><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+                    <td class="Edge">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Pay Items are records that contain information about how an entry on an employee pay slip is calculated. Pay items can hold hours and dollars, be used in the calculation of other values, determine what appears on a pay slip and where it appears, and can be used to determine what GL accounts are used during the payroll process. Pay Items are <strong>not</strong><MadCap:variable name="Variables.kco company" /> specific, and must be included in a Sequence which is then associated with selected employees. For the US market, Pay Items are associated with Earning Categories for wages, <MadCap:variable name="Variables.Jc Contract caps" />/Union/Pay Calculations for fringes and deductions, Payroll Configuration for withholding and burdens, and Payroll Allocations for other <MadCap:variable name="Variables.jc contract" /> costs.</p>
+        <div class="process">
+            <h2 class="print">Pay Items within US Payroll</h2>
+            <p>For more information about Pay Items, click on any of the links below:</p>
+            <p>Types of Pay Items Currently in Use by US </p>
+            <ul>
+                <li><strong>Hours</strong>&#160;- Use with pay items which will be mapped to Earnings Categories that use Hours and Wages. Categories such as Hourly Earnings (HE) or <MadCap:variable name="Variables.holiday" style="text-transform: capitalize;" /> Pay (VA) need to have Pay Items with a type of <strong>Hours </strong>in order for the hours to appear on the pay slip.</li>
+                <li><strong>Subtotal</strong> - Use with any Earning or Calculation that does not require hours to be displayed on a pay slip.</li>
+            </ul>
+            <p />
+            <p>Pay Items used in US Payroll </p>
+            <p>A standard set of First Base Pay Items has been created to handle most Payroll issues. Items are reserved for Earnings, Employee Tax Withholding, Employer Tax Burden, Fringes in Pay, Fringes not in Pay, Pay Calculation Deduction, <MadCap:variable name="Variables.Jc Contract caps" /> Calculation Deductions, Union Deductions, as well as Pay Items designed to represent Disposable Earnings (for garnishments), IRS Levies, Fringes excludable from Davis Bacon Fringe Benefits, Net Pay, and Extra Direct Deposits.</p>
+            <p>Additional Pay Items are used to hold Gross Wages, Total Employer Burden Cost, Total Deductions, Total Burdened <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />, and Total Statutory.</p>
+            <p>It is not necessary to use Pay Items in the Union Rate File or the <MadCap:variable name="Variables.Jc Contract caps" /> Rate File. Pay Items which represent earnings will come from the Earnings Category File. Users may elect to use the pay items in these records to represent another value to base calculations upon. For example, it may be necessary to include a Union&#160;<MadCap:variable name="Variables.holiday" style="text-transform: capitalize;" /> Fringe Paid in Cash in gross wages prior to computing dues.</p>
+            <p />
+            <p>Significant Pay Items in Payroll Company Configuration </p>
+            <p>Payroll Company Configuration holds significant pay items. This file explicitly details the pay items that represent specific values of pay such as Gross, Reimbursable, and Net Wage items, Statutory Employee Withholding items, Statutory Employer items, and the item representing Total Burden.</p>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002001.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Sequences </p>
+            <p>While Pay Items can be created in any order, their appearance in a sequence must follow payroll logic. For example, we must know an employee's Social Security Gross before we can calculate the Employee or Employer Tax. While a standard sequence will be included in First Base, it is important to understand how to create and modify a sequence.</p>
+            <p>Generally, a sequence will hold the pay items that comprise Gross Wages (including Fringes included in Pay), followed by Deductions, followed by <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> burdens (<strong>not</strong> Taxes), followed by Withholding Taxes and Employer Taxes, followed by Totals and finally Net Pay. Notice to arrive at a Taxable Gross, we use the standard formula:</p>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>Gross Wages</p>
+            </blockquote>
+            <p>Add:&#160;&#160;&#160; Taxable Fringes in Pay</p>
+            <p>Less:&#160;&#160;&#160;<u>Non-Taxable Deductions</u></p>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>Taxable Gross</p>
+            </blockquote>
+            <p>By following the prescribed setup, determining Wages subject to Tax will occur prior to calculating any taxes.</p>
+            <p />
+            <p>Using Pay Items and Sequences to Determine Other Wages </p>
+            <p>Occasionally, the need will arise to run a calculation against a value other than Gross Wages. For example, you may need to process a Bankruptcy judgment which is written as 10% of Disposable Earnings. Disposable Earnings may be defined for each employee subject to judgment.</p>
+            <p>In this case, you would create a Pay Item that is the sum of Gross Wages plus Fringes in Pay less Existing Deductions, in other words, 401K Deduction. This new pay item would need to be added to your sequence, and must appear <strong>before</strong> Net Pay, but <strong>after</strong> Withholding Taxes. Likewise, the pay item that will represent the amount deducted for Bankruptcy will need to come <strong>after </strong>the pay item representing Disposable Earnings but <strong>before</strong> Net Pay.</p>
+            <p>Using the First Base set up of Pay Items, Disposable Earnings will be computed as shown in the table below.</p>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002015.gif" />
+                </p>
+            </blockquote>
+            <p class="noteheader">NOTE</p>
+            <div class="note">A Pay/Union/<MadCap:variable name="Variables.Jc Contract caps" /> Calculation can then be set up to look at a Pay Item as a basis for Gross or even per period limit.</div>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002002.gif" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Pay Items with Union or <MadCap:variable name="Variables.Jc Contract caps" /> Rates </p>
+            <p>Occasionally, you may wish to identify or segregate values paid as Union Wages or <MadCap:variable name="Variables.Jc Contract caps" /> Wages and use them for other calculations.&#160;In OA, the pay item associated with Earnings Categories setup is used&#160;for presentation on the pay slip and for tax calculation purposes;&#160;the earnings category is designated on the timecard.<br /></p>
+            <p>You may elect to have rates of pay default from the Union Rate File or <MadCap:variable name="Variables.Jc Contract caps" /> Rate File.&#160;The gross computed from the rate of pay will still accumulate in the pay item referenced on the Earnings Category.<br /></p>
+            <p>To accumulate <MadCap:variable name="Variables.Jc Contract caps" /> or Union wages for use in other calculations, such as minimum fringe evaluations, create a new pay item and associate it with the Union or <MadCap:variable name="Variables.Jc Contract caps" /> Rate.&#160;This new pay item can then be used in other calculations (pay calcs, union calcs, or <MadCap:variable name="Variables.jc contract" /> calcs) or can be accumulated into other pay items for further processing.&#160;The pay item used on <MadCap:variable name="Variables.Jc Contract caps" /> Rates or Union Rates should not have any costing associated with it, but may be exposed on the pay slip, if appropriate.<br /></p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Do not reference the pay items used in Earnings Category setup in the Union Rate or <MadCap:variable name="Variables.Jc Contract caps" /> Rate files.&#160;This may result in double postings or unwanted presentations on the pay slip.</div>
+            <p />
+            <p>Presenting Pay Items on a Pay Slip </p>
+            <p>The Pay Slip field on a Pay Item determines whether it will display on a <MadCap:variable name="Variables.cheque" /> stub and where it will display. The Pay Item shown below represents a 401K Deduction. Standard US Pay Slips (<MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> and <MadCap:variable name="Variables.eft" /> Stubs) are built to include year to date values, so you only need to determine if the value held in the Pay Item will be classified on the <MadCap:variable name="Variables.cheque" /> stub as Payment, Deduct, Other, or not on the stub at all&#160;-&#160;None.</p>
+            <p>While a 401K Deduction and all other reductions in pay will be classified as a Deduct, most earnings will appear as Payment. How you classify a Reimbursement issued along with payroll is up to the user, but most will be classified as Other, since it is not a payment that will affect Earnings for the period or year.</p>
+            <p>Additional <MadCap:variable name="Variables.eft" /> Payments will automatically be classified as Other based on standard OA functionality. You must identify the Pay Items that will hold additional <MadCap:variable name="Variables.eft" /> Payments in Payroll parameter <span class="parameter">XPAYITMS</span>. These pay items should appear <strong>after</strong> Net Pay in the sequence.</p>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002003.gif" />
+                </p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002004.gif" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Posting Detail Hours into <MadCap:variable name="Variables.Jc Contract caps" /> Status </p>
+            <p><MadCap:variable name="General.ProductName" /> will collapse all hours into a single entry in <MadCap:variable name="Variables.Jc Contract caps" /> Status unless the user directs otherwise. <MadCap:variable name="General.ProductName" /> allows for hours to be defined in up to 9 different presentations in <MadCap:variable name="Variables.Jc Contract caps" /> Status. The standard will be Regular, Overtime, and Double Time, but some clients may wish to include Indirect Hours as a standard definition as well.</p>
+            <p>To define how hours will be presented in <MadCap:variable name="Variables.Jc Contract caps" /> Status, follow the steps below.</p>
+            <ol>
+                <li>In <span class="function" title="Function:%WTI2010BTUN">Units</span> in the Procurement module, define how hours will be presented in <MadCap:variable name="Variables.Jc Contract caps" /> Status.</li>
+            </ol>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002005.gif" />
+                </p>
+            </blockquote>
+            <ol start="2">
+                <li>On Pay Items whose Type is set to <strong>Hours</strong>, set the Unit to the appropriate Hour type set up in Step 1.</li>
+            </ol>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002006.gif" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Using Pay Items to Determine Payroll Costing </p>
+            <p>Pay Items hold information on how payroll costs incurred will be posted to <MadCap:variable name="Variables.Jc Contract caps" /> Status and the GL. Both Debits and Credits will be determined here.</p>
+            <p><strong><em>Expensing Costs</em></strong>
+            </p>
+            <p>All of the Pay Items associated with the cost of <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> are rolled up into a single pay item, defined as Total Burdened and Allocated Costs, for expense purposes. When posting to <MadCap:variable name="Variables.Jc Contract caps" /> Status or the General Ledger, costs are summar<MadCap:variable name="Variables.is" />ed at the Analysis (<MadCap:variable name="Variables.Jc Contract caps" /> or GL) level for each payroll period for each Unit (hour) measured.</p>
+            <p>In the example below, all earnings, employer burdens, employer taxes, and payroll allocations are rolled up into a single Pay Item 790. The costing will be a DEBIT to accrue the expenses, and the cost method will be <MadCap:variable name="Variables.jc contract" />. The General Ledger entry will come from the cost code portion of <MadCap:variable name="Variables.jc contract" /> analysis entered on each timecard.</p>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002007.gif" />
+                </p>
+            </blockquote>
+            <p><strong><em>Creating Credit Entries</em></strong>
+            </p>
+            <p>Credit Entries posted to the General Ledger need to be defined on Pay Items. The entries will comprise employer liabilities, employee taxes withheld, and Net Wages. Users will need to set Pay Items which represent these pieces of payroll to create Credit Entries.</p>
+            <p>Users can use Masking to build a General Ledger Account. The Default Cost Order field on a Pay Item tells <MadCap:variable name="General.ProductName" /> where to look to get each element of the General Ledger. For US Payroll, default cost will always begin in Tax Authority Configuration when costing a Federal/State/Local liability, or in the Union Calculation table when costing is for a Union Calc, but can continue to build from <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>, Department, or Pay Item, in any order. When masking is being used, the Account will contain (_.) to represent GL Elements. <MadCap:variable name="General.ProductName" /> will begin looking in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>, and then step through the Default Cost Order until a complete GL Account has been built. Generally, if a company is accumulating all of its liabilities in a single "division" on the Balance Sheet, the GL will probably be defined solely in <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span> or the Pay Item.</p>
+            <p>Below is a Pay Item which represents the Employer's portion of Social Security Tax. This pay item is already set to affect Total Burdened and Allocated Costs (Pay Item 790) which is where the Debit will originate. The Credit will need to be defined on the Employer's Portion of Social Security Tax.</p>
+            <p>On the costing Tab, set Costing to Credit, cost method will be GL, set the default cost order, and enter the Liability mask or full account. In the example shown below, let's assume GL Element 1 is the Division, Element 2 is the Profit <MadCap:variable name="Variables.centre" style="text-transform: capitalize;" />, and Element 3 is the Natural Account. In this case, the account will come from <span class="function" title="Function:%WPR214BTAX">Tax Authority Configuration</span>, while the Division and <MadCap:variable name="Variables.centre" style="text-transform: capitalize;" /> will originate from the Pay Item.</p>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002008.gif" />
+                </p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002009.gif" />
+                </p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002010.gif" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Detailed Costing to the General Ledger </p>
+            <p>If you wish to expense costs to a GL account other than the one prescribed on the cost code, you will need to set up the components of your Total Pay Item to allow for additional postings. All of the standard components of payroll, such as taxes and insurance, can be configured to post to unique GL accounts. Additionally, Employer provided expenses such as Health Insurance, 401k Match, and Union Fringes can be configured to post:</p>
+            <ol dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <li>On the Pay Item that represents each component of Gross <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />, such as Employer Social Security Expense, set your Liability account. Set Additional Posts to 2, and complete the Additional Postings to create a GL based Credit entry, with the default cost order as P and the GL account masked to Direct <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />. Create Debit entry to the appropriate expense account for the Pay Item.</li>
+            </ol>
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002015a.gif" />
+                </p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_002016.gif" />
+                </p>
+            </blockquote>
+            <p>When Calculations is run, the full value of Burdened <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> will be shown in the GL Account defined on the transaction's cost code. A Credit offset will be created to the same GL Account for Employer's Social Security Tax, and Debit will be created to the appropriate GL Account representing this component of <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />.</p>
+            <p>Using this method will allow for various employer provided Fringe Benefits to post to separate expense accounts rather than posting to a single bucket.</p>
+            <p>You may also use fixed fields in masking. For example, you may have natural general ledger expense accounts set up for Direct JC <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> using the series 309x, and Direct <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> using the series 459x, and Indirect <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> using the series 709x. You would set up the Credit Offset to point to the masked account _._.__90 and Expense to point to the masked account _._.__91. OA derives the masked elements of the general ledger account from the timecard, and only changes the last two characters as needed.</p>
+            <p />
+        </div>
+        <div class="configuration">
+            <h2 class="print">Pay Items within US Payroll</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PR/pr_xpayitms.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

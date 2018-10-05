@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1219" MadCap:lastWidth="802">
+    <head><title><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Tax Point Dates</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Tax Point Dates</h1>
+        <p>The tax point dates that <MadCap:variable name="General.ProductName" /> uses for transactions in the <a href="WDVT0002_VAT_Returns.html"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return</a> are as follows:</p>
+        <p><strong><span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span></strong>
+        </p>
+        <p>The tax point is the invoice date. <MadCap:variable name="General.ProductName" /> updates the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> either when the invoice is registered, or when the invoice is costed, depending on the <span class="ScreenType"><span class="parameter">VATCOST</span></span>parameter.</p>
+        <p><strong><span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span></strong>
+        </p>
+        <p>The tax point is the invoice date. <MadCap:variable name="General.ProductName" /> updates <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> when the invoice is posted.</p>
+        <p><span class="module" style="font-weight: bold;">Subcontractors Ledger</span>
+        </p>
+        <ul>
+            <li>If the billing type is Invoice, the tax point is the Certificate date. <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the certificate is posted.</li>
+            <li>If the billing type is Authenticated Receipt or Self-Billing, the tax point is the number of days after the <MadCap:variable name="Variables.cheque" /> date determined by the <span class="ScreenType parameter">CHQ+DAYS </span>or <span class="ScreenType parameter">SB+DAYS </span>parameter. <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the payment for the certificate is posted.</li>
+        </ul>
+        <p><strong><span class="module"><MadCap:variable name="Variables.Contract Sales" /> Ledger</span></strong>
+        </p>
+        <p>If the <MadCap:variable name="Variables.jc contract" /> is handled on an Invoice or Receipt basis, the tax point is the certificate date. <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the certificate is entered. Note: the Receipt option is for use when you only receive cash from a customer and wish to enter a certificate as a receipt.</p>
+        <p>If the <MadCap:variable name="Variables.jc contract" /> is handled on a Certificate basis, the tax point is the Deposit Date. <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the payment for the certificate is posted. You should use this option if the <MadCap:variable name="Variables.jc contract" /> is handled on an Authenticated Receipt basis.</p>
+        <p><strong><span class="Module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span></strong>
+        </p>
+        <p>The tax point for payments is the <MadCap:variable name="Variables.cheque" /> date, and for receipts it is the batch transaction date. <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the batch is posted.</p>
+        <p><span class="module" style="font-weight: bold;">General Ledger</span>
+        </p>
+        <p>The tax point is the transaction date. <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the batch is posted.</p>
+        <p><span class="module" style="font-weight: bold;">Expenses </span>
+        </p>
+        <p>The tax point is the expense date. <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the expense claim batch is posted.</p>
+        <p><strong><span class="module">House Sales</span></strong>
+        </p>
+        <p>For House Sales journals, the tax point date is the journal date. &#160;For completion statements, this should be the &#160;legal completion date. &#160;<MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> is updated when the journal is posted.</p>
+        <p>&#160;</p>
+        <p>When creating <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Returns, <MadCap:variable name="General.ProductName" /> includes all transactions with a tax point date on or before the date of the return, provided the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> has been updated as noted above. &#160;Transactions that would have been included but where the update has not happened (for example, an invoice dated in March has been input but&#160;is&#160;<span style="font-size: 1em;">not posted until after the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Return has been made) will be included in the following Return.</span></p>
+        <div class="configuration">
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_vatcost.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_CHQ_2BDAYS.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_SB_2BDAYS.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

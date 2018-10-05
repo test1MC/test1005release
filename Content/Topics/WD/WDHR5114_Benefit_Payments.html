@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Benefit Payments</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Benefit Payments</h1>
+        <p>HR benefits can be paid directly by Payroll calculations.</p>
+        <p>If you want to pay a benefit to the linked Payroll employee directly using pay calculations set up within Payroll, enter a date in the <span class="field">First Payment Date To Pay Via Payroll </span>field on the Main benefit details tab.</p>
+        <p>
+            <img src="../../Resources/Images_G-I/HR/HR_511401.png" />
+        </p>
+        <p>Setting this will cause a payment plan to be created which can then be seen on the Payments tab.</p>
+        <p>
+            <img src="../../Resources/Images_G-I/HR/HR_511402.png" />
+        </p>
+        <p>If the benefit contributions are specified by 'Value' then the payment plan will include payment amounts; if the contributions are 'Percentage' then the payment plan will consist solely of the payment dates (the amount to apply the percentage to not being known at this point).</p>
+        <p>To use the Payroll pay dates for benefit payments, <MadCap:variable name="Variables.tick" /> the <span class="field">Payment Plan To Use Payroll Pay Dates </span><MadCap:variable name="Variables.tick" />box on the Main benefit details tab. The payment plan dates will then be the same as the pay dates in Payroll for the linked employee and the benefit contributions will be scaled accordingly. For instance if there is a benefit contribution of <MadCap:variable name="Variables.$" />120 per year this could become <MadCap:variable name="Variables.$" />10 per month on the payment plan. If this <MadCap:variable name="Variables.tick" />box is not <MadCap:variable name="Variables.tick" />ed then the payment plan dates will use the frequency specified for the benefit.</p>
+        <p>On the Benefit History tab there will be an entry for the start date of the benefit and current values for the contribution amounts. Any changes made to these amounts on the Main details tab will cause another benefit history record to be created. Benefit history records can also be added and updated manually. These affect the payment plan as can be seen in the screen below, where the contribution amounts changed from the 30/08/2006 onwards.</p>
+        <p>
+            <img src="../../Resources/Images_G-I/HR/HR_511403.png" />
+        </p>
+        <p>Benefit payment frequencies are set up using <span class="function" title="Function:%WSYBCRTHR0">Lookup Codes</span> as shown below. In order to be able to create the payment plan the codes must use a specific format which is a number followed by a letter, where the letter is one of D for days, W for weeks, M for months or Y for years. So for example 2W means 2 weeks, 1M means 1 month, etc. If the lookup code used on the benefit does not match this format no payment plan will be created.</p>
+        <p>
+            <img src="../../Resources/Images_G-I/HR/HR_511404.png" />&#160;</p>
+        <p>To pay the benefit directly via the Payroll calculation, a pay calculation must be set up to get the value. The syntax to use is:</p>
+        <div class="code">_HRBEN_&lt;item&gt;_&lt;EE|ER&gt;[_&lt;benefit types&gt;]</div>
+        <p><strong>&lt;item&gt;</strong> is the item number giving the amount to use as the basis for the benefit calculation. It is used when the benefit contributions are of type 'Percentage'; it is ignored for type 'Value'. The next parameter should be <strong>EE</strong> for the employee contribution or <strong>ER</strong> for the employer contribution. <strong>&lt;benefit types&gt;</strong> is optional and if used should be a list of benefit types to include. These types are the lookup code values for the benefit type.</p>
+        <p>So for example <strong>_HRBEN_150_EE</strong> would evaluate to the sum of all the employee contributions due to be paid for the HR person linked to the Payroll employee whose pay is being calculated. Note that if you use this technique for paying benefits then any changes made by HR will be picked up automatically by the Payroll calculation without any approval step by Payroll staff. If you need Payroll staff to approve any changes before payments are made you should use the existing HR-Payroll linking of benefits values via the HR Requests Workbench instead.</p>
+    </body>
+</html>

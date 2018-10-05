@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="2" MadCap:lastHeight="860" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />How the OCR Process Works</h1>
+        <p>The Optical Character Recognition process initially inspects the file to identify the alias value (the label) for ‘avm_vatregno’. The adjacent text (to the right or below) is then tested against the format of the field. If the value passes the format check it is then used, in conjunction with the current company, to locate the invoice supplier. </p>
+        <h2 MadCap:autonum="1.1 ">If an OCR Layout Exists</h2>
+        <p>If an OCR layout for the supplier already exists (either manually created, or if the supplier has already had an invoice processed using OCR and a layout has been generated automatically), the existing layout will be used to locate the values from the image. This reduces processing time, by saving the need to scan the image for the text as set out in the alias table. </p>
+        <h2 MadCap:autonum="1.2 ">If No OCR Layout Exists</h2>
+        <p>If no OCR layout exists for the supplier, one will be created using the data from the supplier record. The new layout will be given the name as it appears in the ap_vendor table (field avm_name). </p>
+        <p>The OCR process goes through the remaining alias fields, and wherever possible, matches what is on the image to the field on the invoice record. Only fields that are on the <MadCap:variable name="General.ProductName" /> ap_invoice (PL invoice, credit or journal transaction) will be populated by OCR. </p>
+        <p>No data validation occurs during the OCR process. All fields automatically populated should be checked during normal invoice processing and posting.</p>
+        <p>The new layout can then be viewed (and edited if required) from the OCR layout screen in <span class="function">Document Management Links</span> to check for accuracy (see <MadCap:xref href="OCR Invoices - OCR Layouts.htm">1 - Document Management OCR Invoices - OCR&#160;Layouts</MadCap:xref>).</p>
+        <h2 MadCap:autonum="1.3 ">If No Supplier Is Identified</h2>
+        <p>If no supplier is found, a blank ap_invoice record is created with only the automatically-generated <MadCap:variable name="General.ProductName" /> internal reference number for the invoice or credit note. All other fields will be left blank for the user to complete.</p>
+    </body>
+</html>

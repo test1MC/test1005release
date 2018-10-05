@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Account Masking</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Account Masking</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> derives the <span class="module">General Ledger</span> account for a cost from both the <MadCap:variable name="Variables.jc contract" />-specific cost code and the <MadCap:variable name="Variables.jc contract" /> on which it is used. The cost code and <MadCap:variable name="Variables.jc contract" /> can both specify an account mask; the masks identify, in full or in part, a <span class="module">General Ledger</span> account. To take a simple example, if part of the account code denotes the region (01 - North, 02 - West, 03 - South) and part of the code denotes the type of cost (1200 - materials costs; 1300 - <MadCap:variable name="Variables.labour" /> costs; 1400 - subcontract costs), <MadCap:variable name="Variables.jc contracts" /> would be set up with account masks according to their region:</p>
+    <ul>
+      <li>Northern <MadCap:variable name="Variables.jc contracts" /> would have <strong>01._ _ _ _</strong></li>
+      <li>Western <MadCap:variable name="Variables.jc contracts" /> would have <strong>02._ _ _ _</strong></li>
+      <li>Southern <MadCap:variable name="Variables.jc contracts" /> would have <strong>03._ _ _ _</strong></li>
+    </ul>
+    <p>and <MadCap:variable name="Variables.cost heads" /> would be set up with account masks against the appropriate <a href="WDJC0005_Cost_Categories.html">categories</a> according to the type of cost:</p>
+    <ul>
+      <li>Material <MadCap:variable name="Variables.cost heads" /> would have <strong>_ _.1200</strong> against the material category</li>
+      <li>
+        <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" />
+        <MadCap:variable name="Variables.cost heads" /> would have <strong>_ _.1300</strong> against the <MadCap:variable name="Variables.labour" /> category</li>
+      <li>Subcontract <MadCap:variable name="Variables.cost heads" /> would have <strong>_ _.1400</strong> against the subcontract category</li>
+    </ul>
+    <p>Then when a material cost is recorded on a northern <MadCap:variable name="Variables.jc contract" />, the masks would combine so that the cost is recorded against account 01.1200.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">The mask on the cost <strong>code </strong>defaults from the mask on the standard <strong><MadCap:variable name="Variables.cost head" /></strong> on which the cost code is based. However, if you subsequently change the mask on a <MadCap:variable name="Variables.cost head" />, this will not affect the mask on any cost codes based on it.</div>
+    <p>You can set masks on the Group, Type, and Location records (typically for different parts of the account code). The Group, Type, and Location specified on a <MadCap:variable name="Variables.jc contract" /> will then build up the account code masks on the GL Codes tab in <span class="function" title="Function:%WJC2300SJOB">{Jc Contract} Details</span>. You can override individual accounts on the GL Codes tab (but note that if you subsequently change the Group, Type, or Location, the relevant part of the account mask will be re-set).</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/JC/jc_ccmask1.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

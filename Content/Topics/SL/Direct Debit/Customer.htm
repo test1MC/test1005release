@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="7" MadCap:lastHeight="839" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">
+                <MadCap:concept term="Topics" />Direct Debit Receipts - </MadCap:conditionalText>Customer</h1>
+        <p>If the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>SL&#160;parameter <span class="parameter">USEDD</span> is set to <span class="userselect">Y</span>, <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">an additional </MadCap:conditionalText>field is available on the <span class="Function">Customer Details</span> Statement tab.</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/Direct Debits/Customer DD Flag.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Direct Debit<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this customer is configured for Direct Debit receipts. If this is <MadCap:variable name="Variables.tick" />ed, <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">the </MadCap:conditionalText>Direct Debit tab is displayed.</p>
+                </div>
+            </div>
+        </div>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>If a customer is marked as Direct Debit, cash cannot be entered manually for that customer.</p>
+            </div>
+        </div>
+        <h2 MadCap:autonum="1.1 ">Direct Debit Tab</h2>
+        <p style="page-break-after: avoid;">The Direct Debit tab allows you to configure the Direct Debit details for the customer. The fields available depend on the region (specifically, whether or not <span class="parameter">CO/COMPLOC</span> = Aus).</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/Direct Debits/Customer DD AUS.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Bank Name<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Australia only. Optional. The name of the bank.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>BSB</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Australia only. Required. The BSB&#160;code for the branch.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Name<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Not Australia. Required. The name of the bank.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Bank Details</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Not Australia. Optional. Notes about the bank.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Account Number</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Mandatory. The customer’s bank account number.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p><MadCap:variable name="Variables.Sort Code caps" />
+                    </p>
+                </div>
+                <div class="FieldDef">
+                    <p>Not Australia. Mandatory. The <MadCap:variable name="Variables.sort code" /> of the customer’s bank.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>IBAN</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Not Australia. Optional. The International Bank Account Number of the customer’s bank account.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Swift BIC</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Not Australia. Optional. The SWIFT&#160;Business Identifier Code for the customer’s bank.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Limit</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The limit on the amount that can be taken by Direct Debit transactions in one <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" />. If the total value of the invoices exceeds this limit, an unpaid balance is carried over to the following period. </p>
+                    <p>If this is zero, there is no limit.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>On Hold</p>
+                </div>
+                <div class="FieldDef">
+                    <p>If this is <MadCap:variable name="Variables.tick" />ed, the customer is on hold and is not included in  Direct Debit processing.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Reason</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The resason that the customer is on hold. This is only enabled if the On Hold box is <MadCap:variable name="Variables.tick" />ed, and allows you to select from a list of Direct Debit hold codes (see <MadCap:xref href="Direct Debit Hold Codes.htm">1 - Direct Debit Hold Codes</MadCap:xref>).</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

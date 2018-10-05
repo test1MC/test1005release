@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Inline Manual Testing</h1>
+        <p>The following identifies the testing carried out against PDR 25508</p>
+        <h2 MadCap:autonum="1.1 ">SY Parameters</h2>
+        <p>New site created in Inline Manual for URL https://ukazux01.coinscloud.com:4433/env/devdemows </p>
+        <p>and API key generated</p>
+        <p>&#160;</p>
+        <p>SY/MANKEY and SY/MANTYPE set as appropriate and display of Inline Manual Icon confirmed.</p>
+        <h2 MadCap:autonum="1.2 ">Creating Topics </h2>
+        <h3 MadCap:autonum="1.2.1 ">Login page</h3>
+        <p>Inline Manual topic created for Login screen. Icons did not appear. Verified with Tim Armitage that the login page was configured to use the player code. It was not. Tim corrected this. </p>
+        <p>Tested login page Inline icons - working ok.</p>
+        <h3 MadCap:autonum="1.2.2 ">Function screens</h3>
+        <p>Created Inline Manual steps on Prices workbench screen. Work okay, but the same step appears on other screens. This is incorrect behaviour. Inline uses context paths to determine where a step should appear. Discussions with inline identified the correct format for the context paths. These were applied and tested OK. Format documented</p>
+        <h3 MadCap:autonum="1.2.3 ">Inline Widget</h3>
+        <p>Inline uses a "widget" to launch the inline side panel. Standard user controls allow the placement of the widget at any point on the edge of the screen. However, as COINS uses the full screen space, the widget obscures at least one or more COINS screen items.</p>
+        <p>COINS code changed to display an icon in the Header (controlled by the parameter SY/MANTYPE) that launches the Inline side panel. Inline administrators will need to disable the Panel widget when they create their sites. Instructions added to documentation.</p>
+        <p>&#160;</p>
+    </body>
+</html>

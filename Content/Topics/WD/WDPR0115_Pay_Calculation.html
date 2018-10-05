@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> and Pay Calculation</title>
+    <style>/*<![CDATA[*/
+li.enrolled
+{
+	border: solid 2px #d5d5d5;
+	padding: 3px;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> and Pay Calculation</h1>
+    <p>The pay calculation assesses whether employees are to be enrolled automatically, and generates the appropriate notification records. The notifications can then be processed using the Notification Report or from the Notification browse.</p>
+    <p>If the employee is not normally working in UK, or has a future deferred until date, or future opted out until date, <MadCap:variable name="General.ProductName" /> takes no action.</p>
+    <p>If the employee already belongs to a qualifying scheme, <MadCap:variable name="General.ProductName" /> generates an EWEM (Existing Member Information) notification for them.</p>
+    <p>Otherwise <MadCap:variable name="General.ProductName" /> assesses their pay and age to determine if they are entitled, ineligible or eligible.</p>
+    <ul>
+      <li>If they are <strong>ineligible</strong>, <MadCap:variable name="General.ProductName" /> generates an EWNJ (Non-Eligible Jobholder) notification for the employee.</li>
+      <li>If they are <strong>entitled</strong>, <MadCap:variable name="General.ProductName" /> generates an EWE (Entitled Worker) notification for the employee.</li>
+      <li>If they are <strong>eligible</strong>, <MadCap:variable name="General.ProductName" /> uses the rules for deferment (specified by the parameter <span class="parameter">AEDEFRUL</span>) to determine their <MadCap:variable name="Variables.enrolment" /> date.</li>
+      <ul>
+        <li>If they are <strong>deferred</strong><MadCap:variable name="General.ProductName" /> creates an EWP (Postponement) notification which will be sent to the employee. 
+<p>Employees who are deferred will be re-assessed when they reach the end of the deferral.</p></li>
+        <li class="enrolled">If an eligible employee is <strong>not deferred</strong>, or they reach the deferred <MadCap:variable name="Variables.enrolment" /> date, they will be automatically enrolled. When the employee is enrolled <MadCap:variable name="General.ProductName" /> creates a pension scheme entry for them, and generates: 
+<ul><li>An EWNM (New Member Information ? Employee) notification for the employee.</li><li>An EPNM (New Member Information ? Pension Provider) notification for the pension provider.</li></ul><p><MadCap:variable name="General.ProductName" /> also generates an undated notification:</p><ul><li>If the scheme is a personal pension scheme, <MadCap:variable name="General.ProductName" /> generates a PWTC (Pension Terms and Conditions) notification; when you find out that the employee has received the terms and conditions from the pension provider, you should fill in the Received date.</li><li>If the scheme is not a personal pension scheme, <MadCap:variable name="General.ProductName" /> generates a PEMA (Membership Active) notification; when you find out that the employee's membership is active, you should fill in the Received date.</li></ul></li>
+      </ul>
+    </ul>
+    <p>If <MadCap:variable name="General.ProductName" /> cannot determine which scheme to <MadCap:variable name="Variables.enrol" /> the employee into, then an error will be raised and the employee will not be calculated. You will have to select which pension to assign the employee before you can calculate them. We would anticipate most users will have a single auto-<MadCap:variable name="Variables.enrolment" /> pension nominated by parameter and others will specify the scheme to use for auto-<MadCap:variable name="Variables.enrolment" /> on the employee at set up time, so this would be infrequent.</p>
+    <p>If an employee has opted-out having paid contributions <MadCap:variable name="General.ProductName" /> calculates the refund.</p>
+    <p>The calculation will issue warnings if eligible jobholder contributions are below the percentages specified in the parameters.</p>
+  </body>
+</html>

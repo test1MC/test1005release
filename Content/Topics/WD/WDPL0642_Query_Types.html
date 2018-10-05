@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="794" MadCap:lastWidth="936">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Problem Invoices - Query Types</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Problem Invoices - Query Types</h1>
+    <p>The Problem Invoice Workbenches assign query codes to invoices based on a series of tests, in the following order:</p>
+    <p />
+    <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Test</th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Query type</th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Query type code</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">1. Is the invoice on the register?</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Registered</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Regstr</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">2. Has the invoice been provisionally costed?</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Provisionally Costed</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">ProvC</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">3. Are there any uncleared missing tickets on the invoice? </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Uncleared Missing Ticket</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">UnclMT</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">4. Are there any lines on the invoice with a quantity greater than the expected quantity, and has the invoice NOT been approved by site?</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Delivery Query</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">DelQty</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">5. Does the invoiced price on any of these lines exceed the order price, and has the invoice NOT been approved by buying?</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Price Query</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Price</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">6. Is the invoice on commercial hold?</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Commercial Hold</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">ComHld</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">7. Is the invoice on financial hold (if you are using financial hold codes)?</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Financial Hold</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">FinHld</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">8. Has the invoice been part paid?</td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Partly Paid</td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">PartPd</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If the invoice fails a test, it remains at that query type until the query has been dealt with.  If the invoice passes a test, <MadCap:variable name="General.ProductName" /> applies the next test in the list.  If the invoice passes all the tests, it is ready to be paid, and will not appear on the workbenches.  </p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">If you are filtering the list using the simple filter, you need to enter the query type code.</div>
+  </body>
+</html>

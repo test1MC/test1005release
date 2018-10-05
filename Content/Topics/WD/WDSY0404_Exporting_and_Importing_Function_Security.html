@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Exporting and Importing Function Security</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Exporting and Importing Function Security</h1>
+        <p>You can export the function security settings for a user or group from one system and import them to another.</p>
+        <div class="process">
+            <p>You may want to export a group to Excel, for instance if you have created a Group in COL you could then export it into Live.</p>
+            <ul>
+                <li>From the System Menu, select <span class="Emphasis">User Maintenance &gt; Function Security &gt;Export Function Security</span></li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Export Groups_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+                </img>
+            </p>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Export Groups_1_1105.png" class="FullWidth">
+                </img>
+            </p>
+            <ul>
+                <li>Select the group you want to export from the lookup and enter an asterisk in the Function List field.</li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Export Groups_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+                </img>
+            </p>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Export Groups_2_1105.png" class="FullWidth">
+                </img>
+            </p>
+            <ul>
+                <li>For Export Function Access, the options are: <ul><li>Blank&#160; = All functions will be exported.</li><li>Ticked = Only functions which have been explicitly set to either access Yes or No will be exported.</li></ul></li>
+            </ul>
+            <ul>
+                <li>Click <MadCap:snippetText src="../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp"></MadCap:snippetText> the following screen will be displayed:</li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Export Groups_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+                </img>
+            </p>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Export Groups_3_1105.png" class="FullWidth">
+                </img>
+            </p>
+            <ul>
+                <li>Press Ctrl A in the Function Security Data screen to highlight the contents field, </li>
+                <li>Press CTRL-C to copy to the clipboard</li>
+                <li>You can now open Excel and paste the contents</li>
+            </ul>
+            <h2>To import function security:</h2>
+            <p>Groups exported from one environment, using the <MadCap:xref href="../SY/Maintain Users and Groups/Export Groups.htm" target="_blank">Export Groups</MadCap:xref> function, can be imported into another environment using the <span class="Function">Import Function Security</span> option.</p>
+            <ul>
+                <li>Create a Group </li>
+            </ul>
+            <p class="note">The Group ID you create in Group Maintenance must be the same name as that in the import file. For instance, if the file is for a group called WMANDATORY the group ID you create in Group Maintenance should be WMANDATORY. </p>
+            <ul>
+                <li>From the System Menu, select User Maintenance &gt; Function Security &gt; Import Function Security</li>
+            </ul>
+            <p>The following screen will be displayed. </p>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Create a Group using the Import_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+                </img>
+            </p>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Create a Group using the Import_1_1105.png" class="FullWidth">
+                </img>
+            </p>
+            <ul>
+                <li>Open the file created from the Export; use Ctrl-A to select all the contents (including the last line with the period symbol)</li>
+            </ul>
+            <ul>
+                <li>Paste the contents into the Function Security Data screen </li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Create a Group using the Import_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+                </img>
+            </p>
+            <p>
+                <img src="../../Resources/Images/SY/Maintain Users and Groups/Create a Group using the Import_3_1105.png" class="FullWidth">
+                </img>
+            </p>
+            <ul>
+                <li>Click <MadCap:snippetText src="../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp"></MadCap:snippetText>.</li>
+                <li>A blank Function Security Data screen will be displayed; Click Undo.</li>
+                <li>The group can now be assigned to users.</li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Variation Register</h1>
+        <p style="page-break-after: avoid;"><span class="Function">Variation Register</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new <MadCap:variable name="General.ProductName" /> workbench that </MadCap:conditionalText>shows a summary of the variations for a development.  From here you can select a development, and add and maintain the list of variations for that development.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Variation Register Development Browse</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BQ/Variation Register/Variation Register Browse.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="caption">Columns</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Development 	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The development code. A link on this column takes you to a browse of variations for the selected development (see <MadCap:xref href="#Developm">1.1 , Variation Register</MadCap:xref>).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Name	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The name of the development.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Totals</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A total of all the variations for the development. A link on this column takes you to a browse of variations for the selected development with the filter pre-set to show all variations.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Variation Statuses</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A column is shown for each of the variation statuses configured (see <MadCap:xref href="Variation Status Codes.htm">Variation Status Codes</MadCap:xref>) that are not marked as retired. Each column shows a count of the variations at that status. A link on the column takes you to the browse of variations for the selected development, with the filter pre-set to only show variations for the selected status.</p>
+                </div>
+            </div>
+        </div>
+        <h2><a name="Developm"></a>Development Variations Browse</h2>
+        <p style="page-break-after: avoid;">The Development Variations browse allows you to maintain the variations for a development.  Column sets allow you to configure the columns to be displayed. </p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Variation Register Development Variations Browse</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>(This is the Drop-down text)</p>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BQ/Variation Register/Development Variations Browse.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>You can filter on all variations or just those currently in progress (that is, not live and not cancelled). Advanced filtering by QS reference, status and reason is also available.   </p>
+        <p>Buttons provide shortcuts to the <span class="Function">Plot Surveyors Workbench</span> (and if the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>BQ&#160;parameter <span class="parameter">USEHTVAR</span> is set to Y, to the <span class="Function">Development House Type Workbench</span>).</p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Internal Reference</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The automatically-generated unique reference for this variation within the selected development. A link on this column takes you to a browse of the items that make up the variation.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>QS reference</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Optional manually input reference for this variation (to help cross reference to paperwork etc.).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Variation Status</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The status of the variation. The valid status codes are set up using <span class="Function">Variation Status Codes</span> (see <MadCap:xref href="Variation Status Codes.htm">1 , Variation Status Codes</MadCap:xref>).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Variation Reason</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The reason for the variation. The valid reason codes are set up using <span class="Function">Variation Reason Codes</span> (see <MadCap:xref href="Variation Reason Codes.htm">1 , Variation Reason Codes</MadCap:xref>).</p>
+                    <p>If the variation reason has a system status of Client Extra, Client Incentive or Client Option, the <span class="Field">Plot</span> field is updatable.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Variation Category</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The category for the variation. The valid category codes are set up using <span class="Function">Variation Category Codes</span> (see <MadCap:xref href="Variation Category Codes.htm">1 , Variation Category Codes</MadCap:xref>).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Description</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The description of the variation.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Detail</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The full text describing this variation in detail.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Plot</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The plot number.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Estimated Cost</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Manual Input of the Estimated Cost for the variation.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Quoted Cost</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Manual Input of the Quoted Cost for the variation.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Approved Cost</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The Approved Cost for the variation. The approved cost can only be updated if the associated system status of the variation is ‘Registered’.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Number of Linked Plot <MadCap:variable name="Variables.Bq Bill caps" /> Items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The total number of plot <MadCap:variable name="Variables.bq bill" /> items linked to this variation. This includes items that are to be omitted.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Plot Items NR <MadCap:variable name="Variables.Vat caps" /></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The non-recoverable <MadCap:variable name="Variables.vat" /> amount from the associated plot <MadCap:variable name="Variables.bq bill" /> items.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Cost Variation of Plot <MadCap:variable name="Variables.Bq Bill caps" /> Items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The total cost of the plot <MadCap:variable name="Variables.bq bill" /> items linked to this variation including non-recoverable <MadCap:variable name="Variables.vat" />.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Order Status of Linked Plot <MadCap:variable name="Variables.Bq Bill caps" /> Items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The order status of the items linked to the variation.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel" colspan="2">
+                    <p style="font-weight: normal">The following three fields are only shown if the new BQ parameter <span class="parameter">USEHTVAR</span> is set to Yes.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Number of House Type <MadCap:variable name="Variables.Bq Bill caps" /> Items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The total number of house type <MadCap:variable name="Variables.bq bill" /> items linked to this variation. This includes items that are to be omitted.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>House Type Items NR <MadCap:variable name="Variables.Vat caps" /></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The non-recoverable <MadCap:variable name="Variables.vat" /> amount from the associated house type <MadCap:variable name="Variables.bq bill" /> items.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Cost Variation of House Type <MadCap:variable name="Variables.Bq Bill caps" /> Items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The total cost of the house type <MadCap:variable name="Variables.bq bill" /> items linked to this variation including non-recoverable <MadCap:variable name="Variables.vat" />.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Logged</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The user who first logged the variation and the date/time it was logged.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Last Updated</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The user who last updated the variation and the date/time it was updated.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Variation <MadCap:variable name="Variables.Bq Bill caps" /> Items Browses</h2>
+        <p>The Variation <MadCap:variable name="Variables.Bq Bill caps" /> Items screen has two tabs, with browse screens that show details of the plot and development house type <MadCap:variable name="Variables.bq bill" /> items that have been amended as part of the variation. Note: if the new BQ parameter <span class="parameter">USEHTVAR</span> is not set to Y, the house type <MadCap:variable name="Variables.bq bill" /> items tab will not be shown.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Variation Register Variation <MadCap:variable name="Variables.Bq Bill caps" /> Items Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BQ/Variation Register/Plot Bill Variations Tab.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>The Detail button <img src="../../../Resources/Images/COINS Graphics/SVG buttons/detail.svg" class="icon24px" /> shows details of the <MadCap:variable name="Variables.bq bill" /> item. </p>
+        <ul>
+            <li> For added items this shows details of the new item.</li>
+            <li>For deleted items this shows details of the original deleted item.  </li>
+            <li>For updated items this shows details of the revised item, and also the changes between the original and revised item.</li>
+        </ul>
+        <p>If the system status of the variation is Registered, Budget Approval or Budget Approved, the <MadCap:variable name="Variables.bq bill" /> item can be deleted. This removes the item from the variation and reinstates the original version of the <MadCap:variable name="Variables.bq bill" /> item. </p>
+    </body>
+</html>

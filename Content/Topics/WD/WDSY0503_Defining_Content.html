@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="949" MadCap:lastWidth="837">
+    <head><title>Defining the Content of the Document</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Defining the Content of the Document</h1>
+        <p>The information that is displayed on the document can be either the value of a database field or fixed text.</p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_invoice_doc.gif" />
+        </p>
+        <p>Add a separate field record for each database field and each bit of text on the document.</p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_docline.png" class="FullWidth" />
+        </p>
+        <p>Anything that is to be printed on the same line must have the same row number. The columns indicate the order of items in the row. Different rows can have a different number of columns, and the columns can be of different widths. </p>
+        <p>The <span class="field">Text</span> field prints text on the form. You can embed database fields in the <span class="field">Text</span> box by adding { } either side of the field.</p>
+        <p>The <span class="field">Field</span> field allows you to reference fields in the database or add the path of an image, see <MadCap:xref href="WDSY0509_Images.html" class="doclink">Images on Configurable Documents</MadCap:xref>.</p>
+        <p>The minimum height of a row is determined by the height of the first item on the row (other heights are ignored). </p>
+        <p>If you want column headings above the repeated (body) rows, include them at the bottom of the header section.</p>
+        <p>To show <b>page numbers</b>, use the tokens {page-number} and {page-count}. For example, enter a text record <span class="screentype">Page {page-number} of {page-count}</span>. </p>
+        <p>If you want a logo to appear on the document, specify it on one of the Background fields of the Report Page Layout. The image will be aligned with the left-hand margin, so if you want the logo to be right-aligned, you need to add white space to the image itself.</p>
+    </body>
+</html>

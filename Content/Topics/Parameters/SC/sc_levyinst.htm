@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/LEVYINST - Insurance types that trigger levy</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/LEVYINST - </span> Insurance types that trigger levy
+</div>
+<div class="param_def">
+<p>The insurance types that COINS checks to determine whether to apply an insurance levy.</p>
+<p>In <span class="procedure">Certificate Entry</span>, an insurance levy can be calculated when a required insurance does not exist or has expired for the subcontractor.</p>
+<p>If you are using <MadCap:variable name="Variables.sc insother"/> processing (parameter <span class="parameter">EXTINS</span> = <span class="userinput">Y</span>), the <span class="field">Add Levy? </span>field must be <MadCap:variable name="Variables.tick"/>ed against the required <MadCap:variable name="Variables.sc scheme"/> types in <span class="function" title="Function:%WSC2060BSCY"><MadCap:variable name="Variables.Sc Insother caps"/></span>.</p>
+<p>If standard insurance processing is used (<MadCap:snippetBlock src="../../../Resources/Snippets/coinsplus.flsnp"/> only; parameter <span class="parameter">EXTINS</span> = <span class="userinput">N</span>), <span class="parameter">LEVYINST</span> is a comma-separated list of codes that represent the insurance types to check:</p>
+<ul>
+<li><span class="userinput">SCEMPLIA</span> - Employer's Liability</li>
+<li><span class="userinput">SCICRISK</span> - Contractors All Risk</li>
+<li><span class="userinput">SCIPINDEM</span> - Professional Indemnity</li>
+<li><span class="userinput">SCPUBLIA</span> - Public Liability</li>
+</ul>
+<p>If any of the selected insurance types in <span class="parameter">LEVYINST</span> do not have a policy number set, or have an <MadCap:variable name="Variables.expiry"/> date set which is prior to the certificate date, then the levy will be calculated. If the <MadCap:variable name="Variables.expiry"/> date is not set then the processing assumes that the insurance does not expire.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sc/sc_extins.htm" /><MadCap:relatedTopic src="../sc/sc_levyitem.htm" /><MadCap:relatedTopic src="../sc/sc_scaddins.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

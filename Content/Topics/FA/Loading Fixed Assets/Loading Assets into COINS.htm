@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="10622" MadCap:lastWidth="2177">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Loading Assets into <MadCap:variable name="General.ProductName" /> OA</h1>
+        <p>&#160;</p>
+        <p MadCap:conditions="COINS.ScreenOnly"><a href="../Loading Fixed Asset Groups/MASTER Asset Register Load.xlsx" target="_blank"><img src="../../../Images/excel_logo-32.png" /> Master Asset Load Template</a>
+        </p>
+        <h2>Create the Load File</h2>
+        <p>In the Master Asset Register Load file, within the tab titled “Asset Load Format”, copy row 18 (the red line) </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS.png" class="FullWidth" />
+        </p>
+        <p>Highlight multiple rows beneath it and “Insert Copied Lines” to allow you to enter multiple Asset records</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_1.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_2.png" class="FullWidth" />
+        </p>
+        <p>In Contract Status &gt; Setup &gt; Setup Maintenance &gt; Standard <MadCap:variable name="Variables.Cost Heads caps" /> there is a list of those Cost Heads that are Type “P” for Plant. This list needs to be exported </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_3.png" class="FullWidth" />
+        </p>
+        <p>Then they need to be copied from the exported file</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_4.png" class="FullWidth" />
+        </p>
+        <p> Then they need to be pasted into the Plant Contract <MadCap:variable name="Variables.Cost Heads caps" /> tab of the Master Asset Register Load file. Take care in ensuring that only those Plant Cost Heads which you have in <MadCap:variable name="General.ProductName" /> are on this tab.</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_5.png" class="FullWidth" />
+        </p>
+        <p>Also check the Asset Analysis Sets are correctly setup as required as these will filter through to the Asset Load tab</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_6.png" class="FullWidth" />
+        </p>
+        <p>Enter the Asset details into the Master Asset Load File Register</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_7.png" class="FullWidth" />
+        </p>
+        <p>Copy the rows that have been completed</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_8.png" class="FullWidth" />
+        </p>
+        <p>Paste them into a new Excel document as “Paste Special &gt; Values and Number Formatting”</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_9.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_10.png" class="FullWidth" />
+        </p>
+        <p>Save the file as a .csv</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_11.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_12.png" class="FullWidth" />
+        </p>
+        <p>Close down that file and do not save again despite being prompted to</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_13.png" class="FullWidth" />
+        </p>
+        <h2>Fixed Asset Load</h2>
+        <p>Navigate to Fixed Assets &gt; Administration &gt; Fixed Asset Load</p>
+        <p>Click on the “Choose File” button </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_14.png" class="FullWidth" />
+        </p>
+        <p>Select the file just saved as previously shown and ensure “Upload Mode” is set to “Check”. </p>
+        <p>Then Click on the “Next” button</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_15.png" class="FullWidth" />
+        </p>
+        <p>Check the Report Status queue for the report titled “Fixed Asset Load” to see if there are any issues with the load file. If there are issues the report will detail which lines are the offending lines. Those lines will need to be corrected and re-uploaded in “Check” mode until they have all been checked successfully.</p>
+        <p>An example of an issue you may see on the Asset Load:</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_16.png" class="FullWidth" />
+        </p>
+        <p>Once they have all been checked successfully re-upload in “Load” mode</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_17.png" class="FullWidth" />
+        </p>
+        <p>Again, check the Report Status queue for the report titled “Fixed Asset Load” to see if there are any issues with the load file. If there are issues the report will detail which lines are the offending lines. Those lines will need to be corrected and re-uploaded in “Load” mode.</p>
+        <p>*NOTE*</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: Orange;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If there are any issues with some of the lines, only those lines will need to be re-uploaded. Some Assets will have been uploaded successfully so do not attempt to re-upload them again otherwise an error message will appear on the report stating the same.</p>
+        <p>Alternatively you can delete the already uploaded assets in the FA Asset Workbench which deletes them from the Purchase Batch so they can all be re-uploaded</p>
+        <p>To see the Assets that have been uploaded navigate to Fixed Assets &gt; FA Asset Workbench</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_18.png" class="FullWidth" />
+        </p>
+        <p>Now that these Assets have been loaded into <MadCap:variable name="General.ProductName" />, move them into the “Loaded” section of the Master Asset Register Load file</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_19.png" class="FullWidth" />
+        </p>
+        <p>Now that the Assets have been loaded in, they need to be reported on BEFORE posting</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_20.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_21.png" class="FullWidth" />
+        </p>
+        <p>Check that the <MadCap:variable name="Variables.Financial Period caps" /> is correct BEFORE posting. If all of the details are correct (values are correct as is the Financial Period) then proceed to “Post” the batch.</p>
+        <p>*NOTE*</p>
+        <p>For the initial Asset Load where the asset purchases have already been accounted for postings to the GL will need to be switched off.</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_22.png" class="FullWidth" />
+        </p>
+        <p>*NOTE*</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: Orange;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Purchase postings are non-reversible within the application (there isn’t a utility or tool within the application to reverse the postings) so considerable attention must be used before posting</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Loading Fixed Assets/Loading Assets into COINS_23.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

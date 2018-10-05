@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Document Management OCR Invoices - </MadCap:conditionalText>Parameters</h1>
+        <p>The following parameters control the OCR&#160;functionality.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">OCRCAT</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>A list of document categories that can use OCR; for example:&#160;ap_invoice. </p>
+                        <p>Currently <MadCap:variable name="General.ProductName" /> only attempts to create a layout for ap_invoice documents. For any other categories, full-page OCR is run for the purpose of storing the information into SOLR.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">OCRDATA</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="COINS.v1108,COINS.Superseded in 1109">[New in 11.08] </MadCap:conditionalText>The fully qualified path to where supporting files for the OCR engine are located. By default, this should be <span class="userinput">/usr/local/share/tesseract/</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">OCRENGINE</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The OCR&#160;engine to use. Set this to <span class="userinput">tesseract</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">OCROFFSET</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="COINS.v1108,COINS.Superseded in 1109">[New in 11.08] </MadCap:conditionalText>The percentage of leeway allowed around each keyword box. Typically, this would be less than 1 percent, but an absolute maximum of 5 percent is permitted. On most images, 5 percent would be too large.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">OCRPATH</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The full path to the OCR executable; for example:&#160;<span class="userinput">/usr/local/bin/tesseract</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1110">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">OCRTPDIR</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p class="TableCell">The full path to the directory where the images used by OCR templates are stored.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

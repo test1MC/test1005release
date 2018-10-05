@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Auto Login</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Auto Login</h1>
+        <p>Auto login allows you to take advantage of Windows network security so that users can connect directly to <MadCap:variable name="General.ProductName" /> without needing to go through a separate login process for <MadCap:variable name="General.ProductName" />. When the user clicks an icon or link that takes them in to <MadCap:variable name="General.ProductName" />, <MadCap:variable name="General.ProductName" /> uses the domain name and user name of the Windows PC to log in.&#160;</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">Automatic login <strong>only</strong> works when using Internet Explorer. For an alternative method, see <a href="../SY/Remember User ID/Overview.htm" class="doclink">Remember User ID - Overview</a>.</div>
+        <h2>How it works</h2>
+        <p>If auto login is enabled, login page is directed to an ASP that returns the domain and user name of the Windows user.&#160; <MadCap:variable name="General.ProductName" /> then searches for a user record that has that combination of domain and user name set up against it, and logs the user in with that user ID.</p>
+        <p>If a user logs in with an IP address that is not valid, or with a domain name and user name combination that has no match on any <MadCap:variable name="General.ProductName" /> user record, <MadCap:variable name="General.ProductName" /> displays the standard login screen and the user has to enter their <MadCap:variable name="General.ProductName" /> user ID and password.</p>
+        <div class="configuration">
+            <h2 class="print">Auto login - configuration</h2>
+            <p>To enable auto login, <span class="parameter">SY/WEBAIPS </span>must specify the IP addresses for which auto login is allowed.</p>
+            <p>An ASP must be set up on the IIS server which returns the Windows user's user name and domain name.</p>
+            <p>In the <span class="field">Domain\User </span>field on the user record of each user, enter that user's Windows domain name and user name.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The Windows user names do not need to match the <MadCap:variable name="General.ProductName" /> user names.</div>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDSY0123_Setup_Auto-login.html" />
+                </MadCap:relatedTopics>
+            </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_webauto.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_webaips.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>JC/LRGCATPL - Large copy area templates</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">JC/LRGCATPL - </span> Large copy area templates
+</div>
+<div class="param_def">
+<p>A list of templates which have more than 10000 cells in one worksheet marked as copy areas (for example: <SPAN class="userinput">cvrnorth.xml,cvr22.xml</SPAN>).</p>
+<P>This is provided to solve a problem with the Generate <MadCap:variable name="Variables.Cv cvr caps"/> process failing on very large <MadCap:variable name="Variables.Cv cvr caps"/> templates which had more than 10000 cells in one worksheet marked as copy areas. </P>
+<P>Please note, the use of very large templates is not recommended by COINS. This parameter should only be used as a last resort. If a <MadCap:variable name="Variables.Cv cvr caps"/> template has been in use without having been set in the parameter, and then the parameter value is changed to include the <MadCap:variable name="Variables.Cv cvr caps"/> template, OR if the parameter value includes the <MadCap:variable name="Variables.Cv cvr caps"/> template and the template has been in use, and then the <MadCap:variable name="Variables.Cv cvr caps"/> template is removed from the parameter value, all the <MadCap:variable name="Variables.cv cvrs"/> produced from the template in the next generation cycle will have empty copy areas (that is, their copy areas will not be retained from the last time they were uploaded). </P>
+</div>
+</body>
+</html>

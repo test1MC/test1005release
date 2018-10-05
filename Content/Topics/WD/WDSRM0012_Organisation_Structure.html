@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1477" MadCap:lastWidth="935">
+    <head><title>Organ<MadCap:variable name="Variables.is" />ation Structure</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Organ<MadCap:variable name="Variables.is" />ation Structure</h1>
+        <p>&#160;</p>
+        <p>If you are using "status by view" to manage the supply chain relationships, you must define the structure of your organ<MadCap:variable name="Variables.is" />ation within <MadCap:variable name="General.ProductName" />: use <span class="function" title="Function:%WCI9001BCRG">Organ<MadCap:variable name="Variables.is" />ation Structure</span>.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">Strictly speaking, the organ<MadCap:variable name="Variables.is" />ational structure relates to views of the database; it does not necessarily have to relate to the actual structure of your organ<MadCap:variable name="Variables.is" />ation.&#160; You may, however, want to relate it to, for example, your GL structure.</div>
+        <p>The organ<MadCap:variable name="Variables.is" />ational structure determines the views that are available in the Company Information and SRM workbenches.&#160; You can define up to five levels of organ<MadCap:variable name="Variables.is" />ation; level 1 is the top level which shows the entire database (that is, all companies in the Company Information workbench).</p>
+        <p>
+            <img src="../../Resources/Images_S-U/SRM/SRM_001101.gif" class="FullWidth" />
+        </p>
+        <div class="process">
+            <h2 class="print">To define your organ<MadCap:variable name="Variables.is" />ation structure:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WCI9001BCRG">Organ<MadCap:variable name="Variables.is" />ation Structure</span>.</li>
+                <li>Create one record for level 1.</li>
+                <li>Create records for each of the entities (for example, <MadCap:variable name="Variables.kco companies" />) at level 2.&#160;&#160;Give each one an <span class="field">Entity Code </span>to identify it (for example, the name of the company).</li>
+                <li>Create records for each lower level in the same way.&#160; Set the <span class="field">Parent </span>to the relevant entity from the level above.&#160; For example if the Slough office is in the South region, set the <span class="field">Parent </span>of Slough to <span class="userinput">South</span>.</li>
+            </ol>
+            <p>You cannot have more than one entity with the same entity code, even if they have different parents.&#160; You would have to distinguish them in some way.&#160; For example, if your organ<MadCap:variable name="Variables.is" />ation has a construction division and a housebuilding division, both of which are split into North, South, East and West regions, you would need to call the regions something like "Construction North", "Housebuilding East" and so on.</p>
+            <p>Also, if you want a simpler hierarchy in one division (for example, if you want the construction division to be able to update the company status codes at regional level, but the housebuilding division to update the codes at office level), you need to set up a "dummy" level with a single entity, so that the entities that update the status codes are at the same level in the hierarchy.</p>
+            <p>
+                <img src="../../Resources/Images_S-U/SRM/SRM_001201.gif" class="FullWidth" />
+            </p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>The CI parameters <span class="parameter">LEVEL1 </span>to <span class="parameter">LEVEL5 </span>determine the names of the different levels in the structure.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_level1.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_level2.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_level3.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_level4.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CI/ci_level5.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

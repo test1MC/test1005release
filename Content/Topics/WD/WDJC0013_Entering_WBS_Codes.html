@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2217" MadCap:lastWidth="1013">
+  <head>
+    <title>Setting Up WBS Codes</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Setting Up WBS Codes</h1>
+    <p>There are several ways you can set up the WBS codes on a <MadCap:variable name="Variables.jc contract" />:</p>
+    <ul>
+      <li>Import them from third-party project planning software.</li>
+      <li>Create them automatically when a user types them in.</li>
+      <li>Set them up manually.</li>
+      <li>Generate them automatically based on the existing section and activity codes.</li>
+    </ul>
+    <p>When you create a new WBS code, <MadCap:variable name="General.ProductName" /> takes account of whether the activity and section combination is valid (see <a href="WDJC0011_Activities.html"><MadCap:variable name="Variables.Jc Contract caps" /> Activities</a>).</p>
+    <div class="process">
+      <h2>To import WBS codes for a <MadCap:variable name="Variables.jc contract" />:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WJC2300RJWB">Import WBS Codes</span>.</li>
+        <li>Enter the <MadCap:variable name="Variables.jc contract" /> code and the name and location of the WBS import file.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> to load the WBS codes.</li>
+      </ol>
+      <h2>To set up WBS codes manually:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WJC2300BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span>.</li>
+        <li>Click the link for the <MadCap:variable name="Variables.jc contract" /> in the <span class="field"><MadCap:variable name="Variables.Jc Contract caps" /></span>field.</li>
+        <li>From the Options menu, choose <span class="userinput">WBS Codes</span>.</li>
+        <li>Use the standard maintenance features to add the WBS codes.</li>
+      </ol>
+      <h2>To generate WBS codes automatically:</h2>
+      <ol>
+        <li>Run <span class="function" title="Function:%WJC2301RJWB">Auto Generate WBS Codes</span>.</li>
+        <li>Specify the <MadCap:variable name="Variables.jc contract" /> or <MadCap:variable name="Variables.jc contracts" />, and a list of section and activity codes for which you want to generate WBS codes.</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Creating WBS codes automatically</h2>
+      <p>You can configure <MadCap:variable name="General.ProductName" /> to create WBS codes automatically if a code that does not previously exist is typed in. The first few characters will assumed to be the Section and Activity (depending on the <MadCap:variable name="Variables.jc contract" /> configurationand provided a valid Section and Activity exist.  Set <span class="parameter">JC/AUTOCWBS </span>to <span class="userinput">Y </span>to enable this.</p>
+      <h2>WBS import file structure</h2>
+      <p>The import file containing WBS codes must have the following format. Each line finishes with a carriage return.  Fields are separated by spaces, and character fields are also enclosed in quotes.</p>
+      <p>For each work breakdown code, there is:</p>
+      <ul>
+        <li>a line containing fields for: work breakdown code, description, section, activity, 0 (to indicate a detail line)</li>
+        <li>followed by none, one or more lines for each cost code, containing fields for: cost code, budget (decimal)</li>
+        <li>followed by a line containing a single period.</li>
+      </ul>
+      <p> </p>
+      <p>For example:</p>
+      <div class="code">"A1010101" "Level Site" "A1" "01" 0 <br />"05.20.5001" 5000.00 <br />"05.20.5010" 125.50 <br />"05.20.5013" 9548 <br />. <br />"A1010101" "Excavate" "A1" "01" 0 <br />"05.20.5001" 3500.00 <br />"05.20.5008" 2200 <br />.<br /><br />:<br />: <br /><br />"A1010204" "Bolt and test" "A1" "01" 0 <br />"05.20.5006" 1700 <br />"05.20.5015" 780 <br />.</div>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/JC/jc_autocwbs.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

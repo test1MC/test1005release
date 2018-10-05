@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2229" MadCap:lastWidth="1521">
+    <head>
+    </head>
+    <body>
+        <h1>Querying Data</h1>
+        <p>&#160;</p>
+        <p><MadCap:variable name="General.ProductName" /> provides a dedicated object for performing arbitrary database queries. This can be used to retrieve fields that are physically stored in the progress tables as well as any extended/calculated fields that are attached to the corresponding <MadCap:variable name="General.ProductName" /> objects. The “Database Enquiry” screen in the OA user interface shows which fields are available to query on each object.</p>
+        <p>Sample XML to send a query is as follows:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;login&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;user&gt;myloginname&lt;/user&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;password&gt;mypassword&lt;/password&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;/login&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;call object="hswssys1" method="dbquery" id=”12345678”</p>
+        <p class="code" style="text-indent: 1in;">pcQuery="FOR EACH jc_job where jc_job.kco = 1"</p>
+        <p class="code" style="text-indent: 1in;">pcFields="job_num,job_name" /&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p class="code">&#160;</p>
+        <p>All queries are made against the hswssys1 House Sales Connection object with the dbquery method. The pcQuery argument specifies the query to run in progress syntax.  The pcFields argument lists the fields to return in the output XML. As mentioned in the previous section any number of call tags can be included in the same env:Body to run multiple queries.</p>
+        <p>The id attribute allows you to include your own id with the request.  This id is then returned with the response message.  This attribute is optional and has now significance in <MadCap:variable name="General.ProductName" />.</p>
+        <p>The response XML has the following structure:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;call object="hswssys1" method="dbquery" id=”12345678”</p>
+        <p class="code" style="text-indent: 1in;">pcQuery="FOR EACH jc_job where jc_job.kco = 1"</p>
+        <p class="code" style="text-indent: 1in;">pcFields="job_num,job_name"&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;record jc_jobRowid="234023984"&gt;</p>
+        <p class="code" style="text-indent: 2in;">&lt;job_num&gt;E12345&lt;/job_num&gt;</p>
+        <p class="code" style="text-indent: 2in;">&lt;job_name&gt;Toytown Hospital&lt;/job_name&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;/record&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>Each call tag in the import XML string will have a corresponding call tag in the response. In the case of the dbquery method, XML data records are returned. Most other calls will simply have a &lt;returnvalue&gt; tag inside the call with a status code or record ID in the return value.</p>
+        <p>&#160;</p>
+    </body>
+</html>

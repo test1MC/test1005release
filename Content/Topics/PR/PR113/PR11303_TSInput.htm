@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Timesheet Input</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Timesheet Input</h1>
+        <p class="Body">The Timesheet Input screen <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes a <span class="Field">Final Payment </span>field and a <span class="Field">Payment Weeks Remaining </span>field, as shown in <MadCap:xref href="#TimesheetInputFields" class="ImageRef"><i>Figure 1:  Timesheet Input Fields</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="TimesheetInputFields"></a>Timesheet Input Fields</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR113_Images/PR113_TSInputFields.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="IndentBold">Final Payment</p>
+        <p class="IndentFieldDef">This indicates that a <MadCap:variable name="Variables.cheque" /> is the final payment. Only a computer <MadCap:variable name="Variables.cheque" /> can be marked as a Final Payment.</p>
+        <p class="IndentBold">Payment Weeks Remaining</p>
+        <p class="IndentFieldDef">This indicates the number of weeks remaining for calculation of the Final Payment. It can only be updated when the <span class="Field">Final Payment </span>field is <MadCap:variable name="Variables.tick" />ed.</p>
+        <p class="IndentFieldDef">This field also affects Overrides: if Pay Calculations are included in the Final Payment and a Flat Amount is input, it is multiplied on the Flat Amount.</p>
+        <p class="Body"><strong>NOTE: </strong>For the Regular/Adjusting/Future period only:</p>
+        <ul>
+            <li>When <span class="Field">Payment Weeks Remaining </span>is updated, it affects any existing Overrides.</li>
+            <li>If the final <MadCap:variable name="Variables.cheque" /> is saved with Weeks = 0, a warning appears stating there are no deductions in the Final Payment.</li>
+            <li>When <span class="Field">Final Payment </span>is <MadCap:variable name="Variables.tick" />ed, a new Override is added to the <MadCap:variable name="Variables.cheque" />.</li>
+            <li>When the Final Payment is not <MadCap:variable name="Variables.tick" />ed, any overrides that were created are deleted.</li>
+            <li>Be sure to include ‘THIS WEEK’ when determining the number of weeks remaining. Since the new value is stored as an <i>Override</i>, it is deemed to be the total value for the period.</li>
+        </ul>
+    </body>
+</html>

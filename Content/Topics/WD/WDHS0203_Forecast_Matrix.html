@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Construction Workbench - Forecast Matrix</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Construction Workbench - Forecast Matrix</h1>
+        <p />
+        <p><span class="function" title="Function:%WHS1330BHFC">Forecast Matrix</span>&#160; allows you to maintain the construction forecast (the anticipated construction dates or week numbers) for each construction stage on each plot.&#160; </p>
+        <p>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> to update the forecast.</p>
+        <p>Use the Options to change between weekly and daily forecasting.</p>
+        <div class="process">
+            <h3>To create or update a forecast:</h3>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WHS1330BVSI">Construction Workbench</span> and click the <span class="function" title="Function:%WHS1330BHFC">Forecast Matrix</span> tab.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> to update the forecast.</li>
+                <li>Make changes to the forecast dates. There are various ways to do this; see below.
+<p>A red flash in a date field <img src="../../Resources/Images_G-I/HS/HS_020302.png" /> means that you have changed the date but have not yet saved the updates.</p><p>A green background means that the date is when the actual date, not a forecast date; you cannot update these.</p></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the forecast.</li>
+            </ol>
+            <h3>To update a forecast based on the standard construction <MadCap:variable name="Variables.programme" />s:</h3>
+            <ol>
+                <ol>
+                    <li>On each plot, enter the forecast dates for the first stage (or the first incomplete stage) and/or the last stage.</li>
+                    <li>Do one of the following:</li>
+                    <ul>
+                        <li>To calculate the forecast for all plots: from the <span class="field">Matrix </span>action list, choose <span class="userselect">Apply Standard <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /></span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+                        <li>To calculate the forecast for all plots from the end date backwards: from the <span class="field">Matrix </span>action list, choose <span class="userselect">Apply <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /> from End </span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+                        <li>To calculate the forecast for selected plots: <a href="WDUG0026_Selecting_Records.html">select</a> the plots and from the <span class="field">Row </span>action list, choose <span class="userselect">Apply Standard <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /></span>, then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+                        <li>To calculate the forecast for selected plots from the end date backwards: <a href="WDUG0026_Selecting_Records.html">select</a> the plots and from the <span class="field">Row </span>action list, choose <span class="userselect">Apply <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /> from End</span>, then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+                    </ul>
+                </ol>
+            </ol>
+            <p><MadCap:variable name="General.ProductName" /> calculates the dates for the other incomplete stages according to the construction <MadCap:variable name="Variables.programme" /> specified on each plot.</p>
+            <h3>To enter the same date in several cells: </h3>
+            <ol>
+                <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the cells. They do not all have to be for the same stage.</li>
+                <li>From the <span class="field">Element </span>action list, choose <span class="userselect">Update Values</span>, then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays a <span class="field">Set Values </span>frame.</p></li>
+                <li>Enter the date and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+            </ol>
+            <h3>To update the forecast date on a stage: </h3>
+            <ol>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the rows on which you want to update the stage.</li>
+                <li>From the Row action list, choose Update Event Date, then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays an update event frame.</p></li>
+                <li>Select the stage you want to update, enter the date and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+            </ol>
+            <div class="ActionList"><strong>Actions</strong>
+                <p>The actions you can apply to <strong>elements</strong> include:</p>
+                <ul>
+                    <li><b>Reset Element:</b> Undo for selected cells.</li>
+                    <li><strong>Update Values: </strong>Updates/imposes a single date for all selected cells.</li>
+                    <li><strong>Delay Stage/Residual:</strong> Delays the selected cells and all later stages by a single number of days (entered once).</li>
+                </ul>
+                <p><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the elements you want to change, then use the Element: Choose Action list to choose the action, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</p>
+                <p>&#160;</p>
+                <p>The actions you can apply to <strong>rows</strong> include:</p>
+                <ul>
+                    <li><strong>Reset Cells: </strong>Undo for all cells in the row.</li>
+                    <li><strong>Copy between Events:</strong> Copies a date (with or without an offset) from one event to another.</li>
+                    <li><strong>Offset Forecast:</strong> All incomplete events are delayed by the offset.</li>
+                    <li><strong>Delay Start:</strong> Delays all events by a number of days.</li>
+                    <li><strong>Update Event Date:</strong> Simply updates a single event date.</li>
+                    <li><strong>Apply Residual <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" />:</strong> Applies the standard <MadCap:variable name="Variables.programme" /> to events from and including the selected one.</li>
+                    <li><strong>Apply Standard <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" />:</strong> Using the date of the first incomplete event, the standard <MadCap:variable name="Variables.programme" /> is applied to all incomplete events.</li>
+                    <li><strong>Apply <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /> from End:</strong>&#160;Applies the standard <MadCap:variable name="Variables.programme" /> back from the last event to all incomplete events.&#160; This calculates the forecast dates by taking the date of the last stage which is valid on the construction <MadCap:variable name="Variables.programme" /> for each selected plot and subtracting the days and weeks for each stage cumulatively from that date.&#160; If that last stage does not currently have a forecast date for a plot then no forecast stages for the plot will be updated. </li>
+                </ul>
+                <p>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> one or more rows, then use the Row: Choose Action list to choose the action and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</p>
+                <p>&#160;</p>
+                <p>The actions you can apply to the <strong>entire matrix </strong>include:</p>
+                <ul>
+                    <li><strong>Reset Matrix:</strong> Undo for all cells in the matrix.</li>
+                    <li><strong>Copy between Events:</strong> Copies dates from one event to another for all plots with an optional offset.</li>
+                    <li><strong>Offset Forecast:</strong>&#160;Delays the first incomplete events by a number of days for all plots and re-applies the&#160;<MadCap:variable name="Variables.programme" /></li>
+                    <li><strong>Delay Start:</strong> Delays all incomplete events by a number of days.</li>
+                    <li><strong>Re-sequence Plots:</strong>&#160;Re-sequences plots based on the start date of the&#160;first events.</li>
+                    <li><strong>Update with Actuals:</strong> Updates all events with actuals from the <MadCap:variable name="Variables.tick" /> sheet.</li>
+                    <li><strong>Update with Actuals/Program:</strong> Updates all events with actuals from the <MadCap:variable name="Variables.tick" /> sheet and re-applies the <MadCap:variable name="Variables.programme" /> from latest completed event.</li>
+                    <li><strong>Apply Standard <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" />:&#160;</strong>Applies the standard <MadCap:variable name="Variables.programme" /> from the earliest incomplete event for each plot.</li>
+                    <li><strong>Apply <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /> from End:</strong>&#160;Applies the standard <MadCap:variable name="Variables.programme" /> from the last event backwards for each plot.</li>
+                </ul>
+                <p>Use the Matrix: action list to choose the action and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</p>
+            </div>
+        </div>
+    </body>
+</html>

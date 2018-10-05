@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>End-Of-Year Submissions - Payroll Parameters</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">End-Of-Year Submissions - Payroll Parameters</h1>
+    <p>The Payroll parameters listed below are used with online end-of-year submissions.</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Parameter</th>
+          <th width="50%">Purpose</th>
+          <th>Your notes (likely settings)*</th>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">EGOVCOS</span>
+          </td>
+          <td>A can do list of <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> numbers that you wish to do online returns for. This parameter can be used to exclude <MadCap:variable name="Variables.kco companies" /> if you have copied <MadCap:variable name="Variables.kco companies" /> - as the tax reference would be the same.</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">EGOVRDIR</span>
+          </td>
+          <td>The root directory for storing XML files. Note all users who will send the Internet returns will require permissions to read and write from this directory.</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">JAVAHOME</span>
+          </td>
+          <td>The UNIX directory for java has been installed in.</td>
+          <td>/opt/java1.4</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">NIPREFIX</span>
+          </td>
+          <td>Additional valid NI prefixes. This is to be used if part of the IR issues invalid NI numbers, which they later decide to make temporarily valid. Typically encountered with <MadCap:variable name="Variables.operatives" /> from outside the UK.</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">SENDER</span>
+          </td>
+          <td>Either 'Employer' or 'Agent'. This will be Employer unless you have registered as an agent to send multiple scheme submissions.</td>
+          <td>Employer</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">TAXDELAY</span>
+          </td>
+          <td>The day and month to apply the new tax bands and rates. Normally 19/5. See the section on Annual Tax &amp; NI Rates for further information. ENSURE THAT THE PREVIOUS YEAR DATE IS TAKEN OUT OF THIS FIELD BEFORE RUNNING YOUR FIRST PAYROLL OF THE YEAR. DON'T FORGET TO ENTER THE DATE WHEN THE NEW TAX CODES WILL TAKE EFFECT.</td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>*Use this column to note down the settings which you will be using - based on your payroll configuration.</p>
+    <p>All the parameters listed below are used to nominate a pay item that holds a particular value. If you have used different items for different pay frequencies then you can enter a comma separated list of item numbers in the order weekly, monthly, fortnightly and four-weekly. Note if the <span class="parameter">SPP-ITEM </span>is not configured then <MadCap:variable name="General.ProductName" /> will assume SMP paid to a man is SPP.</p>
+    <p>If <span class="parameter">SPP-ITEM </span>is not configured then <MadCap:variable name="General.ProductName" /> will treat values in the <span class="parameter">SMP-REC </span>item as SPP recovered when the employee is a man.</p>
+    <p>You can leave all of the Recovery parameters blank and manually input the figures if you wish.</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Parameter</th>
+          <th width="50%">Purpose</th>
+          <th>Your notes (likely settings)*</th>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">SAP-ITEM</span>
+          </td>
+          <td>Statutory Adoption Pay</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">SMP-ITEM</span>
+          </td>
+          <td>Statutory Maternity Pay</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">SPP-ITEM</span>
+          </td>
+          <td>Statutory Paternity Pay</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">SAP-REC</span>
+          </td>
+          <td>SAP Recovered</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">SMP-REC</span>
+          </td>
+          <td>SMP Recovered</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">SPP-REC</span>
+          </td>
+          <td>SPP Recovered</td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>We have found that adjustments for the new P60/P45 laser forms has proven tricky and dependent on the printer used. The following parameters are designed to let you make the P60 fit on the page. They allow the print to be shifted sideways or up and down by a number of characters to cater for different margin settings.</p>
+    <p>
+      <u>
+        <strong>Examples</strong>
+      </u>
+      <br />3|mylaser=4 ? means the default is 3 characters (or lines) and for 'mylaser' it is 4 characters (or lines)</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Parameter</th>
+          <th width="50%">Purpose</th>
+          <th>Your notes (likely settings)*</th>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">P60SSIDE</span>
+          </td>
+          <td>P60 Single Sheet Laser - Side of page <br />(characters)</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">P60STOP</span>
+          </td>
+          <td>P60 Single Sheet Laser - Top of page<br />(lines)</td>
+          <td>[printername],P60-new,80</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">P45LSIDE</span>
+          </td>
+          <td>P45 Laser - Side of page (characters)</td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="parameter">P45LTOP</span>
+          </td>
+          <td>P45 Laser - Top of page (lines)</td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+  </body>
+</html>

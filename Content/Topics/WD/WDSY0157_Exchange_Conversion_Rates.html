@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Exchange Rates and Conversion Rates</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Exchange Rates and Conversion Rates</h1>
+        <ul>
+            <li>Currency Exchange Rates are used for processing foreign currency transactions, unreal<MadCap:variable name="Variables.is" />ed and real<MadCap:variable name="Variables.is" />ed variances.</li>
+            <li>Currency Conversion Rates are used for alternative base currency reporting in the <span class="module">General Ledger</span>. </li>
+        </ul>
+        <p>When you have <a href="WDSY0156_Currency_Codes.html">set up the currencies</a> you are using, enter the exchange rates between your base currency and the other currencies.&#160; You need to update these on a regular basis.&#160;&#160;</p>
+        <p>Determine what your procedures will be for setting your exchange rates. These can be varied at intervals ranging from every day, to annual. Different periods can be used for different rates.</p>
+        <p>Determine what your source will be for the rate. Typical sources are:</p>
+        <ul>
+            <li>As advised by head office.</li>
+            <li>Taken from the daily newspaper.</li>
+            <li>Taken from a website such as <a href="http://www.oanda.com/" target="_blank">www.oanda.com</a>.<br /></li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To maintain exchange/conversion rates:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WCO2021BCCR">Currency Exchange</span>. 
+<p /><img src="../../Resources/Images/SY/SY_015701.png" class="FullWidth" /></li>
+                <li>Either:</li>
+                <ul>
+                    <li>To set up currency exchange rates, set the <span class="field">Type </span>selector to "Default".</li>
+                    <li>To set up currency conversion rates, set the <span class="field">Type </span>selector to the appropriate conversion type.</li>
+                </ul>
+                <li>Set the <span class="field">Currency </span>selector to the currency you want to enter the rate for.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/filter.svg" class="button" />.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.</li>
+                <li>Enter the new rate and the date the rate becomes effective.&#160; Be careful to enter the rate the right way round; in other words, pay attention to whether you need to enter a "divide by" rate or a "multiply by" rate.&#160; Usually,"divide by" rates are used, but some currencies may be set up to use "multiply by" rates. 
+<p />Exchange rates and conversion rates are effective from the date indicated against them until another rate is entered with a later date. </li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <p class="noteheader">NOTES</p>
+            <div class="note">
+                <ol>
+                    <li>You need to maintain exchange and conversion rates separately for each <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />.</li>
+                    <li>Enter of the rates to the maximum number of decimal positions (typically six), if possible. This will avoid conversion penny/cent differences as much as is possible with currencies such as GBP, USD, EUR which have the normal two places of decimals. <MadCap:variable name="General.ProductName" /> will handle these correctly but it can be inconvenient to have a large number of one penny/cent transactions posted to the currency rounding account.</li>
+                    <li>In <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" /> there are separate functions for Currency Exchange (<span class="function" title="Function:%CO2021-A">Currency Exchange (by Date)</span>) and Currency Conversion (<span class="function" title="Function:%CO2021-B">Currency Conversion (by Date)</span>).</li>
+                </ol>
+            </div>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Exchange/Conversion Rates</h2>
+Use <span class="function" title="Function:%WSY2034BCTA">Conversion Rate Codes</span> to set up the codes for different types&#160; of currency conversion rates you want to use.
+</div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Withholding Tax</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Withholding Tax</h1>
+    <p>Withholding Tax applies to specific payments made to foreign companies (<MadCap:variable name="Variables.pl suppliers" /> and subcontractors) who do not have permanent establishment in the regions of Oman, Qatar and Saudi Arabia. Withholding tax is deducted on royalties, management fees, fees for R&amp;D and usage of computer software.  The rates and treatment of withholding tax between the regions varies and withholding tax is not applicable in UAE.</p>
+    <div class="configuration">
+      <h2 class="print">Withholding Tax Configuration</h2>
+      <p>The following parameter change is required to support the new withholding tax functionality.</p>
+      <ul>
+        <li>Set the <span class="parameter">SC/TAXRULES </span>parameter to <span class="userselect">WHT</span>; this enables the generic withholding tax features.</li>
+      </ul>
+      <p>To cater for the reporting of provisional tax amounts (for situations where the tax is due before payment) set the following PL parameters:</p>
+      <ul>
+        <li>
+          <span class="parameter">PL/SCSUSACC </span>Withholding tax suspense account, used to hold provisional withholding tax amounts calculated when invoices are entered.</li>
+        <li>
+          <span class="parameter">PL/SCSUSDET </span>Whether to post in detail to the withholding tax suspense account.</li>
+      </ul>
+      <h2>Certificate Definition</h2>
+      <p>Use of the withholding tax features for subcontractor payments will require a suitable subcontract certificate definition.  This is likely to be similar to that required to operate UK CIS tax except that there is no concept of 'Materials Included' to be deducted from the tax calculation.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/SC_TAXRULES.htm" />
+          <MadCap:relatedTopic src="../Parameters/PL/pl_scsusacc.htm" />
+          <MadCap:relatedTopic src="../Parameters/PL/PL_SCSUSDET.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

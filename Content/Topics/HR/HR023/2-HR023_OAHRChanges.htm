@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">OA&#160;HR Changes</h1>
+        <p class="Body" MadCap:conditions="COINS.ScreenOnly">This section describes the OA&#160;HR functionality related to Leave of Absence (LOA)&#160;processing.</p>
+        <h2 MadCap:autonum="1.1 ">HR&#160;Layoff Lookup Code</h2>
+        <p class="Body">You can create a Lookup Code for Layoff in the HR Leaver Reason<strong><![CDATA[  ]]></strong><span class="Field">Lookup Type </span>list in <MadCap:variable name="General.ProductName" /> OA <i>Human Resources &gt; HR Maintenance &gt; Lookup Codes &gt; Leaver Reason</i>, as shown in <MadCap:xref href="#OAHRLeaverReason" class="ImageRef"><i>Figure 1:  HR Leaver Reason Lookup Code</i></MadCap:xref>. This Lookup Code is used to make an employee inactive without terminating benefits. To create a Layoff code:</p>
+        <ol>
+            <li class="ListNumber1">Add a Code name that you wish to use for Layoff in the HR Leaver Reason list (the sample screens use the name "Layoff", but you can use a different name).</li>
+            <li class="ListNumber1"> <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the Layoff <MadCap:variable name="Variables.tick" />box (see <MadCap:xref href="#OAHRLeaverReason" class="ImageRef"><i>Figure 1:  HR Leaver Reason Lookup Code</i></MadCap:xref>), then save the Code.</li>
+            <li class="ListContinue1"><strong>NOTE: </strong>The Layoff <MadCap:variable name="Variables.tick" />box will only display if you have OA HR connected to Ti PR by setting the  TI* parameters in Company Parameters (see sample settings in <MadCap:xref href="#TiParameters" class="ImageRef"><i>Figure 2:  TI&#160;Company Parameters</i></MadCap:xref>).</li>
+        </ol>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="OAHRLeaverReason"></a>HR Leaver Reason Lookup Code</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/LayoffLeaverReason.png" class="FullWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="TiParameters"></a>TI&#160;Company Parameters</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/TiParameters.png" class="FullWidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li class="ListNumber1">Add the new Lookup Code for Layoff to the STATLOA&#160;parameter list (see <MadCap:xref href="#STATLOA" class="ImageRef"><i>Figure 3:  STATLOA&#160;Parameter Value for Layoff Code</i></MadCap:xref>).</li>
+        </ol>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="STATLOA"></a>STATLOA&#160;Parameter Value for Layoff Code</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/STATLOA_LayoffValue.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">HR&#160;Employment History</h2>
+        <p class="Body">To allow for Leave of Absence information, the <strong>Hire/Term/Rehire/Other </strong>column has been relabelled as<strong> Hire/Term/LOA/Rehire/Other </strong>on the <MadCap:variable name="General.ProductName" /> OA&#160;<span class="Function">Employment History </span>screen in <i>Human Resources &gt;&#160;Personnel Workbench &gt; [personnel link]</i>, as shown in <MadCap:xref href="#OAHREmpHistLOA" class="ImageRef"><i>Figure 4:  Employment History LOA Column</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="OAHREmpHistLOA"></a>Employment History LOA Column</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/OAHREmpHistLOA.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">HR Personnel Summary </h2>
+        <p class="Body">After the <span class="Field">Rehire Date </span>is entered in the Ti PR Employee File (see Section <MadCap:xref href="#Employee" class="Figurenumberonly"><i>2.1.2</i></MadCap:xref>), the Personnel HR <span class="Field">Status </span>in OA&#160;<i>Human Resources &gt; Personnel Workbench &gt; Personnel Summary &gt; Profile tab</i> is set to <strong>ACTIVE</strong> (shown in <MadCap:xref href="#OAHRProfileInfo" class="ImageRef"><i>Figure 5:  OA&#160;HR Profile Information</i></MadCap:xref>), and Termination information on this screen is updated automatically.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="OAHRProfileInfo"></a>OA&#160;HR Profile Information</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR023_Images/OAHRProfileInfo.png" class="FullWidth">
+            </img>
+        </p>
+        <p class="Body">When HR <span class="Field">Status </span>is Leave of Absence (based on the <strong>HR/TIPRLOA</strong> parameter), <span class="Field">LOA&#160;Date </span>and <span class="Field">Reason </span>fields are created and added to the Ti PR <span class="Function">Employee File </span>and the OA HR <span class="Function">Personnel Workbench</span>. A <span class="Field">Term Reason </span>is also displayed.</p>
+    </body>
+</html>

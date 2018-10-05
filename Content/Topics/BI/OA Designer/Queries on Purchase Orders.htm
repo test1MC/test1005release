@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1633" MadCap:lastWidth="1091">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Queries on Purchase Orders</h1>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">It is recommended that you use tip_type in any query to ensure that it is indexed properly, the tip_type will either be MATERIAL (material, plant, asset, stock etc) or TRADE (subcontract).</p>
+        <p>The key thing to remember when reporting or enquiring on orders or order lines is that each time a variation is raised against an order a new po_hdr record, with associated po_lines, is created. This means you could end up with more than one line per order in your report or browse.</p>
+        <p>There are reporting fields (RO_) available to assist with this and below is a standard query to get the latest order information (i.e. the latest committed variation).</p>
+        <p class="Example">FOR EACH po_hdr WHERE po_hdr.kco = {kco}<br />AND po_hdr.tip_type = "MATERIAL"<br />AND po_hdr.poh_mpo = "M"<br />AND po_hdr.poh_chgno = ""<br />{pohSelect},</p>
+        <h2>po_line v po_item</h2>
+        <p>As noted, a po_line record will be created for every line entered onto an order; commodity, text, clauses and will be created for every variation. However the actual detail of the lines are stored once each (only when the order or variation is committed) in the po_item table. This table will not contain text lines or clauses - only items with a value. There are extensive fields (both database and RO) on this table for reporting ordered, delivered, invoiced values and quantities.</p>
+        <p>To link to po_item from po_hdr (and then back to the latest po_line if required) append the following query to that above.</p>
+        <p class="Example">EACH po_item<br />WHERE po_item.kco = po_hdr.kco<br />AND po_item.tip_type = po_hdr.tip_type<br />AND po_item.poh_ordno = po_hdr.poh_ordno,<br />LAST po_line of po_item OUTER-JOIN</p>
+        <p>&#160;</p>
+        <p>Another View of this query...</p>
+        <p>As the selection page will only work on the Original Order it may be the case that the above query is not what you are after.   (ie the Selection on Order Date only refers to the Original Order). If this in not what is required then the following query may help.  It will look at all orders which are committed and then look at all order lines which have a commodity code assigned and the query condition will remove the duplicate information and will report on the latest information on the order line.</p>
+        <p>&#160;</p>
+        <p class="Example">Query          FOR EACH po_hdr WHERE po_hdr.kco = {kco}<br />AND po_hdr.tip_type = material<br />AND po_hdr.poh_mpo = M<br />AND po_hdr.poh_committed = TRUE<br />{pohSelect},<br />EACH po_line of po_hdr WHERE po_line.pol_type = 'C'<br /><br />Query Condition:   RemoveVariedOrders</p>
+    </body>
+</html>

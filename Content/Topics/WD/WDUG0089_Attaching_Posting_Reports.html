@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="3347" MadCap:lastWidth="1064">
+    <head><title>Attaching Batch Posting Reports</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Attaching Batch Posting Reports</h1>
+        <p>Posting reports are reports that can be run either before or after a batch is posted.&#160; If they are run before the batch is posted they are known as Listing Reports; if they are run after the batch is posted, they are known as Posting Reports, and show additional information, such as the number of the GL batch actually created.</p>
+        <p>If the posting report is run for a batch from the past, the settings are taken from the current settings which may be different from when the batch was originally posted.&#160; This potentially leads to the situation where the newly-produced posting report is different to the original posting report.</p>
+        <p>To avoid confusion, a batch posting report is automatically created at the time of posting, and <MadCap:variable name="General.ProductName" /> can store the resulting PDF as an attachment to the batch.&#160; You can then recover and view the report without having to reproduce the posting report at a later stage.&#160;</p>
+        <p>When you post GL journal batches, either manually or automatically, <MadCap:variable name="General.ProductName" /> creates separate posting reports for each batch.&#160; For example, if you post a PL Manual Payment batch, <MadCap:variable name="General.ProductName" /> creates and posts the <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>and GL Journal batches automatically. As soon as the GL Journal Batch is posted, its posting report is also generated automatically, as are the posting reports of the source batches (that is, PLMAN and CBTR).&#160; All these posting reports are attached to the batches automatically.</p>
+        <div class="process">
+            <h2 class="print">To view a batch report:</h2>
+            <ol>
+                <li>Go to the relevant batch browse screen.</li>
+                <p>
+                    <img src="../../Resources/Images_S-U/UG_008910.png" class="FullWidth" />
+                </p>
+                <li>Click the <img src="../../Resources/Images/COINS Graphics/SVG buttons/imagelink.svg" class="button" /> button in the row of the batch whose report you want to view.
+<p class="noteheader">NOTE</p><div class="note">You can also go to the batch header of the posted batch and click the <img src="../../Resources/Images/COINS Graphics/SVG buttons/imagelink.svg" class="button" /> button.</div></li>
+                <li>Click the link for the posting report.</li>
+                <p>
+                    <img src="../../Resources/Images_S-U/UG_008909.png" class="FullWidth" />
+                </p>
+            </ol>
+            <h2>To attach a new posting report:</h2>
+            <p>If you re-run a posting report you can attach it to the batch. </p>
+            <ol>
+                <li>Go to the posting report function.</li>
+                <li>On the Output Options tab, <MadCap:variable name="Variables.tick" /><span class="field">Store Report</span>.</li>
+                <li>On the Storing Report Options tab, select the document category (Batch) and input the key fields appropriately:</li>
+                <p>
+                    <img src="../../Resources/Images_S-U/UG_008906.png" class="FullWidth" />
+                </p>
+                <li>Only the selected batch posting report is generated and attached in <span class="module">Document Management </span>. The previous version of batch posting report is not deleted automatically in <span class="module">Document Management.</span></li>
+                <li>Source batch posting reports are not generated automatically in this case. They can be created and attached manually in the appropriate posting report programs.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Setting Up <MadCap:variable name="General.ProductName" /> to Attach Posting Reports</h2>
+            <ol>
+                <li>In <span class="function" title="Function:%WDM2020BDKT">Keywords Maintenance</span>, add the keywords kco, cbt_type and cob_ref.
+<p><img src="../../Resources/Images_S-U/UG_008901.png" class="FullWidth" /></p></li>
+                <li>In <span class="function" title="Function:%WDM2010BDDT">Category Maintenance</span>, add the category Batch (co_batch).
+<p><img src="../../Resources/Images_S-U/UG_008902.png" class="FullWidth" /></p></li>
+                <li>Click the link in the <span class="Field">Description</span> column, and attach the keywords (Company, Batch Type, Batch Reference) to the Batch category.
+<p><img src="../../Resources/Images_S-U/UG_008903.png" class="FullWidth" /></p></li>
+                <li>In <span class="function" title="Function:%WDM2270SDMA">Folder Maintenance</span>, link the Batch category to the appropriate folder.
+<p><img src="../../Resources/Images_S-U/UG_008904.png" class="FullWidth" /></p></li>
+                <li>Set the <span class="parameter">CO/BATCHDM </span>and <span class="parameter">CO/BATCHDMQ </span>parameters.</li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CO/co_batchdm.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_batchdmq.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

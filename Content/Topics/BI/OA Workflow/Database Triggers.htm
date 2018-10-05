@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <MadCap:changeData>
+            <MadCap:AttributesChange MadCap:userName="niglon" MadCap:initials="NJL" MadCap:id="1" MadCap:timestamp="2016-05-09T16:27:18.1815345+01:00" MadCap:attribute="class" MadCap:value="Body" />
+        </MadCap:changeData><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Database Triggers </h1>
+        <p>Database triggers can be used to start workflows on particular records as they are created or updated. </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Database Triggers.png" class="FullWidth" />
+        </p>
+        <p MadCap:changes="1">To use a Database Trigger define the database table name against which the trigger should fire. </p>
+        <p MadCap:changes="1">When using database triggers it is necessary for an App Server to be available on the system.</p>
+        <p MadCap:changes="1">A database Trigger will take effect whenever there is a Write to the database (ie an update or a creation). The database Trigger is set up against the table name and then it uses a before and after calculation to make the Trigger activate.</p>
+        <p class="Body">The Before and After values should be calculated using standard <MadCap:variable name="General.ProductName" /> calculation syntax and the After calculation should call the standard method to start the appropriate workflow:</p>
+        <p class="Body">&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col style="width: 74px;" />
+            <col />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">Table</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p class="Body">The table to be checked for record changes</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">Before</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p class="Body">The value of a field on the record to be checked prior to the record being amended/added</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">After</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p class="Body">The value of a field on a record to be checked after the record is amended/added</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Database Triggers_1.png" style="width: 602px; height: 34px;" class="FullWidth" />
+        </p>
+        <p class="Body">In the example above, the table pi_project is tested for a value in pij_num for a blank.&#160; The implication of this test is that pij_num is only blank when a record is created.&#160; No test is made after the record is changed as the WF is intended to run for each New record.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Database Triggers_2.png" style="width: 602px; height: 58px;" class="FullWidth" />
+        </p>
+        <p class="Body">In the second example above, pp_organisation is checked for a value in ppo_leave_date and the value stored in variable $old.&#160; After the record is changed, the current value of ppo_leave_date is stored in $new and old and new variables compared.&#160; If they are the same, nothing happens, but if the leaveing date has changed, the workflow is triggered.</p>
+        <p class="Body">Two examples of Database Triggers:</p>
+        <p class="Body">This is a nice simple one to test the triggers are firing and the App Server is runnng - if you take the test User record and set the name to 'TEST' it will error when you save it.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: auto;margin-right: 0;width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col style="width: 76px;" class="TableStyle-COINSBasic-Column-Column1" />
+            <col style="width: 85px;" class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">Table</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">Before</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p class="Body">After</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">sysuser</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">&#160;</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p class="Body">ifExec(equal (sysuser.su-name,'Test'),EQ,1 error(1,'Name cannot be Test');</p>
+                </td>
+            </tr>
+        </table>
+        <p class="Body">This is a simple Project Trigger to send an alert via email when the field pij_our_value is updated. </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: auto;margin-right: 0;width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col style="width: 73px;" class="TableStyle-COINSBasic-Column-Column1" />
+            <col style="width: 87px;" class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">Table</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">Before</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p class="Body">After</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">pi_project</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p class="Body">debug(1);a=pi_project.pij_our_value;</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p class="Body">b=pi_project.pij_our_value;c=if(a,ne,b); ifMethod(c,'sysualert.sendEmail','user@companyl.com','','My Project Value has Changed','Project Number - ' + pi_project.pij_dispno + ' ' + pi_project.pij_name_; </p>
+                </td>
+            </tr>
+        </table>
+        <p class="Body">It also has debug switched on so you will see the calculation in the App Server Log File (in a similar way to the Report log file). The Log file can be found in $BASE/var/diag and is usually name something like:</p>
+        <p class="Body">oaliveas.server.log</p>
+        <p class="Body">This can be a huge log file so I suggest testing and debugging on a non-live environment where there are fewer users - preferably just yourself.</p>
+    </body>
+</html>

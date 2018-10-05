@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Conditional Messages</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Conditional Messages</h1>
+    <p>You may not want to include the statement of deduction details on the head of the certificate or remittance advice.  To include the deduction details after the body lines, you can set up conditional messages for each of the tax treatments.  Conditional messages are a set of standard messages that you can print on subcontractor advices, certificates and remittances, and <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> remittances, if the relevant condition is met. (Conditional messages are also available to show other information on these and other documents, such as statements of deduction.)</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">If you only want to report the minimum information you are legally required to provide, that is the statutory information for all subcontractors from whom you have deducted tax, and the verification number where verification has returned an unmatched status, you can only do that for the certificate print or remittance advices using the messages ? not by the standard form fields since the code doesn't check anything at the time of printing to see what the verification number/status is.</div>
+    <p>(You can currently only maintain conditional messages in <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" />, but you can use them on both <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" /> configurable forms and OA configurable documents.)</p>
+    <div class="process">
+      <h2 class="print">To set up conditional messages</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%SC222-A">Cheque/Remittance Messages</span>, <span class="function" title="Function:%SC222-B">Certificate Messages</span> or <span class="function" title="Function:%SC222-F">Cheque/Remittance Messages</span>.</li>
+        <li>Set up messages with the following types:</li>
+        <ul>
+          <li>DEDUCTG Gross Payment (not legally required)
+<p>DEDUCTG produces an "Array subscript out of range" error during setup, and the lookup is blank (this will be addressed in the February fix).  However, you can ignore the error and set up messages correctly.</p></li>
+          <li>DEDUCTH Deduction (Higher Rate)</li>
+          <li>DEDUCTL Deduction (Lower Rate)</li>
+        </ul>
+        <li>Type the text of the message you want to appear on the certificate or remittance. Use [F5] to add tokens for the following information:</li>
+        <ul>
+          <li>Actual Payment - PAYMENT</li>
+          <li>Gross Amount - GROSS</li>
+          <li>Material Amount - MATERIAL</li>
+          <li>Tax Deducted - TAX</li>
+          <li>Taxable Amount - LIABLE</li>
+          <li>Verification Reference ? VERREF</li>
+        </ul>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">Additional tokens will be made available shortly.</div>
+      <p>To include the messages on a configured certificate or remittance advice:</p>
+      <ul>
+        <li>In <MadCap:variable name="General.ProductName" /> OA</li>
+        <ul>
+          <li>To print the condition messages on consecutive lines, enter the condition numbers of all the messages you want to print. For example, if you wanted to print any of messages 1, 2, 5 and 6, you would enter <span class="field">RO_sbp_certCondMsg^1,2,5,6</span> or <span class="field">RO_scs_remitCondMsg^1,2,5,6</span>. Then if only conditions 1 and 6 applied, only messages 1 and 6 would print.</li>
+          <li>To print specific condition messages, enter the field name (<span class="field">RO_sbp_certCondMsg__<em>n</em></span> or <span class="field">RO_scs_remitCondMsg__<em>n</em></span>), where <em>n</em> is the message number. If you use several different "CondMsg" fields on different lines, the message will print on the line for which it is defined.  This allows you to print a specific message at a predictable place on the document.</li>
+        </ul>
+      </ul>
+    </div>
+  </body>
+</html>

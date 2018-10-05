@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="851" MadCap:lastWidth="601" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Standard Cost Based Report Changes - </MadCap:conditionalText>Naming Conventions</h1>
+        <p class="Body">When documents attached to <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Valuation caps" /> Transactions are exported using the <span class="Function">Standard Cost Based Report</span>, the naming conventions are as shown below, where:</p>
+        <ul>
+            <li>Sequence = Sequence of <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Valuation caps" /> Transaction (bic_seq). This is a new field that is shown on the <span class="Function">Standard Cost Based Report</span> and can be shown on the <span class="Function">Cost Transaction</span> browse.</li>
+            <li>Number = Serial Number with format 999. </li>
+        </ul>
+        <h2 MadCap:autonum="1.1 "><MadCap:variable name="Variables.Purchase Ledger caps" /> Documents
+</h2>
+        <p class="Body">The naming convention for exported documents related to <MadCap:variable name="Variables.sv internal" /> <MadCap:variable name="Variables.sv valuation" /> transactions whose source is CTPL is: 
+</p>
+        <p class="Body">Sequence + “_” + Supplier Reference of Invoice (ain_supref) + “_” + Number + Document Name.
+</p>
+        <p class="Body">The Supplier Reference of an invoice can be blank if the cost transaction did not originate from <MadCap:variable name="Variables.Purchase Ledger caps" />. In that case the naming convention of the exported document is:<![CDATA[ 
+]]></p>
+        <p class="Body">Sequence + “_” + Number + Document Name</p>
+        <h2 MadCap:autonum="1.2 ">Subcontract Ledger Documents
+</h2>
+        <p class="Body">The naming convention for exported documents related to <MadCap:variable name="Variables.sv internal" /> <MadCap:variable name="Variables.sv valuation" /> transactions whose source is CTSC is:
+</p>
+        <p class="Body">Sequence + “_” + Subcontractor’s Reference of SC Certificate (sbp_subref) + “_” + Number + Document Name.
+</p>
+        <p class="Body">The Subcontractor’s Reference of a certificate can be blank if the cost transaction did not originate from the Subcontract Ledger. In that case the naming convention of the exported document is:<![CDATA[
+]]></p>
+        <p class="Body">Sequence + “_” + Number + Document Name
+</p>
+        <h2 MadCap:autonum="1.3 ">JC Timesheet Documents
+</h2>
+        <p class="Body">The naming convention for exported documents related to <MadCap:variable name="Variables.sv internal" /> <MadCap:variable name="Variables.sv valuation" /> transactions whose source is CTJC/JCTS is:</p>
+        <p class="Body">
+Sequence + “_” + Employee (jem_code) + “_” + Number + Document Name. 
+</p>
+        <p class="Body">If the employee code is blank, the naming convention of the exported document is:<![CDATA[ 
+]]></p>
+        <p class="Body">Sequence + “_” + Number + Document Name. 
+</p>
+        <h2 MadCap:autonum="1.4 "><MadCap:variable name="Variables.Pc Plant caps" /> Charges Documents
+</h2>
+        <p class="Body">The naming convention for exported documents related to <MadCap:variable name="Variables.sv internal" /> <MadCap:variable name="Variables.sv valuation" /> transactions whose source is CTPC/PCINV is:
+</p>
+        <p class="Body">Sequence + “_” + <MadCap:variable name="Variables.Pc Plant caps" /> Invoice Number (bic_iref) + “_” + <MadCap:variable name="Variables.Pc Plant caps" /> Charge Line(bic_xref) + “_” + Number + Document Name.
+</p>
+        <p class="Body">If the <MadCap:variable name="Variables.Pc Plant caps" /> invoice number is blank, the naming convention of the exported document is: 
+</p>
+        <p class="Body">Sequence + “_” + Number + Document Name. 
+</p>
+        <h2 MadCap:autonum="1.5 ">Other Transaction Documents
+</h2>
+        <p class="Body">The naming convention for exported documents related to <MadCap:variable name="Variables.sv internal" /> <MadCap:variable name="Variables.sv valuation" /> transactions whose source is CTOT is: 
+</p>
+        <p class="Body">Sequence + “_” + Number + Document Name. 
+</p>
+    </body>
+</html>

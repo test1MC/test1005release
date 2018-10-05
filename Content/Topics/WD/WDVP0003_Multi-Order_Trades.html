@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1247" MadCap:lastWidth="812">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Multi-Order Trades</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Multi-Order Trades</h1>
+    <p>In some areas of the UK, it is common practice to employ <MadCap:variable name="Variables.gangs" /> of subcontract tradesmen, and for there to be multiple <MadCap:variable name="Variables.gangs" /> of the same trade, working on the same <MadCap:variable name="Variables.vp site" /> at the same time.</p>
+    <p>Multi-order trades allow you to raise orders for several subcontractors with the same trade, for the full budget value of the trade. Each time you raise an order for the trade, <MadCap:variable name="General.ProductName" /> copies the full budget value onto the order. For example, you might raise orders for several bricklayers and assign them to specific plots as the work progresses.</p>
+    <p>In Certificate Entry, when you enter a payment for a multiple order, <MadCap:variable name="General.ProductName" /> can check either:</p>
+    <ul>
+      <li>whether the total payments for that trade exceed the budgeted value, or</li>
+      <li>whether the cumulative payments to the subcontractor exceed 100% of that subcontractor's order value,</li>
+    </ul>
+    <p>and if so, warns you or prevents payment.</p>
+    <p>
+      <MadCap:variable name="General.ProductName" /> calculates accruals by working out the average between orders and payments.</p>
+    <h2>Difference between checking the total budget value and checking the order value percentage</h2>
+    <p>If checking the total payments against the budget value (<span class="parameter">MUTRPC </span>= <span class="userinput">N</span>), <MadCap:variable name="General.ProductName" /> first checks the cumulative payments against the order value for the subcontractor; if the payments exceed the order value, <MadCap:variable name="General.ProductName" /> issues a warning or an error.  If not, <MadCap:variable name="General.ProductName" /> then checks the total cumulative payments for all subcontractors with that trade against the budget value, and issues a warning or an error if they exceed the budget value. </p>
+    <p>This method works well if all the subcontractors are paid at the same rate.  If, however, they are paid at different rates, it is still possible to overpay a subcontractor.  For example:</p>
+    <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');width: 100%;" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader"> </p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <p class="TableHeader">Subcontractor 1 </p>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <p class="TableHeader">Subcontractor 2 </p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">The budget value is 100, and the subcontractors' rates per plot are:  </td>
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">80</td>
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">100</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">If they each do 50% of the work, they should be paid:</td>
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">40</td>
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">50</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td rowspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">But the following payments would be possible if only checking the total payments against the budget value (meaning either subcontractor could be overpaid):</td>
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">40</td>
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">60</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">50</td>
+          <td align="right" class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">50</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The alternative method (<span class="parameter">MUTRPC </span>= <span class="userinput">Y</span>) does not refer to the budget value, but compares the cumulative payment for each subcontractor against their order value; if this exceeds 100%, <MadCap:variable name="General.ProductName" /> issues a warning or an error. </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/VP/vp_mutrade.htm" />
+          <MadCap:relatedTopic src="../Parameters/VP/vp_chkopay.htm" />
+          <MadCap:relatedTopic src="../Parameters/VP/vp_mutrpc.htm" />
+          <MadCap:relatedTopic src="../Parameters/VP/vp_muttol.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>PROC Subcontract Orders</title>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Configuration</h1>
+        <h2 MadCap:autonum="1.1 ">SV Parameter</h2>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>SV parameter below is found in <MadCap:variable name="General.ProductName" /> OA <MadCap:variable name="Variables.Commercial Manager caps" /> to define the Currency Conversion Type for use with multi-currency functionality. </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1">
+            </col>
+            <col class="TableStyle-COINSBasicIndented-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">CURCTYPE</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Currency Conversion Type used for multi-currency functionality for SC in <MadCap:variable name="Variables.Commercial Manager caps" /></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 ">How CURCTYPE Is Used</h2>
+        <p class="Body">Since SV parameter <span class="parameter">CURCTYPE </span>defines the Exchange Rate Types, this parameter should use one of the Conversion Rate Codes listed in<i> System &gt; Company Setup &gt; Setup &gt; Conversion Rate Codes</i>, as shown in <MadCap:xref href="#ConvRateCodes" class="ImageRef"><i>Figure 1:  Conversion Rate Codes</i></MadCap:xref>. If it is blank, the Currency Exchange Rates defined for the transactional type are used. Otherwise, Currency Exchange Rates are used as defined for the type by parameter <span class="parameter">CURCTYPE</span>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="ConvRateCodes"></a>Conversion Rate Codes</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV043_Images/SV043_ConvRateCodes.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Exchange Rate Types can be defined for different currencies. Exchange Rates for each Exchange Rate Type and for each currency can be defined for various effective dates in the <span class="Function">Currency Exchange </span>function in <i>System &gt; Company Setup &gt; Setup</i>, as shown in <MadCap:xref href="#CurrencyExchange" class="ImageRef"><i>Figure 2:  Currency Exchange</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CurrencyExchange"></a>Currency Exchange</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV043_Images/SV043_CurrencyExchange.png" class="MaxPrintWidth" />
+        </p>
+        <h1 MadCap:autonum="2 ">PROC Subcontract Orders</h1>
+        <p class="Body">Procurement no longer has restrictions for multi-currency for Subcontract Orders with <MadCap:variable name="Variables.Jc Contracts caps" /> using <MadCap:variable name="Variables.Commercial Manager caps" /> and for SC <MadCap:variable name="Variables.Sv Variation caps" /> functionality in <MadCap:variable name="Variables.Commercial Manager caps" />.</p>
+        <table style="width: 100%;">
+            <col style="width: 397px;">
+            </col>
+            <col>
+            </col>
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="TableHeader_1">Subcontract Orders With</p>
+                    </td>
+                    <td>
+                        <p class="TableHeader_1">Multi-Currency Allowed</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p class="TableCell">No <MadCap:variable name="Variables.Jc Contracts caps" /></p>
+                    </td>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p>Yes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p class="TableCell"><MadCap:variable name="Variables.Jc Contracts caps" /> that are not <MadCap:variable name="Variables.Commercial Manager caps" /></p>
+                    </td>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p>Yes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p class="TableCell"><MadCap:variable name="Variables.Jc Contracts caps" /> that are <MadCap:variable name="Variables.Commercial Manager caps" /> but do not use SC&#160;<MadCap:variable name="Variables.Sv Variation caps" />s functionality in <MadCap:variable name="Variables.Commercial Manager caps" /></p>
+                    </td>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p>Yes</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p class="TableCell"><MadCap:variable name="Variables.Jc Contracts caps" /> that use <MadCap:variable name="Variables.Commercial Manager caps" /> and SC&#160;<MadCap:variable name="Variables.Sv Variations caps" /> functionality in <MadCap:variable name="Variables.Commercial Manager caps" /></p>
+                    </td>
+                    <td style="border-left-style: solid;border-left-width: 1px;border-left-color: #808080;border-right-style: solid;border-right-width: 1px;border-right-color: #808080;border-top-style: solid;border-top-width: 1px;border-top-color: #808080;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #808080;">
+                        <p>No – an SV442 error message is displayed if multi-currency is used for orders</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/DEFLABOU - Default Labour From Gross minus VAT</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/DEFLABOU - </span> Default Labour From Gross minus VAT
+</div>
+<div class="param_def">
+<p>The rules to use for the relationship between the <MadCap:variable name="Variables.gross taxable"/> amount and the <MadCap:variable name="Variables.taxable element"/> for suppliers of subcontract <MadCap:variable name="Variables.labour"/>.</p>
+<p class="yesnolist">blank - The <span style="color: #000000;"><span class="field"><MadCap:variable name="Variables.Taxable Element caps"/> </span>field will default to zero unless operating within the AUS taxrules in which case it will default to the <MadCap:variable name="Variables.gross taxable"/> amount.  This setting is not recommended since this relies on users remembering to include invoices in the scope of subcontract tax.</span></p>
+<p class="yesnolist"><span class="userinput">E</span> = The <span style="color: #000000;"><span class="field"><MadCap:variable name="Variables.Taxable Element caps"/> </span>will default to the <MadCap:variable name="Variables.gross taxable"/> amount, and may not be changed.  Use this setting if the whole of every invoice for suppliers of subcontract <MadCap:variable name="Variables.labour"/> is always within the scope of subcontract tax.</span></p>
+<p class="yesnolist"><span class="userinput">W</span> =The <span style="color: #000000;"><span class="field"><MadCap:variable name="Variables.Taxable Element caps"/> </span>will default to the <MadCap:variable name="Variables.gross taxable"/> amount, but may be changed.  Use this setting to reduce the risk of not including invoices within the scope of subcontract tax which should be (where some do need to be excluded).</span></p>
+<p>Whether the taxable amount is calculated before or after <MadCap:variable name="Variables.vat"/> depends on the <span class="parameter">SC/TAXRULES</span> parameter, so that this is appropriate for the tax jurisdiction.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sc/sc_taxrules.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

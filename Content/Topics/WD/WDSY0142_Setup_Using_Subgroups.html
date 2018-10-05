@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="3072" MadCap:lastWidth="1010">
+    <head><title>Setting Function Access Using Subgroups</title>
+        <style>/*<![CDATA[*/
+ol ol
+{
+	list-style-type: decimal;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Function Access Using Subgroups</h1>
+        <p>&#160;</p>
+        <p>Group access permissions can be built up from subgroups, and the permissions are then copied to the groups. This means you can set up groups that correspond to job positions or roles, using subgroups to dictate the access permissions for collections of related menu items. When a new member of staff joins, you can easily set up their access permissions by setting up one group on their user record. It also has the advantage that you can modify the permissions while users are using the system, without affecting their access, and then apply all the changes together at a suitable time.</p>
+        <div class="process">
+            <h2 class="print">To set function access using subgroups:</h2>
+            <p>We recommend the following:</p>
+            <ol>
+                <li><strong>Set up sub groups to collect&#160;together the functions that relate to the business processes each job position requires. In particular, set up separate groups for input and <MadCap:variable name="Variables.enquiry" />.</strong>
+                    <p>We recommend you set up subgroups for related functions and types of access. For example:</p>
+                    <ul>
+                        <li>A subgroup for PL <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /> and Reports (with read-only access).</li>
+                        <li>A subgroup for PL Invoice and Payment Entry (with update access).</li>
+                        <li>A subgroup for PL Administration and Maintenance functions (with update access).</li>
+                    </ul>
+                    <p>Use <span class="function" title="Function:%WSYBSUR1">Groups</span> to create subgroups.</p>
+                    <p class="noteheader">NOTE</p>
+                    <div class="note"><MadCap:variable name="General.ProductName" /> SureStart provides pre-configured subgroups you can use as a starting point.</div>
+                    <p />
+                </li>
+                <li><strong>Specify the access permissions to collections of functions.</strong>
+                    <p>To set the access permissions, you can use:</p>
+                    <ul>
+                        <li><span class="function" title="Function:%WMS2035FMSF">Main Menu Security</span>, entering the code for the subgroup.</li>
+                        <li>The <span class="function" title="Function:%WMS2034BMSF2">Group Function Access</span> tab while maintaining the subgroup in <span class="function" title="Function:%WSYBSUR1">Groups</span>.</li>
+                    </ul>
+                </li>
+                <li><strong>Set up main groups that correspond to roles or job positions in your organ<MadCap:variable name="Variables.is" />ation.</strong>
+                    <p>Do not set up any access permissions on the main groups. If you introduce a new position with different responsibilities, set up a new group.</p>
+                    <p>We recommend you set up main groups to correspond to user roles or job titles, and that you do not set up access permissions on the main groups; use sub groups for setting access permissions. This is because if you change the permissions on a main group, these will be overwritten when you next process the sub groups -- the first thing the process does is to delete all existing group permissions.</p>
+Use <span class="function" title="Function:%WSYBSUR1">Groups</span> to create main groups.</li>
+                <li>
+                    <p><strong>Add the appropriate subgroups to each group.</strong>
+                    </p>
+Assign one or more sub groups to each main group, according to the features you want that main group to have access to. Use the multiple selection <span class="field">Sub Group </span>field to select the sub groups from the list.
+<p>The order of the sub groups is important; when the sub group permissions are processed, <MadCap:variable name="General.ProductName" /> will go through each sub group in turn and apply any explicit access settings (Allow or Deny) from the sub group to the main group. It will then only apply explicit access settings from the next sub group if they have not been set by the previous sub group. So if you allow access to a function on the first sub group, and deny access on the second sub group, the main group will allow access.</p><p>(In practice we do not expect Deny access to be used very often. However if you are using Menu Item Security, the order in which Read-Only access and Update access are specified may be important.)</p></li>
+                <li><strong>Use Sub Group Process to set the access permissions on each main group based on the sub groups that belong to it.</strong>
+                    <p>Processing the access permissions on groups involves running a function that evaluates the permissions on each sub group assigned to a group, in turn, and copies the permissions to the main group. This means that you can change the access on sub groups, and then only need to reprocess the main groups.</p>
+                    <ul>
+                        <li>Go to <span class="function" title="Function:%WMS2040RMSA">Sub Group Process</span>.
+</li>
+                    </ul>
+                    <p>
+                        <img src="../../Resources/Images/SY/SY_014201-1107.png" class="FullWidth" />
+                    </p>
+                    <ul MadCap:continue="true">
+                        <li>Specify the groups you want to process.
+<p>As well as copying the function access permissions to the main groups, this also copies group field security and HS sales event security settings from the sub groups to the main groups.</p></li>
+                    </ul>
+                </li>
+                <li><strong>Assign each user to one or more main groups.</strong>
+                    <p>Use <span class="function" title="Function:%WSYBSUR">Users</span> to specify the group or groups each user belongs to.</p>
+                    <ul>
+                        <li>Go to <span class="function" title="Function:%WSYBSUR">Users</span>.</li>
+                        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> to open a user record.
+</li>
+                    </ul>
+                    <p>
+                        <img src="../../Resources/Images/SY/SY_014202-1107.png" class="FullWidth" />
+                    </p>
+                    <p>&#160;</p>
+                    <p class="note">Because <MadCap:variable name="General.ProductName" /> evaluates the permissions on each group in turn, the sequence of the groups on a user's record is important. &#160;If a group denies access to a function, the user will not be able to access the function, even if a later group would allow access.</p>
+                    <ul MadCap:continue="true">
+                        <li>On the Groups tab, select the main group that corresponds to the user's job position.</li>
+                        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+                    </ul>
+                </li>
+                <li><strong>If necessary, fine-tune the access for individual users; you can use any of the function security features to do this.</strong>
+                    <p>See, for example:</p>
+                    <ul>
+                        <li><a href="WDSY0066_Setting_Function_Access.html">Setting Function Access</a>
+                        </li>
+                        <li><a href="WDSY0067_Interactive_Function_Security_Maintenance.html">Interactive Function Security Maintenance</a>
+                        </li>
+                        <li><a href="WDSY0404_Exporting_and_Importing_Function_Security.html">Exporting and Importing Function Security</a>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>

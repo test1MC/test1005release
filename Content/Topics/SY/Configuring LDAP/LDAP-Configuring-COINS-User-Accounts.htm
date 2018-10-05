@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />LDAP Configuring <MadCap:variable name="General.ProductName" /> User Accounts</h1>
+        <p>To be able to associate a <MadCap:variable name="General.ProductName" /> user account with an account within your Corporate Directory, you must map the <MadCap:variable name="General.ProductName" /> user accounts to a user principal name with the corporate LDAP directory.</p>
+        <p>For Microsoft Active Directory, you can use &lt;userid&gt;@&lt;domain&gt; for example: johdoe@example.local</p>
+        <p class="note">Do not proceed with this or any further tasks if you have not been able to successfully complete the steps outlined in <a href="Preparing-the-COINS-Server.htm">Preparing the <MadCap:variable name="General.ProductName" /> server</a>. Once a user’s <MadCap:variable name="General.ProductName" /> account has been configured to use LDAP Directory user authentication, the affected user will not be able to log into <MadCap:variable name="General.ProductName" /> unless <MadCap:variable name="General.ProductName" /> can verify the entered credentials against your corporate LDAP servers.</p>
+        <p>Complete this task using <MadCap:variable name="General.ProductName" /> OA.</p>
+        <ol>
+            <li>
+                <p>Log in to <MadCap:variable name="General.ProductName" /> OA using an administrative account that has the ability to alter system parameters.</p>
+            </li>
+            <li>
+                <p>Navigate to System module &gt; System Setup &gt; SY Parameters.</p>
+            </li>
+            <li>
+                <p>Find the LDAPON parameter and update it to ‘Y’ as shown below:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0011.png" class="FullWidth" />
+                </p>
+                <p>Once this parameter has been set to ‘Y’, LDAP Directory user authentication will be enabled for <MadCap:variable name="General.ProductName" /> user accounts.</p>
+            </li>
+            <li>
+                <p>Navigate to System module &gt; User Maintenance &gt; Users.</p>
+            </li>
+            <li>
+                <p>Find a <MadCap:variable name="General.ProductName" /> user account that you would like to change to LDAP Directory user authentication and open the user record, as shown below:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0012.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Go to the Details tab on the user record</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0013.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p>Enter the <MadCap:variable name="General.ProductName" /> user’s LDAP Directory user principal name  in the LDAP User@Domain field . Once this field contains a value, the <MadCap:variable name="General.ProductName" /> password, password expiry and Domain\User fields will be hidden.</p>
+            </li>
+            <li>
+                <p>Save the update and verify that the modified user can use their  domain &#160;login credentials to access <MadCap:variable name="General.ProductName" />. Once this has been verified, proceed to find and update all other <MadCap:variable name="General.ProductName" /> user accounts that you would like to use LDAP Directory user authentication against.</p>
+            </li>
+        </ol>
+        <p>A mixture of LDAP Directory user authentication and <MadCap:variable name="General.ProductName" /> passwords can be employed for your <MadCap:variable name="General.ProductName" /> user base. Simply leave the LDAP User@Domain field empty on <MadCap:variable name="General.ProductName" /> accounts where the <MadCap:variable name="General.ProductName" /> password token is required. <b>Note however that a mixture of both authentication mechanisms cannot be combined on a single <MadCap:variable name="General.ProductName" /> account.</b></p>
+    </body>
+</html>

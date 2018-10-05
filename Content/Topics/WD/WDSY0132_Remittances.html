@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Faxing/Emailing Remittances in OA</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Faxing/Emailing Remittances in OA</h1>
+        <p>
+When printing remittances from <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> or <span class="module">Subcontract Ledger</span>, <MadCap:variable name="General.ProductName" /> will fax or email each remittance to the appropriate recipient.
+
+    </p>
+        <div class="process">
+            <h2 class="print">To fax or email remittances:</h2>
+            <ol>
+                <li>Go to the remittance print or reprint function (for example: <span class="function" title="Function:%WPL1992BCOB">Print <MadCap:variable name="Variables.eft" /> Remittances</span> or <span class="function" title="Function:%WSC1995BCOB">Print <MadCap:variable name="Variables.Cheque caps" /> Remittances</span>).</li>
+                <li>Click the link for the relevant remittance batch.</li>
+                <li>In the <span class="field">Print Methods</span> fields, <MadCap:variable name="Variables.tick" /> whichever methods you want to use.
+<p><img src="../../Resources/Images/SY/SY_013201.png" /></p></li>
+                <ul>
+                    <li>If you <MadCap:variable name="Variables.tick" /><span class="field">Email</span>, <MadCap:variable name="General.ProductName" /> will email the remittances to:</li>
+                    <ul>
+                        <ul>
+                            <li>All the <MadCap:variable name="Variables.pl suppliers" />/subcontractors whose default print method is EMAIL.</li>
+                            <li>All the <MadCap:variable name="Variables.pl suppliers" />/subcontractors whose default print method is blank but who have an email address.</li>
+                        </ul>
+                    </ul>
+                    <li>If you <MadCap:variable name="Variables.tick" /><span class="field">Fax</span>, <MadCap:variable name="General.ProductName" /> will fax the remittances to:</li>
+                    <ul>
+                        <ul>
+                            <li>All the <MadCap:variable name="Variables.pl suppliers" />/subcontractors whose default print method is FAX.</li>
+                            <li>All the <MadCap:variable name="Variables.pl suppliers" />/subcontractors whose default print method is blank, and who have no email address but have a FAX number.</li>
+                        </ul>
+                    </ul>
+                    <li>If you <MadCap:variable name="Variables.tick" /><span class="field">Print</span>, <MadCap:variable name="General.ProductName" /> will&#160;print the remittances for:&#160;</li>
+                    <ul>
+                        <ul>
+                            <li>All the <MadCap:variable name="Variables.pl suppliers" />/subcontractors whose default print method is PRINT.</li>
+                            <li>All the <MadCap:variable name="Variables.pl suppliers" />/subcontractors whose default print method&#160;is blank and who have no FAX number or email address.</li>
+                        </ul>
+                    </ul>
+                </ul>
+                <li>Fill in any other fields as necessary.</li>
+                <li>Select the Output Options and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+            </ol>
+            <p>In each case <MadCap:variable name="General.ProductName" /> produces a PDF output that shows all the transactions that were faxed, emailed or printed - which you can see using <span class="function" title="Function:%WSYBCRR">Report Status</span>.&#160; If the review feature is enabled you need to release faxes and emails&#160;in order to send them&#160;- see <a href="WDSY0134_Reviewing_Messages.html">Reviewing Messages</a>.</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <ol>
+                <li>In <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span> and <span class="function" title="Function:%WPL2000BAVM"><MadCap:variable name="Variables.Pl Suppliers caps" /></span>:</li>
+                <ul>
+                    <li>Set the <span class="field">Default Print Method </span>field on the individual <MadCap:variable name="Variables.pl supplier" /> or subcontractor record.
+<p><img src="../../Resources/Images/SY/SY_013202.png" class="HalfWidth" /></p></li>
+                    <li>Make sure the <span class="field">Email </span>or <span class="field">Fax </span>fields are filled in with the appropriate email address or fax number.&#160;</li>
+                </ul>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">There are utility functions, <span class="function" title="Function:%WSC7070RSBM">Update default print method for Subcontractors</span> and <span class="function" title="Function:%WPL7070RAVM">Update default print method for <MadCap:variable name="Variables.Pl Suppliers caps" /></span>, that&#160;allow you to update the <span class="field">Default Print Method </span>in bulk.</div>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defprn.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_DEFPRN.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_mailfrom.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_MAILFROM.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="787" MadCap:lastWidth="601">
+    <head><title>Setting Up the VAP/Payroll Link</title>
+    </head>
+    <body>
+        <h1 class="print" MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Setting Up the VAP/Payroll Link</h1>
+        <p>
+The VAP/Payoll link allows you to record and approve payments to employees in VAP (using <span class="function" title="Function:%WVP1100BVPA">VAP/Payroll Payment Input</span>) for specific work.
+</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDVP0008_Entering_Payroll_Payments.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print" MadCap:autonum="1.1 ">To set up the VAP/Payroll link:</h2>
+            <ol>
+                <li>Create a "dummy" internal subcontractor record.&#160; This internal subcontractor record needs to be set up as exempt from <MadCap:variable name="Variables.cis" /> tax and not <MadCap:variable name="Variables.vat" /> registered.&#160; Set the <span class="parameter">VP/EMP-SUB </span>parameter to the account number of this subcontractor.</li>
+                <li>Set up a standard certificate definition for VAP/Payroll payments, with no costing or payment lines (since these will be derived in <span class="module">Payroll </span>not <span class="module">Subcontract Ledger</span>).&#160; Set the <span class="parameter">VP/EMP-CERT </span>parameter to the code for this certificate definition.</li>
+                <li>Set up a matrix-style subcontract record to hold the rates for the employees who will be paid using this method.&#160; This subcontract must use the certificate that is identified by <span class="parameter">VP/EMP-CERT</span>.&#160; All employees on the subcontract must use the same rates; If employees have different rates from each other, you need to set up separate subcontracts.</li>
+                <li>If you want, attach employees to the subcontract.&#160; Only these employees will be available when entering payments for this subcontract.</li>
+                <ol>
+                    <li>Open the subcontract record.</li>
+                    <li>On the Employee tab, add the employees who can work on this subcontract.</li>
+                </ol>
+                <p>Alternatively, leave the employee list blank; this means any employee can be selected&#160;when entering payments.</p>
+                <li>Using the PR parameter <span class="parameter">VAPITEMS</span>, enter a list of payitems that are valid for use with the VAP/Payroll Link.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print" MadCap:autonum="1.2 ">Parameters</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PR/pr_vapitems.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PR/pr_defvap.htm" />
+                    <MadCap:relatedTopic src="../Parameters/VP/vp_emp-cert.htm" />
+                    <MadCap:relatedTopic src="../Parameters/VP/vp_emp-inp.htm" />
+                    <MadCap:relatedTopic src="../Parameters/VP/vp_emp-sub.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

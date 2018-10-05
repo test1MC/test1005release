@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="562" MadCap:lastWidth="601">
+  <head>
+    <title>Configuring the FAXSEND Parameter</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Configuring the FAXSEND Parameter</h1>
+    <p>When configuring the Company parameter <span class="parameter">FAXSEND </span>in <MadCap:variable name="General.ProductName" />, there are various flags that can be added to the standard "vfx" command to provide further functionality to the Send Fax command. Some examples are given below, but for full details of the vfx command refer to the standard VSI-Fax User Manuals.</p>
+    <p>The standard send command for VSI-Fax is <span class="userinput">vfx</span>; below is a list of the commonly used options from within <MadCap:variable name="General.ProductName" />:</p>
+    <table style="width: 100%;">
+      <tbody>
+        <tr>
+          <td style="width: 4cm;">
+            <span class="userinput">-T <em>string</em></span>
+          </td>
+          <td>Send Time ([yy][mmdd]hhmm[am|pm])</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="userinput">-p <em>priority</em></span>
+          </td>
+          <td>l(ow)/m(edium)/h(igh)/u(rgent)</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="userinput">-C <em>coversheet</em></span>
+          </td>
+          <td>Coversheet to use</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="userinput">-s</span>
+          </td>
+          <td>Silent: VSI-Fax will not return a Fax Request ID</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="userinput">-l <em>length</em></span>
+          </td>
+          <td>Page length; for example: A4</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Email options - it is possible to request a fax status to be emailed from VSI-Fax when a fax is sent:</p>
+    <table style="width: 100%;">
+      <tbody>
+        <tr>
+          <td style="width: 4cm;">
+            <span class="userinput">-m <em>mode</em></span>
+          </td>
+          <td>
+            <p>Mode options - none/ok/fail/both/each</p>
+            <p>For example: <span class="userinput">fail</span> will send an email to the address specified by <span class="userinput">-M </span>if the fax fails; <span class="userinput">both </span>will send an email if the fax fails or succeeds; <strong>each </strong>will send an email each time the fax fails..</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="userinput">-M <em>mailaddr</em></span>
+          </td>
+          <td>
+            <p>Email address to send the notification mail to.</p>
+            <p>This can be</p>
+            <ul>
+              <li>The System or Fax Administrator.</li>
+              <li>The user who made the fax request.  You can use a Session parameter such as <a href="mailto:$LOGNAME@companyname.com">$LOGNAME@companyname.com</a> which picks up the user's ID, as long as <a href="mailto:userID@companyname.com">userID@companyname.com</a> exists as a valid email account on the appropriate Mail Server as configured in VSI-Fax.</li>
+            </ul>
+            <p>If you are using <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> for faxing you can use <span class="userinput">-M{EMAIL}</span> to pick up the user's email address.  This means you do not need aliases like <a href="mailto:userID@companyname.com">userID@companyname.com</a> .</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/CO/co_faxsend.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

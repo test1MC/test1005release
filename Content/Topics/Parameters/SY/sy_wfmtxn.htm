@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/WFMTXN - Workflow messages sent in transaction</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/WFMTXN - </span> Workflow messages sent in transaction
+</div>
+<div class="param_def">
+<p>Whether you are using the ESB Outbound Messages feature to send faxes, emails, SMS messages and workflow messages (<span class="userinput">Y</span> or <span class="userinput">N</span>).</p>
+<p class="yesnolist"><span class="userinput" data-mce-mark="1">Y</span> = Messages will be queued and sent using the ESB Outbound Messages feature.</p>
+<p class="yesnolist">N = Messages will be sent immediately. Note that if the message is created during a transaction, and that transaction is cancelled, the message will still be sent.</p>
+<p>Depending on the setting of the SY parameter <span style="color: #000000;" data-mce-mark="1"><span class="parameter" data-mce-mark="1">MSGREV</span>, this can be used to allow users to review messages before they are sent, or simply to keep a log of sent messages.</span></p>
+<p>This assumes that the syuesb.p program is running. The syuesb.p program is the message broker that sends the ESB messages to the ESB and also the email and SMS messages to their respective servers.</p>
+</div>
+</body>
+</html>

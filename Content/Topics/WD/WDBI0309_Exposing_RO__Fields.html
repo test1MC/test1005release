@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Exposing RO_ Fields</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Exposing RO_ Fields</h1>
+        <p>In order to use the Read Only (RO_) fields in the <MadCap:variable name="General.ProductName" /> OA Report Writer and coins OA Application Adapter, it is first necessary to expose these fields, that is, document the parameters which are to be passed to a field, within the database.</p>
+        <p>In the System module in <MadCap:variable name="General.ProductName" /> OA, System Maintenance and Table Documentation select the table in which the field you wish to pass parameters to.</p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_030901.gif" />
+        </p>
+        <p>The Parameter<MadCap:variable name="Variables.is" />ed Fields section then needs to be populated with the appropriate RO_ field and any parameters that are required. </p>
+        <p>A single field can be documented more than once with different parameters, for each a balance field can be documented with several dates, such as a year of period end dates.</p>
+        <p>Another example would be to pass various field extents to the same field such as different currency values of transactions.</p>
+        <p>Examples of an RO_ field and associated parameters are :</p>
+        <p>jc_job.RO_job_costs^TP|-3&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <MadCap:variable name="Variables.Jc Contract caps" /> Costs ? This Period with a period offset of -3</p>
+        <p>cs_certificate.RO_cst_ctd_cum^10 <MadCap:variable name="Variables.Contract Sales" style="text-transform: capitalize;" /> Certificate Item ? Cumulative to Date </p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Certificate Line 10</p>
+        <p>Once a RO_ field has been entered in the Table Documentation with appropriate parameters, it will then become available in <MadCap:variable name="General.ProductName" /> OA Application Adapter and Report Writer for selection as per standard database fields. It will also appear in the Database <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /> with a field type of EX.<br /></p>
+    </body>
+</html>

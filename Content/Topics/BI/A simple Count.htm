@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="319" MadCap:lastWidth="602">
+    <head><title>[%=System.LinkedTitle%]</title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="OA Designer Topic" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">A Simple Count</h1>
+        <p style="font-weight: bold;">Creating a Simple Count and Accumulating the Calculation Manually</p>
+        <p>To simply count the number of records being returned, assign the value in each to be 1 – this value can then be totalled and manipulated in the same way as other values. For example – the calculation below would count each line and complete a running total :</p>
+        <p class="Example">a = 1; counta = counta + a;</p>
+        <p>Counts can also be used in conjunction with all other functions to allow counts of certain types of information, e.g. the example below where dStockItemCount is checking the PO Line type and assign 1 if it is a Stock Item, this value is then being totalled.</p>
+        <p class="Example">dStockItemCount = INLIST("{po_line.pol_type}","I");<br />dTotStockItemCount = dTotStockItemCount + dStockItemCount;</p>
+    </body>
+</html>

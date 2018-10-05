@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Screen and Processing Changes</h1>
+        <h2>Document Category Maintenance</h2>
+        <p>Fields have been added to the Document Groups screen.</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/DM/Emails/Document Groups.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Template</p>
+                </div>
+                <div class="FieldDef">
+                    <p>An optional email (based on a system email template).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Upload</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to trigger the email when a document is inserted or updated against this group.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Check Out</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to trigger the email when a document is checked out from this group. (Some tables/categories, for example ap_invoice, cannot have this action applied.)</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Check In</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to trigger the email when a document is checked into this group.  (Some tables/categories, for example ap_invoice, cannot have this action applied.)</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Delete </p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to trigger the email when a document is deleted from this group.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Users/emails </p>
+                </div>
+                <div class="FieldDef">
+                    <p>A list of user IDs and/or email addresses to send the email to. Field names in curly brackets can be used; the field will be replaced by the database value. You can used field values from the dm_document record or the <MadCap:variable name="General.ProductName" /> table associated with the document category. This will make it possible to configure who an email is sent to based on values on the associated <MadCap:variable name="General.ProductName" /> record (for example, the buyer on an order).</p>
+                    <div class="NoteIndent1">
+                        <div class="notelabel">
+                            <p class="NoteHeader">NOTE</p>
+                        </div>
+                        <div class="notebody">
+                            <p>This has no effect on the workflow as that uses standard workflow responsibility functionality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Email Templates</h2>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new function, </MadCap:conditionalText><span class="function">DM&#160;Email Templates</span>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">,</MadCap:conditionalText> allows you to set up templates for the emails to send when documents are uploaded, checked in or out, or deleted. </p>
+        <p>
+            <img src="../../../Resources/Images_D-F/DM/Emails/Email Template.png" class="FullWidth" />
+        </p>
+        <p style="page-break-before: always;">This is similar to the standard <span class="function">Email Templates</span> maintenance (see <MadCap:xref href="../../SY/System Setup/Email Templates.htm" class="doclink"><i>Email Templates</i> in the online documentation</MadCap:xref>), with the following additional fields:</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Auto-Text</p>
+                </div>
+                <div class="FieldDef">
+                    <p>If this is <MadCap:variable name="Variables.tick" />ed, by default the subject line will include the following text:</p>
+                    <p><b>Document &lt;Description&gt; (&lt;doc_docid&gt;) was &lt;Uploaded|Deleted|Checked in|Check Out&gt; By  &lt;User&gt; on &lt;date/time&gt;</b>
+                    </p>
+                    <p>plus any  text defined on the email template.</p>
+                    <p>Alternatively, provided <span class="field">Auto-Text</span> is <MadCap:variable name="Variables.tick" />ed, you can add the token [AT] anywhere in the subject or body text and the auto-text will be placed there.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Document Link<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>If this is <MadCap:variable name="Variables.tick" />ed, the email body will contain a URL that links back to the document in <MadCap:variable name="General.ProductName" /> DM.</p>
+                    <p>Alternatively, provided <span class="field">Document Link</span> is <MadCap:variable name="Variables.tick" />ed, you can add the token [DL] anywhere in the body text and the document link will be placed there.</p>
+                </div>
+            </div>
+        </div>
+        <h3>Use of {} Fields in Subject and Body
+</h3>
+        <p style="page-break-after: avoid;">Field values can be used by surrounding the field name with curly brackets {}.
+Field values from the following tables can be used. </p>
+        <ol>
+            <li>Document
+</li>
+            <li>Associated <MadCap:variable name="General.ProductName" /> record
+</li>
+            <li>System user
+</li>
+            <li><MadCap:variable name="General.ProductName" /> company
+</li>
+        </ol>
+        <p>If a field name exists on more than one table, it will return the value from the table highest in the list.
+</p>
+        <h2>Changing Document Group</h2>
+        <p>If the document group of a document is changed from or to a group that triggers email on upload/check in or check out, an email is triggered.  If both groups trigger emails, only the email for the ‘to’ group is triggered.
+</p>
+    </body>
+</html>

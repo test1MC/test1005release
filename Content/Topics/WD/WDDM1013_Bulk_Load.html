@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1535" MadCap:lastWidth="1033">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Bulk Load</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Bulk Load</h1>
+        <p>The Bulk Load routine allows images to be loaded and indexed in bulk. </p>
+        <p>The documents to be indexed must be in a directory on the <MadCap:variable name="General.ProductName" /> server. When <MadCap:variable name="General.ProductName" /> loads the documents, they are moved to the disk associated with the document category and are deleted from the original directory.</p>
+        <div class="process">
+            <h2 class="print">To load documents in bulk:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WDM3000RDOC">Bulk Load</span>. 
+<p /><img src="../../Resources/Images_D-F/DM/DM_101301.gif" /></li>
+                <li>Enter the CSV that identifies the documents to be loaded, and the path to the directory where the documents are located.</li>
+                <li>Choose the <a href="WDUG0030_Output_Options.html">output options</a> for the report. The report will identify any errors, or will list the documents that have been loaded. 
+<p />If there are no errors, <MadCap:variable name="General.ProductName" /> loads and indexes the documents. If there are errors (for example, if the CSV file specifies either a record or a document that does not exist), the whole upload fails; you will need to correct the errors and run the upload again.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Bulk load CSV file</h2>
+            <p>The first line of the .CSV file must contain the table name, then a list of keywords (these keywords must be attached to the table in DM setup). The second and following lines contain the file name of the document (optionally in quotes), followed by the values of the keywords which are defined in the first line. All values must be comma-separated. There must be a line feed after the last line.</p>
+            <p />
+            <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" style="width: 75px;" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-COINSBasic-Head-Header1">
+                        <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                            <p class="TableHeader">Table</p>
+                        </th>
+                        <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="3">
+                            <p class="TableHeader">Keywords</p>
+                        </th>
+                    </tr>
+                    <tr class="TableStyle-COINSBasic-Head-Header1">
+                        <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                            <p class="TableHeader">ap_invoice</p>
+                        </th>
+                        <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">kco</th>
+                        <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                            <p class="TableHeader">avm_num </p>
+                        </th>
+                        <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                            <p class="TableHeader">ain_inv </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-COINSBasic-Body-Body1">
+                        <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">"DocumentA.doc"</td>
+                        <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">1</td>
+                        <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">SHI001</td>
+                        <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">10090235</td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasic-Body-Body1">
+                        <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">"Invoice1.tif"</td>
+                        <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">1</td>
+                        <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">SHI001</td>
+                        <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">10090235</td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasic-Body-Body1">
+                        <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">"Invoice2.tif"</td>
+                        <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">1</td>
+                        <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">FOS001</td>
+                        <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">10007612</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="code">ap_invoice,kco,avm_num,ain_inv&#160; <br />"DocumentA.doc",1,SHI001,10090235 <br />"Invoice1.tif",1,SHI001,10090235 <br />"Invoice2.tif",1,FOS001,10007612&#160;<br />&#160;&#160;&#160; <br /></div>
+            <p>To import separate pages of a multi-page document so that they can be opened and viewed as a single document, include the filename of the first page, with the keyword values, and put the filenames of the following pages on separate lines - these will be appended to the document.&#160; For example:</p>
+            <div class="code">ap_invoice,kco,avm_num,ain_inv<br />inv1page1.tif,1,SHI001,10090236<br />inv1page2.tif<br />inv1page3.tif<br /><br /></div>
+            <p>This will import a multi-page invoice with three pages.<br /></p>
+            <h2>Permissions</h2>
+            <p>The CSV file needs to allow read access.&#160; The documents to be uploaded need to have read/write access because they will be moved. Also the directories where the documents and CSV file are stored should have executable access. </p>
+        </div>
+    </body>
+</html>

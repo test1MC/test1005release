@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="4109" MadCap:lastWidth="1238" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0007,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OA Designer - Using Report Selection Criteria</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Dicscovery Heading.flsnp" />
+        <h1>Using Report Selection Criteria in the Report Query</h1>
+        <p>This exercise modifies the existing report to use further selection criteria within the Report Data using RS_ fields.&#160; Please copy the Function, Page and Report from BI0004 and call them xxBI0007.</p>
+        <h2>Amend the Page Fields</h2>
+        <p>This exercise will replace the standard selection criteria with some User Defined Report Selection fields. </p>
+        <p>In the Fields Tab go to the FORM selector at the bottom of the page, select Update and click Apply Filter.</p>
+        <p>NOTE: You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>Delete the field which contains the standard jobSelectionGenerate command.</p>
+        <p>Fields that begin RS_ are for report selections.&#160; They are defined in the FSPs.&#160; They typically have three elements: From, To and Matches; these are identified by adding double-underscore plus a number: __1, __2 or __3.&#160; </p>
+        <p>Add in the following fields : (Don't forget the Double Underscore prior to the last number)</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Append</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RS_job_num__1</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Contract From<br /></td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">RS_job_num__2</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">To</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell"><span style="font-family: Wingdings;">þ</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">RS_job_fore__3</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Manager</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1"><span style="font-family: Wingdings;">þ</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Against this last field also include the Populate for Contract Managers (job-rsp.job_fore) using the View-As and Populate fields as below :</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>View As</td>
+                    <td>Combo Description/Value</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The View As field determines how the field is displayed.&#160; In this case, it is a combo that shows the period code and the period end date.</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Populate</td>
+                    <td>job-rsp.job_fore</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Combos, and other fields that open with data already there, need to be populated from somewhere.&#160; This specifies how coins gets the information to show in the combo.&#160; In this case, the procedure to populate job_fore is defined in job-rsp.p. You can add a blank record with a label of ALL. </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Using Report Selection Criteria.png" class="FullWidth" />
+        </p>
+        <h2>Modify the Report Query</h2>
+        <p>Instead of using the standard selection criteria in the Report Query {jobSelect}, it is now necessary to pass the RS_ fields used in the Page Section to the report query to ensure that the data returned to the report is within the selection criteria specified by the User.</p>
+        <p>Amend the report query to reflect the RS_ fields as follows :</p>
+        <p class="Example">FOR EACH jc_job<br />WHERE jc_job.kco = {kco}<br />AND (jc_job.job_num &gt;= '{RS_job_num__1}'<br />OR '{RS_job_num__1}' = '')<br />AND (jc_job.job_num &lt;= '{RS_job_num__2}' <br />OR '{RS_job_num__2}' = '')<br />AND (CAN-DO('{RS_job_fore__3}',jc_job.job_fore)<br />OR '{RS_job_fore__3}' = '')</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Using Report Selection Criteria_1.png" class="FullWidth" />
+        </p>
+        <p>Re-run the report using the user defined selection criteria.</p>
+        <p>NOTE:&#160; If using the combo and populate then you can default the Manager to blank in the Function Parameter by adding&#160;&#160; RS_job_fore__3=&#160;&#160;&#160; This will remove the &lt;select&gt; from the combo box and will stop the need to only run the report for a specific Manager. -&#160; If you add the parameter to the function then you MUST refresh the Menu for this action to take place</p>
+        <h1>Using Report Selection Criteria to Pass Values to RO Fields</h1>
+        <p>This exercise modifies the existing report from Exercise 10 to use further selection criteria within the Report Data using RS_ fields.</p>
+        <h2>Create the Function </h2>
+        <p>Set up a new function to create an additional tab for Period Selection.</p>
+        <p>Example:</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Name</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">xxBI0007</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Main Report Function</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Tab Function</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">xxBI0007T</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Holding the Contract Selection</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Additional Tab</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">xxBI0007</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">T1Holding the <MadCap:variable name="Variables.Financial Date caps" /> Selection</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Using Report Selection Criteria_1_1.png" class="FullWidth" />
+        </p>
+        <h2>Add the Page Fields</h2>
+        <p>The report needs to prompt for the period to calculate costs up to, as well as allowing contract selection.&#160; The Update form already exists so add the fields to allow for Period Selection.</p>
+        <p>In the Field Tab go to the Form selector at the bottom of the page, select Update and click Apply Filter.</p>
+        <p>NOTE: You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>To create a date selection range for the report fill in the fields as follows:</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Field</td>
+                    <td>RS_glp_fdate__2</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Fields that begin RS_ are for report selections.&#160; They are defined in the FSPs.&#160; They typically have three elements: From, To and Matches; these are identified by adding double-underscore plus a number: __1, __2 or __3.&#160; In this case, we only need the "To" field.</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Label</td>
+                    <td>To <MadCap:variable name="Variables.Financial Period caps" /></td>
+                </tr>
+                <tr>
+                    <td>View As</td>
+                    <td>Combo Description/Value</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The View As field determines how the field is displayed.&#160; In this case, it is a combo that shows the period code and the period end date.</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Tab</td>
+                    <td>xxBI0007T1</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>Populate</td>
+                    <td>glp-rsp.glp_fdate</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Combos, and other fields that open with data already there, need to be populated from somewhere.&#160; This specifies how <MadCap:variable name="General.ProductName" /> gets the information to show in the combo.&#160; In this case, the procedure to populate glp_fdate is defined in glp-rsp.p.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Using Report Selection Criteria_1_2.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>Modify the Report Fields</h2>
+        <p>In the Field Tab go to the Form selector at the bottom of the page, select the Body form type and click Apply Filter.&#160; </p>
+        <p>NOTE : You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>Modify the following fields as follows:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Label</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">RO_ContractCosts^TD|0|{RS_glp_fdate__2}</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Costs to Date</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>This will display the costs to date for the date entered when the report is run.&#160; The field RO_ContractCosts takes three parameters:</p>
+        <p>- the type of cost (TD = to date; TP = this period; TY = this year; TO = total)</p>
+        <p>- the offset from the period selected.&#160; For example: 0 = the period selected (no offset); -1 = the period before the one selected; !12-0 = period twelve in the year of the period selected; !1203 = period 12 in 2003.</p>
+        <p>- the period to report on.&#160; This is the value selected on the report selection.</p>
+        <p class="IndentBold">RO_ContractRevenue^TD|0|{RS_glp_fdate__2} Revenue to Date </p>
+        <p>This works in the same way as RO_ContractCosts.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Using Report Selection Criteria_1_3.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

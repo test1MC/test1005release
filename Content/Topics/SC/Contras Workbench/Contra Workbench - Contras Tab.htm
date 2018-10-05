@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1180" MadCap:lastWidth="710">
+    <head>
+    </head>
+    <body>
+        <h1 style="page-break-before: avoid;">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Contra Workbench - </MadCap:conditionalText>Contras Tab</h1>
+        <p class="Body">The Contras tab allows you to maintain the contras for the current <MadCap:variable name="Variables.jc contract" />. Contra transactions are created using the <span class="Function">Create Contra</span> action on the Unallocated Costs tab.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Contras Tab</p>
+        <p class="screenshot">&lt;Screenshot required&gt;</p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Contra Reference</div>
+                <div class="FieldDef">The reference for the contra transaction. This is generated automatically based on the settings of the SC parameters <span class="parameter">CONTFORM</span> and <span class="parameter">CONTCODE</span>.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Description</div>
+                <div class="FieldDef">A description to explain the reason for the contra; this can be printed on the contra notification.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Curr</div>
+                <div class="FieldDef">The currency of the contra.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Source Ledger</div>
+                <div class="FieldDef">The ledger in which the source transaction was entered.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Source Account</div>
+                <div class="FieldDef">The account code of the supplier or subcontractor from the source transaction; for example, this could be the subcontractor who carried out work to remedy another subcontractor’s unsatisfactory work.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Internal Ref</div>
+                <div class="FieldDef">The internal reference of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Cost Amount</div>
+                <div class="FieldDef">The amount of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Recovery Account</div>
+                <div class="FieldDef">The account from which you want to recover the costs; for example, this could be a subcontractor whose work was unsatisfactory.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Recovery Amount</div>
+                <div class="FieldDef">The amount you want to recover. This could be more or less than the cost amount. Note that an administration charge can also be applied.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Recovery <MadCap:variable name="Variables.vat" /> Code</div>
+                <div class="FieldDef">The <MadCap:variable name="Variables.vat" /> code for the recovery costs.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Recovery Status</div>
+                <div class="FieldDef">
+                    <p>The status of the contra:</p>
+                    <ul class="CompactList">
+                        <li>Pending (no <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> invoice yet)</li>
+                        <li>Approved (Ready to invoice)</li>
+                        <li>Invoiced (Invoice posted but unpaid)</li>
+                        <li>Complete (Invoice paid)</li>
+                        <li><MadCap:variable name="Variables.cancelled" style="text-transform: capitalize;" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Recovery Invoice Ref</div>
+                <div class="FieldDef">The reference of the <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> recovery invoice. This has a link that opens the invoice in a new window.</div>
+            </div>
+        </div>
+        <p class="Body">Buttons allow you to attach documents and notes to a contra record.</p>
+        <p class="Body">The following actions are available:</p>
+        <ul>
+            <li>Print Notification – This allows you to print notifications for the selected contras (using a configurable document - see <MadCap:xref href="Contra Workbench - Contra Notification Form.htm">1, Contras Workbench - Contra Notification Form</MadCap:xref>).</li>
+            <li>Create Sales Invoice – This creates a sales invoice for the contra using the details populated on the recovery section. The <span class="Field">Approved for Recovery</span> box must be <MadCap:variable name="Variables.tick" />ed. If the recovery details have not been completed, an error is displayed which gives details of the fields that need to be completed. If there is an unposted <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span> batch of the type specified by <span class="parameter">SL/CONTTYP</span>, the invoice will be added to it, otherwise a new batch will be created (see <MadCap:xref href="Contra Workbench - Creating the Sales Invoice.htm">1, <i>Contra Workbench - Creating the Sales Invoice</i></MadCap:xref>).</li>
+            <li>Cancel – Cancels the contra (changes the status to Cancelled and does not allow other actions). This also clears the contra reference from the original unallocated cost transaction linked to the contra, and changes its status from “Linked to Contra” to “New”.</li>
+        </ul>
+    </body>
+</html>

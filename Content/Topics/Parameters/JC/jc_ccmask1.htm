@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>JC/CCMASK1 - Job Cost Code precedence in Acct. masking</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">JC/CCMASK1 - </span> Job Cost Code precedence in Acct. masking
+</div>
+<div class="param_def">
+<p>This determines whether the <MadCap:variable name="Variables.cost head"/> account mask takes precedence over the <MadCap:variable name="Variables.jc contract"/> account mask.</p>
+<p>When a cost code is used on a <MadCap:variable name="Variables.jc contract"/>, COINS takes the <span class="module">General Ledger</span> account from the mask on the standard <MadCap:variable name="Variables.cost head"/> and mask on the <MadCap:variable name="Variables.jc contract"/>"s group, type or location code.  If an element of the code is specified in both, this determines which is used:</p>
+<p class="yesnolist"><span class="userinput">Y</span> = The <MadCap:variable name="Variables.cost head"/> takes precedence over the <MadCap:variable name="Variables.jc contract"/>.</p>
+<p class="yesnolist"><span class="userinput">N</span> = The <MadCap:variable name="Variables.jc contract"/> takes precedence over the <MadCap:variable name="Variables.cost head"/>.</p>
+<p>For example, set this to <span class="userinput">Y</span> if you have already set up cost codes with fully explicit GL accounts.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Communigator Interface – </MadCap:conditionalText>Initial Configuration</h1>
+        <h2>Parameters</h2>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1110">Several new parameters have been added to the list in <span class="function">Communigator Parameters</span>. </MadCap:conditionalText>Review and set the <span class="function" MadCap:conditions="COINS.v1110">Communigator Parameters</span> <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1110">parameters </MadCap:conditionalText>as necessary.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0" MadCap:autosort="False">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" MadCap:autosortPriority="0" MadCap:autosortDirection="ascending" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" MadCap:conditions="COINS.Superseded in 1110,COINS.v1109" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1" style="text-align: center;">
+                        <p class="TableHeader">New in v11.09</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>APICLID</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The REST web services API client ID.  You will need to obtain this from Communigator.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>APICLSE</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The REST web services API client secret.  You will need to obtain this from Communigator.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>APIGLID</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The REST web services API Gator Leads client ID.  You will need to obtain this from Communigator.  Note this is only required if you wish to integrate web site activity from Gator Leads.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>APILAND</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The REST web services API landing zone. If this contains a value, the REST services are used rather than the middleware database.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>APISSOP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The Communigator single sign on password that is to be used by the web service interface.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>APISSOU</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The Communigator single sign on ID that is to be used by the web service interface.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>APPSERV</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The appservice name for the appserver handling the SQL requests to the Communigator middleware database.</p>
+                        <p>Note this is only required if you are using the SQL middleware interface.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVACT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Customer Care history when an activity is logged like a web click, download etc.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVBA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Customer Care history when an event is attended.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVBC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Customer Care history when an event is cancelled.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVBK</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Customer Care history when a booking is made is made by the Customer Care contact.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVEMO</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The event code for the event to create on the Customer Care history when an email is opened by the Customer Care contact.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVEMS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p> The event code for the event to create on the Customer Care history when a new email is sent from Communigator.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVNEW</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>A list of event codes from which the user will be able to select from when running the Customer Care mailshot to generate a new campaign. This will then create the selected event on the Customer Care history.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVREJ</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The event code for the event to create on the Customer Care history when an email is bounced/rejected.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>CCEVUNS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Customer Care history when a person unsubscribes from a campaign.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>DATACCAT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The data consent category to use to determine if a person has opted in/out of a Communigator campaign.  This will be used when creating a campaign in Communigator and when a person unsubscribes in Communigator.
+
+Note this is only applicable when using the REST web service interface.
+
+</p>
+                        <p>If this is left blank,  the consent category flagged as 'Do Not Email' will be used.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>DATACSRC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The consent source to use when the consent category is updated when a person unsubscribes in Communigator.
+
+Note this is only applicable when using the REST web service interface.
+</p>
+                        <p>If this is left blank,  the consent source will not be updated.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>EMAILERR</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The email address of the user to whom notifications of any errors that have occurred in the Communigator response broker should be sent to.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>FEEDARCH</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The directory into which processed messages from the Communigator data feed are archived.   This is useful when trouble shooting problems with the data feed.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, then messages will not be archived.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>INSTALL</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							Is the Communigator interface installed? This will determine whether the Communigator options in House Sales mailshots are enabled.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>LOCKFILE</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The filename of the lock file for the Communigator response broker.  The lock file allows the response broker to be shut down by deleting this file.
+						</p>
+                        <p>
+							The default filename for this is /$BASE/var/diag/CGBroker.lk
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>LOGFILE</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The filename of the log file for the response broker.
+						</p>
+                        <p>
+							The default filename for this is /$BASE/var/diag/CGBroker.log
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>NEWPEV</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>	The event code for the initial event to create on the Prospect history when a new Prospect is created from a new lead in Communigator.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>NEWPKCO</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The <MadCap:variable name="General.ProductName" /> company in which new Prospects created from a lead in Communigator will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>NEWPLOI</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The level of interest for a new Prospect created from a new lead in Communigator.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>NEWPSTA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The purchaser status code for a new Prospect created from a lead in Communigator.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVACT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the sales workbench history when an activity is logged like a web click, download etc.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVBA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the sales history when an event is attended.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVBC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the sales history when an event is cancelled.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVBK</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p> 						The event code for the event to create on the sales workbench history when a booking is made is made by the purchaser.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVEMO</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the sales workbench history when an email is opened by the purchaser.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVEMS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The event code for the event to create on the sales workbench history when a new email is sent from Communigator.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVNEW</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							A list of event codes from which the user will be able to select from when running the sales mailshot to generate a new campaign. This will then create the selected event on the sales workbench history.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVREJ</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The event code for the event to create on the sales workbench history when an email is bounced/rejected.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PLTEVUNS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the sales history when a person unsubscribes from a campaign.
+
+Note this is only applicable when using the REST web service interface.
+</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>POLL</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The polling interval in seconds for the <MadCap:variable name="General.ProductName" /> Communigator response broker. This determines how often the response broker will check the Communigator middleware database for new updates.
+						</p>
+                        <p>
+							The default for this is 10 seconds.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROBURL</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The base URL to use when constructing the URL to provide a link to view the emails sent in Communigator. This should be supplier by Communigator.
+						</p>
+                        <p>
+							The link to view the email will be available from the detail option in the workbench history.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVACT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							The event code for the event to create on the Prospect history when an activity is logged like a web click, download etc.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVBA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Prospect history when an event is attended.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVBC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Prospect history when an event is cancelled.</p>
+                        <p>Note this is only applicable when using the REST web service interface.</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVBK</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Prospect history when a booking is made is made by the prospect.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVEMO</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Prospect history when an email is opened by the Prospect.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVEMS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Prospect history when a new email is sent from Communigator.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVNEW</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>
+							A list of event codes from which the user will be able to select from when running the prospect mailshot to generate a new campaign. This will then create the selected event on the Prospects history.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVREJ</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Prospect history when an email is bounced/rejected.
+						</p>
+                        <p>
+							If this is left blank no event will be created.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1" MadCap:conditions="COINS.v1109">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>PROEVUNS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell" style="text-align: center;"><span style="font-family: 'Wingdings'">ü</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The event code for the event to create on the Prospect history when a person unsubscribes from a campaign.
+
+Note this is only applicable when using the REST web service interface.
+</p>
+                        <p>If this is left blank, no event will be created.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>RETRIES</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The number of times for the <MadCap:variable name="General.ProductName" /> response broker to retry if an error is encountered.
+						</p>
+                        <p>
+							The default for this is 6.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>SRCENQ</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The source of enquiry to be assigned to new Prospects created from Communigator.
+				</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>USERID</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1" style="text-align: center;">
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>
+							The <MadCap:variable name="General.ProductName" /> user ID under which the Communigator response broker will run.
+						</p>
+                        <p>
+			The default for this is SysAdmin.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>ESB Process Queue
+</h2>
+        <p>A new entry needs to be added in <span class="function">ESB Process Queue</span>.
+</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Value</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Field Label	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>COMMUNIGATOR</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p class="TableHeader">Description</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Communigator Publish</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p class="TableHeader">Program</p>
+                </div>
+                <div class="FieldDef">
+                    <p>hspesb003.processMessage</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p class="TableHeader">Parameters</p>
+                </div>
+                <div class="FieldDef">DEBUGFILE=$BASE/var/diag/comgator.out</div>
+            </div>
+        </div>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">ESB Process Queue Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_G-I/HS/Communigator/ESB_Process_Queue.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>Ensure that ESB&#160;Send is on.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Background Process Configuration Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_G-I/HS/Communigator/ESB_Send.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>Include the following in the SY&#160;parameter <span class="parameter">WEBLOG</span>:</p>
+        <p class="code">COMMUNIGATOR=$BASE/var/diag/ESBW_COMGATOR.log, COMDEBUG=$BASE/var/diag/comgator.out</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">System Parameters</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_G-I/HS/Communigator/SY_WEBLOG.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h2>Background Process</h2>
+        <p>A new process, hsucgrbw.p, needs to be set up as a background process in Unix, to start each morning. For example:</p>
+        <p class="code">00 07 * * * /u/coins/test/bin/session_%report.sh –b –p hsucgrbw.p &gt; /u/coins/test/var/diag/communicator.log 2&gt;&amp;1</p>
+        <p>The cronjob above would start at 7:00 each morning and would output a log file to /u/coins/test/var/diag/communigator.log. The process polls Communigator to check for new responses in the Communigator data feed. </p>
+        <p>All email campaign activity data is queued into a table and can be accessed; these activities make up:</p>
+        <ul class="CompactList">
+            <li>Email sent</li>
+            <li>Email opened</li>
+            <li>Downloads</li>
+            <li>Web site hit</li>
+            <li>Landing zone hit</li>
+            <li>Unsubscribes</li>
+            <li>Bounces</li>
+            <li>Event bookings</li>
+            <li>Event attendance</li>
+            <li>Event cancellation</li>
+            <li>New Leads</li>
+            <li>Campaign Statistics</li>
+        </ul>
+        <p>When <MadCap:variable name="General.ProductName" /> receives a response, if the relevant <span class="parameter">*EV*</span>&#160;parameter is set, an event is created in the history. </p>
+        <p>The process creates a lock file as specified by the Communigator parameter <span class="parameter">LOCKFILE</span>; to stop the broker, remove this lock file.</p>
+        <p>The <span class="parameter">LOGFILE</span> parameter specifies a log file for the background process.  Once running this will be written to each time it polls Communigator.</p>
+        <p>If the new Communigator parameter <span class="parameter">FEEDARCH</span> is set, the downloaded messages will be saved to the specified directory.</p>
+        <h2>Role Based <MadCap:variable name="Variables.Licence caps" /><![CDATA[
+]]></h2>
+        <p>As with the middleware interface, licensing is via the role %COMMGATOR.  Only users assigned to this role will be able to access the ‘Communigator’ option in the prospect mailshot.
+</p>
+        <p>For each user who will use these features, on the Groups tab of the user record <MadCap:variable name="Variables.tick" /> the <span class="field">Communigator User</span> box.
+</p>
+    </body>
+</html>

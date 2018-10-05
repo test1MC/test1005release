@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/ALWCHGCN - Allow change of Contract Number on Uncommitted Original PO</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/ALWCHGCN - </span> Allow change of Contract Number on Uncommitted Original PO
+</div>
+<div class="param_def">
+<p>Whether to allow the <MadCap:variable name="Variables.jc contract"/> number on an uncommitted order to be changed (<span class="userinput">Y</span> or <span class="userinput">N</span>).</p>
+<p class="yesnolist"><span class="userinput">Y</span> = The <span class="field"><MadCap:variable name="Variables.Jc Contract caps"/> Number</span> field on uncommitted material or <MadCap:variable name="Variables.pc plant"/> orders is enabled for update. This is only allowed if the order number uses a <MadCap:variable name="Variables.kco company"/>-based sequence (that is, if <span class="parameter">PO/PONUM1</span> = "comp"). </p>
+<p class="yesnolist"><span class="userinput">N</span> = The <span class="field"><MadCap:variable name="Variables.Jc Contract caps"/> Number</span> field on uncommitted material or <MadCap:variable name="Variables.pc plant"/> orders is disabled.</p>
+<p>Note that you cannot change the <MadCap:variable name="Variables.jc contract"/> number if:</p>
+<ul>
+<li>The order is a <MadCap:variable name="Variables.po variation"/>.</li>
+<li>The order has been raised from a requisition, a project package or from the project resources screen.</li>
+<li>The order has been raised using the House Builders <MadCap:variable name="Variables.Bq BOQ caps"/> module.</li>
+<li>The order is a service-related order.</li>
+</ul>
+<p>If the <MadCap:variable name="Variables.jc contract"/> number on the order is changed, all order lines with the original <MadCap:variable name="Variables.jc contract"/> number are changed to use the new <MadCap:variable name="Variables.jc contract"/>.</p>
+</div>
+</body>
+</html>

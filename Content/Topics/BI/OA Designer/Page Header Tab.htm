@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3760.333" MadCap:lastWidth="778">
+    <head>
+        <link href="../../../Resources/TableStyles/COINS_LR_Simple.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="OA Designer;Topics" />Page Header Tab</h1>
+        <p>This tab shows configuration for the header part of the page.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Page Designer_3.png" class="FullWidth" style="width: 759px;height: 233px;" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Page Designer_3_1105.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS_LR_Simple-Head-Header1">
+                    <th class="TableStyle-COINS_LR_Simple-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINS_LR_Simple-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Header Program</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The name of a Progress program to produce HTML to replace the header – used for special situations when the screen cannot be built using the standard toolkit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Popup</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>An optional menu function that defines the entries on a combo in the page header. It is used to navigate to other screens.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Form Service Procedure</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>If this form passes data on to another procedure (such as a report), this is the name of a Form Service Procedure program that processes the data</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Post Update</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The code for the function to go to after the add or update is complete.</p>
+                        <p>For example, after adding a new user, you may want to go to the user summary to update the user's access.</p>
+                        <p>This can contain a number of questions each with a function and a final default function. If the default function is missing then the browse is redisplayed.</p>
+                        <p>For example, %WVPBVSC/SC701,%WVPBXXX/SC702,%WSCSSBS would ask two questions SC701 and SC702; if the answer is Yes then it would run the appropriate function. If the answer to both is No then it would run %WSCSSBS.</p>
+                        <p>You can also run the functions without display (in the post frame). For example, you change a company status on a company record and want to ask the user if they wish to copy to all the offices. To do this pass back a third parameter (separated by "/"). For example %WCIU999/CI170/POST would run function %WCIU999 if CI170 was answered with Yes, but the output (there should be none) would be placed in the post frame and would not be visible. The next action in the POSTUPD series would then be run (if there was one) otherwise the list would be refreshed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Undo Action</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>A function to be run if the undo button is pressed</p>
+                        <p><b>This overrides the standard undo behaviour</b>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Back Action</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>If specified a "back" button is shown in the button bar. This is the function that will be run if that button is pressed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Back Icon</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The icon to use for the back function</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Back Text</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The text to be used for the back function</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Back Class</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The class of the back button</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Next Action</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The function code of the next function to display after this one. <MadCap:variable name="General.ProductName" /> displays the  button to move on to this function.</p>
+                        <p>This can contain a number of questions each with a function and a final default function. If the default function is missing then the user will stay on the current page.</p>
+                        <p>For example, %WVPBVSC/SC701,%WVPBXXX/SC702,%WSCSSBS would ask two questions SC701 and SC702; if the answer is Yes then it would run the appropriate function. If the answer to both is No then it would run %WSCSSBS.</p>
+                        <p>You can also run the functions without display (in the post frame). For example, you might want to process a set of records after entering them and delete all which have zero value. To do this pass back a third parameter "/POST". You must not rely on this function being run as the user might choose to close the browser rather than pressing the next page button.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Next Icon</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The icon to use for the back function</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Next Text</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The text to be used for the back function</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Next Class</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The class of the back button</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Header Query</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The function code used to point to the page section that contains the query that controls the navigation of the header tables on this page.</p>
+                        <p>If you enter a page section code, this enables navigation buttons on the summary page that allow the user to select further records in the query without having to go back to the browse screen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Go To Field</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Whether on a page with header navigation a Go To field should be presented. This is the field to use to work out which record to Go To.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Summary</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Whether the page is a summary page.</p>
+                        <p>Summary pages display the information and have an optional update button. If this is not ticked, the page will open as an update page.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Tabs as Sections</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Show tabs on fields as expandable sections</p>
+                        <p>If selected and tabs are specified on the fields in a form then they will be rendered as vertically expandable sections on the page.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Include Script</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>A comma-separated list of JavaScript files that you want to make available to the page</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Send Data</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>A list of program and function (for example, vat-rsp.sendVATData) that populates a data table in JavaScript. This is for client-side scripting.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Pre Get</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>A method to call just before the web page is created. Specify the RSP name and the method to call (for example: gjh-rsp.buildTokens).</p>
+                        <p>This is called after all the header tables have been found in their respective RSPs and before the page HTML is created. It allows you to pre-process records before the page starts. For example, it is used to work out which tokens have been used in a GL standing journal - gjh-rsp.p / buildTokens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Link Named Filter</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The code for a page that specifies a standard named filter to use on this page.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Link Advanced Filter</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>The code for a page that specifies a standard advanced filter to use on this page.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>REST Entity Path</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Path for REST mapping for an entity (single record)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1">
+                        <p>REST Collection Path</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyA-Column1-Body1">
+                        <p>Path for REST mapping for a collection (multiple records/query)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

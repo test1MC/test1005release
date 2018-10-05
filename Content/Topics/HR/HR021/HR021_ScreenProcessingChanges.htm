@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1> Configuration</h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Company parameter called <span class="parameter">HRPRLEAV </span>has been added to the Human Resources module.  When set to <strong>WORKBENCH</strong>, you can enter the <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> from the HR Personnel screen, even if the <span class="parameter">CO/PRHR</span>&#160;parameter is set. If left blank, the HR Personnel <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> acts as it currently does.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">HRPRLEAV</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">HR&#160;to Payroll Employee - Allow Personnel <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> to be updated when <span class="parameter">PRHR </span>has been set to sync PR fields to HR fields.</p>
+                        <p class="TableCell">The options are:</p>
+                        <ul>
+                            <li><strong>[Blank]</strong> - No change in functionality and <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> is not updateable if PR fields sync to HR.</li>
+                            <li><strong>WORKBENCH </strong>- Linked to PR Requests Workbench. You can enter the Personnel <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> field in HR and send a request to Payroll to start the <MadCap:variable name="Variables.mk leaver" /> process before the employee has left. If the request is accepted, the Employee <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> is updated with the Personnel <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" />.<br /><br /></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">When the <span class="parameter">HR/HRPRLEAV </span>parameter is set to <strong>WORKBENCH</strong>, and a Personnel <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> is entered, a record is created in <i>Payroll &gt; [pay frequency] &gt; HR Requests</i>, and the Employee <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> is not set until the PR Request has been accepted or an Employee <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> has been entered in PR Employee Maintenance.  Entry of the <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> from Payroll automatically closes out the PR Request, if it is on file.</p>
+        <h1>Screen and Processing Changes</h1>
+        <h2>HR Personnel Workbench</h2>
+        <p class="Body">The <span class="Field"><MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> </span>shown on the <i>HR Personnel Workbench &gt; Personnel Summary &gt; <MadCap:variable name="Variables.leaver employee" style="text-transform: capitalize;" /> screen</i> (see <MadCap:xref href="#LeaverScreen" class="ImageRef">Figure: <i>[%=Variables.leaver employee%] Screen</i></MadCap:xref>) is open for update if the following are true:</p>
+        <ul>
+            <li class="ListBullet3"><span class="parameter">CO/PRHR</span> parameter has been set to sync PR fields to HR, </li>
+            <li class="ListBullet3">the <span class="parameter">HR/HRPRLEAV </span>parameter has been set to <strong>WORKBENCH</strong>, and </li>
+            <li class="ListBullet3">the linked PR Employee has a <MadCap:variable name="Variables.leaver employee" style="text-transform: capitalize;" /> Status of <strong>Not a <MadCap:variable name="Variables.leaver employee" style="text-transform: capitalize;" /> </strong>or <strong>Leaving this Period</strong>.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="LeaverScreen"></a><MadCap:variable name="Variables.leaver employee" style="text-transform: capitalize;" /> Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_G-I/HR/HR021_Images/HRLeaverScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>HR Requests</h2>
+        <h3>Personnel Workbench</h3>
+        <p class="Body">An entry is created in <i>Payroll &gt; [pay frequency] &gt;&#160;HR&#160;Requests</i> (<MadCap:xref href="#HRRequests" class="ImageRef">Figure: <i>HR Requests Screen</i></MadCap:xref>) when (1) the  <span class="Field"><MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> </span>has been entered or changed on the<i> <MadCap:variable name="Variables.leaver employee" style="text-transform: capitalize; font-style: normal;" /></i> tab in <i>Human Resources &gt; Personnel Workbench &gt; Personnel Summary, </i>and (2) the <span class="parameter">HRPRLEAV </span>parameter has been set to <strong>WORKBENCH</strong>.</p>
+        <p class="Body">Once the HR&#160;Request is created, it appears on the HR&#160;Requests screen in the Request Type and Description columns with the following information (not shown on the screen below):</p>
+        <ul>
+            <li class="ListBullet3"><strong>Request Type </strong>= <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /></li>
+            <li class="ListBullet3"><strong>Description </strong>= Requested Employee <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /></li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="HRRequests"></a>HR Requests Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_G-I/HR/HR021_Images/PRHRRequests.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>Approval</h3>
+        <p class="Body">When a <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> HR Request is Approved in <i>Payroll &gt; [pay frequency] &gt;&#160;HR&#160;Requests</i> (date is selected and <strong>Approve </strong>action shown in <MadCap:xref href="#HRRequests" class="ImageRef">Figure: <i>HR Requests Screen</i></MadCap:xref> is run), the following occurs:</p>
+        <p><span class="Emphasis">If the Employee has not already left and has a <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> Status of 2 or 3, then:</span>
+        </p>
+        <ol style="list-style-type: lower-alpha;">
+            <li class="Listabc2">A message is displayed to the user.</li>
+            <li class="Listabc2">The Request is Rejected.</li>
+            <li class="Listabc2">The Request is archived.</li>
+        </ol>
+        <p><span class="Emphasis">If the Employee has not already left and has a <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> Code of 0 or 1, then:</span>
+        </p>
+        <ol style="list-style-type: lower-alpha;">
+            <li class="Listabc2">The Employee <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> Code is set to 1.</li>
+            <li class="Listabc2">The Employee <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> Date is set to the date on the request.</li>
+            <li class="Listabc2">The Request is Approved.</li>
+            <li class="Listabc2">The Request is archived.</li>
+        </ol>
+        <h3>Rejection</h3>
+        <p class="Body">When a <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> HR Request is Rejected in <i>Payroll &gt; [pay frequency] &gt;&#160;HR&#160;Requests</i> (date is selected and <strong>Reject </strong>action shown in <MadCap:xref href="#HRRequests" class="ImageRef">Figure: <i>HR Requests Screen</i></MadCap:xref> is run), the following occurs:</p>
+        <ol>
+            <li class="ListNumber1">The Request is Rejected.</li>
+            <li class="ListNumber1">The Request is archived.</li>
+            <li class="ListNumber1">Alerts are updated.</li>
+        </ol>
+        <h2>PR Employee Maintenance</h2>
+        <p class="Body">When you select a <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> Code of 1 or greater (see <MadCap:xref href="#PREmpMaintDate" class="ImageRef">Figure: <i>PR Employee Maintenance</i></MadCap:xref>), and an open HR Request is on file, it is used to default the <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> into <em>Payroll &gt; Employee Maintenance &gt; Employee Details &gt;&#160;General tab</em>, as shown in <MadCap:xref href="#PREmpMaintDate" class="ImageRef">Figure: <i>PR Employee Maintenance</i></MadCap:xref>.</p>
+        <p class="Body">Once saved, and the <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> Code is 1 or greater, the system checks to see if there are any open HR Requests for that employee. If the <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> matches, the request is accepted.   If the <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> does not match, the request is rejected.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="PREmpMaintDate"></a>PR Employee Maintenance</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_G-I/HR/HR021_Images/HR021_EmpMaint.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

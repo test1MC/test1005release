@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/FOPLIMIT - Maximum lines in single FOP table</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/FOPLIMIT - </span> Maximum lines in single FOP table
+</div>
+<div class="param_def">
+<p>The maximum number of rows COINS will use in a FOP table when generating PDF output. Change this to prevent memory errors.</p>
+<p>Larger tables require more memory. To prevent memory errors when generating PDF files, you can: 
+<P></P>
+<UL>
+<LI>Change the value of the <SPAN class="parameter">FOPLIMIT</SPAN> parameter to a smaller number. When the table reaches this number of rows, COINS begins a new table. This reduces the amount of memory required. We recommend you start with a value of 1000.</LI>
+<LI>Change the structure of the report to a paged report (for example, one that produces a new page per <MadCap:variable name="Variables.jc contract"/>). COINS produces a new table for each paged sort item (for example, each <MadCap:variable name="Variables.jc contract"/>).</LI>
+<LI>Increase the amount of memory available by increasing the maximum memory setting in fop.sh (for example, <SPAN style="WHITE-SPACE: nowrap" class="screentype">-Xmx96m</SPAN> is 96Mb).</LI></UL></p>
+</div>
+</body>
+</html>

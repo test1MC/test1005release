@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>SV [%=Variables.Sv Variations caps%] [%=Variables.Sv Register caps%]</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">SV <MadCap:variable name="Variables.Sv Variations caps" /> <MadCap:variable name="Variables.Sv Register caps" /></h1>
+        <p class="Body">Links between <MadCap:variable name="Variables.Sv Variations caps" /> and R&amp;O records are enabled if parameter <span class="parameter">SV/LNKROPVAR</span> is set to <strong>Y</strong>. Other functionality is discussed in this section that also only applies if this parameter is set to <strong>Y</strong>.</p>
+        <h2 MadCap:autonum="1.1 "><MadCap:variable name="Variables.Sv Variation caps" /> Details (Pricing, Status, Expected Impact)</h2>
+        <p class="Body"><MadCap:variable name="Variables.Sv Internal caps" /> and <MadCap:variable name="Variables.Sv External caps" /> values are available on the <MadCap:variable name="Variables.Sv Variation caps" /> Details screen (only <MadCap:variable name="Variables.Sv External caps" /> is shown as an example in <MadCap:xref href="#CRDetailsRO" class="ImageRef"><i>Figure 1:  [%=Variables.Sv Variation caps%] Details Screen – Risk and Opportunity</i></MadCap:xref>).</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="CRDetailsRO"></a><MadCap:variable name="Variables.Sv Variation caps" /> Details Screen – Risk and Opportunity</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV044_Images/SV044_CRDetails.png" class="MaxPrintWidth" />
+        </p>
+        <ul>
+            <li class="ListBullet3">Any change on this screen to <MadCap:variable name="Variables.Sv Variation caps" /> pricing (added/changed/removed Items, Resources, direct update of Summary Pricing in Total Priced <MadCap:variable name="Variables.Sv Variation caps" /> to the <MadCap:variable name="Variables.Sv Variation caps" /> Status, which is finally updating totals on <MadCap:variable name="Variables.Sv Variation caps" /> Pricing) is reflected on the linked Risks and Opportunities <MadCap:variable name="Variables.Sv Register caps" />.</li>
+            <li class="ListBullet3">Any update of <MadCap:variable name="Variables.Sv Internal caps" />, <MadCap:variable name="Variables.Sv External caps" />, or all <span class="Field">Impact </span>fields depends on the Link Type on the Risks and Opportunities <MadCap:variable name="Variables.Sv Register caps" />, as follows:</li>
+            <li class="ListBullet5"><strong><MadCap:variable name="Variables.Sv External caps" /> Impact</strong> – if linked by <MadCap:variable name="Variables.Sv External caps" /></li>
+            <li class="ListBullet5"><strong><MadCap:variable name="Variables.Sv Internal caps" /> Impact </strong>– if linked by <MadCap:variable name="Variables.Sv Internal caps" /></li>
+            <li class="ListBullet5"><strong>Both </strong>– if linked by Full</li>
+            <li class="ListBullet3"><span class="Field">Margin Impact </span>fields are updated as per the following Margin formula: <i>Margin = <MadCap:variable name="Variables.Sv External caps" /> – <MadCap:variable name="Variables.Sv Internal caps" /></i>. Margin recalculation only occurs if parameter <span class="parameter">SV/ROPSPLIT </span>is set to <strong>Y </strong>(otherwise, the Margin is set to zero).</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">Linked Risks and Opportunities</h2>
+        <p class="Body">A <strong>Risks and Opportunities </strong>link is accessed from the<i> <MadCap:variable name="Variables.Sv Variation caps"></MadCap:variable></i> <i>Summary &gt; Linked menu</i>, as shown in <MadCap:xref href="#CRROLink" class="ImageRef"><i>Figure 2:  [%=Variables.Sv Variation caps%] - Risks and Opportunities Link</i></MadCap:xref>. When selected, it takes you to a Risks and Opportunities browse, as shown in <MadCap:xref href="#CRROBrowse" class="ImageRef"><i>Figure 3:  [%=Variables.Sv Variation caps%] - Risks and Opportunities Browse</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CRROLink"></a><MadCap:variable name="Variables.Sv Variation caps" /> - Risks and Opportunities Link</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV044_Images/SV044_CRROLink.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="CRROBrowse"></a><MadCap:variable name="Variables.Sv Variation caps" /> - Risks and Opportunities Browse</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV044_Images/SV044_CRROBrowse.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">Named Filter</p>
+        <p class="IndentFieldDef">The bottom of the browse has a named Filter that can be linked to Risks/Opportunities using one of the following options:</p>
+        <ul class="CompactList">
+            <li class="ListBullet4"><strong>All </strong>- displays all linked and unlinked Risks and Opportunities.</li>
+            <li class="ListBullet4"><strong>Linked </strong>- displays all Risks and Opportunities linked to the current <MadCap:variable name="Variables.Sv Variation caps" />.</li>
+            <li class="ListBullet4"><strong>Unlinked </strong>- displays only Risks and Opportunities that can be linked to the current <MadCap:variable name="Variables.Sv Variation caps" />. This filter option now takes into account the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Full </span>Link Type; Risks and Opportunities linked in Full mode do not appear in the Unlinked view.</li>
+        </ul>
+        <p class="IndentBold">Link Risks and Opportunities Browse Action</p>
+        <p class="IndentFieldDef">The <strong>Link Risks and Opportunities </strong>action at the bottom of the browse screen (see <MadCap:xref href="#CRROBrowse" class="ImageRef"><i>Figure 3:  [%=Variables.Sv Variation caps%] - Risks and Opportunities Browse</i></MadCap:xref>) now takes into account the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Full </span>link type between the <MadCap:variable name="Variables.Sv Variation caps" /> and the Risks/Opportunities record.</p>
+        <ul class="CompactList">
+            <li class="ListBullet4">If the current <MadCap:variable name="Variables.Sv Variation caps" /> is already linked to a Risks/Opportunity record with a <span class="Field">Full </span>link type, the action is suppressed.</li>
+            <li class="ListBullet4">When a Risk/Opportunity record is linked to the <MadCap:variable name="Variables.Sv Variation caps" /> by a <strong>Full </strong>link type, both <MadCap:variable name="Variables.Sv Internal caps" /> and <MadCap:variable name="Variables.Sv External caps" /> values are updated.</li>
+        </ul>
+    </body>
+</html>

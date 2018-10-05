@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Missing Timecard Report by Merge Code</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Report Selection Screen</h1>
+        <h2 MadCap:autonum="1.1 ">Main Tab</h2>
+        <p class="Body">The selection screen of the <span class="Function">Missing Timecard Report </span>in <i>Payroll &gt;&#160;[frequency] &gt;&#160;Reports </i><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes Timesheet Input Group Available/Selected Lists on the Main tab, as shown in <MadCap:xref href="#MissingTCRptSelScreenReg" class="ImageRef"><i>Figure 1:  Report Selection Screen (Regular Period)</i></MadCap:xref> (for the Regular Period) and <MadCap:xref href="#MissingTCRptSelScreenFut" class="ImageRef"><i>Figure 2:  Selection Screen (Future Periods)</i></MadCap:xref> (for Future Periods).</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="MissingTCRptSelScreenReg"></a>Report Selection Screen (Regular Period)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR117_Images/PR117_RptSel_Regular.png" class="MaxPrintWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="MissingTCRptSelScreenFut"></a>Selection Screen (Future Periods)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR117_Images/PR117_RptSel_Future.png" class="MaxPrintWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Period Type</p>
+        <p class="IndentFieldDef">This field <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>only includes the Period Types (Regular/Adjusting and Future) of the unposted non-MCC (Manual <MadCap:variable name="Variables.Cheque caps" /> Calculator) periods present in Payroll frequency <span class="Function">Period Maintenance</span>.</p>
+        <p class="IndentBold">Periods</p>
+        <p class="IndentFieldDef">If the <span class="Field">Period Type </span>is set to Regular or Adjusting, the <span class="Field">Periods </span>field is hidden, and the available list of Timesheet Input Groups is populated with Regular/Adjusting groups.</p>
+        <p class="IndentFieldDef">If the <span class="Field">Period Type </span>is set to Future, the <span class="Field">Periods </span>field is available for the entry of a single period or a comma-separated period list. If one of the entered periods is incorrect, an error message is displayed, as shown in <MadCap:xref href="#RptSelErrorMsg" class="ImageRef"><i>Figure 3:  Report Error Message</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="RptSelErrorMsg"></a>Report Error Message</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="screenshot">
+                    <img src="../../../Resources/Images_P-R/PR/PR117_Images/PR117_RptErrorMsg.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Employee Selection Tab</h2>
+        <p class="Body">The standard <strong>Employee Selection </strong>tab on the Missing Timecard Report selection screen <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>From/To/Matches selection criteria for the Employee Timesheet Input Group Merge Code, as shown in <MadCap:xref href="#MergeCodeField" class="ImageRef"><i>Figure 4:  Timesheet&#160;Input Group Merge Code</i></MadCap:xref>. It is available for US and Canadian regions using Timesheet Input Groups.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="MergeCodeField"></a>Timesheet&#160;Input Group Merge Code</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR117_Images/PR117_RptSel_MergeCode.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h1 MadCap:autonum="2 ">Report Layout</h1>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Note </strong>column on the Missing TImecard Report informs you whether an employee has entered time cards, or whether time cards exist in a different TS Group not included on the report. Below are sample reports for the Regular period (<MadCap:xref href="#MissingTCRptSelScreenReg" class="ImageRef"><i>Figure 1:  Report Selection Screen (Regular Period)</i></MadCap:xref>) and for Future periods (<MadCap:xref href="#Rpt_FuturePeriods" class="ImageRef"><i>Figure 6:  Missing Timecard Report (Future Periods)</i></MadCap:xref>).</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Rpt_RegPeriod"></a>Missing Timecard Report (Regular Period)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR117_Images/PR117_Rpt_RegPeriod.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="Rpt_FuturePeriods"></a>Missing Timecard Report (Future Periods)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR117_Images/PR117_Rpt_FuturePeriods.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h1 MadCap:autonum="3 ">PR Employee Maintenance</h1>
+        <p class="Body">The Payroll <strong>Employee Maintenance </strong>screen <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>From/To/Matches advanced filter for the Employee Timesheet Input Group Merge Code, as shown in <MadCap:xref href="#EmpMaintTSInputMergeCode" class="ImageRef"><i>Figure 7:  Timesheet Input Group Merge Code</i></MadCap:xref>. It is available for US and Canadian regions using Timesheet Input Groups.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="EmpMaintTSInputMergeCode"></a>Timesheet Input Group Merge Code</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR117_Images/PR117_EmployeeFM_TSInputMergeCode.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

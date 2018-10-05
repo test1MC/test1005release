@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Positive Pay Reports</h1>
+        <h2>New Positive Pay Report (%WCB3050RCBD)</h2>
+        <p style="page-break-after: avoid;">A new <span class="function">Positive Pay Report</span> replaces the old one if the CB parameter <span class="parameter">USEPOSPY</span> = Y.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Positive Pay Report Selection Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody>
+        <p>
+            <img src="../../../Resources/Images_A-C/CB/Positive_Pay/Pos_Pay_Report.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p style="page-break-after: always">The <span class="function">Positive Pay Report</span> processes and reports on payments in the <MadCap:variable name="Variables.cheque" /> log, and creates an extract file which can be sent to the bank (manually or automatically). The report will examine all <MadCap:variable name="Variables.cheques" /> in the <MadCap:variable name="Variables.cheque" /> log for the specified bank that have not been previously processed. Any exceptions (such as duplicate <MadCap:variable name="Variables.cheque" /> number, negative <MadCap:variable name="Variables.cheque" />, or a <MadCap:variable name="Variables.cheque" /> that has been previously reported with different information) are included in the report as an exception but are NOT included in the extract file.</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">
+                    <p>Field</p>
+                </div>
+                <div class="ColHead">
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Bank</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The bank to produce the report or extract file for.</p>
+                    <p>If this is blank, all banks are processed, and separate extract files are created in accordance with the settings on the bank account record for each bank, and if specified on the bank account record, the file will be sent to the bank by FTP.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Report Only​/ ​Process</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to produce a report or create an extract file.</p>
+                    <p>If <span class="field">Process</span> is selected, an extract file will be created for the bank and stored in <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">the user’s </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">your </MadCap:conditionalText>“My Files” area. Any items processed are flagged as processed; any exceptions are flagged both as processed and as being exceptions (with reason). This will prevent any processed items and exceptions from being processed again.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Detail​/ ​Summary</p>
+                </div>
+                <div class="FieldDef">
+                    <p>If <span class="field">Detail</span> is selected, each <MadCap:variable name="Variables.cheque" /> will be listed on the report. If <span class="field">Summary</span> is selected, only the exceptions, totals and counts for issues, voids, and total items and counts will be reported.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Effective Date</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is blank by default. Some banks include this as part of header record.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Final Cutoff</p>
+                </div>
+                <div class="FieldDef">
+                    <p>If <MadCap:variable name="Variables.tick" />ed, this indicates that this is the final transmission of the month. Some banks request you specify this.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Auto Transmit File</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is <MadCap:variable name="Variables.tick" />ed automatically if <span class="field">Auto Transmit File via FTP</span> is <MadCap:variable name="Variables.tick" />ed on the bank account, and the <span class="field">Remote Host</span> field is not blank. If this is <MadCap:variable name="Variables.tick" />ed, the resulting bank file will be transmitted to the bank using the specified protocol / credentials.</p>
+                    <p>If this is not <MadCap:variable name="Variables.tick" />ed, the file in “My Files” will need to be sent to the bank.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Positive Pay Purge Report (%WCB9340RCBQ)</h2>
+        <p>The <span class="function">Positive Pay Purge Report</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new report that </MadCap:conditionalText>allows <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">the user </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">you </MadCap:conditionalText>to purge <MadCap:variable name="Variables.cheque" /> log data. This deletes all <MadCap:variable name="Variables.cheque" /> log records that are older than the date entered for the bank and have been processed.</p>
+        <p>The <span class="function">Positive Pay Purge Report</span> is available on the <MadCap:variable name="Variables.Cash Book caps" /> – Administration menu if the CB parameter <span class="parameter">USEPOSPY</span> = Y.</p>
+        <h2>Positive Pay Reset Utility (%WCB9350RCBQ)</h2>
+        <p><span class="function">Positive Pay Reset Utility</span> is a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>report that allows <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">the user </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">you </MadCap:conditionalText>to specify a date and have the “processed” flag cleared for items processed on that date. This allows those items to be re-processed.</p>
+        <p>The <span class="function">Positive Pay Reset Utility</span> is available on the <MadCap:variable name="Variables.Cash Book caps" /> – Administration menu if the CB parameter <span class="parameter">USEPOSPY</span> = Y.</p>
+    </body>
+</html>

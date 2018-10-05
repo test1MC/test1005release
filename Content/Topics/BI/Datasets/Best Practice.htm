@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="836" MadCap:lastWidth="601">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="OA Designer;Datasets;Topics" />Best Practice</h1>
+        <ul style="list-style-type: square;margin-left: 36pt;">
+            <li style="list-style-type: disc;">You should only create fields in a DataSet that are going to be used in the equivalent report.</li>
+            <li style="list-style-type: disc;">It is better to ‘Source’ a field rather than to ‘Calculate’ a field for efficiency.</li>
+            <li style="list-style-type: disc;">It is recommended that any calculations that can be carried out on the report/page should be done at that stage.</li>
+            <li style="list-style-type: disc;">For performance reasons, {}’s are now replaced once at the start of the dataset (v10.22 onwards) so as to not replicate the process for every field in the dataset. This is not a problem in most instances as the {}'s used in RO fields are usually something along the lines of {RS_glp_fdate__2} which is consistent across all records. It will mean however that you cannot put {}'s around field names; for instance '{job_num}' is not possible because this replacement will differ on each record. It is imperative that fields like this are referenced with Tablename.Fieldname e.g. jc_job.job_num - It is always best practice to fully qualify fields in a calculation on a dataset as the field will not strip out formatting etc so the value 10,000 would cause a problem previously in an if statement as the comma would be read into the if statement causing the syntax to have too many parameters.</li>
+            <li style="list-style-type: disc;">To maximise efficiency, any field on a DataSet which is not at the lowest level of the DataSet query, should be taken out of the DataSet and initiated on the report. For example if you had a query on the DataSet which reads</li>
+        </ul>
+        <p>FOR EACH jc_job WHERE jc_job.kco = {kco}, <br />EACH jc_costcode OF jc_job.</p>
+        <ul style="list-style-type: square;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Then fields from jc_costcode should be included in the DataSet but any RO fields etc from the jc_job table should be called on the report. To save unnecessary replication of calculations.</li>
+            <li style="list-style-type: disc;">It is good practice to Summarise at DataSet level, rather than at Report level if Summarisation is required. This is so that multiple records are not created and passed across to the report unnecessarily. This will reduce the load on the network traffic, especially where report servers are in use, and will reduce the amount of time the report takes to generate.</li>
+        </ul>
+        <p>Debug(1); - Can be turned on to debug a dataset but should be removed when setting a DataSet live. Debug(1) should be defined as a calculation in the Initial Calculation box. Once debug is turned on then all calculated fields will be verbose in the Report Log File.</p>
+        <p>Data Sets can be exported from one environment to another by simply choosing the Export Data Set Definitions option from the Designer menu.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/Dataset_Export_1104.jpg" class="FullWidth" />
+        </p>
+        <p>Enter the Data Set Name or use the lookup facility to find the relevant Data Sets and click Next</p>
+        <p>Once the Data Set has been exported to the Definition Data Window use the standard windows select all(Ctrl-A) and copy(Ctrl-C) functions to copy the data from the Definition Data Window and then Paste(Ctrl-V) to the Import Data Sets Definitions window also found Menu below in the environment you are wanting to add the Data Set after which you should then click the save icon.</p>
+        <p class="note"> A Data Set cannot pre-exist so if there is amendment required to a Data Set it must first be removed prior to importing</p>
+        <p>&#160;</p>
+    </body>
+</html>

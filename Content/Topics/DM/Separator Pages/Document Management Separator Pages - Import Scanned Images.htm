@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="503" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Document Management Separator Pages - </MadCap:conditionalText>Import Scanned Images</h1>
+        <p class="Body">Several new fields have been added to the <span class="Function">Import Scanned Images</span> screen.</p>
+        <p class="screenshot">
+            <img src="../../../Images/DM/DM Separator Pages/Import Scanned Images screen.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Blank Page Action	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The action to be carried out if a blank page is detected.</p>
+                    <ul class="no-indent">
+                        <li><span class="userinput">No Action</span> - Blank pages are imported as they are.</li>
+                        <li><span class="userinput">Delete</span> - Any images that are identified as blank pages will be deleted and not imported into the batch.</li>
+                        <li><span class="userinput">New Document</span> - The next image (after an image identified as a blank page) becomes the first page of a new document.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Max Dark %</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This field is displayed if the <span class="Field">Blank Page Action</span> is <span class="userinput">Delete</span> or <span class="userinput">New Document</span>.</p>
+                    <p>It allows you to specify the percentage of dark that indicates that the image is treated as a blank page.</p>
+                    <p>The detection of a blank page requires there to be a threshold at which an image can be regarded as blank. Scanning a totally blank page may result in some data in the image; it is also possible that a blank page may have footer text when using stationary. For this reason, a minimum level of non-white noise must be specified using the <span class="Field">Max Dark</span> percentage setting.</p>
+                    <div class="NoteIndent1">
+                        <div class="notelabel">
+                            <p class="NoteHeader">NOTE</p>
+                        </div>
+                        <div class="notebody">
+                            <p>This process will not work if the network scanner automatically deletes blank pages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Duplex</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is only displayed if the <span class="Field">Blank Page Action</span> is <span class="userinput">New Document</span>. When scanning in duplex, the back of some scanned documents may be blank, therefore if <span class="Field">Duplex</span> is <MadCap:variable name="Variables.tick" />ed, it will require two consecutive blank images to activate the creation of a new document.</p>
+                    <div class="NoteIndent1">
+                        <div class="notelabel">
+                            <p class="NoteHeader">NOTE</p>
+                        </div>
+                        <div class="notebody">
+                            <p>Some scanners have the option of creating a mulit-page image file when scanning to duplex. Using a scanner with that feature enabled is not compatible with the option to create a new document.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Split PDF's to single pages</div>
+                <div class="FieldDef">
+                    <p>This is only available if <span class="parameter">DM/SPLITPDF</span> is set to <span class="userinput">Y</span>.</p>
+                    <p>If this is <MadCap:variable name="Variables.tick" />ed, any PDF documents in the import will be split into individual PDF documents, and then imported as normal. </p>
+                    <p>After the import, the report will show which PDF files have been identified as multi-page, and the pages generated from them.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

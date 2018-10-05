@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="3" MadCap:lastHeight="16140" MadCap:lastWidth="1385" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title>Exercise - A Simple Listing Report</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Exercise - A Simple Listing Report</h1>
+        <p>In this exercise we are going to use the Semantic Layer to setup a Data Set for basic Contract Details and incorporate this into a report.</p>
+        <h2 class="Heading2">Build the Data Set</h2>
+        <p>Navigate to the OA Reporting and BI module and select the Semantic Layer Sub-folder.</p>
+        <p>Select the Collections menu option.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_1_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Select the Hyperlink on the %JOB Collection and select the Datasets Tab</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_2_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_4_1106.png" class="FullWidth" />
+        </p>
+        <p>Enter a Dataset name of xxEX1 (Where xx are your initials).</p>
+        <p>Enter a description of Contract Details</p>
+        <p>Leave ODBC and Query Name details blank at this stage – we will return to these later</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_6.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_6_1106.png" class="FullWidth" />
+        </p>
+        <p>The Main Tab will display any mandatory fields that are required for the operation of the dataset.&#160; </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Open_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_8.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_8_1106.png" class="FullWidth" />
+        </p>
+        <p>From the Available field locate the following fields and move then to the Selected field.</p>
+        <p>Company Number (%KCO)<br />Contract (%JOB_NUM)<br />Contract Name (%JOB_NAME)<br />Contract Address (%JOB_SHIPADDR)<br />Contract Post Code (%JOB_PCODE)<br />Contact Manager Name (%JOB_MANDESC)<br />Contract Costs This Period (%JOB_COSTSTP)</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_9.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Contents_9_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <h2 class="Heading2">Test the Dataset </h2>
+        <p>Select the Data tab</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_1106.png" class="FullWidth" />
+        </p>
+        <p>The yellow field indicates where a mandatory value is required – in this case it is the <MadCap:variable name="Variables.Financial Period caps" /> on which we want to report.&#160; Enter a valid <MadCap:variable name="Variables.Financial Date caps" /> and click <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_1.png" style="visibility: visible;mso-wrap-style: square;width: 31px;height: 14px;" /></p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Test the Dataset_2_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2 class="Heading2">Make the Dataset available to the Reporting Tools</h2>
+        <p>Return to the Collection %JOB and select the Dataset Tab</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+            </img>
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available_1106.png" class="FullWidth" />
+        </p>
+        <p>Open the Dataset by clicking <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available_1.png" style="visibility: visible;mso-wrap-style: square;width: 19px;height: 23px;" /> against the Dataset Name.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+            </img>
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available_2_1106.png" class="FullWidth" />
+        </p>
+        <p>In the Query Name field, enter COLL_xxEX1 (Where xx are your initials).&#160; We recommend prefixing Semantic Layer Query Names with COLL_ as it makes locating them easier later on.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105">
+            </img>
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Make the Dataset available_3_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+    </body>
+</html>

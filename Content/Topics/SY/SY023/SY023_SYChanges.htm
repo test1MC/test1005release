@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>SY Screen and Processing Changes</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />SY Screen and Processing Changes</h1>
+        <p class="Body">The v11.06 changes described in this section were made in the System module.</p>
+        <h2>S-Curve Library Maintenance</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>S-Curve Library </strong>function was added to <i>System &gt; System Setup</i>. A sample browse screen is shown in <MadCap:xref href="#SCurveMaint" class="ImageRef"><i>Figure 1:  S-Curve Library Browse Screen</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="SCurveMaint"></a>S-Curve Library Browse Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images/SY/SY023_Images/SCurveLibraryMaint.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Code</p>
+        <p class="IndentFieldDef">The code for the S-Curve header. It links to the S-Curve Library Detail page (see Section <MadCap:xref href="#Detail" class="ImageRef"><i>1.1.1  Detail Screen</i></MadCap:xref>).</p>
+        <p class="IndentBold">Description</p>
+        <p class="IndentFieldDef">This is a description of the S-Curve.</p>
+        <p class="IndentBold">Notes</p>
+        <p class="IndentFieldDef">Notes regarding the S-Curve are entered here.</p>
+        <p class="IndentBold">Complete</p>
+        <p class="IndentFieldDef">Indicates whether the S-Curve spread is complete (<i>last period cumulative value = 100.0</i>).</p>
+        <p class="IndentBold">Last Revision</p>
+        <p class="IndentFieldDef">This is the date and time of the most recent change to the record, and the user ID of the user who changed it.</p>
+        <p class="IndentBold">Dormant?</p>
+        <p class="IndentFieldDef">Whether the S-Curve is dormant. Dormant S-Curves are not shown in drop down lists.</p>
+        <h3><a name="Detail"></a>Detail Screen</h3>
+        <p class="Body">When you drill down on the <span class="Field">Code </span>field in the S-Curve Library browse screen, you are directed to a Detail screen (<MadCap:xref href="#SCurveDetaiilScreen" class="ImageRef"><i>Figure 2:  S-Curve Detail Screen</i></MadCap:xref>), which contains three tabs:&#160;<strong>Detail</strong>, <strong>Spread</strong>, and <strong>Used In</strong>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="SCurveDetaiilScreen"></a>S-Curve Detail Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images/SY/SY023_Images/SCurveDetailTab.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h4>Detail Tab</h4>
+        <p class="Body">The S-Curve <strong>Detail </strong>tab contains the <strong>Main</strong>, <strong>Cumulative</strong>, and <strong>Movement </strong>areas, which are discussed in more detail below.</p>
+        <ul>
+            <li class="ListBullet3">The <strong>Main </strong>area of the S-Curve Detail tab (<MadCap:xref href="#SCurveDetailTab" class="ImageRef"><i>Figure 3:  S-Curve Detail Tab</i></MadCap:xref>) displays the same fields shown on the S-Curve Library maintenance screen. The <span class="Field">Code </span>and <span class="Field">Spread Complete </span>fields on this screen are read-only.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="SCurveDetailTab"></a>S-Curve Detail Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images/SY/SY023_Images/SCurveDetailTab_Main.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <ul>
+            <li class="ListBullet3">The <strong>Cumulative </strong>area of the S-Curve Detail tab displays a chart showing Cumulative values of the spread, as shown in <MadCap:xref href="#CumulativeChart" class="ImageRef"><i>Figure 4:  Cumulative Chart</i></MadCap:xref>.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="CumulativeChart"></a>Cumulative Chart</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images/SY/SY023_Images/SCurveDetailTab_Cumulative.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <MadCap:pageBreak />
+        <ul>
+            <li class="ListBullet3">The <strong>Movement </strong>area of the S-Curve Detail tab displays a chart showing movement values of the spread, as shown in <MadCap:xref href="#MovementChart" class="ImageRef"><i>Figure 5:  Movement Chart</i></MadCap:xref>.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="MovementChart"></a>Movement Chart</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images/SY/SY023_Images/SCurveDetailTab_Movement.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h4>Spread Tab</h4>
+        <p class="Body">The S-Curve <strong>Spread </strong>tab shows an updateable browse of 100 periods (automatically created when you enter an S-Curve header), as shown in <MadCap:xref href="#SCurveSpreadtab" class="ImageRef"><i>Figure 6:  S-Curve Spread Tab</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="SCurveSpreadtab"></a>S-Curve Spread Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images/SY/SY023_Images/SCurveSpreadTab.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Period</p>
+        <p class="IndentFieldDef">The S-Curve Spread period number can be from 001 to 100.</p>
+        <p class="IndentBold">Movement</p>
+        <p class="IndentFieldDef">This is the Movement amount for the period. An error occurs if the number is negative.</p>
+        <p class="IndentBold">Cumulative</p>
+        <p class="IndentFieldDef">This is the Cumulative amount for the period. If this amount is changed, the remaining spread records are recalculated sequentially.</p>
+        <p class="IndentFieldDef">This field is disabled for Concurrent Update and Bulk.</p>
+        <p class="IndentBold">Notes</p>
+        <p class="IndentFieldDef">Notes for the spread period are shown here.</p>
+        <p class="Subtitle">S-Curve Spread Tab Actions</p>
+        <p class="Body">Two actions are available on the S-Curve Spread tab if the parent S-Curve is Incomplete: <strong>Spread Unallocated (Prorate)</strong> and <strong>Spread Unallocated (Evenly)</strong>. Both of these actions run as foreground processes using a Spread Completion Utility program (see Section <MadCap:xref href="#S-Curve" class="ImageRef"><i>1.1.2  S-Curve Spread Completion Utility</i></MadCap:xref>), which distributes unallocated values on selected records evenly or by prorating.  Only selected Spread records are changed.</p>
+        <p class="Subtitle">S-Curve Spread Options Menu</p>
+        <p class="Body">This menu contains the following single option if the parent S-Curve is Incomplete: <strong>Complete Spread using Known Values</strong>. It is run as a foreground process using a Spread Completion Utility program (see <MadCap:xref href="#S-Curve" class="ImageRef">Section <i>1.1.2  S-Curve Spread Completion Utility</i></MadCap:xref>), which uses the curve fitting method to complete the spread.</p>
+        <h4>Used in Tab</h4>
+        <p class="Body">The S-Curve <strong>Used In</strong> tab (<MadCap:xref href="#SCurveUsedInTab" class="ImageRef"><i>Figure 7:  S-Curve Used In Tab</i></MadCap:xref>) shows the usage of a current S-Curve Library record in the system. It finds the records to use by:</p>
+        <ul>
+            <li class="ListBullet3">Searching through Forecasting Option Sets and collecting Forecasting Options that reference the current S-Curve Library record as a source of Billings, Cost, Cash Inflow, or Cash Outflow.</li>
+            <li class="ListBullet3">Searching through <MadCap:variable name="Variables.Marketing caps" /> <MadCap:variable name="Variables.Mk Projects caps" /> if the following conditions are true:</li>
+            <li class="ListBullet4">
+                <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">A</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="COINS.USOnly">An</MadCap:conditionalText> <MadCap:variable name="Variables.Mk Project caps" /> is active and no <MadCap:variable name="Variables.Jc Contract caps" /> exists for it.</li>
+            <li class="ListBullet4">
+                <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">A</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="COINS.USOnly">An</MadCap:conditionalText> <MadCap:variable name="Variables.Mk Project caps" /> uses a Forecast Options Set that references an S-Curve Library record as the source of any S-Curve.</li>
+            <li class="ListBullet4">The first incomplete Forecast of the <MadCap:variable name="Variables.Mk Project caps" /> is found that references an S-Curve Library record as the source of any S-Curve.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="SCurveUsedInTab"></a>S-Curve Used In Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images/SY/SY023_Images/SCurveUsedInTab.png" class="MaxPrintWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h3><a name="S-Curve"></a>S-Curve Spread Completion Utility</h3>
+        <p class="Body">The S-Curve Library Spread Completion Utility uses Spreading Library methods to distribute unallocated amounts by using the following methods:</p>
+        <ul>
+            <li class="ListBullet3">Curve Fit</li>
+            <li class="ListBullet3">Spread Unallocated (pro-rate)</li>
+            <li class="ListBullet3">Spread Unallocated (evenly)</li>
+            <li class="ListBullet3">Replace with Even Distribution</li>
+            <li class="ListBullet3">Replace with S-Curve (Normal Distribution)</li>
+        </ul>
+    </body>
+</html>

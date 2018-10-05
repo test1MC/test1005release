@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="8" MadCap:lastHeight="975" MadCap:lastWidth="638">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><a name="_Ref390858973"></a><a name="_Ref390859102"></a><a name="_Toc450312884"></a>Monitored Folders</h1>
+        <p class="Body"><span class="Function">Exchange Monitored Folders</span> (%WSY2000BSTE) lists any Exchange Public Folders to be monitored. Once defined here, the <MadCap:variable name="General.ProductName" /> Exchange Integration utility periodically checks the folder for new messages and runs the specified program, passing in the message sender, recipients, subject, text, and any attachments.</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SYS-Exchange-Server-2013-Integration/Monitored Folders.png" style="width: 602px; height: 116px;" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Code<![CDATA[	]]></div>
+                <div class="FieldDef">
+                    <p>The code number automatically generated when you add a new monitored Exchange Public Folder.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Description<![CDATA[	]]></div>
+                <div class="FieldDef">
+                    <p>A description for the monitored Exchange Public Folder.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Folder Path</div>
+                <div class="FieldDef">
+                    <p>The full path to the monitored Exchange Public Folder.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Archive Path</div>
+                <div class="FieldDef">
+                    <p>The full path to the archive Exchange Public Folder.</p>
+                    <p>If set, messages are moved here after processing.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Program</div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="General.ProductName" /> OA program to be run for each message in the monitored folder.</p>
+                    <p>This program must include syu136.i and have the following signature:</p>
+                    <p>
+                        <ul class="CompactList">
+                            <li>input pcSubject as char</li>
+                            <li>input pcText as char</li>
+                            <li>input pcFrom as char</li>
+                            <li>input pcTo as char</li>
+                            <li>input pcCC as char</li>
+                            <li>input pcParam as char</li>
+                            <li>input table ttAttachHdr</li>
+                            <li>input table ttAttachDat</li>
+                            <li>output pcMsg as char</li>
+                            <li>output pbOk as log</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Parameters</div>
+                <div class="FieldDef">The parameters are passed to the specified OA program, which allows the same program to handle different folders in different ways.</div>
+            </div>
+        </div>
+    </body>
+</html>

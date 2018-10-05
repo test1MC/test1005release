@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/Stylesheets/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>SV Risks and Opportunities [%=Variables.Sv Register caps%]</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">SV Risks and Opportunities <MadCap:variable name="Variables.Sv Register caps" /></h1>
+        <p class="Body">Any changes specified in this section only apply if parameter <span class="parameter">SV/ROPSPLIT </span>is set to <strong>Y</strong>.</p>
+        <h2 MadCap:autonum="1.1 "><a name="Browse"></a>Browse Screen</h2>
+        <p class="Body">The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>subcolumns are available under the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Expected column on the<i> <MadCap:variable name="Variables.Commercials caps" /> &gt; Risk and Opportunities <MadCap:variable name="Variables.Sv Register caps"></MadCap:variable></i> browse (see <MadCap:xref href="#ROLogColumns" class="ImageRef"><i>Figure 1:  Risk and Opportunities [%=Variables.Sv Register caps%] Browse</i></MadCap:xref>):&#160;<MadCap:variable name="Variables.Sv External caps" />, <MadCap:variable name="Variables.Sv Internal caps" />, and Margin Impact.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="ROLogColumns"></a>Risk and Opportunities <MadCap:variable name="Variables.Sv Register caps" /> Browse</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV044_Images/SV044_ROLogColumns.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Sv External caps" />
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Sv External caps" /> Expected value.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Sv Internal caps" />
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Sv Internal caps" /> Expected value.</p>
+        <p class="IndentBold">Margin Impact</p>
+        <p class="IndentFieldDef">If an R&amp;O Item has been linked to <MadCap:variable name="Variables.Sv Variations caps" /> that are not <MadCap:variable name="Variables.sv taken up" />, Pessimistic, Expected, and Optimistic values are calculated automatically using the calculations below.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><strong>If the R&amp;O&#160;Item is <MadCap:variable name="Variables.Sv External caps"></MadCap:variable>:</strong>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="IndentFieldDef"><strong>Pessimistic Value</strong> = <i>0</i></p>
+                        <p class="IndentFieldDef"><strong>Expected Value</strong> = <i>Total of <MadCap:variable name="Variables.Sv External caps" /> Expected value of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not <MadCap:variable name="Variables.sv taken up" /></i></p>
+                        <p class="IndentFieldDef"><strong>Optimistic Value</strong> = <i>Total of <MadCap:variable name="Variables.Sv Taken Up caps" /> value of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not <MadCap:variable name="Variables.sv taken up" /> - Total of <MadCap:variable name="Variables.Sv Taken Up caps" /> value of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not <MadCap:variable name="Variables.sv taken up" /></i></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p><strong>If the R&amp;O&#160;Item is <MadCap:variable name="Variables.Sv Internal caps" />:</strong>
+                        </p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p class="IndentFieldDef"><strong>Pessimistic Value</strong> = <i>Total of Proposed <MadCap:variable name="Variables.Sv Internal caps" /> of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not <MadCap:variable name="Variables.sv taken up" /> - Total of <MadCap:variable name="Variables.Sv Taken Up caps" /> <MadCap:variable name="Variables.Sv Internal caps" /> of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not <MadCap:variable name="Variables.sv taken up" /></i></p>
+                        <p class="IndentFieldDef"><strong>Expected Value</strong> = <i>Total of <MadCap:variable name="Variables.Sv Internal caps" /> Expected value of linked <MadCap:variable name="Variables.Sv Variations caps" /> that are not <MadCap:variable name="Variables.sv taken up" /></i></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 "><a name="Details"></a> Details Tab</h2>
+        <p class="Body">The following<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> changes were made </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"> </MadCap:conditionalText></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">items apply </MadCap:conditionalText>to the Impact Layout box in <i>Risks and Opportunities &gt; Reference link &gt; Details tab</i>:</p>
+        <ul>
+            <li class="ListBullet3">If at least one <MadCap:variable name="Variables.Sv Internal caps" />/<MadCap:variable name="Variables.Sv External caps" /> <MadCap:variable name="Variables.bq boq" /> exists in a <MadCap:variable name="Variables.Commercial Manager caps" /> <MadCap:variable name="Variables.Jc Contract caps" />, and parameter <span class="parameter">SV/ROPSPLIT</span> is set to <strong>Y</strong>, the Link to <MadCap:variable name="Variables.Sv Variations caps" /><span class="Field"> Type </span>field <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes a <strong>Full </strong>option (set as the default), as shown in <MadCap:xref href="#RODetailsLayout" class="ImageRef"><i>Figure 2:  Risk and Opportunity Details Screen</i></MadCap:xref>. If selected, linked <MadCap:variable name="Variables.Sv Variations caps" /> determine both the <MadCap:variable name="Variables.Sv Internal caps" /> and <MadCap:variable name="Variables.Sv External caps" /> values.</li>
+            <li class="ListBullet3"> If parameter <span class="parameter">SV/ROPSPLIT</span> is set to <strong>Y</strong>, the following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>fields appear in the Impact layout box, as shown in <MadCap:xref href="#RODetailsLayout" class="ImageRef"><i>Figure 2:  Risk and Opportunity Details Screen</i></MadCap:xref>:</li>
+            <li class="ListBullet4"><MadCap:variable name="Variables.Sv Internal caps" /> Impact - Pessimistic, Expected, Optimistic</li>
+            <li class="ListBullet4"><MadCap:variable name="Variables.Sv External caps" /> Impact - Pessimistic, Expected, Optimistic</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="RODetailsLayout"></a>Risk and Opportunity Details Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV044_Images/SV044_RODetailsImpactLayout.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">Link to <MadCap:variable name="Variables.Sv Variations caps" /></p>
+        <p class="IndentFieldDef">If parameter <span class="parameter">SV/ROPSPLIT</span> is set to <strong>Y</strong>, the following processing occurs:</p>
+        <ul class="CompactList">
+            <li class="ListBullet4"><span class="Field">Margin Impact </span>fields are disabled and recalculated each time you change the value of <span class="Field"><MadCap:variable name="Variables.Sv Internal caps" /> Impact</span> or <span class="Field"><MadCap:variable name="Variables.Sv External caps" /> Impact</span> fields.</li>
+            <li class="ListBullet4"><span class="Field"><MadCap:variable name="Variables.Sv Internal caps" /> Impact </span>and <span class="Field"><MadCap:variable name="Variables.Sv External caps" /> Impact</span> fields are updateable only if the <span class="Field">Link to <MadCap:variable name="Variables.Sv Variations caps" /> </span><MadCap:variable name="Variables.tick" />box is un<MadCap:variable name="Variables.tick" />ed.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 "><a name="Tab"></a><MadCap:variable name="Variables.Sv Variations caps" /> Tab</h2>
+        <p class="Body">When the <span class="Field">Link to <MadCap:variable name="Variables.Sv Variations caps" /></span> field is <MadCap:variable name="Variables.tick" />ed on the R&amp;O&#160;Details tab, a <MadCap:variable name="Variables.Sv Variations caps" /> tab appears in <i>Risks and Opportunities &gt; Reference link</i>, as shown in <MadCap:xref href="#CRTab" class="ImageRef"><i>Figure 3:  [%=Variables.Sv Variations caps%] Tab</i></MadCap:xref>. This tab shows a list of <MadCap:variable name="Variables.Sv Variations caps" /> that are linked to a current Risk/Opportunity record (Linked Named Filter), or can be linked to it (Unlinked Named Filter).</p>
+        <p class="Body">If parameter <span class="parameter">SV/ROPSPLIT</span> is set to <strong>Y</strong>:</p>
+        <ul>
+            <li class="ListBullet3">
+                <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">New<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> </MadCap:conditionalText>calculated </MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Calculated </MadCap:conditionalText>Expected fields appear on the <MadCap:variable name="Variables.Sv Variations caps" /> screen, as shown in <MadCap:xref href="#CRBrowse" class="ImageRef"><i>Figure 4:  [%=Variables.Sv Variations caps%] Browse</i></MadCap:xref>.</li>
+            <li class="ListBullet3">A <MadCap:variable name="Variables.Sv Variation caps" /> can be linked to <MadCap:variable name="Variables.Sv Internal caps" /> or <MadCap:variable name="Variables.Sv External caps" /> (it can only be linked to one Risk/Opportunity record).</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="CRTab"></a><MadCap:variable name="Variables.Sv Variations caps" /> Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV044_Images/SV044_ROCRTab.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="CRBrowse"></a><MadCap:variable name="Variables.Sv Variations caps" /> Browse</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV044_Images/SV044_CRBrowse.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

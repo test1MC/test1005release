@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1455" MadCap:lastWidth="909">
+  <head>
+    <title>Printing Purchase Orders</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Printing Purchase Orders</h1>
+    <p>You can print purchase orders singly, print all unprinted orders, or select which orders you want to print. </p>
+    <p>The purchase order printing procedure can automatically commit the orders. In this case, <MadCap:variable name="General.ProductName" /> checks your author<MadCap:variable name="Variables.is" />ation limit and does not print orders over this limit. </p>
+    <ul>
+      <li>Using the order workbenches, you can print individual orders or several selected orders at once.  You can also produce a draft print of the order or orders: this is marked as a draft, and <MadCap:variable name="General.ProductName" /> does not commit the order.  If you print an order from the workbench that has already been printed, <MadCap:variable name="General.ProductName" /> treats it as a reprint.</li>
+      <li>Using the separate 'print order' functions, you can print all orders or a range of orders.  Normally these functions will only print orders that have not yet been printed, but you can also choose to print previously-printed orders as well.  This procedure only prints purchase orders for the <MadCap:variable name="Variables.jc contracts" /> to which you have access (see the section on <a href="WDSY0006_Account_and_Contract_Security.html">Contract Security</a> in the <em>System Guide</em> for more information on access to <MadCap:variable name="Variables.jc contracts" />). You can also email or fax the orders, depending on the settings on the <MadCap:variable name="Variables.pl supplier" /> record.</li>
+      <li>You can also print alternative versions of the order (for example, a version without prices, or a <MadCap:variable name="Variables.po variation" /> order that shows only the changes). Separate functions must be set up to do this.</li>
+    </ul>
+    <div class="configuration">
+      <h2 class="print">Purchase order printing</h2>
+      <p>The parameter <span class="parameter">COMMETH </span>determines whether printing purchase orders also commits them. The <span class="field">Maximum Order Value </span>fields in <span class="function" title="Function:%WPO2000BPOB">Buyers</span> define your author<MadCap:variable name="Variables.is" />ation limit.</p>
+      <p>There are several PO parameters that determine which document to use for printing different types of order:</p>
+      <ul>
+        <li>
+          <span class="parameter">POFRM </span>- The default document for material orders</li>
+        <li>You can specify alternative documents for other orders using the following parameters: <span class="parameter">ASSFRM </span>(asset orders), <span class="parameter">OVFRM </span>(overhead orders), <span class="parameter">RHFRM </span>(<MadCap:variable name="Variables.pc rehire" /> orders), <span class="parameter">SSFRM </span>(steel <MadCap:variable name="Variables.st stock" /> orders), <span class="parameter">STFRM </span>(<MadCap:variable name="Variables.st stock" /> orders), <span class="parameter">WSFRM </span>(workshop orders)</li>
+        <li>
+          <span class="parameter">POPLFRM </span>- The document to use for <MadCap:variable name="Variables.pc plant" /> orders</li>
+        <li>
+          <span class="parameter">POFRM-S </span>- (Optional) The document to use for site orders.</li>
+      </ul>
+      <MadCap:snippetBlock src="../PO/Order_Stamped_With_Doc_Name.flsnp" />
+      <p>The standard print functions use the configurable document specified by the appropriate parameter. If you want to be able to print orders using an alternative layout (for example, orders without prices or <MadCap:variable name="Variables.po variations" /> showing only changed lines), you need to set up separate functions. To do this, edit a copy of one of the existing "alternative form" functions (for example: <span class="nw">%WPO1991FPOH)</span> and enter the document code of the alternative document in the parameter list, as the value of the <span class="userinput">&amp;sfs_form=</span> parameter.</p>
+      <h3>Emailing Orders</h3>
+      <p>When printing an order and selecting Email output, the email will normally be sent from the <MadCap:variable name="Variables.kco company" />/system email address. To override this and use the user's email address instead, add <span class="screentype">&amp;CIWEmail=FALSE </span>as a parameter to the OA function.</p>
+      <p>When "printing" multiple orders, you can email, fax or print the orders, depending on the <MadCap:variable name="Variables.pl supplier" />'s preference (if the PO parameter <span class="parameter">DEFPRN </span>is set to <span class="userinput">Y</span>).</p>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDPO0001_Purchase_Orders.html" />
+          <MadCap:relatedTopic src="WDPO0002_Text_on_Configurable_Forms.html" />
+        </MadCap:relatedTopics>
+      </p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_commeth.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_pofrm.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_poplfrm.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_pofrm-s.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_defprn.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

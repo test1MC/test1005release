@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Joint Subcontractor Payments</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Joint Subcontractor Payments</h1>
+    <p>In some countries, such as the US, subcontractors or <MadCap:variable name="Variables.pl suppliers" /> can, under some circumstances, force a construction company to include them on the payments that the construction company receives from its customers. The term used to describe this is Joint Payees: the customer will make out a <MadCap:variable name="Variables.cheque" /> to two companies: the construction company and its subcontractor or <MadCap:variable name="Variables.pl supplier" />.  </p>
+    <p>Joint payee functionality in <MadCap:variable name="General.ProductName" /> allows you to record the joint payees on certificates, and issue <MadCap:variable name="Variables.cheques" /> for joint payees.</p>
+    <p>If the joint payees functionality is enabled, you can indicate whether a subcontract requires joint <MadCap:variable name="Variables.cheques" />, and enter the names of the joint payees for the subcontract.  When you enter the certificate, you record the amounts invoiced for the joint payees.  When you process payments for the certificate, <MadCap:variable name="General.ProductName" /> will issue separate payments as appropriate: to the subcontractor, and to the subcontractor AND the joint payee.</p>
+    <p>
+      <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> for joint payees cannot be paid electronically, although the payment to the main payee (the subcontractor) can be either by <MadCap:variable name="Variables.cheque" /> or by <MadCap:variable name="Variables.eft" />.</p>
+    <div class="process">
+      <h2 class="print">To process joint payments:</h2>
+      <ol>
+        <li>In <span class="function" title="Function:%WSC2010BSBS">Subcontract Maintenance</span> or <span class="function" title="Function:%WPO101DBPOH">Subcontract Orders</span>, on the Joint Payees tab, enter the names of the joint payees.  These act as the default joint payees on certificates.
+<p class="noteheader">NOTE</p><div class="note">The Joint Payees tab is available only if subcontractor is exempt from tax (tax scheme = 'X').</div></li>
+        <li>When entering a certificate for this subcontract:</li>
+        <ol>
+          <li>Set the <span class="field">Payment Type </span>to <span class="userinput">Separate</span>.</li>
+          <li>On the Joint Payees tab, enter the amounts each of the joint payees should receive. </li>
+        </ol>
+        <li>When selecting a certificate for payment, the payment amounts will default from the certificate record (if adding a new payment), but you can update the payment amounts for each payee.  (Update will only be allowed if the tax deducted value is zero.  This is because part payment of transactions with tax is not allowed.)
+<p>If you use the Pay Certificate action for a part-paid certificate, <MadCap:variable name="General.ProductName" /> will only copy the certificate amount and you will have to update the joint payment amounts manually.</p></li>
+        <li>When freezing the payment batch, <MadCap:variable name="General.ProductName" /> creates separate payment records; one for the subcontractor or <MadCap:variable name="Variables.pl supplier" /> and one with each of the joint payees.  For example:
+<p>For a certificate for 1000.00 with 20.00 discount from Browns Ltd</p>
+Joint Payees: Jones and Sons 100.00 / A J Smith 200.00<br /><br /><MadCap:variable name="General.ProductName" /> would produce three payments:<br />680.00 with a payee name "Browns Ltd"<br />100.00 with a payee name "Browns Ltd AND Jones and Sons"<br />200.00 with a payee name "Browns Ltd AND A J Smith"</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Configuration</h2>
+      <h3>Configuring <MadCap:variable name="Variables.cheques" /></h3>
+      <p>You can use the following fields on PL and SC <MadCap:variable name="Variables.cheques" /> to print the <MadCap:variable name="Variables.pl supplier" /> or subcontractor payee name, with the joint payee name if appropriate:</p>
+      <p />
+      <table>
+        <tbody>
+          <tr>
+            <th>Field</th>
+            <th>Display</th>
+          </tr>
+          <tr>
+            <td>RO_scs_jointPayeen </td>
+            <td>Subcontractor payee name and joint payee name when relevant.</td>
+          </tr>
+          <tr>
+            <td>RO_scs_jointPayeen* </td>
+            <td>As above with trailing ***.</td>
+          </tr>
+          <tr>
+            <td>RO_acs_jointPayeen  </td>
+            <td>
+              <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> payee name and joint payee name when relevant.</td>
+          </tr>
+          <tr>
+            <td>RO_acs_jointPayeen* </td>
+            <td>As above with trailing ***.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>For payments that are factored, you can use the fields RO_actual_avm_jointPayeen, RO_actual_avm_jointPayeen*, RO_actual_sbm_jointPayeen, or RO_actual_sbm_jointPayeen* to print the actual subcontractor or <MadCap:variable name="Variables.pl supplier" /> name.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/sc_PAYJOINT.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_PAYTYPE.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

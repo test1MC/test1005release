@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="4" MadCap:lastHeight="844" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Checking Resource Budgets</h1>
+        <p>If project resources have been used for budgets, when you enter a requisition or an order <MadCap:variable name="General.ProductName" /> can alert you if the requisition or order exceeds the budgeted quantity. </p>
+        <p>On the project resources screens:</p>
+        <ul>
+            <li>The <span class="field">Requisitioned Quantity</span> is shown with a red background if it exceeds the <span class="field">Budgeted Quantity</span>.</li>
+            <li>The <span class="field">Ordered Quantity</span> is shown with a red background if it exceeds the <span class="field">Budgeted Quantity</span>. <i>However</i>, if the <span class="field">Requisitioned Quantity</span> also exceeds the <span class="field">Budgeted Quantity</span> <MadCap:variable name="General.ProductName" /> assumes that any excess requisitioned quantity has been approved via the requisition approval process, so if the <span class="field">Ordered Quantity</span> does not exceed the <span class="field">Requisitioned Quantity</span> it is not shown with a red background.</li>
+            <li>The <span class="field">Ordered Quantity</span> is also shown with a red background if the total <span class="field">Ordered Amount</span> (that is, the financial value) exceeds the <span class="field">Requisitioned Amount</span>, and the <span class="field">Requisitioned Amount</span> exceeds the <span class="field">Budgeted Amount</span> (this assumes that any excess requisitioned amount must have been approved via the requisition approval process).</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images_P-R/Procurement/Checking Resource Budgets/Resources with Highlights.png" class="FullWidth" />
+        </p>
+        <p>If there are unissued requisitions for a resource line, the letters UR show next to the requisitioned quantity. Tooltips on the quantity and the UR&#160;text show details of the issued and unissued requisition lines respectively (up to five). </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/Procurement/Checking Resource Budgets/Resources with Tooltips.png" class="FullWidth" />
+        </p>
+        <p>Links open <MadCap:variable name="Variables.enquiry" /> screens that show the requisition lines and allow you to dig deeper to the requisitions themselves.</p>
+        <p>If there are uncommitted orders for a resource line, the letters UO show next to the ordered quantity. Tooltips on the quantity and the UO&#160;text show details of the committed and uncommitted order lines respectively (up to five). Links open <MadCap:variable name="Variables.enquiry" /> screens that show the order lines and allow you to dig deeper to the orders themselves.</p>
+        <h2 MadCap:autonum="1.1 ">Requisitions</h2>
+        <p>If requisitions are created using the <span class="function">Raise Requisition</span> action on the Project Resources tab or the <span class="function">Tag Resources</span> option within a requisition, there is a guaranteed link with the budgeted resource line.  This allows easy comparison with the budget, and warning notifications can be shown on the <span class="function">Requisition Entry</span> screen.</p>
+        <p>When you enter a requisition using one of these methods, if <MadCap:variable name="General.ProductName" /> has been configured to check the budget and  the total <span class="field">Requisitioned Quantity</span> (including all other requisitions for the same project resource line) exceeds the <span class="field">Budgeted Quantity</span> on the related project resource line, the requisition line shows two exclamation marks on a red background. A tooltip on this notification shows the quantity and amount budgeted and requisitioned, and highlights the difference.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/Procurement/Checking Resource Budgets/Requisition Exceeds Budget Tooltip.png" class="FullWidth" />
+        </p>
+        <p>Note that the value of a requisition line is calculated using the Budgeted Rate held against the resource.</p>
+        <h2 MadCap:autonum="1.2 ">Orders</h2>
+        <p>If orders are created using the <span class="function">Raise PO</span> action on the <span class="function">Requisitions Workbench</span>, the <span class="function">Tag/Add Requisition Items</span> option within an order header, or the <span class="function">Raise PO</span> action on the Project Resources screen, there is a guaranteed link with the budgeted resource line and hence warning notifications can be shown on the <span class="function">PO Entry</span> screen.</p>
+        <p>When you enter an order using one of these methods, if <MadCap:variable name="General.ProductName" /> has been configured to check the budget, the order line shows two exclamation marks on a red background if the total <span class="field">Ordered Quantity</span> (including all other orders for the same project resource line) exceeds either:</p>
+        <ul>
+            <li>the total <span class="field">Requisitioned Quantity</span> (if non-zero and the <span class="field">Requisitioned Quantity</span> exceeds the <span class="field">Budgeted Quantity</span>). </li>
+            <li>the <span class="field">Budgeted Quantity</span> (if the <span class="field">Requisitioned Quantity</span> is zero) on the related project resource line.</li>
+        </ul>
+        <p>A tooltip on this notification shows the budgeted, requisitioned, and ordered quantity and amount,  and highlights the difference between the ordered and <b>approved</b> figures (the “approved” figure is the greater of the requisitioned figure and the budgeted figure; this assumes that if the requisitioned figure exceeds the budget, approval for the increase has been given).</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/Procurement/Checking Resource Budgets/Order Exceeds Budget Tooltip.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="731" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Reverse Charge <MadCap:variable name="Variables.Vat caps" /> - </MadCap:conditionalText><MadCap:variable name="Variables.Vat caps" /> Code Substitutions</h1>
+        <p class="Body">A new function is available to hold the <MadCap:variable name="Variables.Vat caps" /> Code Substitution rules.</p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p MadCap:conditions="COINS.Superseded in 1109">This is only shown for UK <MadCap:variable name="Variables.kco companies" /> (that is, where <span class="parameter">CO/COMPLOC</span> = UK).</p>
+                <p MadCap:conditions="COINS.v1109">This is only shown for <MadCap:variable name="Variables.kco companies" /> in which CO/COMPLOC is not US&#160;or CA.</p>
+            </div>
+        </div>
+        <p class="Body">Normally this table would include two entries for each Source <MadCap:variable name="Variables.Vat caps" /> code with two different Target <MadCap:variable name="Variables.Vat caps" /> codes.  In the case of Reverse Charge or Acquisition <MadCap:variable name="Variables.Vat caps" />, one of the Target <MadCap:variable name="Variables.Vat caps" /> codes would be set as Output while the other would be set as Input.  In the case of Partially Recoverable <MadCap:variable name="Variables.Vat caps" /> both target <MadCap:variable name="Variables.Vat caps" /> codes would be set as Input.  In some rare cases it may be required to have just one or more than two entries for the same Source <MadCap:variable name="Variables.Vat caps" /> code.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><MadCap:variable name="Variables.Vat caps" />&#160;Code Substitutions Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="screenshot">
+            <img src="../../../Resources/Images_V-Z/VAT/Reverse Charge VAT/VAT Substitutions.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Source <MadCap:variable name="Variables.Vat caps" /> Code	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A valid code for Input <MadCap:variable name="Variables.Vat caps" /> (it may be one set up as input or as both input and output but not as just output)</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Target <MadCap:variable name="Variables.Vat caps" /> Code	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A valid <MadCap:variable name="Variables.Vat caps" /> code.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p><MadCap:variable name="Variables.Vat caps" /> Calculation</p>
+                </div>
+                <div class="FieldDef">
+                    <p>How the <MadCap:variable name="Variables.vat" />&#160;amount on the new <MadCap:variable name="Variables.vat" />&#160;distribution line is calculated. This can be one of:</p>
+                    <ul class="no-indent">
+                        <li>Copy Source <MadCap:variable name="Variables.Vat caps" /> Amount</li>
+                        <li>Calculate from Target Net Amount at Target Rate</li>
+                        <li>Calculate from Source Net Amount at Target Rate</li>
+                        <li>Remaining <MadCap:variable name="Variables.Vat caps" /> to be distributed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Net Amount Percentage</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A number between -100.00 and 100.00 (held and displayed to two decimal places).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Output/Input	</div>
+                <div class="FieldDef">This must be set to either input or output.  This must be compatible with the setup of the Target <MadCap:variable name="Variables.Vat caps" /> Code.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Description</div>
+                <div class="FieldDef">	Text to explain the purpose/usage of this substitution entry.</div>
+            </div>
+        </div>
+        <p class="Body">See also <MadCap:xref href="Reverse Charge VAT - Suggested Configuration.htm">1, <i>Reverse Charge VAT - Suggested Configuration</i></MadCap:xref>.</p>
+    </body>
+</html>

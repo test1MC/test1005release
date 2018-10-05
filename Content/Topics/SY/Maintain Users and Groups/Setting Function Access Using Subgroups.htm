@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="3412" MadCap:lastWidth="601" MadCap:onlyLocalStylesheets="False" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Setting Function Access Using Subgroups</h1>
+        <p>Group access permissions can be built up from subgroups, and the permissions are then copied to the groups. This means you can set up groups that correspond to job positions or roles, using subgroups to dictate the access permissions for collections of related menu items. When a new member of staff joins, you can easily set up their access permissions by setting up one group on their user record. It also has the advantage that you can modify the permissions while users are using the system, without affecting their access, and then apply all the changes together at a suitable time.</p>
+        <p>We recommend the following:</p>
+        <ol MadCap:continue="true">
+            <li>Set up sub groups to collect together the functions that relate to the business processes each job position requires. In particular, set up separate groups for input and enquiry. We recommend you set up subgroups for related functions and types of access. For example:<ul><li>A subgroup for PL Enquiries and Reports (with read-only access).</li><li>A subgroup for PL Invoice and Payment Entry (with update access).</li><li>A subgroup for PL Administration and Maintenance functions (with update access).</li><li>Use System &gt; User Maintenance &gt; Groups to create subgroups.</li></ul></li>
+            <li>
+                <p>Specify the access permissions to collections of functions.</p>
+                <ul>
+                    <li>To set the access permissions, you can use:</li>
+                    <li>System &gt; User Maintenance &gt; Function Security &gt; Main Menu Security, entering the code for the subgroup.</li>
+                    <li>The Group Function Access tab while maintaining the subgroup in System &gt; User Maintenance &gt; Groups.</li>
+                </ul>
+            </li>
+            <li>
+                <p>Set up main groups that correspond to roles or job positions in your organisation.</p>
+                <ul>
+                    <li>
+                        <p>Do not set up any access permissions on the main groups. If you introduce a new position with different responsibilities, set up a new group.</p>
+                    </li>
+                    <li>
+                        <p>We recommend you set up main groups to correspond to user roles or job titles, and that you do not set up access permissions on the main groups; use sub groups for setting access permissions. This is because if you change the permissions on a main group, these will be overwritten when you next process the sub groups -- the first thing the process does is to delete all existing group permissions.</p>
+                    </li>
+                    <li>
+                        <p>Use System &gt; User Maintenance &gt; Groups to create main groups.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Add the appropriate subgroups to each group.</p>
+                <ul>
+                    <li>
+                        <p>Assign one or more sub groups to each main group, according to the features you want that main group to have access to. Use the multiple selection Sub Group field to select the sub groups from the list.</p>
+                    </li>
+                    <li>
+                        <p>The order of the sub groups is important; when the sub group permissions are processed, <MadCap:variable name="General.ProductName" /> will go through each sub group in turn and apply any explicit access settings (Allow or Deny) from the sub group to the main group. It will then only apply explicit access settings from the next sub group if they have not been set by the previous sub group. So if you allow access to a function on the first sub group, and deny access on the second sub group, the main group will allow access.</p>
+                    </li>
+                    <li>
+                        <p>In practice we do not expect Deny access to be used very often. However if you are using Menu Item Security, the order in which Read-Only access and Update access are specified may be important.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Use Sub Group Process to set the access permissions on each main group based on the sub groups that belong to it. Processing the access permissions on groups involves running a function that evaluates the permissions on each sub group assigned to a group, in turn, and copies the permissions to the main group. This means that you can change the access on sub groups, and then only need to reprocess the main groups.</p>
+                <ul>
+                    <li>
+                        <p>Go to System &gt; User Maintenance &gt; Sub Group Process.</p>
+                    </li>
+                    <li>
+                        <p>Specify the groups you want to process.</p>
+                        <p>As well as copying the function access permissions to the main groups, this also copies group field security and HS sales event security settings from the sub groups to the main groups.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Assign each user to one or more main groups.</p>
+                <ul>
+                    <li>
+                        <p>Use System &gt; User Maintenance &gt; Users to specify the group or groups each user belongs to.</p>
+                    </li>
+                    <li>
+                        <p>Go to System &gt; User Maintenance &gt; Users.</p>
+                    </li>
+                    <li>
+                        <p>Click OPEN to open a user record.</p>
+                    </li>
+                </ul>
+                <ul MadCap:continue="true">
+                    <li>NOTE: Because <MadCap:variable name="General.ProductName" /> evaluates the permissions on each group in turn, the sequence of the groups on a user's record is important.  If a group denies access to a function, the user will not be able to access the function, even if a later group would allow access.</li>
+                </ul>
+            </li>
+            <ul>
+                <li>On the Groups tab, select the main group that corresponds to the user's job position.</li>
+            </ul>
+            <ul>
+                <li>Click SAVE.</li>
+            </ul>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>
+                <p>If necessary, fine-tune the access for individual users; you can use any of the function security features to do this.</p>
+            </li>
+        </ol>
+    </body>
+</html>

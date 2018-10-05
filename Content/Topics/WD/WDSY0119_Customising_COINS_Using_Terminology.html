@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Custom<MadCap:variable name="Variables.is" />ing <MadCap:variable name="General.ProductName" /> Using Terminology</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Custom<MadCap:variable name="Variables.is" />ing <MadCap:variable name="General.ProductName" /> Using Terminology</h1>
+        <p>Different varieties of English (for example, British and&#160;American English) sometimes use different words and phrases for the same concepts.&#160; Also, various business areas and individual companies may refer to the same thing in different ways.</p>
+        <p>To allow for this diversity, you can use <MadCap:variable name="General.ProductName" /> terminology to change&#160;a number of words and phrases&#160;to suit the way you work.&#160; These changes can apply to fields, function names and messages, as well as side-frame help&#160;and online documentation.</p>
+        <h2>How terminology works</h2>
+        <p><MadCap:variable name="General.ProductName" /> includes a number of pre-defined tokens which represent specific words or phrases with display values that you can change. If you change the display value of a token, <MadCap:variable name="General.ProductName" /> displays the new value wherever that token is used.&#160; For example, the token "kco company" refers to internal companies in <MadCap:variable name="General.ProductName" />.&#160; If you use <MadCap:variable name="General.ProductName" /> companies to represent business units, you can change the display value of this "kco company" token to "business unit"; as a result, "company" will appear as "business unit" (wherever it refers to&#160;a <MadCap:variable name="General.ProductName" /> internal company).</p>
+        <p><MadCap:variable name="General.ProductName" /> provides pre-defined terminology sets which contain standard terminology equivalents for American, Irish and Australian English.&#160; You can select one of these terminology sets to use as a starting point (see below); for instance, a US business would most likely select the American set.&#160; You can then override the display values in this terminology set for any of its individual terms.&#160; Alternatively you can create your own terminology set (see below).</p>
+        <p>You can select terminology sets on a system-wide or <MadCap:variable name="Variables.kco company" />-specific basis.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">You can only change words and phrases that have been specifically catered for in <MadCap:variable name="General.ProductName" />.&#160; You cannot add a term to the list and expect it to change.&#160; However, if you have a requirement to change a term <MadCap:variable name="General.ProductName" />&#160;has not catered for, contact your <MadCap:variable name="General.ProductName" /> representative to see if it may be added.</div>
+        <div class="process">
+            <h2 class="print">To select a terminology set:</h2>
+            <ul dir="ltr">
+                <li>
+                    <p>In <span class="function" title="Function:%WSY0000BSYP">SY Parameters</span>, set the parameter <span class="parameter">SY/TERMCODE </span>to the code for the terminology set you want to use.</p>
+                    <p>This can be one of the standard terminology codes, or the code of a terminology set you create (see below).&#160; Leave <span class="parameter">SY/TERMCODE </span>blank to use the <MadCap:variable name="General.ProductName" /> standard terminology set, which is based on British English.</p>
+                </li>
+            </ul>
+            <p>&#160;</p>
+            <h2>To override the display of an individual term:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBSYW6">Terminology</span>.</li>
+                <li>Using the <span class="field">Terminology </span>selector at the bottom, select the terminology set you are using.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> next to the token you want to change.&#160; (Hint: you can filter on the <span class="field">Display Text </span>field to find the token.)</li>
+                <li>In the <span class="field">System Override </span>field, enter the display text you want to use. (Standard terminology sets will be overwritten when <MadCap:variable name="General.ProductName" /> is upgraded, but the <span class="field">System Override </span>field will not be overwritten.)
+<p class="noteheader">NOTES</p><div class="note"><ul><li><MadCap:variable name="General.ProductName" /> terminology applies capital<MadCap:variable name="Variables.is" />ation rules where appropriate when displaying text.&#160; Enter the text in lower case unless you want it always to display in upper case.</li><li>If a noun has separate singular and plural tokens, remember to change the display text for both.</li><li>Sometimes the same word has different meanings; terms will only be changed where appropriate.&#160; For example, there is a token "jc contract" which refers to <MadCap:variable name="General.ProductName" /> contract records; if you change the display text for this, references to employment contracts or house purchase contracts within <MadCap:variable name="General.ProductName" /> will not change.&#160; Similarly, in the American terminology set, the token "<MadCap:variable name="Variables.tick" />" has the display text "check".&#160; If you override this, the display for "check" (meaning a method of payment) will not change, because this uses a different token.</li></ul></div></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <h2>&#160;</h2>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <h2>To create a new terminology set:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBSYW5">Terminology Code</span>.</li>
+                <li>Add a new entry (<span class="field">Code </span>and <span class="field">Description</span>) for the terminology set you want to create.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+                <li>Go to <span class="function" title="Function:%WSYBSYW6">Terminology</span>.</li>
+                <li>Using the <span class="field">Terminology </span>selector at the bottom, select the new terminology set created in step 2.</li>
+                <li>Add terms to the list.&#160; These terms must exist in the Standard <MadCap:variable name="General.ProductName" /> terminology set.&#160; Enter the terms exactly as they appear in the Standard set.</li>
+                <li>In the <span class="field">Display Text </span>field, enter the text you want <MadCap:variable name="General.ProductName" /> to display.&#160;</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_termcode.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

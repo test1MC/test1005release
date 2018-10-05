@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/GRNQDZER - Defaults the GRN Quantity Delivered to Zero (pipe list)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/GRNQDZER - </span> Defaults the GRN Quantity Delivered to Zero (pipe list)
+</div>
+<div class="param_def">
+<p>Conditions for preventing the defaulting of the amount in the Quantity Delivered field in GRNs.</p>
+<p>This parameter takes a pipe-separated list and when the order linked to the updated GRN meets one of these conditions the Quantity Delivered field will default to zero (won't be defaulted to the amount).</p>
+<p>COINS can use the following conditions for defaulting the Quantity Delivered field to zero:</p>
+<ol>
+<li>List of Purchase Order types (attribute POTTYPE), for example "N" - Normal, "C" - Call-Off and etc.</li>
+<li>List of main types of order (attribute POHMPO), for example M for Material orders, P for <MadCap:variable name="Variables.Pc Plant caps"/> Orders, W for Workshop, I for <MadCap:variable name="Variables.St Stock caps"/> orders, A for Asset, O for Overhead orders.</li>
+</ol>
+<p> </p>
+<p>Examples:</p>
+<p><span class="userinput wrap">POTTYPE=C, B|POHMPO=I</span> &#8211; the GRN Quantity Delivered field will be set to zero (blank value) if the purchase order related to this GRN has the order type "C" or "B" or is a <MadCap:variable name="Variables.st stock"/> order.</p>
+<p><span class="userinput">POHMPO=I</span> &#8211; the GRN Quantity Delivered field will be set to zero (blank value) if the order is a <MadCap:variable name="Variables.st stock"/> order.</p>
+</div>
+</body>
+</html>

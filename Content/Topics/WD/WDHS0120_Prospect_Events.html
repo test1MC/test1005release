@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title><MadCap:variable name="Variables.Hs Prospect caps" /> Events</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print"><MadCap:variable name="Variables.Hs Prospect caps" /> Events</h1>
+        <p><span class="function" title="Function:%WHS2013BHEV"><MadCap:variable name="Variables.Hs Prospect caps" /> Workbench Events</span> allows you to set up the events you can run for a <MadCap:variable name="Variables.hs prospect" />. These include events to close or open the <MadCap:variable name="Variables.hs prospect" /> file, to record a visit to a <MadCap:variable name="Variables.vp site" />, or to record an <MadCap:variable name="Variables.enquiry" />.</p>
+        <div class="process">
+            <h2 class="print">To set up <MadCap:variable name="Variables.hs prospect" /> events:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WHS2013BHEV"><MadCap:variable name="Variables.Hs Prospect caps" /> Workbench Events</span>.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> to add a new event.</li>
+                <li>Enter a code for the new event.</li>
+                <li>If the event is one that is not run manually from the <span class="function" title="Function:%WHS1060SHVI"><MadCap:variable name="Variables.Hs Prospects caps" /> Workbench</span> but is run automatically by a process like sending a letter, <MadCap:variable name="Variables.tick" /><span class="field">System Generated</span>.</li>
+                <li>Select the system event. This determines the type of event you are setting up. There are six system event types:</li>
+                <ul>
+                    <li><span class="userselect">CLOSE </span>- this closes the <MadCap:variable name="Variables.hs prospect" /> file. You should only set up one close event.</li>
+                    <li><span class="userselect">REOPEN </span>- this reopens the <MadCap:variable name="Variables.hs prospect" /> file. You should only set up one reopen event.</li>
+                    <li><span class="userselect">VISIT </span>- this records a visit to a <MadCap:variable name="Variables.vp site" />. You could set up different types of visit event; for example, First Visit and Revisit.</li>
+                    <li><span class="userselect"><MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /></span>- this records a general <MadCap:variable name="Variables.enquiry" /> (one that is not recorded against a specific <MadCap:variable name="Variables.vp site" />). You could set up different <MadCap:variable name="Variables.enquiry" /> events; for example, Telephone <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" />, Website <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" />.</li>
+                    <li><span class="userselect">PURCHASE </span>- this records the purchase of a plot (usually this would be set as System Generated).</li>
+                    <li><span class="userselect">MEMO </span>- this is for any other type of action, which simply records the date and comments.</li>
+                </ul>
+                <li>Enter a full description for the event. (The short description is only used in<MadCap:snippetText src="../../Resources/Snippets/COINSplus.flsnp" />.)</li>
+                <li>If you want to allow users to run the event more than once, <MadCap:variable name="Variables.tick" /><span class="field">Allow Duplicates</span>. (You will probably want to allow most <MadCap:variable name="Variables.hs prospect" /> events to be run more than once, but if you have a "First Visit" event, you might want to prevent it being run again.)</li>
+                <li>If you only want to allow the event to be run if other events have already been run, enter the codes for those events in the <span class="field">Previous Events</span> field. For example, to set up a "Revisit" event that can only be run if the "First visit" has already been run, enter the code for the "First Visit" event.</li>
+                <li>If you want to prevent the event if other events have already been run, enter the codes for those events in the <span class="field">Stop Events</span> field. </li>
+                <p class="noteheader">NOTE</p>
+                <p class="note">If you want to allow or prevent the event depending on whether the <MadCap:variable name="Variables.hs prospect" /> file is closed, use the token <span class="screentype">$CLOSE</span>. For example, if you put <span class="screentype">$CLOSE</span> in the <span class="field">Previous Events</span> field, you will only be able to run the event if the <MadCap:variable name="Variables.hs prospect" /> file is closed.</p>
+                <li>To restrict how many days before or after today users can enter for the date of the event, <MadCap:variable name="Variables.tick" /> the <span class="field">Restrict Backdating</span> or <span class="field">Restrict Forward Dating</span>&#160;field (or both), and enter the number of days. For example, to stop users entering a date more than two days before today, set <span class="field">Allowable Days Backdating</span> to <span class="userinput">2</span>. If both are set to <span class="userinput">0</span>, users will be forced to enter today's date. </li>
+                <li>Enter the default comments; this is the text that will appear in the <span class="field">Comments</span> field when the event is run (the user can enter different text if they want).</li>
+                <li>If you want to update captions when the event is run, select the caption groups to update.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print"><MadCap:variable name="Variables.Hs Prospect caps" /> Events - configuration</h2>
+            <p>Set up which users can run the event, using <span class="function" title="Function:%WHS2013BCOS"><MadCap:variable name="Variables.Hs Prospect caps" /> Event Security</span> (see <a href="WDHS5001_Event_Security.html">Event Security</a>).</p>
+            <p>To copy the comments for the event to the Notes automatically, enter the event code as one of the values of the HS parameter <span class="parameter">COMNTVIS</span>.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_comntvis.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_exemptbd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_exemptfd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_vismanev.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

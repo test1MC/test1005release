@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>LM/BACSMED - BACS Media (1 4 5 or 6)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">LM/BACSMED - </span> BACS Media (1 4 5 or 6)
+</div>
+<div class="param_def">
+<p>The medium for {eft} files.</p>
+<p>The options are: 
+<P></P><MadCap:snippetBlock src="../../../Resources/Snippets/BACS_medium.flsnp"/> 
+<P><FONT color="#000000"><SPAN class="parameter">BACSMED</SPAN> can have a second entry, which is text that will be put in to the <MadCap:variable name="Variables.eft"/> application field (a field that appears in the header identifying the application used to generate the file). By default COINS puts the module code. If the CO parameter <SPAN class="parameter">BACSAPPL</SPAN> is set to <SPAN class="userinput">Y</SPAN>, COINS appends the COINS <MadCap:variable name="Variables.kco company"/> number in the application field.</FONT></P>
+<P>For media type 6, if this is set (that is, a second value is supplied to the <FONT color="#000000"><SPAN class="parameter">BACSMED</SPAN> parameter), then this value is placed in the header record for this type, field 8 of the ANZ spec "Description of Entries on File". The ANZ bank software uses this value, in conjunction with the <SPAN class="parameter">BACSUSER</SPAN> parameter (id value), to determine the parameter to use when selecting the template for the load.</FONT></P>
+<P>See also parameters beginning <MadCap:variable name="Variables.eft"/> under <a href="../../WD/WDCO0001_CO_Parameters.html" target="_parent"><MadCap:variable name="Variables.Kco Company caps"/> Parameters</a>.</P></p>
+</div>
+</body>
+</html>

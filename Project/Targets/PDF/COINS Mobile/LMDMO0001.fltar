@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MO - mCare"
+  Type="PDF"
+  Destinations=""
+  PatchHeadingLevels="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  InjectEmptyPages="true"
+  ConditionTagExpression="include[COINS.v1105]exclude[COINS.1104 or COINS.Pre-v1105 or COINS.ScreenOnly]"
+  conditions="COINS.PrintOnly"
+  InjectBookHeadings="true"
+  OutputFolder="C:\"
+  MasterToc="/Project/TOCs/Portal/Portal Sub-TOC/mCare.fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ConvertBookmarks="true" />
+  <Glossaries></Glossaries>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Repository.fldes"
+      Publish="true" />
+  </Destinations>
+</CatapultTarget>

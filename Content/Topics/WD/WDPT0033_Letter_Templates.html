@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="846.6667" MadCap:lastWidth="601">
+  <head>
+    <title>Letter Templates in Project Management</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Letter Templates in Project Management</h1>
+    <p>Letter templates represent the standard text for letters related to a particular item, such as <MadCap:variable name="Variables.pt rfis" />, meeting minutes or <MadCap:variable name="Variables.pt issues" />.</p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">To create a letter template:</h2>
+      <ol>
+        <ol>
+          <li>Create a document in Word. At the points where you want to insert data from <MadCap:variable name="General.ProductName" />, type the name of the database field, enclosed in braces. For example:</li>
+        </ol>
+      </ol>
+      <div style="margin-left: 5mm;margin-right: 5mm;background-color: #eee;">
+        <br />
+        <center>
+          <table style="border-right: black 1pt solid;border-top: black 1pt solid;border-left: black 1pt solid;width: 80%;border-bottom: white 1pt solid;background-color: white;">
+            <tbody>
+              <tr>
+                <td width="70%"> </td>
+                <td width="30%">
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">Construction Industry Solutions Ltd.</span>
+                  </p>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">
+                      <MadCap:variable name="General.ProductName" /> Building</span>
+                  </p>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">11 St Laurence Way</span>
+                  </p>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">Slough</span>
+                  </p>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">SL1 2EA</span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">{pt_recipient.ro_ptr_name}<br />{pt_recipient.ro_ptr_company}<br />{pt_recipient.ro_ptr_add__1}<br />{pt_recipient.ro_ptr_add__2}<br /></span>
+                  </p>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">{pt_recipient.ro_ptr_add__3}<br />{pt_recipient.ro_ptr_add__4}</span>
+                  </p>
+                  <p style="margin-top: 0pt;"> </p>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">{ptg_date}</span>
+                  </p>
+                  <p style="margin-top: 0pt;"> </p>
+                  <p style="margin-top: 0pt;">
+                    <span style="font-family: 'Times New Roman';" data-mce-mark="1">Dear {pt_recipient.ro_ptr_salutation},<br /></span>
+                  </p>
+                </td>
+                <td> </td>
+              </tr>
+            </tbody>
+          </table>
+        </center>
+      </div>
+      <p> </p>
+      <ol>
+        <ol>
+          <MadCap:snippetBlock src="../../Resources/Snippets/mmFieldNote.flsnp" />
+        </ol>
+      </ol>
+      <ol>
+        <li>Save the document as an RTF file.
+<p class="noteheader">NOTE</p><div class="note">If you used Word to create the document, after you have saved it as a .rtf file open the .rtf file in WordPad and save it. This removes unwanted hidden characters that can cause the merge to fail.</div></li>
+        <li>Go to <span class="function" title="Function:%WPT2330BCOI">Letter Templates</span>. </li>
+        <li>Use the selector at the bottom of the browser to select the template type.</li>
+        <li>Enter a code and description for the letter template.</li>
+        <li>
+          <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the template line and use the <span class="userinput" data-mce-mark="1">Upload Letter Template File </span>action to upload the RTF file you created.</li>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">You can create more than one template for each type; when the user runs the <span class="userinput" data-mce-mark="1">Generate Letter </span>action, they can choose which template to use.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="7" MadCap:lastHeight="720" MadCap:lastWidth="600">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" /><a name="_Ref290290903"></a><a name="_Toc450312888"></a>Impersonation</h1>
+        <p class="Body">For replication (of activities and sent emails) it is necessary for the replication account to be able to pass data between <MadCap:variable name="General.ProductName" /> and the individual users' Exchange/Office 365 mailboxes.&#160; The method to allow this is called “impersonation”.</p>
+        <p class="Body">See <a href="http://msdn.microsoft.com/en-us/library/bb204095.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb204095.aspx</a> for more information.</p>
+        <p class="Body">To enable impersonation:</p>
+        <ol>
+            <li>Create a role to allow our user to impersonate. </li>
+            <li>Launch the EAC and browse to permissions &gt; Admin roles. </li>
+            <li>Click the “+” button to add a new role.<p class="screenshot"><img src="../../../Images/SY/SYS-Exchange-Server-2013-Integration/User Impersonate Screen.png" MadCap:mediastyle="@media print { height: 8cm;width: auto; }" /></p></li>
+            <li>Complete the fields as follows:
+                <div class="FieldTable"><div class="ListHead"><div class="ColHead">Field</div><div class="ColHead">Description</div></div><div class="FieldBlock"><div class="FieldLabel">Name	</div><div class="FieldDef"><p>User Impersonate.</p></div></div><div class="FieldBlock"><div class="FieldLabel">Description	</div><div class="FieldDef"><p>Allows this user to impersonate other user when restoring mailboxes.</p></div></div><div class="FieldBlock"><div class="FieldLabel">Write Scope</div><div class="FieldDef"><p>Default.</p></div></div><div class="FieldBlock"><div class="FieldLabel">Roles</div><div class="FieldDef">Add the Role name “ApplicationImpersonation”.</div></div><div class="FieldBlock"><div class="FieldLabel">Members</div><div class="FieldDef">Add the User “The User you would like to use”.</div></div></div></li>
+        </ol>
+        <p class="Body">Alternatively, you can do this using Exchange PowerShell :</p>
+        <p class="Body"><code>New-ManagementRoleAssignment -Name:”User Impersonation” -Role:ApplicationImpersonation -User:coins_exchange</code>
+        </p>
+        <p class="Body">See the MSDN article mentioned above for examples of assigning the permission to all users or a group of users.</p>
+    </body>
+</html>

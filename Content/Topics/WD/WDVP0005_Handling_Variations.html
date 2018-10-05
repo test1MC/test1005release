@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2607" MadCap:lastWidth="1106">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Handling of Variations in VAP Subcontract Orders and Payments</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Handling of Variations in VAP Subcontract Orders and Payments</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> OA offers different methods of handling subcontract variations for house builders within VAP.  The three main methods are:</p>
+    <ul>
+      <li>
+        <strong>Method 1: Without the use of variation orders<br /></strong>
+        <p>Under this method, a variation line is included on each subcontract matrix such that when variations are made there is no requirement to amend the order or subcontract in <MadCap:variable name="General.ProductName" />.  The payment of the variation is recorded in detail on the subcontract payment certificate. 
+</p>
+        <MadCap:dropDown>
+          <MadCap:dropDownHead>
+            <MadCap:dropDownHotspot>
+              <span class="noprint">More...</span>
+            </MadCap:dropDownHotspot>
+          </MadCap:dropDownHead>
+          <MadCap:dropDownBody>
+            <p>This method is suitable for clients for whom efficiency of transaction processing is paramount.  The system does not provide automated control over the amount of variations paid on each subcontract although it does provide visibility of all variation payments at the point of payment author<MadCap:variable name="Variables.is" />ation.  If all payment certificates are author<MadCap:variable name="Variables.is" />ed by suitable individuals within the organ<MadCap:variable name="Variables.is" />ation then this can provide appropriate control on this expenditure while minimising the input requirements. </p>
+            <blockquote style="MARGIN-RIGHT: 0px;" dir="ltr">
+              <p>
+                <strong>PO Subcontract Order<br /></strong>A subcontract order is raised and when this is committed the header of the SC subcontract is automatically created.  The subcontract order will not normally include any detailed breakdown of the order value.  </p>
+              <p>Variation orders will not normally be input.</p>
+              <p>
+                <strong>SC Subcontract (with VAP Matrix)<br /></strong>Once the subcontract order has been committed, the user inputs the VAP Matrix details to support the total value of the order.  As well as the various measured works lines (which would normally use payment methods L (lump sum) or C (capped)), each matrix would include a line for variations using payment method D (detail) and may also include a line for dayworks using payment method D (detail).  These variation and/or dayworks lines would have zero value in the subcontract matrix.</p>
+              <p>
+                <strong>SC Payment Certificates (with VAP Matrix)<br /></strong>As variations arise, these are input against the variation line on the relevant plot (which may be a dummy non-sellable plot).  For each variation being certified the description (which may include a reference number) and amount are input.  These descriptions and amounts can be printed on the payment certificate in place of the normal line description and amount.<br /></p>
+            </blockquote>
+          </MadCap:dropDownBody>
+        </MadCap:dropDown>
+      </li>
+      <li>
+        <strong>Method 2: Using variation orders</strong>
+        <br />Under this method a variation order is raised for each variation or group of variations and these are added to the subcontract matrix as and when they occur.  Payment of these is then controlled against these when processing subcontract payment certificates in much the same way as for the original measured work items. 
+<MadCap:dropDown><MadCap:dropDownHead><MadCap:dropDownHotspot><span class="Noprint">More...</span></MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>This method is suitable for clients for whom a greater degree of system-enforced control over the payment of subcontract variations is required. It also has the benefit of making sure that the committed value of subcontract orders in the <MadCap:variable name="Variables.cv cvr" style="text-transform: capitalize;" /> can include all agreed variations. 
+</p><blockquote style="MARGIN-RIGHT: 0px;" dir="ltr"><p><strong>PO Subcontract Order</strong><br />A subcontract order is raised and when this is committed the header of the SC subcontract is automatically created. The subcontract order will not normally include any detailed breakdown of the order value. </p><p>As variations are required, variation orders are input. These will increase the order value and when the variation order is committed the current order value on the header of the SC subcontract is automatically adjusted.</p><p><strong>SC Subcontract (with VAP Matrix)</strong><br />Once the subcontract order has been committed, the user inputs the VAP Matrix details to support the total value of the order. The measured works lines (which would normally use payment methods L (lump sum) or C (capped)) are input so that they add up to the original order value (no additional zero value lines for variations etc are included). </p><p>As variation orders are committed, the user adds a line to the VAP matrix for each variation item. These lines would use an appropriate <MadCap:variable name="Variables.cost head" /> and payment stage but the description can be overridden to show the necessary details of the variation including any reference number. These variation lines can use whichever payment method is required to give the appropriate level of control ? normally either L (Lump Sum) or C (Capped) but potentially P (Provisional) if users need to be able to pay more than the order value for a variation item. The amounts of the individual variation items are input to the matrix so that the matrix always adds up to the current value of the subcontract order.</p><p><strong>SC Payment Certificates (with VAP Matrix)</strong><br />Once the variation items have been added to the subcontract they can be certified in exactly the same way as normal measured work items. The description input in the subcontract matrix will be printed on the payment certificate against the payment amount. </p></blockquote></MadCap:dropDownBody></MadCap:dropDown></li>
+      <li>
+        <strong>Method 3: Using variation orders with detailed payments</strong>
+        <br />Under this method a variation order is raised for each variation or group of variations and the values of these are added to the subcontract matrix as and when they occur.  The payment of the variation is recorded in detail on the subcontract payment certificate and validated to ensure that the total cumulative value of these variation payments does not exceed the order value for variations on each plot.<br /><MadCap:dropDown><MadCap:dropDownHead><MadCap:dropDownHotspot><span class="Noprint">More...</span></MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>This method has the same benefits as Method 2, with the added benefits that the maintenance of the subcontract matrix is simpler and less time-consuming and that detailed text can be recorded against individual variation payment items. 
+</p><blockquote style="MARGIN-RIGHT: 0px;" dir="ltr"><p><strong>PO Subcontract Order<br /></strong>A subcontract order is raised and when this is committed the header of the SC subcontract is automatically created. The subcontract order will not normally include any detailed breakdown of the order value. </p><p>As variations are required, variation orders are input. These will increase the order value and when the variation order is committed the current order value on the header of the SC subcontract is automatically adjusted.</p><p><strong>SC Subcontract (with VAP Matrix)<br /></strong>Once the subcontract order has been committed, the user inputs the VAP Matrix details to support the total value of the order. The measured works lines (which would normally use payment methods L (lump sum) or C (capped)) are input so that they add up to the original order value (no additional zero value lines for variations etc are included). Additionally, each matrix would include a line for variations using payment method D (detail). This variation line would initially have zero value in the subcontract matrix.</p><p>As variation orders are committed, the user adds the values to the appropriate cells in the variation line in the VAP matrix so that the matrix always adds up to the current value of the subcontract order.</p><p><strong>SC Payment Certificates (with VAP Matrix)<br /></strong>When variations are to be paid, these are input against the variation line on the relevant plot (which may be a dummy non-sellable plot). For each variation being certified the description (which may include a reference number) and amount are input. These descriptions and amounts can be printed on the payment certificate in place of the normal line description and amount. <MadCap:variable name="General.ProductName" /> will validate that the cumulative total payments against each cell on the variation line does not exceed the order value for that cell. </p></blockquote></MadCap:dropDownBody></MadCap:dropDown><p /></li>
+    </ul>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDVP0006_Costing_and_Reporting.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print">Recommended Settings</h2>
+      <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <thead>
+          <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+            <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+              <strong>Module </strong>
+            </th>
+            <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+              <strong>Parameter </strong>
+            </th>
+            <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+              <strong>Setting: Method 1 </strong>
+            </th>
+            <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+              <strong>Setting: Method 2 </strong>
+            </th>
+            <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+              <strong>Setting:  Method 3 </strong>
+            </th>
+            <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+              <strong>Notes </strong>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">SC</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="parameter">CAPCOV</span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="userinput">N </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="userinput">N </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="userinput">N </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">To allow variations to increase the order value</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">VP</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="parameter">DWKOPAY</span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Blank - No message</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Blank - No message<br />Ignored as type "D" is not used.</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="userinput">ERROR </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">To validate the total cumulative value of payments made on a cell of payment method ?D? against the order value for that cell</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">VP</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="parameter">LOCKCOV</span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="userinput">Y </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="userinput">Y </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="userinput">Y </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">To ensure the total of the matrix detail exactly equals the current order value</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">VP</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <span class="parameter">METHPAY</span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">To include L,C,D and exclude any unused methods</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">To include L,C and exclude D and any other unused methods</td>
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">To include L,C,D and exclude any unused methods</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">To stop users from using inappropriate payment methods on subcontract matrices</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">VP</td>
+            <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+              <span class="parameter">SCVALLOC</span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+              <span class="userinput">Y </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+              <span class="userinput">Y </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+              <span class="userinput">Y </span>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">To ensure order value is consistent between PO and SC modules</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/sc_CAPCOV.htm" />
+          <MadCap:relatedTopic src="../Parameters/VP/vp_dwkopay.htm" />
+          <MadCap:relatedTopic src="../Parameters/VP/vp_lockcov.htm" />
+          <MadCap:relatedTopic src="../Parameters/VP/vp_methpay.htm" />
+          <MadCap:relatedTopic src="../Parameters/VP/vp_scvalloc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

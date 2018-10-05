@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1><MadCap:variable name="Variables.Se Visit caps" /> Scheduled Hours Defaulting</h1>
+        <p class="Body">Defaulting values for the <span class="Field"><MadCap:variable name="Variables.Se Visit caps" /> Scheduled Hours </span>fields are determined by the following conditions:</p>
+        <ol>
+            <li>The <span class="Field">Default <MadCap:variable name="Variables.Se Visit caps" /> Scheduled Hours </span>are obtained from the <MadCap:variable name="Variables.Se Service Order caps" /> Group; they are based on whether the <MadCap:variable name="Variables.Se Service Order caps" /> is PM or Non-PM.</li>
+            <li>If the number of hours remaining for a <MadCap:variable name="Variables.Se Service Order caps" />’s Estimated Hours is less than the value in #1 above, the <MadCap:variable name="Variables.Se Visit caps" /> is set to the remaining hours.  These remaining hours are calculated as follows:</li>
+            <ol style="list-style-type: lower-alpha;">
+                <li><strong><MadCap:variable name="Variables.Se Visit caps" /> is complete: </strong><i>  Number of hours dispatched.   Dispatch End – Dispatch Start.</i>
+                </li>
+                <li><strong><MadCap:variable name="Variables.Se Visit caps" /> is not complete:</strong><i>Number of hours scheduled.</i>
+                </li>
+            </ol>
+        </ol>
+        <ol start="3">
+            <li>If the number of hours left in the <MadCap:variable name="Variables.Se Technician caps" />’s working day is less than the value in #1 or #2, the <MadCap:variable name="Variables.Se Visit caps" /> is set to the remaining hours in the day.  </li>
+            <ul>
+                <li>The <MadCap:variable name="Variables.Se Technician caps" />’s working day is based on the Normal Working Days/Hours information in the <MadCap:variable name="Variables.Se Technician caps" /> record.</li>
+                <li>   The remaining hours are based on the <MadCap:variable name="Variables.Se Visit caps" />’s Start Time and the <MadCap:variable name="Variables.Se Technician caps" />’s Normal Working End Time for the particular day of the week. </li>
+                <li>The <MadCap:variable name="Variables.Se Visit caps" />’s Start Time is either defaulted based on the Daily Board chosen time or data (<i>Start Time + Dispatch Hours or Scheduled Hours</i>) of the other <MadCap:variable name="Variables.se visits" /> on the Weekly Board.</li>
+            </ul>
+        </ol>
+    </body>
+</html>

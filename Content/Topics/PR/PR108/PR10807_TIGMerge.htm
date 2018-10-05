@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Timesheet Input Group Merge</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Timesheet Input Group Merge</h1>
+        <h2 MadCap:autonum="1.1 ">Merge Screen</h2>
+        <p class="Body">During Timesheet entry, an employee can have <MadCap:variable name="Variables.cheques" /> or time cards input into multiple Timesheet Input Groups. However, prior to running Payroll Calculations, all <MadCap:variable name="Variables.cheques" /> or time cards that span groups for an employee must be collected into a <i>single </i>Timesheet Input Group. The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Group Merge </span>function (<MadCap:xref href="#TSGroupMerge" class="ImageRef"><i> Timesheet Input Group Merge Screen</i></MadCap:xref>) allows you to merge <MadCap:variable name="Variables.cheques" /> or timesheets for selected Timesheet Input Groups into a single Timesheet Input Group. It is available on the Timesheet Input Groups menu for each PR Frequency.</p>
+        <ul>
+            <li>You can merge one of your own groups or subordinate groups that are not frozen.</li>
+            <li>Selected groups should be in the selected period or have a blank period.</li>
+            <li>The selected Timesheet Input Groups are deleted after the merge if they no longer contain <MadCap:variable name="Variables.cheques" /> or time cards.</li>
+            <li>Only employees with non-calculated, accepted, or paid payroll are processed during the merge.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="TSGroupMerge"></a>Timesheet Input Group Merge Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSGroupMerge.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Period</p>
+        <p class="IndentFieldDef">The payroll period of the processed Timesheet Input Groups. The lookup has unposted current Regular or Adjusting periods, as well as Future non-MCC periods.</p>
+        <p class="IndentBold">Timesheet Input Groups</p>
+        <p class="IndentFieldDef">An ordered list (Available/Selected) of unfrozen groups to merge that belong to the period entered. It can include your own group or subordinate unfrozen groups from the entered PR Period, or subordinate unfrozen empty groups and the blank group.</p>
+        <p class="IndentBold">Merge to Group</p>
+        <p class="IndentFieldDef">The owner's Timesheet Input Group that will receive the time cards. This TS Input Group does not need to be on file. If it is not on file, a new TS Input Group is created. The user who runs this process automatically becomes the owner of the newly created group.</p>
+        <p class="IndentBold">Group Description</p>
+        <p class="IndentFieldDef">If the Timesheet Input Group to be merged is not on file, and a new TS Input Group is created, a description is assigned to the new TS Input Group. If the group already exists, this field is ignored.</p>
+        <p class="IndentBold">Timesheet Input Group Merge Code (From/To/Matches)</p>
+        <p class="IndentFieldDef">The Timesheet Input Group Merge Code can be used as an additional way to group employees when merging Timesheet Input Groups. The Merge Code is associated with employees on the General tab of Employee Maintenance.</p>
+        <h2 MadCap:autonum="1.2 ">Merge Report</h2>
+        <p class="Body">When the Group Merge process is run, a report is generated, as shown in <MadCap:xref href="#TSGroupMergeRpt" class="ImageRef"><i>Figure 2:  Timesheet Input Group Merge Report</i></MadCap:xref>. This report includes information about groups that have been processed, new groups that have been created, empty groups that have been deleted, the list of the processed employees, and the list of skipped employees (showing one of the reasons the employee was skipped, as listed below).</p>
+        <ol>
+            <li>Timesheet Security (if <span class="parameter">PR/TSSECURE</span> is set to Y)</li>
+            <li>Employee is not in START Status</li>
+            <li>Salary Security</li>
+        </ol>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="TSGroupMergeRpt"></a>Timesheet Input Group Merge Report</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSGroupMergeRpt.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

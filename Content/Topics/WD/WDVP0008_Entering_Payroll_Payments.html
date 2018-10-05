@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Entering Payroll Payments in VAP</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Entering Payroll Payments in VAP</h1>
+    <p>In some areas of the UK, it is common to have both subcontractors and paid employees working on the same <MadCap:variable name="Variables.vp site" />.  The VAP/Payroll link allows you to enter payments for employees who are paid through <MadCap:variable name="General.ProductName" /><span class="module">Payroll</span>, while taking advantage of the validation in VAP to ensure, for example, that overpayments are prevented and that the correct person is paid for the work.</p>
+    <div class="process">
+      <h2 class="print">To record VAP/Payroll payments:</h2>
+      <ol>
+        <li>Use <span class="function" title="Function:%WVP1100BVPA">VAP/Payroll Payment Input</span> to record the payments for each plot/payment stage combination.</li>
+        <ol>
+          <li>If you are using green cards, enter the card number.  Otherwise, enter the order number, the <MadCap:variable name="Variables.cost head" />, the payment stage and the plot number.</li>
+          <li>Select the employee who is to be paid for the work.</li>
+          <li>If the stage is a lump-sum stage, <MadCap:variable name="General.ProductName" /> fills in the full amount; if it is a capped stage, enter the details of the payment.  </li>
+          <li>When you have completed the entry and the payment is ready for approval, <MadCap:variable name="Variables.tick" /> the <span class="field">Input Complete </span>box and save the record.</li>
+        </ol>
+        <li>To move the payments on to the commercial approval stage, from the Options menu select <span class="userselect">Next Stage</span>. </li>
+        <p>Any completed payment entries are removed from the <span class="function" title="Function:%WVP1100BVPA">VAP/Payroll Payment Input</span> browse and appear on the commercial approval screen.</p>
+      </ol>
+      <h2 class="section">To give  commercial approval for the payments: </h2>
+      <p>Approval is a two-stage process.  The payments must first be commercially approved, then financially approved.</p>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WVP1110BVPA">Commercial Approval</span></li>
+        <li>If necessary, you can update an entry to amend the payment amount before you approve it.</li>
+        <li>To prevent a payment from being approved by mistake, open the entry and <MadCap:variable name="Variables.tick" /> the <span class="field">Hold Release </span>box.</li>
+        <li>Approve the payments:</li>
+        <ul>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the payments you want to approve, and from the Choose Action list, select <span class="userselect">Release</span>.</li>
+          <li>To approve all valid payments, from the Options menu select <span class="userselect">Bulk Release</span>. </li>
+        </ul>
+        <p>Any payments you approve are removed from the <span class="function" title="Function:%WVP1110BVPA">Commercial Approval</span> browse and appear on the financial approval screen.</p>
+      </ol>
+      <h2 class="section">To give financial approval for the payments : </h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WVP1111BVPA">Financial Approval</span>.</li>
+        <li>To prevent a payment from being approved by mistake, open the entry and <MadCap:variable name="Variables.tick" /> the <span class="field">Hold Release </span>box.</li>
+        <li>Approve the payments:</li>
+        <ul>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the payments you want to approve, and from the Choose Action list, select <span class="userselect">Release</span>.</li>
+          <li>To approve all valid payments, from the Options menu select <span class="userselect">Bulk Release</span>.</li>
+        </ul>
+        <p>After a payment has been approved (on both the commercial and financial approval screens), it needs to be processed.</p>
+      </ol>
+      <h2 class="section">To process payments:</h2>
+      <ol>
+        <li>Run <span class="function" title="Function:%WVP1120RSBP">Process Approved Payments</span> to create a subcontract payment batch and create the appropriate entries in <span class="module">Payroll </span>against the employees.</li>
+      </ol>
+      <p>Payments for an employee that have been posted in <span class="module">VAP </span>but have not been paid through <span class="module">Payroll </span>are shown on the Pending VAP Payments <MadCap:variable name="Variables.enquiry" /> screen on the employee record.</p>
+      <ol></ol>
+    </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDVP5002_VAP_Payroll_Link_Setup.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

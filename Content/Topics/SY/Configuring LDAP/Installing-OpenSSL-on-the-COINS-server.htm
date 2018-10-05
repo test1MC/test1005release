@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Installing OpenSSL on the <MadCap:variable name="General.ProductName" /> server</h1>
+        <p>OpenSSL is an open source package that provides a set of utilities for administering certificate files. In this instance OpenSSL is used to:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>
+                <p>Convert certificates to a format usable by <MadCap:variable name="General.ProductName" />; and</p>
+            </li>
+            <li>
+                <p>Identify certificate files via their unique hash key.</p>
+            </li>
+        </ol>
+        <p>Perform the following steps <MadCap:variable name="General.ProductName" /></p>
+        <ol>
+            <li>
+                <p>Log into the <MadCap:variable name="General.ProductName" /> server using the root account login details.</p>
+            </li>
+            <li>
+                <p>Determine whether or not the OpenSSL package is already installed on the <MadCap:variable name="General.ProductName" /> server:</p>
+                <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Using RHEL</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0030.png" class="FullWidth" />
+                </p></MadCap:dropDownBody></MadCap:dropDown>
+                <p>If OpenSSL is not installed then proceed to step 3. If it is already installed you can proceed to <MadCap:xref href="Installing-certificates-for-COINS.htm">Installing Certificates for COINS</MadCap:xref></p>
+            </li>
+            <li>
+                <p>Install the OpenSSL libraries.<br />From the command prompt issue the command: <b>yum install openssl</b></p>
+                <p>The following will be displayed:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0031.png" class="FullWidth" />
+                </p>
+                <p>Choose y and press enter to continue.</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0032.png" class="FullWidth" />
+                </p>
+                <p>If no errors are encountered you will see the line: Complete!</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Administering PCard Transactions</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Administering PCard Transactions</h1>
+        <p>The administrator reviews all transactions to ensure that all the necessary information is present, completes the costing and <MadCap:variable name="Variables.vat" /> distribution, and can then create a PCard transaction batch.&#160; If individual card holders are author<MadCap:variable name="Variables.is" />ed to enter the initial details, they can correct errors and mark them as reviewed.&#160; If not, the administrator will need to correct any errors in the transactions.</p>
+        <div class="process">
+            <h2 class="print">Administering Transactions</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1320BAPT">PCards Workbench - Administrator Mode</span>.</li>
+                <li>If you look after more than one administration <MadCap:variable name="Variables.centre" />, select the <MadCap:variable name="Variables.centre" /> from the <span class="field">Administration <MadCap:variable name="Variables.centre" style="text-transform: capitalize;" /></span>list and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/filter.svg" class="button" />.
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Screenshot: PCard Workbench (Administrator Mode)&#160;</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_P-R/PL/PL_000502.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><p class="noteheader">NOTE</p><div class="note">If individual card holders are responsible for reviewing transactions, you can set the filter to "Reviewed Only".</div></li>
+                <ul>
+                    <li>If a transaction contains errors, the <span class="field">Status </span>column shows <span class="sysmsg">Error</span>.&#160; You must correct any errors before you can mark the transaction as "Reviewed".&#160; You can see a detailed explanation of the error or errors by pointing to the error indicator.</li>
+                    <li>If there are warnings that relate to a transaction, the column to the right of the Status column shows a red exclamation mark.&#160; You can see the warning text by pointing to this warning indicator.</li>
+                    <li>You can see an image of the transaction receipt by clicking the <img src="../../Resources/Images/render.gif" class="button" /> button in the <span class="field">View Receipt </span>column (or by clicking the card network logo from the transaction detail screen).
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Transaction Receipt Image</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><img src="../../Resources/Images_P-R/PL/PL_000401.png" /></MadCap:dropDownBody></MadCap:dropDown></li>
+                    <li>You can see the XML message for a transaction by clicking the <img src="../../Resources/Images/COINS Graphics/SVG buttons/xml.svg" class="button" /> button in the <span class="field">View </span>column.</li>
+                </ul>
+                <li>To fill in any missing transaction details or correct errors, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />.
+<p>The <span class="field">Notes </span>field (immediately below the Line Item Details) shows any comments from the card holder.</p></li>
+                <li>
+                    <p>Complete the allocation details for the transaction:</p>
+                    <MadCap:dropDown class="screenshot">
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Screenshot: Allocation Section</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>
+                                <img src="../../Resources/Images_P-R/PL/PL_000501.png" class="FullWidth" />
+                            </p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </li>
+                <ul>
+                    <li>Confirm the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> for which the purchase was made.</li>
+                    <li>Ensure that the <MadCap:variable name="Variables.pl supplier" /> account is correct (and is not dormant or closed).</li>
+                    <li>Confirm the analysis or enter the correct <MadCap:variable name="Variables.jc contract" />, overhead department, asset or workshop code.</li>
+                    <li>If the <MadCap:variable name="Variables.jc contract" /> uses WBS codes, confirm or enter a valid code. This code will be defaulted into the WBS column against any line item detail line where no WBS code is already present.</li>
+                    <li>Enter the <MadCap:variable name="Variables.vat" /> amount (Level 1 only).</li>
+                    <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field">Allowed </span><MadCap:variable name="Variables.tick" />box (this will be un<MadCap:variable name="Variables.tick" />ed if the transaction is for a merchant category that is not normally allowed).&#160; This confirms that you are aware of the transaction.</li>
+                </ul>
+                <li>Enter or complete the detailed costing analysis:
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot>Screenshot: Breakdown Section</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_P-R/PL/PL_000503.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <ul>
+                    <li>The Commodity Code on the detail lines defaults from the commodity code in the Allocation section (which&#160;<MadCap:variable name="General.ProductName" /> identifies based on the merchant category code).&#160; You can change the codes on individual lines to match the goods purchased.&#160; All (non-blank) lines must have a valid commodity code.</li>
+                    <li>If the <MadCap:variable name="Variables.jc contract" /> uses WBS codes, the WBS code on the detail lines defaults from the WBS code in the Allocation section (on transactions from level 3 merchants, <MadCap:variable name="General.ProductName" /> may have identified the WBS code from the buyer reference, if one was entered).&#160; You can change the codes on individual lines to match the actual work breakdown.</li>
+                    <li>You can add new lines (for example, to distribute commodities to different WBS codes).</li>
+                    <li>Ensure that the total of the amounts&#160;is equal to the <span class="field">Net Amount</span>.
+<p class="noteheader">NOTE</p><div class="note">The important thing is to enter the correct amounts.&#160; <MadCap:variable name="General.ProductName" /> does not calculate the line amounts from the quantity and price, and does not validate the <span class="field">Unit </span>or <span class="field">Per </span>fields.</div></li>
+                </ul>
+                <li>Enter the full <MadCap:variable name="Variables.vat" /> distribution.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save your changes.</li>
+                <li>To hold a transaction (so that it is not included in the PCard batch),&#160;select it, choose <span class="userselect">Mark as Held </span>from the Choose Action list and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+<p>
+You might hold a transaction if, for example, you want to investigate it further or speak to the card holder; eventually, though, you must allow the transaction.&#160;</p></li>
+            </ol>
+            <p>When you have corrected any errors, you can <a href="WDPL0006_Batches.html">create a batch of transactions</a>.</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+Administration users need to be set up as administrators for one or more administration <MadCap:variable name="Variables.centres" />; use <span class="function" title="Function:%WPL2090BSTE">PCard Administrators</span>.
+</div>
+    </body>
+</html>

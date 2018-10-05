@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>SV Subcontract Orders Browse</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">SV Subcontract Orders Browse</h1>
+        <p class="Body">There are two Subcontract Order browses that can be displayed, depending on how SV parameter <span class="parameter">USEPACK </span>is set (Y or N). Both of these browses are discussed below.</p>
+        <h2 MadCap:autonum="1.1 ">Subcontract Orders Browse (USEPACK = Y)</h2>
+        <p class="Body">If SV parameter <span class="parameter">USEPACK </span>is set to <strong>Y</strong>, the Subcontract Orders browse is displayed as shown in <MadCap:xref href="#SCOrderBrowse_Set" class="ImageRef"><i>Figure 1:  SC Orders Browse (USEPACK = Y)</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="SCOrderBrowse_Set"></a>SC Orders Browse (USEPACK = Y)</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV043_Images/SV043_SCOrderBrowse_Set.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">This browse <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes:</p>
+        <ul>
+            <li class="ListBullet3">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Proposed Value column.</li>
+            <li class="ListBullet3">Suppressed columns when either Order Currency or Subcontractor Currency is selected.</li>
+            <li class="ListBullet3">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Show Amounts in </span>body selector shown at the bottom of the screen. The currency options for this field are:</li>
+            <li class="ListBullet4">Order Currency</li>
+            <li class="ListBullet4">Subcontractor Currency</li>
+            <li class="ListBullet4">Base Currency</li>
+            <li class="ListBullet4"><MadCap:variable name="Variables.Jc Contract caps" /> Currency</li>
+            <li class="ListBullet3">Corresponding values in the selected currency shown in the Original Value, Committed Value, and Proposed Value columns.</li>
+            <li class="ListBullet3">A Currency column for Report Currency found after the Proposed Value column. It shows a code indicating which currency is being used for the amounts.</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">Subcontract Orders Browse (USEPACK = N)</h2>
+        <p class="Body">If SV parameter <span class="parameter">USEPACK </span>is set to <strong>N</strong>, the Subcontract Orders browse is displayed, as shown in <MadCap:xref href="#SCOrderBrowse_NotSet" class="ImageRef"><i>Figure 2:  SC Orders Browse (USEPACK = N)</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="SCOrderBrowse_NotSet"></a>SC Orders Browse (USEPACK = N)</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV043_Images/SV043_SCOrderBrowse_NotSet.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">This browse <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes:</p>
+        <ul>
+            <li class="ListBullet3">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Proposed Value column.</li>
+            <li class="ListBullet3">Totals shown for all value fields. Total columns are suppressed when Order Currency or Subcontractor Currency is selected.</li>
+            <li class="ListBullet3">Corresponding values in the selected currency shown in the Original Value, Committed Value, and Proposed Value columns.</li>
+            <li class="ListBullet3">A Currency column for Report Currency found after the Proposed Value column. It shows a code indicating which currency is being used for the amounts.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 ">Subcontract <MadCap:variable name="Variables.Sv Variation caps" /> <MadCap:variable name="Variables.Sv Register caps" /></h2>
+        <p class="Body">Click the <strong>Subcontract <MadCap:variable name="Variables.Sv Variations caps"></MadCap:variable></strong> button on the Subcontract Orders browse (see <MadCap:xref href="#SCOrderBrowse_LogButton" class="ImageRef"><i>Figure 3:   Subcontract [%=Variables.Sv Variation caps%] Button on Browse</i></MadCap:xref>) to drill down to all Subcontract <MadCap:variable name="Variables.Sv Variations caps" /> associated with a single Subcontract Order (see <MadCap:xref href="#SCChgRequestLog" class="ImageRef"><i>Figure 4:   Subcontract [%=Variables.Sv Variation caps%] [%=Variables.Sv Register caps%]</i></MadCap:xref>).</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "> <a name="SCOrderBrowse_LogButton"></a>Subcontract <MadCap:variable name="Variables.Sv Variation caps" /> Button on Browse</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV043_Images/SV043_SCOrderBrowse_LogButton.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Changes made to the SC <MadCap:variable name="Variables.Sv Variation caps" /> <MadCap:variable name="Variables.Sv Register caps" />, including <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Currency </span>and <span class="Field">Show Amounts In </span>fields, are shown in <MadCap:xref href="#SCChgRequestLog" class="ImageRef"><i>Figure 4:   Subcontract [%=Variables.Sv Variation caps%] [%=Variables.Sv Register caps%]</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "> <a name="SCChgRequestLog"></a>Subcontract <MadCap:variable name="Variables.Sv Variation caps" /> <MadCap:variable name="Variables.Sv Register caps" /></p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV043_Images/SV043_SCChgRequestLog.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Currency</p>
+        <p class="IndentFieldDef">Order Currency is displayed in this field. Its default value is derived as follows:</p>
+        <ul class="CompactList">
+            <li class="ListBullet5">If the SC <MadCap:variable name="Variables.Sv Variation caps" /> is not associated with an SC Order, the SC <MadCap:variable name="Variables.Sv Variation caps" /> Currency value is <MadCap:variable name="Variables.Jc Contract caps" /> Currency.</li>
+            <li class="ListBullet5">Otherwise, the SC <MadCap:variable name="Variables.Sv Variation caps" /> Currency value is SC Order Currency.</li>
+        </ul>
+        <p class="IndentFieldDef">&#160;</p>
+        <p class="IndentFieldDef">After an SC Order has been entered on an SC <MadCap:variable name="Variables.Sv Variation caps" />, it cannot be updated once the SC <MadCap:variable name="Variables.Sv Variation caps" /> is saved. The SC <span class="Field">Order </span>field can be left blank, and when it is blank, the SC <MadCap:variable name="Variables.Sv Variation caps" /> is assigned with the <MadCap:variable name="Variables.Jc Contract caps" />’s Currency. When a change is made to an SC Order on an SC <MadCap:variable name="Variables.Sv Variation caps" />, the following occurs:</p>
+        <ul class="CompactList">
+            <li class="ListBullet5">The Currency Code of the SC <MadCap:variable name="Variables.Sv Variation caps" /> is recalculated and displayed on the page.</li>
+            <li class="ListBullet5">All the Resources values are recalculated and sent to Items and the SC <MadCap:variable name="Variables.Sv Variation caps" /> level.</li>
+        </ul>
+        <p class="IndentBold">Show Amounts In</p>
+        <p class="IndentFieldDef">The options for this field are: <strong>Order Currency</strong>, <strong>Subcontractor Currency</strong>, <strong>Base Currency</strong>, and<strong> <MadCap:variable name="Variables.Jc Contract caps" /> Currency</strong>.</p>
+        <ul class="CompactList">
+            <li class="ListBullet5"><MadCap:variable name="Variables.Sv Internal caps" />, <MadCap:variable name="Variables.Sv External caps" />, Quoted, and Approved values on this screen can show multi-currency values.</li>
+            <li class="ListBullet5">The Total columns are suppressed if either Document Currency or Subcontractor Currency is selected.</li>
+        </ul>
+        <h2 MadCap:autonum="1.4 ">SC <MadCap:variable name="Variables.Sv Variation caps" /> Details</h2>
+        <p class="Body">The Subcontract <MadCap:variable name="Variables.Sv Variation caps" /> Details tab (<MadCap:xref href="#SCChgRequestDetails" class="ImageRef"><i>Figure 5:  SV [%=Variables.Sv Variation caps%] Details</i></MadCap:xref>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes:</p>
+        <ul>
+            <li class="ListBullet5"><MadCap:variable name="Variables.Jc Contract caps" /> Currency displayed as a <span class="Field">Currency </span>field after the<span class="Field"> <MadCap:variable name="Variables.Jc Contract caps" /></span> field.</li>
+            <li class="ListBullet5">Subcontract <MadCap:variable name="Variables.Sv Variation caps" /> Currency displayed after the <span class="Field">Order </span>field.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="SCChgRequestDetails"></a>SV <MadCap:variable name="Variables.Sv Variation caps" /> Details</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV043_Images/SV043_SCChgRequestDetails.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.5 ">SC <MadCap:variable name="Variables.Sv Variation caps" /> Value Updates</h2>
+        <p class="Body">If an SC <MadCap:variable name="Variables.Sv Variation caps" /> is linked to a Client <MadCap:variable name="Variables.Sv Variation caps" />, any <MadCap:variable name="Variables.Sv Internal caps" /> and <MadCap:variable name="Variables.Sv External caps" /> value updates on the SC <MadCap:variable name="Variables.Sv Variation caps" /> and its relevant Items and Resources cause the recalculation of these values, Items, and Resources. Such recalculation is based on the following:</p>
+        <ul>
+            <li class="ListBullet3">Exchange rates are used for an Exchange Rate Type defined by parameter <span class="parameter">SV/CURCTYPE</span> (if not blank) or a transactional type.</li>
+            <li class="ListBullet3">The effective date is the SC <MadCap:variable name="Variables.Sv Variation caps" /> entry date (if an SC <MadCap:variable name="Variables.Sv Variation caps" /> is not approved) or the date on which the SC <MadCap:variable name="Variables.Sv Variation caps" /> was first approved.</li>
+        </ul>
+        <h2 MadCap:autonum="1.6 ">Client <MadCap:variable name="Variables.Sv Variation caps" /> Created from SC <MadCap:variable name="Variables.Sv Variation caps" /></h2>
+        <p class="Body">If a Client <MadCap:variable name="Variables.Sv Variation caps" /> is created with Items and Resources from an SC <MadCap:variable name="Variables.Sv Variation caps" />, the <MadCap:variable name="Variables.Sv Internal caps" /> and <MadCap:variable name="Variables.Sv External caps" /> values on the Client <MadCap:variable name="Variables.Sv Variation caps" /> are calculated as follows:</p>
+        <ul>
+            <li class="ListBullet3">Exchange rates are used for an Exchange Rate Type defined by parameter <span class="parameter">SV/CURCTYPE</span> (if not blank) or a transactional type.</li>
+            <li class="ListBullet3">The effective date is the SC <MadCap:variable name="Variables.Sv Variation caps" /> Entry date (if an SC <MadCap:variable name="Variables.Sv Variation caps" /> is not approved) or the date on which the SC <MadCap:variable name="Variables.Sv Variation caps" /> was first approved.</li>
+        </ul>
+    </body>
+</html>

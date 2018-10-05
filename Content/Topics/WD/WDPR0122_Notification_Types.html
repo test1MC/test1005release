@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Notification Types</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Notification Types</h1>
+    <p>The first and second letters of the code indicate the source and recipient of the notification respectively: E - Employer, W - Employee (Worker), P - Pension Provider. So a code that begins EW is for a notification from the employer to the employee.</p>
+    <table class="Type1">
+      <thead>
+        <tr>
+          <th valign="top">
+            <p align="center">Code</p>
+          </th>
+          <th valign="top">
+            <p align="center">Description</p>
+          </th>
+          <th valign="top">
+            <p align="center">One-Off or Multiple</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td valign="top">
+            <p>EPCM</p>
+          </td>
+          <td valign="top">
+            <p>Cease Membership. If a valid WEOO has been recorded for an employee outside the opt-out period, <MadCap:variable name="General.ProductName" /> generates a notification for the pension provider.</p>
+            <p>Created: Automatically when setting an end date on an employee pension scheme record.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>Not marked as a refund case.</li>
+            </ul>
+            <p>This may be the result of an opt-out via the pay calculation or manually by the user.</p>
+          </td>
+          <td valign="top">
+            <p>Multiple</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EPCMR</p>
+          </td>
+          <td valign="top">
+            <p>Cease Membership and Refund Contributions. If a valid WEOO has been recorded for an employee within the opt-out period, <MadCap:variable name="General.ProductName" /> generates a notification for the pension provider.</p>
+            <p>Created: Automatically when setting an end date on an employee pension scheme record.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>Is marked as a refund case.</li>
+            </ul>
+            <p>This may be the result of an opt-out via the pay calculation or manually by the user.</p>
+          </td>
+          <td valign="top">
+            <p>Multiple</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EPNM</p>
+          </td>
+          <td valign="top">
+            <p>New Member Information (Pension Provider). When <MadCap:variable name="General.ProductName" /> automatically enrols an employee, <MadCap:variable name="General.ProductName" /> generates a one-off notification for the pension provider.</p>
+            <p>Created: Automatically when a pension scheme is added to the employee.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The start date is on or after the staging date.</li>
+            </ul>
+            <p>This may be the result of a pension record created by auto <MadCap:variable name="Variables.enrolment" /> in the pay calculation or by manually adding a pension record to the employee.</p>
+          </td>
+          <td valign="top">
+            <p>One-off</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EWE</p>
+          </td>
+          <td valign="top">
+            <p>Entitled Worker. When an employee is first assessed as entitled, <MadCap:variable name="General.ProductName" /> generates a one-off notification.</p>
+            <p>Created: Automatically during the pay calculation.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The employee is assessed as an entitled worker.</li>
+              <li>The employee is not a member of any pension scheme.</li>
+              <li>The employee does not already have an EWE</li>
+.</ul>
+          </td>
+          <td valign="top">
+            <p>One-off</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EWEM</p>
+          </td>
+          <td valign="top">
+            <p>Existing Member Information. If, when an employee is first assessed, they already belong to a qualifying scheme, <MadCap:variable name="General.ProductName" /> generates a one-off notification.</p>
+            <p>Created: Automatically during the pay calculation.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The employee is already in a qualifying pension scheme.</li>
+              <li>The employee is a jobholder (eligible or non-eligible).</li>
+              <li>The employee does not already have an EWEM or an EWNM.</li>
+            </ul>
+          </td>
+          <td valign="top">
+            <p>One-off</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EWH</p>
+          </td>
+          <td valign="top">
+            <p>Applying DB/Hybrid Scheme Transitional Period. If, when an employee is first assessed, the transitional period for defined benefit and hybrid schemes applies to the employee, <MadCap:variable name="General.ProductName" /> generates a one-off notification.</p>
+            <p>Created: Automatically during the pay calculation.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The employee is flagged as using the DB/hybrid scheme transitional period.</li>
+              <li>This is the pay reference period containing the staging date.</li>
+              <li>The employee is an eligible jobholder.</li>
+              <li>The employee does not already have an EWH.</li>
+            </ul>
+          </td>
+          <td valign="top">
+            <p>One-off</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EWIOO</p>
+          </td>
+          <td valign="top">
+            <p>Invalid Opt Out. If the employer decides to enter a WEOO as invalid, <MadCap:variable name="General.ProductName" /> generates a notification to the employee.</p>
+            <p>Created: Automatically when adding/updating a WEOO.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The WEOO is marked as being invalid.</li>
+              <li>An EWIOO for this WEOO does not already exist.</li>
+            </ul>
+            <p>This will be deleted again if the WEOO is subsequently updated to be valid.</p>
+          </td>
+          <td valign="top"> </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EWNJ</p>
+          </td>
+          <td valign="top">
+            <p>Non-Eligible Jobholder. If, when an employee is first assessed, they are assessed as non-eligible, <MadCap:variable name="General.ProductName" /> generates a one-off notification.</p>
+            <p>Created: Automatically during the pay calculation.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The employee is assessed as a non-eligible jobholder.</li>
+              <li>The employee is not a member of a qualifying pension scheme.</li>
+              <li>The employee already has an EWNJ or an EWP.</li>
+            </ul>
+          </td>
+          <td valign="top">
+            <p>One-off</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EWNM</p>
+          </td>
+          <td valign="top">
+            <p>New Member Information (Employee). When <MadCap:variable name="General.ProductName" /> automatically enrols an employee, <MadCap:variable name="General.ProductName" /> generates a one-off notification for the employee.</p>
+            <p>Created: Automatically when a qualifying pension scheme is added to the employee.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The start date of the scheme is on or after the staging date.</li>
+              <li>The employee is a jobholder on this date (eligible or non-eligible).</li>
+            </ul>
+            <p>This may be the result of a pension record created by auto-<MadCap:variable name="Variables.enrolment" /> in the pay calculation or by manually adding a pension record to the employee.</p>
+          </td>
+          <td valign="top">
+            <p>One-off</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>EWP</p>
+          </td>
+          <td valign="top">
+            <p>Postponement. If an employee is assessed as eligible but the deferral rules apply, <MadCap:variable name="General.ProductName" /> generates a notification.</p>
+            <p>Created: Automatically during the pay calculation.</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The employee is assessed as an eligible jobholder.</li>
+              <li>The employee is not a member of a qualifying pension scheme.</li>
+              <li>The employee does not have a pre-existing period of postponement (a deferral date set on the employee record).</li>
+            </ul>
+          </td>
+          <td valign="top">
+            <p>Multiple</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>PEMA</p>
+          </td>
+          <td valign="top">
+            <p>Membership Active. When <MadCap:variable name="General.ProductName" /> auto-enrols an employee in a scheme other than a personal pension scheme, <MadCap:variable name="General.ProductName" /> generates a notification record without a received date; when you find out that the employee's membership is active, you fill in the date.</p>
+            <p>Created: Automatically when adding an EWNM notification (as a result of auto-<MadCap:variable name="Variables.enrolment" /> or manually).</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The associated pension scheme is not contract based.</li>
+            </ul>
+          </td>
+          <td valign="top">
+            <p>Multiple</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>PWTC</p>
+          </td>
+          <td valign="top">
+            <p>Pension Terms and Conditions. When <MadCap:variable name="General.ProductName" /> auto-enrols an employee in a personal pension scheme, <MadCap:variable name="General.ProductName" /> generates a notification record without a received date; when you find out that the employee has received the terms and conditions, you fill in the date.</p>
+            <p>Created: Automatically when adding an EWNM notification (as a result of auto-<MadCap:variable name="Variables.enrolment" /> or manually).</p>
+            <p>Conditions:</p>
+            <ul>
+              <li>The associated pension scheme is contract based.</li>
+            </ul>
+          </td>
+          <td valign="top">
+            <p>Multiple</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>WEOI</p>
+          </td>
+          <td valign="top">
+            <p>Opt In/Join Pension Scheme. If a jobholder opts into a qualifying scheme, or an entitled employee joins a scheme, the employer enters a notification manually.</p>
+            <p>Created: Manually.</p>
+            <p>Will be processed by the pay calculation in the period following the pay reference period containing the WEOI received date.</p>
+          </td>
+          <td valign="top">
+            <p>Multiple</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <p>WEOO</p>
+          </td>
+          <td valign="top">
+            <p>Opt Out of Pension Scheme. If the employee opts out of the scheme, the employer manually enters a notification. (<MadCap:variable name="General.ProductName" /> then generates one of the following: EWIOO, EPCM or EPCMR.)</p>
+            <p>Created: Manually.</p>
+            <p>Will be processed by the next run of the pay calculation if the opt out is marked as valid.</p>
+          </td>
+          <td valign="top">
+            <p>Multiple</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

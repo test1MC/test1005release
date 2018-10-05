@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:lastBlockDepth="4" MadCap:lastHeight="644" MadCap:lastWidth="600">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Running the Year-End Routine (Multi Company)</h1>
+        <p>GL Year End allows you to move the available General Ledger periods forward by 12 months. It does not delete any information, it only moves the 24 (or 26) open periods forward by one year. You have the option to carry budgets over to the new open year.</p>
+        <p>NOTE:&#160; Once you close a year (that is, move the periods on), you can no longer post to it; you can only report on it.</p>
+        <p>Navigate to General Ledger &gt; Period Processing &gt; Year End – Multi Company </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/Year End/Running the Year End Routine_1_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/Year End/Running the Year End Routine_1_2_1105.png" class="FullWidth" />
+        </p>
+        <p>You can select the companies for which the year-end is to be run; <MadCap:variable name="General.ProductName" /> will submit separate year-end runs for each company.</p>
+        <p>You can only run the year end routine for a company if the&#160;Status Msg&#160;column is not ticked, that is:</p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">All periods have been set up for the current year.</li>
+            <li style="list-style-type: disc;">All module periods for the current year are closed.</li>
+            <li style="list-style-type: disc;">All batches have been posted.</li>
+            <li style="list-style-type: disc;">The clearing account balance is zero.</li>
+            <li style="list-style-type: disc;">The year end process is not currently being run.&#160;</li>
+        </ul>
+        <p>If any of the above conditions is not met, the&#160;Status Msg&#160;column is ticked.&#160; To see which condition has not been met, click&#160;<img src="../../../Resources/Images_G-I/GL/Year End/Running the Year End Routine_1.gif" style="visibility: visible;mso-wrap-style: square;width: 24px;height: 24px;" alt="http://195.40.14.50/coins/oatrainbi/20150619132304/skin/v1026b/images/detail.gif" />Detail&#160;on the relevant line. You will need to take the appropriate action before you can run Year End. </p>
+        <p>Select the companies for which you want to run the GL Year End procedure.</p>
+        <p>From the action menu, select&#160;GL Year End&#160;and click&#160;<MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_ApplyAction.flsnp" />.</p>
+        <p>Indicate that a backup has been made and that you are ready to run the Year End procedure.&#160; If you want to copy the GL budgets over to the new year, <MadCap:variable name="Variables.tick" /> the&#160;Copy Budgets?&#160;box.</p>
+        <p>Click&#160;<MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" /></p>
+        <p>Click&#160;Yes&#160;to confirm that you want to run the year end.</p>
+        <p>When complete, <MadCap:variable name="General.ProductName" /> displays a message to tell you how many companies have been successfully processed.&#160;</p>
+    </body>
+</html>

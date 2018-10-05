@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="824" MadCap:lastWidth="601">
+  <head>
+    <title>FM [%=Variables.Fm Application caps%] (FMAPP) Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">FM <MadCap:variable name="Variables.Fm Application caps" /> (FMAPP) Documents</h1>
+    <p>FM <MadCap:variable name="Variables.Fm Application caps" /> documents (document type FMAPP) are used to print <MadCap:variable name="Variables.fm applications" /><strong>and invoices</strong> produced as part of the <MadCap:variable name="Variables.fm application" />/certification process where all information within the process is summar<MadCap:variable name="Variables.is" />ed at FM <MadCap:variable name="Variables.fm job" /> level (FM parameter <span class="parameter">INVGENER </span>is set to <span class="userinput">Y</span>).  </p>
+    <p>Define the layout of configurable documents using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System</span> module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDFM0058_Application_(FMPROF).html" />
+        <MadCap:relatedTopic src="WDSY0501_Configurable_Documents.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">Invoice Style</h2>
+      <p>All FM <MadCap:variable name="Variables.fm applications" /> and invoices have what is called an 'invoice style'.  This can be 'SINGLE', 'CONSOLIDATED', 'MAJOR CATEGORY', 'CROSS-<MadCap:variable name="Variables.Jc Contract caps" />'. </p>
+      <p>For FMAPP the invoice style determines which <MadCap:variable name="Variables.fm jobs" /> are grouped on <MadCap:variable name="Variables.fm applications" /> and invoices when <span class="function" title="Function:%WFM7030FSWJ">Create {FM Application}</span> and <span class="function" title="Function:%WFM7001Uswj1">Invoice Generation</span> processes are run. </p>
+      <p>You can subgroup (subhead/subtotal) by invoice class and by item description (if not using entered order).</p>
+      <p> </p>
+      <h2 MadCap:autonum="1.2 ">To configure a <MadCap:variable name="Variables.fm application" /> or invoice document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span>.</li>
+        <li>Use the document type <span class="userinput"><MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> (FM) </span>(FMAPP).</li>
+        <li>On the Extras tab, leave <span class="field">Is Invoice </span>un<MadCap:variable name="Variables.tick" />ed if you are configuring a <MadCap:variable name="Variables.fm application" />, <MadCap:variable name="Variables.tick" /> it to configure an invoice.</li>
+        <li>All invoice styles can be configured to be printed at detail (SOR item/cost transaction) or summary level (FM <MadCap:variable name="Variables.fm job" />) level.  <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field"><MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Level Summary </span>box for a summary document: 
+<ul><li><strong>Summary level</strong>: You will get one page per customer (plus <MadCap:variable name="Variables.jc contract" /> or major category or <MadCap:variable name="Variables.fm job" /> depending on the invoice style) and one invoice line per FM <MadCap:variable name="Variables.fm job" />. </li><li><strong>Detail level</strong>: You will get a separate page per FM <MadCap:variable name="Variables.fm job" /> for each <MadCap:variable name="Variables.fm job" /> on the <MadCap:variable name="Variables.fm application" />.  Each page then lists all items on that <MadCap:variable name="Variables.fm job" />.  This is sometimes called a 'pricing sheet'.  Running at detail level, each page is effectively an FM <MadCap:variable name="Variables.fm job" /> invoice line but it will actually print the HEADER form, so you should configure this with FM <MadCap:variable name="Variables.fm job" /> fields and sw_invline fields, rather than just the normal sw_invhead fields (though you can use sw_invhead fields as well).</li></ul></li>
+        <li>Configure the BODY line with these special RO fields (sw_invline fields will not work):
+<p><strong><em>RO_FMAppCode</em></strong> - item code<br /><strong><em>RO_FMAppDesc</em></strong> - item description<br /><strong><em>RO_FMAppQty</em></strong> - item quantity<br /><em><strong>RO_FMAppUoq</strong></em> - item unit of quantity<br /><strong><em>RO_FMAppUoqValue</em></strong> - item unit value<br /><strong><em>RO_FMAppValue</em></strong> - item value<br /><em><strong>RO_FMAppUoqCost</strong></em> - item unit cost<br /><strong><em>RO_FMAppCost</em></strong> - item cost<br /><strong><em>RO_FMAppUoqMargin</em></strong> - item unit margin<br /><strong><em>RO_FMAppMargin</em></strong> - item margin</p></li>
+        <li>
+          <p>If subtotalling by item description (which allows you to group all SOR items and cost transactions of the same code/description together) then the following fields are used in the subtotal:</p>
+          <p>
+            <strong>
+              <em>RO_FMAppValueST <br />RO_FMAppCostST  <br />RO_FMAppMarginST</em>
+            </strong>
+          </p>
+        </li>
+      </ol>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDFM0060_Application_and_Invoice_Fields.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+    <div class="configuration">
+      <h2 class="print" MadCap:autonum="1.3 ">Configuration</h2>
+      <p>A <MadCap:variable name="Variables.fm job" /> will run using the <MadCap:variable name="Variables.fm application" />/certification process if the mark-up record found for it has the <span class="field"><MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /> and Certification</span><MadCap:variable name="Variables.tick" />box <MadCap:variable name="Variables.tick" />ed.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SW/sw_invgener.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

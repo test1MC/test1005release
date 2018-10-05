@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="6" MadCap:lastHeight="703" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Direct Debit Approval</h1>
+        <p style="page-break-after: avoid;">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">The </MadCap:conditionalText><span class="function">Direct Debit Approval Workbench</span> allows you to generate, approve, email or cancel Direct Debit extracts. The browse shows Direct Debit records created using <span class="Function">Print Statements</span>.</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/Direct Debits/Approval WB.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Period<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" /> in which the Direct Debit record was created.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p><MadCap:variable name="Variables.Financial Date caps" /><![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.Financial Period caps" style="text-transform: lowercase;" /> date. A link on this field shows the Direct Debit details that have been created during the <span class="function">Statement Print</span> process (see <MadCap:xref href="Direct Debit Details.htm">- Direct Debit Details</MadCap:xref>).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Statement Date</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The statement date that was used when the record was created.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Amount</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The total amount of the payments.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Status</p>
+                </div>
+                <p>The status of the Direct Debit record: </p>
+                <ul style="page-break-inside: auto;">
+                    <li>To Email	- The extract has not been generated (or emailed).</li>
+                    <li>To Approve - The extract has been created and is awaiting approval (which also creates a cash batch).</li>
+                    <li>Incomplete	- The extract has been approved and an unposted cash batch has been created.</li>
+                    <li>Posted	 - The cash batch has been posted.</li>
+                    <li>Posting	- The batch is currently being processed, or is stuck in Posting (see <MadCap:xref href="Resolving Problems.htm#Batch">1.4 - Direct Debit Processing - Resolving Problems</MadCap:xref>).</li>
+                </ul>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Batch Number</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The number of the cash batch (if it has been created). </p>
+                    <p>A link on this field shows the batch details of the cash batch in <MadCap:variable name="Variables.Sales Ledger caps" />, including a tab for Direct Debit Details.</p>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum="1.1 ">Actions</h2>
+        <p><span class="function">Generate Extract</span>
+        </p>
+        <p>This generates the ABA file and produces a report. </p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/Direct Debits/Generate Extract Report.png" class="FullWidth" />
+        </p>
+        <p> The extract file is generated using the form configuration specified by the SL&#160;parameter <span class="parameter">BACSMED</span>, and the file name specified by the SL&#160;parameter <span class="parameter">BACSFILE</span>. The file is unique to the <MadCap:variable name="Variables.Sales Ledger caps" /> <MadCap:variable name="Variables.financial period" />.</p>
+        <p>If the SL&#160;parameter <span class="parameter">DDMAIL</span> has been configured, the file is emailed to the specified address, otherwise the file is just exported.</p>
+        <p><span class="function">Approve Extract</span>
+        </p>
+        <p>This creates a <MadCap:variable name="Variables.Sales Ledger caps" /> Receipt Batch for the Direct Debit details using the transaction type given in <span class="parameter">SL/DDTTYPE</span>. It also produces an approval report.</p>
+        <p>The batch is left as unposted unless the SL parameter <span class="parameter">DDPOST</span> = Y, in which case it is posted automatically. The Status on the Direct Debit record and Direct Debit detail records is changed to Incomplete if the batch is unposted or to Posted if <span class="parameter">SL/DDPOST</span> = Y and the batch has been posted. Creating a receipt batch also creates an allocation record linked to the invoice to the receipt to be auto-allocated. The bank is assigned from the Create Direct Debit Records generate.</p>
+        <p><span class="function">Cancel Extract</span>
+        </p>
+        <p>This allows the Direct Debit details to reversed if there is a problem. This would normally be an administrative function and used as a last resort. This removes all Direct Debit records for the <MadCap:variable name="Variables.financial period" /> if Open.  The control record is also removed so that the <span class="function">Statement Print</span> can be re-processed.</p>
+        <p>Only records that have a status of To Email or To Approve can be cancelled.</p>
+        <p style="page-break-after: avoid;"><span class="function">Reset Status</span>
+        </p>
+        <p>This resets the status of the Direct Debit record to To Approve. This can be used for unposted cash batches (if the file has not yet been loaded or sent to the bank). It can also be used if all payments for the <MadCap:variable name="Variables.financial period" /> have been <MadCap:variable name="Variables.cancelled" />.</p>
+    </body>
+</html>

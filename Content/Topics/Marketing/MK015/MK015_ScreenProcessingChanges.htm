@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="719" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../../../PR CE Doc Projects/Content/Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="1.1"><a name="Securit"></a><MadCap:variable name="Variables.Mk Project caps" /> Security</h2>
+        <h3 MadCap:autonum="1.1.1">Menu Option</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function"><MadCap:variable name="Variables.Mk Project caps" /> Security</span> menu option is available in <i><MadCap:variable name="Variables.Marketing" /> &gt; Setup &gt; Security</i>, as shown in <MadCap:xref href="#MenuOption" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="MenuOption"></a>Menu Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK015_Images/OppSecurityMenuOption.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.2">Browse Screen</h3>
+        <p class="Body">When you select <strong><MadCap:variable name="Variables.Mk Project caps"></MadCap:variable> Security</strong> from the Security menu above, a browse screen appears, as shown in <MadCap:xref href="#OppSecurityScreen" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>. You can use this screen to maintain <MadCap:variable name="Variables.Mk Project caps" /> Security for users.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="OppSecurityScreen"></a><MadCap:variable name="Variables.Mk Project caps" /> Security Browse Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK015_Images/OppSecurityScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">User ID</p>
+        <p class="IndentFieldDef">The ID of the COINS&#160;user.</p>
+        <p class="IndentBold">Name</p>
+        <p class="IndentFieldDef">The name of the user or group with this ID.</p>
+        <p class="IndentBold">Security List</p>
+        <p class="IndentFieldDef">A can-do list of the codes from the control field that define which records this user is allowed to access. This field uses the MK/PISEC parameter (see Section <MadCap:xref href="#Paramete" class="Figurenumberonly"><i>1.2</i></MadCap:xref>) and, depending on the value set for this parameter, the lookup for this field is reloaded.</p>
+        <p class="IndentBold">Code</p>
+        <p class="IndentFieldDef">A can-do list of record codes that allows you to grant or deny the selected user access on a record-by-record basis when entering transactions. If left blank, the user is allowed access to all records.</p>
+        <MadCap:pageBreak />
+        <h2 MadCap:autonum="1.2"><a name="Paramete"></a>Parameters</h2>
+        <p class="Body"> Several new MK parameters <strong style="font-weight: normal;">have been added to</strong> <MadCap:variable name="Variables.Marketing" /> for the <MadCap:variable name="Variables.Mk Project caps" /> Security functionality. They are discussed in the table below.<br /></p>
+        <table style="width: 100%;mc-table-style: url('../../../../../PR CE Doc Projects/Content/Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 183px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">MK/PISEC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">Select the field value that COINS should use to control <MadCap:variable name="Variables.Mk Project caps" /> Security. When determining whether to allow a user access to the <MadCap:variable name="Variables.Mk Project caps" />, COINS checks the value of the field specified here against the settings for that user in <MadCap:variable name="Variables.Mk Project caps" /> Security Maintenance. Some possible field values are listed below:</p>
+                        <p>Status<br />Stage<br />Business Group<br /><MadCap:variable name="Variables.Mk Work Group caps" /><br />Sub Group<br />Sub Group 2<br />Sub Group 3<br />Client 1<br />Client 2<br />Analysis Set Fields<br />Market Sector<br />Main Work Type<br />Form<br />Personnel Fields</p>
+                        <p>If left blank, there is no <MadCap:variable name="Variables.Mk Project caps" /> Security.</p>
+                        <p><strong>NOTE: </strong>If you change this parameter, you must run <i><MadCap:variable name="Variables.Marketing" /> &gt; Administration &gt; Regenerate Data &gt; <MadCap:variable name="Variables.Mk Project caps" /> Security</i> in order to enable <MadCap:variable name="Variables.Mk Project caps" /> Security or change which field governs <MadCap:variable name="Variables.Mk Project caps" /> Security after the system has been set up.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">MK/PISECDEF</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">Access to <MadCap:variable name="Variables.Mk Projects caps" /> for a user with no record in <i><MadCap:variable name="Variables.Marketing" /> &gt; Setup &gt; Security &gt; <MadCap:variable name="Variables.Mk Project caps" /> Security</i> depends on how this parameter is set:</p>
+                        <ul>
+                            <li class="ListBullet1">If set to <strong>Yes</strong>, the user does not have access to any <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+                            <li class="ListBullet1">If set to <strong>No</strong>, the user has access to all <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+                            <li class="ListBullet1">If left blank, there is no <MadCap:variable name="Variables.Mk Project caps" /> Security.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">MK/PISECTYPE</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Select one of the options below to identify the type of security to be used:</p>
+                        <ul>
+                            <li class="ListBullet1"><strong>Field Security</strong>
+                            </li>
+                            <li class="ListBullet1"><strong>Full Record Security</strong>
+                                <br />
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">MK/PRFLDSEC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">Use this parameter to select values for the Maintenance <MadCap:variable name="Variables.Mk Project caps" /> fields that should have <MadCap:variable name="Variables.Mk Project caps" /> Security. You can select multiple values from the Available column and move them to the Selected column, as shown in <MadCap:xref href="#PRFLDSEC" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. Any values in the Selected column will have security.</p>
+                        <p class="TableCell">This parameter relates to parameter MK/PISECTYPE when its value is set to FS&#160;(Field Specific Security).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="PRFLDSEC"></a>PRFLDSEC&#160;Parameter</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK015_Images/PRFLDSEC.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3"><MadCap:variable name="Variables.Mk Project caps" /> Detail</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><MadCap:variable name="Variables.Mk Project caps" /> Security tab is available on the <MadCap:variable name="Variables.Mk Project caps" /> Detail page in <i><MadCap:variable name="Variables.Marketing"></MadCap:variable> &gt; <MadCap:variable name="Variables.Mk Projects caps"></MadCap:variable></i>, as shown in <MadCap:xref href="#OppSecTab" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>. It contains the same columns described in Section <MadCap:xref href="#Securit" class="Figurenumberonly"><i>1.1</i></MadCap:xref> for the <span class="Function"><MadCap:variable name="Variables.Mk Project caps" /> Security</span> function.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="OppSecTab"></a><MadCap:variable name="Variables.Mk Project caps" /> Security Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK015_Images/OppSecTab.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.1">Actions</h3>
+        <p class="Body">The <MadCap:variable name="Variables.Mk Project caps" /> Security tab has two actions at the bottom of the screen, <strong>Give Access</strong> and <strong>Remove Access</strong> (<MadCap:xref href="#OppSecActions" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>). These actions are used for giving and removing specific security to open records for users and user groups.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="OppSecActions"></a>Actions</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK015_Images/OppSecTabActions.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4"><MadCap:variable name="Variables.Marketing" /> User Configuration</h2>
+        <p class="Body">The <span class="Function"><MadCap:variable name="Variables.Marketing" /> User Configuration</span> function has been moved to the new <i><MadCap:variable name="Variables.Marketing" /> &gt; Setup &gt; Security</i> menu, as shown in <MadCap:xref href="#UserConfig" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="UserConfig"></a><MadCap:variable name="Variables.Marketing" /> User Configuration</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK015_Images/CRMUserConfig.png" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

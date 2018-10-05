@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3761" MadCap:lastWidth="792">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />GL Journal Batch</h1>
+        <p>Before entering any journals a batch will need to be created. Each batch has an automatic unique batch number and an internal reference number (automatically allocated or defined). The process to create a batch header is generic to all ledgers. 
+</p>
+        <p>From the General Ledger module select the <MadCap:conditionalText MadCap:conditions="COINS.Pre-v1105">Input</MadCap:conditionalText> Journals submenu . </p>
+        <p>Select Journal Batch option.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Batch_1_1104.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" /> </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Batch_1_1106.png" class="FullWidth" />
+        </p>
+        <p>
+The GL Journal Batches screen will be displayed listing all the current batches, the current status and a description of the batch. This will enable you to either select the batch required, to add additional transactions or to create a new batch.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>The GL Journal – Add Batch screen is displayed and enables you to enter the details for the batch header.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Batch_2_1104.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Batch_2_1106.png" class="FullWidth" />
+        </p>
+        <p>Enter the details for the new batch in the relevant fields. Select the Save button.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"><MadCap:variable name="Variables.Financial Period caps" />
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The period end date that all the transactions in this batch will be posted to, for example 115 – 31/07/14, 1 = the period, 15 = the financial year, 31/07/14 = the month ending</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Transaction Date</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The transaction date used for all transactions within this batch – this will default to today’s date.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Template</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>To base transactions in the batch on a template, select the template.</p>
+                        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Templates are defined using Standing Journal Maintenance.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Transaction Types</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Select the transaction type of the transactions included in the batch.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">A unique description to identify the batch, i.e. Int ref 1404001 Telstra cost reallocation from 6402&gt;6403</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>A transaction type “code” is allocated to enable you to identify different categories of a journal transaction, i.e. Accruals, Depreciation and so on.</p>
+        <p>If there is more than one transaction type available, <MadCap:variable name="General.ProductName" /> uses this as the default transaction type on each new transaction, but you can choose a different transaction type for individual transactions.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Code</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Transaction Type Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ACC:</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Accruals entered in a journal and a reversing journal, i.e. it is a journal that reverses out in the following period</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">CPJ:</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Cash Profile Journal – With Cash</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">DEPN:</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Depreciation Journal</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">INT:</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Manual intervention is required. If a batch hangs select the Open button of the batch and select INT</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">JNL:</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">To move costs from one cost code to another</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The GL Journal Batch screen will be displayed, showing the batch header information. The batch number has been allocated, along with the reference number. The description is also displayed to enable you to identify the correct batch. Two tabs are available, Batch and Transactions.</p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Batch_3_1104.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL_Journal_Batch_3_1106.png" class="FullWidth" />
+        </p>
+        <p>Select the Transactions tab to enter the details for transactions to be included in the batch.</p>
+    </body>
+</html>

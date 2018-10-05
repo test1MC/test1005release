@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Mandatory Fields on Certificates and Remittance Advices</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Mandatory Fields on Certificates and Remittance Advices</h1>
+    <p>The following list shows the statutory information you must provide to the subcontractor if you have deducted tax, and the fields to use.</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Statutory Information</th>
+          <th>Fields to Use</th>
+        </tr>
+        <tr>
+          <td>Contractor's own name</td>
+          <td>
+            <span class="fieldname">coc_name</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Contractor's employer's tax reference<br />(note this is NOT the contractor's UTR)</td>
+          <td>
+            <span class="fieldname">coc_contref</span>
+          </td>
+        </tr>
+        <tr>
+          <td>The date of payment</td>
+          <td>
+            <span class="fieldname">sbp_pdate</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Subcontractor's name</td>
+          <td>
+            <span class="fieldname">sbm_name</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Subcontractor's unique taxpayer Reference number (UTR)</td>
+          <td>
+            <span class="fieldname">sc7_certno  </span>
+            <br />
+            <span class="fieldname">  </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Subcontractor's personal verification number<br /><span style="font-size: smaller;">if the subcontractor could not be verified and a deduction at the higher rate has been made</span></p>
+          </td>
+          <td>
+            <p>
+              <span class="fieldname">sc7_ocertno</span>
+            </p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">You need to amend the format for <span class="fieldname">sc7_ocertno</span> from the default of 9 to 13, since 13 is the maximum needed to hold a verification number (matched or unmatched). </div>
+          </td>
+        </tr>
+        <tr>
+          <td>The gross amount of the payments made to the subcontractor</td>
+          <td>
+            <span class="fieldname">RO_grossPayment</span>
+          </td>
+        </tr>
+        <tr>
+          <td>The cost of any materials that has reduced the amount against which the deduction has been applied</td>
+          <td>
+            <span class="fieldname" data-mce-mark="1">RO_materialsAmount</span>
+          </td>
+        </tr>
+        <tr>
+          <td>The amount of the deduction</td>
+          <td>
+            <span class="fieldname">RO_taxDeducted</span>
+          </td>
+        </tr>
+        <tr>
+          <td>A clear indication if the statement is a duplicate</td>
+          <td>You cannot currently indicate that a certificate or remittance advice in OA is a duplicate (this will be addressed in the February fix); however, you could produce a reprinted monthly Statement of Deduction, even if you are normally using per-payment statements.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

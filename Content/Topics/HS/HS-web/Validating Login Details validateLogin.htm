@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="2676" MadCap:lastWidth="1521" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Validating Login Details (validateLogin)</h1>
+        <h2>&#160;</h2>
+        <p>The method validateLogin allows you to validate the email address and login password as person provides.&#160; A sample XML message to validate a person’s login in <MadCap:variable name="General.ProductName" /> is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswsppe1" method="validateLogin" id="999"&gt;</p>
+        <p class="code">&lt;LoginDetails&gt;</p>
+        <p class="code">&lt;Email&gt;soap.request@coins-global.com&lt;/Email&gt; </p>
+        <p class="code">&lt;Reference&gt;&lt;/Reference&gt; </p>
+        <p class="code">&lt;Password&gt;letmein&lt;/Password&gt; </p>
+        <p class="code">&lt;SetLastLogin&gt;yes&lt;/SetLastLogin&gt; </p>
+        <p class="code">&lt;/LoginDetails&gt;</p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>You can request verification of the login by either the persons email address or their unique person reference within <MadCap:variable name="General.ProductName" />.&#160; Note the person must have a password to be able to login, blank passwords are not allowed.</p>
+        <p>The SetLastLogin node allows you to specify whether <MadCap:variable name="General.ProductName" /> records the last login date and time for the selected person.&#160; This information can be displayed in <MadCap:variable name="General.ProductName" /> when viewing the person’s details.</p>
+        <p>If the login details are correct this would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswsppe1" method="validateLogin" id="999"&gt;</p>
+        <p class="code">&lt;Email&gt;soap.request@coins-global.com&lt;/Email&gt; </p>
+        <p class="code">&lt;Reference&gt;003017&lt;/Reference&gt; </p>
+        <p class="code">&lt;returnvalue&gt;VALID&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>Note the person’s unique reference and email address are returned, even if only one of them was specified in the original request.</p>
+        <p>Alternatively if the login details were incorrect this would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswsppe1" method="validateLogin" id="999"&gt;</p>
+        <p class="code">&lt;Email&gt;soap.request@coins-global.com&lt;/Email&gt; </p>
+        <p class="code">&lt;returnvalue&gt;INVALID&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+    </body>
+</html>

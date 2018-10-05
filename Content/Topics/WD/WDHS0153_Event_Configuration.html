@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Configuring <MadCap:variable name="Variables.Customer Care caps" /> Events</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Configuring <MadCap:variable name="Variables.Customer Care caps" /> Events</h1>
+        <p>There are three types of events relevant to <MadCap:variable name="Variables.Customer Care caps" />:</p>
+        <ul>
+            <li><span class="function" title="Function:%WHS2015BHEV">General Events</span> allows you to set up events that apply to plots.</li>
+            <li><span class="function" title="Function:%WHS2016BHEV">Issue Events</span> allows you to set up events that apply to <MadCap:variable name="Variables.customer care" /> issues.</li>
+            <li><span class="function" title="Function:%WHS2017BHEV">Call Events</span> allows you to set up events that apply to calls.</li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To set up <MadCap:variable name="Variables.Customer Care caps" /> events:</h2>
+            <ol>
+                <li>Go to the relevant event maintenance function (see above).</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> to enter a new event.</li>
+                <li>Enter a code for the new event.</li>
+                <li>Fill in the fields as follows: 
+<table class="Fields"><tbody><tr><td class="field">System Generated</td><td>If the event is not run manually from the <span class="function" title="Function:%WHS1090SHCG"><MadCap:variable name="Variables.Customer Care caps" /> Workbench</span>, but instead is run automatically by a process such as sending a letter, <MadCap:variable name="Variables.tick" /> this.</td></tr><tr><td class="field">System Event Code</td><td>Enter the code for the system event. This determines the type of event you are setting up. The possible events are: 
+<ul><li>Workbench events: </li><ul><li>ACTIVE: Brings the plot back into warranty.</li><li>INACTIVE: Expires the plot's warranty.</li><li>RESALE: Records that the plot has been resold.</li><li>MEMO: Records other general information.</li></ul><li>Issue events:</li><ul><li>ACTION: Records that something has been done.</li><li>APPTMENT: Records that you have made an appointment and who is attending to it.</li><li>EMPLOYEE: Reassigns the employee to whom an issue is assigned.</li><li>MEMO: Records general information about the issue.</li><li>PRIORITY: Changes the priority of the issue.</li><li>RESOLVE: Records the resolution of the issue.</li><li>STATUS: Changes the status of the issue.</li></ul><li>Call events:</li><ul><li>INSPECT: Records an inspection.</li><li>MEMO: Records general information about the call.</li></ul></ul></td></tr><tr><td class="field">Full Description</td><td>Enter a full description for the event. (The short description is only used in<MadCap:snippetText src="../../Resources/Snippets/COINSplus.flsnp" />.)</td></tr><tr><td class="field">Allow Duplicates</td><td>If you want to allow users to run the event more than once, <MadCap:variable name="Variables.tick" /> this.</td></tr><tr><td class="field">Previous Events</td><td>If you only want to allow the event to be run if other specified events have already been run, enter the codes for those events.</td></tr><tr><td class="field">Stop Events</td><td>If you want to prevent the event if other specified events have already been run, enter the codes for those events. </td></tr><tr><td class="field">Restrict Backdating, Restrict Forward</td><td>To restrict how many days before or after today's date that users can enter for the date of the event, <MadCap:variable name="Variables.tick" /> these fields, and enter the number of days. For example, to stop users from entering a date more than two days before today's date, set <span class="field">Allowable Days Backdating</span> to <span class="userinput">2</span>. If both are set to <span class="userinput">0</span>, users will be forced to enter today's date. </td></tr><tr><td class="field">Default Comments</td><td>Enter the default comments; this is the text that will appear in the <span class="field">Comments</span> field when the event is run (the user can enter different text if they want).</td></tr></tbody></table></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print"><MadCap:variable name="Variables.Customer Care caps" /> Events - configuration</h2>
+            <p>Set up which users can run the event, using <span class="function" title="Function:%WHS2015BCOS">General Event Security</span>, <span class="function" title="Function:%WHS2016BCOS">Issue Event Security</span> and <span class="function" title="Function:%WHS2017BCOS">Call Event Security</span> (see <a href="WDCC5001_Event_Security.html">Event Security</a>).</p>
+            <p>You also need to set up some event codes for system-generated events, using parameters.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_calladd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_callcls.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_callreop.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_exemptbd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_exemptfd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_issadd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_isscls.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_issevent.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_taskadd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_taskcomp.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_histupd.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_warrres.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

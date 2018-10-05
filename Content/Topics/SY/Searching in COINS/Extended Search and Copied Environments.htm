@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="300" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />Extended Search and Copied Environments</h1>
+        <p class="Body">If you make a copy of a <MadCap:variable name="General.ProductName" /> environment that has Extended Search Capability configured, and want the Extended Search Capability to be available in the copied environment (for example, a copy-of-live environment), consider the following (assuming the search engine is Solr):</p>
+        <ul>
+            <li>
+                <p>The Solr database needs to be kept in sync with the <MadCap:variable name="General.ProductName" /> database so if you copy an environment the Solr database should also be copied.</p>
+            </li>
+            <li>
+                <p>Solr will need to be shut down for the copy.</p>
+            </li>
+            <li>
+                <p>The SY/SRCHURL	parameter (which points to the Solr database) needs to be changed on the copied environment (otherwise the coped environment will be updating the live Solr data).</p>
+            </li>
+        </ul>
+    </body>
+</html>

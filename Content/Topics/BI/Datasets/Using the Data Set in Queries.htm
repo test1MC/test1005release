@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-gb" MadCap:lastBlockDepth="8" MadCap:lastHeight="673" MadCap:lastWidth="602" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="OA Designer;Topics" />Using the Data Set in Queries</h1>
+        <p>The Data Set can now be used in Queries in Report Designer. Using our example dataset, the body table should be ttContract, the body query should be - FOR EACH ttContract and the Data Set Definition would be BIWJC_PROF.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/Using the Data Set in Queries.jpg" class="FullWidth" />
+        </p>
+        <p>Note that you can use more than one dataset in a query. To do this enter each dataset name in the Data Set Definition field separated by a comma. You will need to reference each ttTablename as appropriate in the body query.</p>
+        <p>It is possible to sort on any field from within the Data Set – In the example below we are using a field which has been populated with the virtual field jcl_desc with is the Location Description. This will put the contract in alphabetical order of the locations to which they belong. (NB. It is always necessary to qualify the field name with the Data Set table name in the sort)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/Using the Data Set in Queries_1.jpg" class="FullWidth" />
+        </p>
+        <p>Fields can then be added to the report in the standard way. It is always good practice to qualify the field names also with the Data Set table name although it is not mandatory.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/Using the Data Set in Queries_3.jpg" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2 MadCap:autonum="1.1 ">In-Line Reports</h2>
+        <p>For in-line reports, specify the dataset(s) to be used on the container report e.g.:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/Using the Data Set in Queries_4.jpg" style="visibility: visible;mso-wrap-style: square;width: 535px;height: 281px;" />
+        </p>
+        <p>Then for each inline report, only use the ttTablename in the body query of each report but do not specify the dataset e.g.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/Using the Data Set in Queries_5.jpg" style="visibility: visible;mso-wrap-style: square;width: 529px;height: 280px;" />
+        </p>
+        <p>
+            <MadCap:concept term="Datasets" />This will ensure that the datasets are only built once and then data then shared across each report that uses it. If you specify the dataset name in the in-line reports, the dataset has to be rebuilt for that report which will have an impact on performance.</p>
+        <p>&#160;</p>
+    </body>
+</html>

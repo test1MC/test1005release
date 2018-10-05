@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="6" MadCap:lastHeight="796" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Daily Timesheet Load</h1>
+        <p>If the new PC parameter <span class="parameter">LOADDLY</span> is set to something other than blank, new fields are available on the <span class="Function">Daily Timesheet Load</span> selection screen.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Daily Timesheet Load Selection Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PC/Daily TS Load/Daily TS Load Selection.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Batch Number<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>You can select an existing batch to load the timesheets to, or select <span class="userselect">New</span> to create a new batch. If you select an existing batch, the <span class="Field">Transaction Date</span>, <span class="Field">Tax Point Date</span> and <span class="Field">Depot</span> fields are not relevant and are disabled.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Transaction	 Date</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The date for transactions in the batch.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Tax Point Date</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The tax point date for the batch.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Depot</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The depot for the batch.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Post</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to post the batch automatically if it passes validation. This is only relevant if a batch is selected. </p>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum="1.1 ">File Format</h2>
+        <p>The load file can now have two additional fields at the end, to take the item type and quantity. It is possible to load files without the new fields. </p>
+        <p>The first line in the CSV file is the header line and will not be imported.</p>
+        <p>The fields in order are:</p>
+        <ul>
+            <li>Asset/Item Code</li>
+            <li>Operator Code</li>
+            <li>Cost Type<ul><li>1 - <MadCap:variable name="Variables.Jc Contract caps" /></li><li>2 - Asset</li><li>5 - Workshop job card</li><li>7 - Customer</li></ul></li>
+            <li>Cost To - Customer, <MadCap:variable name="Variables.Jc Contract caps" />, Asset or Workshop job card</li>
+            <li>Activity</li>
+            <li>Activity description - If left blank, the description defaults from the selected activity</li>
+            <li>Date</li>
+            <li>Duration</li>
+            <li>Per</li>
+            <li>Rate - If zero (starting with "z"), the system rate will be used</li>
+            <li>Charge <MadCap:variable name="Variables.Centre caps" /> (If used)</li>
+            <li>Address Code (if used)</li>
+            <li>Quantity (if used - only required on non-asset lines)</li>
+            <li>Item Type (if used - if item type not populated, the load function assumes it is an asset and populates it from the asset type)</li>
+        </ul>
+    </body>
+</html>

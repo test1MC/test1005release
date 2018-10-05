@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="829" MadCap:lastWidth="601">
+  <head>
+    <title>Pattern Matching in Filters</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Pattern Matching in Filters</h1>
+    <p>Pattern matching is an alternative to using <a href="WDUG0039_Can-Do_Lists.html">can-do lists</a> in the <a href="WDUG0025_Searching_and_Filtering.html">simple filter</a> (or in the <span class="field">Matches </span>field of an <a href="WDUG0027_Advanced_Filter.html">advanced filter</a>).</p>
+    <p>Pattern matching can be enabled throughout <MadCap:variable name="General.ProductName" /> using the <span class="parameter">SY/PREFPAT </span>parameter, or in an individual search or filter field by putting two backslash characters (<span class="userinput">\\</span>) at the beginning of the search string.</p>
+    <p>If pattern matching is applied:</p>
+    <ul>
+      <li>
+        <span class="userinput">*</span> (asterisk) means any number of characters.</li>
+      <li>
+        <span class="userinput">.</span> (<MadCap:variable name="Variables.full stop" />) means any single character.</li>
+      <li>
+        <span class="userinput">,</span> (comma) is a list separator (meaning OR).</li>
+      <li>
+        <span class="userinput">-</span> (dash) is a range separator. For example: <span class="userinput">\\A50-B50</span> will return records with codes in the range A50 to B50.</li>
+      <li>If the string begins with a caret (^) then the criteria is an exclusive list rather than an inclusive list.</li>
+      <li>If the values contain <strong>-</strong> , <strong>"</strong> or <strong>'</strong> then they can be escaped with a backslash (<strong>\</strong>) or by enclosing the string in quotes.<br />e.g. <span class="userinput">"A-000"-"A-999" </span>would select a range of codes A-000,A-001,A-002....A-999.</li>
+    </ul>
+    <p class="noteheader">NOTE</p>
+    <div class="note">This only works for character fields.</div>
+    <p>You can combine the pattern matching wildcards. For example, <span class="userinput">\\A50-B50,*25 </span>will return records with codes in the range A50 to B50 <em>and</em> all records with codes ending in 25.</p>
+    <p>This is different from the advanced filter, where:</p>
+    <table>
+      <tbody>
+        <tr>
+          <th width="50">From</th>
+          <th width="50">To</th>
+          <th width="50">Matches</th>
+        </tr>
+        <tr>
+          <td>A50</td>
+          <td>B50</td>
+          <td>*25</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>would only return records with codes ending in 25 that were also in the range A50 to B50.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDUG0039_Can-Do_Lists.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_prefpat.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="2152" MadCap:lastWidth="655">
+  <head>
+    <title>Ground Rent and Service Charges Configuration</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Ground Rent and Service Charges Configuration</h1>
+    <p>House Sales allows you to bill purchasers for automated repetitive charges (ground rent, service charges) and additional manual charges.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDHS0190_Ground_Rent_and_Service_Charges.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <ol>
+        <li>Ensure that the HSCHARGE batch type is set up correctly in <span class="function" title="Function:%WHS0020BCBT">Batch Configuration</span>.  (If the batch type is not shown, open and save <span class="function" title="Function:%WHS9000SHCG">Module Configuration</span> to create the batch type automatically.)</li>
+        <li>Set the House Sales Parameters.  There are separate parameters for rents, for service charges and for other charges.  For optimum functionality all these parameters should be set.</li>
+        <li>Use <span class="function" title="Function:%WHS233CSCOI">Ground Rent Billing Periods</span> and <span class="function" title="Function:%WHS233DSCOI">Service Charge Billing Periods</span> to create standard tables of billing periods for rents and for service charges. If these vary by <MadCap:variable name="Variables.vp site" /> then set them up on each <MadCap:variable name="Variables.vp site" />: the standard list then becomes the default for <MadCap:variable name="Variables.vp sites" /> with no billing periods of their own.</li>
+        <li>Use <span class="function" title="Function:%WHS2160BHCT">Transaction Categories</span> to configure one or more <span class="module">House Sales</span> Financials transaction categories for rents and/or service charges.  Each transaction category will be linked to a <span class="module">General Ledger</span> control account for the Debtor Balance on that category: transaction categories should not normally share a control account.</li>
+        <li>Use <span class="function" title="Function:%WHS2100BHDE">Journal Maintenance</span> to configure a new House Sales Journal for rents and one for service charges.  The configuration of these journals will determine the <span class="module">General Ledger</span> and/or <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status </span>postings to be made for rents and/or service charges. </li>
+        <ul>
+          <li>Set the <span class="field">Usage </span>to <span class="userselect">Plots</span>.</li>
+          <li>Set up two journal lines: the first one should have a line type of Addition and post to the appropriate GL revenue account; the second should have a line type of Deduction and post to the ground rent debtor account.</li>
+          <li>The <span class="field">Item ID </span>of the first line of the journal needs to be identified in the appropriate parameter for the type of journal: <span class="parameter">GRITEMID</span>, <span class="parameter">SCITEMID </span>or <span class="parameter">OCITEMID</span>.</li>
+          <li>For ground rent or service charges the journal line should be set up with the same category as defined in the parameter <span class="parameter">GRCAT </span>or <span class="parameter">SCCAT</span>.  For other charges the category on the journal line will be overwritten with the category from the charge.</li>
+          <li>Within the <span class="field">Description </span>box on each journal line you can use tokens to automatically pull information into the text. <br />Journal line tokens<MadCap:snippetBlock src="../../Resources/Snippets/hs_journal_tokens.flsnp" /></li>
+        </ul>
+        <li>Use <span class="function" title="Function:%WSY2000BMML">Letter Configuration</span> to configure invoices, statements and any other charge letters required (for example, overdue rent/service charge reminders).</li>
+        <ul>
+          <li>Use the letter type <span class="userselect">Charge</span>.</li>
+          <li>Charge letters can be configured to generate an event in the History on the Sales Workbench.</li>
+          <li>To configure an invoice document so that <MadCap:variable name="General.ProductName" /> will automatially generate a unique invoice number, <MadCap:variable name="Variables.tick" /> the <span class="field">Invoice Reference </span><MadCap:variable name="Variables.tick" />box (on the Parameters tab).</li>
+        </ul>
+      </ol>
+      <p>Plots must be set up correctly before legal completion, and the annual rent and/or service charge must be set up on each plot. </p>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDHS5002_Mail_Merge_Letters.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/HS/hs_gradv.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_grbillev.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_grcat.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_grcomper.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_gritemid.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_grjrnl.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_scadv.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_scbillev.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_sccat.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_sccomper.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_scitemid.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_scjrnl.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_ocbillev.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_occats.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_occhcats.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_ocitemid.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_ocjrnl.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

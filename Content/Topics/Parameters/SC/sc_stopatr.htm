@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/STOPATR - Stop Payment if ATRs Outstanding</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/STOPATR - </span> Stop Payment if ATRs Outstanding
+</div>
+<div class="param_def">
+<p>Whether to stop payment if the number or age of outstanding Authenticated Receipts exceeds a set limit (<strong>Y </strong>or <strong>N</strong>).</p>
+<p class="yesnolist"><span class="userinput">Y</span> = If a subcontractor's outstanding Authenticated Receipts exceed the limits then certificates cannot be selected for payment.</p>
+<p class="yesnolist"><span class="userinput">N</span> = If a subcontractor's outstanding Authenticated Receipts exceed the limits then certificates will not be selected using <span class="function" title="Function:%WSC1100RSBP">Select/Deselect Certificates (Batch)</span>, but can be selected using <span class="function" title="Function:%WSC1110BSPY">Select/Deselect Certificates (Manual)</span> or paid using <span class="function" title="Function:%WSC1090BCOB">Manual Payment Entry</span>.  COINS produces a warning.</p>
+<p>In both cases COINS refers to the settings of the SC parameters <span class="parameter">AGEAUTH</span> and <span class="parameter">NOAUTH</span>.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sc/sc_ageauth.htm" /><MadCap:relatedTopic src="../sc/sc_noauth.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

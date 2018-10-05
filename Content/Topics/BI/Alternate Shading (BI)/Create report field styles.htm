@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-us" MadCap:lastBlockDepth="4" MadCap:lastHeight="2337" MadCap:lastWidth="1335" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Create report field styles</h1>
+        <p>The first task is to create a set of report field styles that allow reports and forms to invoke the field shading. The number of field styles that will be required will depend on the <MadCap:variable name="General.ProductName" /> installation and the number of existing field styles being used.</p>
+        <p>Field styling is not cumulative and as such a unique field style will need to be created for each existing field style where an alternating background <MadCap:variable name="Variables.colour" /> is required.</p>
+        <p>The following steps will be performed via the <MadCap:variable name="General.ProductName" /> OA web interface.</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <p>Log into the <MadCap:variable name="General.ProductName" /> OA web interface and navigate to OA Reporting &amp; BI → OA Reporting &amp; BI Setups → Report Field Styles as shown below:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Create report field styles.png" class="FullWidth" /></p>
+            <li>Add a new report field style that references a variable, which will hold the required line shading <MadCap:variable name="Variables.colour" />:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Create report field styles_1.png" class="FullWidth" /> <img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Create report field styles_2.png" class="FullWidth" />The Style field must be a unique alphanumeric;<br />The Formatting field must contain the name of a variable that will be created in the report or form later in the How-To guide. In the above example, the variable is named: lineBackgroundColour</li>
+            <li>Add all further new report field styles where the alternate line shading will be required. Multiple formatting options can be applied by separating each formatting option with a comma (,) character. For example, where the existing “Red Negative” report field style is used where line shading will be required, then create a new report field style for the combination of the “red Negative” style and the alternate shading style:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Create report field styles_3.png" class="FullWidth" /></li>
+        </ol>
+        <p>Once all required report field styles has been created, then proceed to the next task.</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/MENUEXC - Main Menu Security Exclude</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/MENUEXC - </span> Main Menu Security Exclude
+</div>
+<div class="param_def">
+<p>(<MadCap:snippetBlock src="../../../Resources/Snippets/coinsoa.flsnp"/> only) A comma-separated list of letters that represent browse sub-functions (such as Bulk Update or the Delete button) that excluded when using menu item security.</p>
+<p>The sub-functions represented by this list will not automatically be available even if the user is given Update access to a function.  You can override this for individual users by explicitly granting access to such functions.</p>
+<p>The letters are:</p>
+<p class="yesnolist"><span class="userinput">B</span> = Bulk Add/Update <MadCap:variable name="Variables.tick"/>box.</p>
+<p class="yesnolist"><span class="userinput">C</span> = Copy button.</p>
+<p class="yesnolist"><span class="userinput">D</span> = Delete button.</p>
+<p class="yesnolist"><span class="userinput">U</span> = Update button.</p>
+<p class="yesnolist"><span class="userinput">X</span> = Export button.</p>
+<p>If you want to allow certain groups or individuals access to the excluded sub-functions, use <span class="function" title="Function:%WMS2034BMSF2">Group Function Access</span> or <span class="function" title="Function:%WMS2034BMSF">User Function Access</span>.  Filtering on <span class="userinput">%W*D</span> would show the delete sub-functions, for example (though be careful as it would also include other functions that end in D).</p>
+</div>
+</body>
+</html>

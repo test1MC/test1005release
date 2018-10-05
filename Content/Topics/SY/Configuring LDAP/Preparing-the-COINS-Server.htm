@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Preparing the <MadCap:variable name="General.ProductName" /> Server</h1>
+        <p>The first task is to load the requisite software on the <MadCap:variable name="General.ProductName" /> server.</p>
+        <p><MadCap:variable name="General.ProductName" /> LDAP Directory user authentication utilises open source OpenLDAP and DNS libraries to communicate with Corporate Directory servers on the network.</p>
+        <p class="note">Do not proceed with this or any further tasks if you have not been able to successfully identify your network’s LDAP directory servers, as outlined in <a href="Confirming-the-Active-Directory.htm">Confirming the Active Directory server resolution</a>.</p>
+        <p>Perform the following steps using the <MadCap:variable name="General.ProductName" /> administration account on your <MadCap:variable name="General.ProductName" /> server. You must be logged into the <MadCap:variable name="General.ProductName" /> server using the server’s root account.</p>
+        <ol>
+            <li>
+                <p>Log into the <MadCap:variable name="General.ProductName" /> server using the root account login details.</p>
+            </li>
+            <li>
+                <p>Determine whether or not the OpenLDAP package is already installed on the <MadCap:variable name="General.ProductName" /> server:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0007.png" class="FullWidth" />
+                </p>
+                <p>If OpenLDAP is not installed then proceed to step 3.</p>
+                <p>If it is already installed you can proceed to step 4.</p>
+            </li>
+            <li>
+                <p>Install the OpenLDAP libraries.</p>
+                <ul>
+                    <li>
+                        <p>From the command prompt issue the command: <span class="Emphasis">yum install openldap</span><br />The following will be displayed:<br /></p>
+                        <p>
+                            <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0008.png" class="FullWidth" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Choose y and press enter to continue.</p>
+                        <p>
+                            <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0009.png" class="FullWidth" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>If no errors are encountered you will see the line: Complete!</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><MadCap:variable name="General.ProductName" /> LDAP Directory user authentication requires the <MadCap:variable name="General.ProductName" /> software to be able to access the OpenLDAP libraries from a platform independent area. <MadCap:variable name="General.ProductName" /> software utilises the /usr/local/lib file system path as a common repository for operating system shared libraries. To allow the <MadCap:variable name="General.ProductName" /> software to use the OpenLDAP and DNS shared libraries, you will need to link these libraries into the common repository:</p>
+                <p>
+                    <img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0010.png" class="FullWidth" />
+                </p>
+                <p class="note">The name (libldap-2.4.so.2 &amp; libresolv.so.2) and location (/lib64) of the shared libraries may vary depending on the version of the library and whether you are running a 32bit or 64bit operation system.</p>
+                <p>You have now successfully installed the required open source software on your <MadCap:variable name="General.ProductName" /> server and made the required shared libraries available to the <MadCap:variable name="General.ProductName" /> software.</p>
+            </li>
+        </ol>
+    </body>
+</html>

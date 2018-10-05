@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/AUTOCLPL - Close Plant POs automatically</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/AUTOCLPL - </span> Close Plant POs automatically
+</div>
+<div class="param_def">
+<p>Whether to complete <MadCap:variable name="Variables.pc plant"/> order items automatically when posting a fully-matched invoice (<span class="userinput">Y</span> or <span class="userinput">N</span>).</p>
+<p>This allows the purchase order to be marked as complete.</p>
+<p>The <MadCap:variable name="Variables.pc plant"/> iitem will be set as 'Complete' in the following situations:</p>
+<ol>
+<li>The Accrual Type is 'Due Date on Order / <MadCap:variable name="Variables.Pc Plant caps"/> Maintenance' and the appropriate <MadCap:variable name="Variables.Pc Plant caps"/> Maintenance records are all set as Complete;</li>
+<li>The Accrual Type is 'GRN / <MadCap:variable name="Variables.Pc Plant caps"/> Maintenance', the item is fully delivered, and the appropriate <MadCap:variable name="Variables.Pc Plant caps"/> Maintenance records are all set as Complete;</li>
+<li>The Accrual Type is 'GRN / <MadCap:variable name="Variables.Pc Plant caps"/> Allocation', the item is fully delivered, the item is no longer <MadCap:variable name="Variables.pc onhire"/> and all related <MadCap:variable name="Variables.pc plant"/> sheets are fully invoiced.</li>
+</ol>
+</div>
+</body>
+</html>

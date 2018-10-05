@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Personnel Data Load</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print" MadCap:autonum="1 ">Personnel Data Load</h1>
+        <p><span class="function" title="Function:%WHRUPOR">Personnel Data Load</span> allows you to load HR personnel data from an input file.</p>
+        <h2 MadCap:autonum="1.1 ">Input File Format</h2>
+        <p>The first line of the file should give the database table to be populated.</p>
+        <p>Possible values are:</p>
+        <ul>
+            <ul>
+                <li class="ListBullet1">pp_organisation - for personnel records</li>
+                <li class="ListBullet1">pp_events - for appraisals, disciplinaries, grievances, salary history records, and any user defined pp_events types</li>
+                <li class="ListBullet1">pp_orgtypes - for contacts, beneficiaries, and correspondence</li>
+                <li class="ListBullet1">pp_benefits - for benefits</li>
+                <li class="ListBullet1">pp_orgtime - for <MadCap:variable name="Variables.holidays" />, absences, short absences and lateness records, as well as Accrual Plans now available with the new version of benefits on the enhanced Personnel Workbench</li>
+                <li class="ListBullet1">pp_course_at - for training course/assessment attendance records</li>
+                <li class="ListBullet1">pp_planenroll - for the new version of benefits on the enhanced Personnel Workbench. <strong>Special Note:</strong> To allow the ability to maintain Cobra <MadCap:variable name="Variables.enrolments" />, you are allowed to load <MadCap:variable name="Variables.enrolments" /> for Terminated personnel.</li>
+                <li class="ListBullet1">pp_medical - for Drug Tests administered to employees. This is related to hr_medical below. Please see the more detailed Special Notes on Drug Testing below.</li>
+                <li class="ListBullet1">hr_medical - for the type of Drug Tests administered. This is related to pp_medical above. Please see the more detailed Special Notes on Drug Testing below.</li>
+                <li class="ListBullet1">pp_quals - for employee qualifications such as training/assessments, qualifications, and memberships</li>
+                <li class="ListBullet1">pp_employer - for employment verifications</li>
+            </ul>
+        </ul>
+        <p>&#160;</p>
+        <p>The second line can optionally be a comma-separated list of field/value pairs that applies to all records to be created/updated.</p>
+        <p>For example, to load just salary history data, you could begin the file with:</p>
+        <blockquote dir="ltr" style="margin-right: 0px;">
+            <p><span class="screentype">pp_events <br />ppe_type=HRSAL</span>
+            </p>
+        </blockquote>
+        <p>&#160;</p>
+        <p>The next line should be a comma-separated list of fields for the table data to be loaded. This list - together with any field/value pairs for the whole file - must include a key to identify individual records.</p>
+        <p>For pp_organisation records, this can be either:</p>
+        <ul>
+            <ul>
+                <li>ppo_seq - a unique sequence number for the records;</li>
+                <li>ppo_ni_no - NI/PPS/Social Security number;</li>
+                <li>hrp_id - the HR ID; or</li>
+                <li>at least one of ppo_surname, ppo_1stname, ppo_2ndname, ppo_dob - the <MadCap:variable name="Variables.last name" />, first name, middle names, and date of birth.</li>
+            </ul>
+        </ul>
+        <p>For all the other tables, the ppo_seq field must be included, but the values for this can be either the sequence number, the NI/PPS/Social Security number, the HR ID, or the person's name.</p>
+        <ul>
+            <ul>
+                <li>The pp_events table additionally requires the ppe_type field, which should be one of the following:</li>
+                <ul>
+                    <li>HRAPP - for appraisals</li>
+                    <li>HRDIS - for disciplinaries</li>
+                    <li>HRGRE - for grievances</li>
+                    <li>HRSAL - for salary history records</li>
+                    <li>UD - for your own user defined type</li>
+                </ul>
+                <li>The pp_orgtypes table requires the ppt_type field, which should be one of the following:</li>
+                <ul>
+                    <li>CON - for contacts</li>
+                    <li>BEN - for beneficiaries</li>
+                    <li>REF - for correspondence</li>
+                </ul>
+                <li>The pp_orgtypes table for contacts requires the pqy_deptype&#160;field, which should be one of the following:</li>
+                <ul>
+                    <li>S - for Spouse</li>
+                    <li>L - for Domestic Partner</li>
+                    <li>F&#160;- for Former Spouse</li>
+                    <li>D&#160;- for <MadCap:variable name="Variables.hr dependant" style="text-transform: capitalize;" /></li>
+                    <li>O&#160;- for Other</li>
+                </ul>
+                <li>The pp_benefits table requires either the ppb_type field, which should be a benefit type you have defined using <span class="function" title="Function:%WSYBCRTHR0">Lookup Codes</span>, or - even better - the hrb_seq field, which specifies the exact benefit (as defined in <span class="function" title="Function:%WHRBHRB">Benefits</span>) and is essential to create a new benefit record.</li>
+                <li>The pp_orgtime table requires the pph_type field, which should be one of the following:</li>
+                <ul>
+                    <li>HOLBULK - for a <MadCap:variable name="Variables.holiday" /> period</li>
+                    <li>ABSBULK - for an absence period</li>
+                    <li>HRHOL - for an individual <MadCap:variable name="Variables.holiday" /> day within an already existing bulk <MadCap:variable name="Variables.holiday" /> period</li>
+                    <li>HRABS - for an individual absence day within an already existing bulk absence period</li>
+                    <li>HRSHORTABS - for short absences</li>
+                    <li>HRLATE - for lateness records</li>
+                    <li class="ListBullet1">Any code defined under <span class="function" title="Function:%WSYBCRTHR0">Lookup Codes</span> for Accrual Plan Type when using benefit plans under the enhanced Personnel Workbench.</li>
+                </ul>
+            </ul>
+        </ul>
+        <p>Note that when creating a bulk <MadCap:variable name="Variables.holiday" />/absence period, the individual days within that period are created automatically for you. Also, when loading <MadCap:variable name="Variables.holidays" />, be aware that if the pph_authby field (author<MadCap:variable name="Variables.is" />ed by) is not included, the <MadCap:variable name="Variables.holiday" /> is treated as a new <MadCap:variable name="Variables.holiday" /> request rather than a booked <MadCap:variable name="Variables.holiday" />.</p>
+        <ul>
+            <li>The pp_course_at table requires fields to specify the particular course/assessment event (stored in table pp_course) the attendance is for. You can include any of the fields from the pp_course table in the load file to identify this, and at a minimum you should include the course code (crs_code) and start date (crs_date). If no pp_course can be found that matches the provided values, a new course/assessment event record is created for the attendance.</li>
+        </ul>
+        <p>The subsequent lines in the load file should each contain a comma separated list of values for these fields (one line per database record). If the key field values provided match a single existing database record, the load routine attempts to update this record. If the key values do not match a record, a new record is created for the data. If they match multiple records, you receive an error message for the line.</p>
+        <p>For any field which is held in the database as a code or sequence number, but is ordinarily displayed as an associated description (for example, fields which use lookup codes), the value in the load file can be either the code or the description. The only exception to this is the ppo_seq field for the pp_organisation table, since other fields in this table may be used to identify an existing record.</p>
+        <h2 MadCap:autonum="1.2 ">Example Load File</h2>
+        <p>The file below could load paid <MadCap:variable name="Variables.holidays" /> for John Smith and Peter Jones, which have been author<MadCap:variable name="Variables.is" />ed by Sarah West:</p>
+        <blockquote dir="ltr" style="margin-right: 0px;">
+            <p><span class="screentype">pp_orgtime <br />pph_type=HOLBULK,pph_payable=yes,pph_reason=HOLENT <br />ppo_seq,pph_date,pph_to,pph_authby <br />John Smith,23/07/2007,03/08/2007,Sarah West <br />Peter Jones,22/08/2007,31/08/2007,Sarah West </span>
+            </p>
+        </blockquote>
+        <h2 MadCap:autonum="1.3 ">Examples of Setting Up .csv Files to Load Extra (cex_*) Fields</h2>
+        <p>For information on how to set up tables to have extra fields, refer to the document entitled "SY-HT007: <em>How to Create, Use, and Maintain User Defined Data</em>&#160;at <a href="http://support.coins-global.com/usa/coins-oa/howtos-oa/SY/SY-HT007_CreateMaintainUserDefData.pdf">http://support.coins-global.com/usa/coins-oa/howtos-oa/SY/SY-HT007_CreateMaintainUserDefData.pdf</a>, which is found on the US Client Area website (a User ID and password is required&#160;to access this area).</p>
+        <p><strong>Example 1:</strong> Loading the extra field<em> cex_cha__5</em> in the Personnel table is shown in the example below, where the <em>cex_type</em> is set to the table and the <em>cex_key*</em> fields are set to the key for the table - in this case, the value of the <em>ppo_seq</em> field:</p>
+        <blockquote dir="ltr" style="margin-right: 0px;">
+            <p><span class="screentype">co_extra<br />kco,cex_type,cex_key1,cex_cha__5<br />0,pp_organisation,2153,Thing 1<br />0,pp_organisation,3085,Thing 2</span>
+            </p>
+        </blockquote>
+        <p><strong>Example 2:</strong> Loading extra fields against the Contacts table (spouse, <MadCap:variable name="Variables.hr dependants" />, emergency contacts) is shown in the example below.&#160;In this case, <em>cex_type</em> is set to<em> pp_orgtypes</em>, <em>cex_key1</em> is set to the value of the<em> ppo_seq</em>, <em>cex_key2</em> is set to the contact type (CON), <em>cex_key3</em> thru <em>cex_key6</em> are set to the <MadCap:variable name="Variables.last name" />, first name, middle name, suffix, the key field to the table, and <em>cex_cha__1</em> is set to the user defined data:</p>
+        <blockquote dir="ltr" style="margin-right: 0px;">
+            <p><span class="screentype">co_extra<br />kco,cex_type,cex_key1,cex_key2,cex_key3,cex_key4,cex_key5,cex_key6,cex_cha__1<br />0,pp_orgtypes,2153,CON,Goering,Robert ,Edward,Jr,goeringre@yahoo.com<br />0,pp_orgtypes,3085,CON,Ford,Jonathan,James,Jr,jonjamesf@gmail.com<br />0,pp_orgtypes,3085,CON,Ford,Jonathan,,,jonford@yahoo.com</span>
+            </p>
+        </blockquote>
+        <h2 MadCap:autonum="1.4 ">Special Notes on Drug Testing and Sample Load Files</h2>
+        <p>The hr_medical and pp_medical tables are closely related: hr_medical is a parent table to pp_medical. Both tables have a sequence number (hrm_seq) as the key value that represents a unique number for the type of drug test administered. The hr_medical data should be loaded first, followed by the pp_medical data. If pp_medical data is loaded first, the load could fail because the system has no corresponding hr_medical data to relate the pp_medical data to.</p>
+        <p>The hr_medical layout is shown here:</p>
+        <blockquote dir="ltr" style="margin-right: 0px;">
+            <p><span class="screentype">hr_medical</span>
+            </p>
+            <p><span class="screentype">hrm_seq,hrm_tested,hrm_tdate,hrm_notes</span>
+            </p>
+            <p><span class="screentype">6,Cause,07/11/08,"Converted On: 05/04/10"</span>
+            </p>
+        </blockquote>
+        <p dir="ltr">The pp_medical file layout for personnel tested under the Drug Test entered above is shown here:</p>
+        <blockquote dir="ltr" style="margin-right: 0px;">
+            <p><span class="screentype">pp_medical</span>
+            </p>
+            <p><span class="screentype">ppo_seq,hrm_seq,ppm_tdate,ppm_reason,ppm_disposition,ppm_dispute,ppm_found,ppm_level,ppm_notes,ppm_notif,ppm_ldate,ppm_result,ppm_id,ppm_specimen_type,ppo_dept,job_num,ppo_mgr,ppo_location,ppo_jobtitle,pqm_xml^CONV </span>
+            </p>
+            <p><span class="screentype">001682108,6,07/11/08,"Cause","A",no,"THC","","TRADE&#160;CODE&#160;SPECIFIC&#160;FOR&#160;CAUSE",yes,07/17/08,"P","","URINE","400","41034","","","832","C100504" </span>
+            </p>
+            <h2 MadCap:autonum="1.5 ">Load Captions</h2>
+            <p dir="ltr">There are five different types of Captions available. In the PrimeLearn environment, they are listed as follows (and on the screen below).</p>
+            <ul>
+                <li>CH = Character</li>
+                <li>LO = Logical</li>
+                <li>DA = Date</li>
+                <li>DE = Decimal</li>
+                <li>IN = Integer</li>
+            </ul>
+            <p>
+                <img src="../../Resources/Images_G-I/HR/HR_510201.png" />
+            </p>
+            <p>On the Personnel Workbench, you can see all of the Captions, as shown below.</p>
+            <p>
+                <img src="../../Resources/Images_G-I/HR/HR_510202.png" />
+            </p>
+            <p>If you turn on the debugger (Ctrl+Shift+C) and go to the Section/Fields section, you will see the screen below.</p>
+            <p>
+                <img src="../../Resources/Images_G-I/HR/HR_510203.png" />
+            </p>
+            <p>Then search (Ctrl+F) for <b>Caption</b>:</p>
+            <p style="text-align: center;">
+                <img src="../../Resources/Images_G-I/HR/HR_510204.png" class="FullWidth" />
+            </p>
+            <p>These will be the field names on the Personnel Data Load sheet.</p>
+        </blockquote>
+    </body>
+</html>

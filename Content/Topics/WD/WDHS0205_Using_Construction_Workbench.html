@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2054" MadCap:lastWidth="1644">
+  <head>
+    <title>Using the Construction Workbench</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Using the Construction Workbench</h1>
+    <p>Here is a summary of the process:</p>
+    <h2>Plan the Build Schedule</h2>
+    <ul>
+      <li>Make sure plots have the appropriate construction <MadCap:variable name="Variables.programme" /> associated with them; you can update the <span class="field"><MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /></span>field from the <span class="function" title="Function:%WHS1330BVWB">Plots</span> tab.</li>
+      <li>Enter the start (or end) dates and calculate the other dates by applying the standard <MadCap:variable name="Variables.programme" />. See <a href="WDHS0203_Forecast_Matrix.html">Construction Workbench - Forecast Matrix</a>.</li>
+      <li>Make any necessary adjustments to the <MadCap:variable name="Variables.programme" /> for individual plots.</li>
+      <li>Take a baseline copy. See <a href="WDHS0209_Copying_Forecasts.html">Copying Construction Forecasts</a>.</li>
+    </ul>
+    <h2>Build Release</h2>
+    <ul>
+      <li>Release plots using the Build Release action on the <span class="function" title="Function:%WHS1330BVWB">Plots</span> tab (or by running the Build Release event from the summary of an individual plot).</li>
+      <li>If required, you can make the build release subject to author<MadCap:variable name="Variables.is" />ation.  See <a href="WDHS0208_Authorising_Sales_Events.html">Author<MadCap:variable name="Variables.is" />ing Sales Events</a>. </li>
+    </ul>
+    <h2>Update Progress</h2>
+    <ul>
+      <li>There are various options:</li>
+      <ul>
+        <li>Print a <MadCap:variable name="Variables.tick" /> sheet (using <span class="function" title="Function:%WHS4120RVSI">Construction Progress Tick Sheet</span>), send to site and use the marked-up report for update on the <span class="function" title="Function:%WHS1332SVSI">Progress Tick Sheet</span> tab. See <a href="WDHS0204_Progress_Tick_Sheet.html">Construction Workbench - Progress <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> Sheet</a>.</li>
+        <li>
+          <a href="WDHS0206_Updating_from_Forecast.html">Updating Progress from the Forecast</a>.</li>
+        <li>
+          <a href="WDHS0207_Updating_by_Construction_Stage.html">Updating the Progress by Construction Stage</a>.</li>
+      </ul>
+      <li>E/W if beyond Build Release</li>
+    </ul>
+    <h2>Monitor / Report</h2>
+    <ul>
+      <li>Print out a Gantt chart using <span class="function" title="Function:%WHS4130RVSI">Construction Gantt Chart</span>.</li>
+      <li>The Plots tab highlights differences between the baseline build completion dates and the expected build completion dates.</li>
+    </ul>
+    <h2>Re-schedule / budget review</h2>
+    <ul>
+      <li>Save Baseline to historical copy</li>
+    </ul>
+    <div class="configuration">
+      <h2 class="print">Configuration for Construction Workbench</h2>
+      <h3>Configuration</h3>
+      <ul>
+        <li>Set the relevant parameters using <span class="function" title="Function:%WHS0000BSYP">Module Parameters</span>.</li>
+        <li>Set up build <MadCap:variable name="Variables.programme" />s using <span class="function" title="Function:%WHS2240BHPT">Construction <MadCap:variable name="Variables.programme" style="text-transform: capitalize;" /></span>.  The construction <MadCap:variable name="Variables.programme" />s will need to be appropriately configured (with different <MadCap:variable name="Variables.programme" />s for two storey houses, three storey houses, apartment shells, apartment fit outs, blocks of garages, show homes, etc).  This will also need to include a dummy construction <MadCap:variable name="Variables.programme" /> for any non-sellable plots which are to be excluded from the construction workbench (and for which all stages will be marked as excluded). </li>
+        <li>Link house types and plots to the appropriate construction <MadCap:variable name="Variables.programme" />s.</li>
+        <li>Use <span class="function" title="Function:%WHS2011BHEV">Sales Workbench Events</span> to configure events for build release and de-release, using the CSREL and CSDEREL event codes respectively.  The build release event can be configured to require author<MadCap:variable name="Variables.is" />ation.  For information about how to do this, see <a href="WDHS0129_Authorised_Sales_Events.html">Author<MadCap:variable name="Variables.is" />ed Sales Events</a>.  This will enable releases to be author<MadCap:variable name="Variables.is" />ed either directly online by the author<MadCap:variable name="Variables.is" />er or by a clerk/secretary based on a signed <span class="function" title="Function:%WHS3440RHTR">Sales Events to Author<MadCap:variable name="Variables.is" />e</span> report.  </li>
+        <li>Set up any required <MadCap:variable name="Variables.vp site" /> captions (such as for site works start and end dates) using <span class="function" title="Function:%WHS2271BSCP"><MadCap:variable name="Variables.vp site" style="text-transform: capitalize;" /> Captions</span>; specify which captions to show on the summary tab using <span class="parameter">HS/PRWBCG</span>.</li>
+        <li>Set up any holidays using <span class="function" title="Function:%WHS2910BCOI">Construction Holidays</span>.</li>
+        <li>Set up forecast types using <span class="function" title="Function:%WHS204IBCTA">Plot Forecast Types</span>.</li>
+      </ul>
+      <h3>Maintenance</h3>
+      <ul>
+        <li>Use <span class="function" title="Function:%WVP2110BHPG">Plot Groups</span> to set up plot groups for apartments and shells on the <MadCap:variable name="Variables.vp site" />.</li>
+      </ul>
+    </div>
+  </body>
+</html>

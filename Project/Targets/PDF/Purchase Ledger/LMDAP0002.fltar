@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="PL Invoice Matching 3 Way"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  PatchHeadingLevels="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  InjectEmptyPages="true"
+  ConditionTagExpression="exclude[COINS.1104 or COINS.AUOnly or COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly] "
+  conditions="COINS.PrintOnly"
+  MasterToc="/Project/TOCs/PL/LMDAP0002.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/PDF_Body_UK_2017.flpgl">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ConvertBookmarks="true" />
+  <Variables>
+    <Variable
+      Name="Document Variables/Document Reference">LMDAP0002</Variable>
+    <Variable
+      Name="Document Variables/Document Title">3-Way Invoice Matching</Variable>
+    <Variable
+      Name="Document Variables/File Name">LMDAP0002</Variable>
+    <Variable
+      Name="Document Variables/Modules">Purchase Ledger</Variable>
+    <Variable
+      Name="Document Variables/Version">11.08</Variable>
+    <Variable
+      Name="General/Year">2018</Variable>
+  </Variables>
+</CatapultTarget>

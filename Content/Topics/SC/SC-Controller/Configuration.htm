@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="839" MadCap:lastWidth="601">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Configuration</h1>
+        <p>&#160;</p>
+        <h2 MadCap:autonum="1.1 ">System</h2>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/SC-Controller-cfg-0001.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/SC-Controller-cfg-0002.png" class="FullWidth" />
+        </p>
+        <p>OA to publish to <MadCap:variable name="General.ProductName" /> Construction Cloud:</p>
+        <p>&#160;</p>
+        <p>CASHOST - cas-delta-oa.azurewebsites.net - new value will be provided by <MadCap:variable name="General.ProductName" /> for live environment</p>
+        <p>CASPORT - 443</p>
+        <p>CASRESP - /cas/rid</p>
+        <p>CASURL - <span style="color: #1e90ff;">https://cas-delta-oa.azurewebsites.net/dzrlwbg8vosrnxi4ij9fzzbtlemwtqxxujvf9p148vcqdb11u05wzyc2nvpzxjkescv74jz4272v41oecr4lmbf3vwbp77i7oo9crb38qu0kyfs6872bly2lgojtaev4</span> - new value will be provided by <MadCap:variable name="General.ProductName" /> for live environment.</p>
+        <p>&#160;</p>
+        <h2 MadCap:autonum="1.2 ">OA to Call <MadCap:variable name="General.ProductName" /> Construction Cloud Webservices:</h2>
+        <p>CASWS - https://cas-delta-jws.azurewebsites.net:443</p>
+        <p>CASWSID - OA-SCPORTAL-TEST</p>
+        <p>CASWSSEC- fYNm2vBhcBsXNctFUIj3vQcEVjQwvdlVmE0SUeUPU8zWR4TpumQN3pXfDBEoBCv9</p>
+        <p>(Uncommit and Cancel in OA will use this functionality)</p>
+        <h2 MadCap:autonum="1.3 ">Firewall settings</h2>
+        <p>Firewall settings should allow OA to access CASHOST via https (if CASPORT is set to 443) and inbound https traffic from IP addresses 52.178.201.120, 52.178.202.216, 52.178.201.155, 52.178.201.215 to https://coinscloudtest.morgansindall.com/cgi-bin/ci-scportal-ws/wouesb.p</p>
+        <p>New link should be provided by Morgan Sindall for live environment</p>
+        <p>New IP address (es) will be provided by <MadCap:variable name="General.ProductName" /> for live environment.</p>
+        <h2 MadCap:autonum="1.4 ">Progress configuration:</h2>
+        <p>SSL certificate bc2025.cer must be installed for Progress to establish https connection to Microsoft Azure.</p>
+        <h2 MadCap:autonum="1.5 ">OA Publishes</h2>
+        <p>All Publishes configured in KCO 55:</p>
+        <p>DB &amp; Process Publishes:</p>
+        <p>-	(sysdb.COINSAppStudio)</p>
+        <p>- ci_company.COINSAppStudio DB publish</p>
+        <p>-	ci_office.COINSAppStudio</p>
+        <p>-	jc_job.COINSAppStudio (updating Contract) – dependent on OperatingCompany</p>
+        <p>-	department.COINSAppStudio</p>
+        <p>-	pr_dcost.COINSAppStudio</p>
+        <p>-	cr_table.COINSAppStudio (updating Grade) – dependent on OperatingCompany</p>
+        <p>-	pr_locat.COINSAppStudio (updating Location)</p>
+        <p>-	co_currency.COINSAppStudio (updating Currency)</p>
+        <p>-	co_config.COINSAppStudio (enhancing OperatingCompany)</p>
+        <p>-	co_vat.COINSAppStudio (updating Vat)</p>
+        <p>-	pp_organisation.COINSAppStudio (updating Person)</p>
+        <p>-	jcu903 - Contract security - process publish</p>
+        <p>-	sc_defn.COINSAppStudio (updating SubcontractCertificateDefinition) –</p>
+        <p>-	sc_defndet.COINSAppStudio (updating SubcontractCertificateDefinitionLine) – dependent on SubcontractCertificateDefinition</p>
+        <p>-	Scu902 - subcontract order - process publish</p>
+        <p>-	Scu903 - SC Certificates - process publish</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Account and [%=Variables.Jc Contract caps%] Security</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Account and <MadCap:variable name="Variables.Jc Contract caps" /> Security</h1>
+        <p>You can control which <MadCap:variable name="Variables.jc contracts" /> or <span class="module">General Ledger</span> accounts each user has access to. If a user is denied access to an account or <MadCap:variable name="Variables.jc contract" />, they will be unable to enter transactions, report or <MadCap:variable name="Variables.enquire" /> on it, maintain it, and so on. The account or <MadCap:variable name="Variables.jc contract" /> will not appear on their lookups, and if they enter the account code or <MadCap:variable name="Variables.jc contract" /> code, <MadCap:variable name="General.ProductName" /> issues a message informing them that they are not allowed to access it. </p>
+        <p>Use <span class="function" title="Function:%WJC2160BCOS"><MadCap:variable name="Variables.Jc Contract caps" /> Security</span> and <span class="function" title="Function:%WGL2120BCOS">GL Security Maintenance</span>.&#160; <span class="function" title="Function:%WJC2320BCOS">Memo Security</span> and <span class="function" title="Function:%WJC2200BCOS">Employee Security</span> operate in a similar way. </p>
+        <div class="process">
+            <h2 class="print">To set up account or <MadCap:variable name="Variables.jc contract" /> security:</h2>
+            <ol>
+                <li>A parameter defines which field on the account or <MadCap:variable name="Variables.jc contract" /> record is used as the basis of security.&#160; For example, security could be based on the contract group field, or one of the account analysis sets.</li>
+                <li>In the security maintenance function, for each user or group, you enter a can-do list of values for that field.&#160; The user then has access to all accounts or <MadCap:variable name="Variables.jc contracts" /> on which the security field matches the list. 
+<p>For example, if contract security is based on the contract group field, an entry of <span class="userinput"><span class="nw">!CIVIL,*</span></span> allows the user access to all <MadCap:variable name="Variables.jc contracts" /> except those belonging to the group CIVIL.</p></li>
+                <li>You can also specify a can-do list of individual accounts or <MadCap:variable name="Variables.jc contracts" /> that you want to grant or deny the user access to. 
+<p>For example, to allow the user access to all <MadCap:variable name="Variables.jc contracts" /> belonging to the group CIVIL except <MadCap:variable name="Variables.jc contract" /> 1652, enter <span class="userinput">CIVIL</span> in the Security List frame and <span class="userinput"><span class="nw">!1652</span></span> in the Code frame.</p></li>
+            </ol>
+            <p>If you change the security control field, or decide to implement security after the records (for example, the <MadCap:variable name="Variables.jc contracts" /> or GL accounts) have already been set up, you need to regenerate the security file. 
+</p>
+            <h2>To regenerate the security file:</h2>
+            <ol>
+                <li>Go to the appropriate Re-generate Security function (for example, <span class="function" title="Function:%WGL7060RGLA">Re-generate GL Account Security</span> or <span class="function" title="Function:%WJC7060RCOS"><MadCap:variable name="Variables.Jc Contract caps" /> Security</span>).</li>
+                <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="userinput">Continue? </span>box and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.&#160;</li>
+                <p><MadCap:variable name="General.ProductName" /> re-generates security based on the new control field.</p>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Account and <MadCap:variable name="Variables.jc contract" /> security configuration</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/GL/gl_acctsec.htm" />
+                    <MadCap:relatedTopic src="../Parameters/JC/jc_jobsec.htm" />
+                    <MadCap:relatedTopic src="../Parameters/JC/jc_cosecdef.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

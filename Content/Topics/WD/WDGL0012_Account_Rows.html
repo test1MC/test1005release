@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en">
+    <head><title>GL Reporter - Account Rows</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" /> <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">GL Reporter – </MadCap:conditionalText>Account Rows</h1>
+        <p>The main content of a GL report will be <span class="module">General Ledger</span> account lines.</p>
+        <p>Account lines display information from the <span class="module">General Ledger</span> account record. For example you may want the balance of the account, the description of the account or the account number. These would all require an Account Line to be selected.</p>
+        <p>You select which accounts to include in the report by entering an account row, and filling in a <span class="Field">From</span> and <span class="Field">To</span> range, or a can-do list in the <span class="Field">Matches</span> field.&#160; You can select accounts by whole account, sector, expense code, analysis set etc. You can also use <a href="WDGL0013_Report_Tokens.html">Report Tokens</a>&#160;to allow the user to specify which accounts to include when they run the report.</p>
+        <p>If an account line is shown in detail, a line will appear in the report for every individual account that is included in the selection. If the line is shown in Summary (detail flag un-<MadCap:variable name="Variables.tick" />ed), only one line will be displayed showing the balance of the entire account range selected. Therefore, it is possible for the report definition to just contain one Account line (selecting all accounts) and if <MadCap:variable name="Variables.tick" />ed as Detailed, <MadCap:variable name="General.ProductName" /> will display a row in the report for every account.</p>
+        <p class="todo" MadCap:autonum=" ">To add a report row</p>
+        <ol>
+            <li>
+                <p>Select <b>Account Line</b> as the row type from the <span class="field">Type</span> dropdown.</p>
+                <p>
+                    <img src="../../Resources/Images_G-I/GL/GL Reporter/Account_Line_Selector.png" />
+                </p>
+            </li>
+            <li>
+                <p>Enter a Description for the line. This is to help you identify the line when configuring the report – it will not be printed on the report itself.</p>
+            </li>
+            <li>
+                <p>Use the following fields to identify which accounts you want to include: <span class="field">Account</span>, <span class="field">Account Type</span>, <span class="field">Sector</span>, <span class="field">Expense</span>, plus the analysis set fields.</p>
+            </li>
+            <li>
+                <p>Populate the remaining fields as necessary.</p>
+                <div class="FieldTable">
+                    <div class="ListHead">
+                        <div class="ColHead">
+                            <p>Field</p>
+                        </div>
+                        <div class="ColHead">
+                            <p>Description</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Company Group</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The group of companies to report on.</p>
+                            <p>This allows the user to write reports which access COINS companies other than the ‘current’ company. I.e. you may be writing a report in company No. 001, but wish to report on companies 001, 002 and 003. Specify the company group to select from here. Note that it may therefore be desirable to create a company group for each individual COINS company (in the System module of COINS) as well as a group of ‘all companies’. That way, you could specify a report that produced either report rows or columns of each COINS company, plus a consolidated view.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Currency Type</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The base currency for conversion if you are using more than one currency.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Percent Line</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The line number to reflect as a % of another row e.g. Profit as a % of Total Sales.</p>
+                            <p>Enter the row number of the report that you would like to show this line amount as a percentage of. Note that the row number that you refer to must already exist in the report definition. (i.e. it must be above this current line in the report). i.e. row 10 could not contain a reference to row 11 in its percentage line field. However, row 11 could contain a reference to row 10.</p>
+                            <p>Note that the Column tab lines must also be flagged as a % line for these calculations to work. Otherwise the report will show the value of the row, rather than its % value.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Divide Row</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The line number to divide a row by another row.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Sort</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The order to sort the report. This allows you to sort by account, account code element or analysis set so that accounts will show in an order different to the full account code sequence. You can have up to 5 levels of sort. e.g. 1 = Account, 2= Analysis Code, 3 = Branch, 4 = Dept, 5 = Detail.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Header/Footer Level</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The level corresponds to a set of header and footer column fields configured in Report Columns. The header/footer allows you to specify which header/footer to use at the relevant break for the corresponding sort option. These header or footer lines are then referenced on the Column tab of the report.</p>
+                            <p>e.g. if you put a 6 in the header/footer level, then it would use the columns you had set up for show on levels H6 and F6 when displaying the header and footers.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Print Line</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>Print the line on the report or just process to accumulate report values.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Print Zero</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>Print zero balances on the report.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Reverse Value</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>Display negative values as positive and vice versa.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Detail</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>To print balances in detail or a summary. Detail mode will show all account codes in the selected filter ranges for account codes with one line for each account code. Summary mode will total all account balances on this report as one line.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Print When</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The type of balances to be printed on reports i.e. debits, credits.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Account Type</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The type of accounts to be included in the report i.e. Balance Sheet only, Profit and Loss only, or All Accounts.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Save Into</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>This field is used for calculations and total rows of accounts which will then be printed and used on total lines. The unique name to group values for saving into this row i.e. the name of the accumulator. This allows you to add or subtract from a subtotal in a report (which you can ‘name’ to call upon later).</p>
+                            <p>e.g. In a Profit and Loss Report, Sales might be added into an accumulator named for ‘Sales’ and Cost of Sales might be added into an accumulator named ‘CoS’ and these two would then be totalled into an accumulator called ‘GP’ for Gross Profit. Multiple Account lines and/or total lines can ‘save into’ a total.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Operand</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>This works with the ‘Save Into’ field for calculations. Determines whether the values are added to or subtracted from the accumulator value i.e. + or -</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Class</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The font name and size for the report e.g. Arial or Bold, 10pt or 12pt.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Variant</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>A variant to be used for Header or Footer Total.</p>
+                        </div>
+                    </div>
+                    <div class="FieldBlock">
+                        <div class="FieldLabel">
+                            <p>Extra</p>
+                        </div>
+                        <div class="FieldDef">
+                            <p>The format for the variant.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <MadCap:snippetBlock src="../GL/GL Reporter/Save_Undo.flsnp" />
+            </li>
+        </ol>
+        <h2>Percentage lines</h2>
+        <p>You can show one line as a percentage of another.&#160;For example, if you have a&#160;<MadCap:variable name="Variables.turnover" /> line and want to show costs for a group of accounts as percentages of <MadCap:variable name="Variables.turnover" />:&#160;</p>
+        <ol>
+            <li>
+                <p>In the <span class="field">Percent Line</span>field on the "account costs" row, enter the row number of the <MadCap:variable name="Variables.turnover" /> row. Note that the row number that you refer to must already exist in the report definition (that is,&#160;it must be above this current line in the report).&#160;</p>
+            </li>
+            <li>
+                <p>Set up a column to show the percentage cost; <MadCap:variable name="Variables.tick" /> the&#160;<span class="field">Percentage Value</span>field. (Note: if the <span class="field">Percentage Value</span>field is not <MadCap:variable name="Variables.tick" />ed, <MadCap:variable name="General.ProductName" /> will report the value of the row, rather than its&#160;percentage value.)</p>
+            </li>
+        </ol>
+        <h2 MadCap:conditions="COINS.Redacted">Calculating totals</h2>
+        <p MadCap:conditions="COINS.Redacted">To calculate totals for a group of accounts, add the values from the account lines into an accumulator, then show that accumulator on a total line.&#160;In the <span class="field">Save Into</span>field, enter a code&#160;to identify an accumulator (you don't need to set the accumulators up anywhere).&#160; If the account row specifies a range or selection of accounts, the value from each account will be added to the accumulator.&#160;</p>
+        <p MadCap:conditions="COINS.Redacted">Then create a Total line, and enter the code for the accumulator in the <span class="field">Load From</span>field.&#160;You can add more than one accumulator together by entering a comma-separated list.</p>
+        <p MadCap:conditions="COINS.Redacted">You can also subtract values from an accumulator, by setting the <span class="field">Operand</span>field to <span class="userinput">-</span>.&#160;For example, in a Profit and Loss Report, sales costs might subtract from "GP" for Gross Profit.&#160;</p>
+        <p MadCap:conditions="COINS.Redacted">You can also add the value of a Total line into other accumulators to produce grand totals.</p>
+    </body>
+</html>

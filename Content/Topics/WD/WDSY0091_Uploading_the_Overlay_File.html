@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Uploading the Overlay File to the VSI-Fax Server</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Uploading the Overlay File to the VSI-Fax Server</h1>
+    <p>Once the TIFF overlay has been created, you need to upload this to the VSI-Fax server as follows:</p>
+    <div class="Code">$ vupload -d "Purchase Order Overlay" overlay order.tif </div>
+    <p class="noteheader">NOTE</p>
+    <div class="note">It is crucial that you do this as the VSI-Fax Administrator so the overlay is accessible by all users of VSI-Fax.</div>
+    <p>You can also use -u (update) or -x (delete) with vupload to overwrite or delete files:</p>
+    <div class="Code">$ vupload -u overlay order.tif </div>
+    <div class="Code">$ vupload -x overlay order.tif</div>
+    <p>You can check the overlay has been successfully uploaded by running the following command:</p>
+    <div class="Code">$ vupload -l overlay</div>
+    <p>The VSI-Fax server will return a list of the TIFF files that have been updloaded as overlays.</p>
+  </body>
+</html>

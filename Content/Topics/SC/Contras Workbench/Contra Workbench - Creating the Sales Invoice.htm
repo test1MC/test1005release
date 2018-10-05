@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="387" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Contra Workbench - </MadCap:conditionalText>Creating the Sales Invoice</h1>
+        <p class="Body">The <span class="Function">Create Sales Invoice</span> action on the Contra tab allows you to create a <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> invoice for the selected contra. This creates the invoice using the details populated on the recovery section.</p>
+        <p class="Body">Before the invoice can be created, the <span class="Field">Approved for Recovery</span> <MadCap:variable name="Variables.tick" />box must be <MadCap:variable name="Variables.tick" />ed.</p>
+        <p class="Body">The invoice will have the transaction type specified by the SL&#160;parameter <span class="parameter">CONTTYP</span>.</p>
+        <p class="Body">If there is an unposted <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span> batch of the type specified by <span class="parameter">SL/CONTTYP</span>, the invoice will be added to it, otherwise a new batch will be created. </p>
+        <p class="Body">If the SL parameter <span class="parameter">CONTSLPST</span> is set to Y, <MadCap:variable name="General.ProductName" /> tries to post the batch immediately. If <span class="parameter">CONTSLPST</span> is set to N, the batch remains unposted; if necessary you will be able to delete the invoice and re-create it from the <span class="Function">Contra Workbench</span> (though you will not be able to update the invoice, because it is linked to a contra).</p>
+        <p class="Body">When the invoice has been posted, the original source transaction is marked as matched against the invoice.</p>
+    </body>
+</html>

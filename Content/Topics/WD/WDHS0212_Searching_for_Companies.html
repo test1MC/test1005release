@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Searching for and Adding Companies, Offices or Contacts</title>
+        <style>/*<![CDATA[*/
+.resize
+{
+	max-width: 15cm;
+}
+.caption span.function
+{
+	color: inherit;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Searching for and Adding Companies, Offices or Contacts</h1>
+        <p>There are many places in <span class="module">House Sales</span> and <span class="module"><MadCap:variable name="Variables.customer care" style="text-transform: capitalize;" /></span> where you need to record the details of a company; for example:</p>
+        <ul>
+            <li>When adding a solicitor or management company for a <MadCap:variable name="Variables.vp site" />.</li>
+            <li>When adding a solicitor, mortgage lender or financial advisor to a purchaser record.</li>
+            <li>When adding an estate agent on a chain link record.</li>
+        </ul>
+        <p>A Search feature allows you to search the Company Information Workbench for companies or people, and to create new records if they don't already exist.&#160; This feature is launched using the Search button next to the Company fields, and is explained below in more detail.</p>
+        <div class="process">
+            <h2 class="print">To search for a company:</h2>
+            <ol>
+                <li>On the screen where you add or update the company, click the Search button.&#160; (You do not need to type anything in the Company, Office or Contact fields.)&#160;
+<p style="text-align: center;"><img src="../../Resources/Images_G-I/HS/HS_021201.png" /></p><MadCap:variable name="General.ProductName" /> displays the <span class="function" title="Function:%WHS1360FCIM">Company Information Workbench Search and Add</span> screen.</li>
+                <li>Type in the details you know for the company or person.
+<p style="text-align: center;"><img src="../../Resources/Images_G-I/HS/HS_021202.png" class="FullWidth" /></p><p>As you type, <MadCap:variable name="General.ProductName" /> searches the database for potential matches, and displays them below the search screen. &#160;</p><p style="text-align: center;"><img src="../../Resources/Images_G-I/HS/HS_021203.png" class="FullWidth" /></p><p>The list of possible matches is sorted by their score; this is based on how many of the fields you entered match the information on the Company Information Workbench records.</p><p>By default, the <span class="field">Match?</span> field is set to <span class="userselect">Not a Match</span>. This indicates that the company is not the one you were searching for. &#160;If none of the potential matches have an action selected, then,&#160;when you click the Process button at the bottom of the screen (step 4), <MadCap:variable name="General.ProductName" /> will create a new company record (and, depending on the details you entered, will also create new office, address and contact records).</p></li>
+                <li>If one of the lines in the Potential Duplicates list shows the information you are searching for,&#160;update the <span class="field">Match? </span>field as follows:
+<ul><li><p><span class="userselect">Company Only</span> -&#160;only the company is correct.</p>
+When you click the Process button&#160;(step 4) the following will take place:</li><ul><li>If you entered the first line of the address and a <MadCap:variable name="Variables.postal code" /> then a new office and address record will be created for the selected company.</li><li>If you entered a <MadCap:variable name="Variables.last name" /> then a new contact record will also be created against the new office record.</li></ul><li><p><span class="userselect">Company and Office</span> -&#160;the entry is for the correct company and office, but not the correct contact person.</p>
+When you click the Process button&#160;(step 4) the following will take place:</li><ul><li>If you entered a <MadCap:variable name="Variables.last name" /> then a new contact record will be created against the office record.</li></ul><li><p><span class="userselect">Company, Office and Contact</span> - the entry is for the correct company, office and contact.</p></li></ul><p class="noteheader">NOTE</p><div class="note">Do not change the <span class="field">Match? </span>field on more than one line.</div></li>
+                <li>Click the <img src="../../Resources/Images/COINS Graphics/SVG buttons/forwardprocess.svg" class="button" /> button.</li>
+                <li>
+                    <p><MadCap:variable name="General.ProductName" /> may warn you that you are about to create a new company.&#160; If so, click OK. &#160;</p>
+                    <p><MadCap:variable name="General.ProductName" /> populates the <span class="field">Company</span>, <span class="field">Office</span> and <span class="field">Contact</span> fields on the original screen with the appropriate information, and makes any necessary changes to the Company Information Workbench.</p>
+                    <p style="text-align: center;">
+                        <img src="../../Resources/Images_G-I/HS/HS_021204.png" />
+                    </p>
+                </li>
+            </ol>
+            <p class="noteheader">NOTES</p>
+            <div class="note">
+                <p>If <MadCap:variable name="General.ProductName" /> creates a new company record, the country is set to the value of the CI parameter <span class="parameter">DEFCNTRY</span>.</p>
+                <p>If <MadCap:variable name="General.ProductName" /> creates an office for a new company, the office type is set to the value of the CI parameter <span class="parameter">HOTYPE</span>. &#160;If the office is for an existing company, the office type is set to the value of the HS parameter <span class="parameter">REGOTYPE</span>.</p>
+            </div>
+        </div>
+    </body>
+</html>

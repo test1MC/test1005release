@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="977" MadCap:lastWidth="736">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Contra Workbench - </MadCap:conditionalText>Updating the Contra Record</h1>
+        <p class="Body">You can update the contra record to specify how you want to recover the costs. The update screen also shows the source details, which are taken from the source transaction.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Contra Details Update Screen</p>
+        <p class="screenshot">&lt;Screenshot required&gt;</p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Account</div>
+                <div class="FieldDef">
+                    <p>The account from which you want to recover the costs.</p>
+                    <p>This will ultimately be a <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> account. The lookup shows accounts from <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span>, <span class="module"><MadCap:variable name="Variables.Purchase Ledger caps" /></span> and <span class="module">Subcontract Ledger</span>, and which ledger or ledgers the account exists in. If you select a subcontractor or supplier account that does not have a matching customer account, <MadCap:variable name="General.ProductName" /> will attempt to create the customer account automatically, using the data from the supplier or subcontractor account (except the analysis, which will default from the SC parameter <span class="parameter">CONTANAL</span>). The new account created can be amended. If <MadCap:variable name="General.ProductName" /> is unable to create the account you will need to create it manually.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Recovery Amount</div>
+                <div class="FieldDef">
+                    <p>The amount to recover from the above account. This can be different from the contra cost.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Cost Balance</div>
+                <div class="FieldDef">
+                    <p>The unrecovered amount; this is calculated as the <span class="Field">Cost Amount</span> minus the <span class="Field">Recovery Amount</span>. </p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Cost Balance To</div>
+                <div class="FieldDef">If the <span class="Field">Cost Balance</span> calculated above is non-zero, you must enter a cost code to identify where this balance is costed. Normally this would be to a <MadCap:variable name="Variables.jc contract" /> cost account. You should only cost this to an unallocated costs code (as specified by the SC parameters <span class="parameter">CONTACT</span>, <span class="parameter">CONTCAT</span>, <span class="parameter">CONTJSC</span> and <span class="parameter">CONTSEC</span>) if you are intending to contra charge this amount to another subcontractor or supplier.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Recovery <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Code</div>
+                <div class="FieldDef">The output <MadCap:variable name="Variables.vat" /> code to be used on the SL invoice for the recovery amount.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Approved for Recovery</div>
+                <div class="FieldDef">
+                    <p>A <MadCap:variable name="Variables.tick" />box to indicate that the contra details have been checked and approved for recovery. This allows you to control situations where there is separation of duties (for example where the contras are maintained and approved by the Commercial team but the sales invoices are created by the Finance team).</p>
+                    <p>The userid and date/time of approval are recorded when this box is <MadCap:variable name="Variables.tick" />ed (and cleared if un<MadCap:variable name="Variables.tick" />ed), and are displayed to the right of the <MadCap:variable name="Variables.tick" />box.</p>
+                    <p>This can only be updated when no corresponding sales invoice has been posted.</p>
+                    <p>If <span class="Field">Approved for Recovery</span> has been <MadCap:variable name="Variables.tick" />ed, the other contra details cannot be updated.</p>
+                </div>
+            </div>
+        </div>
+        <p class="Body">You can also apply an administration charge to the recovery invoice.</p>
+        <div class="FieldTable">
+            <div class="FieldBlock">
+                <div class="FieldLabel">Admin Charge %</div>
+                <div class="FieldDef">The percentage of the cost amount to charge. If this is filled in, the <span class="Field">Admin Charge</span> is calculated automatically.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Admin Charge</div>
+                <div class="FieldDef">The amount of the administration charge. If this is filled in, the <span class="Field">Admin Charge %</span> is calculated automatically.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Post Admin Charge to</div>
+                <div class="FieldDef">If the <span class="Field">Admin Charge</span> is non-zero, this is the cost code that the administration charge will be posted to. Normally this would NOT be a cost code that matches the filtering for unallocated costs, unless you intend to charge this to another subcontractor or supplier.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Admin Charge <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Code</div>
+                <div class="FieldDef">The output <MadCap:variable name="Variables.vat" /> code to be used on the SL Invoice for the administration charge amount.</div>
+            </div>
+        </div>
+    </body>
+</html>

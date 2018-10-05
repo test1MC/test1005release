@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2460" MadCap:lastWidth="1290">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Understanding <MadCap:variable name="General.ProductName" /> Centric XML</h1>
+        <h2>&lt;Header&gt;</h2>
+        <p>The header portion of the XML is broken down into only two sections, the &lt;header&gt; tag and the &lt;login&gt; tag.</p>
+        <p>A lot of the fields here are used to determine where you are wanting to send the xml request to, fields such as &lt;Userid&gt; and &lt;from&gt; are not necessary and can be overlooked.</p>
+        <p>The header in its full form looks like this;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/COINS_XML_1.png" />
+        </p>
+        <p>This can be amended to look like the following (this is not inclusive of data but only the necessary headings)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/COINS_XML_2.png" />
+        </p>
+        <p>The data that needs to be in the header is relatively straight forward, the hostname is the actual host name of the server, this can be found either on the unix server or in RF under the customer information.</p>
+        <p>Example of a completed header is below, please note that the TestMsg flag is set to “false” this enables the web service request to be taken as a true request action.</p>
+        <p>The header information does not change regardless of which web service you use, the only change would be if the customer changes, i.e Taylor Wimpey instead of persimmons as their host name and login details would be different.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/COINS_XML_3.png" />
+        </p>
+        <h2>&lt;Body&gt;</h2>
+        <p>The body information will always be different, these are the defined fields and data that you are wanting to either insert into coins or get out of coins.</p>
+        <p>In this example we’ve been referencing and using HSESB001 which is the “release plot for sale” web service.</p>
+        <p>A separate document will be put into place to ensure the understanding of Mass loading data, this is more to do with understanding how to import large quantities of data into one request and how that is handled.</p>
+        <p>Earlier on in this document we referenced header tags that do not complete straight away, instead fields appear underneath the start tag and aren’t finished until the last field is referenced, an example being &lt;body&gt; &lt;/body&gt; and &lt;hs_transRow&gt; &lt;/hs_transRow&gt;</p>
+        <p>It is worth noting that the start of the xml will always start with &lt;COINSInterface&gt; and end with &lt;/COINSInterface&gt; (first and last tag),</p>
+        <p>From a data migration perspective, think of each tag (start and end) as separate columns in a spreadsheet, within each of the tags exist the data. (Remember this for later on)</p>
+        <p>The Body section consists of the following, the starting &lt;body&gt; tag and the ending &lt;/body&gt; tag. The Body tag is then in turn has an encapsulated &lt;hs_transRow&gt; start and end &lt;/hs_transRow&gt;.</p>
+        <p>Fields such as kco are less important if you are importing into only one kco which I would recommend dealing with separately anyway.</p>
+        <p>The external ID tag is also irrelevant but provides a way to identify externally the different rows if required.</p>
+        <p>Other fields will look relatively familiar such as job_num (Development) and vwb_code (plot)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/COINS_XML_4.png" />
+        </p>
+        <p>If you are ever unsure of the fields you can either search the web service list (wouesb.p) or navigate to within the UI (Coins OA) where the web service will be inserting records and check to see the fields and the field labels.</p>
+        <p>Once you are happy with the data, the completed form should look like the below, this is the header, body and the subsequent hs_transRow as well.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/COINS_XML_5.png" />
+        </p>
+        <p>&#160;</p>
+        <p>The most important parts of the XML is the testMsg being equal to false, the ending of each of the tags, and the rsp_action.</p>
+        <p>The rsp_action tells the web service what you are wanting to do with the web service,</p>
+        <p>There are three valid options</p>
+        <p>I = Insert – this inserts a row of data into the system.</p>
+        <p>U = Update – This updates information already present in the system.</p>
+        <p>D = Delete – This deletes a record that is in the system.</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1788" MadCap:lastWidth="1220">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Joining Tables</h1>
+        <p>Often, data from multiple tables gets combined into one, by doing a join. Conceptually, this is done by taking all possible combinations of rows (the "cross-product"), and then filtering out everything except the answer.</p>
+        <p>To begin each join a comma should end the previous statement before beginning the next one.  DO NOT add a comma to the end of the last statement as this will result in an error.</p>
+        <h2>EACH</h2>
+        <p>FOR is only used for the first table in the query, all subsequent tables must be accessed with EACH to start an iterating query that will find a single record on each pass</p>
+        <p>To establish a join, the table(s) you are adding to the query must have some relation to one or more tables already in the query.</p>
+        <p>Example Query on the coins database to retrieve all costheads (jc_costcode) that belong to contracts (jc_job) that belong to the logged in Company</p>
+        <p>&#160;</p>
+        <p class="Example">FOR&#160;EACH&#160;jc_job WHERE jc_job.kco = {kco},<br></br>EACH jc_costcode WHERE jc_costcode.kco = jc_job.kco<br></br>AND jc_costcode.job_num = jc_job.job_num</p>
+        <p>If you do not use the EACH keyword for a subsequent table then you must use one of the following to obtain a single record:</p>
+        <h2>FIRST</h2>
+        <p>Uses the criteria in the record-phrase to find the first record in the table that meets that criterion.</p>
+        <p>Progress finds the first record before any sorting.</p>
+        <h2>LAST</h2>
+        <p>Uses the criteria in the record-phrase to find the last record in the table that meets that criterion.</p>
+        <p>Progress finds the last record before sorting.</p>
+        <p>The FIRST and LAST keywords are especially useful when you are sorting records in a table in which you want to display information. Often, several related records exist in a related table, but you only want to display the first or last related record from that table in the sort. You can use FIRST or LAST in these cases.</p>
+        <h2>OF</h2>
+        <p>Some of the tables in the <MadCap:variable name="General.ProductName" /> database share a relationship based on common field names between record and table that also participate in a UNIQUE index for either record or table. All OF relationships within the coins database are detailed in the database enquiry and appear for each table in the form similar to:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Query Language/JOINS_1.png" class="FullWidth" />
+        </p>
+        <p>Where such a relationship exits, the OF statement may be used to relate one table to another.  So in our earlier example we used the query:</p>
+        <p class="Example">FOR&#160;EACH&#160;jc_job WHERE jc_job.kco = {kco},<br></br>EACH jc_costcode WHERE jc_costcode.kco = jc_job.kco<br></br>AND jc_costcode.job_num = jc_job.job_num</p>
+        <p>An OF relationship exists between jc_job and jc_costcode as can be seen in the database enquiry for jc_job:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Query Language/JOINS_2.png" class="FullWidth" />
+        </p>
+        <p>So we can re-write this query as:</p>
+        <p class="Example">FOR&#160;EACH&#160;jc_job WHERE jc_job.kco = {kco},<br />EACH jc_costcode OF jc_job</p>
+    </body>
+</html>

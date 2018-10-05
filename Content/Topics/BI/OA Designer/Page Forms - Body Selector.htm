@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="616" MadCap:lastWidth="602">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="OA Designer;Topics" />Page Forms - Body Selector</h1>
+        <p>A Body Selector contains the select elements (combo fields) which refresh the page when changed, passing their value to the new page.  This allows you to change the record set or contents of the records shown.  The Body Selectors are pre-defined and will require certain tables to be assigned as Header Tables to ensure that the appropriate RSP's are available.</p>
+        <p>You can put a "view as" option on a body selector for the different combo types (Value, Value/Description,Description/Value or Description).  The default is the value only.</p>
+        <h2 MadCap:autonum="1.1 ">Body Selector Example</h2>
+        <p>Contract Periods – available in jc_job (job-rsp)</p>
+        <p><span class="Function">EndPeriod</span> and <span class="Function">StartPeriod</span> 	Populate = <span class="Emphasis">glp-rsp.glp_period</span></p>
+        <p>An example of this is to restrict values to a certain <MadCap:variable name="Variables.Financial Period caps" /> by adding a Period Selection box in a Body Selector Field.</p>
+        <p>Create a Body Selector form on the page.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Body Selector_1.png" class="FullWidth" />
+        </p>
+        <p>Add Page Field for Body Selector :</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Body Selector_2.png" class="FullWidth" />
+        </p>
+        <p>Define the Body Selector, for example, EndPeriod and give it a label. EndPeriod can be populated via glp-rsp.glp_fdate and view-as set to Combo.</p>
+        <p>To the main Body of the Page add a RO_ Field which requires parameters.</p>
+        <p>For example:</p>
+        <p><span class="Emphasis">RO_CSSLValue^&lt;CSSLValueIndex&gt;|&lt;PeriodType&gt;[|&lt;PeriodOffset&gt;[|&lt;FDate&gt;[|PhaseMasks]]]</span>
+        </p>
+        <ul>
+            <li>^	Parameters Start</li>
+            <li>&lt;&gt;	Mandatory Parameter</li>
+            <li>[]	Optional Parameters</li>
+        </ul>
+        <p>An example of the Field Configuration is …</p>
+        <p><span class="Emphasis">RO_CSSLValue^2|TP|0|{EndPeriod}</span>
+        </p>
+        <p>Where {EndPeriod} will be populated from the Body Selector.</p>
+        <p>&#160;</p>
+        <h2 MadCap:autonum="1.2 ">Populating body selectors from generic lookup tables</h2>
+        <p>There are some generic 'Body Selector' fields which will enable you to be able to populate a body selector via the use of one of the generic lookup tables (ie co_table,sy_table or cr_table).</p>
+        <h3 MadCap:autonum="1.2.1 ">Syntax</h3>
+        <p>There is a field for looking at records held in :</p>
+        <ul>
+            <li>sy_table coc-rsp.UDSYCombo^{Name of sta_rtype}|[{Name given to Blank record}]</li>
+            <li>co_table coc-rsp.UDCOCombo^{Name of cta_rtype}|[{Name given to Blank record}]</li>
+            <li>cr_table coc-rsp.UDCRCombo^{Name of ctr_rtype}|[{Name given to Blank record}]</li>
+        </ul>
+        <p>For situations where a company 0 is in use, additional optins are available:</p>
+        <ul>
+            <li>co_table coc-rsp.UDCOCombo0^{Name of cta_rtype}|[{Name given to Blank record}]</li>
+            <li>cr_table coc-rsp.UDCRCombo0^{Name of ctr_rtype}|[{Name given to Blank record}]</li>
+        </ul>
+        <p>Examples:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Body Selector_3.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Body Selector_4.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Body Selector_5.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Body Selector_6.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Body Selector_7.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

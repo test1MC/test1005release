@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1559" MadCap:lastWidth="666">
+    <head><title>Configuring Mail Merge Letters</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Configuring Mail Merge Letters</h1>
+        <p>In each workbench you can generate letters to send to one or more individuals or companies. You need to set up a mail merge document in Word, using a datafile that <MadCap:variable name="General.ProductName" /> generates. On some letters, you can include information from the relevant captions.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDHS0113_Sending_a_Letter.html" />
+                <MadCap:relatedTopic src="WDHS0104_Mail_Shots.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To configure a letter:</h2>
+            <ol>
+                <li>Configure the letter record:</li>
+                <ol>
+                    <li>Go to <span class="function" title="Function:%WSY2000BMML">Letter Configuration</span>.</li>
+                    <li>Use the filter to display the letter type you want to add.</li>
+                    <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> to add a new letter.</li>
+                    <li>Fill in the fields (refer to the side-frame help).</li>
+                    <li>Select any captions that you want to include in the letter.</li>
+                    <li>For purchaser letters, select any utility companies that you want to include information about.</li>
+                    <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the letter.
+<p>The letter description will appear on the Options menu for the relevant workbench.</p></li>
+                </ol>
+                <li>Generate a sample data file that you can use to set up the Word document:
+<ul><li>If the letter will be run from an event, run the letter event in <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />.&#160; You only need to run the event in <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" /> when you are first configuring the letter, to generate the data file.&#160;</li><li>If there is a mail shot function in <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" />, run that to generate the data file.
+<p><MadCap:variable name="General.ProductName" /> saves the data file (either in the location you specified in <span class="function" title="Function:%WSY2000BMML">Letter Configuration</span>,or in a&#160; temporary folder on your PC, depending on the <span class="parameter">HS/OAMMDF </span>parameter), but since the Word document does not yet exist, it produces an error.</p></li></ul></li>
+                <li><span style="font-size: 1em;"><a href="WDSY9901_Mailmerge_Letters_in_Word.html">Create a mail-merge letter</a> in Word, using the data file as the data source. Note that there are various merge fields for the different people on the record; the combined name fields, like Combined_Names and Combined_Full_Names, will be different depending on whether the letter is configured to create a single letter, one per address, or one per person.</span>
+                </li>
+                <li>Save the document.</li>
+            </ol>
+            <ol>
+                <ul>
+                    <li>For<MadCap:snippetText src="../../Resources/Snippets/COINSplus.flsnp" />, save the document with the filename and location you entered in the <span class="field">Document</span> field.</li>
+                    <li>For <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" />, depending on the setting of the <span class="parameter">HS/OAMMDOC </span>parameter, either:</li>
+                    <ul>
+                        <li>put the document in the /word/ subdirectory of the <MadCap:variable name="General.ProductName" /> environment on the <MadCap:variable name="General.ProductName" /> server.</li>
+                        <li>put the document in the location you specified in <span class="function" title="Function:%WSY2000BMML">Letter Configuration</span>.</li>
+The filename must be the same as the name you entered in the&#160;Document field.&#160;</ul>
+                </ul>
+            </ol>
+            <p>Now when a user chooses the letter from the workbench Options menu, <MadCap:variable name="General.ProductName" /> generates the mail merge and opens the Word document in a new window.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The first time users generate a letter, they need to download an ActiveX; to do this they will need to have <MadCap:variable name="General.ProductName" /> set up as a <a href="WDSY0202_Local_Intranet_Site.html">trusted site</a>. See <a href="WDSY0203_ActiveX_Controls.html">Setting Internet Explorer to Allow ActiveX Controls</a>.</div>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Letter configuration - parameters</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_appttype.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_oammdoc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/HS/hs_oammdf.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

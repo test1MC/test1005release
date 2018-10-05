@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2099" MadCap:lastWidth="894">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Statement Print - Email</h1>
+        <p>Additional fields are available on the Statement Print selection screen. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/SL Customer Maintenance/StatementPrintEmail_1107_1.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>Email Template</h2>
+        <p>Email Template allows the user to choose which of the configured email templates to use when statements are emailed.</p>
+        <h2>Customer Print Methods</h2>
+        <p>If the SL parameter DEFPRN is set to Y, a new field, Customer Print Methods, is available.</p>
+        <p>Customer Print Methods allows the user to <MadCap:variable name="Variables.tick" /> or untick the Email, Fax and/or Print</p>
+        <p>options. This then filters the statements based on the Print Method defined on the customer record, and splits the output into separate PDFs for email and fax.</p>
+        <p>If the user ticks Email, <MadCap:variable name="General.ProductName" /> will email separate statements to:</p>
+        <ul>
+            <li>All the customers whose default print method is EMAIL.</li>
+            <li>All the customers whose default print method is blank but who have an email address.</li>
+        </ul>
+        <p><MadCap:variable name="General.ProductName" /> sends the emails from the address specified in the SENDFROM parameter.</p>
+        <p>If the user ticks Fax, <MadCap:variable name="General.ProductName" /> will fax separate statements to:</p>
+        <ul>
+            <li>All the customers whose default print method is FAX.</li>
+            <li>All the customers whose default print method is blank, and who have no email address but have a FAX number.</li>
+        </ul>
+        <p>If the user ticks Print, <MadCap:variable name="General.ProductName" /> will print separate statements for:</p>
+        <ul>
+            <li>All the customers whose default print method is PRINT.</li>
+            <li>All the customers whose default print method is blank and who have no FAX number or email address.</li>
+        </ul>
+        <p>In each case <MadCap:variable name="General.ProductName" /> produces a PDF output that shows all the transactions that were faxed, emailed or printed.</p>
+        <h2>Exclude Balances</h2>
+        <p>In addition, the field Exclude Balances less than, is displayed. If the user enters a value in Exclude Balances less than, statements with balances less than the value entered will not be printed, faxed or emailed.</p>
+        <p>&#160;</p>
+    </body>
+</html>

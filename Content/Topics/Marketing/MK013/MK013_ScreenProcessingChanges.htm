@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="360" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../../../PR CE Doc Projects/Content/Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">MK Personnel Workbench</h1>
+        <h2 MadCap:autonum="1.1"><a name="Personne"></a>Personnel Detail Tab</h2>
+        <p class="Body">A number of <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>fields are now available on the Personnel Detail tab, as shown in <MadCap:xref href="#PersDetFields" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. These fields behave differently depending on the HRLINK parameter value:</p>
+        <ul>
+            <li class="ListBullet3">If HRLINK=Y, fields are read only in <MadCap:variable name="Variables.Marketing" />, and data are synchron<MadCap:variable name="Variables.is" />ed one-way from the corresponding fields in the HR Personnel Workbench.</li>
+            <li class="ListBullet3">If HRLINK=N, fields are lookups and do not link with the HR Personnel Workbench. </li>
+            <li class="ListBullet4">The <span class="Field">Director</span>, <span class="Field">Supervisor</span>, <span class="Field">Manager</span>, and <span class="Field">Works To </span>fields use <MadCap:variable name="Variables.Marketing" /> Personnel.</li>
+            <li class="ListBullet4">The <span class="Field">HR&#160;Group</span>, <span class="Field">HR&#160;Sub Group</span>, and <span class="Field" style="font-weight: normal;">Analysis Sets </span>fields use HR lookups.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="PersDetFields"></a>Personnel Detail Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersDetFields.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Director</p>
+        <p class="IndentFieldDef">The employee's director.</p>
+        <ul>
+            <li class="ListBullet4">If HRLINK is <strong>Y</strong>, only employees with <span class="Field">Director </span><MadCap:variable name="Variables.tick" />ed in Job Assignment of the Organ<MadCap:variable name="Variables.is" />ation tab (HR module) appear in this field.</li>
+            <li class="ListBullet4">If HRLINK is <strong>N</strong>, any <MadCap:variable name="Variables.Marketing" /> personnel can be used as Director.</li>
+        </ul>
+        <p class="IndentBold">Supervisor</p>
+        <p class="IndentFieldDef">The employee's supervisor.</p>
+        <ul>
+            <li class="ListBullet4">If HRLINK is <strong>Y</strong>, only employees with <span class="Field">Supervisor </span><MadCap:variable name="Variables.tick" />ed in Job Assignment of the Organ<MadCap:variable name="Variables.is" />ation tab (HR module) appear in this field.</li>
+            <li class="ListBullet4">If HRLINK is <strong>N</strong>, any <MadCap:variable name="Variables.Marketing" /> personnel can be used as Supervisor.</li>
+        </ul>
+        <p class="IndentBold">Manager</p>
+        <p class="IndentFieldDef">The employee's manager.</p>
+        <ul>
+            <li class="ListBullet4">If HRLINK is <strong>Y</strong>, only employees with <span class="Field">Manager </span><MadCap:variable name="Variables.tick" />ed in Job Assignment of the Organ<MadCap:variable name="Variables.is" />ation tab (HR module) appear in this field.</li>
+            <li class="ListBullet4">If HRLINK is <strong>N</strong>, any <MadCap:variable name="Variables.Marketing" /> personnel can be used as Manager.</li>
+        </ul>
+        <p class="IndentBold">Works To</p>
+        <p class="IndentFieldDef">The 'works to' person for this employee, if relevant, such as a safety representative or project manager.</p>
+        <p class="IndentBold">HR Group</p>
+        <p class="IndentFieldDef">The group to which the employee belongs. Groups are a way of structuring people in your company. For example, you could have different geographical areas which people can belong to.</p>
+        <p class="IndentBold">HR Subgroup</p>
+        <p class="IndentFieldDef">The subgroup to which the employee belongs. Subgroups are related to groups and can help you structure your organ<MadCap:variable name="Variables.is" />ation. If you had a group called North Region, you could have a subgroup of North East Region.</p>
+        <p class="IndentBold">Analysis Sets</p>
+        <p class="IndentFieldDef">These fields differ depending on how you have set them up. Sample fields are shown below.</p>
+        <p class="IndentFieldDef">
+            <img src="../../../Resources/Images/MK013_Images/PersDetAnalysisSets.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.1">MK/HRORG&#160;Parameter</h3>
+        <p class="Body"> MK parameter <strong>HRORG </strong>lets you indicate which hierarchy fields are available on the Personnel Detail screen. <br /></p>
+        <table style="width: 100%;mc-table-style: url('../../../../../PR CE Doc Projects/Content/Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 153px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">MK/HRORG</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">Controls which hierarchy fields are available on the Personnel Detail screen. It is a multi-select list.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2">Personnel Browse</h2>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">New </MadCap:conditionalText>fields found on the Personnel Browse screen (<MadCap:xref href="#PersonnelBrowse" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>) are the same as those on the Personnel Detail screen. See Section <MadCap:xref href="#Personne" class="Figurenumberonly"><i>1.1</i></MadCap:xref> for more details.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="PersonnelBrowse"></a>Personnel Browse</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersBrowse.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">These fields can also be found on the Personnel Browse screen in the following areas:</p>
+        <ul>
+            <li class="ListBullet3">Column Sets (see below), Export, and Print</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersBrowseColSets.png" class="MaxPrintWidth" />
+        </p>
+        <ul>
+            <li class="ListBullet3">Search field (see below)</li>
+        </ul>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersBrowseSearchFields.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3"> Development Tab</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Development tab on the Personnel Browse screen has replaced the Skills/Quals tab.  This tab includes the following options: <strong>Training/Assessments</strong>, <strong>Qualifications</strong>, and <strong>Memberships</strong>, as shown in <MadCap:xref href="#DevTab" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. Each option is discussed below.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="DevTab"></a>Development Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/DevTabOptions.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.1">Training/Assessments</h3>
+        <p class="Body">You can use the Training/Assessments screen (<MadCap:xref href="#TrainAssessOption" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>) to view and maintain a list of training courses and assessments for an employee. This list may include the name of the session, the dates it is being held, and its venue.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="TrainAssessOption"></a>Training/Assessments Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/TrainAssessOption.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Code</p>
+        <p class="IndentFieldDef">The code for the course/assessment.</p>
+        <p class="IndentBold">Description</p>
+        <p class="IndentFieldDef">A description of the course/assessment.</p>
+        <p class="IndentBold">From</p>
+        <p class="IndentFieldDef">The start date for the course/assessment.</p>
+        <p class="IndentBold">To</p>
+        <p class="IndentFieldDef">The end date for the course/assessment. If you leave this field blank, it will be filled in when the From date and Duration (days) fields are entered.</p>
+        <p class="IndentBold">Venue</p>
+        <p class="IndentFieldDef">The venue where the training course/assessment is being held.</p>
+        <p class="IndentBold">Type</p>
+        <p class="IndentFieldDef">The type of course. The options are <strong>Assessment </strong>and <strong>Training</strong>.</p>
+        <p class="IndentBold">Status</p>
+        <p class="IndentFieldDef">The current status of the employee on the course/assessment, such as Required.</p>
+        <h3 MadCap:autonum="1.3.2">Qualifications</h3>
+        <p class="Body">You can use the <strong>Qualifications </strong>screen (<MadCap:xref href="#QualsOption" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>) to view and maintain a list of qualifications for an employee.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="QualsOption"></a>Qualifications Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/QualificationsOption.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Qualification</p>
+        <p class="IndentFieldDef">A qualification code for the employee. Qualification codes are set up in <i>Human Resources &gt; HR Maintenance &gt; Lookup Codes</i>.</p>
+        <p class="IndentBold">Achieved</p>
+        <p class="IndentFieldDef">Whether this qualification has been achieved.</p>
+        <p class="IndentBold">Date awarded</p>
+        <p class="IndentFieldDef">The date that the employee achieved this qualification.</p>
+        <p class="IndentBold">Date expires</p>
+        <p class="IndentFieldDef">The date that the qualification expires.</p>
+        <h3 MadCap:autonum="1.3.3">Memberships</h3>
+        <p class="Body">You can use the <strong>Memberships </strong>screen (<MadCap:xref href="#MembersOption" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>) to view and maintain a list of memberships for the employee.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="MembersOption"></a>Memberships Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/MemberOption.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Body</p>
+        <p class="IndentFieldDef">The organ<MadCap:variable name="Variables.is" />ation where this person is a member.</p>
+        <p class="IndentBold">Member</p>
+        <p class="IndentFieldDef">Whether membership has been achieved.</p>
+        <p class="IndentBold">From date</p>
+        <p class="IndentFieldDef">The date this was achieved.</p>
+        <p class="IndentBold">Renewal date</p>
+        <p class="IndentFieldDef">The date of renewal for the membership.</p>
+        <h1 MadCap:autonum="2">MK Personnel <MadCap:variable name="Variables.Enquiry caps" /></h1>
+        <h2 MadCap:autonum="2.1">Menu Option</h2>
+        <p class="Body" style="font-style: normal;">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Personnel <MadCap:variable name="Variables.Enquiry caps" /></span> function is available as an option on the <i><MadCap:variable name="Variables.Marketing" /> &gt;&#160;<MadCap:variable name="Variables.Enquiries caps" /> </i>menu, as shown in <MadCap:xref href="#PersInqMenuOption" class="Figurenumberonly"><i>Figure 7</i></MadCap:xref>. This option allows you to <MadCap:variable name="Variables.enquire" /> on personnel regarding summary, <MadCap:variable name="Variables.Mk Projects caps" />, <MadCap:variable name="Variables.Contracts caps" />, and Service Management information. </p>
+        <p class="Caption" MadCap:autonum="Figure 7: "><a name="PersInqMenuOption"></a>Personnel <MadCap:variable name="Variables.Enquiry caps" /> Menu Option</p>
+        <p class="Body" style="font-style: normal;text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersInqMenuOption.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.2"> Selection Screen</h2>
+        <p class="Body">When you select the <span class="Function">Personnel <MadCap:variable name="Variables.Enquiry caps" /></span> menu option, you are taken to the selection screen shown in <MadCap:xref href="#PersInq" class="Figurenumberonly"><i>Figure 8</i></MadCap:xref>. This selection screen contains the following tabs: Main, <MadCap:variable name="Variables.Mk Projects caps" />, <MadCap:variable name="Variables.Contracts caps" />, and Service Management. The Main tab contains the same fields found on the Personnel Detail screen, as discussed in Section <MadCap:xref href="#Personne" class="Figurenumberonly"><i>1.1</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 8: "><a name="PersInq"></a>Personnel <MadCap:variable name="Variables.Enquiry caps" /> Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersonnelInq.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.3"><MadCap:variable name="Variables.Enquiry caps" /> Browse</h2>
+        <p class="Body">Once you have made your selections in the Personnel <MadCap:variable name="Variables.Enquiry caps" /> screen, the <span class="button">Next </span>button at the bottom of the screen can be clicked. You are then directed to the Personnel <MadCap:variable name="Variables.Enquiry caps" /> screen, as shown in <MadCap:xref href="#PersInqScreenAll" class="Figurenumberonly"><i>Figure 9</i></MadCap:xref>. This screen is divided into four separate tabs:</p>
+        <ul>
+            <li class="ListBullet3"><strong><MadCap:variable name="Variables.Mk Project caps" /></strong> <strong>Roles Tab </strong>(see Section <MadCap:xref href="#Roles" class="Figurenumberonly"><i>1.4.4</i></MadCap:xref> for details)</li>
+            <li class="ListBullet3"><strong>Organ<MadCap:variable name="Variables.is" />ation Groups Tab</strong> (see Section <MadCap:xref href="#Organati" class="Figurenumberonly"><i>1.4.5</i></MadCap:xref> for details)</li>
+            <li class="ListBullet3"><strong>Touch Tab</strong> (see Section  <MadCap:xref href="#Touch" class="Figurenumberonly"><i>1.4.6</i></MadCap:xref> for details)</li>
+            <li class="ListBullet3"><strong>Personnel <MadCap:variable name="Variables.Enquiry caps" /> Filter Tab</strong> (see Section  <MadCap:xref href="#Personne2" class="Figurenumberonly"><i>1.4.7</i></MadCap:xref> for details)</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 9: "><a name="PersInqScreenAll"></a>Personnel <MadCap:variable name="Variables.Enquiry caps" /> Screen - All Tabs</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersInqScreen.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.4"><a name="Roles"></a><MadCap:variable name="Variables.Mk Project caps" /> Roles Tab</h2>
+        <p class="Body">The <MadCap:variable name="Variables.Mk Project caps" /> Roles tab (<MadCap:xref href="#ProjRolesTab" class="Figurenumberonly"><i>Figure 11</i></MadCap:xref>) provides you with <MadCap:variable name="Variables.Mk Project caps" /> Personnel options (see <MadCap:xref href="#ProjRolesOptions" class="Figurenumberonly"><i>Figure 10</i></MadCap:xref>) that calculate data based on the option (By <MadCap:variable name="Variables.Mk Marketeer caps" />, By Principal in Charge, By <MadCap:variable name="Variables.Mk Project caps" /> Manager, By Estimator). The <strong>#</strong> subcolumns allow you to drill down for additional information.</p>
+        <p class="Caption" MadCap:autonum="Figure 10: "><a name="ProjRolesOptions"></a><MadCap:variable name="Variables.Mk Project caps" /> Roles Options</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/ProjRolesOptions.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 11: "><a name="ProjRolesTab"></a><MadCap:variable name="Variables.Mk Project caps" /> Roles Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/ProjRolesScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Personnel</p>
+        <p class="IndentFieldDef">The full name of the personnel.</p>
+        <p class="IndentBold">Job Title</p>
+        <p class="IndentFieldDef">The personnel's job title.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Mk Projects caps" />
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Mk Projects caps" /> column contains the subcolumns listed below. Each<strong> #</strong> subcolumn allows you to drill down to <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><strong><MadCap:variable name="Variables.Mk Projects caps" /> </strong>screen (see Section  <MadCap:xref href="#Opportun" class="Figurenumberonly"><i>1.4.4.1</i></MadCap:xref> for more details).</p>
+        <ul>
+            <li class="ListBullet4"><strong>Active (All) # </strong>(drill-down) - The number of all active <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+            <li class="ListBullet4" style="font-weight: normal;"><strong>Active (All) Weighted $ </strong>- The weighted sum of all active <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+            <li class="ListBullet4"><strong>Closed-Won #</strong> (drill-down) - The number of closed-won <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+            <li class="ListBullet4"><strong>Closed-Won Total $ - </strong>The total sum of all closed-won <strong><MadCap:variable name="Variables.Mk Projects caps" style="font-weight: normal;" />.</strong></li>
+            <li class="ListBullet4"><strong>Closed-Lost #</strong> (drill-down) - The number of all closed-lost <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+            <li class="ListBullet4"><strong>Closed-Lost Total $ - </strong>The total sum of all closed-lost <strong><strong><MadCap:variable name="Variables.Mk Projects caps" style="font-weight: normal;" />.</strong></strong></li>
+            <li class="ListBullet4"><strong>Win Rate %</strong> - The win rate percentage of all <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+        </ul>
+        <p class="IndentBold"><MadCap:variable name="Variables.Contracts caps" />
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Contracts caps" /> column contains the subcolumns listed below. The<strong> #</strong> subcolumns allow you to drill down to a <strong><MadCap:variable name="Variables.Contracts caps" /> </strong>screen (see Section <MadCap:xref href="#of" class="Figurenumberonly"><i>1.4.4.2</i></MadCap:xref> for more details).</p>
+        <ul>
+            <li class="Listabc4"><strong>Active # </strong>(drill-down) - The number of active <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="Listabc4"><strong>Active $ </strong>- The sum of all active <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="Listabc4"><strong>Inactive # </strong>(drill-down) - The number of inactive <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Inactive $ </strong>- The sum of all inactive <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Closed (Current Year) # </strong>(drill-down) - The number of closed <MadCap:variable name="Variables.Contracts caps" /> for the current year.</li>
+            <li class="ListBullet4"><strong>Closed (Current Year) $</strong> - The sum of all closed <MadCap:variable name="Variables.Contracts caps" /> for the current year.</li>
+        </ul>
+        <p class="Body">Additional fields on this screen, which are not shown, include:</p>
+        <ul>
+            <li class="ListBullet4"><strong>Active $ (Full Value)</strong> - The sum of all active full value <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Active $ (Forecast Revenue)</strong> - The sum of all active forecast revenue <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Active $ (Forecast Margin)</strong> - The sume of all active forecast margin <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Active $ (Forecast Cost)</strong> - The sum of all active forecast cost <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Inactive $ (Current Year Sales Goal)</strong> - The sum of all inactive <MadCap:variable name="Variables.Contracts caps" /> for the current year sales goal.</li>
+            <li class="ListBullet4"><strong>Sales Goal %</strong> - The sales goal percentage of all <MadCap:variable name="Variables.Contracts caps" />.</li>
+        </ul>
+        <p class="IndentFieldDef">The <strong>Service Agreements </strong>column (not shown) can contain the subcolumns listed below. Each <strong>#</strong> subcolumn allows you to drill down to the screen with details of corresponding data.</p>
+        <ul>
+            <li class="ListBullet4"><strong>Active Agreements #</strong> (drill-down) - The number of all active agreements.</li>
+            <li class="ListBullet4"><strong>Active Agreements $</strong> - The sum of all active agreements.</li>
+            <li class="ListBullet4"><strong>Inactive Agreements #</strong> (drill-down) - The number of all inactive agreements.</li>
+            <li class="ListBullet4"><strong>Inactive Agreements $</strong> - The sum of all inactive agreements.</li>
+            <li class="ListBullet4"><strong>Closed Agreements #</strong> (drill-down) - The number of all closed agreements.</li>
+            <li class="ListBullet4"><strong>Closed Agreements $ </strong>- The sum of all closed agreements.</li>
+        </ul>
+        <p class="IndentFieldDef">The <strong>Work Orders </strong>column (not shown) can contain the subcolumns listed below. Each <strong>#</strong> subcolumn allows you to drill down to the screen with details of corresponding data.</p>
+        <ul>
+            <li class="ListBullet4"><strong>Active Work Orders #</strong> (drill-down) - The number of all active work orders.</li>
+            <li class="ListBullet4"><strong>Active Work Orders $</strong> - The sum of all active work orders.</li>
+            <li class="ListBullet4"><strong>Inactive Work Orders #</strong> (drill-down) - The number of all inactive work orders.</li>
+            <li class="ListBullet4"><strong>Inactive Work Orders $</strong> - The sum of all inactive work orders.</li>
+            <li class="ListBullet4"><strong>Closed Work Orders #</strong> (drill-down) - The number of all closed work orders.</li>
+            <li class="ListBullet4"><strong>Closed Work Orders $</strong> - The sum of all closed work orders.</li>
+        </ul>
+        <h3 MadCap:autonum="2.4.1"><a name="Opportun"></a><MadCap:variable name="Variables.Mk Projects caps" /> Screen </h3>
+        <p class="Body">The <MadCap:variable name="Variables.Mk Projects caps" /> screen (<MadCap:xref href="#Opps" class="Figurenumberonly"><i>Figure 12</i></MadCap:xref>) is reached by drilling down on any <MadCap:variable name="Variables.Mk Projects caps" /> column on the By Company or By Company / Office tab screen.</p>
+        <p class="Caption" MadCap:autonum="Figure 12: "><a name="Opps"></a><MadCap:variable name="Variables.Mk Projects caps" /> Screen</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/MK013_Images/ProjectsScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Mk Project caps" /> Number</p>
+        <p class="IndentFieldDef">The lead number, <MadCap:variable name="Variables.tender" /> number, or <MadCap:variable name="Variables.Contract caps" /> number of the <MadCap:variable name="Variables.mk project" />.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Mk Project caps" /> Name</p>
+        <p class="IndentFieldDef">The name of the <MadCap:variable name="Variables.mk project" />.</p>
+        <p class="IndentBold">Client</p>
+        <p class="IndentFieldDef">The name of the client.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Contract caps" /> Value</p>
+        <p class="IndentFieldDef">The original <MadCap:variable name="Variables.Contract caps" /> value.</p>
+        <p class="IndentBold">Win Probability</p>
+        <p class="IndentFieldDef">The win probability of the <MadCap:variable name="Variables.mk project" />.</p>
+        <p class="IndentBold">Weighted Value</p>
+        <p class="IndentFieldDef">This is determined by <i>Win Probability * (value of field defined in parameter MK/VALUETEND)</i>.</p>
+        <p class="IndentBold">Market Sector</p>
+        <p class="IndentFieldDef">The type of market sector for the company, such as Education or Industry.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.tender" style="text-transform: capitalize;" /> Due Date</p>
+        <p class="IndentFieldDef">The date the <MadCap:variable name="Variables.tender" /> is due.</p>
+        <p class="IndentBold">Est Close Date</p>
+        <p class="IndentFieldDef">The proposed date that the <MadCap:variable name="Variables.tenders" /> will be closed.</p>
+        <p class="IndentBold"># Days Active</p>
+        <p class="IndentFieldDef">The number of days that the <MadCap:variable name="Variables.mk project" /> will be active.</p>
+        <p class="IndentBold"># Days <MadCap:variable name="Variables.tender" style="text-transform: capitalize;" /> Past Due</p>
+        <p class="IndentFieldDef">The number of days that the <MadCap:variable name="Variables.tender" /> is past due.</p>
+        <p class="IndentBold"># Days Est Close Past Due</p>
+        <p class="IndentFieldDef">The number of days that the <MadCap:variable name="Variables.tender" /> is past due for the proposed close date.</p>
+        <h3 MadCap:autonum="2.4.2"><a name="of"></a><MadCap:variable name="Variables.Contracts caps" /> Screen</h3>
+        <p class="Body">The <MadCap:variable name="Variables.Contracts caps" /> screen (<MadCap:xref href="#Jobs" class="Figurenumberonly"><i>Figure 13</i></MadCap:xref>) is reached by drilling down on any <MadCap:variable name="Variables.Contracts caps" /><strong> #</strong> subcolumn on the Personnel <MadCap:variable name="Variables.Enquiry caps" /> tab screen. It gives you the following information:</p>
+        <ul>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Contract caps" /> number and its description.</li>
+            <li class="ListBullet3">The cost amount for the <MadCap:variable name="Variables.Contract caps" /> by <MadCap:variable name="Variables.Financial Period caps" />.</li>
+            <li class="ListBullet3">The revenue amount for the <MadCap:variable name="Variables.Contract caps" /> by <MadCap:variable name="Variables.Financial Period caps" />.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 13: "><a name="Jobs"></a><MadCap:variable name="Variables.Contracts caps" /> Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/JobsScreen.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="2.4.3"><a name="Agreemen"></a>Agreements Screen</h3>
+        <p class="Body">The Agreements screen (<MadCap:xref href="#AgmtsScreen" class="Figurenumberonly"><i>Figure 14</i></MadCap:xref>) is reached by drilling down on any Agreement <strong>#</strong> subcolumn on the <MadCap:variable name="Variables.Mk Projects caps" /> tab screen. It gives you the following information:</p>
+        <ul>
+            <li class="ListBullet3">The Agreement number and its name.</li>
+            <li class="ListBullet3">The Agreement Amount.</li>
+            <li class="ListBullet3">The revenue amount for the Agreement by <MadCap:variable name="Variables.Financial Period caps" />.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 14: "><a name="AgmtsScreen"></a>Agreements Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/AgreementsScreen.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="2.4.4"><a name="Agreemen2"></a>Service Orders Screen</h3>
+        <p class="Body">The Service Orders screen (<MadCap:xref href="#SvcOrdsScreen" class="Figurenumberonly"><i>Figure 15</i></MadCap:xref>) is reached by drilling down on any Service Order <strong># </strong>subcolumn on the  <MadCap:variable name="Variables.Mk Projects caps" /> tab screen. It gives you the following information:</p>
+        <ul>
+            <li class="ListBullet3">The Service Order number.</li>
+            <li class="ListBullet3">The Customer Name.</li>
+            <li class="ListBullet3">The Location Name.</li>
+            <li class="ListBullet3">The revenue amount for the Order by <MadCap:variable name="Variables.Financial Period caps" />.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 15: "><a name="SvcOrdsScreen"></a>Service Orders Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/ServiceOrdersScreen.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.5"><a name="Organati"></a>Organ<MadCap:variable name="Variables.is" />ation Groups Tab</h2>
+        <p class="Body">The Organ<MadCap:variable name="Variables.is" />ation Groups tab contains the following subtabs, as shown in <MadCap:xref href="#OrgTabSubtabsList" class="Figurenumberonly"><i>Figure 16</i></MadCap:xref>: By Director, By Supervisor, By Manager, By Works To, By HR Group, By HR Sub Group, Analysis Sets such as By Kco, By Region, By Division, By Religion, By Employee Type. A sample screen that appears when you select one of these subtabs is shown in <MadCap:xref href="#SampleOrgGroupScreen" class="Figurenumberonly"><i>Figure 17</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 16: "><a name="OrgTabSubtabsList"></a>Organ<MadCap:variable name="Variables.is" />ation Groups Subtabs</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/OrgGroupsOptions.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 17: "><a name="SampleOrgGroupScreen"></a>Sample Organ<MadCap:variable name="Variables.is" />ation Group Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/OrgGroupSampleScreen.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Personnel</p>
+        <p class="IndentFieldDef">The full name of the personnel.</p>
+        <p class="IndentBold">Job Title</p>
+        <p class="IndentFieldDef">The job title of the personnel.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Mk Projects caps"></MadCap:variable>
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Mk Projects caps" /> column contains the subcolumns listed below. Each<strong> #</strong> subcolumn allows you to drill down to <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><strong><MadCap:variable name="Variables.Mk Projects caps" /> </strong>screen (see Section <MadCap:xref href="#Opportun" class="Figurenumberonly"><i>1.4.4.1</i></MadCap:xref> for more details).</p>
+        <ul>
+            <li class="ListBullet4"><strong>Active (All) # </strong>(drill-down) - The number of all active <MadCap:variable name="Variables.Mk Projects caps"></MadCap:variable>.</li>
+            <li class="ListBullet4"><strong>Closed-Won #</strong> (drill-down) - The number of closed-won <MadCap:variable name="Variables.Mk Projects caps"></MadCap:variable>.</li>
+            <li class="ListBullet4"><strong>Closed-Won Total $ - </strong>The total sum of all closed-won <strong><MadCap:variable name="Variables.Mk Projects caps" style="font-weight: normal;"></MadCap:variable>.</strong></li>
+            <li class="ListBullet4"><strong>Closed-Lost #</strong> (drill-down) - The number of all closed-lost <MadCap:variable name="Variables.Mk Projects caps"></MadCap:variable>.</li>
+            <li class="ListBullet4"><strong>Closed-Lost Total $ - </strong>The total sum of all closed-lost <strong><strong><MadCap:variable name="Variables.Mk Projects caps" style="font-weight: normal;"></MadCap:variable>.</strong></strong></li>
+            <li class="ListBullet4"><strong>Win Rate % - </strong>The win rate percentage of all <MadCap:variable name="Variables.Mk Projects caps" />.</li>
+        </ul>
+        <p class="IndentBold"><MadCap:variable name="Variables.Contracts caps"></MadCap:variable>
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Contracts caps" /> column contains the subcolumns listed below. Both<strong></strong>of the<strong> #</strong> subcolumns allow you to drill down to a <strong><MadCap:variable name="Variables.Contracts caps" /> </strong>screen (see Section <MadCap:xref href="#of" class="Figurenumberonly"><i>1.3.1.2</i></MadCap:xref> for more details).</p>
+        <ul>
+            <li class="Listabc4"><strong>Active # </strong>(drill-down) - The number of active <MadCap:variable name="Variables.Contracts caps"></MadCap:variable>.</li>
+            <li class="Listabc4"><strong>Active $ </strong>- The sum of all active <MadCap:variable name="Variables.Contracts caps"></MadCap:variable>.</li>
+            <li class="ListBullet4"><strong>Inactive # </strong>(drill-down) - The number of inactive <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Inactive $ </strong>- The sum of all inactive <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet4"><strong>Closed (Current Year) # </strong>(drill-down) - The number of closed <MadCap:variable name="Variables.Contracts caps" /> for the current year.</li>
+            <li class="ListBullet4"><strong>Closed (Current Year) $</strong> - The sum of all closed <MadCap:variable name="Variables.Contracts caps" /> for the current year.</li>
+        </ul>
+        <p class="IndentBold">Service</p>
+        <p class="IndentFieldDef"><span class="Function">Personnel <MadCap:variable name="Variables.Enquiry caps" /></span> provides you with the possibility to check information about Service data using Column Sets.</p>
+        <p class="IndentFieldDef">The <strong>Service Agreements </strong>column can contain the subcolumns listed below. Each <strong>#</strong> subcolumn allows you to drill down to the screen with details of corresponding data (see Sections <MadCap:xref href="#Agreemen" class="Figurenumberonly"><i>1.4.4.3</i></MadCap:xref> and <MadCap:xref href="#Agreemen2" class="Figurenumberonly"><i>1.4.4.4</i></MadCap:xref> for more details).</p>
+        <ul>
+            <li class="ListBullet4"><strong>Active Agreements #</strong> (drill-down) - The number of all active agreements.</li>
+            <li class="ListBullet4"><strong>Active Agreements $</strong> - The sum of all active agreements.</li>
+            <li class="ListBullet4"><strong>Inactive Agreements #</strong> (drill-down) - The number of all inactive agreements.</li>
+            <li class="ListBullet4"><strong>Inactive Agreements $</strong> - The sum of all inactive agreements.</li>
+            <li class="ListBullet4"><strong>Closed Agreements #</strong> (drill-down) - The number of all closed agreements.</li>
+            <li class="ListBullet4"><strong>Closed Agreements $ </strong>- The sum of all closed agreements.</li>
+        </ul>
+        <p class="IndentFieldDef">The <strong>Work Orders </strong>column (not shown) can contain the subcolumns listed below. Each <strong>#</strong> subcolumn allows you to drill down to the screen with details of corresponding data.</p>
+        <ul>
+            <li class="ListBullet4"><strong>Active Work Orders #</strong> (drill-down) - The number of all active work orders.</li>
+            <li class="ListBullet4"><strong>Active Work Orders $</strong> - The sum of all active work orders.</li>
+            <li class="ListBullet4"><strong>Inactive Work Orders #</strong> (drill-down) - The number of all inactive work orders.</li>
+            <li class="ListBullet4"><strong>Inactive Work Orders $</strong> - The sum of all inactive work orders.</li>
+            <li class="ListBullet4"><strong>Closed Work Orders #</strong> (drill-down) - The number of all closed work orders.</li>
+            <li class="ListBullet4"><strong>Closed Work Orders $</strong> - The sum of all closed work orders.</li>
+        </ul>
+        <h2 MadCap:autonum="2.6"><a name="Touch"></a>Touch Tab</h2>
+        <p class="Body">The Touch tab provides you with a screen (<MadCap:xref href="#TouchTab" class="Figurenumberonly"><i>Figure 16</i></MadCap:xref>) that includes information based on the MK&#160;Personnel Workbench and related Companies, Contacts, <MadCap:variable name="Variables.Mk Projects caps" />, and Activities.</p>
+        <p class="Caption" MadCap:autonum="Figure 18: "><a name="TouchTab"></a>Touch Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/TouchScreen.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <p>
+            <p class="Subtitle">Field Definitions</p>
+        </p>
+        <p>
+            <p class="IndentBold">Personnel</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The full name of the personnel.</p>
+        </p>
+        <p>
+            <p class="IndentBold">Job Title</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The personnel's job title.</p>
+        </p>
+        <p>
+            <p class="IndentBold"># <MadCap:variable name="Variables.Mk Projects caps" /> Active (All)</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The total number of all active <MadCap:variable name="Variables.Mk Projects caps" />.</p>
+        </p>
+        <p>
+            <p class="IndentBold"># Companies</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The number of companies for this personnel.</p>
+        </p>
+        <p>
+            <p class="IndentBold"># Contacts</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The number of contacts for this personnel.</p>
+        </p>
+        <p>
+            <p class="IndentBold">#&#160;Open Tasks</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The number of open tasks for this personnel.</p>
+        </p>
+        <p>
+            <p class="IndentBold">#&#160;Past Due Tasks</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The number of past due tasks for this personnel.</p>
+        </p>
+        <p>
+            <p class="IndentBold">#&#160;Open Appointments</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The number of open appointments for this personnel.</p>
+        </p>
+        <p>
+            <p class="IndentBold"># Past Due Appointments</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">The number of past due appointments for this personnel.</p>
+        </p>
+        <h2 MadCap:autonum="2.7"><a name="Personne2"></a>Personnel <MadCap:variable name="Variables.Enquiry caps" /> Filter Tab</h2>
+        <p class="Body">The Personnel <MadCap:variable name="Variables.Enquiry caps" /> Filter  tab (<MadCap:xref href="#PersInqFilter" class="Figurenumberonly"><i>Figure 19</i></MadCap:xref>) contains the same selection criteria found on the Personnel <MadCap:variable name="Variables.Enquiry caps" /> Filter  selection screen. It is an easy way to change the information you see on the <MadCap:variable name="Variables.Enquiry caps" /> without returning to the main <MadCap:variable name="Variables.Enquiries caps" /> menu.</p>
+        <p class="Caption" MadCap:autonum="Figure 19: "><a name="PersInqFilter"></a>Personnel <MadCap:variable name="Variables.Enquiry caps" /> Filter Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/PersInqFilterScreen.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.8">Regenerate Function</h2>
+        <h3 MadCap:autonum="2.8.1">Menu Option</h3>
+        <p class="Body">The parameter MK/HRORG allows for some fields in HR to be synched with the same fields in <MadCap:variable name="Variables.Marketing" />. Previously, this synch only happened when the already existing parameter (MK/HRLINK) was set to yes. This resulted in a tedious process requiring users to choose the fields to be synched in Parameters and then save each linked HR&#160;Personnel.</p>
+        <p class="Body">To resolve this, a function called <span class="Function">HR&#160;Hierarchy Fields </span>is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available under the <i><MadCap:variable name="Variables.Marketing" /> &gt;&#160;Administration &gt; Regenerate Data </i>menu, as shown in <MadCap:xref href="#HierarchyOption" class="Figurenumberonly"><i>Figure 20</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 20: "><a name="HierarchyOption"></a>HR Hierarchy Fields Menu Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/HierarchyFieldsOption.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="2.8.2">Selection Screen</h3>
+        <p class="Body">When you select <span class="Function">HR&#160;Hierarchy Fields </span>from the Regenerate Data menu, the selection screen appears, as shown in <MadCap:xref href="#RegenData" class="Figurenumberonly"><i>Figure 21</i></MadCap:xref>. </p>
+        <p class="Caption" MadCap:autonum="Figure 21: "><a name="RegenData"></a>Regenerate Data Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/Hierarchy_1.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">If the <span class="Field">Confirm </span>field is <MadCap:variable name="Variables.tick" />ed, the HRLINK&#160;parameter is checked first.</p>
+        <ul>
+            <li class="ListBullet3">If HRLINK&#160;is set to <strong>N</strong>, a one line report that reads “HRLINK parameter is set to No, no changes are necessary” is generated.</li>
+            <li class="ListBullet3">If HRLINK is set to <strong>Y</strong>, the following process occurs:</li>
+            <li class="ListBullet4">The report reads through each <MadCap:variable name="Variables.Marketing" /> Personnel. If the <MadCap:variable name="Variables.Marketing" /> Personnel is linked to an HR Personnel:</li>
+            <li class="ListBullet5"> All of the fields listed in the HRORG parameter are updated, as well as the fields that HR currently syncs when an HR record is updated.</li>
+            <li class="ListBullet5">A line is written to the Status column on a report showing that this was done (see <MadCap:xref href="#HierarchyRpt" class="Figurenumberonly"><i>Figure 21</i></MadCap:xref>). </li>
+        </ul>
+        <h3 MadCap:autonum="2.8.3">Sample Report</h3>
+        <p class="Body">A sample of the report generated after running the <span class="Function">HR&#160;Hierarchy Fields </span>function is shown below in <MadCap:xref href="#HierarchyRpt" class="Figurenumberonly"><i>Figure 21</i></MadCap:xref>. The following columns are found on the report: <strong>HR&#160;Int. Ref.</strong>,<strong> <MadCap:variable name="Variables.Marketing" /> Int. Ref.</strong>, <strong><MadCap:variable name="Variables.Last Name caps" /></strong>, <strong>First Name</strong>, <strong>Second Name</strong>, <strong>Status</strong>, and <strong>Message</strong>.</p>
+        <p class="Caption" MadCap:autonum="Figure 22: "><a name="HierarchyRpt"></a>HR&#160;Hierarchy Fields Report</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK013_Images/HierarchyRpt.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">This report may show the following statuses:</p>
+        <ul>
+            <li class="ListBullet3"><i>Synced</i>
+            </li>
+            <li class="ListBullet3"><i><MadCap:variable name="Variables.Marketing" /> Personnel not linked to an HR Personnel, no changes were made.</i> (The HR Personnel column will be blank.)</li>
+            <li class="ListBullet3"><i>HR Personnel Hierarchy fields are blank, no changes were made.</i>
+            </li>
+            <li class="ListBullet3"><i><MadCap:variable name="Variables.Marketing" /> Personnel fields were updated from HR Personnel fields.</i>
+            </li>
+        </ul>
+    </body>
+</html>

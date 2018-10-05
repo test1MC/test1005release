@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Text on Configurable Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Text on Configurable Documents</h1>
+    <p>Various parameters are used to specify text that is printed on configurable forms. These are configured on the form using the following fields.</p>
+    <p>On PORDER</p>
+    <p>
+      <span class="fieldname">RO_commit_msg </span>Text for committed/author<MadCap:variable name="Variables.is" />ed orders. This uses the text from:</p>
+    <ul>
+      <li>
+        <span class="parameter">POCOMTXT</span> if it is a purchase order.</li>
+      <li>
+        <span class="parameter">SCCOMTXT</span> if it is a subcontract order.</li>
+    </ul>
+    <p>
+      <span class="fieldname">RO_confirm_msg </span>Text for Confirmation Orders. This uses the text from:</p>
+    <ul>
+      <li>
+        <span class="parameter">POCONTXT</span> if it is a purchase order.</li>
+      <li>
+        <span class="parameter">SCCONTXT</span> if it is a subcontract order.</li>
+    </ul>
+    <p> </p>
+    <p>
+      <span class="fieldname">RO_credit_msg </span>Text for credit orders. This uses the text from:</p>
+    <ul>
+      <li>
+        <span class="parameter">POCRDMSG</span> if it is a purchase order.</li>
+      <li>
+        <span class="parameter">SCCRDMSG</span> if it is a subcontract order.</li>
+    </ul>
+    <p>
+      <span class="fieldname">RO_draft_msg </span>Text for draft orders (when the draft print action is used). This uses the text from:</p>
+    <ul>
+      <li>
+        <span class="parameter">PODRFTXT</span> if it is a purchase order.</li>
+      <li>
+        <span class="parameter">SCDRFTXT</span> if it is a subcontract order.</li>
+    </ul>
+    <p>
+      <span class="fieldname">RO_version_msg</span>Text to print if a later version of the order exists. This uses the text from:</p>
+    <ul>
+      <li>
+        <span class="parameter">POVSNTXT</span> if it is a purchase order.</li>
+      <li>
+        <span class="parameter">SCVSNTXT</span> if it is a subcontract order.</li>
+    </ul>
+    <p>
+      <span class="fieldname">RO_voheadmsg__1</span>
+      <MadCap:variable name="Variables.po variation" style="text-transform: capitalize;" /> Heading. This uses the text from:</p>
+    <ul>
+      <li>
+        <span class="parameter">POADDTXT</span> if it is an addendum/amendment purchase order.</li>
+      <li>
+        <span class="parameter">POCANTXT</span> if it is a purchase order cancellation.</li>
+      <li>
+        <span class="parameter">SCADDTXT</span> if it is a subcontract amendment order.</li>
+      <li>
+        <span class="parameter">SCCANTXT</span> if it is a subcontract order cancellation.</li>
+    </ul>
+    <p>
+      <span class="fieldname">RO_voheadmsg__2</span> Additional <MadCap:variable name="Variables.po variation" style="text-transform: capitalize;" /> Heading (2). This uses the text from:</p>
+    <ul>
+      <li>
+        <span class="parameter">POADDTX2</span> if it is an addendum/amendment purchase order.</li>
+      <li>
+        <span class="parameter">POCANTX2</span> if it is a purchase order cancellation.</li>
+      <li>
+        <span class="parameter">SCADDTX2</span> if it is a subcontract amendment order.</li>
+      <li>
+        <span class="parameter">SCCANTX2</span> if it is a subcontract order cancellation.</li>
+    </ul>
+    <p> </p>
+    <p class="noteheader">TIP</p>
+    <div class="note">On many sites where text has been set up for <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />, the parameter value is double-spaced (for example <span class="screentype nw">** V A R I A T I O N   O R D E R **</span>).  If you want to continue to use double-spaced text, put <span class="userinput">white-space-collapse=false</span> in the <span class="field">Additional Formatting </span>for the field on the OA configurable document, to avoid the extra spaces between the words being lost.</div>
+  </body>
+</html>

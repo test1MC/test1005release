@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="7909" MadCap:lastWidth="988" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Exercise - Summaries</h1>
+        <p>Within the Semantic Layer Dataset, you can have summary information created at the same time as the detailed data.&#160; These summaries can then be accessed within queries without the need to build separate datasets.&#160; This may be useful for running a series of inline reports based on detail and summary data – the dataset needs only be built once to feed each of the reports.</p>
+        <p>In the dataset we created in Exercise 1, open the dataset and click the Summaries Tab.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Summaries.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Summaries_1106.png" class="FullWidth" />
+        </p>
+        <p>Here we can define different levels of summary, depending on your requirements.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Summaries_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Summaries_1_1106.png" class="FullWidth" />
+        </p>
+        <p>The summary name can be any name you like, but <MadCap:variable name="General.ProductName" /> best practice is to use a three letter short code for the separate keys.&#160; KCO, JOB, MAN etc. for keys such as Company, Contract and Manager.&#160; Thus a summary on Company would be called KCO, a summary based on Company and Manager would be KCOMAN</p>
+        <ul>
+            <li>Enter KCO as the summary name for our first summary level.</li>
+        </ul>
+        <p>The Keys define which fields the summary will be based upon and the order you define them will set the order of the summary breakdown.</p>
+        <ul>
+            <li>Select the Key Company Number (%KCO)</li>
+        </ul>
+        <p>The fields’ selector determines the fields that you want brought across into the summary.&#160; All numeric fields will be included by default and do not need to be selected, but text fields such as Company Name, Account Number etc. will not come across unless you s[specify them.&#160; The fields you bring across should be relevant to the summary keys you set, so in this example we are summarising by company, so contract names and contract numbers will be irrelevant.</p>
+        <ul>
+            <li>Select the Company Number field</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/The summary name can be any.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/The summary name can be any_1106.png" class="FullWidth" />
+        </p>
+        <p>Click Save and then click on the Data Tab</p>
+        <p>Run the data for a suitable period and scroll down the results to the last set of records.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Run the data for a suitable.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Run the data for a suitable_1106.png" class="FullWidth" />
+        </p>
+        <p>Where the column Sumtype is blank, these are the detail records.&#160; At the end of the list will be records with the sumtype KCO for the summary records you have just created.&#160; The entry KCO is the name of your summary level.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">You can restrict which summaries are displayed by setting the Sum Type drop-down to the appropriate setting</p>
+        <p>Return to the Summaries Tab and click Add to create another summary level</p>
+        <p>Use the Summary name KCOMAN and Description Company-Manager</p>
+        <p>Set the Keys to Company Number (%KCO) and Contract Manager (%JOBMAN)</p>
+        <p>Set the fields to Company Number (%kCO) and Contract Manager Name (%JOB_MANDESC)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Run the data for a suitable_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Run the data for a suitable_1_1106.png" class="FullWidth" />
+        </p>
+        <p>Click Save and then return to the Data Tab</p>
+        <p>Re-run the data and scroll to the last set of records</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Run the data for a suitable_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Semantic Layer/Run the data for a suitable_2_1106.png" class="FullWidth" />
+        </p>
+        <p>You should now see additional summary records with sumtype KCOMAN.</p>
+        <h2 class="Heading2">Using the summary data in a report</h2>
+        <p>Within a report query, you can use the field sumtype to limit records to only those at your selected summary level.</p>
+        <p>For example:</p>
+        <p>Our dataset is NLEX1 so our query to report only on summarise manager records might be:</p>
+        <p class="Example">FOR EACH ttNLEX1 WHERE ttNLEX1.sumtype = ‘KCOMAN’</p>
+        <p>To report on detail records only, and ignore the summaries, simply use a test for records where sumtype is blank:</p>
+        <p class="Example">FOR EACH ttNLEX1 WHERE ttNLEX1.sumtype = ‘’</p>
+    </body>
+</html>

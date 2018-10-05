@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1845" MadCap:lastWidth="1264" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Debug</h1>
+        <p>By turning debug mode on, all calculations will be verbose in the log file.</p>
+        <p>The log file is the last icon on the report status workbench -</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">The basic layout of the log file shows:<br /><br />&gt; The variables currently being sent to the report from the Page (via Form Service Procedure<br />&gt; The Record Service Procedures being used within the report<br />&gt; If a DataSet is being used in the report the Temp Table will be defined and then the Query for the dataset.<br />&gt; The value of any replacements being made within the Report Query (Eg {kco} - You will see REPLACE: kco 1)<br />&gt; The Query used on the report and the value at the start of the query is the number of seconds the Query takes to run.<br />&gt; Report Selection - Indicates that the Report has completed.<br />&gt; FOP - Which is the PDF generate program does display some Warnings and Errors - Please follow the link for some common errors which cause the PDF to Fail</p>
+        <p>  To turn debug on include debug(1); </p>
+        <p>This can be included in the initial calculation field and will be available to all calculations within a report unless debug(0) is entered to turn it off. Although putting a report LIVE with debug turned on will not cause an error there should be a process put in place to ensure that debug has been removed before a report is put 'LIVE' as debug can make log files unnecessarily large and can use disk space.</p>
+        <p>Example:</p>
+        <p>
+            <img src="Calculation Images/Debug_1.png" class="FullWidth" />
+        </p>
+        <p>Results:</p>
+        <p>
+            <img src="Calculation Images/Debug_2.png" class="FullWidth" />
+        </p>
+        <p>If only a specific calculation needs to be debugged, rather than display all calcs in the log it is possible to selectively switch debug on and off. Simply add debug(1) in  front of a calculation in the calculation box of a page or report field and debug(0) after it</p>
+        <p class="Example">debug(1);$SectOrd_code=Substring$(co_extra.cex_cha__7,1,10);debug(0);</p>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/EHLDPINV - Allow PINV eInvoices to be Held</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/EHLDPINV - </span> Allow PINV eInvoices to be Held
+</div>
+<div class="param_def">
+<p>Whether to allow PINV eInvoices (transactions which require a purchase order) to be put on hold (<SPAN class="userinput">Y</SPAN> or <SPAN class="userinput">N</SPAN>).</p>
+<P>If <SPAN class="parameter">EHLDPINV </SPAN>is <SPAN class="userinput">Y</SPAN>, hold processing is modified as follows:</P>
+<UL>
+<LI>If <SPAN class="parameter">HLDREGIN </SPAN>is false and the distribution type is not "R" the user may change the transaction's hold status. </LI>
+<LI>If <SPAN class="parameter">HLDREGIN </SPAN>is true and the distribution type is "R" the transaction is put on hold. For a transaction on hold the user may then change the hold code.</LI></UL>See <A href="http://www.coins-global.com/cp_root/storage/documents/How%20To%20HOLD%20eInvoices.pdf">How To Hold eInvoices</A>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../pl/pl_hldregin.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

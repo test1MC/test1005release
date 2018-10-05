@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Setting Up US PR to Use with <MadCap:variable name="Variables.Facilities Management" style="text-transform: capitalize;" /></title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Up US PR to Use with <MadCap:variable name="Variables.Facilities Management" style="text-transform: capitalize;" /></h1>
+        <p>&#160;</p>
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge">&#160;</td>
+                    <td><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+                    <td class="Edge">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In order to properly use the <span class="module">Payroll </span>module with <span class="module"><MadCap:variable name="Variables.Facilities Management" style="text-transform: capitalize;" /></span>, there are some initial tasks you should perform.</p>
+        <div class="process">
+            <h2 class="print">To Set Up US PR to Use With FM:</h2>
+            <p>Each topic below represents a specific task that should be performed to allow the <span class="module">Payroll </span>module to be used with <span class="module"><MadCap:variable name="Variables.Facilities Management" style="text-transform: capitalize;" /></span>. Click on a topic to learn how to perform each task.</p>
+            <p>Set the Pay Items <MadCap:variable name="Variables.Jc Contract caps" /> Posting Level to Detail </p>
+            <p>As&#160;shown in the screenshot below, <span class="field">Total Burden </span>is represented as Pay Item <strong>790</strong> in Payroll <span class="function" title="Function:%WPR211SQRP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration</span>. By setting the total burden&#160;pay item's <span class="field">Contract Posting Level</span> to <span class="userinput">Detail</span>, up to&#160;three <MadCap:variable name="Variables.fm job" /> cost transaction records will be created for each timecard. These <MadCap:variable name="Variables.fm job" /> cost transaction records will contain information that lets you return to the Payroll timecard record for additional information when needed (for example, you may want the Time Card Date to print on the invoice).</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PR/PR_006601.png" />
+            </p>
+            <p>To set up the pay item, do the following:</p>
+            <ol>
+                <li>Go to Payroll <span class="function" title="Function:%WPR210BQRI">Pay Items</span>.</li>
+                <li>Open <span class="field">Total Burden </span>pay item number <strong>790</strong>.</li>
+                <li>Go to the Costing tab.</li>
+                <li>Set the <span class="field">Contract Posting Level </span>to <span class="userinput">Detail</span>, as shown in the screenshot below.</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_P-R/PR/PR_006602.png" />
+            </p>
+            <p />
+            <p>Set the PR Global Parameter JCSRCDSC to Name </p>
+            <p>Since Employee data has historically not been passed into the <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Cost Transaction description, the only way for the Employee Number to appear in the <span class="field">Description </span>field was to post in <span class="userinput">Partial </span>form. However, this rolled up the values into summary cost transaction records and resulted in the inability to return such information to a timecard. By using PR parameter <span class="parameter">JCSRCDSC</span>, this sensitive data can be provided. The result is a read-only field in the <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Cost Transactions screen (<span class="field">Source Description</span>) that displays the employee name when the PR parameter <span class="parameter">JCSRCDSC </span>= <span class="userinput">Name</span>, as shown in the screenshot below. Without this column, you would not be able to identify the employee.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PR/PR_006603.png" />
+            </p>
+            <p>To set up the PR Global Parameter for this purpose, do the following:</p>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPR000BSYP">Parameters</span>.</li>
+                <li>Go to PR parameter <span class="parameter">JCSRCDSC</span>.</li>
+                <li>Open the parameter.</li>
+                <li>Select <span class="userinput">NAME </span>in the <span class="field">Value </span>field.</li>
+                <li>Save your changes.</li>
+                <li>You should see <span class="userinput">NAME </span>in the Value column, as shown in the screenshot below.</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_P-R/PR/PR_006604.png" />
+            </p>
+            <p />
+            <p>&#160;</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Setting Up US PR to Use with <MadCap:variable name="Variables.Facilities Management" style="text-transform: capitalize;" /></h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PR/pr_jcsrcdsc.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

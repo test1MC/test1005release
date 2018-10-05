@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Complete/Prevent Invoicing against Closed Sections and Cost Codes.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/CEDoc_PDF-UK.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  PatchHeadingLevels="true"
+  conditions="COINS.UKOnly"
+  Medium="print"
+  OutputFile="OA-CE-PL008-PreventInvoicingClosedCodes-UK"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly or COINS.v1105]exclude[COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly]"
+  TargetLanguage="en-gb">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Prevent Invoicing Against Closed Sections and Cost Codes</Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/Exchange UK CE Documents.fldes" />
+  </Destinations>
+  <DocumentProperties
+    Title="[%=Variables.Document Title%]" />
+  <Glossaries />
+  <PDF
+    TitleBar="DocumentTitle" />
+</CatapultTarget>

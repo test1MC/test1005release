@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="854" MadCap:lastWidth="854">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Restoring Live to Learn/Cplive</h1>
+        <p>This script typically is used when the data on a non-live environment needs updating either for testing purposes or before an upgrade.  
+
+</p>
+        <p>The script does not impact any downtime on Live.
+</p>
+        <p>
+        </p>
+        <p class="note">Please note this only copies the databases and does not copy any attachments or document management files.
+
+</p>
+        <p>&#160;</p>
+        <p>The first thing the script checks is that the two environments are on the same version.
+</p>
+        <p>
+It then asks you to confirm you are happy to restore the backup over the environment (always check the date of the backup you are restoring)
+
+</p>
+        <p>Once you are happy to proceed it then carrys out the following :-
+
+</p>
+        <ul>
+            <li>Unzips the backup
+</li>
+            <li>Shuts down the non-live environment
+</li>
+            <li>Restores the Live backup to non-live – please note you have to confirm to overwrite the data – again check date and time
+</li>
+            <li>Update parameters – Y to apply
+</li>
+            <li>Restarts the non-live environment
+
+</li>
+        </ul>
+        <p>Once completed you should now check that both environments have the same fixes installed.
+
+
+</p>
+        <p><span class="Function">Coinsadmin
+Configure coinsadmin
+Fix comparison Report</span>
+        </p>
+        <p>If there are any fixes in the non-live environment that are not on Live they will need to be re-installed.
+
+
+
+
+
+
+</p>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="4" MadCap:lastHeight="862" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Retention on Invoices - </MadCap:conditionalText>Releasing Retention</h1>
+        <p>For retention to be released, a retention-only invoice (that is, an invoice with retention and no goods amount) must be raised first. This can only be done automatically. If you try to enter an invoice with no goods amount and a negative retention amount, <MadCap:variable name="General.ProductName" /> displays an error.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Retention on Invoices/Manual Retention Only Error.png" class="FullWidth" />
+        </p>
+        <p>A new menu option, <span class="function">Release Retention</span>, allows you to create retention-only invoices. This shows a list of open retention records.</p>
+        <p>The following actions are available:</p>
+        <ul>
+            <li><span class="function">Create Retention Invoices</span>. This creates a batch of <MadCap:variable name="Variables.Purchase Ledger caps" /> retention invoices for the selected retention lines.</li>
+            <li><span class="function">Create Retention Invoices with Discount</span>. This creates a batch of <MadCap:variable name="Variables.Purchase Ledger caps" /> retention invoices for the selected retention lines and marks the order as completed.</li>
+        </ul>
+        <p>If the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PL parameter <span class="parameter">RETDISC</span> = Y, retention invoices are created with discount. For example, if the supplier discount is 10% and the retention invoice has gross of $100 and retention of -$100, the discount will be $10.</p>
+        <p>The invoices have no cost distribution (as there are no goods) but are set to Costed. </p>
+        <p>
+The batch posts automatically. The batch financial date is the current period. The invoice internal reference is generated automatically and the invoice date is today’s date.</p>
+        <p>The retention posting to the GL uses the PL retention GL account set up in <span class="function">PL Configuration</span> (see <MadCap:xref href="PL Configuraton.htm">1 - Retention on Invoices - PL Configuraton</MadCap:xref>). However, if the supplier has a retention account set up (see <MadCap:xref href="Supplier Maintenance.htm">1 - Retention on Invoices - Supplier Maintenance</MadCap:xref>) this overrides the <span class="function">PL Configuration</span> retention account.
+</p>
+        <p>A retention-only invoice can be paid either manually or as part of a computer payment run just like any other invoice.</p>
+    </body>
+</html>

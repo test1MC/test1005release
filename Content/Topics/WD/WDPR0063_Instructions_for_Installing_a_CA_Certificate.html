@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Instructions for Installing a CA Certificate</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Instructions for Installing a CA Certificate</h1>
+    <p>The directory in which Java resides is called the Java home directory ($JAVAHOME). The CA certificates are held in $JAVAHOME/jre/lib/security/cacerts. This file is called a 'keystore' and you interact with the keystore using the Java keytool command. </p>
+    <p>If your Java home directory is /opt/java1.4, the UNIX command below gives you a list of the certificates installed. Note the command is entered as a single line.</p>
+    <div style="FONT-SIZE: 80%;" class="code">/opt/java1.4/jre/bin/keytool -list -keystore /opt/java1.4/jre/lib/security/cacerts</div>
+    <p>On running the command you will be prompted for the keystore password (the default password for the cacerts keystore is 'changeit').</p>
+    <p>The list returned gives you the certificate alias, date added, type, and the fingerprint. All certificates are given an alias on loading. The alias is just a name that you give the certificate and can be anything.</p>
+    <p>To import a certificate, <strong>you must be logged in as root</strong>. In the Import command, you must give an alias for the certificate (we used govtalk) and specify the UNIX file that contains the certificate (in the example, we have used /tmp/entrust_ssl_ca.cer). </p>
+    <p>The command to import a certificate is (entered as a single line):</p>
+    <div style="FONT-SIZE: 80%;" class="code">/opt/java1.4/jre/bin/keytool -import -keystore /opt/java1.4/jre/lib/security/cacerts <span class="nw">-alias</span> govtalk <span class="nw">-file</span> /tmp/entrust_ssl_ca.cer</div>
+    <p>After entering the required password, you will be asked if you wish to trust this certificate, and you need to respond yes. An example of a <MadCap:variable name="Variables.dialogue" /> is shown below:</p>
+    <div style="FONT-SIZE: 80%;" class="code">Enter keystore password: changeit<br />Owner: CN=Entrust.net Secure Server Certification Authority, OU=(c) 1999 Entrust<br />.net Limited, OU=www.entrust.net/CPS incorp. by ref. (limits liab.), O=Entrust.n<br />et, C=US<br />Issuer: CN=Entrust.net Secure Server Certification Authority, OU=(c) 1999 Entrus<br />t.net Limited, OU=www.entrust.net/CPS incorp. by ref. (limits liab.), O=Entrust.<br />net, C=US <br />Serial number: 374ad243 <br />Valid from: Tue May 25 17:09:40 BST 1999 until: Sat May 25 17:39:40 BST 2019<br />Certificate fingerprints:<br />         MD5: DF:F2:80:73:CC:F1:E6:61:73:FC:F5:42:E9:C5:7C:EE<br />         SHA1: 99:A6:9B:E6:1A:FE:88:6B:4D:2B:82:00:7C:B8:54:FC:31:7E:15:39<br />Trust this certificate? [no]: yes <br />Certificate was added to keystore</div>
+    <p>To use Java 1.3, the files jcert.jar, jsse.jar, and jnet.jar must be added to the java jre/lib/ext directory. Normally, this directory will have to be added.</p>
+  </body>
+</html>

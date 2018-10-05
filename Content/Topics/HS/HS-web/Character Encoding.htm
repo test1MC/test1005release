@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2><span style="margin-right: 0pt;">1.1 </span>Character Encoding</h2>
+        <p>At the time of writing, you must send the message with the same XML character encoding that the database uses (note: the XML code page name has an extra hyphen in ISO names that the progress name is missing – e.g. iso8859-1 becomes iso-8859-1. There is also a bug in web service at the moment that the response will always advertise itself in the header as being UTF-8 encoded but the data within is actually in the native database encoding.&#160; Note this has been fixed from <MadCap:variable name="General.ProductName" /> v10.11.0705 upwards and the correct encoding is returned.</p>
+        <p>The example above uses the ISO-8859-1 encoding.</p>
+        <p>Note: There is also another bug that prevents the use of the StreamWriter to send data in any Unicode encoding. The Microsoft.NET StreamWriter will automatically prefix any UTF-8 or UTF-16 encoded data with appropriate marker bytes for that encoding. However <MadCap:variable name="General.ProductName" /> expects the opening XML tag to be the first character received so refuses to action requests that contain the marker bytes.</p>
+        <p>Once the character encoding issues in the web services are both fixed it is recommended that UTF-8 is used regardless of the underlying database encoding, and the above code becomes:</p>
+        <p>static public bool SendRequest(string url, string datain, out string dataout) </p>
+        <p>{</p>
+        <p>//NOTE: This method will throw an System.Net.WebException </p>
+        <p>//error if an HTTP failure occurs</p>
+        <p>HttpWebRequest req = HttpWebRequest)HttpWebRequest.Create(url);</p>
+        <p>req.ContentType="text/xml";</p>
+        <p>req.Method="POST";</p>
+        <p>&#160;</p>
+        <p>StreamWriter writer = new StreamWriter(req.GetRequestStream(),</p>
+        <p> System.Text.UnicodeEncoding.UTF8);</p>
+        <p>writer.Write(datain + "\r\n\r\n");</p>
+        <p>writer.Close();</p>
+        <p>//Timeout period in milliseconds – set to 3 mins here</p>
+        <p>req.Timeout = 180000;</p>
+        <p>&#160;</p>
+        <p>HttpWebResponse response = (HttpWebResponse)req.GetResponse();</p>
+        <p>StreamReader reader = new StreamReader(</p>
+        <p>response.GetResponseStream(),</p>
+        <p>System.Text.UnicodeEncoding.UTF8);</p>
+        <p>&#160;</p>
+        <p>dataout = reader.ReadToEnd();</p>
+        <p>reader.Close();</p>
+        <p>return (response.StatusCode == HttpStatusCode.OK);</p>
+        <p>}</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="562" MadCap:lastWidth="600">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Reporting <MadCap:variable name="General.ProductName" /> Issues - </MadCap:conditionalText>Parameters</h1>
+        <p class="Body">The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>SY parameters control the issue reporting functionality.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">ISSREP</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Whether email, workflow or both should be launched when an issue report is raised.  The default is none, in which case the reporting button is not available.
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">ISSMAIL</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The email address (or addresses)&#160;to which to send the report, for example the address for your support desk or support application.  Required if <span class="parameter">ISSREP</span> is Email or Both.
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">ISSWF</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The workflow to launch on raising an Issue Report.  Required if <span class="parameter">ISSREP</span> is Workflow or Both.
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">ISSWFKCO</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The <MadCap:variable name="General.ProductName" /> company number in which the workflow has been defined.
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">ISSFUNC</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The function used for the input form that opens when the user selects the issue report option. If this is blank, the default function is %WSY2580FXXX.</p>
+                        <p>The title or tooltip of the button is taken from this function.  If you need to change the default title “Report Issue”, create a + function and change the context description. Alternatively create a custom input function/form and set the desired description, and enter the function code here; this will be used instead of the standard.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">ISSCLASS</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>
+A list of classifications to be shown on the Report Issue form; for example:</p>
+                        <p>Suggestion, Issue, Query</p>
+                        <p> If this is blank then a fill-in field will be shown.  If entered then a drop-down selector containing the list will be shown.
+</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

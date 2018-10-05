@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>eRCT Payment Notification Errors</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">eRCT Payment Notification Errors</h1>
+        <p>If there were any errors, <MadCap:variable name="General.ProductName" /> lists these on the Payment Notification Report, which <MadCap:variable name="General.ProductName" /> generates as part of the Payment Notification action. The &gt;<span class="field">PN Errors </span>column on the <span class="function" title="Function:%WSC1120BCOB">Payment Batches</span> browse also shows the number of errors.</p>
+        <p>Possible causes for payment notification errors are:</p>
+        <ul>
+            <li>Incorrect Contract ID on the subcontract.&#160; Since <MadCap:variable name="General.ProductName" /> cannot validate the contract ID for manual contract notifications, if this has been mis-typed you may need to check the details on ROS.</li>
+            <li>The contract notification expired more than six months previously.</li>
+            <li>The contract notification has been cancelled.</li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To correct payment notification errors:	</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC1120BCOB">Payment Batches</span>.</li>
+                <li>Click the link in the <span class="field">PN Errors </span>column.
+<p><MadCap:variable name="General.ProductName" /> displays a browse list of all certificates for which notification failed.</p><p><img src="../../Resources/Images_S-U/SC/SC_150501.png" /></p></li>
+                <li>To correct errors, either:</li>
+                <ul>
+                    <li>On the <span class="function" title="Function:%WSC1390BCBW">Payment Notification Errors</span> screen remove the certificate from the batch using the <span class="userselect">Delete Payments </span>action.&#160; (On <MadCap:variable name="General.ProductName" /> v10.25 or earlier, you first need to unfreeze the batch on the <span class="function" title="Function:%WSC1120BCOB">Payment Batches</span> browse.&#160; On v10.26 or later, removing the certificate automatically unfreezes the batch after giving a warning message).
+<p>or</p></li>
+                    <li>Correct the problem on the subcontractor or subcontract record, and on the <span class="function" title="Function:%WSC1390BCBW">Payment Notification Errors</span> screen use the <span class="userselect">Clear Error for Retry </span>action to flag the payment record for retry;</li>
+                </ul>
+                <li>Having cleared all the errors in this way, if you flagged any payments for retry, on the <span class="function" title="Function:%WSC1120BCOB">Payment Batches</span> browse select the <span class="userselect">Payment Notification </span>action for the batch again.&#160; <MadCap:variable name="General.ProductName" /> will then only send notifications for items that have not already been successfully notified.</li>
+            </ol>
+        </div>
+    </body>
+</html>

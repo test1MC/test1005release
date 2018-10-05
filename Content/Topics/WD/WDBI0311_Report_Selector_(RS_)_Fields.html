@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Report Selector (RS_) Fields</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Report Selector (RS_) Fields</h1>
+        <p>"RS_" stands for "Report Selection", and by adding this prefix (and a selection type suffix) to a field you can create a field that can be used as part of the selection criteria on your report by directly affecting the query or parameter driven fields.</p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_031101.gif" />
+        </p>
+        <p>The RS_ Fields are specified on the "Update" Field portion of the Page Section for the report you are using. You do this by adding the RS_ prefix and selection type suffixes ("FROM" = __1 , "TO" = __2 and "MATCHES" = __3) to the field you intend to use for selection.</p>
+        <p>Example:</p>
+        <p>If you were to filter for "Matches" on the "job_num" you should do the following:&#160;&#160;&#160;</p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; RS_job_num__3</p>
+        <p>For filtering the same field on a "FROM&#160;- TO" basis you should use: </p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160; RS_job_num__1 and RS_job_num__2</p>
+        <p>You then reference these RS_fields on the selection criteria of your report query, when doing this the program will replace the \<MadCap:variable name="Variables.rs_ fields\" style="text-transform: capitalize;" /> portion of the query with the actual values the user entered at runtime.</p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_031102.gif" />
+        </p>
+        <p>If at runtime the user enters:&#160;&#160;&#160;</p>
+        <p>The Query 
+</p>
+        <div class="code">
+            <p>FOR EACH jc_job<br />WHERE jc_job.kco = \<MadCap:variable name="Variables.kco\" /><br />AND (jc_job.job_num &gt;= '\<MadCap:variable name="Variables.rs_job_num__1\" style="text-transform: capitalize;" />'<br />OR '\<MadCap:variable name="Variables.rs_job_num__1\" style="text-transform: capitalize;" />' = '')<br />AND (jc_job.job_num &lt;= '\<MadCap:variable name="Variables.rs_job_num__2\" style="text-transform: capitalize;" />' <br />OR '\<MadCap:variable name="Variables.rs_job_num__2\" style="text-transform: capitalize;" />' = '')</p>
+        </div>
+        <p>Would be Transformed to: 
+</p>
+        <div class="code">
+            <p>FOR EACH jc_job<br />WHERE jc_job.kco = \<MadCap:variable name="Variables.kco\" /><br />AND jc_job.job_num &gt;= 'zelda' <br />AND (jc_job.job_num &lt;= 'zelda3' </p>
+        </div>
+        <p>The RS_ fields can also be used to filter on date fields*, by specifying the DATE function on a query. Example: 
+</p>
+        <div class="code">
+            <p>FOR EACH pp_organisation <br />WHERE TRUE \<MadCap:variable name="Variables.porselect\" style="text-transform: capitalize;" /><br />AND (ppo_start_date &gt;= DATE('\<MadCap:variable name="Variables.rs_startdate__2\" style="text-transform: capitalize;" />')<br />OR '\<MadCap:variable name="Variables.rs_startdate__2\" style="text-transform: capitalize;" />' = '')</p>
+        </div>
+        <p>&#160;&#160;&#160; *This will work on all date fields, however only some FSPs will provide Date format validation on entry.</p>
+        <p>Some of the RS_ fields can have lookups and these lookups can be populated by the system. </p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_031103.gif" />
+        </p>
+        <p>You do this by using "populates" on the RS_ field configuration screen of the page section of your report.</p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_031104.gif" />
+        </p>
+        <p>You can find the "populates" available to each table on the <strong>Database <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /></strong> section of the OA reporter.&#160; <br /></p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_031105.gif" />
+        </p>
+        <p>Call the "populates" by using an "RSPName.populate" format</p>
+    </body>
+</html>

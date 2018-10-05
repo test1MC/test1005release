@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="6" MadCap:lastHeight="849" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Configuring Order Documents to Print Terms and Conditions</h1>
+        <p>You can configure purchase order documents to print the details of the terms and condition set associated with the order.</p>
+        <ol>
+            <li>Go to <span class="function">Document Designer</span>.</li>
+            <li>Update an existing purchase order document, or create a new document using the Purchase Order document type. See <MadCap:xref href="../../WD/WDSY0501_Configurable_Documents.html" class="doclink">Configurable Documents in the online documentation</MadCap:xref> for information on how to define configurable documents.</li>
+            <li>On the Extras tab, enter IDs for the header, body and footer forms for terms and conditions.<p><img src="../../../Resources/Images_P-R/Procurement/Terms and Conditions Sets/DocDesignTCForms.png" /></p></li>
+            <li>If you want the terms and conditions to be printed on <MadCap:variable name="Variables.po variations" />, <MadCap:variable name="Variables.tick" /> the <span class="field">Print Terms &amp; Conditions On Variation?</span> box.</li>
+            <li>
+                <p>On the Fields tab, add lines for the fields and text you want to include in the terms and conditions section of the order. </p>
+                <p>
+                    <img src="../../../Resources/Images_P-R/Procurement/Terms and Conditions Sets/DocDesignTCLines.png" class="FullWidth" />
+                </p>
+                <p>The Terms &amp;&#160;Conditions Body Form can include fields from the po_hdrterm table; for example:</p>
+                <ul>
+                    <li>
+                        <p><b>pht_title</b> to display the title of the terms and conditions line.</p>
+                    </li>
+                    <li><b>RO_pht_text_populated</b> to display the content of the line.</li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

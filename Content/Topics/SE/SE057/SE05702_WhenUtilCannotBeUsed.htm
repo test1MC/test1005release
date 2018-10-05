@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Conditions When Utility Cannot Be Used</title>
+    </head>
+    <body>
+        <h1>Conditions When Utility Cannot Be Used</h1>
+        <p class="Body">The <span class="Function"><MadCap:variable name="Variables.Se Visit caps" /> Transfer</span> utility has a number of conditions under which it cannot be used. These include the following:</p>
+        <ul>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.Se Visit caps" /> is not Schedule Complete.</li>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.Se Visit caps" /> is Billing Complete.</li>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.Se Service Order caps" /> of the <MadCap:variable name="Variables.Se Visit caps" /> is Billing Complete. Review of the original <MadCap:variable name="Variables.Se Service Order caps" /> may be required to determine if any over billing exists.</li>
+            <li class="ListBullet1">If the <MadCap:variable name="Variables.Se Visit caps" /> references a timesheet, the timesheet must be in Signed status. No changes can be pending on the mobile device.</li>
+            <li class="ListBullet1"><MadCap:variable name="Variables.Se Visit caps" /> <MadCap:variable name="Variables.Labour caps" /> cannot be transferred to PR. The cost analysis on the PR time card will be incorrect.</li>
+            <li class="ListBullet1"><MadCap:variable name="Variables.Se Visit caps" /> Detail cannot have a generated Detail Line. The billing on the original <MadCap:variable name="Variables.Se Service Order caps" /> cannot be started.</li>
+            <li class="ListBullet1"><MadCap:variable name="Variables.Se Visit caps" /> Detail cannot have a generated <MadCap:variable name="Variables.St Stock caps" /> transaction. The costing analysis on the <MadCap:variable name="Variables.St Stock caps" /> transaction will be incorrect.</li>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.Se Visit caps" /> cannot have any processed On-Site Payments. The utility will not move the <MadCap:variable name="Variables.Se Service Order caps" /> payment to a new order.</li>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.Se Visit caps" /> cannot have any PO Items with non-zero quantities. Purchase Order data follows the <MadCap:variable name="Variables.Se Service Order caps" /> Number; therefore, no PO data should be involved. It is the user’s responsibility to determine the state of the PO Lines on the new <MadCap:variable name="Variables.Se Service Order caps" />. Manual processing of returns and other <MadCap:variable name="Variables.St Stock caps" /> transfers is required. The system removes any PO Item records when moving the <MadCap:variable name="Variables.Se Visit caps" /> to the new <MadCap:variable name="Variables.Se Service Order caps" />.</li>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.Se Visit caps" /> cannot have any Task List Items marked as DONE. This will be a manual process of updating the Task List for the new <MadCap:variable name="Variables.Se Service Order caps" />.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>eRCT - <MadCap:variable name="Variables.Cancelling caps" /> a Payment</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">eRCT - <MadCap:variable name="Variables.Cancelling caps" /> a Payment</h1>
+        <p>When a <MadCap:variable name="Variables.cheque" /> is <MadCap:variable name="Variables.cancelled" /> and not reissued, the Payment Notification(s) to Revenue need to be cancelled.&#160;</p>
+        <div class="process">
+            <h2 class="print">To process <MadCap:variable name="Variables.cancelled" /> payments:</h2>
+            <ol>
+                <ol>
+                    <li><MadCap:variable name="Variables.cancel" style="text-transform: capitalize;" /> the payment in <MadCap:variable name="General.ProductName" />.
+<p>This creates an entry in the <span class="function" title="Function:%WSC1410BSBP">Open Notified Certificates Workbench</span>.</p></li>
+                    <li>If the payment was <MadCap:variable name="Variables.cancelled" /> within the same Return period, either:</li>
+                    <ul>
+                        <li>Cancel the notification manually on the ROS website, then record the cancellation of the Payment Notification using <span class="function" title="Function:%WSC1410BSBP">Open Notified Certificates Workbench</span>.</li>
+                        <li>Cancel the notification electronically in <MadCap:variable name="General.ProductName" />.&#160;See <a href="WDSC1509_Unpaid_Notified_Certificates.html">Unpaid Notified Certificates</a>.</li>
+                    </ul>
+                    <li>If the payment was <MadCap:variable name="Variables.cancelled" /> after the Return period, but before the Return due date, delete the line from the Return.</li>
+                </ol>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">
+                <ol>
+                    <li>Any cancellation after the due date for the Return would constitute a late amendment to the Return and would incur a penalty.</li>
+                    <li>There are equivalent functions in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> for cancelling notifications for invoices: <span class="function" title="Function:%WPL1410BAIN">Open Notified Invoices Workbench</span> and <span class="function" title="Function:%WPL1430BCOB">Cancel Notifications</span>.</li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>

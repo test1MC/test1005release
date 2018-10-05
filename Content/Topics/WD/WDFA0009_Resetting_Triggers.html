@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1397" MadCap:lastWidth="793">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Resetting Triggers</title>
+    <style>/*<![CDATA[*/
+tr.trigger td
+{
+	border-top-style: dashed;
+	border-top-color: #ffffff;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Resetting Triggers</h1>
+    <p>You can reset a trigger when the event to which the trigger refers (such as the service) has been completed.  This prepares it to track the next occurrence of the event.  </p>
+    <p>Resetting a trigger clears the <span class="field">Off </span><MadCap:variable name="Variables.tick" />box (so the trigger is not expired) and resets the <span class="field">Expires </span>field or the current value (depending on the definition of the trigger).</p>
+    <div class="process">
+      <h2 class="print">To reset a trigger manually:</h2>
+      <ol>
+        <li>Open the asset.</li>
+        <li>On the Triggers tab, select the trigger(s) you want to reset.</li>
+        <li>From the action list, choose <span class="userselect">Reset Trigger </span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+      </ol>
+      <h2>Resetting triggers using workshop <MadCap:variable name="Variables.cost heads" /></h2>
+      <p>
+        <MadCap:variable name="General.ProductName" /> automatically resets triggers which are specified by <MadCap:variable name="Variables.cost head" /> elements when a transaction is posted to the cost code. You can use the <MadCap:variable name="Variables.cost head" /> elements in different ways to control which triggers <MadCap:variable name="General.ProductName" /> resets.</p>
+      <p>For example, you might want to reset triggers according to the reason for the work, so that the triggers for cam-belt change and filter change are reset for a 30,000 mile service, and oil change is set for all services. Assuming you have three elements set up as above, you could set up the trigger list on the first element (parts) to include the trigger for that item; the replace activity for the second element to reset all triggers, and the 30,000 mile service reason for the 3rd element to reset the triggers for cam-belt, filter change and oil change. The trigger list for other services would include oil change.</p>
+      <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" cellspacing="0">
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <col class="TableStyle-COINSBasic-Column-Column1" />
+        <thead>
+          <tr class="TableStyle-COINSBasic-Head-Header1">
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <p>Element</p>
+            </th>
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <p class="TableHeader">1 (parts)</p>
+            </th>
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <p>2 (activity)</p>
+            </th>
+            <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+              <p class="TableHeader">3 (reason)</p>
+            </th>
+            <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+              <p class="TableHeader">Triggers reset</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Code</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>CA (cam-belt)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>RE (replace)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>S3 (30,000 mile service)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p> </p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Trigger</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>CAM</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>*</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>CAM, FILTER, OIL</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>CAM</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Code</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>OI (oil)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>RE (replace)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>S3 (30,000 mile service)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p> </p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Trigger</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>OIL</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>*</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>CAM, FILTER, OIL</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>OIL</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Code</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>CA (cam-belt)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>RE (replace)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>S1 (10,000 mile service)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p> </p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Trigger</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>CAM</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>*</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>OIL</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p>-</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>Code</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>OI (oil)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>RE (replace)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+              <p>S1 (10,000 mile service)</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+              <p> </p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasic-Body-Body1">
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>Trigger</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>OIL</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>*</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+              <p>OIL</p>
+            </td>
+            <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+              <p>OIL</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title><MadCap:variable name="Variables.Vp Site caps" style="text-transform: capitalize;" /> Re-Plans in <MadCap:variable name="General.ProductName" /></title>
+        <style>/*<![CDATA[*/
+table.replans
+{
+	border-collapse: collapse;
+}
+table.replans td,
+table.replans th
+{
+	border: solid 1px black;
+	padding: 3px;
+	font-size: 80%;
+}
+tr.replanfoot td
+{
+	border: none;
+	font-weight: Normal;
+}
+colgroup.replancols col
+{
+	width: 15%;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <h1 class="print"><MadCap:variable name="Variables.Vp Site caps" /> Re-Plans in <MadCap:variable name="General.ProductName" /><MadCap:concept term="Topics" /></h1>
+        <p>If you change the plots you plan to build on&#160;a <MadCap:variable name="Variables.vp site" /> (for example, not building certain plots, building additional plots, or replacing plots with different house types), this has various implications for different functions in <MadCap:variable name="General.ProductName" />.&#160; The table below explains these.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col style="FONT-WEIGHT: bold;" class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col style="BACKGROUND-COLOR: #fbfbff;" class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th rowspan="2" class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Module *</th>
+                    <th rowspan="2" class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Function</th>
+                    <th rowspan="2" class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Plosts Deleted</th>
+                    <th colspan="2" class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Plots Added</th>
+                    <th colspan="2" class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Plots Changed House Type ***</th>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Existing House Type on Site</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">New House Type on Site</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Existing House Type on Site</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">New House Type on Site</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td rowspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"><MadCap:variable name="Variables.bq bill of quantities" style="text-transform: capitalize;" />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Bills</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">All bill items for the deleted plots will be deleted automatically.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Apply existing site house type bill to new plots.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Create new site house type bills and apply to new plots.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Run the plot rebuild option for the changed plots.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Create new house type bills and run the plot rebuild option for the changed plots.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Create Orders</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Plots cannot be deleted if orders have been created for them. **</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>For materials: you can add new plots as a <MadCap:variable name="Variables.po variation" /> to an existing order.</p>
+                        <p>For subcontracts: New plots will create new orders - not <MadCap:variable name="Variables.po variations" /> to previous orders.</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><MadCap:variable name="General.ProductName" /> will prompt user with <MadCap:variable name="Variables.po variation" /> orders required and these can be automatically created.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td rowspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">House Sales</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Sales Workbench</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">A plot cannot be deleted if any events have been recorded (but the events can be deleted first if required). **</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Input all information for new plots as normal.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Input any amendments to sales information as normal.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Sales and Construction Forecast</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Forecast for deleted plots will be automatically deleted.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Input forecast dates and prices for new plots as normal.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Input any amendments to forecast dates and prices for changed plots as normal.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td rowspan="3" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">VAP</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Matrix Orders</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">A plot cannot be deleted if it is included in any matrix subcontract. **</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">New plots can be added to existing matrix subcontracts provided these were not created from BQ subcontract orders.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">If the order was created from BQ it will be automatically changed; otherwise will need to be updated by manual input.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Budgets</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Budget for deleted plots will be automatically deleted.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Either run the option to update budgets from BQ for changed plots, or rebuild plots from house types.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Either run the option to update budgets from BQ for changed plots, or create new house type budgets and then rebuild the plots from house types.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Either run the option to update budgets from BQ for changed plots or rebuild plots from house types.</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Either run the option to update budgets from BQ for changed plots, or create new house type budgets and then rebuild the plots from house types.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> Sheet Valuation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">A plot cannot be deleted if any <MadCap:variable name="Variables.tick" />s have been input for it. **</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Input all information for new plots as normal.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Dependent on the configuration, the valuation on any 100% <MadCap:variable name="Variables.tick" />ed items may be automatically recalculated based on new budget figures.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Purchase Orders</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Orders for specific plots</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">A plot can be deleted provided that the orders were not created from BQ as these are linked to the costing section which will not be deleted. **</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">New plots can be added as new lines on <MadCap:variable name="Variables.po variations" /> to existing orders provided these were not created from BQ.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">If not raised from BQ, any order <MadCap:variable name="Variables.po variations" /> will need to be calculated manually and input in the normal way.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"><MadCap:variable name="Variables.Jc Contract caps" /> Status</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Plot Costing</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Deletion of a plot will not delete the costing section for the plot if there are any costs on it.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Plot costings for new plots from all sources as normal.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Existing cost transactions are unaffected and costs can continue to be posted as normal.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"><MadCap:variable name="Variables.customer care" style="text-transform: capitalize;" />
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Calls</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">A plot cannot be deleted if there is a call recorded against it. **</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Input all information for new plots as normal.</td>
+                    <td colspan="2" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><MadCap:variable name="Variables.customer care" style="text-transform: capitalize;" /> is unaffected by house type changes.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="FONT-WEIGHT: normal;" colspan="7" class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>* Note that <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.La Land Management caps" /> stores the lists of house types and plots against each appraisal and <MadCap:variable name="General.ProductName" /><MadCap:variable name="Variables.cv cvr" style="text-transform: capitalize;" /> stores the list of plots against each <MadCap:variable name="Variables.cv cvr" style="text-transform: capitalize;" />, so these modules are unaffected by <MadCap:variable name="Variables.vp site" /> re-plans - each appraisal/<MadCap:variable name="Variables.cv cvr" /> will reflect the site plan as it was recorded at the time.</p>
+                        <p>** If a plot cannot be deleted then it can be changed to "non-sellable" and any costs and other information can be manually transferred/cancelled/deleted as appropriate.&#160; </p>
+                        <p>*** A plot can change house type at any time (a warning message will be displayed once VAP budgets exists, but this can be overridden.)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

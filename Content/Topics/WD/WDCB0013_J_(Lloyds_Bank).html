@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="542" MadCap:lastWidth="904">
+  <head>
+    <title>Format J (Lloyds Bank)</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Format J (Lloyds Bank)</h1>
+    <p>
+      <span style="FLOAT: right;">
+        <img src="../../Resources/Images/lloyds.png" />
+      </span>There is no separator in the file format, that is, fixed position fields. </p>
+    <p>In a line: </p>
+    <table border="0" cellspacing="0" bordercolor="#000000" width="68%">
+      <tbody>
+        <tr>
+          <th>
+            <p>Characters </p>
+          </th>
+          <th width="74%">
+            <p>Field</p>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <p>1 to 6 </p>
+          </td>
+          <td>
+            <p>
+              <MadCap:variable name="Variables.sort code" style="text-transform: capitalize;" />
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>7 to 14 </p>
+          </td>
+          <td>
+            <p>Account </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>16 to 17 </p>
+          </td>
+          <td>
+            <p>Transaction type </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>36 to 46 </p>
+          </td>
+          <td>
+            <p>Value in pence </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>47 to 82 </p>
+          </td>
+          <td>
+            <p>Description (for <MadCap:variable name="Variables.cheques" />, the number is in the right-most positions of characters 65-82) </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>102 to 103 </p>
+          </td>
+          <td>
+            <p>Year in yy format </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>104 to 106 </p>
+          </td>
+          <td>
+            <p>Day of the year (that is Feb 1st = 032) </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>When using LloydsLink to export statements for bank reconciliation, export the statement in APACS format - this matches <MadCap:variable name="General.ProductName" /> format J.</p>
+  </body>
+</html>

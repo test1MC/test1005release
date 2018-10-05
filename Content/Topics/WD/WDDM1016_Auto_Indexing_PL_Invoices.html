@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Auto Indexing PL Invoices</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Auto Indexing PL Invoices</h1>
+        <p>Auto indexing (using <span class="function" title="Function:%WDM2080BDMP">Index from Pool</span> and <span class="function" title="Function:%WDM2090BDMB">Index from Batch</span>) allows you to index scanned PL Invoice batches and automatically create PL invoice records.&#160;<MadCap:variable name="General.ProductName" /> creates an invoice batch in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, with an invoice record for each document you index.&#160;The invoice batch has a status of incomplete.</p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/DM_101001.gif" />
+        </p>
+        <p>The scanned document images are displayed in a separate window, allowing you to enter the indexing details in the <MadCap:variable name="General.ProductName" /> window.&#160;If you have two monitors, you can display the document image on one and the <MadCap:variable name="General.ProductName" /> input screen on the other.</p>
+        <p>
+            <img src="../../Resources/Images_D-F/DM/DM_101002.gif" />
+        </p>
+        <p>When you save the indexing details for one invoice, you move on to index the next invoice, and <MadCap:variable name="General.ProductName" /> automatically displays the corresponding invoice in the image window.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDDM1012_Bulk_Auto-Index_of_Single_Page_Invoices.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To auto-index invoices:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WDM2080BDMP">Index from Pool</span> or <span class="function" title="Function:%WDM2090BDMB">Index from Batch</span>.</li>
+                <li>Click the link for the pool or batch you want to index.</li>
+                <li>Select the folder where you want to store the indexed documents.</li>
+                <li>Click the link for PL invoices. 
+<p><MadCap:variable name="General.ProductName" /> opens the first invoice in a new window.&#160;<MadCap:variable name="General.ProductName" /> will create a new invoice batch in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> (the batch number is shown at the top of the indexing screen, and the batch description will be 'OA DM Batch'). </p></li>
+                <li>Leave the <span class="field">Auto Index</span> box <MadCap:variable name="Variables.tick" />ed.</li>
+                <li>Enter a description for the invoice.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays the next image and prompts for the description of the next invoice.</p></li>
+                <li>If the new image is a continuation of the previous invoice, un-<MadCap:variable name="Variables.tick" /> the <span class="field">New Invoice </span>field; <MadCap:variable name="General.ProductName" /> will attach the image to the previous invoice document.&#160;If you <MadCap:variable name="Variables.tick" /> <span class="field">New Invoice</span>, <MadCap:variable name="General.ProductName" /> creates a new invoice record and a corresponding new invoice document.</li>
+                <li>Continue entering indexing details for each image in the pool or batch.
+<p>When you have indexed all the images in the pool or batch, it disappears from the list.</p></li>
+                <p class="noteheader">NOTE</p>
+                <div class="note">If you leave any of the documents un-indexed, you can select the same pool or batch for indexing later, but <MadCap:variable name="General.ProductName" /> will create a new <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> batch.</div>
+            </ol>
+            <h2>To complete the invoice details:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1010BCOB">Enter Invoices</span>.</li>
+                <li>Select the invoice batch.&#160; 
+<p>When you open each invoice record, <MadCap:variable name="General.ProductName" /> displays the corresponding image.</p></li>
+                <li>Fill in the invoice details for each invoice.</li>
+            </ol>
+        </div>
+    </body>
+</html>

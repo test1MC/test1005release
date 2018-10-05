@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Sectors</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Sectors</h1>
+    <p>Sectors provide a way to group and <MadCap:variable name="Variables.analyse" /> transactions and balances across different ledgers.  You can think of a sector as a subdivision of a <MadCap:variable name="Variables.kco company" /> within <MadCap:variable name="General.ProductName" />.  A sector could be a separate legal entity, or a division or a branch.  </p>
+    <p>Using sectors ensures that every transaction, including cash transactions, is assigned to either a <MadCap:variable name="Variables.jc contract" /> or an overhead department.  This enforces good data processing discipline and allows you to report separately on transactions and balances that relate to that subdivision; for example, to produce <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> remittances and <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span> statements by <MadCap:variable name="Variables.jc contract" />.  </p>
+    <p>We recommend you enable sectors unless you have a good reason not to. Even if you do not need more than one sector at present, configuring <MadCap:variable name="General.ProductName" /> to use sectors will give you the flexibility to introduce other sectors later (for example if your business grows). </p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">While sectors provide some of the features of separate kcos (<MadCap:variable name="Variables.kco companies" />) they are not an alternative.  There are various factors that you would need to take into account when considering the use of <MadCap:variable name="Variables.kco companies" /> and sectors, including your statutory and management structures, the degree of central<MadCap:variable name="Variables.is" />ation, your accountancy requirements and so on.  The configuration of sectors in a manner appropriate to a client organ<MadCap:variable name="Variables.is" />ation is always a key consideration in the early stages of implementation consultancy.  These configurations should not be changed by users without <MadCap:variable name="General.ProductName" /> consultancy.</div>
+    <p>There are various features of sectors that you might want to consider. Using sectors, you would be able, for example, to generate payments to <MadCap:variable name="Variables.pl suppliers" /> according to the division they supply.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDGL0025_Ownership_of_Transactions.html" />
+        <MadCap:relatedTopic src="WDGL0021_Inter-Divisional_Postings.html" />
+        <MadCap:relatedTopic src="WDGL0022_Sectorised_Balance_Sheets.html" />
+        <MadCap:relatedTopic src="WDGL0023_Sector-Based_Ledgers.html" />
+        <MadCap:relatedTopic src="WDGL0024_Sector_Security.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print">Enabling sectors</h2>
+      <p>One element of the <span class="module">General Ledger</span> code represents the sector. For example, if your account code was made up of the elements Division.Department.Account, the first element, Division, might be the sector.</p>
+      <h2>To enable sectors:</h2>
+      <ol>
+        <li>Set the parameter <span class="parameter">SECTOR </span>(in <span class="function" title="Function:%WGL0000BSYP">GL Parameters</span>) to <span class="userinput">Y</span>.</li>
+        <li>Set the parameter <span class="parameter">SECTGLEL </span>(in <span class="function" title="Function:%WGL0000BSYP">GL Parameters</span>) to the number of the element that represents the sector.</li>
+        <li>If appropriate, use <span class="function" title="Function:%WGL2070BCTA">Sector Details Maintenance</span> to set up records for each sector, and record the address details.</li>
+        <li>If you are using inter-<MadCap:variable name="Variables.kco company" /> postings, set the parameter <span class="parameter">SECTICO </span>to <span class="userinput">Y</span>.</li>
+      </ol>
+      <p>This will allow you to select transactions and run reports by sector. However all sectors will be visible to all users; if you want to restrict access to sectors, you can set up <a href="WDGL0024_Sector_Security.html">Sector Security</a>.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/GL/gl_sector.htm" />
+          <MadCap:relatedTopic src="../Parameters/GL/gl_sectglel.htm" />
+          <MadCap:relatedTopic src="../Parameters/GL/gl_sectico.htm" />
+          <MadCap:relatedTopic src="../Parameters/SL/sl_MULSECST.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

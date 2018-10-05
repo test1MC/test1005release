@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>[%=Variables.Se Service Order caps%] Days To Invoice Report</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 "><MadCap:variable name="Variables.Se Service Order caps" /> Days To Invoice Report</h1>
+        <p class="Body"> The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><MadCap:variable name="Variables.Se Service Order caps" /> Days To Invoice Report is a standard report showing the number of days needed to invoice work after it has been completed (including weekend days). It is a metric used to determine the efficiency of each Service Department.</p>
+        <p class="Body">To accommodate <MadCap:variable name="Variables.Se Service Orders caps" /> that can be billed multiple times, the report counts the number of days between the first Dispatch Start Date and the first Invoice Date, as well as the number of days between the last Dispatch Start Date and the last Invoice Date. If there is only one invoice for the <MadCap:variable name="Variables.Se Service Order caps" />, the second value is more relevant since the billing was done after the work was complete.</p>
+        <h2 MadCap:autonum="1.1 ">Menu Item</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function"><MadCap:variable name="Variables.Se Service Order caps" /> Days To Invoice Report</span> menu option is available on the <i>Service Management &gt; Reports menu</i>, as shown in <MadCap:xref href="#RptMenu" class="ImageRef"><i>Figure 1:  Report Menu</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="RptMenu"></a>Report Menu</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE050_Images/SE050_RptMenu.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Selection Screen</h2>
+        <p class="Body">When you select <span class="Function"><MadCap:variable name="Variables.Se Service Order caps"></MadCap:variable> Days To Invoice Report</span> from the SE Reports menu, a selection screen appears. This screen contains a <MadCap:variable name="Variables.Se Service Order caps" /> Selection tab, as shown in <MadCap:xref href="#RptSelScreen" class="ImageRef"><i>Figure 2:  Report Selection Screen</i></MadCap:xref>.</p>
+        <p class="Body">The <span class="Field">Billing Complete Date From/To</span> option lets you exclude orders that are still in the billing phase.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="RptSelScreen"></a>Report Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE050_Images/SE050_RptSelScreen.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">Report Sample</h2>
+        <p class="Body">After you enter the criteria on the selection screen, a <MadCap:variable name="Variables.Se Service Order caps" /> Days To Invoice Report is generated. The report data are listed by <MadCap:variable name="Variables.Se Service Order caps" />/Location/Customer Name, as shown in <MadCap:xref href="#RptSample" class="ImageRef"><i>Figure 3:  Report Sample</i></MadCap:xref>.</p>
+        <ul>
+            <li class="ListBullet1">In order for a <MadCap:variable name="Variables.Se Service Order caps" /> to appear on the report, it must be marked as <strong>Schedule Complete</strong> and have at least one posted invoice.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet1">Scheduled Billing <MadCap:variable name="Variables.Se Service Orders caps" /> are excluded from the report (regardless of the selection screen) if the <MadCap:variable name="Variables.Se Service Order caps" /> contains only that particular Billing Detail Type, which has no schedule/dispatch data.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="RptSample"></a>Report Sample</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE050_Images/SE050_RptSample.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

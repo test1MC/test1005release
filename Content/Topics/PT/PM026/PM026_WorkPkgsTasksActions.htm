@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">
+                <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Production Tracking Functionality: </MadCap:conditionalText>
+            </MadCap:conditionalText>Work Packages/Tasks/Actions</h1>
+        <p class="Body">The <span class="Function">Work Packages/Tasks/Actions </span>function is found in <i>Project Management &gt; [Working Project] &gt; Production Tracking</i>. It allows you to do the following:</p>
+        <ul>
+            <li class="ListBullet3">Create and maintain the Work Packages for a Project.</li>
+            <li class="ListBullet3">View the status of the Work Packages by including calculated Task and Action data.</li>
+            <li class="ListBullet3">Link to associated Tasks or Actions of the Work Package.</li>
+        </ul>
+        <p class="Body">This function is divided into the following tabs:&#160;<strong>Work Packages</strong>, <strong>Tasks</strong>, <strong>Actions</strong>, <strong>Cost Codes</strong>. All of these tabs are discussed below.</p>
+        <h2 MadCap:autonum="1.1 ">Work Packages Tab</h2>
+        <p class="Body">You can use the <strong>Work Packages </strong>tab (<MadCap:xref href="#WorkPackages" class="ImageRef"><i>Figure 1:  Work Packages Tab</i></MadCap:xref>) to create and maintain Work Packages for a Project.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="WorkPackages"></a>Work Packages Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/WorkPkgTab.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.1 ">Add Work Packages</h3>
+        <p class="Body">When you click the <strong>Add </strong>button to add a Work Package, the Add screen appears, as shown in <MadCap:xref href="#AddWP" class="ImageRef"><i>Figure 2:  Add Work Package Screen</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="AddWP"></a>Add Work Package Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/AddWPScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Work Package</p>
+        <p class="IndentFieldDef">The label for the Work Package entered here must be unique within a Project and cannot be blank. It can be changed with active data that have no impact on Tasks, Actions, or <MadCap:variable name="Variables.Jc Contract caps" /> Status transactions.</p>
+        <p class="IndentBold">Work Package Name</p>
+        <p class="IndentFieldDef">The name of the Work Package.</p>
+        <p class="IndentBold">Sort Code</p>
+        <p class="IndentFieldDef">The Sort Code of the Work Package.</p>
+        <p class="IndentBold">UOM</p>
+        <p class="IndentFieldDef">The code for the Unit of Measure (UOM).</p>
+        <p class="IndentBold">Quantity</p>
+        <p class="IndentFieldDef">The quantity in this field is informational only.</p>
+        <p class="IndentBold">Schedule ID</p>
+        <p class="IndentFieldDef">The Schedule ID of the Work Package.</p>
+        <p class="IndentBold">Contractor</p>
+        <p class="IndentFieldDef">If entered, the Contractor must already exist. Otherwise, it can be blank. Company records in the Central Repository are used for the lookup.</p>
+        <p class="IndentBold">Responsible Party</p>
+        <p class="IndentFieldDef">The name of the person responsible for the Work Package.</p>
+        <p class="IndentBold">Constraint</p>
+        <p class="IndentFieldDef">Any constraint that should be set up for the Work Package. This can be blank.</p>
+        <p class="IndentBold">Default <MadCap:variable name="Variables.Jc Contract caps" /></p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Jc Contract caps" /> to be used as the default for the Work Package. This must be one of the <MadCap:variable name="Variables.Jc Contracts caps" /> defined in the Project.</p>
+        <p class="IndentBold">Default Cost Code</p>
+        <p class="IndentFieldDef">The Cost Code to be used as the default for the&#160;Work Package. This can be blank.</p>
+        <h3 MadCap:autonum="1.1.2 ">Delete Work Packages</h3>
+        <p class="Body">You can use the <strong>Delete </strong>button to delete Work Packages with Tasks that do not have any installed transactions (open scheduled Actions can be deleted). </p>
+        <h3 MadCap:autonum="1.1.3 ">Export Work Packages</h3>
+        <p class="Body">The <span class="Function">Export </span>button generates a spreadsheet of selected Work Packages for a single Project using a predefined, fixed set of columns.</p>
+        <h3 MadCap:autonum="1.1.4 ">Download/Upload Work Packages</h3>
+        <p class="Body">To download and upload Work Packages, you must use the <span class="Function">Spreadsheet Workbench</span> found in <i>Project Management &gt; [Working Project] &gt; Production Tracking</i>. For more information on this Workbench, see Section <MadCap:xref href="PM026_SpreadsheetWB.htm" class="ImageRef"><i>0.1  Production Tracking Functionality: Spreadsheet Workbench</i></MadCap:xref>.</p>
+        <h2 MadCap:autonum="1.2 ">Tasks Tab</h2>
+        <p class="Body">The <span class="Function">Tasks </span>tab (<MadCap:xref href="#TasksTab" class="ImageRef"><i>Figure 3:  Tasks Tab</i></MadCap:xref>) allows you to maintain a Task list for all Work Packages of a selected Project. It allows you to easily record installed quantities against a Task, move a Task to another Work Package (even after the Task has earned values, i.e., installed quantities), and link to associated actions of Tasks.</p>
+        <p class="Body">The following actions are found at the bottom of the Tasks screen:</p>
+        <ul>
+            <li class="ListBullet3"><span class="Function">Change Cost Code </span>(see Section <MadCap:xref href="#Change" class="ImageRef"><i>0.1.2.4  Change Cost Code</i></MadCap:xref>)</li>
+            <li class="ListBullet3"><span class="Function">Change Work Packages</span> (see Section <MadCap:xref href="#ChangeWPs" class="ImageRef"><i>0.1.2.5  Change Work Packages</i></MadCap:xref>)</li>
+            <li class="ListBullet3"><span class="Function">Complete Tasks </span>(see Section <MadCap:xref href="#Complete" class="ImageRef"><i>0.1.2.6  Complete Tasks</i></MadCap:xref>)</li>
+            <li class="ListBullet3"><span class="Function">Schedule an Action </span>(see Section <MadCap:xref href="#Schedule" class="ImageRef"><i>0.1.2.7  Schedule an Action</i></MadCap:xref>).</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="TasksTab"></a>Tasks Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/TasksTab.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.2.1 ">Add Tasks</h3>
+        <p class="Body">You can add Tasks by clicking the <span class="button">Add </span>button on the Tasks tab and using the screen that appears, as shown in <MadCap:xref href="#AddTaskScreen" class="ImageRef"><i>Figure 4:  Add Task Screen</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="AddTaskScreen"></a>Add Task Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/AddWPTaskScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Work Package</p>
+        <p class="IndentFieldDef">The label for the Work Package entered here must be unique within a Project and cannot be blank. It can only be edited in Add mode.</p>
+        <p class="IndentBold">Task</p>
+        <p class="IndentFieldDef">The label for the Task within a Project/Work Package; it cannot be blank.  It can be unique if the <span class="parameter">PT/TASKDUP</span> parameter is set to <strong>N </strong>to not allow duplicates. It can also be edited.</p>
+        <p class="IndentBold">Task Name</p>
+        <p class="IndentFieldDef">The name of the Task.</p>
+        <p class="IndentBold">Sort Code</p>
+        <p class="IndentFieldDef">The Sort Code of the Task.</p>
+        <p class="IndentBold">UOM</p>
+        <p class="IndentFieldDef">The code for the Unit of Measure (UOM).</p>
+        <p class="IndentBold">Schedule ID</p>
+        <p class="IndentFieldDef">The Schedule ID of the Task.</p>
+        <p class="IndentBold">Responsible Party</p>
+        <p class="IndentFieldDef">The name of the person responsible for the Task.</p>
+        <p class="IndentBold">Plan Quantity</p>
+        <p class="IndentFieldDef">The quantity planned to be installed.</p>
+        <p class="IndentBold">Plan Hours/Unit</p>
+        <p class="IndentFieldDef">The number of hours/unit planned to be installed.</p>
+        <p class="IndentBold">Plan Hours</p>
+        <p class="IndentFieldDef">The number of hours planned to be spent for Task completion.</p>
+        <p class="IndentBold">Installed Quantity</p>
+        <p class="IndentFieldDef">The total quantity already installed for the Task. This value cannot be greater than the <span class="Field">Plan Quantity</span> above.</p>
+        <p class="IndentBold">Earned Hours</p>
+        <p class="IndentFieldDef">The number of hours that have already been spent on the Task installation.</p>
+        <p class="IndentBold">Percent Complete</p>
+        <p class="IndentFieldDef">The percentage of the&#160;Task that is already completed.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Jc Contract caps" />
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.Jc Contract caps" /> to be used for the Task.</p>
+        <p class="IndentBold">Cost Code</p>
+        <p class="IndentFieldDef">The Cost Code to be used for the&#160;Task. This can be blank. If entered, it must exist and be active, and it cannot be changed if there are any earned quantities (unless the Cost Code was blank).</p>
+        <ul>
+            <li class="ListBullet4">If you need to change the <MadCap:variable name="Variables.Jc Contract caps" />/Cost Code on a Task that has earned values, you must use the <span class="Function">Change Cost Code </span>action.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet4">If you change the Cost Code from blank to non blank, and the Task has installed Actions, <MadCap:variable name="Variables.Jc Contract caps" /> Status is updated with a new installed quantity record.</li>
+        </ul>
+        <p class="IndentBold">Original  Quantity</p>
+        <p class="IndentFieldDef">The initial quantity that was planned for Task installation.</p>
+        <p class="IndentBold">Original Hours/Unit</p>
+        <p class="IndentFieldDef">The initial hours/unit that was planned for Task installation.</p>
+        <p class="IndentBold">Original Hours</p>
+        <p class="IndentFieldDef">The initial hours that were planned for Task installation.</p>
+        <p>
+            <p class="IndentBold">Constraint</p>
+        </p>
+        <p>
+            <p class="IndentFieldDef">Any constraint that should be set up for the Work Package. This can be blank.</p>
+        </p>
+        <p class="IndentBold">Plan Start Date</p>
+        <p class="IndentBold">Plan End Date</p>
+        <p class="IndentFieldDef">The start and end dates planned for Task completion.</p>
+        <p class="IndentBold">Actual Start Date</p>
+        <p class="IndentBold">Actual Finish Date</p>
+        <p class="IndentFieldDef">The start and end dates when the Task is actually completed.</p>
+        <p class="IndentBold">Trade</p>
+        <p class="IndentFieldDef">Select the commodity, trade, or <MadCap:variable name="Variables.Pc Plant caps" />&#160;code.</p>
+        <p class="Body"><strong>PLEASE&#160;NOTE:&#160;</strong>The remaining four fields below are concerned with the Action (not the Task), which is automatically created after the Task is saved. Once the Action is created, these fields will be empty.</p>
+        <p class="IndentBold">Quantity Installed Current</p>
+        <p class="IndentFieldDef">The quantity that is currently installed. When this value is entered, the <span class="Field">Quantity Installed to Date </span>value is automatically calculated and displayed on the screen.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">Quantity Installed to Date</p>
+        <p class="IndentFieldDef">The quantity that is installed to date. When this value is entered, the <span class="Field">Quantity Installed Current </span>value is automatically calculated and displayed on the screen.</p>
+        <p class="IndentBold">Installed Date</p>
+        <p class="IndentFieldDef">The actual date that the quantity was installed. This date defaults to the install date set in the Task header, but it can be overridden.</p>
+        <ul>
+            <li class="ListBullet4">If <span class="Field">Quantity Installed Current </span>has a non zero value, the <span class="Field">Installed Date </span>must be entered.</li>
+            <li class="ListBullet4">  For the Task function only, the <span class="Field">Installed Date </span>cannot be previous to any other action with an installed quantity for this task.</li>
+        </ul>
+        <p class="IndentBold">Complete Flag</p>
+        <ul>
+            <li class="ListBullet4">If the <span class="Field">Complete Flag </span>box is <MadCap:variable name="Variables.tick" />ed, the system fills in the installed quantity with the unearned quantity, and the installed date from the session parameter.</li>
+            <li class="ListBullet4">If the <span class="Field">Complete Flag </span>box is un<MadCap:variable name="Variables.tick" />ed, the <span class="Field">Quantity Installed Current</span>, <span class="Field">Quantity Installed to Date</span>, and <span class="Field">Installed Date </span>are blank.  It does not reflect whether the Task is complete.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.2 ">Delete Tasks</h3>
+        <p class="Body">To delete Tasks, select them on the Tasks tab and then click the <span class="button">Delete </span>button.</p>
+        <ul>
+            <li class="ListBullet3">You can delete Tasks that do not have any installed Actions.</li>
+            <li class="ListBullet3">If you delete a Task that only has scheduled Actions, the scheduled Actions are deleted.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.3 ">Export Tasks</h3>
+        <p class="Body">The <span class="Function">Export Tasks </span>button on the Tasks tab lets you generate a spreadsheet of selected Tasks for a single Project (see sample spreadsheet in <MadCap:xref href="#ExportTasksSS" class="ImageRef"><i>Figure 5:  Sample Export Tasks Spreadsheet</i></MadCap:xref>). It exports a predefined fixed set of columns. <strong>Note: </strong>Action quantities are not included in the column set for importing.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="ExportTasksSS"></a>Sample Export Tasks Spreadsheet</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/ExportTasksSS.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.2.4 "><a name="Change"></a>Change Cost Code</h3>
+        <p class="Body">The <span class="Function">Change Cost Code </span>action allows a Task to be assigned new cost codes, even after the Task has earned values (installed quantities). When you select this action, the Change Cost Codes popup screen appears, as shown in <MadCap:xref href="#ChangeCCScreen" class="ImageRef"><i>Figure 6:  Change Cost Codes Screen</i></MadCap:xref>.</p>
+        <p class="Body">When a Task is assigned a <MadCap:variable name="Variables.Jc Contract caps" />/Cost Code via the <span class="Function">Change Cost Code </span>action, <MadCap:variable name="Variables.Jc Contract caps" /> Status must potentially be updated.</p>
+        <p class="Body">Whether or not the Task that was changed has Earned values, the system checks the total Earned value for all the tasks of the Cost Code and compares that to the Planned hours of the Cost Code. If that Earned/Planned value has changed, <MadCap:variable name="Variables.Jc Contract caps" /> Status must be updated.</p>
+        <p class="Body"><strong>NOTE:</strong> The <MadCap:variable name="Variables.Jc Contract caps" />/Cost Code is not stored on the actions; the actions point to the Task to get the <MadCap:variable name="Variables.Jc Contract caps" />/Cost Code.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="ChangeCCScreen"></a>Change Cost Codes Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/ChgCostCodes.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">The following occurs when the <span class="Function">Change Cost Code </span>action is executed for a Task that has earned values and is split into a new Task pointing to a new Cost Code:</p>
+        <ul>
+            <li class="ListBullet3">The original Task record(s) has the plan quantity set equal to the earned quantity.</li>
+            <li class="ListBullet3">The new Task(s) have all the same fields as the original Task, with the exception of the plan quantity and <MadCap:variable name="Variables.Jc Contract caps" />/Cost Code.</li>
+            <li class="ListBullet3">The plan quantity is equal to the original Task plan quantity <strong>minus </strong>the original Task earned quantity.  The <MadCap:variable name="Variables.Jc Contract caps" />/Cost Code is set from the input screen.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.5 "><a name="ChangeWPs"></a>Change Work Packages</h3>
+        <p class="Body">The <span class="Function">Change Work Packages </span>action performs a mass update to assign selected Tasks to the same Work Package. When you select this action, the Change Work Package popup screen appears, as shown in <MadCap:xref href="#ChangeWPScreen" class="ImageRef"><i>Figure 7:  Change Work Package Screen</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 7: "><a name="ChangeWPScreen"></a>Change Work Package Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/ChgWP.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.2.6 "><a name="Complete"></a>Complete Tasks</h3>
+        <p class="Body">The <span class="Function">Complete Tasks </span>action allows you to select a set of Tasks and mark the records complete. This creates Action records that make the Tasks 100% complete (Action records for the unearned quantity). When you select this action, the Set the Install Date popup screen appears, as shown in <MadCap:xref href="#SetInstallDate" class="ImageRef"><i>Figure 8:  Set the Install Date Screen</i></MadCap:xref>. This date defaults in from the Installed Date on the Tasks screen but can be changed.</p>
+        <p class="Caption" MadCap:autonum="Figure 8: "><a name="SetInstallDate"></a>Set the Install Date Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/CompTasks_InstallDate.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">After the <span class="Function">Complete Tasks </span>action is finished, the Tasks screen is refreshed so that the earned values are updated.</p>
+        <h3 MadCap:autonum="1.2.7 "><a name="Schedule"></a>Schedule an Action</h3>
+        <p class="Body">The <span class="Function">Schedule an Action </span>action allows you to select a set of Tasks to create a scheduled Action for each record (with a scheduled quantity other than zero). When you select this action, the Schedule an Action popup screen appears, as shown in <MadCap:xref href="#SchedActionScreen" class="ImageRef"><i>Figure 9:  Schedule an Action Screen</i></MadCap:xref>. </p>
+        <p class="Caption" MadCap:autonum="Figure 9: "><a name="SchedActionScreen"></a>Schedule an Action Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/SchedAction.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">Actions Tab</h2>
+        <p class="Body">You can use the <strong>Actions </strong>tab (<MadCap:xref href="#ActionsTab" class="ImageRef"><i>Figure 10:  Actions Tab</i></MadCap:xref>) to edit Actions for selected Work Packages and&#160;Tasks, view Actions and the status of scheduled Actions, and close scheduled Actions.</p>
+        <p class="Body">The following actions are found at the bottom of the Actions screen:</p>
+        <ul>
+            <li class="ListBullet3"><span class="Function">Close - Installed in Full </span>(see Section <MadCap:xref href="#Close" class="ImageRef"><i>0.1.3.1  Close - Installed in Full Action</i></MadCap:xref>)</li>
+            <li class="ListBullet3"><span class="Function">Close - Not Installed</span> (see Section <MadCap:xref href="#Close2" class="ImageRef"><i>0.1.3.2  Close – Not installed Action</i></MadCap:xref>)</li>
+            <li class="ListBullet3"><span class="Function">Move to a New Day </span>(see Section <MadCap:xref href="#Move" class="ImageRef"><i>0.1.3.3  Move to a New Day Action</i></MadCap:xref>)</li>
+        </ul>
+        <p class="Body"><strong>NOTE: </strong>If a scheduled Action is created/saved and the Task or Work Package that the Action belongs to is constrained, a warning message is displayed.</p>
+        <p class="Caption" MadCap:autonum="Figure 10: "><a name="ActionsTab"></a>Actions Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/ActionsTab.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Work Package</p>
+        <p class="IndentFieldDef">Select the Work Package from the lookup list. It can only be edited in Add mode.</p>
+        <p class="IndentBold">Task</p>
+        <p class="IndentFieldDef">Select the Task from the lookup list. </p>
+        <p class="IndentBold">Scheduled Quantity</p>
+        <p class="IndentFieldDef">The quantity scheduled for the Action.</p>
+        <p class="IndentBold">Responsible Party</p>
+        <p class="IndentFieldDef">The name of the person responsible for the Task.</p>
+        <p class="IndentBold">Target Date</p>
+        <p class="IndentFieldDef">The scheduled target date for the Action. It must be entered if <span class="Field">Scheduled Quantity </span>is non zero.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">Install Scheduled</p>
+        <p class="IndentFieldDef">This box is always un<MadCap:variable name="Variables.tick" />ed.</p>
+        <p class="IndentFieldDef"><strong>Note:</strong> If this box was <MadCap:variable name="Variables.tick" />ed, the Installed Quantity would automatically be set equal to the Task Plan Quantity. The action's status depends only on the <span class="Field">Installed&#160;Quantity </span>field and is Closed once the Installed&#160;Quantity equals the Task Plan Quantity.</p>
+        <p class="IndentBold">Installed Quantity</p>
+        <p class="IndentFieldDef">The total quantity already installed for the Action. This value cannot be greater than the <span class="Field">Plan Quantity</span> of the Task.</p>
+        <p class="IndentBold">Install Date</p>
+        <p class="IndentFieldDef">The actual date that the quantity was installed.  If <span class="Field">Installed Quantity </span>has a non zero value, the <span class="Field">Install Date </span>must be entered.</p>
+        <p class="IndentBold">Constraint</p>
+        <p class="IndentFieldDef">Any constraint that should be set up for the Action. If there is a Scheduled Quantity and the Installed Quantity &lt;&gt; 0 and less than the Scheduled Quantity, the Constraint must be filled in.</p>
+        <h3 MadCap:autonum="1.3.1 "><a name="Close"></a>Close - Installed in Full Action</h3>
+        <p class="Body">The <span class="Function">Close - Installed in Full </span>action allows you to easily close a number of fully installed, scheduled records at the same time. It sets the Installed Quantity to equal the Scheduled Quantity and sets the Install Date from the input value. When you select this action, the Close - Installed in Full popup screen appears, as shown in <MadCap:xref href="#CloseInstalledFull" class="ImageRef"><i>Figure 11:  Close - Installed in Full Screen</i></MadCap:xref>. </p>
+        <p class="Caption" MadCap:autonum="Figure 11: "><a name="CloseInstalledFull"></a>Close - Installed in Full Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/CloseInstallAction.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.2 "><a name="Close2"></a>Close – Not installed Action</h3>
+        <p class="Body">The <span class="Function">Close - Not Installed </span>action allows you to easily close a number of scheduled records at the same time, such as records that were not installed. When you select this action, the Close - Not Installed popup screen appears, as shown in <MadCap:xref href="#CloseNotInstallScreen" class="ImageRef"><i>Figure 12:  Close - Not Installed Screen</i></MadCap:xref>. </p>
+        <p class="Caption" MadCap:autonum="Figure 12: "><a name="CloseNotInstallScreen"></a>Close - Not Installed Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/CloseNotInstall.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.3 "><a name="Move"></a>Move to a New Day Action</h3>
+        <p class="IndentFieldDef">The <span class="Function">Move to a New Day </span>action takes the selected open records, closes them, and re-creates them for a new day. When you select this action, the Move to a New Day popup screen appears, as shown in <MadCap:xref href="#MoveToNewDay" class="ImageRef"><i>Figure 13:  Move to a New Day Screen</i></MadCap:xref>. </p>
+        <p class="IndentFieldDef">You cannot do this for Closed or Unscheduled Actions.</p>
+        <p class="Caption" MadCap:autonum="Figure 13: "><a name="MoveToNewDay"></a>Move to a New Day Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/MoveToNewDay.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4 ">Cost Codes Tab</h2>
+        <p class="Body">You can use the <strong>Cost Codes </strong>tab (<MadCap:xref href="#CostCodesTab" class="ImageRef"><i>Figure 14:  Cost Codes Tab</i></MadCap:xref>) to view information about Cost Codes associated with Tasks and Actions.</p>
+        <p class="Caption" MadCap:autonum="Figure 14: "><a name="CostCodesTab"></a>Cost Codes Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PT/PM026_Images/CostCodesTab.png" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

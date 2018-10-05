@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="899" MadCap:lastWidth="597">
+  <head>
+    <title>Subcontractor Verification</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Subcontractor Verification</h1>
+    <p>
+      <span class="function" title="Function:%WSC2070BSBM">
+        <MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification</span> allows three modes of submission: Match, Verify and Auto.</p>
+    <p>For subcontractors whose details are matched it does not matter which mode you use: the verification status will be matched and the ‘Tax Treatment’ shows whether the subcontractor is to be paid gross or net.</p>
+    <p>However if the submission contains subcontractor records whose details don’t match those on HMRC’s database, the results from the different modes are different.</p>
+    <ul>
+      <li>If using Match mode, the subcontractors’ verification status will be failed, which means you can resolve any issues before re-submitting the details for verification.  Since the subcontractor has not been verified <MadCap:variable name="General.ProductName" /> will not let you pay the subcontractor.</li>
+      <li>If using Verify mode, the subcontractors’ verification status will be unmatched, which means the subcontractor is HMRC verified and so can be selected for payment but would be subject to the higher rate of deduction.</li>
+      <li>Auto mode is provided for compliance with certain requirements of HMRC testing.  If using Auto mode, those subcontractors with a verification status of ‘New’ are submitted as a ‘Match’, and those with a verification status of ?Failed? are submitted as a ‘Verify’.  This assumes that you have corrected any problems with records that have a ‘Failed’ status before you run another Auto submission.  Because of this, <strong>we suggest you do not use ‘Auto’.</strong></li>
+    </ul>
+    <p>Because of this, you may wish to grant access to the different modes accordingly.  </p>
+    <p>The function codes are as follows:</p>
+    <p>%WSC2070UCOI1 - HMRC Match</p>
+    <p>%WSC2070UCOI2 - HMRC Verify</p>
+    <p>%WSC2070UCOI3 - HMRC Auto</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">For OA, there are many other functions for granting access to screens, tabs and buttons; this document does not list all of these.</div>
+  </body>
+</html>

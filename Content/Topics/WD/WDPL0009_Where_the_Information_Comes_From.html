@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1320" MadCap:lastWidth="723">
+  <head>
+    <title>Where PCard Information Comes From</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Where PCard Information Comes From</h1>
+    <p>When transactions arrive from the PCard "hub", <MadCap:variable name="General.ProductName" /> attempts to fill in relevant information based on the details in the transaction. </p>
+    <h2>Allocation Section</h2>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Source </th>
+        </tr>
+        <tr>
+          <td>
+            <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />
+          </td>
+          <td>From the merchant name via the <MadCap:variable name="Variables.pl supplier" /> alias. </td>
+        </tr>
+        <tr>
+          <td>Card number </td>
+          <td>Only the last four digits are sent to <MadCap:variable name="General.ProductName" />.  The full card number is never stored in <MadCap:variable name="General.ProductName" />. </td>
+        </tr>
+        <tr>
+          <td>
+            <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />
+          </td>
+          <td>Held against the administration <MadCap:variable name="Variables.centre" /> for the PCard, or derived from the analysis.  If <MadCap:variable name="General.ProductName" /> can find only one <MadCap:variable name="Variables.jc contract" /> across all <MadCap:variable name="Variables.kco companies" /> then that <MadCap:variable name="Variables.kco company" /> is taken.  If <MadCap:variable name="General.ProductName" /> doesn't find any <MadCap:variable name="Variables.jc contract" /> then it tries to find a unique overhead department across all <MadCap:variable name="Variables.kco companies" />.  If it doesn?t find a unique <MadCap:variable name="Variables.jc contract" /> or department, it falls back to the <MadCap:variable name="Variables.kco company" /> held against the administration <MadCap:variable name="Variables.centre" />. </td>
+        </tr>
+        <tr>
+          <td>Analysis </td>
+          <td>From the buyer (point of sale) reference (level 2 or 3 merchants only), if <MadCap:variable name="General.ProductName" /> can match the reference with a valid <MadCap:variable name="Variables.jc contract" /> or overhead department code in the relevant <MadCap:variable name="Variables.kco company" />. </td>
+        </tr>
+        <tr>
+          <td>WBS</td>
+          <td>From the buyer reference (level 2 or 3 merchants only), if <MadCap:variable name="General.ProductName" /> can match the reference with a valid <MadCap:variable name="Variables.jc contract" />/WBS code combination. </td>
+        </tr>
+        <tr>
+          <td>Allowed</td>
+          <td>From the MCC (merchant category code). </td>
+        </tr>
+        <tr>
+          <td>Commodity code </td>
+          <td>From the MCC via the mapping in <MadCap:variable name="General.ProductName" />. </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Detail Lines</h2>
+    <p>There are three different levels of merchant; this relates to the transaction information they provide.</p>
+    <p />
+    <table>
+      <col style="width: 10em;" />
+      <col />
+      <tbody>
+        <tr>
+          <td>
+            <span class="nw">Level 1:</span>
+          </td>
+          <td>The incoming XML transaction message only gives the gross amount of the transaction.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="nw">Level 2: </span>
+          </td>
+          <td>The XML message gives the gross amount and the <MadCap:variable name="Variables.vat" /> amount; also (if the card holder provided one) a point of sale reference. The point of sale reference can be a <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.jc contract" /> code, an overhead department, or a <MadCap:variable name="Variables.jc contract" />/WBS code. <MadCap:variable name="General.ProductName" /> can then use these to work out the costing analysis for the transaction.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="nw">Level 3:</span>
+          </td>
+          <td>The XML message gives the gross amount, the <MadCap:variable name="Variables.vat" /> amount, the point of sale reference if the card holder provided one, and also the line item details.</td>
+        </tr>
+      </tbody>
+    </table>Transactions from level 3 merchants will include line details.  <MadCap:variable name="General.ProductName" /> populates the commodity code field (and WBS code field if used) on each detail line from the code in the analysis section.
+<p>For transactions from other merchants (level 1 or 2), no line details are available; <MadCap:variable name="General.ProductName" /> populates the first detail line with the commodity code and description from the commodity code in the analysis section.</p></body>
+</html>

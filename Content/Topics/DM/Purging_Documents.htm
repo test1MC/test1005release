@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Purging Documents</h1>
+        <p>Certain types of documents in <span class="module">Document Management</span> can be purged (deleted) automatically; this allows you to remove redundant documents from the system.</p>
+        <p>You can set a time limit for documents to expire. Once a document has reached the specified age, it will be deleted automatically.  Deletion only applies to nominated document categories: in this way, important documents can be kept, while other document types can be removed, releasing space on the live storage system.  Documents are not deleted if they are still in an active workflow, or have been revised more recently that the deletion period.</p>
+        <p>The purge routine is run automatically when COINS starts up.</p>
+        <p>The following DM parameters affect this functionality:</p>
+        <p>DMRETCAT - A pipe-separated list of document categories that are included in the purge of documents.</p>
+        <p>DMRETEND - The maximum amount of time in minutes the document purge process can run for.  If this time is reached before all the required documents have been removed, the process will stop, and restart from the point it left off the next time it is run.</p>
+        <p>DMRETKCO - A can-do list of <MadCap:variable name="Variables.kco companies" /> that can be included in the document purge process. DM uses the folder structure to relate documents to a specific <MadCap:variable name="Variables.kco company" />.</p>
+        <p>DMRETTLD - The default period that the documents must be held for before deletion can be processed.  This is a string that can either be an integer of the days, or a string to calculate a date; for example: 7y 5m 2d or 2555.</p>
+    </body>
+</html>

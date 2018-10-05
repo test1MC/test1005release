@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/IGVATVAL - Ignore VAT Validation on Subcontracts</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/IGVATVAL - </span> Ignore VAT Validation on Subcontracts
+</div>
+<div class="param_def">
+<p>(<MadCap:snippetBlock src="../../../Resources/Snippets/coinsoa.flsnp"/> only) Whether to bypass the <MadCap:variable name="Variables.Vat caps"/> Code validation on creating or updating subcontract records (<span class="userinput">Y</span> or <span class="userinput">N</span>).</p>
+<p>If <span class="parameter" data-mce-mark="1">IGVATVAL</span> is set to <span class="userinput" data-mce-mark="1">Y</span>, then when creating or updating a subcontract record, COINS:</p>
+<ul>
+<li><span style="font-size: 1em;" data-mce-mark="1">does not check that the <MadCap:variable name="Variables.vat"/> code exists; </span></li>
+<li><span style="font-size: 1em;" data-mce-mark="1">does not check that the <MadCap:variable name="Variables.vat"/> code is active; </span></li>
+<li><span style="font-size: 1em;" data-mce-mark="1">does not check that a <MadCap:variable name="Variables.vat"/> code is entered (that is, it allows blank) if the subcontractor is <MadCap:variable name="Variables.vat"/> registered;</span></li>
+<li><span style="font-size: 1em;" data-mce-mark="1">does not check that any <MadCap:variable name="Variables.vat"/> code entered is exempt or zero rated if the subcontractor is not <MadCap:variable name="Variables.vat"/> registered.</span></li>
+</ul>
+<p>If <span class="parameter" data-mce-mark="1">IGVATVAL</span> is set to <span class="userinput" data-mce-mark="1">N</span>, COINS makes all  the above checks when creating or updating a subcontract record.</p>
+<p>You could set this to <span class="userinput">Y</span> during initial setup, when loading all subcontracts into the system, if you do not know the actual <MadCap:variable name="Variables.vat"/> details at the time.</p>
+</div>
+</body>
+</html>

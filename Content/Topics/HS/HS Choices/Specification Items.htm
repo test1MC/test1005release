@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109" MadCap:lastBlockDepth="5" MadCap:lastHeight="841" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Specification Items</h1>
+        <p style="page-break-after: avoid;"><span class="function">Specification Items</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to group the detailed choices within an area.  For example, items such as units, worktops, sink and appliances could be set up to provide a logical grouping of the choices offered in a kitchen. </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/HS/HS Choices/Specification Items.png" class="FullWidth" />
+        </p>
+        <p> You can set up items so that they are not shown against plots when they are not appropriate. (You can also prevent whole areas being shown; see <MadCap:xref href="Specification Areas.htm">1 - Specification Areas</MadCap:xref>.)</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Location	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Select a location. If the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>VP parameter <span class="parameter">LOCHTYPE</span> is set to Y, the item will only be shown for a plot if the corresponding location is valid on the house type.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Minimum Bedrooms	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The item will only be shown for a plot if the number of bedrooms on the plot is equal to or greater than this number.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Minimum Bathrooms</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The item will only be shown for a plot if the number of bathrooms on the plot is equal to or greater than this number.</p>
+                </div>
+            </div>
+        </div>
+        <p>You can specify how the latest date an item can be chosen is calculated:</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Cut Off Stage</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Select a construction stage. </p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Cut Off Days<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Enter the number of days. The item must be chosen at least this number of days before the construction stage is completed.</p>
+                </div>
+            </div>
+        </div>
+        <p>If a choice is recorded for the item after the cut-off date, <MadCap:variable name="General.ProductName" /> displays a warning or an error (depending on the HS parameter <span class="parameter">CHOCOFF</span>), and can launch a workflow (specified by the HS parameter <span class="parameter">CHOWFCO</span>).</p>
+    </body>
+</html>

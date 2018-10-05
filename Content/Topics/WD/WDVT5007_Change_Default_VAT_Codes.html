@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Change Default <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes</title>
+    </head>
+    <body>
+        <div class="overview">
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Change Default <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes</h1>
+            <p>There are several types of records in <MadCap:variable name="General.ProductName" /> which include default <MadCap:variable name="Variables.vat" /> codes. Any of&#160;these which are currently set to a standard rated <MadCap:variable name="Variables.vat" /> code will need to be updated to&#160;the appropriate new code.</p>
+            <p>Many of these records may be blank or may be set to a <MadCap:variable name="Variables.vat" /> code which is not affected by the change. However, it would be difficult to identify any records which may need updating using standard <MadCap:variable name="General.ProductName" /> operational functionality. For this reason, a utility program is available to overcome this.</p>
+            <p>The records which may need to be updated are:</p>
+            <ul>
+                <li><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" />
+                </li>
+                <li>FM <MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></li>
+                <li><MadCap:variable name="Variables.Jc Contract caps" /> Series</li>
+                <li>Customers</li>
+                <li>Subcontractors</li>
+                <li>Subcontracts</li>
+                <li>Subcontract order headers in <MadCap:variable name="General.ProductName" /> Procurement -- the utility updates these if you update subcontracts</li>
+                <li>VAP Subcontract Payment Stages</li>
+                <li>VAP Standard Payment Stages</li>
+            </ul>
+            <p>For subcontracts, subcontractors and payment stages, you can choose to update the codes on different billing types separately:</p>
+            <ul>
+                <li><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Items</li>
+                <li><MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" />
+                </li>
+                <li>VAP matrix subcontracts - the utility will update lines on subcontract matrices</li>
+            </ul>
+        </div>
+        <div class="process">
+            <h2 class="print">To run the Default <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Code Update utility:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYRDFVAT">Update Default <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Codes</span>.</li>
+                <li>Select an old standard rate <MadCap:variable name="Variables.vat" /> code (you will need to do this for each old code in turn).</li>
+                <li>Select the new standard rate <MadCap:variable name="Variables.vat" /> code you want to replace it with.</li>
+                <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the record types you want to update; you can select more than one type of record.</li>
+                <li>If you selected Subcontractor, enter a comma-separated list of the billing types (A for Authenticated Receipt, I for Invoicing, S for Self-Billing) you want to update with the new code.</li>
+                <li>On the Output Options tab, choose how you want the report to be printed.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> updates any records of the type(s) you selected, and produces a report to show you what has changed.</p></li>
+                <li>Repeat the process for the other <MadCap:variable name="Variables.vat" /> codes (and other record types) as necessary.</li>
+            </ol>
+            <h2>Manual update</h2>
+            <p>You may also need to change the default <MadCap:variable name="Variables.vat" /> codes on:</p>
+            <ul>
+                <li><span style="font-size: 1em;" data-mce-mark="1"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Sundry Charges</span>
+                </li>
+                <li><span style="font-size: 1em;" data-mce-mark="1">Expense Items</span>
+                </li>
+            </ul>
+            <p>Since you are only likely to have a few of each of these, the Default <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Code update utility does not process these records. You will need to change the codes manually.</p>
+            <h2><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Configuration</h2>
+            <p><span class="function" title="Function:%WPC9500HPCF">Configuration</span>&#160;specifies default <MadCap:variable name="Variables.vat" /> codes for internal and external <MadCap:variable name="Variables.pc hire" />. If these are currently set to a standard rated <MadCap:variable name="Variables.vat" /> code, you will need to update them with the appropriate new code.</p>
+        </div>
+    </body>
+</html>

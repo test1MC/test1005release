@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CV/FCBGESBQ - ESB Endpoint for background recalculation of forecast items</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CV/FCBGESBQ - </span> ESB Endpoint for background recalculation of forecast items
+</div>
+<div class="param_def">
+<p>ESB Endpoint.  If not blank then an ESB process queue can be configured to process the <MadCap:variable name="Variables.Cv Cvr caps"/>  dependency recalculations as they occur.</p>
+<p>May contain curly bracket expressions which will be replaced using jc_job fields, e.g. jc_job.jgr_group - this allows for processing to be spread across multiple ESB endpoints and brokers</p>
+<p>ESB Process Queues can be added to process the messages for the end points.  The process queue should run program cvuesb001.processMessage</p>
+<p>The ESB Endpoint will only be considered if CV/FCBGCALC set to Y.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../cv/cv_fcbgcalc.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

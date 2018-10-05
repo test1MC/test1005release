@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="2941" MadCap:lastWidth="1220" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><a name="_Toc440873575"></a>Using Calculation Programs to prepare data for the Desktop</h1>
+        <p>Our Info Tile was able to access information from co_config, sysuser and menuparm without any additional work on our part.</p>
+        <p>It is possible to set up access to other tables before the desktop loads using Calculation Programs, this will then allow the tiles access to that information..</p>
+        <p>Calculation programs are essentially pre-written standard OA Calculation syntax that can be called on reports and browse screens.&#160; They can be as complex as required.</p>
+        <p>For example, for House Sales there is a standard Calculation program called %FINDVSI</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Using Calculation Programs.png" class="FullWidth" />
+        </p>
+        <p>This uses the following method to access vsi-rsp with a given kco, Development and Phase code to return the RowID of that Development.</p>
+        <p class="Example">$method$('vsi-rsp.findKey',co_config.ro_varvalue^kco,co_config.ro_varvalue^pvJob,co_config.ro_varvalue^pvPhase);</p>
+        <p>Note that the values are stored as kco (company number retrieved from the URL), pvJob and pvPhase.&#160; The pv prefix indicates that these are permanent variables and once stored are retained in the URL until removed or their value changes.&#160;&#160;&#160; Setting the pv values allows a specific development to be selected and any relevant Info Tiles on the next Desktop build will then show information for that development.</p>
+        <p>Currently (Jan 2016) there are only four pv values currently available – JC job (pvJob) and phase (pvPhase) and CI (pvView) and SRM (pvSibling).</p>
+        <p>To see how this can work, first we need to add this program to our user record.</p>
+        <p>In User Maintenance, find your userid and open the record.&#160; Select the Preferences Tab.</p>
+        <p>In the Initalise field, enter %FINDVSI</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Using Calculation Programs_1.png" class="FullWidth" />
+        </p>
+        <p>Save the record.</p>
+        <p>For demonstration purposes we are going to borrow some functionality from the Standard House Sales Dashboard</p>
+        <p>On the Utilities section of your Desktop add the two following Coins Standard Function as separate entries.</p>
+        <p>%WHS5600SVSI</p>
+        <p>%WHS5600BVSI</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Using Calculation Programs_2.png" class="FullWidth" />
+        </p>
+        <p>Now refresh the Desktop.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Using Calculation Programs_3.png" class="FullWidth" />
+        </p>
+        <p>On first run, the current development Tile will be blank as it does not know what information we want.&#160; This is not good practice as in a more complex desktop, tiles that cannot retrieve their information may cause the desktop to fail, so your desktop would normally be configured to populate with something on first load </p>
+        <p>Click the Select Development Tile, this runs a function that allows a development to be selected, runs the calculation program and rebuilds the desktop. Choose a development (this guide assumes you are using a <MadCap:variable name="General.ProductName" /> training environment configured for House Sales)</p>
+        <p>The Info Tile should now change to reflect the chosen development.&#160; In the URL note that the pv Values are shown.&#160; Any Info Tile can use those values to reflect information relating to the selected Development.&#160; These pv Values will be retained in the URL until another development is selected.</p>
+    </body>
+</html>

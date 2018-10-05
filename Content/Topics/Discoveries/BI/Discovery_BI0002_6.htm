@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="7261.333" MadCap:lastWidth="1104" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0002.6,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/COINS_LR_Simple.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Discovery BI0002.6 - Review: Writing a Standard Page</h1>
+        <p>&#160;</p>
+        <p>In this discovery, we go over creating a basic Contract Browse screen (as we did in BI0002.1). Once created, Discoveries BI0002.7 onwards will introduced additional browse components.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0001-1107.png" class="FullWidth" />
+        </p>
+        <h2>A Contract Browse Screen</h2>
+        <p>The first exercise is to create a simple contract enquiry screen. The screen will select contracts and return basic information from the jc_job record.</p>
+        <h2>Create the Function</h2>
+        <table style="width: 100%;border-right-style: none;border-right-width: 0.5pt;border-right-color: #97999b;border-top-style: none;border-top-width: 0.5pt;border-top-color: #97999b;border-bottom-style: none;border-bottom-width: 0.5pt;border-bottom-color: #97999b;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css');" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Function Code</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p> Initials + Exercise No&#160;&#160;  Eg&#160;&#160;&#160; NLM3Exercise1<br /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Function Name</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Description NLM3Exercise1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Function Type</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p> Function<br /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Function Module <br /></p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Contract Status <br /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Function Context <br /></p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Browse </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Function Category</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Leave as defaulted from the Function Description.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1">
+                        <p>Function Program</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyA-Column1-Body1">
+                        <p>wou005</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0009-1107.png" class="FullWidth" />
+        </p>
+        <h2>Create the Page</h2>
+        <p>Create the page section (with the same name as the function).</p>
+        <p>Enter the information into the Page Summary as follows:</p>
+        <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Header Table</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p> jc_config,co_config</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Body Table</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p> jc_job</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0002-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Body Rows</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">12</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Body Query</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">FOR EACH jc_job WHERE jc_job.kco = {kco}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0003-1107.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /> to complete the Page Summary.</p>
+        <h2>Create a Body Page Form</h2>
+        <p>Select the Form tab and create a Body form to display Body Fields.</p>
+        <p>Click the <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 1 Review Writing_5.png" style="visibility: visible;mso-wrap-style: square;width: 24px;height: 24px;" alt="add" /> Add Button and enter the following information to create the Form :</p>
+        <table style="width: 100%;caption-side: top;margin-left: auto;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css');" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" style="width: 151px;" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" style="width: 435px;" />
+            <tbody>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                        <p>Form</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                        <p>Body</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1">
+                        <p>Field Type</p>
+                    </td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyA-Column1-Body1">
+                        <p>Body</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0004-1107.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> to create the form.</p>
+        <h2>Add the Fields</h2>
+        <p>On the Fields Tab go to the FORM selector at the bottom of the page, select Body and click Apply Filter.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0005-1107.png" class="FullWidth" />
+        </p>
+        <p class="note">You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>Add the following Fields :</p>
+        <table style="width: 100%; caption-side: top; mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS_LR_Simple-Head-Header1">
+                    <th class="TableStyle-COINS_LR_Simple-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINS_LR_Simple-HeadE-Column1-Header1">
+                        <p>Label</p>
+                    </th>
+                    <th class="TableStyle-COINS_LR_Simple-HeadD-Column1-Header1">
+                        <p>Width</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">job_num</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1"> Contract Number</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1"> 15</td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">job_name</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1"> Name</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1"> 35</td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">jgr_desc</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1"> Group</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1"> 20</td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">jty_desc</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1"> Type</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1"> 20</td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">jcl_desc</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1"> Location</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1"> 20</td>
+                </tr>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1">job_active</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1"> Status</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyA-Column1-Body1"> 6</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Linking a Field to another function</h2>
+        <p>A field on an enquiry can be linked this to another function – for example to dig deeper into further information. This can be an existing standard enquiry or another user defined enquiry. Use the Function option in Field Maintenance to do this.</p>
+        <p>To Link the job_num field to the contract record:</p>
+        <p>Edit the job_num field by clicking on the Open button <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 1 Review Writing_8.png" style="visibility: visible;mso-wrap-style: square;width: 24px;height: 24px;" alt="open" /> On the Function field enter %WJC5014SJOB (this is a standard coins enquiry).</p>
+        <p>Your screen should now look like this:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0006-1107.png" class="FullWidth" />
+        </p>
+        <h2>Adding a Sort to a Column</h2>
+        <p>A column header can be used to sort the data. To add a sort enter the field name followed by either a + for ascending or – for descending.&#160; Add a sort to the column for <b>job_num.</b> (kco+,job_num)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0007-1107.png" />
+        </p>
+        <p>This will also provide a simple search filter to the Enquiry screen.</p>
+        <h2>Run the Page.</h2>
+        <p>&#160;</p>
+        <p>Run the Function by adding &amp;MainArea=yourfunctionname to the URL</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-6-0008-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

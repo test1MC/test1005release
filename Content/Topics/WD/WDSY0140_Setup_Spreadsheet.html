@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1794" MadCap:lastWidth="1090">
+    <head><title>Setting Up Function Access Using a Spreadsheet</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Up Function Access Using a Spreadsheet</h1>
+        <p>You can export the current security settings for a user or group to a spreadsheet, update them using the spreadsheet, then import them back into <MadCap:variable name="General.ProductName" />.&#160; You can also copy settings from one group or user to another.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0138_Menu_Item_Security.html" />
+                <MadCap:relatedTopic src="WDSY0139_Setup_Main_Menu_Security.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To Set Up Function Access Using a Spreadsheet:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WMS2035FMSF">Main Menu Security</span>.</li>
+                <li>Enter the user, group or sub group for which you want to specify access.</li>
+                <li>Enter the code for the top-most menu for which you want to specify access.&#160; For example, you might set the security for a whole module at the same time.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays a browse showing the functions that this user or group has access to.</p></li>
+                <li>Click the <img src="../../Resources/Images/COINS Graphics/SVG buttons/export.svg" class="button" /> Export button in the header (next to the <span class="field">Menu </span>field).
+<p><img src="../../Resources/Images/SY/SY_014001.png" /></p></li>
+                <li>Copy the content of the <span class="field">Export Data </span>field, and paste it into a spreadsheet.
+<p>This exports not just the records visible in the browse but also the child functions for each of the main menu items. You might find it helpful to use the filters in Excel to show the records you are interested in; for example, you could filter out the child entries, or filter on all the functions with a particular parent.</p><p><img src="../../Resources/Images/SY/SY_014002.png" /></p></li>
+                <li>In the spread­sheet, set the desired access permissions by changing column J (Access), where:
+<ul><li>N = No access</li><li>Y = Read-only access (if using Menu Item Security) or full access (if not using Menu Item Security)</li><li>YU = Update access (only available if using Menu Item Security)</li><li>G = Group access</li></ul><p>(When re-importing data, <MadCap:variable name="General.ProductName" /> only reads the 2nd and 10th columns (Function and Access), and ignores any changes to the other columns; they are shown only to help you.)</p></li>
+                <li>Copy the contents of the updated spreadsheet. Make sure you remove the filters, or set them appropriately, before you copy the details.</li>
+                <li>Go to <span class="function" title="Function:%WMS2037FMSF">Import Main Menu Security</span>.</li>
+                <li>Enter the code for the user, group or sub group you want to update (or to which you want to copy the security settings).
+<p><img src="../../Resources/Images/SY/SY_014003.png" /></p></li>
+                <li>Paste the contents of the spreadsheet into the field and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Set Up - Spreadsheet</h2>
+To use Menu Item Security, the SY parameter <span class="parameter">MENUSEC </span>must be set to <span class="userinput">Y</span>.
+<p><MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;"><MadCap:relatedTopic src="../Parameters/SY/sy_menusec.htm" /></MadCap:relatedTopics></p></div>
+    </body>
+</html>

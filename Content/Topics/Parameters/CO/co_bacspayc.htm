@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CO/BACSPAYC - Create a BACS Pay Code for each BACS file</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CO/BACSPAYC - </span> Create a BACS Pay Code for each BACS file
+</div>
+<div class="param_def">
+<p>Whether to create separate pay codes for <MadCap:variable name="Variables.eft"/> files.</p>
+<P>This is to cater for multiple payments on the same day and is currently only relevant for one Middle-East bank.</P>
+<P>If <SPAN class="parameter">BACSPAYC </SPAN>is set to <SPAN class="userinput">Y</SPAN>: </P>
+<UL>
+<LI>The first PL payment batch sent through against a particular bank will have Payment Set Code = P01. The second will have P02; the third, P03 and the fourth will be P01. It will then continue to loop between these codes.</LI>
+<LI>The first SC payment batch sent through against a particular bank will have Payment Set Code = S01. The second will have S02; the third, S03 and the fourth will be S01. It will then continue to loop between these codes.<BR></LI></UL>
+</div>
+</body>
+</html>

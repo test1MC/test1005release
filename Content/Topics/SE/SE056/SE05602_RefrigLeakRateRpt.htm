@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head />
+    <body>
+        <h1 MadCap:autonum="1 ">Refrigerant Leak Rate Report</h1>
+        <p class="Body">The Service Management module <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>has a Refrigerant Leak Rate Report. If an <MadCap:variable name="Variables.Se Asset caps" /> requires Refrigerant, this report allows you to see any Leak Rate for that Refrigerant that exceeds the EPA threshold (excessive leakage must be reported).</p>
+        <h2 MadCap:autonum="1.1 ">Menu Item</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Refrigerant Leak Rate Report </span>option <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been added to </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">is found on </MadCap:conditionalText>the <i>Service Management &gt; Reports </i>menu, as shown in <MadCap:xref href="#RefrigLeakRateRptMenu" class="ImageRef"><i>Figure 1:  Report Menu</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="RefrigLeakRateRptMenu"></a>Report Menu</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE056_Images/SE056_RefrigLeakRateRptMenu.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Selection Screen</h2>
+        <p class="Body">When you select <span class="Function">Refrigerant Leak Rate Report </span>from the SE Reports menu, a selection screen appears, as shown in <MadCap:xref href="#RefrigLeakRateSelScreen" class="ImageRef"><i>Figure 2:  Report Selection Screen</i></MadCap:xref>. Changes that were made to this screen for v11.08 are:</p>
+        <ul>
+            <li class="ListBullet1"><strong>Sort By</strong> is no longer available at the top of the screen; as a result, the report <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>sorts <MadCap:variable name="Variables.Se Assets caps" /> by Location only.</li>
+            <li class="ListBullet1">New Page Per <MadCap:variable name="Variables.Se Agreement caps" />/Customer is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>labelled <span class="Field">New Page Per Location</span>.</li>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.Se Service Order caps" /> Selection tab name is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>labelled <strong>Location Selection</strong>.</li>
+            <li class="ListBullet1">The <strong>Refrigerant (All/Added/Recovered) </strong>action is no longer available. Instead, the system <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>determines the appropriate actions when calculating the Leak Rate.</li>
+            <li class="ListBullet1">Added Refrigerant is included, with the exception of any with a Sub Action of <strong>RRTU – Recovered Same Unit.</strong></li>
+            <li class="ListBullet1">Recovered Refrigerant within the last 365 days is included as additional information.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="RefrigLeakRateSelScreen"></a>Report Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE056_Images/SE056_RefrigLeakRateSelScreen.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold"><span class="IndentBold">Leak Rate Threshold %</span>
+        </p>
+        <p class="IndentFieldDef">This <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>field allows you to print <MadCap:variable name="Variables.Se Assets caps" /> only when the Annual<MadCap:variable name="Variables.is" />ed Leak Rate exceeds the value entered.</p>
+        <p class="IndentBold">From/To Service Date</p>
+        <p class="IndentFieldDef">This date is mandatory. The <span class="Field">To Service Date </span>is used to look back 365 days. If there are multiple transaction records within the From/To Service Dates for an <MadCap:variable name="Variables.Se Asset caps" />/Circuit, only the last transaction displays. The values from all transactions for the last 365 days (based on the calculation <i>To Service Date less 365 days</i>) for the <MadCap:variable name="Variables.Se Asset caps" />/Circuit are included.</p>
+        <p class="IndentBold">Line Source</p>
+        <p class="IndentFieldDef">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Since the <strong>All </strong>option is no longer available, you <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>choose </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Choose </MadCap:conditionalText>whether Refrigerant Action data should come from either <strong><MadCap:variable name="Variables.Se Visit caps" /> Detail </strong>(the default) or <MadCap:variable name="Variables.Se Service Order caps" /> (Billing Detail Lines).</p>
+        <h2 MadCap:autonum="1.3 ">Report Sample</h2>
+        <p class="Body">After you enter information on the report selection screen, the Refrigerant Leak Rate Report can be generated. A sample report is shown in <MadCap:xref href="#RefrigLeakRateSampleRpt" class="ImageRef"><i>Figure 3:  Report Sample</i></MadCap:xref>.</p>
+        <ul>
+            <li class="ListBullet1">The report does not contain subtotals or report totals. It simply lists each <MadCap:variable name="Variables.Se Asset caps" /> with a reportable Leak Rate. <MadCap:variable name="Variables.Se Assets caps" /> are sorted by Location. The Location Name, Address, and Primary Customer (Number and Name) are part of the sort heading.</li>
+            <li class="ListBullet1">The report lists the <MadCap:variable name="Variables.Se Asset caps" />/Circuit with a Material record containing Refrigerant that has been serviced within the From/To Service Dates.</li>
+            <li class="ListBullet1">The column values are calculated for the <MadCap:variable name="Variables.Se Asset caps" />/Circuit. The <MadCap:variable name="Variables.Se Asset caps" />/Circuit appears on the report if either the Annual<MadCap:variable name="Variables.is" />ed Leak Rate or Rolling Leak Rate exceeds the Leak Rate Threshold %.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="RefrigLeakRateSampleRpt"></a>Report Sample</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE056_Images/SE056_RefrigLeakRateSampleRpt.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Column Definitions (Selected Columns)</p>
+        <p class="IndentBold">Pounds Last Added</p>
+        <p class="IndentFieldDef">The value taken from the last transaction in the <span class="Field">From/To Service Date </span>for the <MadCap:variable name="Variables.Se Asset caps" />/Circuit.</p>
+        <p class="IndentBold">Date of Prior Addition</p>
+        <p class="IndentFieldDef">The date of the previous transaction for the <MadCap:variable name="Variables.Se Asset caps" />/Circuit where the Refrigerant Action is <strong>A-Added </strong>and the Sub Action is not <strong>RRTU – Recovered Same Unit</strong>. If this is more than 365 days, the date is not printed.</p>
+        <p class="IndentBold"># Days Between Additions</p>
+        <p class="IndentFieldDef">This value is calculated using <i>Date Last Added – Date of Prior Addition</i>. However, if the <span class="Field">Date of Prior Addition </span>is blank, a <strong>0</strong> value is shown.</p>
+        <p class="IndentBold">Pounds Added (Not Recovered From Unit) Last 365 Days</p>
+        <p class="IndentFieldDef">The number of pounds added but not recovered in all prior transactions for the <MadCap:variable name="Variables.Se Asset caps" />/Circuit within the last 365 days where the Refrigerant Action is <strong>A-Added</strong> and the Sub Action is not <strong>RRTU – Recovered Same Unit</strong>.</p>
+        <p class="IndentBold">Pounds Recovered Not Returned to Unit Last 365 Days</p>
+        <p class="IndentFieldDef">The number of pounds recovered but not returned in all prior transactions for the <MadCap:variable name="Variables.Se Asset caps" />/Circuit within the last 365 days where the Refrigerant Action is <strong>R-Recovered </strong>and the Sub Action is not <strong>RTU – Return To Unit</strong>.</p>
+        <p class="NoteHeader">Note:</p>
+        <div class="note">This note is  not involved with the Leak Rate calculations. If removed Refrigerant was not returned to the Unit, it may actually affect the amount of added Refrigerant. If virgin/reclaimed Refrigerant was added to replace the recovered Refrigerant, the Leak Rate may be different. You must review the Refrigerant transaction in detail to determine the true Leak Rate for the <MadCap:variable name="Variables.Se Asset caps" />/Circuit.</div>
+        <p class="IndentBold">Annual<MadCap:variable name="Variables.is" />ed Leak Rate</p>
+        <p class="IndentFieldDef">The rate for the Annual<MadCap:variable name="Variables.is" />ed Leak Rate is calculated as follows (see Section <MadCap:xref href="SE05604_EPALeakRateCalcReqmts.htm">1, <i>EPA Leak Rate Calculation Requirements</i></MadCap:xref> for more information about Leak Rate calculations):</p>
+        <p class="IndentFieldDef"><i>(Pounds Last Added / Capacity) * (365 / # of Days Between Additions) * 100</i>
+        </p>
+        <p class="IndentFieldDef"><strong>Note: </strong>If <span class="Field"># Days Between Additions </span>equals 0, 365 is used as the denominator.</p>
+        <p class="IndentBold">Rolling Leak Rate</p>
+        <p class="IndentFieldDef">The rate for the Rolling Leak Rate is calculated as follows (see Section <MadCap:xref href="SE05604_EPALeakRateCalcReqmts.htm">1, <i>EPA Leak Rate Calculation Requirements</i></MadCap:xref> for more information about Leak Rate calculations):</p>
+        <p class="IndentFieldDef"><i>(Pounds Added Last 365 Days / # of Days Between Additions) * 100</i>
+        </p>
+    </body>
+</html>

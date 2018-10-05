@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Prices in BOQ</title>
+    </head>
+    <body>
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Prices Workbench</h1>
+            <p>A master file of prices allows you to maintain the prices for each resource.&#160; A&#160;<span class="function" title="Function:%WBQ1010HBQP">Prices Workbench</span> provides various options for maintaining prices; for example, you can change the prices of several resources at once by applying an increase (or decrease), either by percentage or by amount.</p>
+            <p>You can import prices from an external file, or enter them manually.&#160; <a href="WDUG0047_Bulk_Add_Update_and_Copy.html">Bulk update</a> is also available.</p>
+            <p>You can enter prices changes in advance, with the dates for which the prices are effective.</p>
+            <h2>Global and <MadCap:variable name="Variables.pl supplier" /> prices</h2>
+            <p>You can maintain separate prices for global, <MadCap:variable name="Variables.kco company" />, sector (if sectors are being used) and <MadCap:variable name="Variables.vp site" /> levels, as either general, <MadCap:variable name="Variables.pl supplier" />-specific or specific to a <MadCap:variable name="Variables.pl supplier" /> and office (and there is a hierarchy of which price would be applied).&#160;</p>
+            <p />
+            <table style="WIDTH: 80%;mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                        <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                            <p class="TableHeader">&#160;</p>
+                        </th>
+                        <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                            <p class="TableHeader">General</p>
+                        </th>
+                        <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                            <p class="TableHeader"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> specific&#160;</p>
+                        </th>
+                        <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                            <p class="TableHeader"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> and <br />office specific&#160;</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Global (entire database)</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">1</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">5</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">9</td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> (kco)</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">2</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">6</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">10</td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Division (sector)</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">3</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">7</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">11</td>
+                    </tr>
+                    <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                        <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1"><MadCap:variable name="Variables.vp site" style="text-transform: capitalize;" />
+                        </td>
+                        <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">4</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">8</td>
+                        <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Higher numbered entries (more specific) override lower numbered entries (more general).&#160;</p>
+            <p>Update of global prices can be restricted to specific users.&#160; You can also record discounts from <MadCap:variable name="Variables.pl suppliers" />; gross prices and net prices (less the discounts) are shown.</p>
+            <p>One way that you could use global and <MadCap:variable name="Variables.pl supplier" /> prices would be to use global prices on "template" standard house types to build up estimated bills, and use <MadCap:variable name="Variables.pl supplier" /> prices for the actual prices on <MadCap:variable name="Variables.vp site" />-specific house types (where you are buying materials for a particular <MadCap:variable name="Variables.vp site" /> from a particular <MadCap:variable name="Variables.pl supplier" />).</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDBQ0001_Maintaining_Prices.html" />
+                    <MadCap:relatedTopic src="WDBQ0018_Applying_Price_Changes.html" />
+                </MadCap:relatedTopics>
+            </p>
+      
+    </body>
+</html>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>UNIX Files</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">UNIX Files</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> creates ASCII text files during a submission attempt. The files are held in a subdirectory of the eGovernment root directory specified by the <span class="parameter">EGOVRDIR </span>parameter. The subdirectory name is the same as the 'message class', which in the case of the end of year submission is <strong>IR-PAYE-EOY</strong> and is created automatically.</p>
+    <p>Each submission attempt is given a sequential number, and all files associated with that submission attempt have names beginning with this 8 digit number.</p>
+    <p>The files created are:</p>
+    <ul>
+      <li>Log file (such as 00000001.log)<br />A log of what has happened during the submission attempt which can be used to trace problems.</li>
+      <li>Sent Files (such as 00000001pst1.xml)<br />XML messages sent ('posted') to the government gateway. The number following the 'pst' denotes the sequence in the protocol. Note that a file is only created when a new message content is required, so there are likely to be gaps in the sequence. You will always have a 'pst1' which will contain the P35 and P14 data, and a 'pst2' which will be the next message, but when polling, the gateway requires the same message to be sent repeatedly so new files are not created.</li>
+      <li>Reponse files (such as 00000001get1.xml)<br />An XML message containing the response from the gateway.</li>
+      <li>Temporary File (such as 00000001.tmp)<br />This file is passed as an argument to the java procedure that 'transmits' the XML. It contains the URL and the name of the file to send to the URL.</li>
+    </ul>
+    <div class="configuration">
+      <h2 class="print">UNIX Files</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PR/pr_egovrdir.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

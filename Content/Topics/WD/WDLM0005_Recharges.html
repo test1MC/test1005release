@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Recharges</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Recharges</h1>
+    <p>The recharges functionality allows costs to be captured through <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />, Subcontract Ledger, and General Ledger. These costs can then be recharged against the landlord or tenant or they can be written off. The option to apply a markup or uplift to the recharge is also available.</p>
+    <h2>General Ledger Input </h2>
+    <p>Recharges can be entered using <span class="function" title="Function:%WGL1010BCOB">Journal Batch</span>. The analysis for lettings recharge transactions is in the following format: </p>
+    <ul>
+      <li>
+        <span class="userinput">L.&lt;PROPERTY&gt;.&lt;TENANCY&gt;</span> ? This is for coding the recharge to the landlord. The tenancy part of this analysis is optional. </li>
+      <li>
+        <span class="userinput">T.&lt;TENANCY&gt;</span> ? This is for coding the recharge to a tenant. </li>
+    </ul>
+    <h2>
+      <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> Input </h2>
+    <p>The costing for <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> invoices can be recharged to lettings. The costing analysis is the same as for GL input. </p>
+    <h2>Subcontract Ledger Input </h2>
+    <p>The costing for Subcontract Certificates can be recharged to lettings. The costing analysis is the same as for GL input. In addition the default costing for the subcontract order can also be configured to point to lettings.</p>
+    <div class="configuration">
+      <h2 class="print">Recharges - set up</h2>
+      <p>To enable input of recharges in the General Ledger, you will need to amend the GL parameters <span class="parameter">ANALOPT </span>and <span class="parameter">ANALDESC</span>. Lettings recharges is the 8th entry in each of the parameters.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/GL/gl_analopt.htm" />
+          <MadCap:relatedTopic src="../Parameters/GL/gl_analdesc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

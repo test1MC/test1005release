@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Directing <MadCap:variable name="General.ProductName" /> to the Correct Overlay File</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Directing <MadCap:variable name="General.ProductName" /> to the Correct Overlay File</h1>
+    <p>Once the overlay TIFF file has been uploaded into the VSI-Fax server, it is necessary to configure <MadCap:variable name="General.ProductName" /> so that it passes the correct overlay configuration to VSI-Fax.</p>
+    <ol>
+      <li>Ensure that the TIFF version of the overlay (.tif) exists in the <MadCap:variable name="General.ProductName" /> overlay directory, which is specified by the <span class="parameter">PM/TESTDIR </span>parameter (for example: $BASE/app/overlays/).</li>
+      <li>Using a text editor, create a datafile with the same name as the overlay you are using.  This needs to be in the same directory as the overlays.  Following our example this file will be called order.dat. 
+<p> </p><MadCap:variable name="General.ProductName" /> uses this file to confirm which overlays are associated with which print file. This is especially important if there is more than one overlay for the print file (for example, continuation pages or terms and conditions pages).
+<p>This file should contain a line for each overlay that is to be used, and the page from which it is to be used.  For example:</p><ul><li><p>overlay.tif,1</p><p>Where overlay.tif is the overlay file to be referenced and ,1 use this on the first page and all subsequent pages.</p></li><li><p>The following is an example where there is an overlay for the first page print for just one page (order.tif,1,1) and a second overlay for the second page onwards (overlay2.tif) and a terms and conditions pages as an <a href="WDSY0093_Using_Attachments.html">attachment</a> on the last page (tc.tif,,$). The $ identifies that this is an attachment.</p><p>order.tif,1,1 <br />order2.tif,2   <br />tc.tif,,$     </p></li></ul></li>
+    </ol>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PM/pm_testdir.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

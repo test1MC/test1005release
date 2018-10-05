@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Sector<MadCap:variable name="Variables.is" />ed Balance Sheets</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Sector<MadCap:variable name="Variables.is" />ed Balance Sheets</h1>
+    <p>You can set up <MadCap:variable name="General.ProductName" /> so that the control accounts are split into sectors and each sector has its own balance sheet.</p>
+    <p>
+      <MadCap:variable name="General.ProductName" /> will treat all the balance sheet accounts as being sector<MadCap:variable name="Variables.is" />ed.  This includes:</p>
+    <table>
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;">
+            <ul>
+              <li>
+                <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> Control</li>
+              <li>
+                <MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /> Control</li>
+              <li>
+                <MadCap:variable name="Variables.Contract Sales" style="text-transform: capitalize;" /> Control</li>
+              <li>Subcontract Control</li>
+              <li>
+                <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Control </li>
+            </ul>
+          </td>
+          <td>  </td>
+          <td style="vertical-align: top;">
+            <ul>
+              <li>
+                <MadCap:variable name="Variables.Contract Sales" style="text-transform: capitalize;" /> Retention</li>
+              <li>Subcontract Retention</li>
+              <li>
+                <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /> Bank</li>
+              <li>Bad Debt accounts</li>
+            </ul>
+          </td>
+          <td>  </td>
+          <td style="vertical-align: top;">
+            <ul>
+              <li>
+                <span style="font-size: 1em;">House Sales:</span>
+              </li>
+              <ul>
+                <li>Bank account postings</li>
+                <li>Transaction category control account</li>
+                <li>
+                  <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> postings</li>
+                <li>HS Journal line G/L postings</li>
+              </ul>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>When posting to the control accounts, <MadCap:variable name="General.ProductName" /> will override the sector element on the account code specified in the configuration.  For example, if the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> control account is configured as 00.7800 (and if the first element represents the sector), and the <a href="WDGL0025_Ownership_of_Transactions.html">analysis for the invoice</a> is to sector 03, <MadCap:variable name="General.ProductName" /> would post to the account 03.7800.</p>
+    <p>If sector<MadCap:variable name="Variables.is" />ed balance sheets are used without inter-divisional postings, each sector will have its own share of the control accounts but will not necessarily have a self-contained trial balance.</p>
+    <p>If the two features are used together, each sector will have its own self-balancing trial balance, including its own share of the control accounts.  The inter-divisional accounts will only be used when a <span class="module">General Ledger</span> batch has postings that cross between sectors, and there is an imbalance (in double-entry terms) within each sector.</p>
+    <div class="configuration">
+      <h2 class="print">To enable sector<MadCap:variable name="Variables.is" />ed balance sheets:</h2>
+      <ol>
+        <li>Sectors must be enabled (see <a href="WDGL0020_Sectors.html">Sectors</a>).</li>
+        <li>Set the <span class="parameter">SECTBS </span>parameter in <span class="function" title="Function:%WCO0000BSYP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters</span>, and the corresponding parameters in the individual ledgers, appropriately.
+<p> </p><span class="parameter">CO/SECTBS </span>is the "general" setting for whether you are using sector<MadCap:variable name="Variables.is" />ed balance sheets. The other parameters override this setting for the ledger they relate to (where available). So you could set <span class="parameter">CO/SECTBS </span>to <span class="userinput">N</span>, and have sector<MadCap:variable name="Variables.is" />ed balance sheet control accounts for <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span> by setting <span class="parameter">SL/SECTBS </span>to <span class="userinput">Y</span>. If the ledger parameters are blank (that is, they have never been updated), the setting in <span class="parameter">CO/SECTBS </span>will apply. However you should check the parameter settings in each ledger to ensure any overrides are set as you want them.</li>
+      </ol>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/CO/co_sectbs.htm" />
+          <MadCap:relatedTopic src="../Parameters/CB/cb_sectbank.htm" />
+          <MadCap:relatedTopic src="../Parameters/EX/EX_EXSECTBS.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_sectbs.htm" />
+          <MadCap:relatedTopic src="../Parameters/SL/SL_SECTBS.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_TCRDSECT.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="2046" MadCap:lastWidth="828">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Setup &amp; Access</h1>
+        <h2>PL Parameters </h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>SSTTYPE</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Default Transaction Type for Shared Services Invoice Batches</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="note">The new PL parameter SSTTYPE is only consulted if Shared Service invoices are entered via the new routine called “Enter Invoices (Shared Service)”.&#160; The new routine called “Enter Invoices via Scan (Shared Service)” consults the DM parameter PLTRNSTP, in this example we have used PSCA.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/Setup Access.png" class="FullWidth" />
+        </p>
+        <h2>PL Batch Configuration &amp; Transaction type maintenance</h2>
+        <h3>PL Batch Configuration</h3>
+        <p>A new batch type called PLINVSS is required.&#160; Shared Service invoices are entered automatically into this type of batch.&#160; </p>
+        <p>Ultimately, when <MadCap:variable name="General.ProductName" /> works out which company each invoice belongs to, invoices are copied into a corresponding PLINV batch in the destination company in readiness for posting into that company’s purchase ledger.</p>
+        <p>The new batch type PLINVSS is created by visiting the PL Configuration screen, pressing the “Open” button and then saving the screen (without necessarily changing any data).</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/PL Batch Configuration Transaction.png" class="FullWidth" />
+        </p>
+        <p>Since the PLINVSS batch type is used purely as a device for grouping invoices before they are posted to their destination companies, no monetary totals are configured to be entered or controlled.&#160; The only total maintained on this batch type is the total number of transactions in the batch.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/PL Batch Configuration Transaction_1.png" class="FullWidth" />
+        </p>
+        <h3>Transaction type maintenance</h3>
+        <p>A new transaction type is required, in this example we have used PSCA.  Shared Service invoices are entered automatically into this type of transaction.&#160; </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/PL Batch Configuration Transaction_2.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

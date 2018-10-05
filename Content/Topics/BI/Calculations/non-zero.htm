@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="353" MadCap:lastWidth="1036">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />non-zero</h1>
+        <p>
+            <MadCap:keyword term="nonzero() function">&#160;</MadCap:keyword>nonzero(a,b,c) returns 0 if all entries equal zero.&#160; Returns 1 if any entry is non-zero.</p>
+        <p>Nonzero()&#160; is a very useful calculation to use in the Calculate Condition which will executes as soon as a record has been read.&#160; Only when the value is Non zero will the record display on the report.&#160;&#160; This will eliminate records where all values are zero.</p>
+        <p>Example of use:&#160; If a report is showing three records for each Contract - Revenue,Costs &amp; Profit. </p>
+        <p>QUERY:- FOR EACH jc_job WHERE jc_job.kco = {kco} </p>
+        <p>If we want to suppress records where for a contracts all three of these fields are zero. Include a Calculate condition with the following syntax:</p>
+        <p>nonzero(jc_job.ContractCosts^TD,jc_job.RO_ContractRevenue^TD,jc_job.RO_ContractRevenue^TD – jc_job.RO_ContractCosts^TD);</p>
+        <p>NB.&#160; You must qualify out fields with table names in the Calculation Field</p>
+    </body>
+</html>

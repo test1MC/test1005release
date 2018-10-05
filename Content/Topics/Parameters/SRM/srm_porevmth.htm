@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SRM/POREVMTH - PO Performance Reviews - Set 'Rev Required'</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SRM/POREVMTH - </span> PO Performance Reviews - Set 'Rev Required'
+</div>
+<div class="param_def">
+<p>The method for determining whether performance reviews are required for a material order.</p>
+<p class="yesnolist"><span class="userinput">Manual</span> = You specify on each order whether a review is required.  The default value can be set using <span class="parameter">PO/POREV</span>.</p>
+<p class="yesnolist"><span class="userinput">Auto</span> = Whether a review is required depends on the order value or the <MadCap:variable name="Variables.pl supplier"/>'s status. <br /><br />In this case, a review is required if the order value is over the limit set by <span class="parameter">POREVLIM </span>or if the <MadCap:variable name="Variables.pl supplier"/> status is one of those listed in<span class="parameter">REVSTAT</span>.  See also <span class="parameter">POREVMIN</span>.</p>
+<p class="yesnolist"><span class="userinput">Override</span> = The <span class="field">Review Required</span> field will be updateable (as if the parameter was set to 'MANUAL'), but will be automatically assigned, by looking at the Group Status Code of the company.</p>
+<p class="yesnolist"><span class="userinput">Weighted</span> = This provides the option to hold weightings against each criterion.  Set up review styles (using <span class="function" title="Function:%WTI2510BPVS">Performance Review Styles</span>) to hold the weightings.</p>
+<p class="yesnolist"><span class="userinput">Weighted-OV</span> = This provides the option to hold weightings against each criterion, with the ability to override whether a performance review is to be carried out on the order in question.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../po/po_porev.htm" /><MadCap:relatedTopic src="../srm/srm_revstat.htm" /><MadCap:relatedTopic src="../srm/srm_porevlim.htm" /><MadCap:relatedTopic src="../srm/srm_porevmin.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="210" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Subcontract [%=Variables.Labour caps%] Reconciliation</title>
+        <link href="../../../../../PR CE Doc Projects/Content/Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="2.1">Subcontract <MadCap:variable name="Variables.Labour caps" /> Reconciliation</h1>
+        <h2 MadCap:autonum="2.1.1">Add <MadCap:variable name="Variables.Labour caps" /> Tab</h2>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Add <MadCap:variable name="Variables.Labour caps" /> tab (<MadCap:xref href="#Add" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>) in the JC <span class="Function">Subcontract <MadCap:variable name="Variables.Labour caps" /> Reconciliation</span> function allows quick entry data for creating and posting JC Timesheets. It also lets you perform maintenance of JC Timesheet data to be posted and reconciled later.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="Add"></a>Add <MadCap:variable name="Variables.Labour caps" /> Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC019_Images/AddLabor.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body"><MadCap:variable name="Variables.Labour caps" /> records can be created only with Timesheet Activities listed on the JC/CDRTSAC parameter. In addition, they can only be created for Employees who are linked to a Supplier on the Reconciliation Invoice record.</p>
+        <p class="Body">Once a record has been saved, you can use either of these actions:</p>
+        <ul>
+            <li><strong>Create Timesheets</strong> - to create and post JC Timesheets that can be reconciled later on the <MadCap:variable name="Variables.Labour caps" /> Details tab (see Section <MadCap:xref href="#CreateTS" class="Figurenumberonly"><i>2.1.1.1</i></MadCap:xref>); or </li>
+            <li><strong>Create and Reconcile Timesheets</strong> - to create, post, and reconcile JC Timesheets to the current Reconciliation Invoice record (see Section <MadCap:xref href="#CreateReconcileTS" class="Figurenumberonly"><i>2.1.1.2</i></MadCap:xref>).</li>
+        </ul>
+        <p class="Body">A record can be updated/deleted before applying the <strong>Create Timesheets</strong> or <strong>Create and Reconcile Timesheets</strong> action.</p>
+        <h3 MadCap:autonum="2.1.1.1"><a name="CreateTS"></a>Create Timesheets</h3>
+        <p class="Body">The <strong>Create Timesheets</strong> action is found at the bottom of the Add <MadCap:variable name="Variables.Labour caps" /> tab (<MadCap:xref href="#CreateTSAction" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>) after you save a transaction. However, it is only available for users listed on the JC/CDRTSAP parameter (that is, the masked list of users who can approve and post JC Timesheets from the Subcontract Reconciliation screen).</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CreateTSAction"></a>Create Timesheets Action</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC019_Images/CreateTimesheets.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">When this action is run, it does the following:</p>
+        <ul>
+            <li>Creates JC Timesheets based on selected <MadCap:variable name="Variables.labour" /> records</li>
+            <li>Applies necessary checks</li>
+            <li>Creates a separate JC Timesheet Batch</li>
+            <li>Adds newly created timesheets to the Batch and then posts the Batch</li>
+        </ul>
+        <p class="Body">Once the action is successfully applied, a new posted Timesheet is available on the <MadCap:variable name="Variables.Labour caps" /> Details tab for further reconciliation.</p>
+        <h3 MadCap:autonum="2.1.1.2"><a name="CreateReconcileTS"></a>Create and Reconcile Timesheets</h3>
+        <p class="Body">Newly created and posted JC Timesheets are reconciled with the current Reconciliation Invoice by using the <strong>Create and Reconcile Timesheets</strong> action. This action can be processed after you save the transaction on the Add <MadCap:variable name="Variables.Labour caps" /> tab. It is available for users listed on the JC/CDRTSAP parameter (that is, the masked list of users who can approve and post JC Timesheets from the Subcontract Reconciliation screen).</p>
+        <p class="Body">When this action is run, it does the following:</p>
+        <ul>
+            <li>Creates JC Timesheets based on selected <MadCap:variable name="Variables.labour" /> records</li>
+            <li>Revalidates details</li>
+            <li>Creates a separate JC Timesheet Batch and includes newly created timesheets in the Batch</li>
+            <li>Posts the Batch and reconciles all newly created and posted Timesheets with the current Reconciliation Invoice</li>
+        </ul>
+        <p class="Body">Once successfully applied, a new posted Timesheet is available on the <MadCap:variable name="Variables.Labour caps" /> Details tab as reconciled with this invoice.</p>
+        <h2 MadCap:autonum="2.1.2">Unreconciled <MadCap:variable name="Variables.Labour caps" /> Tab</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new</MadCap:conditionalText> Unreconciled <MadCap:variable name="Variables.Labour caps" /> tab (<MadCap:xref href="#UnreconciledLaborTab" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>) on the <span class="Function">Subcontract <MadCap:variable name="Variables.Labour caps" /> Reconciliation</span> function displays only unreconciled records. Some of the additional columns included on this screen are:</p>
+        <ul>
+            <li>Crew Code</li>
+            <li>Foreman Name</li>
+            <li>CDR Reference</li>
+        </ul>
+        <p class="Body">All actions/calculations/checks of the original <MadCap:variable name="Variables.Labour caps" /> Details tab are available on this tab.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="UnreconciledLaborTab"></a>Unreconciled <MadCap:variable name="Variables.Labour caps" /> Tab</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC019_Images/UnreconciledLaborTab.png" class="MaxPrintWidth" />
+        </p>
+        <MadCap:pageBreak />
+        <h2 MadCap:autonum="2.1.3">Add <MadCap:variable name="Variables.Pc Plant caps" /> Tab</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Add <MadCap:variable name="Variables.Pc Plant caps" /> tab (<MadCap:xref href="#AddEQTab" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>) is found on Subcontract <MadCap:variable name="Variables.Labour caps" /> Reconciliation. It allows for quick entry data for creating and posting EQ Charges. It also lets you perform maintenance of EQ Charges data to be posted and reconciled later.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="AddEQTab"></a>Add <MadCap:variable name="Variables.Pc Plant caps" /> Tab</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC019_Images/AddEQTab.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Once a record has been saved, you can use either of these actions:</p>
+        <ul>
+            <li><strong>Create <MadCap:variable name="Variables.Pc Plant caps" /> Charges</strong> - to create and post EQ Charges that can later be reconciled on the <MadCap:variable name="Variables.Pc Plant caps" /> Detail tab; or </li>
+            <li><strong>Create and Reconcile EQ Charges</strong> - to create, post, and reconcile EQ Charges to the current Reconciliation Invoice record.</li>
+        </ul>
+        <p class="Body"><MadCap:variable name="Variables.Pc Plant caps" /> records are created only for Assets with a Supplier code on the Reconciliation Invoice record.</p>
+        <p class="Body">A record can be updated/deleted before applying the <strong>Create <MadCap:variable name="Variables.Pc Plant caps" />&#160;Charges</strong> or <strong>Create and Reconcile EQ Charges</strong> action.</p>
+        <h3 MadCap:autonum="2.1.3.1">Create <MadCap:variable name="Variables.Pc Plant caps" /> Charges</h3>
+        <p class="Body">The <strong>Create <MadCap:variable name="Variables.Pc Plant caps" /> Charges </strong>action is found at the bottom of the Add <MadCap:variable name="Variables.Pc Plant caps" /> tab (<MadCap:xref href="#CreateEQChgs" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>) after you save a transaction. It can be processed after you save a transaction on the Add <MadCap:variable name="Variables.Pc Plant caps" /> tab.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="CreateEQChgs"></a>Create <MadCap:variable name="Variables.Pc Plant caps" /> Charges</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC019_Images/CreateEQCharges.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">When this action is run, it does the following:</p>
+        <ul>
+            <li>Creates EQ Charges based on selected <MadCap:variable name="Variables.pc plant"></MadCap:variable> records</li>
+            <li>Applies necessary checks</li>
+            <li>Creates a separate EQ Charge Batch</li>
+            <li>Includes newly created EQ Charges for this Batch and posts the Batch</li>
+        </ul>
+        <p class="Body">The value of this option on the Extras tab of the SL Statements Print forms is <MadCap:variable name="Variables.analyse" />d; if <MadCap:variable name="Variables.tick" />ed, invoices with zero balances are printed.</p>
+        <p class="Body">Once successfully applied, new posted EQ&#160;Charges are available on the <MadCap:variable name="Variables.Pc Plant caps" /> Details tab as reconciled with this invoice.</p>
+        <h3 MadCap:autonum="2.1.3.2">Create and Reconcile EQ&#160;Charges</h3>
+        <p class="Body">Newly created and posted EQ&#160;Charges are reconciled with the current Reconciliation Invoice by using the <strong>Create and Reconcile EQ&#160;Charges</strong> action. This action can be processed after you save the transaction on the Add <MadCap:variable name="Variables.Pc Plant caps" /> tab.</p>
+        <p class="Body">When this action is run, it does the following:</p>
+        <ul>
+            <li>Creates EQ&#160;Charges for this Batch and posts the Batch</li>
+            <li>Reconciles all newly created and posted EQ&#160;Charges with the current Reconciliation Invoice</li>
+        </ul>
+        <p class="Body">Once successfully applied, new posted EQ&#160;Charges are available on the <MadCap:variable name="Variables.Pc Plant caps" /> Details tab as reconciled with this invoice.</p>
+        <MadCap:pageBreak />
+        <h2 MadCap:autonum="2.1.4">Unreconciled <MadCap:variable name="Variables.Pc Plant caps" /></h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new</MadCap:conditionalText> Unreconciled <MadCap:variable name="Variables.Pc Plant caps" /> tab (<MadCap:xref href="#UnreconciledEQTab" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>) on Subcontract <MadCap:variable name="Variables.Labour caps" /> Reconciliation displays only unreconciled records. Some of the additional columns included on this screen are:</p>
+        <ul>
+            <li>Crew Code</li>
+            <li>Foreman Name</li>
+            <li>CDR Reference</li>
+        </ul>
+        <p class="Body">All actions/calculations/checks of the original <MadCap:variable name="Variables.Pc Plant caps" /> Details tab are available on this tab.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="UnreconciledEQTab"></a>Unreconciled <MadCap:variable name="Variables.Pc Plant caps" /> Tab</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC019_Images/UnreconciledEQTab.png" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

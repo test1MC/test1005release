@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108,COINS.UKOnly" MadCap:lastBlockDepth="7" MadCap:lastHeight="6040" MadCap:lastWidth="909">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Payment Practices Report</h1>
+        <p>The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Payment Practices and Performance Report</span> provides clients with the information required to calculate the three statistics to be included in their twice-yearly Payment Practices and Performance Report.</p>
+        <MadCap:snippetBlock src="PPPStats.flsnp" />
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>Before running the report, we recommend that:</p>
+                <ul>
+                    <li>All cash has been allocated</li>
+                    <li><MadCap:variable name="Variables.Cash Book caps" /> reconciliation is complete</li>
+                    <li>Payment terms on all supplier and subcontractor records are up to date</li>
+                </ul>
+                <p>This will help to ensure that the information on the report is complete and accurate.</p>
+            </div>
+        </div>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Payment Practices and Performance Report Selection Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PL/Payment Practices Reporting/Payment Practices Report Selection.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Version</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether to show detailed or summary information in the PDF output file.</p>
+                    <ul>
+                        <li>Detail - lists the number of transactions for each day</li>
+                        <li>Summary – provides summar<MadCap:variable name="Variables.is" />ed results</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Dates</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The range of payment dates to report on (both From and To are required).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Number of days after Cheque Date for Payment Received</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The average number of days between the date of a cheque and the date it is received.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Number of days after BACS Date for Payment Received</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The average number of days between the date of a BACS&#160;payment and the date it is received.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>PL Transaction Types</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A range or list of transaction types to report on. This allows you to use different transaction types for any transactions outside the scope of the reporting requirement.  By default, all transaction types will be included.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>PL Invoice Received Calculation Method</p>
+                </div>
+                <div class="FieldDef">
+                    <p>How to calculate the Invoice Received date.</p>
+                    <ul>
+                        <li>
+                            <p>Days after Invoice Date - based on the assumption that the invoice was received a number of days after the invoice date.</p>
+                        </li>
+                        <li>
+                            <p>Days before Posted Date - based on the assumption that the invoice was received a number of days before the posted date.  </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>PL Invoice Received Default Days</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The default number of days after the invoice date or before the posted date to be used as the Invoice Received Date. This can be varied on particular suppliers by use of a supplier analysis set. By default this will be zero.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Supplier Analysis Set for Days Override</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The supplier analysis set used to override the default invoice received date. On suppliers where this analysis set value is zero or a positive integer, this number of days will override the default input above.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>SC Transaction Types</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A range or list of transaction types to report on. This allows you to use different transaction types for any transactions outside the scope of the reporting requirement.  By default, all transaction types will be included.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>SC Amount Confirmed Calculation Method</p>
+                </div>
+                <div class="FieldDef">
+                    <p>How to calculate the date when the amount was confirmed.</p>
+                    <ul>
+                        <li>Days after Claim Date</li>
+                        <li>Days after Valuation Date</li>
+                        <li>Days before Valuation Date</li>
+                        <li>Days before Certificate Date</li>
+                        <li>Days before Posted Date</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>SC Amount Confirmed Default Days</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The default number of days before or after the Claim, Valuation, Certificate or Posted date to be used as the Amount Confirmed Date (equivalent to the Invoice Received Date). By default this will be zero.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Subcontractor Analysis Set for Days Override</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The subcontractor analysis set used to override the default amount confirmed date. On subcontractors where this analysis set value is zero or a positive integer, this number of days will override the default input above.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Generate Payment Details</p>
+                </div>
+                <div class="FieldDef">
+                    <p><MadCap:variable name="Variables.Tick caps" /> this box for a list of paid transactions to be added to the Excel output file.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Generate Due Date Details</p>
+                </div>
+                <div class="FieldDef">
+                    <p><MadCap:variable name="Variables.Tick caps" /> this box for a list of transactions where payment was due in the period to be added to the Excel output file.</p>
+                </div>
+            </div>
+        </div>
+        <p>For best performance it is recommended to run the report at summary level (do not <MadCap:variable name="Variables.tick" /> the “Generate” boxes).</p>
+        <p>When the selection criteria have been correctly set, they can be stored and the report run whenever required with just a change of the report date range.</p>
+        <h2>Report Output</h2>
+        <p style="page-break-after: avoid;">Although the legislation only requires the reporting of summar<MadCap:variable name="Variables.is" />ed statistics , the report optionally provides more detail so that:</p>
+        <ul>
+            <li>Clients can see some detail of the calculation;</li>
+            <li>Clients and/or  their auditors can check the reasonableness of the underlying figures;</li>
+            <li>Clients can combine the figures with others from outside of <MadCap:variable name="General.ProductName" /> where necessary (for example where there is a division of the company that is not accounted for on <MadCap:variable name="General.ProductName" />).</li>
+        </ul>
+        <p>The report consists of <MadCap:conditionalText MadCap:conditions="COINS.Superseded in 1109">two </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.v1109">three </MadCap:conditionalText>sections. The first shows the average number of days taken to make payments, and the percentage of payments made which were paid in 30 days or fewer, between 31 and 60 days, and in 61 days or longer.</p>
+        <p>The second section shows the percentage of payments which were not made within the agreed period.</p>
+        <p MadCap:conditions="COINS.v1109">The third section shows invoices and certificates due for payment in the period but currently unpaid, analysed by hold code.  This section is not required for the published statistics, but helps highlight disputed invoices and other invoices which are overdue for payment and which are likely to adversely affect the statistics reported for the period in which they are paid.</p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>Where invoices are prepaid, the report lists such transactions in a section for “&lt;1” (less than one day).</p>
+            </div>
+        </div>
+        <p style="page-break-after: avoid;">If a Summary version is selected, the report only includes a summary of the results:</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Payment Practices Reporting/Payment Practices Report Summary.png" alt="" title="" class="FullWidth" />
+        </p>
+        <p>If a Detail version is selected, the report shows how many payments were made in each number of days:</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Payment Practices Reporting/Payment Practices Report Output 1.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Payment Practices Reporting/Payment Practices Report Output 2.png" class="FullWidth" />
+        </p>
+        <p>If the <span class="Field">Generate Payment Details</span> or <span class="Field">Generate Due Date Details</span> boxes are <MadCap:variable name="Variables.tick" />ed, the Excel output includes the individual transactions for each data set.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Payment Practices Reporting/Spreadsheet.png" class="FullWidth" />
+        </p>
+        <p>This output consists of two sets of data:&#160;subcontract data and <MadCap:variable name="Variables.Purchase Ledger caps" /> data.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Subcontract Data</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">iKco</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><MadCap:variable name="Variables.Kco Company caps" /> Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Int Ref</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">SC Cert Internal reference</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Contract</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Cert <MadCap:variable name="Variables.Jc Contract caps" /> Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Sequence</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Cert SC Sequence Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">iSbp_txn</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Cert Transaction number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Cert Date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Claim Date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Payment Date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Valuation date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Date Posted</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Due Date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Subcontractor</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">SC Account Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">cGan_code</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Sector </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">SC payment date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Adjusted SC cert payment date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Date as adjusted by filter</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Adjusted SC cert Received</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Date as adjusted by filter</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Method</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">Payment Method</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader"><MadCap:variable name="Variables.Purchase Ledger caps" /> Data</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">iKco</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"><MadCap:variable name="Variables.Kco Company caps" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Distr. Lines Type</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Distribution Type</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Supplier</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">PL Account Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Int Ref</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">PL Internal Reference Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Supplier Ref</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> PL Supplier Invoice Number</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Inv date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Due date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Date Posted</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1"> </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">cGan_code</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Sector</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">PL payment date</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Date as adjusted by filter</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Adjusted PL payment date </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Date as adjusted by filter</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Adjusted Pl Received</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Date as adjusted by filter</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Method</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Payment Method</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Type</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">PL Invoice Type</td>
+                </tr>
+            </tbody>
+        </table>
+        <div MadCap:conditions="COINS.Internal">
+            <h2>Internal only
+</h2>
+            <p>Guidance can be found on Department for business energy and industrial strategy site
+</p>
+            <p><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/649941/payment-practices-performance-reporting-requirements-oct-2017.pdf">https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/649941/payment-practices-performance-reporting-requirements-oct-2017.pdf</a><![CDATA[
+]]></p>
+            <p>Publish report Web service Link:
+</p>
+            <p><a href="https://publish-payment-practices.service.gov.uk/publish">https://publish-payment-practices.service.gov.uk/publish</a>
+            </p>
+            <p>The ICAEW also have an example of  the report:
+<a href="https://www.icaew.com/en/technical/business-and-management/smes/sme-news/duty-on-large-companies-to-report-on-payment-practices-and-policies">https://www.icaew.com/en/technical/business-and-management/smes/sme-news/duty-on-large-companies-to-report-on-payment-practices-and-policies</a><![CDATA[
+]]></p>
+        </div>
+    </body>
+</html>

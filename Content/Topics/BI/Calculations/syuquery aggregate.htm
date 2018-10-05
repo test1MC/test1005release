@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="625" MadCap:lastWidth="912">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />syuquery aggregate</h1>
+        <p><b>syuquery.aggregate</b> and <b>syuquery.aggregateRSP</b> (via rsp) takes two parameters, query and field list. </p>
+        <p>Fields in the field list are aggregated. First total is returned (typically might be only one field)</p>
+        <p>You can then get the other totals with syuquery.getDAgg,n and count with getIAgg</p>
+        <p>Multiple fields with comma delimited allowed on last part of method  then you can call with method('syuquery.getDAgg',1); method('syuquery.getDAgg’,2); etc</p>
+        <p>&#160;</p>
+        <p class="Caption">Example using syuquery.aggregate</p>
+        <p class="Example">method('syuquery.aggregate',"for EACH se_orderlive WHERE se_orderlive.kco = " + co_config.kco + ",first se_order WHERE se_order.sso_intref = se_orderlive.sso_intref and se_order.sso_complete = yes,first ar_custaddr OUTER-JOIN WHERE ar_custaddr.kco = se_order.kco AND ar_custaddr.rcm_num = se_order.rcm_num AND ar_custaddr.rca_code = se_order.rca_code",'kco');<br />method('syuquery.getDAgg',1);<br />method('syuquery.getIAgg');</p>
+        <p class="Caption">Example using syuquery.aggregateRSP</p>
+        <p class="Example">method('syuquery.aggregateRSP',"for EACH pp_planenroll WHERE pp_planenroll.ppo_seq = '" + pp_organisation.ppo_seq + "' AND hbp_plan = 'Office Vacation'",'RO_Accrual_Balance'); dvacav=method('syuquery.getDAgg',1);<br />$string$(dvacav,"-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9”);</p>
+    </body>
+</html>

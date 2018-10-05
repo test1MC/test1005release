@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Auditing</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Auditing</h1>
+        <p>Most <MadCap:variable name="General.ProductName" /> modules have one or more master files, which contain tables of information relevant to that module. </p>
+        <p>Auditing allows you to keep track of any additions, changes or deletions that are made to the file. </p>
+        <p>You can show the changes to a field (if auditing has been set up for that field) by highlighting it and clicking <img src="../../Resources/Images/COINS Graphics/SVG buttons/audit.svg" class="button" />. </p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0012_Processing_an_Audit.html" />
+                <MadCap:relatedTopic src="WDSY0013_Deleting_Audit_History.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To set up auditing:</h2>
+            <ol>
+                <li>From the Auditing menu in the relevant module, select <span class="function">Audit Configuration</span>.</li>
+                <p><MadCap:variable name="General.ProductName" /> displays a frame showing the tables in the module that can be audited. </p>
+                <MadCap:dropDown class="screenshot">
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">GL&#160;Audit Configuration Screen</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>
+                            <img src="../../Resources/Images/SY/SY_001101.png" class="FullWidth" />
+                        </p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <li>To set up auditing for a table, select it and do one of the following: </li>
+                <ul>
+                    <li>To set up auditing for all <MadCap:variable name="Variables.kco companies" /> (global), open the record. </li>
+                    <li>To set up auditing for the current <MadCap:variable name="Variables.kco company" /> only, select <span class="userinput">Create <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific </span>from the Chose Action list, then open the record. </li>
+                    <li>To restore a <MadCap:variable name="Variables.kco company" />-specific setting to the global value, select <span class="userinput">Delete <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific </span>from the Chose Action list. </li>
+                </ul>
+                <li>In the <span class="field">History </span>field, enter the number of days history you want retained. (When you run the <span class="function">Audit Delete</span> procedure, it will delete records of audited changes made more than this number of days earlier.) </li>
+                <li>Enter a comma-separated list of the fields that you want to be audited. </li>
+                <li>To finish, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to return to the list of tables. </li>
+            </ol>
+        </div>
+    </body>
+</html>

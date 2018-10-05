@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Stages</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Stages</h1>
+        <p>The stage setup will cater for the different steps and stages in the actual category and will depict the workflow. Each stage will have a function and therefore users and roles are granted access by their user groups or user profiles.</p>
+        <p>The stages that you enter will have a direct impact on the job as the stages dictate what the process of the job will be.</p>
+        <p>You can also have stages that are restricted on how they can be used, for example on used on a specific major category type. Some stages are linked to extra processing, where you mark the job as closed and it is ready for invoicing.</p>
+        <p>There are approx 37 stages available and these can be grouped by function or purpose.</p>
+        <div class="process">
+            <p>Not all jobs will have all the stages and therefore you would select only the ones that follow the progress of the job from start to completion and the last one is “Job Closed”. This ensures that no more tasks or actions can be added to that specific job.</p>
+            <h2 class="print">To set up stages:</h2>
+            <MadCap:snippetBlock src="../../Resources/Snippets/FM-Major-Categories-Navigation.flsnp" />
+            <MadCap:snippetBlock src="../../Resources/Snippets/FM Stages Navigation.flsnp" />
+            <ol start="6">
+                <li>On the Stage Setup tab, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> to add a new stage.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Stage Setup Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_D-F/FM/FM-Contract-11-1106.png" class="FullWidth" /><br /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>You must add stages in the order you want them to occur.&#160; You must have Add <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> as the first stage.&#160;</li>
+                <li>Select the <span class="field">Stage Type</span> and enter text for the status you want the stage to set the <MadCap:variable name="Variables.fm job" /> to. <p class="noteheader">NOTE</p><div class="note">Not all stages need to change the status.&#160; For example, you may not want to change the status of the <MadCap:variable name="Variables.fm job" /> when a note is added.</div></li>
+                <li>Choose whether this stage appears on the key stages screen.
+ This will also be displayed on any reports and enquiries when doing the various stages</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the stage.</li>
+            </ol>
+            <p>Each stage has a default comment that will be added to the history when that stage occurs.&#160; You can change this text.</p>
+            <h2>To change the history text:</h2>
+            <ol>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> next to the stage.</li>
+                <li>Change the text in the <span class="field">History</span> field.<p>To include the value of a field from the database, include the field name in double square brackets.&#160; For example, to include the major category code, enter <span class="userinput">[[sw_job.sma_majcat]]</span>.&#160; You can use the <span class="function" title="Function:%WSY5000WXXX">Database <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /></span> to find the field names.&#160; If you omit the table code, <MadCap:variable name="General.ProductName" /> will assume sw_job.</p><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">History Text Example</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images_D-F/FM/FM-Contract-12-1106.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the stage.</li>
+            </ol>
+            <p>After you have set up all the stages for the major category, you need to set the rules for the relationships between the different stages.&#160; For example, before 'Confirming All Tasks Are Complete', you have to first 'Confirm All Tasks Have Been Planned'.</p>
+            <MadCap:relationshipsProxy class="relatedTopics" />
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Configuration</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Configuration</h1>
+        <p class="Body">The setup of PR&#160;Configuration as it relates to Timesheet Input Groups is discussed in this section. Throughout OA, Timesheet Input Groups are also referred to as TS Group(s) or simply Group(s).</p>
+        <h2 MadCap:autonum="1.1 ">Parameters</h2>
+        <p class="Body" MadCap:conditions="COINS.PrintOnly">No new parameters are required to implement the changes for this PR Timesheet Input Group functionality.</p>
+        <p class="Body" MadCap:conditions="COINS.ScreenOnly">No parameters are required to implement the PR Timesheet Input Group functionality.</p>
+        <h2 MadCap:autonum="1.2 ">Timesheet Setup Layout</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>read-only <span class="Field">Use Timesheet Input Groups </span>option is found on the Timesheet Setup layout of <i>Payroll &gt; Company Setup &gt; Company Configuration &gt; Other tab</i>, as shown in <MadCap:xref href="#TSSetup" class="ImageRef"><i>Figure 1:  Timesheet Setup Layout</i></MadCap:xref>. It is used to determine whether Timesheet Input Groups will be in use for the PR Company. Access to update this field is controlled from the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Update Using Timesheet Input Groups </span>administration utility in the Payroll Administration menu group.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note"><strong>Use Timesheet Input Groups </strong>is available beginning with version 11.08.    The <span class="Field">Use Timesheet Input Group </span>flag in <span class="Function">Company Configuration </span>is set to <strong>NO </strong>during the upgrade.   Run the <span class="Function">Update Using Timesheet Input Groups </span>utility to start using TS Groups in a payroll company.</div>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="TSSetup"></a>Timesheet Setup Layout</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSSetup.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 "><a name="Update"></a>Update Using Timesheet Input Groups</h2>
+        <p class="Body">The use of Timesheet Input Groups applies to pay frequencies in use by the Company.</p>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Update Using Timesheet Input Groups </span>function is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the Payroll Administration menu. It allows you to set up the <strong>Use Timesheet Input Groups </strong>option in <i>Payroll &gt; Company Setup &gt; Company Configuration</i>. The screen for this function shows only one read-only <MadCap:variable name="Variables.tick" />box labeled <span class="Field">Use Timesheet Input Groups</span>, as shown in <MadCap:xref href="#UpdtUsingTSInputGrps" class="ImageRef"><i>Figure 2:  Update Using Timesheet Input Groups Administration Utility screen</i></MadCap:xref>.</p>
+        <p class="Body">To change to the alternative state, you can click the green <span class="button">Update Current Configuration Setting </span>button located in the right bottom corner of the screen.</p>
+        <p class="Body">Time cards can be on file in Future, Adjusting, or Regular periods when running this process; however, all timesheets must have a status of Start.   The following error message appears for employees who are not in Start mode (for example, with PR Calculated, Accepted, or Printed): <i>To update the ‘Use Timesheet Input Groups’ option all employees must be in "START" status</i>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="UpdtUsingTSInputGrps"></a>Update Using Timesheet Input Groups Administration Utility screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_UpdtUsingTSInputGrps.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>By <MadCap:variable name="Variables.tick" />ing the <span class="Field">Use Timesheet Input Groups</span> option, you will configure the payroll company to use Timesheet Input Groups. Default groups are created for each frequency for all unposted Regular, Adjusting, and non-MCC (Manual <MadCap:variable name="Variables.Cheque caps" /> Calculator) Future periods, and the <MadCap:variable name="Variables.cheques" />, time cards, and overrides are moved to these groups. The report generated for this process is shown in <MadCap:xref href="#UpdtUsingTSGrps_Ckd" class="ImageRef"><i>Figure 3:  Update Using Timesheet Input Groups Report ([%=Variables.tick%]ed)</i></MadCap:xref>.</li>
+            <li>By not <MadCap:variable name="Variables.tick" />ing the <span class="Field">Use Timesheet Input Groups</span>, you will configure the payroll company not to use Timesheet Input Groups. All existing Timesheet Input Groups are deleted and group fields are set to blank for all <MadCap:variable name="Variables.cheques" />, time cards, and overrides. In this case, the following warning message appears: <i>The company configuration flag is set to no longer use timesheet input groups. All groups are deleted and the group field is set to blank for all <MadCap:variable name="Variables.cheques" />, time cards and overrides</i>. The report generated for this process is shown in <MadCap:xref href="#UpdtUsingTSGrps_Unckd" class="ImageRef"><i>Figure 4:  Update Using Timesheet Input Groups Report (un[%=Variables.tick%]ed)</i></MadCap:xref>.</li>
+        </ul>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">Timesheets designated as Recurring (Period 999) are not associated with a Timesheet Input Group until the <span class="Function">Convert Recurring Timesheet </span>process is run.</div>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="UpdtUsingTSGrps_Ckd"></a>Update Using Timesheet Input Groups Report (<MadCap:variable name="Variables.tick" />ed)</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_UpdtUsingTSGrps_Ckd.png" class="FullWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="UpdtUsingTSGrps_Unckd"></a>Update Using Timesheet Input Groups Report (un<MadCap:variable name="Variables.tick" />ed)</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_UpdtUsingTSGrps_Unckd.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

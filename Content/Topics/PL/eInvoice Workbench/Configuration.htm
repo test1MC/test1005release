@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="2188" MadCap:lastWidth="1266">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Configuration </h1>
+        <p>See the eCommerce Configuration section for details of parameters you need to set to properly set up the eInvoice Workbench.</p>
+        <h2>HOW TO Change PINV to PINN</h2>
+        <p>This appendix describes how the eInvoice workbench processes PL transactions, invoices and credit notes that have a Purchase Order number in the XML message and would normally be treated as a “PINV” transaction but for business reasons should be treated as a “PINN” transaction. Typically it may be that the contractor uses two procurement systems, <MadCap:variable name="General.ProductName" /> and another, so that some PO numbers, although valid, are unknown to <MadCap:variable name="General.ProductName" />. The relevant EC, PL and PO parameters listed are taken into account. Further configuration is required to enable this functionality.</p>
+        <p>The COINSetc Configuration Guide and COINSetc Invoice Workbench User Guide contain further relevant information. </p>
+        <p>Relevant Parameters</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="3" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>EC Parameters (ectail.p) </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Param.</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Description </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Typical value</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>SWWBMEMO</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Small Works Workbench Memo</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>N</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>ECDIR&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Ecommerce Directory&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>$BASE/var/ECDir</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>ECFDIR&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Document Directory&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>$BASE/var/ECFDir</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NUMINEWB </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Show batch number in eWorkbench&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>XSLLOC&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Stylesheet Location&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>$BASE/var/ECDir/style</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 670px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="3" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>PL Parameters (pltail1.p) </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Param.</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Description </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Typical value</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>ACCNODEF</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Account Number default in Invoice Workbench&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>PO</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>ADMUSERS</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>List of Administrator Users </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>User list...</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>AMDEPTS </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Specific automatching for Departments&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Dept list ...</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>AMJOBS&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Specific automatching for Contracts&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Contract List ...</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>AUTOECST</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Automatic eInvoice registration&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>AUTOINVM</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Automatic invoice matching&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>2</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>AUTOPSTE</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Automatic post eInvoice batches&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>N</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>CIMXAREA</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>List of CIM Tree Area(s) for XML Invoices</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EAPPRCST</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>eInvoice override for APPRCOST&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EAUTOMHC</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>eCreditNote Automatch hold code&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EAUTOMHI</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>eInvoice Automatch hold code&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EDEFHCOD</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default hold code for eInvoices&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>ECO</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EDEFHOLD</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>eInvoice override for DEFHOLD&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EHLDPINV</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Allow PINV eInvoices to be held</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EREMITS</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Electronic Remittance Advices&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>ETOLAMT</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Invoice line value tolerance for e-Invs</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>10</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>FIXPONUM </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Try to correct PO Numbers for eInvoices&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>LABCONT%&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default Labour Content % on eInvoices&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>100%</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>MAILHOST </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Email host&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>MAILINTV </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Email notification interval (Days)&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOCH&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default <MadCap:variable name="Variables.Cost Head caps" /> for Non-PO eTransaction </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>M1001</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOCST </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Enter Costing on Non-PO eTransactions&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOPCH </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default <MadCap:variable name="Variables.Cost Head caps" /> for Non-PO Plant eTransactions </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>P1001</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOWBS </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Costing in XML for Non-PO eTransactions&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>PILDEPTS </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Deprecated Parameter: List of overhead depts in eCommerce Pilot </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p> PILJOBS&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Deprecated Parameter: List of contracts in eCommerce Pilot&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="3" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>PO Parameters (potail1.p)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Param.</p>
+                </td>
+                <td colspan="2" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Description </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOTTS</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>List of PL T/Types not requiring PO&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>PINN,PCRN</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

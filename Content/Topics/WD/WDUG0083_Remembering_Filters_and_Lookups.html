@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="999" MadCap:lastWidth="932">
+  <head>
+    <title>Remembering Filters and Lookups</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Remembering Filters and Lookups</h1>
+    <p>By default, <MadCap:variable name="General.ProductName" /> "remembers" any filter settings you enter on a screen, so that the next time you go to that screen, the same filter is applied.  For example, if you run <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span> and filter to show only subcontractors with codes that begin D, when you next run <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span> it will still show only subcontractors with codes that begin D.</p>
+    <p>In the same way, <MadCap:variable name="General.ProductName" /> "remembers" if you have clicked the <img src="../../Resources/Images/COINS Graphics/SVG buttons/all.svg" class="button" /> ("Show All") or <img src="../../Resources/Images/COINS Graphics/SVG buttons/total.svg" class="button" /> ("Total") buttons, and any records that you <a href="WDUG0026_Selecting_Records.html">select</a> remain selected.</p>
+    <p>You can change the way <MadCap:variable name="General.ProductName" /> remembers filter settings, so that, for example, filters are never remembered, or are only remembered within the same day.</p>
+    <div class="process">
+      <h2 class="print">To change how filters are remembered:</h2>
+      <ol>
+        <li>Move the mouse pointer over your profile picture, and on the user menu click <img src="../../Resources/Images/COINS Graphics/SVG buttons/pref.svg" class="button" /> to open the <span class="function" title="Function:%WSY2590SSUR">User Preferences</span> screen.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />.<br /><br />You can change the way <MadCap:variable name="General.ProductName" /> remembers filter settings on browse screens, and on lookups, separately.</li>
+        <li>Set the drop-down in the <span class="field">Recall Filters </span>and the <span class="field">Recall Filters in Lookups </span>fields as follows:</li>
+        <ul>
+          <li>
+            <span class="userselect">Default </span>- To use the default settings for your <MadCap:variable name="General.ProductName" /> system.</li>
+          <li>
+            <span class="userselect">Full </span>- To always remember the filter settings.</li>
+          <li>
+            <span class="userselect">Session </span>- To remember the filter settings during a <MadCap:variable name="General.ProductName" /> session, but clear them when you log out.</li>
+          <li>
+            <span class="userselect">Day </span>- To remember the filter settings during the same day only.</li>
+          <li>
+            <span class="userselect">None </span>- To never remember the filter settings.</li>
+        </ul>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.  </li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Remembering filters and lookups</h2>
+      <p>If page sections are changed, such that the stored data becomes inconsistent with the current page definition, it can sometimes result in either blank pages, errors, or missing bits of HTML. If you add <span class="userinput">helpMode=clearDefault </span>to the URL, then before each page starts the defaults record will be deleted (removing all filters and sort orders) and reset as though it were the first time in the system. This continues on each page you visit/revisit until you remove it from the URL.</p>
+      <h3>Parameters</h3>
+      <p>The parameters <span class="parameter">PREFFILT </span>and <span class="parameter">PREFLKUP </span>define the default "recall" <MadCap:variable name="Variables.behaviour" />.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_preffilt.htm" />
+          <MadCap:relatedTopic src="../Parameters/SY/sy_preflkup.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

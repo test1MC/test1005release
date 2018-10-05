@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2837" MadCap:lastWidth="1220" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Tables : Example 1 – Direct Query against the database</h1>
+        <p>In this example, we will use the table ap_vendbal to display a table of supplier period balances</p>
+        <h2><a name="_Toc440873587"></a>Create the Function</h2>
+        <p>The function is a standard function with the exception that the Category must be TBL – Table.&#160;&#160; Be careful not to select Category TAB – DB Table by mistake</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Tables on Tiles.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2><a name="_Toc440873588"></a>Create the Page</h2>
+        <p>The Page should use the table ap_vendbal as its body table and with an appropriate body query to retrieve the records to be displayed.&#160; For Table Tiles DO NOT specify a number of rows.</p>
+        <p>When creating a table tile, give consideration to the number of rows that will be returned.&#160; Since the data is all sent client side there will be a performance issue if a tile returns too much information across multiple desktops.&#160; A maximum of 1000 records should be considered best practice.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Tables on Tiles_1.png" class="FullWidth" />
+        </p>
+        <p>On our body fields, we need to specify just the fields we are displaying.</p>
+        <p>For each value, you must specify an ID (this can be any unique reference for each value)</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Tables on Tiles_2.png" class="FullWidth" />
+        </p>
+        <h2><a name="_Toc440873589"></a>Desktop</h2>
+        <p>Adding the Function to a desktop will produce the following output (Tile has been set to Full as its size):</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Desktop_2.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

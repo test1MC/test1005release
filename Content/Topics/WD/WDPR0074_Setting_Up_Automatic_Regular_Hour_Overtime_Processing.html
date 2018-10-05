@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Setting Up Automatic Regular Hour Overtime Processing</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Up Automatic Regular Hour Overtime Processing</h1>
+        <p class="SpecificTopic" />
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge" />
+                    <td><span style="color: #000000;"><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></span>
+                    </td>
+                    <td class="Edge" />
+                </tr>
+            </tbody>
+        </table>
+        <p>This procedure describes how to set up <MadCap:variable name="General.ProductName" /> OA to process automatic regular hour overtime hours.</p>
+        <p><strong>Please note that:</strong>
+        </p>
+        <ul>
+            <li>This process can only be run for Regular hours in OA Payroll.</li>
+            <li>This process will only run on Regular <MadCap:variable name="Variables.cheque" /> types in Weekly payroll.</li>
+            <li>All Memo hours are skipped during this process.</li>
+            <li>Any transaction with manually entered overtime and/or double time hours is skipped during this process.<br /></li>
+        </ul>
+        <div class="process">
+            <h2 class="print">How to Set Up Automatic Regular Hour Overtime Processing:</h2>
+            <p>1. Set Up <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration </p>
+            <p><span class="function" title="Function:%WPR211SQRP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration</span> in OA <span class="module">Payroll </span>contains fields with rules for automatic overtime that need to be set.</p>
+            <ol>
+                <li>In <MadCap:variable name="General.ProductName" /> OA, go to <strong>Payroll &gt; <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Setup &gt; <span class="function" title="Function:%WPR211SQRP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration</span> &gt; Other tab</strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007401.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol dir="ltr" start="2">
+                <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the applicable fields and rules for automatic overtime as follows:</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p dir="ltr"><span class="field">Automatic Regular Hour Overtime Processing </span>- Select one of the following options:</p>
+                <ul dir="ltr">
+                    <li><span class="userinput">No Overtime </span>- If you select this option, the next three fields (<span class="field">Maximum Regular Hours</span>, <span class="field">Rule for Saturday Hours</span>, and <span class="field">Rule for Sunday Hours</span>) are disabled.</li>
+                    <li><span class="userinput">Daily Overtime</span>
+                    </li>
+                    <li><span class="userinput">Weekly Overtime - Spread Surplus </span>- Spreads the overtime hours over all jobs entered during the payroll period.</li>
+                    <li><span class="userinput">Weekly Overtime - No Spreading </span>- Puts all overtime hours to the last job entered, and if necessary due to additional overtime hours, spreads back to subsequent jobs in the order these jobs were entered.</li>
+                </ul>
+                <p><span class="field">Maximum Regular Hours </span>- This field is only available if <span class="field">Automatic Regular Hour Overtime Processing </span>is set to any option other than <span class="userinput">No Overtime</span>. When enabled, you can enter the maximum number of regular hours.</p>
+                <p dir="ltr"><span class="field">Rule for Saturday Hours </span>- This field is only available if <span class="field">Automatic Regular Hour Overtime Processing </span>is set to any option other than <span class="userinput">No Overtime</span>. When enabled, you can select one of the following options:</p>
+                <ul dir="ltr">
+                    <li><span class="userinput">No Processing</span>
+                    </li>
+                    <li><span class="userinput">All Overtime</span>
+                    </li>
+                    <li><span class="userinput">All Double Time</span>
+                    </li>
+                    <li><span class="userinput">Follow Overtime Rules</span>
+                    </li>
+                </ul>
+            </blockquote>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p><span class="field">Rule for Sunday Hours</span> - This field is only available if <span class="field">Automatic Regular Hour Overtime Processing </span>is set to any option other than <span class="userinput">No Overtime</span>. When enabled, you can select one of the following options:</p>
+                <ul>
+                    <li><span class="userinput">No Processing</span>
+                    </li>
+                    <li><span class="userinput">All Overtime</span>
+                    </li>
+                    <li><span class="userinput">All Double Time</span>
+                    </li>
+                    <li><span class="userinput">Follow Overtime Rules</span>
+                    </li>
+                </ul>
+            </blockquote>
+            <p />
+            <p><strong>IMPORTANT:</strong> Everything from this point on will not be visible, or apply, if <span class="field">Automatic Regular Hour Processing </span>in Step 1 above is set to <span class="userinput">No Overtime</span>.</p>
+            <p>2. Set Up Employee Maintenance </p>
+            <p>Set up <span class="null">Employee Maintenance </span>so that desired employees can be subject to the Automatic Regular Hour Overtime process.</p>
+            <ol>
+                <li>In <MadCap:variable name="General.ProductName" /> OA, go to <strong>Payroll &gt; <span class="function" title="Function:%WPR9200SEMP">Employee Details</span> &gt; Employee Details &gt; Profile tab</strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007402.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol start="2">
+                <li>In Edit mode (click <img src="../../Resources/Images/SY/SY System Setup/open.svg" class="button" />), <MadCap:variable name="Variables.tick" /> the <span class="field">Process Automatic Regular Hour Overtime </span>field.</li>
+            </ol>
+            <p />
+            <p>3. Set Up Earning Categories </p>
+            <p>Use the <span class="null"><span class="function" title="Function:%WPR223BPEC">Earning Categories</span></span>function to set up any earning categories that should be considered when processing overtime.</p>
+            <ol>
+                <li>In <MadCap:variable name="General.ProductName" /> OA, go to <strong>Payroll &gt; Global Setup &gt; US Specifics &gt; <span class="function" title="Function:%WPR223BPEC">Earning Categories</span></strong>. Click the link for the applicable Earning Category (the most frequently used category is Hourly).</li>
+                <li>Go to the <strong>Main</strong> tab.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007403.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol start="3">
+                <li>In Edit mode (click <img src="../../Resources/Images/SY/SY System Setup/open.svg" class="button" />), <MadCap:variable name="Variables.tick" /> the <span class="field">Include in Automatic Regular Hour Overtime Processing </span>field.</li>
+            </ol>
+            <p />
+            <p>4. Check Time Sheet Entry </p>
+            <ol>
+                <li>In <MadCap:variable name="General.ProductName" /> OA, go to <strong>Payroll &gt; Weekly Payroll &gt; <span class="function" title="Function:%WP6100BPRK">Timesheet Input</span>.</strong></li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007404.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol start="2">
+                <li>Check that the <span class="field">Auto Ovt </span>field is displayed on the screen. This field only shows if the <MadCap:variable name="Variables.kco company" /> is tailored to use automatic overtime.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The <span class="field">Auto Ovt </span>field is controlled by the <span class="function" title="Function:%WPR0716REMP">Process Automatic Regular Hour Overtime</span> and the <span class="function">Reset Hours </span>functions. If automatic regular hour overtime has been processed, this field is automatically <MadCap:variable name="Variables.tick" />ed and cannot be updated here. To update, you must use the <span class="function">Reset Hours </span>function which, once run, automatically un<MadCap:variable name="Variables.tick" />s this field.</div>
+            <p />
+            <p>5. Process Automatic Regular Hour Overtime </p>
+            <p>After time has been input for an employee, you can run the <span class="function" title="Function:%WPR0716REMP">Process Automatic Regular Hour Overtime</span> function.</p>
+            <ol>
+                <li>In <MadCap:variable name="General.ProductName" /> OA, go to <strong>Payroll &gt; <span class="function" title="Function:%WPR0716REMP">Process Automatic Regular Hour Overtime</span> &gt; Main tab</strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007408.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol start="2">
+                <li>Select <span class="userinput">Process Overtime </span>from the <span class="field">Select </span>field.</li>
+                <li>Go to the <strong>Employee Selection</strong> tab.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007405.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol start="4">
+                <li>Use the selection criteria to select certain employees, etc. for this function, then click <strong>Next</strong><img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+                <li>Once you have submitted the task successfully, you can use the report viewer to confirm that the process was run for all selected employees.</li>
+            </ol>
+            <p />
+            <p>6. Reset Hours for Overtime Processing </p>
+            <p>If overtime has already been processed for a <MadCap:variable name="Variables.cheque" />, it cannot be updated. However, you can change a <MadCap:variable name="Variables.cheque" /> that has been processed for automatic overtime by using a function called <span class="function">Reset Hours for Overtime Processing</span>. This function resets the hours on the <MadCap:variable name="Variables.cheque" /> selected. Upon reset, the function restores the regular and overtime hours to their original value. In addition, it un<MadCap:variable name="Variables.tick" />s the <span class="field">Auto Ovt </span>field in Timesheet entry.</p>
+            <p>The <span class="function">Reset Hours for Overtime Processing </span>function can be performed in two places in <MadCap:variable name="General.ProductName" /> OA. Both are discussed in this section.</p>
+            <ol>
+                <li><strong>Timesheet Entry</strong> - This option allows an update for a single employee/<MadCap:variable name="Variables.cheque" />.</li>
+                <li><strong>Process Automatic Regular Hour Overtime</strong>&#160;- Although similar to the option in Timesheet Entry, this option allows updates for all employees, or for multiple employees you select for processing. It is not limited to one employee and <MadCap:variable name="Variables.cheque" />.</li>
+            </ol>
+            <p dir="ltr" style="margin-right: 0px;"><strong>Reset Hours for Overtime for a Single Employee</strong>
+            </p>
+            <p dir="ltr" style="margin-right: 0px;">Using this action allows you to update the time card and reset automatic overtime calculations for a single employee, as needed.</p>
+            <ol dir="ltr">
+                <li>In <MadCap:variable name="General.ProductName" /> OA, go to <strong>Payroll &gt; Weekly Payroll &gt; <span class="function" title="Function:%WP6100BPRK">Timesheet Input</span> &gt; Timesheet Input tab</strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p dir="ltr">
+                    <img src="../../Resources/Images_P-R/PR/PR_007406.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol dir="ltr" start="2">
+                <li>Select the desired employee and choose the <strong>Reset Hours for Overtime Processing</strong> action, then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">You cannot use this action on a time card that has a <strong>CALCED</strong> or higher value.</div>
+            <p dir="ltr" style="margin-right: 0px;"><strong>Reset Hours for Overtime for Multiple Employees</strong>
+            </p>
+            <p dir="ltr" style="margin-right: 0px;">Using this action in <span class="function" title="Function:%WPR0716REMP">Process Automatic Regular Hour Overtime</span> allows you to update the time card and reprocess overtime for all employees, or for multiple employees you select for processing, as needed.</p>
+            <ol dir="ltr">
+                <li>In <MadCap:variable name="General.ProductName" /> OA, go to <strong>Payroll &gt; Weekly Payroll &gt; Input &gt; <span class="function" title="Function:%WPR0716REMP">Process Automatic Regular Hour Overtime</span> &gt; Main tab</strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p dir="ltr">
+                    <img src="../../Resources/Images_P-R/PR/PR_007409.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol dir="ltr" start="2">
+                <li>Select <span class="userinput">Reset Hours </span>from the <span class="field">Select </span>field.</li>
+                <li>Go to the <strong>Employee Selection</strong> tab.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p dir="ltr">
+                    <img src="../../Resources/Images_P-R/PR/PR_007405.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol dir="ltr" start="4">
+                <li>Use the selection criteria to select certain employees, etc. for this function, then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+                <li>Once you have submitted the task successfully, you can use the report viewer to confirm that the process was run for all selected employees.</li>
+            </ol>
+            <p />
+            <p>7. Review Automatic Regular Hour Overtime Hours </p>
+            <p>You can review the automatic regular hour overtime hours by using one of the two methods described below. Both of these methods allow you to view the regular, overtime, and double time hours and amounts, as well as the original regular, overtime, and double time hours, after the overtime process is run.</p>
+            <p dir="ltr"><strong>Method 1: Auto Overtime Data Selector</strong>
+            </p>
+            <p dir="ltr">The first method uses the <span class="userinput">Auto Overtime </span>option in the <span class="field">Data Selector </span>field of the <span class="function" title="Function:%WP61001BPRK">Timesheet Detail</span> screen. It allows you to view the regular, overtime, and double time hours and amounts, as well as the original regular, overtime, and double time hours.</p>
+            <ol dir="ltr">
+                <li>Go to <strong>Payroll &gt; Weekly Report &gt; Input &gt; Timesheets &gt; <span class="function" title="Function:%WP61001BPRK">Timesheet Detail</span> tab</strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p dir="ltr">
+                    <img src="../../Resources/Images_P-R/PR/PR_007407.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol dir="ltr" start="2">
+                <li>Select the <span class="userinput">Auto Overtime </span>option in the <span class="field">Data Selector </span>field.</li>
+            </ol>
+            <p dir="ltr" style="margin-right: 0px;"><strong>Method 2: Timecard Report</strong>
+            </p>
+            <p>The second method uses the <span class="userinput">Include Automatic Overtime Original Hours </span>option on the <span class="function" title="Function:%WPR0331REMP">Timecard Report</span>. It allows you to view and compare original regular, overtime, and double time hours to the processed hours.</p>
+            <ol dir="ltr">
+                <li>Go to <strong>Payroll &gt; Weekly Report &gt; Input &gt; <span class="function" title="Function:%WPR0331REMP">Timecard Report</span></strong>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p dir="ltr">
+                    <img src="../../Resources/Images_P-R/PR/PR_007410.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol dir="ltr" start="2">
+                <li>Select the <span class="userinput">Include Automatic Overtime Original Hours </span>field.</li>
+            </ol>
+            <p />
+            <p>Additional Notes </p>
+            <ul>
+                <li>When processing overtime, only Computer <MadCap:variable name="Variables.cheques" /> are processed. Manual and Void <MadCap:variable name="Variables.cheques" /> are not processed.</li>
+                <li>When processing overtime, any <MadCap:variable name="Variables.cheque" /> with negative timecards is ignored.</li>
+                <li>The system will only process those <MadCap:variable name="Variables.cheques" /> that have not been processed for overtime.</li>
+                <li>The overtime process and reset hours process cannot be run on a <MadCap:variable name="Variables.cheque" /> with a <strong>CALCED</strong> or higher status. In this instance, you must change the employee status and/or reset the employee and then run the <span class="function">Reset Hours </span>or <span class="function">Process Overtime </span>function as needed.</li>
+                <li>Any transactions are ignored where overtime or double time have manually been spread by the user during time card entry.</li>
+                <li>When running the <span class="function">Calculation </span>function, and the employee is set up for overtime processing, you will receive a warning if any of the entered <MadCap:variable name="Variables.cheques" /> have not been processed for overtime.</li>
+            </ul>
+            <p />
+        </div>
+        <div class="configuration">
+            <h2 class="print">Automatic Regular Hour Overtime Processing</h2>
+        </div>
+    </body>
+</html>

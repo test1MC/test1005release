@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Account Masking</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Account Masking</h1>
+    <p>In some places where you specify a <span class="module">General Ledger </span>account code, you can use an account mask so that <MadCap:variable name="General.ProductName" /> fills in part of the account code from information given elsewhere. To use an account mask, put underscores ( <span class="userinput">_ </span>) in place of the parts you want <MadCap:variable name="General.ProductName" /> to fill in.</p>
+    <p>For example, if one element of the account code relates to <MadCap:variable name="Variables.jc contract" /> location, you could specify the default accounts for different locations in as being <span class="screentype">01._ _._ _ _ _</span>, <span class="screentype">02._ _._ _ _ _</span>, and so on. Then on the <MadCap:variable name="Variables.cost heads" />, you could specify the GL Accounts as <span class="screentype">_ _.10.2010</span>, <span class="screentype">_ _.10.2020</span>, and so on. <MadCap:variable name="General.ProductName" /> will then fill in the complete account codes for the first location as <span class="screentype">01.10.2010</span>, <span class="screentype">01.10.2020</span>, for the second location as <span class="screentype">02.10.2010</span>, <span class="screentype">02.10.2020</span>, and so on.</p>
+    <p> </p>
+    <p>As another example, <span class="function" title="Function:%WFA9000SFCF">FA Configuration</span> specifies the default codes for new asset groups. The default codes on new assets are built up from the codes on the group and department to which the asset belongs. If an element is filled in on both group and department, the one on the department takes priority.</p>
+    <p>When a transaction is entered, <MadCap:variable name="General.ProductName" /> builds up the <span class="module">General Ledger</span> account from the account elements on the asset, and the <MadCap:variable name="Variables.cost head" /> determined by the transaction.</p>
+    <p>For example; if your <span class="module">General Ledger</span> codes are made up of three elements <span style="font-weight: bold;">department.type.account</span>, you could set up, say, the Purchase Control account on mechanical <MadCap:variable name="Variables.pc plant" /> asset groups to be <span style="font-weight: bold;">_ _.MP._ _</span> ; on department 1, to be <span style="font-weight: bold;">01._ _._ _</span> and on a <MadCap:variable name="Variables.cost head" /> for asset purchases to be <span style="font-weight: bold;">_ _._ _.2070 </span>. Then when an asset purchase is entered for a mechanical <MadCap:variable name="Variables.pc plant" /> asset and department 1, <MadCap:variable name="General.ProductName" /> posts the transaction to account <span style="font-weight: bold;">01.MP.2070</span>.</p>
+    <blockquote dir="ltr" style="margin-right: 0px;">
+      <table>
+        <tbody>
+          <tr>
+            <td>Asset Group</td>
+            <td>_ _.M P._ _ _ _</td>
+          </tr>
+          <tr>
+            <td>Department</td>
+            <td>0 1._ _._ _ _ _</td>
+          </tr>
+          <tr>
+            <td>Asset</td>
+            <td>0 1.M P._ _ _ _</td>
+          </tr>
+          <tr>
+            <td>
+              <MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" />
+            </td>
+            <td>_ _._ _.2 0 7 0</td>
+          </tr>
+          <tr>
+            <td>Transaction</td>
+            <td>0 1.M P.2 0 7 0</td>
+          </tr>
+        </tbody>
+      </table>
+    </blockquote>
+  </body>
+</html>

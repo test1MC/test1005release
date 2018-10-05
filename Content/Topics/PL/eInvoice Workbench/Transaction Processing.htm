@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="529" MadCap:lastWidth="1305">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Transaction Processing</h1>
+        <p>Setting the EC/SWWBMEMO parameter to Y disables the PINV to PINN functionality. Changing a PINV to a PINN will happen only when the Supplier has an ECOMM Address record setup; and the <MadCap:variable name="General.ProductName" /> Company the workbench matches a mask in the &lt;Company&gt; tag; and the PO number matches a mask in the &lt;Order&gt; tag.</p>
+        <p>A <MadCap:variable name="General.ProductName" /> Contract number will be sought from the 3<sup>rd</sup> Part Order Cross References. If a Contract is found then the transaction will be changed from PINV to PINN using this, the PO number is not considered further. If a Contract is not found in the Cross References and the PL/NONPOWBS parameter is set to Y then costing information, including the Contract number is sought from the incoming PO number. </p>
+        <p>If the PO number has just one “/” character, that is two elements, then if the first element is a valid Contract in the current <MadCap:variable name="General.ProductName" /> Company and this Contract does not use WBS codes then the transaction will be changed from PINV to PINN. Costing is completed using the value of NONPOCH for material invoices and by the value of NONPOPCH for plant invoices.</p>
+        <p>If the PO number has just two “/” characters, that is three elements, then if the first element is a valid <MadCap:variable name="General.ProductName" /> Contract and the second element is a valid WBS code for that Contract the transaction will be changed from a PINV to a PINN. Costing is completed using the value of NONPOCH (materials) or NONPOPCH (plant). </p>
+    </body>
+</html>

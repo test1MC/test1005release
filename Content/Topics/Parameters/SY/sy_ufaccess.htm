@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/UFACCESS - User function access date/time</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/UFACCESS - </span> User function access date/time
+</div>
+<div class="param_def">
+<p>The date and time stamp for compiled user security.  This can speed up access to functions because COINS only needs to consult one table to evaluate whether a user has access. </p>
+<P>To enable compiled function security, enter an exclamation mark (<SPAN class="userinput">!</SPAN>) as the value of this parameter. </P>
+<P>When the next user logs in, COINS stamps the parameter with the date and time. From then on, the first time a user accesses a function, COINS checks the access permissions for the user, and records whether the user has permission to access the function.  Subsequent access requests are quicker because COINS can consult just one table to evaluate whether a user has access.  </P>
+<P>If user groups, roles, or group security are changed after compiled function security has been enabled, you must re-set the parameter to <SPAN class="userinput">!</SPAN> for the updated security settings to take effect.  This has the effect of making all the previously-saved security settings invalid; COINS then re-evaluates and saves permissions (as when this feature is originally switched on). </P>
+<P>If the parameter is left blank - or restored to blank - then this functionality is not applied and COINS evaluates function access every time.</P>
+<P>See also: <a href="../../WD/WDSY0115_Compiling_Function_Security.html" target="_parent">Compiling Function Security</a>.</P>
+</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="1732" MadCap:lastWidth="1220">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Employees </h1>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/JC Contract Timesheets/Employees.png" class="FullWidth" />
+        </p>
+        <table>
+            <col style="width: 160px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: normal;color: #000000;">
+                        <p>Employee</p>
+                    </th>
+                    <th style="font-weight: normal;color: #000000;">
+                        <p>A code to identify the employee.</p>
+                        <p>If an employee is also a user and is required to enter his own contract timesheet, the Employee ID must be the same as their OA login, and JC parameter TSDEFEMP must be set to Y.</p>
+                        <p>Associated Parameters</p>
+                        <p>JC/TSDEFEMP</p>
+                        <p>Whether <MadCap:variable name="General.ProductName" /> should enter the current user's ID as the default employee name in Timesheet Entry (Y or N).</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>The employee's name.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Department</p>
+                    </td>
+                    <td>
+                        <p>The employee's department.</p>
+                        <p>Employee departments allow you to group timesheet employees for reporting and security purposes. They are set up in Contract Status &gt; Timesheets &gt; Setup &gt; Employee Department.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Entry Period</p>
+                    </td>
+                    <td>
+                        <p>The dates used for timesheet entry: Weekly (7 days), Monthly (Calendar Month), or Period (<MadCap:variable name="Variables.Financial Period caps" />).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Non-costed?</p>
+                    </td>
+                    <td>
+                        <p>Whether this employee is a "non-costed" employee.</p>
+                        <p>If this is ticked and the employee records timesheets for overhead contracts (specified by the JC parameter TSOHJOBS), then no cost transaction will be recorded when the timesheet is posted.</p>
+                        <p>However, if overhead category staff are allocated to a direct contracts, or normally costed staff are allocated to an overhead contract, the costing to the contract occurs.</p>
+                        <p>Associated Parameters</p>
+                        <p>JC/TSOHJOBS</p>
+                        <p>A <a href="https://oaenvs1.coins-global.com/cgi-bin/oaqartvol115/wocoins.p#null?kco=10&amp;pvCILevel=2&amp;pvCISibling=10&amp;TopMenu=%25WHOME&amp;MainArea=%25WSYBCRR"><span class="Hyperlink">can-do list</span></a><a href="https://oaenvs1.coins-global.com/cgi-bin/oaqartvol115/wocoins.p#null?kco=10&amp;pvCILevel=2&amp;pvCISibling=10&amp;TopMenu=%25WHOME&amp;MainArea=%25WSYBCRR"><span class="Hyperlink">can-do list</span></a> (a list in which wildcards are used to omit or include certain values. For example, !AB*,* means include all codes except those beginning "AB". See <a href="https://oaenvs1.coins-global.com/cgi-bin/oaqartvol115/woframe.p?TopMenu=%25WDOC&amp;kco=10&amp;MainArea=%25WDUG0039&amp;DocModule=Y&amp;mfunc=%25WDUG0039"><span class="Hyperlink">Can-Do Lists</span></a>.) of contract groups that are treated as overhead contracts.</p>
+                        <p>If a timesheet line is entered for a contract whose contract group is in this list AND the employee is an overhead employee (that is, the Non-costed field in Employees is ticked), no cost transaction is created for that timesheet line when the timesheets are posted.</p>
+                        <p>However, if overhead category staff are allocated to a mainstream contract, or normal costed staff are allocated to an overhead contract, the costing to the contract takes place.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Unlabelled field</p>
+                    </td>
+                    <td>
+                        <p>Whether the cost control analysis for this employee is to a contract or General Ledger analysis.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Analysis</p>
+                    </td>
+                    <td>
+                        <p>The cost control account for this employee. This is the account to receive the credit transactions for employee timesheet costs. You can specify a contract cost analysis - the credit entry of the timesheet posting will be posted to this contract cost instead of the G/L account. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Grade</p>
+                    </td>
+                    <td>
+                        <p>Select the employee grade. If set, the rates for this grade are used instead of the employee rates.</p>
+                        <p>Employee Grades are set up in Contract Status &gt; Timesheets &gt; Setup &gt; Employee Grades.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Unlabelled field</p>
+                    </td>
+                    <td>
+                        <p>The description of the employee grade.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Department Approver</p>
+                    </td>
+                    <td>
+                        <p>Select the Department code&#160;of persons who will approve this employee's timesheets.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Status</p>
+                    </td>
+                    <td>
+                        <p>Select the status of the employee: Employee (regular employee), Authoriser (employee able to authorise timesheets), or Regional Inputter.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>External (not <MadCap:variable name="General.ProductName" /> Payroll)</p>
+                    </td>
+                    <td>
+                        <p>Whether this employee is a "paid externally" employee.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Start Date</p>
+                    </td>
+                    <td>
+                        <p>Enter the date that the employee started work.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Leave Date</p>
+                    </td>
+                    <td>
+                        <p>Enter the date that the employee finished work.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Email Address</p>
+                    </td>
+                    <td>
+                        <p>Enter the email address of the approver.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

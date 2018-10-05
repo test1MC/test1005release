@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="9174" MadCap:lastWidth="1280" style="mc-master-page: url('..\..\..\Resources\MasterPages\OtherTopics.flmsp');" MadCap:onlyLocalStylesheets="False" class="topic">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Testing a Service Connection (Using soapUI)</h1>
+        <p>From your browser session, using the JC – Contract Service as our example, select the Company Changes option.&#160; In the first schema Panel, locate the WSDL entry.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection.png" class="FullWidth" />
+        </p>
+        <p>Right-click on this and select Copy Shortcut.</p>
+        <p>Launch the soapUI application.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_1.png" class="FullWidth" />
+        </p>
+        <p>Select File/New SOAP Project.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_2.png" class="FullWidth" />
+        </p>
+        <p>Paste the shortcut contents into the Initial WSDL: field.&#160; Change the Project Name to something more meaningful.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_3.png" class="FullWidth" />
+        </p>
+        <p>Click OK.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_4.png" style="left: 0;" class="FullWidth" />
+            <br />The application will examine the contents of the XML file from the shortcut and will build the necessary interactions.</p>
+        <p>If successful, the navigator panel should display a result similar to that shown here.</p>
+        <p>&#160;</p>
+        <p>Double click on Request 1 to process the XML and build the appropriate message format.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_5.png" class="FullWidth" />
+        </p>
+        <p>The message details (shown below left) are the same as those generated as Sample Output in the Services Browse (shown below right).&#160; The only difference is the version in the soapUI is more verbose with details such as optional fields indicated.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_6.png" style="left: 0;" class="FullWidth" />
+            <br />
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_7.png" style="left: 0;" class="FullWidth" />
+            <br />
+        </p>
+        <p>To submit the request message, click the green arrow to the left of the toolbar</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_8.png" style="visibility: visible;mso-wrap-style: square;width: 598px;height: 21px;" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_9.png" style="left: 0;" class="FullWidth" />
+            <br />The message will be sent to the server and the server will issue an appropriate response – shown in the right hand panel.&#160; </p>
+        <p>Since we sent an empty message in the first instance, the request will fail as shown below:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_10.png" class="FullWidth" />
+        </p>
+        <p>The exception has been generated because the <MadCap:variable name="General.ProductName" /> server expects to be told which server and which environment the message is intended for.&#160; A request sent to the wrong server will fail.&#160; This is a protection measure to ensure that you do not issue requests to a LIVE environment during testing, or to a TEST environment when you go LIVE.</p>
+        <p>In our message, therefore, we need to fill in the destination details:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_11.png" class="FullWidth" />
+        </p>
+        <p>Once you have made the changes, send the message again.&#160; </p>
+        <p>This time the request should go further, but will fail again due to invalid username/password.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_12.png" class="FullWidth" />
+        </p>
+        <p>Once again, this is a security measure and needs to be specified within the request.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_13.png" class="FullWidth" />
+        </p>
+        <p>Whilst we are making some more changes, we can remove the lines for Group, extUser and extAuth as these are not generally used.</p>
+        <p>Send the request again, and this time you should get a RESPONSE message instead of an EXCEPTION.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_14.png" class="FullWidth" />
+        </p>
+        <p>This indicates that we now have a correct message format.</p>
+        <p>However, whilst we got a response, the response came back with no data.&#160; This is because the service we are using as an example requests details of changes made to <MadCap:variable name="General.ProductName" /> company records since a certain date.&#160; So we need to add one more change to our request and specify, in the Body entry, which company and from which date.&#160; For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_15.png" class="FullWidth" />
+        </p>
+        <p>Sending the request again now returns another RESPONSE request and some data.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Testing a Service Connection_16.png" class="FullWidth" />
+        </p>
+        <p>We have now proved that:</p>
+        <ul>
+            <li>the Services are working</li>
+            <li> we can configure the messages appropriately</li>
+            <li> we can call them and get a response </li>
+        </ul>
+        <p>Having established these points, we can confidently move onto other aspects of using the services knowing that we have a properly configured and working system.</p>
+    </body>
+</html>

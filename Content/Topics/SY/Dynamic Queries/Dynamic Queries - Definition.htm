@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="3565" MadCap:lastWidth="941">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Dynamic Query Definition</h1>
+        <p class="Body"><span class="Function">Dynamic Queries</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows an administrator to define the dynamic queries (datasets) so that they contain the records and fields that the users require.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Dynamic Queries Browse Screen</p>
+        <img src="../../../Images/SY/SY Dynamic Queries/Dynamic Query Definition - Update.png" class="FullWidth" />
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Query	</div>
+                <div class="FieldDef">
+                    <p>The code used to identify the query.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Description	</div>
+                <div class="FieldDef">
+                    <p>	A description of the query.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Result Table	</div>
+                <div class="FieldDef">
+                    <p>The temp table name of the resulting dataset.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Table(s)</div>
+                <div class="FieldDef">One or more tables that are used in the query.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">RSP(s)	</div>
+                <div class="FieldDef">
+                    <p>The corresponding RSPs for each of the tables in the <span class="Field">Table(s)</span> list.  This allows specific RSPs to be used for specific tables.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Query</div>
+                <div class="FieldDef">
+                    <p>This is either:</p>
+                    <ul>
+                        <li>A partial query condition that will be appended to each table in the query.  One line for each table specified in the <span class="Field">Tables(s)</span> field, in the same order. The condition should NOT contain the WHERE clause.</li>
+                        <li>A full query for all the tables specified.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Parameters Section</div>
+                <div class="FieldDef">
+                    <p> 	If the query requires one or more parameters (for example, a <MadCap:variable name="Variables.financial date" />, a currency code or a <MadCap:variable name="Variables.jc contract" />), create a page section update form that will be used to prompt the user for this, and enter the page section code here. </p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Parameter Fields</div>
+                <div class="FieldDef">
+                    <p>	A list of the fields on the update form specified in <span class="Field">Parameters Section</span>. These will be prompted for in the Parameters section of the selection form.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Dynamic Filters</div>
+                <div class="FieldDef">The number of dynamic filters that will be built on the Filters section of the selection form for the <MadCap:variable name="Variables.enquiry" /> or report.</div>
+            </div>
+        </div>
+        <p class="Body">When you have defined the table and query, follow the link on the <span class="Field">Query</span> code to specify the fields that will be available.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: ">Dynamic Query Fields</p>
+        <img src="../../../Images/SY/SY Dynamic Queries/Dynamic Query Definition - Fields.png" class="FullWidth" />
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Source</div>
+                <div class="FieldDef">
+                    <p>The source table.field for this field in the query.  The table.field combination must exist in the corresponding RSP defined for this table on the query.  Leave this blank to specify a calculation (see below).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Field </div>
+                <div class="FieldDef">
+                    <p>The field name in the resulting temp table.  It must be unique for this query. </p>
+                    <p>Although you can use any name for the field, it is sensible to use standard names (for example:&#160;job_num), as the name dictates which lookup is used.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Description</div>
+                <div class="FieldDef">
+                    <p>The description (label) for the field.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Data Type</div>
+                <div class="FieldDef">The data type of the field.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Format</div>
+                <div class="FieldDef">
+                    <p>	The default format for the field.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Filter</div>
+                <div class="FieldDef">Whether the field should be presented to the user in the <b>Date Flters</b> section or the <b>Filters</b> section. Leave this blank if you do not want the field to appear as a filter.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Column</div>
+                <div class="FieldDef">Whether the field should be presented to the user as group field (dimension) or a value field (measure).  Blank will mean the field can be selected for a report/extract but cannot be used in the grouping report.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Calculation</div>
+                <div class="FieldDef">
+                    <p>A 	calculation to populate the field in the temp table. This is run if the <span class="Field">Source</span> is blank  Calculations must use the original source fields from the query tables, not the calculated fields. </p>
+                    <p>Do not use variables that attempt to span across fields as the user may not select all the fields you use.  Variables can be used within the calculation of a single value.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

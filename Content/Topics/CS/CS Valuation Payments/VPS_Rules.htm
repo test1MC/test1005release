@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Valuation Payment Stages – Rules for Cumulatives</h1>
+        <p>This section explains how cumulative amounts are defaulted from preceding amounts. In the following notes, <i>Previous Stage</i> takes account of the CS parameter <span class="parameter">STG1BUD</span>; if this is set to Yes, this stage does not participate in the defaulting down of the Cumulatives.  In effect, it becomes an invisible stage as far as Cumulatives are concerned.</p>
+        <h2>Cumulatives</h2>
+        <p>For each Valuation Stage the “Cumulative” values are defaulted from preceding “Cumulative” values as follows:</p>
+        <ul class="CompactList">
+            <li>When Valuation 1 is at Stage 1: Defaults from take-on certificate values or none (if no take-on certificate)</li>
+            <li>When Valuation 1 is at Stage 2 or beyond: Defaults from <i>Previous Stage</i></li>
+        </ul>
+        <ul class="CompactList">
+            <li>When Valuation 2 (or greater) is at Stage 1: Defaults from latest Stage of previous Valuation</li>
+            <li>When Valuation 2 (or greater) is at Stage 2 or beyond: Defaults from <i>Previous Stage</i> of current Valuation</li>
+        </ul>
+        <h2>Previous Cumulatives</h2>
+        <p>For each Valuation Stage the “Previous Cumulative” values are defaulted AND updated dynamically (trickle down) from preceding “Cumulative” values as follows:</p>
+        <ul>
+            <li>When Valuation 1 is at any Stage: Defaults from take-on certificate values or none (if no take-on certificate)</li>
+        </ul>
+        <ul>
+            <li>When Valuation 2 is at any Stage: Defaults from latest Stage of previous Valuation</li>
+        </ul>
+        <div class="note" style="margin-top: 18px;">
+            <p>There is no “trickle down” on Cumulatives.</p>
+        </div>
+        <p>
+            <MadCap:relatedTopics target="_popup" style="mc-label: 'Related Parameter';mc-help-control-display: list;">
+                <MadCap:relatedTopic src="../../Parameters/CS/cs_stg1bud.htm" />
+            </MadCap:relatedTopics>
+        </p>
+    </body>
+</html>

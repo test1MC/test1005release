@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Report Servers - Parameters</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Report Servers - Parameters</h1>
+    <p>There are several Print Manager parameters that need to be configured: </p>
+    <p />
+    <table>
+      <tbody>
+        <tr>
+          <th>Parameter</th>
+          <th>Typical Value</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">PM/SPOOLDIR </span>
+            </p>
+          </td>
+          <td>
+            <p>$BASE/var/spool </p>
+          </td>
+          <td>
+            <p>Use $BASE to allow for different absolute paths on different physical servers. </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">PM/TIMEOUT </span>
+            </p>
+          </td>
+          <td>
+            <p>60</p>
+          </td>
+          <td>
+            <p>Report agent will automatically shut down if no reports found for this many minutes. </p>
+            <p>Can be over-ridden by a parameter to the report agent start-up script. </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              <span class="parameter">PM/GENPROCS </span>
+            </p>
+          </td>
+          <td>
+            <p>5</p>
+          </td>
+          <td>
+            <p>Maximum number of report agents to start. </p>
+            <p>Ignored if a report agent family name is specified as a parameter to the report agent start-up script. </p>
+            <p>Can be over-ridden by a start-up parameter to the report agent script. </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="configuration">
+      <h2 class="print">
+        <MadCap:variable name="General.ProductName" /> Parameters</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PM/pm_spooldir.htm" />
+          <MadCap:relatedTopic src="../Parameters/PM/pm_timeout.htm" />
+          <MadCap:relatedTopic src="../Parameters/PM/pm_genprocs.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

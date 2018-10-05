@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>HSPP/BASEDIR - Base directory for files</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">HSPP/BASEDIR - </span> Base directory for files
+</div>
+<div class="param_def">
+<p>The base directory on the COINS server that the brokers will use to store new <MadCap:variable name="Variables.hs prospect"/> messages that are downloaded from a property portal.  By default they will use <span class="FileName">$BASE/var</span>.</p>
+<p><ul>
+<li>Rightmove files are stored in a subdirectory <span class="filename">Rightmove</span>.</li>
+<li>Zoopla files are stored in a subdirectory <span class="FileName">Zoopla</span>.</li>
+<li>Smart New Homes files are stored in a subdirectory <span class="filename">SmartNewHomes</span>.</li>
+</ul>
+<p>Each portal directory (for example <span class="filename">$BASE/var/Rightmove</span>) also has an <span class="FileName">ftp </span>and <span class="filename">old </span>directory.  The <span class="filename">ftp </span>directory temporarily stores the files downloaded from the portal's FTP site.  The <span class="filename">old </span>directory is an archive for files processed into COINS; once processed they are removed from the <span class="filename">ftp </span>directory and moved to the <span class="filename">old </span>directory.  The portal directory also contains a log file (for example <span class="filename">Rightmove.log</span>) and a lock file (for example <span class="filename">Rightmove.lk</span>).  Removing the lock file will allow the COINS portal process to be terminated, for example to allow for overnight backup.</p></p>
+</div>
+</body>
+</html>

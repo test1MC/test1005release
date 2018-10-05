@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Order Entry</title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Restricted <MadCap:variable name="Variables.Pl Suppliers caps" /> and Subcontractors - </MadCap:conditionalText>Order Entry</h1>
+        <p class="Body">If restricted supplier or subcontractor lists have been set up for a <MadCap:variable name="Variables.jc contract" />, <MadCap:variable name="General.ProductName" /> will only allow you to enter purchase orders for valid companies on those lists.</p>
+        <p class="Body">Validation applies to all versions of material, <MadCap:variable name="Variables.pc plant" /> and subcontract order entry.  So, for example, it also applies if you “Raise PO” from a list of packages or resources on a project or "Raise PO" from requisitions.</p>
+        <h2>Material and <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Orders</h2>
+        <p class="Body">When you enter the <MadCap:variable name="Variables.jc contract" /> number when adding a material or <MadCap:variable name="Variables.pc plant" /> order, if a restricted list of suppliers is present <MadCap:variable name="General.ProductName" /> displays a message below the <MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> field.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/Restricted Suppliers/AddOrderSupplierMessage.png" />
+        </p>
+        <p class="Body">You will only be able to add suppliers from the <MadCap:variable name="Variables.jc contract" />'s restricted supplier list, and you will not be able to select a supplier:</p>
+        <ul>
+            <li class="ListBullet1">If either the Valid From or Valid To dates have been populated for that supplier, and the order date is not within the valid range.</li>
+            <li class="ListBullet1">If the <MadCap:variable name="Variables.on stop" /> field is <MadCap:variable name="Variables.tick" />ed for that supplier.</li>
+        </ul>
+        <h2>Subcontract Orders</h2>
+        <p class="Body">When you enter the <MadCap:variable name="Variables.jc contract" /> number when adding a subcontract order, if a restricted list of subcontractors is present <MadCap:variable name="General.ProductName" /> displays a message below the <MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> field.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/Restricted Suppliers/AddOrderSubbieMessage-UK.png" />
+        </p>
+        <p class="Body">You will only be able to add subcontractors from the <MadCap:variable name="Variables.jc contract" />'s restricted subcontractor list, and you will not be able to select a subcontractor:</p>
+        <ul>
+            <li class="ListBullet1">If either the Valid From or Valid To dates have been populated for that subcontractor, and the order date is not within the valid range.</li>
+            <li class="ListBullet1">If the <MadCap:variable name="Variables.on stop" /> field is <MadCap:variable name="Variables.tick" />ed for that subcontractor.</li>
+        </ul>
+        <h2>Multi-<MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> Orders</h2>
+        <p class="Body">If the order in question is a multi-<MadCap:variable name="Variables.jc contract" /> order, then once you have selected the <MadCap:variable name="Variables.jc contract" /> on the line, <MadCap:variable name="General.ProductName" /> validates the supplier entered on the order header with reference to the new <MadCap:variable name="Variables.jc contract" />’s list of Restricted Suppliers (if present).</p>
+    </body>
+</html>

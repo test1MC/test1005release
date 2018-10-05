@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Notification Templates</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Notification Templates</h1>
+        <p>Email notification subject and body is based on Email Templates of SENOTIFY type. To get correct template the system needs to pick template name from corresponding (based on event) NOTIFEM parameter value.</p>
+        <p>Text notification is stored directly in corresponding NOTIFTX parameter.</p>
+        <p>If parameter value is empty or the value does not correspond to Email Template, then use default template from the table below.</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Event</p>
+                    </td>
+                    <td>
+                        <p>SE Parameter</p>
+                        <p>Email/Text</p>
+                    </td>
+                    <td>
+                        <p>Default Template</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Service Order Entered</p>
+                    </td>
+                    <td>
+                        <p>NOTIFEM1/ NOTIFTX1</p>
+                    </td>
+                    <td>
+                        <p>Order {sso_order}
+ has been created for {slc_name}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Visit Scheduled</p>
+                    </td>
+                    <td>
+                        <p>NOTIFEM2/ NOTIFTX2</p>
+                    </td>
+                    <td>
+                        <p>Technician
+ {sht_name} has been scheduled to order {sso_order} for {vis_schd}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Visit Rescheduled</p>
+                    </td>
+                    <td>
+                        <p>NOTIFEM3/ NOTIFTX3</p>
+                    </td>
+                    <td>
+                        <p>Technician
+ {sht_name} has been scheduled to order {sso_order} for {vis_schd}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Visit Travel</p>
+                    </td>
+                    <td>
+                        <p>NOTIFEM4/ NOTIFTX4</p>
+                    </td>
+                    <td>
+                        <p>Technician
+ {sht_name} is in travel to order {sso_order}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Visit Started</p>
+                    </td>
+                    <td>
+                        <p>NOTIFEM5/ NOTIFTX5</p>
+                    </td>
+                    <td>
+                        <p>Technician
+ {sht_name} has started the service for order {sso_order} on {vis_disp_st}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Visit Completed</p>
+                    </td>
+                    <td>
+                        <p>NOTIFEM6/ NOTIFTX6</p>
+                    </td>
+                    <td>
+                        <p>Technician
+ {sht_name} has completed the service on {vis_disp_end} for a visit related to
+ order {sso_order} </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

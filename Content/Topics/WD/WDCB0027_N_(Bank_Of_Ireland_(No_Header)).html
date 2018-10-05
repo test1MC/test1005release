@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Format N (Bank Of Ireland (No Header))</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Format N (Bank Of Ireland (No Header))</h1>
+        <p><span style="BACKGROUND-COLOR: #003366;PADDING-RIGHT: 6px;FLOAT: right;COLOR: white;"><img src="../../Resources/Images/Misc/BankofIreland.gif" /></span>There are no header lines contained in a BOI statement file. The lines each contain a single string with data at specific character positions. The character positions of the fields that <span class="function" title="Function:%CB105">Load Bank Statement</span> reads are as follows: </p>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Characters</th>
+                    <th>Field</th>
+                </tr>
+                <tr>
+                    <td>1-6</td>
+                    <td><MadCap:variable name="Variables.sort code" style="text-transform: capitalize;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>7-14</td>
+                    <td>Account number </td>
+                </tr>
+                <tr>
+                    <td>16-17</td>
+                    <td>Transaction type</td>
+                </tr>
+                <tr>
+                    <td>36-46</td>
+                    <td>Transaction value (in pence)</td>
+                </tr>
+                <tr>
+                    <td>65-82</td>
+                    <td>Description<br />If the transaction type is 02, the transaction is a <MadCap:variable name="Variables.cheque" />, with the <MadCap:variable name="Variables.cheque" /> number in the right-most character positions.</td>
+                </tr>
+                <tr>
+                    <td><span class="nw">102-106</span>
+                    </td>
+                    <td>Date in Julian format (YYDDD where DDD is the number of the day in the year)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Transaction types U1, U7, U8, U9, 44 and 54 are ignored.</p>
+    </body>
+</html>

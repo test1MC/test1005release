@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Union Calculation Summary</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Union Calculation Summary</h1>
+        <p class="Body">The <span class="Field">Supplier</span>, <span class="Field">Invoice Txn Type</span>, and <span class="Field">Separate Invoice for Each Deduction</span> fields <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">were added to </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">are available in </MadCap:conditionalText>the <strong>General Info </strong>layout in <i>Payroll &gt; Global Setup &gt; Unions &gt; Union Calculations tab &gt; Union Calculation Summary &gt; Main tab</i>, as shown in <MadCap:xref href="#UnionCalcSumFields" class="ImageRef"><i> Union Calculation Summary Screen</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="UnionCalcSumFields"></a>Union Calculation Summary Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR094_Images/UnionCalcsFields.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Pl Supplier caps" />
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.pl supplier" /> account number.</p>
+        <p class="IndentBold">Invoice Txn Type</p>
+        <p class="IndentFieldDef">The invoice transaction type that is set up in <MadCap:variable name="Variables.Purchase Ledger caps" />. The transaction type found in parameter <span class="parameter">PLCSTYPE </span><strong>cannot </strong>be used for <MadCap:variable name="Variables.pr union" style="text-transform: capitalize;" /> transactions.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">Separate Invoice for Each Deduction</p>
+        <p class="IndentFieldDef">If multiple deductions are taken of the same deduction type on a paycheck, this read-only field specifies whether an invoice is created with multiple distribution lines (<strong>N</strong>) or a new invoice is generated for each deduction (<strong>Y</strong>). If set to N, the deductions use the same Pay Item; Y is for deductions to use specific Pay Items.</p>
+        <p class="IndentFieldDef">This field can only be <MadCap:variable name="Variables.tick" />ed if the <span class="Field">Invoice Txn Type </span>field is being used in the <MadCap:variable name="Variables.Purchase Ledger caps" /><span class="parameter"> PLCSTYPE </span>parameter value.  This Invoice Txn Type is most commonly used for child support and other garnishments.</p>
+        <p class="IndentFieldDef">For <MadCap:variable name="Variables.pr union" style="text-transform: capitalize;" /> deductions, this field should not be <MadCap:variable name="Variables.tick" />ed, and the Invoice Txn Type used for <MadCap:variable name="Variables.pr union" style="text-transform: capitalize;" /> deductions cannot be set in the PL Parameter <span class="parameter">PLCSTYPE</span>.</p>
+    </body>
+</html>

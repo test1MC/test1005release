@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1944" MadCap:lastWidth="1102">
+    <head><title>eInvoice Workbench</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">eInvoice Workbench</h1>
+        <p>The OA <span class="function" title="Function:%WPL9011BSMP">Electronic Invoice Workbench</span> allows you to process <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> transactions that have been received into <MadCap:variable name="General.ProductName" /> direct from the COINSetc Hub.</p>
+        <p>The transactions are sent by the COINSetc Hub as XML messages in a format that <span class="function" title="Function:%WPL9011BSMP">Electronic Invoice Workbench</span>&#160; recogn<MadCap:variable name="Variables.is" />es. The Workbench interprets the messages and presents them in a regular <MadCap:variable name="General.ProductName" /> fashion. A message may contain more than one transaction.</p>
+        <p>Transactions are routed to the Workbench in the correct <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />, where the XML data is validated. If it is good, the transactions can be passed straight to the <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> and General Ledger as a batch in the usual way. Transactions that do not pass validation can be amended in the Workbench. From the Workbench, the user can view an XML invoice as if viewing an image of a paper invoice. These images can be printed.</p>
+        <p>For certain configurations, <MadCap:variable name="Variables.jc contract" /> costing can be added to invoices.</p>
+        <div class="process">
+            <h2 class="print">To process eInvoices:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL9011BSMP">Electronic Invoice Workbench</span>. 
+<p><img src="../../Resources/Images_P-R/PL/PL_063001.png" /></p><p>This screen shows in bold the new messages that have been sent by <MadCap:variable name="Variables.pl suppliers" /> and routed to the relevant <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />. </p></li>
+                <li>The original message in XML format can be seen by clicking the <img src="../../Resources/Images/COINS Graphics/SVG buttons/xml.svg" class="button" /> button.</li>
+                <li>If you have administration privilege, you can reject or load new messages:</li>
+                <ul>
+                    <li>To load a message, use the <span class="userinput">Load </span>action; this checks each invoice in the message for exceptions. If there are no exceptions in the message then you are prompted to pass them through to the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> or open the Review screen, the second page of the workbench, where the individual invoices that are carried by any one message can be seen and can be processed. If there are any exceptions the Review screen is opened straight away. </li>
+                    <li>To reject a message (whether reviewed or not), use the <span class="userinput">Reject </span>action; rejected messages will not be passed into the workbench. </li>
+                </ul>
+                <li>Messages that have been reviewed but where not all invoices have been moved through to the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> are shown in normal text (not bold). Normal <a href="WDSY0006_Account_and_Contract_Security.html"><MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.jc contract" /> security</a> is respected if being used, and the numbers in the columns indicate the number of invoices in the message and the number of invoices viewable to the logged-in user.&#160; </li>
+                <li>A summary of the status of each invoice in the message can be seen by clicking the <img src="../../Resources/Images/summary.gif" class="button" /> button.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> to open the Review screen and view the list of invoices pending processing.</li>
+                <li>To create a PL invoice batch, use the <span class="userinput">Create Batch </span>action. 
+<p>This invokes the standard <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> batch creation program. When this process is complete a true PL batch of invoices is created from all invoices not held back in the workbench and without an exception flag. The invoices will then be cleared from the workbench leaving only those purposely held or those that require further attention to resolve any exceptions. When all invoices in a message have been moved to the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />,</span> the message is no longer visible in the workbench.</p></li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>If the PL parameter <span class="parameter">AUTOPSTE </span>is set to <span class="userinput">Y</span> (or the PL parameter <span class="parameter">AUTOPSTE </span>is blank and <span class="parameter">AUTOPOST </span>is set to <span class="userinput">Y</span>), the invoices are placed on the invoice register; otherwise, an unposted batch of invoices is created to be dealt with later in the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>.</p>
+            <h2>Batch numbering</h2>
+            <p>Batch numbering is required for each 'e' document type. Set the batch numbers in <span class="function" title="Function:%WGL9000BCBT">GL Batch Configuration</span>. Each document type needs to be amended by putting a number into the <span class="field">Next Batch</span> column; the system informs you if the number is high enough for a 'start' point. All flags may be left un<MadCap:variable name="Variables.tick" />ed.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_063002.png" />
+            </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_autopste.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_autopost.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_admusers.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

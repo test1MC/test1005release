@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="809" MadCap:lastWidth="600">
+    <head>
+        <link href="../TableStyles/NoteIndent1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="Snippet Conditions.Extended Search">If you have the extended search capability configured, </MadCap:conditionalText><span class="Function">Global Search Configuration</span> allows you to specify which tables and fields you want to include in the <MadCap:conditionalText MadCap:conditions="Snippet Conditions.Extended Search">Extended </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="Snippet Conditions.Global Search">Global </MadCap:conditionalText>Search.</p>
+        <table style="width: 100%;mc-table-style: url('../TableStyles/NoteIndent1.css');" class="TableStyle-NoteIndent1" cellspacing="0">
+            <col class="TableStyle-NoteIndent1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-NoteIndent1-Head-Header1">
+                    <th class="TableStyle-NoteIndent1-HeadD-Column1-Header1">
+                        <p class="NoteHeader">NOTE</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-NoteIndent1-Body-Body1">
+                    <td class="TableStyle-NoteIndent1-BodyA-Column1-Body1">Updates to the configuration are prevented if the search index process is running.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="FieldLabel"><b class="Field">ID</b>
+        </p>
+        <p class="IndentFieldDef">The unique identifier for the search configuration.   More than one record may exist for the same table (for example, to configure searches for different record types, using conditions). </p>
+        <p class="IndentFieldDef">Records beginning with “%” indicate standard data that will be shipped in each release (but not in fixes or service packs).</p>
+        <p class="FieldLabel"><b class="Field">Table</b>
+        </p>
+        <p class="IndentFieldDef">The table in the <MadCap:variable name="General.ProductName" /> database that will be indexed. Any changes to data  (add, update, delete) in the specified database table will be queued for indexing.</p>
+        <p class="FieldLabel"><b class="Field">Label</b>
+        </p>
+        <p class="IndentFieldDef">The label for the search results. This is what the user will see against results for items of this type.  Terminology tokens can be used.</p>
+        <p class="FieldLabel"><b class="Field">Condition Field</b>
+        </p>
+        <p class="IndentFieldDef">A database field that is used to filter the records included in the indexing. </p>
+        <p class="IndentFieldDef">For example, this could be used for posted invoices or record types.  The <b class="Field">Condition Value</b> field records values of the condition field that will be indexed.</p>
+        <p class="FieldLabel"><b class="Field">Condition Value</b>
+        </p>
+        <p class="IndentFieldDef">A can-do list of values for the <b class="Field">Condition Field</b>.  If the value of the field on a record that is specified as the condition field matches these values then that record will be indexed.</p>
+        <p class="FieldLabel"><b class="Field">Key Fields</b>
+        </p>
+        <p class="IndentFieldDef">A list of key fields for the unique index.  <MadCap:conditionalText MadCap:conditions="COINS.v1105">If using Apache Solr, these need to be the same as the standard unique index defined in the corresponding “gen” file for the table.</MadCap:conditionalText></p>
+        <p class="FieldLabel"><b class="Field">Use</b>
+        </p>
+        <p class="IndentFieldDef">Whether the configuration record is active.  Inactive records are ignored for indexing and searching.</p>
+        <p class="FieldLabel"><b class="Field">Company Field</b>
+        </p>
+        <p class="IndentFieldDef">The fieldname of the company field on the database table, if present. Typically this will be blank or kco. This field is used to limit the search to the current company on tables that have company.</p>
+        <p class="FieldLabel"><b class="Field">Search Fields</b>
+        </p>
+        <p class="IndentFieldDef">A list of fields that will be indexed for searching.  May contain formatting expressions using the syntax field1:format,field2:format etc.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105"><b class="Field">Extra Search Proc</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105">An ABL procedure to return additional text for indexing. </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105"> The search index process can only index actual database fields from a single table. If additional values need to be indexed (for example: packed fields, or foreign fields) then an ABL procedure, provided by <MadCap:variable name="General.ProductName" />, can return these as space-separated text.</p>
+        <p class="FieldLabel"><b class="Field">ID Fields</b>
+        </p>
+        <p class="IndentFieldDef">A list of the database fields to be displayed in the search results. </p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">ID Remap Procedure</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">Only the search table is available during indexing.  To display fields from other tables in the search results specify a ID&#160;remap procedure (provided by <MadCap:variable name="General.ProductName" />).</p>
+        <p class="FieldLabel"><b class="Field">Link</b>
+        </p>
+        <p class="IndentFieldDef">The function to which the user will be taken if they select a record of this type in the search screen.</p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">The link function field can contain parameters separated by an ampersand character (&amp;). For example:</p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">%WPO1010SPOH&amp;tip_type={po_hdr.tip_type}&amp;poh_mpo={po_hdr.poh_mpo}&amp;tip_type=MATERIAL&amp;poh_mpo=A</p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">This can also contain {} substitution; any {} parameters used in the function should be listed here for replacement.  User full table.field syntax to ensure correct replacement.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">Link Table</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">The link function may be to a different table than the search table – this is usually if you want to link to a parent record. For example, if you are indexing PO lines but in the results you want to link to the PO header.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">Link Key Fields</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">If <b class="Field">Link Table </b>is set and is different to the search table, specify the key fields used to find the link table.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">Link Key Remap Proc</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">An ABL procedure (provided by <MadCap:variable name="General.ProductName" />)&#160;to perform any necessary conversion on the link key fields (for example, stripping off suffix characters, data type conversion).</p>
+        <p class="FieldLabel"><b class="Field">Security RSP</b>
+        </p>
+        <p class="IndentFieldDef">The RSP which contains the security filter for the record (either a standard security method or a custom method).</p>
+        <p class="IndentFieldDef">For example, job-rsp has a function getSecurityFilter() which returns a query condition based on the security code and <MadCap:variable name="Variables.jc contract" /> security that has been set up.  <MadCap:variable name="General.ProductName" /> uses this to check that the user is allowed to view the record that is found in the search.  If not then the detail frame is not shown and the link on the item is disabled, so the user can see that a <MadCap:variable name="Variables.jc contract" /> exists but cannot see the details.  If blank then no security is used.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">Security Method</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">If <b class="Field">Security RSP</b> is specified then by default the standard row-based security will be applied (ased on the getSecurityFilter method).  Any non-standard security can be applied instead by specifying a Security Method, which must exist in the RSP. This allows for custom security methods to be written for special situations; for example, for the Activity Workbench where users can see other people’s tasks if they have allowed it</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">Security Table</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">The Security RSP is used to apply any record-based security (such as <MadCap:variable name="Variables.jc contract" /> security, or sector security).  For transactional data this security may be applied on a header table rather than the table being indexed and searched. For example, PO lines could be indexed, but security applied to the PO header.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">Security Key Fields</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">If <b class="Field">Security Table</b> is set and is different to the search table, specify the key fields used to find the security table.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">CLOB Type</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">If the table uses co_clob for large character storage, specify the value for clo_type.</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">CLOB Key Fields</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">Mapping to key fields for co_clob if used. co_clob has the following unique index – kco, clo_type, clo_key, clo_field.  Values for the first three must be provided – clo_field is optional.</p>
+        <p class="FieldLabel"><b class="Field">Open In</b>
+        </p>
+        <p class="IndentFieldDef">How to open the page that the search results link to – in a new tab, main area in current tab or in a desktop frame.  This only applies to global search from the Desktop.</p>
+        <p class="FieldLabel"><b class="Field">Foreground</b>
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.colour" /> of the frame title text. This only applies if the result is opened in a frame.</p>
+        <p class="FieldLabel"><b class="Field">Background</b>
+        </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.colour" /> of the frame title background. This only applies if the result is opened in a frame.</p>
+        <p class="FieldLabel"><b class="Field">Detail</b>
+        </p>
+        <p class="IndentFieldDef">The page definition to show in detail area of desktop global search results.  Standard data functions are usually %WSYD&lt;tla&gt;; for example:&#160;%WSYDAIN for ap_invoice. See .</p>
+        <p class="FieldLabel"><b class="Field">Icon</b>
+        </p>
+        <p class="IndentFieldDef">The icon to show in search results to identify this type of record. The icon can be either an image file, or a font icon.</p>
+        <p class="IndentFieldDef">For image files:</p>
+        <p class="IndentFieldDef">
+            <ul>
+                <li>If the file is in the /images directory of <MadCap:variable name="General.ProductName" />, enter the filename (for example, user.gif).</li>
+                <li>If the file is elsewhere on the webserver, enter the path and filename, beginning with /.</li>
+            </ul>
+        </p>
+        <p class="IndentFieldDef">For font icons:</p>
+        <p class="IndentFieldDef">
+            <ul>
+                <li>Enter the class name (as listed in <span class="Function">Icon Fonts</span>). For example, to use the  icon, enter <strong>ci ci-hardhat</strong>. </li>
+            </ul>
+        </p>
+        <p class="IndentFieldDef">The default, if no icon is specified, is fa-file-text:&#160;</p>
+        <p class="FieldLabel" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search"><b class="Field">Requires External Engine?</b>
+        </p>
+        <p class="IndentFieldDef" MadCap:conditions="COINS.v1105,Snippet Conditions.Extended Search">This can only be updated by <MadCap:variable name="General.ProductName" />. It is <MadCap:variable name="Variables.tick" />ed for all standard global search configuration records which index transactional data.  If it is <MadCap:variable name="Variables.tick" />ed,  users will not be able set the configuration to “Use” unless an external search engine is configured on the system.</p>
+    </body>
+</html>

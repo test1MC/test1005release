@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">PR <MadCap:variable name="Variables.Cheques caps" /> Input</h1>
+        <h2 MadCap:autonum="1.1 ">Timesheets Entry</h2>
+        <p class="Body"> Timesheets Entry <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been updated to set up </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">sets up </MadCap:conditionalText>the Timecard Expense <MadCap:variable name="Variables.Financial Period caps" /> Date if the <span class="Field">Base Expense <MadCap:variable name="Variables.Financial Period caps" /> on the Timecard Date</span> field in PR Company Configuration is <MadCap:variable name="Variables.tick" />ed.</p>
+        <p class="Body">This field is calculated based on the value of the Timecard Date. It is not an updateable field and is calculated as demonstrated in the example below.</p>
+        <p class="Example">Example using Period Maintenance Fiscal Date value of 01/31/2014:</p>
+        <p class="Body">If the following G/L Period records exist:</p>
+        <ul>
+            <li>12/31/2013 (<strong>Previous G/L&#160;Period</strong>)</li>
+            <li>01/31/2014 (<strong>Current G/L&#160;Period</strong>)</li>
+            <li>02/28/2014 (<strong>Next G/L&#160;Period</strong>)</li>
+        </ul>
+        <p class="Body">Then the following calculations are:</p>
+        <ul>
+            <li><strong>Current G/L Period value =</strong><i> 01/31/2014 - Period Maintenance Value</i>
+            </li>
+            <li><strong>Current Period date range =</strong><i>		(Previous Period + 1)	to Current Period</i>, such as 01/01/2014 to 01/31/2014</li>
+            <li><strong>Previous Period date comparison = </strong><i>&lt; Previous Period</i>, such as <br />&lt; 12/31/2013</li>
+            <li><strong>Next Period date comparison = </strong><i>	&gt; Current Period</i>, such as &gt; 01/31/2014</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">Void <MadCap:variable name="Variables.Cheques caps" /></h2>
+        <p class="Body">Void <MadCap:variable name="Variables.Cheques caps" /> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">has been updated to include </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">includes </MadCap:conditionalText>the expense <span class="Field"><MadCap:variable name="Variables.Financial Period caps" /></span> field on the selection screen, as shown in <MadCap:xref href="#VoidChecksFP" class="ImageRef"><i> Void [%=Variables.Cheques caps%] Screen</i></MadCap:xref>. This field is only accessible if the<span class="Field"> Base Expense <MadCap:variable name="Variables.Financial Period caps" /> on Timecard Date</span> field in PR Company Configuration is <MadCap:variable name="Variables.tick" />ed.</p>
+        <p class="Body">The default for this field comes from the <MadCap:variable name="Variables.Financial Period caps" /> in Period Maintenance.</p>
+        <p class="Body">For all timecards created for the voided <MadCap:variable name="Variables.cheque" />, the Timecard Expense <MadCap:variable name="Variables.Financial Period caps" /> Date should be set to the value entered for this field.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="VoidChecksFP"></a>Void <MadCap:variable name="Variables.Cheques caps" /> Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR089_Images/VoidChecksFP.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.3 ">Convert From Recurring Timesheets</h2>
+        <p class="Body">The <span class="Function">Convert from Recurring Timesheets </span>function <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">previously </MadCap:conditionalText>set </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">sets </MadCap:conditionalText>the Timecard Date when recurring timecards <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">were </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">are </MadCap:conditionalText>created. It <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>also sets the Expense <MadCap:variable name="Variables.Financial Period caps" /> if the <b><span class="Field">Base Expense <MadCap:variable name="Variables.Financial Period caps" /> on Timecard Date</span></b> field in PR Company Configuration is <MadCap:variable name="Variables.tick" />ed.</p>
+    </body>
+</html>

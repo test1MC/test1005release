@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="513" MadCap:lastWidth="948" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Calculation Field Rules</h1>
+        <p>It is possible to include multiple calculations within the one calculation box -  Each calculation is separated by a ; symbol (semi-colon).  It is always the last calculation in the box which will appear on the report if the field is a calculated field.</p>
+        <p>  If there is a 'Field' defined on the field record then it will be the 'Field' which is displayed although the calculations will execute.</p>
+        <p>Calculations can only be performed on data of the correct type, i.e. The Test in an IF statement can only be performed on an integer or decimal value.</p>
+        <p>Typical error messages which may be reported in the Log File are :</p>
+        <p>"Primary expected but found string".</p>
+        <p>"Invalid Character in Numeric Input …"</p>
+        <p>The $ sign at the front of a variable within the calculation box will indicate that the result of the calculation is a character value.</p>
+        <p class="Example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">
+            <br />var- 	A simple variable will expect a numerical value.<br />$var - 	defines the variable var as a string – it will therefore expect character format data and should be in quotes.</p>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/PCSTLIST - Txn Types For Inv Match/Prov Costing</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/PCSTLIST - </span> Txn Types For Inv Match/Prov Costing
+</div>
+<div class="param_def">
+<p>The transaction types to use in Provisional Costing with Invoice Matching. This provides the ability to use provisional costing combined with GRN matching so that invoices can be retrospectively matched to GRNs and costing altered likewise if needed.</p>
+<P>Enter a comma-separated list of two transaction types: the first as the PCST equivalent of any debit transaction types, the second as the PCST equivalent of any credit transaction types). </P>
+<P>If this parameter is not set, none of the Provisional Costing with Invoice Matching functionality will work. </P>
+<P>The PL parameter <SPAN class="parameter">DISTTYPE </SPAN>must exclude (R)egistering, but allow both (C)osting and (P)rovisional Costing.</P>
+<P>On <SPAN class="key">F1</SPAN> during invoice matching, if the invoice cannot be fully reconciled, the system presents the opportunity to provisionally cost the invoice and swap its transaction type to the relevant entry in <FONT color="#000000"><SPAN class="parameter">PCSTLIST</SPAN>. This option is only presented on first entry of the invoice. The original transaction type is remembered in order to re-instate that transaction type once the invoice is fully reconciled via the invoice matching routine. It is this final reconciliation that reverses out the provisional costing records and creates new costing records. It should be understood that the setting of the </FONT><FONT color="#000000"><SPAN class="parameter">PCSTLIST </SPAN>parameter is vital to the correct reporting of the provisional cost transactions. </FONT></P>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../pl/pl_disttype.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

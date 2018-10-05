@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Additional Characters in Searches</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Additional Characters in Searches</h1>
+    <p>You can use the following additional characters in the <span class="field">Search </span>field of a <a href="WDUG0025_Searching_and_Filtering.html">simple filter</a> (or in the <span class="field">Matches </span>field of an <a href="WDUG0027_Advanced_Filter.html">advanced filter</a>).</p>
+    <ul>
+      <li>To search for any single character, use <span class="userinput">.</span> (<MadCap:variable name="Variables.full stop" />). For example:
+<table><tbody><tr><td><span class="userinput">C1.0  </span></td><td>tells <MadCap:variable name="General.ProductName" /> to show any items beginning with C1 and ending with 0, with any single character in the third position.</td></tr><tr><td><span class="userinput">...</span></td><td>tells <MadCap:variable name="General.ProductName" /> to show any items with exactly three characters.</td></tr></tbody></table></li>
+      <li>To search for any number of characters, use <span class="userinput">*</span> (asterisk). For example:
+<table><tbody><tr><td><span class="userinput">C1* </span></td><td>tells <MadCap:variable name="General.ProductName" /> to show any items beginning with C1.</td></tr><tr><td><span class="userinput">C1*0  </span></td><td>tells <MadCap:variable name="General.ProductName" /> to show any items beginning with C1 and ending with 0, with any number of characters in between.</td></tr><tr><td><span class="userinput">*BE*  </span></td><td>tells <MadCap:variable name="General.ProductName" /> to show any items that contain BE.</td></tr></tbody></table></li>
+      <li>To search for a list of items, use <span class="userinput">,</span> (comma). For example:
+<table><tbody><tr><td><span class="userinput">A1000,A1500,B1224 </span> </td><td>tells <MadCap:variable name="General.ProductName" /> to show only the items A1000, A1500 and B1224.</td></tr><tr><td><span class="userinput">A1000,A1500,B*</span> </td><td>tells <MadCap:variable name="General.ProductName" /> to show the items A1000 and A1500, and any item that begins with B.</td></tr></tbody></table><p class="noteheader">NOTE</p><div class="note"><p>To search for a blank field, enter a single comma.  This is interpreted as a list containing two blank entries.</p><p>To search for a non-blank field, enter <span class="userinput">.*</span> (a <MadCap:variable name="Variables.full stop" /> and an asterisk).  </p></div></li>
+      <li>To exclude specific items, <span class="syPREFPATn redc">enter an exclamation mark (<span class="userinput">!</span>) before the items you want to exclude and follow them with ,* (comma and asterisk)</span><span class="syPREFPAT greenc">enter a caret (<span class="userinput">^</span>)  before the items you want to exclude</span>. For example:
+<table><tbody><tr><td><span class="syPREFPAT greenc userinput">^A1000</span><span class="syPREFPATn redc userinput">!A1000,*</span></td><td>tells <MadCap:variable name="General.ProductName" /> to show all items except A1000.</td></tr><tr><td><span class="syPREFPAT greenc userinput">^A1000,A1500</span><span class="syPREFPATn redc userinput">!A1000,!A1500,*</span></td><td>tells <MadCap:variable name="General.ProductName" /> to show all items except A1000 and A1500.</td></tr><tr class="syPREFPATn redc"><td><span class="userinput">!A15*,A*</span></td><td>tells <MadCap:variable name="General.ProductName" /> to show all items beginning with A, except those that begin A15.</td></tr></tbody></table></li>
+      <li>To search for a range of items, <span class="syPREFPATn redc">enter \\ and </span>use <span class="userinput">-</span> (dash) as a range separator. For example:
+<table><tbody><tr><td><span class="userinput"><span class="syPREFPATn redc">\\</span>A50-B50</span> </td><td>tells <MadCap:variable name="General.ProductName" /> to show items with codes in the range A50 to B50</td></tr><tr><td><span class="userinput"><span class="syPREFPATn redc">\\</span>^A50-B50 </span></td><td>tells <MadCap:variable name="General.ProductName" /> to show all items except those between A50 and B50.</td></tr></tbody></table></li>
+      <li class="syPREFPAT greenc">If the values contain a dash, you can enter this with a backslash (<strong>\</strong>) or by enclosing the string in quotes.<br />e.g. <span class="userinput">"A-000"-"A-999" </span>would select a range of codes A-000,A-001,A-002....A-999.</li>
+    </ul>
+  </body>
+</html>

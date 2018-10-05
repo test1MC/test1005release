@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/MSGREV - Review messages before send</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/MSGREV - </span> Review messages before send
+</div>
+<div class="param_def">
+<p>Whether to put outgoing messages in a queue to be reviewed.</p>
+<P class="yesnolist"><SPAN class="userinput">Y</SPAN> = Messages are placed in a queue and must be released (using <span class="function" title="Function:%WSY5090BSIN">My Messages (<MadCap:variable name="Variables.RO_sin_queue caps"/>)</span>) before they are sent. If you set this to <SPAN class="userselect">Y</SPAN> and find that your outgoing messages are not being sent, check the permissions on the <STRONG>startoa.sh</STRONG> script.</P>
+<P class="yesnolist"><SPAN class="userinput">N</SPAN> = Messages are sent immediately using the ESB Outbound Messages process. Users do not have to review/release the messages, but the ESB Outbound Messages process provides a log of all messages sent.</P>
+<P>You can override this default for individual users in <span class="function" title="Function:%WSYBSUR">Users</span>.</P>
+<P class="noteheader">NOTE</P>
+<DIV class="note">This is only relevant if you are using the ESB Outbound Messages process; that is, if <FONT color="#000000"><SPAN class="parameter">WFMTXN </SPAN>is set to <SPAN class="userinput">Y</SPAN>.</FONT></DIV>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sy/sy_wfmtxn.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

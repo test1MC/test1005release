@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2242" MadCap:lastWidth="1092">
+  <head>
+    <title>Configurable [%=Variables.Contract Sales%] Applications</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Configurable <MadCap:variable name="Variables.Contract Sales" /> Applications</h1>
+    <p>The <MadCap:variable name="Variables.Contract Sales" /> Application document format allows you to configure <MadCap:variable name="Variables.Contract Sales" /> applications for printing.</p>
+    <p>Application documents show item lines from the certificate definition in the body, and can also show:</p>
+    <ul>
+      <li>One row for each costing distribution record.</li>
+      <li>One row for each measured item record.</li>
+      <li>One row for each <MadCap:variable name="Variables.vat" /> distribution record.</li>
+      <li MadCap:conditions="COINS.v1108">One row for each stage paid (if plot billing is used).</li>
+      <li MadCap:conditions="COINS.v1108">One row for each variation paid (if plot billing is used).</li>
+    </ul>
+    <p>Define the layout of configurable documents using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the System Module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDCS0001_CS_Certificates.html" />
+        <MadCap:relatedTopic src="WDCS0002_Printing_Name_and_Address.html" />
+        <MadCap:relatedTopic src="WDCS0003_Printing_Column_Headings.html" />
+        <MadCap:relatedTopic src="WDCS0004_Printing_the_Body_of_the_Certificate.html" />
+        <MadCap:relatedTopic src="WDCS0005_Detail_Amounts_in_Header_and_Footer.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To define the format for printing applications</h2>
+      <ol>
+        <li>Use the document types <span class="userinput">Applications (CS)</span>. 
+<p><img src="../../Resources/Images/CS_000801.png" class="FullWidth" /></p></li>
+        <li>In the <span class="field">Document</span> field, enter a name for the application document (for example <span class="userinput">CSAPP1</span>). You can define different documents to print applications with different layouts. When you print the application, <MadCap:variable name="General.ProductName" /> gives you a choice of which document to use.</li>
+        <li>In the <span class="field">IDs</span> field on the Extras tab, enter a list of <MadCap:variable name="Variables.Contract Sales" /> certificate item IDs, separated by commas, that correspond to any detail lines to be printed in the body of the application (see Defining a standard <MadCap:variable name="Variables.Contract Sales" /> certificate). 
+<p><span class="screentype">IDs: GRC,CON,RET,DIS,VAT,PAY </span></p><p>The body line will be repeated for each Item ID:</p><table style="TEXT-ALIGN: right;" class="screentype"><tbody><tr><td /><td width="25%">Cumulative</td><td width="25%">Previous</td><td width="25%">This Period</td></tr><tr><td /><td /><td /><td /></tr><tr><td>Gross Certified</td><td>8,925.00</td><td>6,250.00</td><td>2,675.00</td></tr><tr><td>Contras</td><td>115.00</td><td>0.00</td><td>115.00</td></tr><tr><td>Retention</td><td>446.25</td><td>312.50</td><td>133.75</td></tr><tr><td>Discount</td><td>211.97</td><td>148.44</td><td>63.53</td></tr><tr><td><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /></td><td>1,446.69</td><td>1.013.09</td><td>433.60</td></tr><tr><td>Payment</td><td>8,266.78</td><td>5,789.06</td><td>2,911.32</td></tr></tbody></table><br /><p>Lines with zero values will not normally be printed. To print lines even if all values are zero, put an exclamation mark (!) before the Item ID.</p></li>
+        <li>In the header of the application, put information such as the customer's name and address, the <MadCap:variable name="Variables.jc contract" /> code, the <MadCap:variable name="Variables.jc contract" /> name, the application date and value. Also, if you want column headings, such as Current Valuation, these go in the header.</li>
+        <li>In the body of the application, put a line that shows the details of the payment (cumulative, previous, and this period amounts).</li>
+        <li>In the footer of the application, put any additional information that may be needed.</li>
+      </ol>
+      <p>Tables available:</p>
+      <p>The following tables are available on all forms: cs_certificate, jc_job, cs_series, sv_job, ar_cust, cs_check, sv_cert </p>
+      <p>The following extra tables are available on specific forms: </p>
+      <p>Body - cs_certdet, cs_defndet </p>
+      <p>CERTDIST - cs_certdist </p>
+      <p>VATDIST - cs_vatdist </p>
+      <p>ITEM - sv_item, sv_measure</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="2578" MadCap:lastWidth="1179" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add Prospect Event (addEvent)</h1>
+        <p>&#160;</p>
+        <p>A sample XML message to add a new event to the prospect’s history is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswshvi1" method="addEvent" id="callid001"&gt;</p>
+        <p class="code">&lt;Prospect reference="487"&gt;</p>
+        <p class="code">&lt;Event&gt;</p>
+        <p class="code">&lt;UserCode&gt;ENQUIRY&lt;/UserCode&gt; </p>
+        <p class="code">&lt;Date&gt;2006-07-29&lt;/Date&gt; </p>
+        <p class="code">&lt;Contract&gt;2600&lt;/Contract&gt; </p>
+        <p class="code">&lt;Plot1&gt;001&lt;/Plot1&gt; </p>
+        <p class="code">&lt;Plot2&gt;002&lt;/Plot2&gt; </p>
+        <p class="code">&lt;HouseType1&gt;B&lt;/HouseType1&gt; </p>
+        <p class="code">&lt;HouseType2&gt;A3&lt;/HouseType2&gt; </p>
+        <p class="code">&lt;Comments&gt;New event comments&lt;/Comments&gt; </p>
+        <p class="code">&lt;/Event&gt;</p>
+        <p class="code">&lt;EnquirySources&gt;</p>
+        <p class="code">&lt;Source&gt;</p>
+        <p class="code">&lt;Code&gt;LOCAL&lt;/Code&gt; </p>
+        <p class="code">&lt;/Source&gt;</p>
+        <p class="code">&lt;Source&gt;</p>
+        <p class="code">&lt;Code&gt;NEWLOC&lt;/Code&gt; </p>
+        <p class="code">&lt;/Source&gt;</p>
+        <p class="code">&lt;/EnquirySources&gt;</p>
+        <p class="code">&lt;/Prospect&gt;</p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>If the add of the prospect event was successful this would return a XML message with the following format:</p>
+        <p class="code">&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswshvi1" method="addEvent" id="callid001"&gt;</p>
+        <p class="code">&lt;ProspectCompany&gt;001&lt;/ProspectCompany&gt; </p>
+        <p class="code">&lt;ProspectReference&gt;000487&lt;/ProspectReference&gt; </p>
+        <p class="code">&lt;EventReference&gt;00044206&lt;/EventReference&gt; </p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>The EventReference returned is the unique reference which identifies the event within the selected <MadCap:variable name="General.ProductName" /> company.</p>
+        <p>&#160;</p>
+    </body>
+</html>

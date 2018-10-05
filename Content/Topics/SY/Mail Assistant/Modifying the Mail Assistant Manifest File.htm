@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Modifying the <MadCap:variable name="General.ProductName" /> Mail Assistant Manifest File</h1>
+        <p class="Body">The manifest file is supplied by <MadCap:variable name="General.ProductName" />; most of it does not need to be changed, but if <MadCap:variable name="General.ProductName" /> has not provided you with a version that is configured for your <MadCap:variable name="General.ProductName" /> environment, the URLs need to be changed to point to the correct locations.</p>
+        <p class="Body">The highlighted areas in the illustration below show some of the entries that need to be changed.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/COINS Mail Assistant/COINS Mail Asst Manifest.png" class="FullWidth" />
+        </p>
+        <p class="Body">In the <code>DefaultValue</code> attribute of the following elements, change the text before "<code>/scripts/lib...</code>" to the base directory for <MadCap:variable name="General.ProductName" /> (which is the value of the <span class="parameter">SY/WEBROOT</span> parameter, plus "<code>/coins/</code>" plus the value of the <span class="parameter">SY/WEBBASE</span> parameter):</p>
+        <ul class="CompactList">
+            <li><code>&lt;IconUrl&gt;</code>
+            </li>
+            <li><code>&lt;HighResolutionIconUrl&gt;</code>
+            </li>
+            <li><code>&lt;Resources&gt;&lt;bt:Images&gt; &lt;bt:Image&gt;</code> (there are three elements like this)</li>
+        </ul>
+        <p class="Body">In the<code> DefaultValue</code> attribute of the following elements, change the text before "<code>/woumsai.p...</code>" to the script directory for <MadCap:variable name="General.ProductName" /> (which is the value of the <span class="parameter">SY/WEBROOT</span> parameter, plus "/" plus the value of the <span class="parameter">SY/WEBSCRPT</span> parameter):</p>
+        <ul class="CompactList">
+            <li><code>&lt;FormSettings&gt;&lt;Form xsi:type="ItemRead"&gt;&lt;DesktopSettings&gt;&lt;SourceLocation&gt;</code>
+            </li>
+            <li><code>&lt;FormSettings&gt;&lt;Form xsi:type="ItemEdit"&gt;&lt;DesktopSettings&gt;&lt;SourceLocation&gt;</code>
+            </li>
+            <li><code>&lt;Resources&gt; &lt;bt:Urls&gt; &lt;bt:Url&gt;</code> (there are three elements like this)</li>
+        </ul>
+        <p class="Body">&#160;</p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p>Note</p>
+            </div>
+            <div class="noteblock">
+                <p>The URLs need to use https:// (not http://) - in other words the webserver needs to have a valid security certificate.</p>
+            </div>
+        </div>
+        <p class="Body">For example, if the parameters are set as follows:</p>
+        <p class="Body">SY/WEBROOT = https://mycoinsenvironment.com</p>
+        <p class="Body">SY/WEBBASE = live</p>
+        <p class="Body">SY/WEBSCRIPT = cgi-bin/wslive</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">The elements within the <code>&lt;Resources&gt;</code> tag would look like this:</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&lt;Resources&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&lt;!-- add information on resources --&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&lt;bt:Images&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;!-- Blue icon --&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;bt:Image id="coins-icon-16" DefaultValue="<span style="color: #0000ff; font-weight: bold;">https://mycoinsenvironment.com/coins/live</span>/scripts/lib/msmailAddin/images/<MadCap:variable name="General.ProductName" />_Icon_16x16.png"/&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;bt:Image id="coins-icon-32" DefaultValue="<span style="color: #0000ff; font-weight: bold;">https://mycoinsenvironment.com/coins/live</span>/scripts/lib/msmailAddin/images/<MadCap:variable name="General.ProductName" />_Icon_32x32.png"/&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;bt:Image id="coins-icon-80" DefaultValue="<span style="color: #0000ff; font-weight: bold;">https://mycoinsenvironment.com/coins/live</span>/scripts/lib/msmailAddin/images/<MadCap:variable name="General.ProductName" />_Icon_80x80.png"/&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&lt;/bt:Images&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&lt;bt:Urls&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;bt:Url id="composeTaskPaneUrl" DefaultValue="<span style="color: #0000ff; font-weight: bold;">https://mycoinsenvironment.com/cgi-bin/wslive</span>/woumsai.p?mailtype=compose"/&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;bt:Url id="readCustomPaneUrl" DefaultValue="<span style="color: #0000ff; font-weight: bold;">https://mycoinsenvironment.com/cgi-bin/wslive</span>/woumsai.p?mailtype=read"/&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&lt;bt:Url id="readTaskPaneUrl" DefaultValue="<span style="color: #0000ff; font-weight: bold;">https://mycoinsenvironment.com/cgi-bin/wslive</span>/woumsai.p?mailtype=read"/&gt;</p>
+        <p style="margin-bottom: 0;font-size: 9pt;font-family: monospace;">&#160;&#160;&#160;&#160;&lt;/bt:Urls&gt;</p>
+        <p class="Body">When you have modified the manifest file, you need to install it on Exchange and make it available to users; see <MadCap:xref href="Installing Manifest File.htm">1, Installing the COINS Mail Assistant Manifest File</MadCap:xref>.</p>
+    </body>
+</html>

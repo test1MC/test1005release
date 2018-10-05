@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Joint <MadCap:variable name="Variables.Pl Supplier caps" /> Payments</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Joint <MadCap:variable name="Variables.Pl Supplier caps" /> Payments</h1>
+        <p>In some countries, such as the US, subcontractors or <MadCap:variable name="Variables.pl suppliers" /> can, under some circumstances, force a construction company to include them on the payments that the construction company receives from its customers. The term used to describe this is Joint Payees: the customer will make out a&#160;<MadCap:variable name="Variables.cheque" /> to two companies: the construction company and its subcontractor or <MadCap:variable name="Variables.pl supplier" />.&#160; </p>
+        <p>Joint payee functionality in <MadCap:variable name="General.ProductName" /> allows you to record the joint payees on invoices, and issue <MadCap:variable name="Variables.cheques" /> for joint payees.</p>
+        <p>If the joint payees&#160;functionality is enabled, when you enter the invoice, you record the amounts invoiced for the joint payees.&#160; When you process payments for the invoice, <MadCap:variable name="General.ProductName" /> will issue separate payments as appropriate: to the <MadCap:variable name="Variables.pl supplier" />, and to the <MadCap:variable name="Variables.pl supplier" /> AND the joint payee.</p>
+        <p><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> for joint payees cannot be paid electronically, although the payment to the main payee (the <MadCap:variable name="Variables.pl supplier" />) can be either by <MadCap:variable name="Variables.cheque" /> or by <MadCap:variable name="Variables.eft" />.</p>
+        <div class="process">
+            <h2 class="print">Joint Payments</h2>
+            <ol>
+                <li>When entering an invoice that requires joint payees:</li>
+                <ol>
+                    <li>Set the <span class="field">Payment Type </span>to <span class="userinput">Separate</span>.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Add Invoice Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images/2.16 - PRIME AP - Setting Up Joint Payees/Joint Payees_3.png" class="FullWdith" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                    <li>On the Joint Payees tab, enter the amounts each of the joint payees should receive.
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Add Invoice – Joint Payees Tab</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images/2.16 - PRIME AP - Setting Up Joint Payees/Joint Payees_4.png" class="FullWdith" /></p></MadCap:dropDownBody></MadCap:dropDown><p class="noteheader">NOTE</p><div class="note">For <MadCap:variable name="Variables.pl suppliers" /> that are linked to subcontractors, the Joint Payees tab is available only if subcontractor is exempt from tax (tax scheme = 'X').</div></li>
+                </ol>
+                <li>When selecting an invoice for payment, the payment amounts will default from the invoice record (if adding a new payment), but you can update the payment amounts for each payee. (Update will only be allowed if the tax deducted value is zero. This is because part payment of transactions with tax is not allowed.)
+<p>If you use the Pay Invoice action for a part-paid certificate, <MadCap:variable name="General.ProductName" /> will only copy the invoice amount and you will have to update the joint payment amounts manually.</p></li>
+                <li>When freezing the payment batch, <MadCap:variable name="General.ProductName" /> creates separate payment records; one for the <MadCap:variable name="Variables.pl supplier" /> and one with each of the joint payees. For example:
+<p>For an invoice for 1000.00 with 20.00 discount from Browns Ltd</p>
+Joint Payees: Jones and Sons 100.00 / A J Smith 200.00<br /><br /><MadCap:variable name="General.ProductName" /> would produce three payments:<br />680.00 with a payee name "Browns Ltd"<br />100.00 with a payee name "Browns Ltd AND Jones and Sons"<br />200.00 with a payee name "Browns Ltd AND A J Smith"</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <h3>Configuring <MadCap:variable name="Variables.cheques" /></h3>
+            <p>You can use the following fields on PL and SC <MadCap:variable name="Variables.cheques" /> to print the <MadCap:variable name="Variables.pl supplier" /> or subcontractor payee name, with the joint payee name if appropriate:</p>
+            <p />
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Field</th>
+                        <th>Display</th>
+                    </tr>
+                    <tr>
+                        <td>RO_scs_jointPayeen </td>
+                        <td>Subcontractor payee name and joint payee name when relevant.</td>
+                    </tr>
+                    <tr>
+                        <td>RO_scs_jointPayeen* </td>
+                        <td>As above with trailing ***.</td>
+                    </tr>
+                    <tr>
+                        <td>RO_acs_jointPayeen&#160; </td>
+                        <td><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> payee name and joint payee name when relevant.</td>
+                    </tr>
+                    <tr>
+                        <td>RO_acs_jointPayeen* </td>
+                        <td>As above with trailing ***.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>For payments that are factored, you can use the fields RO_actual_avm_jointPayeen, RO_actual_avm_jointPayeen*, RO_actual_sbm_jointPayeen, or RO_actual_sbm_jointPayeen* to print the actual subcontractor or <MadCap:variable name="Variables.pl supplier" /> name. </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_payjoint.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_paytype.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

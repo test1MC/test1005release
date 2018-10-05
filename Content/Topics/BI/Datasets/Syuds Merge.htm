@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="1469" MadCap:lastWidth="1152" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINS.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="OA Designer;Topics" />Syuds.Merge</h1>
+        <p>This method will combine selected columns from two or more dataset (with a common key) in to a new dataset.&#160; </p>
+        <p>Suppose we have a dataset ttCost</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINS" cellspacing="0">
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">
+                        <p>Kco</p>
+                    </th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">
+                        <p>Job_num</p>
+                    </th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1">
+                        <p>dCosts</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">
+                        <p>1001</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">
+                        <p>1002</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1">
+                        <p>150</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>And a dataset ttRev</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINS" cellspacing="0">
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">
+                        <p>Kco</p>
+                    </th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">
+                        <p>Job_num</p>
+                    </th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1">
+                        <p>dRev</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">
+                        <p>1001</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p>200</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">
+                        <p>1002</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1">
+                        <p>250</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Then the resulting dataset (ttCostRev) might be</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINS" cellspacing="0">
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">
+                        <p>Kco</p>
+                    </th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">
+                        <p>Job_num</p>
+                    </th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">
+                        <p>dCosts</p>
+                    </th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1">
+                        <p>dRev</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">
+                        <p>1001</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p>200</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">
+                        <p>1002</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">
+                        <p>150</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1">
+                        <p>250</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>This is achieved in a report initialisation calculation as follows:</p>
+        <p><span class="Emphasis">Method('syuds.mergeKeys','kco,job_num');<br></br>Method('syuds.mergeTable','cost','','','','');<br></br>Method('syuds.mergeTable','rev','','','','');<br></br>Method('syuds.mergeExec','CostRev');</span>
+        </p>
+        <p>mergeKeys is used to specify the unique keys used to merge the data.</p>
+        <p>mergeTable is called once for each table to be merged.&#160; The first parameter is the dataset name (without the tt prefix), the second parameter is the condition to be applied to this set of records, the third parameter is the key field names in this table (defaults to the mergeKeys), the fourth parameter is the field names (in this table) to be combined, the fifth parameter is the name of the fields in the output dataset.</p>
+        <p>e.g. <span class="Emphasis">Method('syuds.mergeTable','cost','WHERE dCosts &gt; 0','kco,job_num','dCosts','dMyCosts');</span></p>
+        <p>would take only records with costs greater than zero and using kco and job_num from this record&#160; write dCosts in to a combined field called dMyCosts.</p>
+        <p>A short version is also available with default options.</p>
+        <p><span class="Emphasis">Method('syuds.merge','cost,rev','kco,job_num','CostRev');</span>
+        </p>
+        <p>
+            <MadCap:concept term="Datasets" />This is equivalent to the series of calls above. Datasets ttCost and ttRev are combined using kco and job_num (in all tables) and all fields from the two datasets are combined and returned in ttCostRev.</p>
+        <p>Decimal values will be summed in the combined dataset.&#160; All other field types will be written from the last record to be combined.&#160; It is expected that the record to be merged would already be unique on the keys.</p>
+    </body>
+</html>

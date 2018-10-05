@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1833" MadCap:lastWidth="1090">
+  <head>
+    <title>Processing Pending <MadCap:variable name="Variables.Pc Hires caps" /></title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Processing Pending <MadCap:variable name="Variables.Pc Hires caps" /></h1>
+    <p>The <span class="function" title="Function:%WPC1301BCXC">Process Pending <MadCap:variable name="Variables.pc hires" style="text-transform: capitalize;" /></span> screen allows you to specify how you will fulfil each of the items on a <MadCap:variable name="Variables.pc plant" /> request.  At the top of the screen, the <span style="background-color: #e35151;padding: 1px 3px 1px 3px;">Assignments incomplete</span> text indicates that there are request lines which do not yet have a specific component assigned to them.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">If a request line was for an asset group with a quantity greater than 1, the <span class="function" title="Function:%WPC1301BCXC">Process Pending <MadCap:variable name="Variables.pc hires" style="text-transform: capitalize;" /></span> screen expands this to separate lines; you need to make an assignment against each line.</div>
+    <p>To process a pending <MadCap:variable name="Variables.pc hire" />, you need to:</p>
+    <ul>
+      <li>If necessary, change details of item lines.</li>
+      <li>Confirm any unconfirmed prices. </li>
+      <li>Assign all the items - specify where you will get each item from (for example: assign own asset, fulfil from own <MadCap:variable name="Variables.st stock" />, or <MadCap:variable name="Variables.pc rehire" />).</li>
+    </ul>
+    <div class="process">
+      <h2 class="print">Unconfirmed prices</h2>
+      <p>Unconfirmed prices are highlighted in red.  These could be prices for generic <MadCap:variable name="Variables.st stock" /> items, for which <MadCap:variable name="General.ProductName" /> shows a generic price, or <a href="WDPC0010_Adding_Charges_to_a_Pending_Hire.html">additional charge lines</a>. </p>
+      <p>To confirm the price:</p>
+      <ol>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> to open the line.</li>
+        <li>Enter the price you will charge the customer.</li>
+        <li>
+          <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field">Price Confirmed? </span><MadCap:variable name="Variables.tick" />box.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+      </ol>
+      <h2>Assigning items</h2>
+      <ul>
+        <li>If you will provide one of your own assets:</li>
+      </ul>
+      <ul>
+        <ol>
+          <li>Click the link in the <span class="field">No </span>column.</li>
+          <li>Click the Available Assets tab.</li>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the line for the asset you want to assign to the request line.</li>
+          <li>Select <span class="userinput">Allocate Asset </span>from the Choose Action list and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> returns you to the <span class="function" title="Function:%WPC1301BCXC">Process Pending <MadCap:variable name="Variables.pc hires" style="text-transform: capitalize;" /></span> screen.</p></li>
+        </ol>
+        <li>For Rated or Sale items, if you will supply the item from your <MadCap:variable name="Variables.st stock" />:</li>
+      </ul>
+      <ul>
+        <ol>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the item line.</li>
+          <li>Select <span class="userinput">Fulfil from <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /></span>from the Choose Action list and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+        </ol>
+        <li>Alternatively, if you are using the <a href="WDPC0024_Picking_List.html">Picking List</a>, you can send the item requests to the picking list to be assigned.</li>
+        <li>If you will <MadCap:variable name="Variables.pc rehire" /> the item from a <MadCap:variable name="Variables.pl supplier" />, <a href="WDPC0014_Assigning_a_Rehirer.html">assign the <MadCap:variable name="Variables.pc rehirer" /></a>.</li>
+        <li>If you need to cancel the component assigned to a line:</li>
+      </ul>
+      <ul>
+        <ol>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the item line.</li>
+          <li>Select <span class="userinput">Clear Assignment</span> from the Choose Action list and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+        </ol>
+      </ul>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Setting up re-hire auto-assignment</h2>
+      <p>When you select a pending <MadCap:variable name="Variables.pc hire" />, <MadCap:variable name="General.ProductName" /> will attempt to assign a <MadCap:variable name="Variables.pc rehirer" /> automatically, based on the set up, if there are no assets in the relevant asset group that are not disposed of. If you choose Suggest <MadCap:variable name="Variables.pc rehirer" style="text-transform: capitalize;" />, <MadCap:variable name="General.ProductName" /> uses the same set up rules to propose a <MadCap:variable name="Variables.pc rehirer" />, but will do so even if there are assets that are not disposed of.</p>
+      <p>
+        <MadCap:variable name="General.ProductName" /> looks at the <MadCap:variable name="Variables.pc plant" /> commodity code that is specified for the component on the web <MadCap:variable name="Variables.catalogue" /> <MadCap:variable name="Variables.pc plant" /> hierarchy (<span class="function" title="Function:%WPC2220BCMC"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Hierarchy</span>). If no commodity code is specified, <MadCap:variable name="General.ProductName" /> looks at the parent group, then the parent of that group, until it finds a commodity code. It then looks at the current trading agreement set up against that commodity code in <span class="Module">SRM</span>, and uses the supplier that is set up on that trading agreement as the <MadCap:variable name="Variables.pc rehirer" /> for the component.</p>
+      <p>So, as an example of setting up the rules for assigning <MadCap:variable name="Variables.pc rehirer" />s, suppose you get most of your safety equipment from supplier A, but get high-visibility jackets from supplier B. In <span class="function" title="Function:%WPC2220BCMC"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Hierarchy</span> you have set up group 023 as Safety Equipment and group 0235 as High-Visibility Jackets. In the <span class="Field"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Commodity Code </span>field for group 023, enter a dummy commodity code, say ZZ023; in the <span class="Field"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Commodity Code </span>field for group 0235, enter a different dummy commodity code, say ZZ0235. In <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>, set up a company-level trading agreement (see <a href="WDSRM0014_Trading_Agreements.html">Trading Agreements</a>) for commodity code ZZ023, with a single supplier - supplier A; set up a company-level trading agreement for commodity code ZZ0235, with a single supplier - supplier B.</p>
+    </div>
+  </body>
+</html>

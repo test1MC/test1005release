@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Urgent Reports and Report Queues</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Urgent Reports and Report Queues</h1>
+    <h2>Urgent Reports</h2>
+    <p>
+      <MadCap:variable name="General.ProductName" /> allows you to give users the option to put print requests into an Urgent queue. <MadCap:variable name="General.ProductName" /> will start a separate report process for each submitted request. The new process will process this one request then die. This urgent type should be used carefully as each new process takes up CPU and might have undesirable effects if it were to be overused.</p>
+    <p>We recommend you should reserve Urgent queues for use in emergency only (for example, where you have a number of reports all queued and you need something to run now).</p>
+    <h2>Report Queues</h2>
+    <p>Report Queues give you an alternative way of managing print requests. Report queues can have different production capabilities and performance. Queues are applied to normal (background/foreground) reports and with suitable setup will give you the ability to have urgent queues which may mean the Urgent type is not required. </p>
+    <p>Report Queues are "sticky" - <MadCap:variable name="General.ProductName" /> remembers which queue you select when you run a specific report. The next time you run that report, <MadCap:variable name="General.ProductName" /> will use that queue by default.</p>
+    <div class="configuration">
+      <h2 class="print">Configuration</h2>
+      <p>To make the Urgent option available to the user, give them access to the function <span class="nw">%WSY2130BCRR3</span>.</p>
+      <p>Create report queues using <span class="function" title="Function:%WSY2570BCTA">Report Queues</span> and specify on each user's record which queues they should be allowed to use and their default queue. Report queues are processed by report servers and the setup of report servers is required. If you do not setup any queues then a single unnamed queue will exist as before. </p>
+      <p>For more information about setting up report queues, see <a href="http://www.coins-global.com/cp_root/storage/documents/SY_Report_Queues_and_Agent_Families.pdf">Report Queues</a>.</p>
+    </div>
+  </body>
+</html>

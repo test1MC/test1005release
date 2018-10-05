@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="4287" MadCap:lastWidth="1020">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="OA Designer;Datasets;Topics" />Syuds.Calc</h1>
+        <p><span class="Emphasis">syuds.calc</span> allows you to create a new table with calculated fields in it from other fields in the query.</p>
+        <p>You use <span class="Emphasis">calcTable</span> to set the input query (multiple table) and output table name (e.g. Calc to produce a table called ttCalc)</p>
+        <p>You then run <span class="Emphasis">calc</span> for each field you want to add to ttCalc and pass the following parameters:</p>
+        <p>name, </p>
+        <p>data type, </p>
+        <p>extent, </p>
+        <p>label, </p>
+        <p>format,</p>
+        <p>calc string</p>
+        <p><span class="Field">Calcexec</span> then builds the ttCalc table, adds the fields you defined and runs the query and calculates for each row.</p>
+        <p>Can be very useful for adding extra stuff alongside existing records </p>
+        <p>The ttCalc record is created with rowid fields for each of the tables in the query so you can then join to it in a report query</p>
+        <h2>syuds.calc example</h2>
+        <p>Dataset Query:</p>
+        <p class="Example">FOR EACH jc_job WHERE kco = {kco}</p>
+        <p>Dataset Post Calculation:</p>
+        <p class="Example">method('syuds.calcTable','FOR EACH ttcontract','calc');<br />method('syuds.calc','lastYTD','decimal',0,'Last YTD','','ttcontract.job_costsTD - ttcontract.job_costsTY');<br />method('syuds.calc','lastPTD','decimal',0,'Last PTD','','ttcontract.job_costsTD - ttcontract.job_costsTP');<br />method('syuds.calcexec');</p>
+        <p>Dataset Fields:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_2_1105.png" class="FullWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Output: ttContract</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_4_1105.png" class="FullWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 2: ">Output: ttCalc</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_5.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/syuds_calc_5_1105.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

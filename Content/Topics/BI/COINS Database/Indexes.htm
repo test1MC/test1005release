@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="674" MadCap:lastWidth="602">
+    <head>&#160;</head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Indexes</h1>
+        <p>Databases can take advantage of indexing to increase their speed (Dataset retrieval using queries). The most common kind of index is a sorted list of the contents of some particular table column, with pointers to the row associated with the value. An index allows a set of table rows matching some criterion to be located quickly.</p>
+        <p>The order that columns are listed in the index definition is important. It is possible to retrieve a set of row identifiers using only the first indexed columns. However, it is not possible or efficient (on most databases) to retrieve the set of row identifiers using only the second or greater indexed column.</p>
+        <p>For example, imagine a phone book that is organized by city first, then by last name, and then by first name. If given the city, you can easily extract the list of all phone numbers for that city. However, in this phone book it would be very tedious to find all the phone numbers for a given last name. You would have to look within each city's section for the entries with that last name.</p>
+        <p>Each coins table has one or more Indices. An Index is built up of several fields in a record which in combination will assist the query in narrowing down the number of records which will be read to determine which meet the query requirements.</p>
+        <p>Each Table has a Primary (the index used by default unless you determine otherwise in your query) and a Unique key (the combination of these fields in a single record is always unique).</p>
+        <p>However coins OA will use the most appropriate index for your query.</p>
+        <p>An example of how an index would work is to use the Current Logged in Company (kco) in addition to Contract Number (job_num) to search for a particular Contract. Another would be to use Current Logged in Company (kco) plus Order Type (tip_type) where you would query only where tip_type = "TRADE", the query would immediately know only to search through Subcontract Orders to find orders which matched the other criteria rather than search every single order.</p>
+    </body>
+</html>

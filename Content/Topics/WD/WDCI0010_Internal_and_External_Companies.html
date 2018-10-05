@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Internal and External Companies</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Internal and External Companies</h1>
+        <p>There are two types of entity in <MadCap:variable name="General.ProductName" /> that are sometimes confused: internal companies and external companies.</p>
+        <ul>
+            <li><strong>Internal companies</strong> are the accounting and business entities of your organ<MadCap:variable name="Variables.is" />ation. They are sometimes known as "<MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" />" or "KCOs" (pronounced "kay-koe" and named after the <MadCap:variable name="General.ProductName" /> database record that represents them).&#160; They are used to manage the legal, operating and financial structure of the business. Typically a legal entity which is also a significant operating business is set up as a separate <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />. Financial ledgers, such as the General Ledger and <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />, are managed separately by each <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />.</li>
+            <li><strong>External companies</strong> are companies that you deal with outside your organ<MadCap:variable name="Variables.is" />ation, such as <MadCap:variable name="Variables.pl suppliers" />, subcontractors, and customers (but also companies such as solicitors, financial companies and utility companies).&#160; These are sometimes known as CIW companies (CIW is short for the <MadCap:variable name="General.ProductName" /> Company Information Workbench).</li>
+        </ul>
+        <p><span style="font-size: 1em;">The ways in which these relate can be quite complex:</span>
+        </p>
+        <ul>
+            <li><span data-mce-mark="1">If you are an organ<MadCap:variable name="Variables.is" />ation with many <MadCap:variable name="Variables.kco companies" /> that manage their own supply chains, how do you manage the same <MadCap:variable name="Variables.pl supplier" /> across the different <MadCap:variable name="Variables.kco companies" />?</span>
+            </li>
+            <li><span data-mce-mark="1">If you are trading with a <MadCap:variable name="Variables.pl supplier" /> that has many branches or depots, and several different payment processing <MadCap:variable name="Variables.centres" />, how do you record these different entities and how do you trade with them?</span>
+            </li>
+        </ul>
+        <p><span style="font-size: 1em;" data-mce-mark="1">For example: XYZ Contractor, North Divison may place an Order with ABC Materials Bolton branch, but the Purchase Invoice is issued by the ABC Materials Manchester payment <MadCap:variable name="Variables.centre" />. The XYZ Contractor has a Shared service <MadCap:variable name="Variables.centre" /> that matches the invoice to the order, and pays the invoice out of the Civils &amp; Construction company (which has a North and a South division).</span>
+        </p>
+        <p>
+            <img src="../../Resources/Images/companies_img.bmp" />
+        </p>
+        <p>
+            <STYLE>
+					body{font-size:11px}
+					div.graphic{
+					height: 430px;
+					width: 700px;}
+					div.graphic{
+					position:relative;
+					}
+					div.group{
+					position:absolute;
+					display:run-in;
+					width:200px;
+					min-height:100px;
+					padding:10px;
+					margin:10px
+					}
+					div.group.int{
+					border:solid 1px black;
+					background-color: #53555A;
+					color: #FFFFFF;
+					border-radius: 10px;
+					}
+					div.group.ext{
+					border:none;
+					background-color:transparent;
+					}
+					div.company{
+					border:solid 1px black;
+					background-color: #FFFFFF;
+					border-radius: 10px;
+					width:110%;
+					min-height:50px;padding:10px;margin:10px;
+					color:#97999b;
+					}
+					div.company li{list-style:none;
+					border:solid 1px black;
+					background-color: #F47322;
+					color: #000000;
+					border-radius: 10px;
+					min-height:30px;
+					width: 100%;
+					margin-left:100px;
+					padding:10px;
+					margin:10px
+					}
+					div.ext li{
+					margin-left:-50px;
+					}
+				</STYLE>
+        </p>
+        <p>In <MadCap:variable name="General.ProductName" /> we have the following entities to manage the above:</p>
+        <p><strong>ABC Materials</strong>
+        </p>
+        <p>ABC Materials is an example of a <MadCap:variable name="General.ProductName" /><strong>CIW Company</strong>.</p>
+        <p>ABC Materials has many <strong>offices</strong> – Bolton Branch, Portsmouth Branch, Manchester Payment <MadCap:variable name="Variables.centre" style="text-transform: capitalize;" />, Reading Payment <MadCap:variable name="Variables.centre" style="text-transform: capitalize;" />, Northampton Head Office and potentially many others.</p>
+        <p>Each office has one or more <strong>addresses&#160;</strong>associated with it. Typically there will just be one address for each office, but the Bolton branch could have the Manchester Payment <MadCap:variable name="Variables.centre" style="text-transform: capitalize;" /> as a separate Payment address.</p>
+        <p>For more information, see <a href="WDCI0004_Company_Information_Workbench.html">Company Information Workbench</a>.</p>
+        <p><strong>XYZ Group</strong>
+        </p>
+        <p>An internal <strong><MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /></strong> is created for XYZ Civils &amp; Construction, and for XYZ Developments. These <MadCap:variable name="Variables.kco companies" /> each have their own financial ledgers, including <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />. <MadCap:variable name="General.ProductName" /> can be configured to set up an ABC Materials <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> account ABC001 in both <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" />, and these two PL accounts can both be linked to the ABC Materials CIW offices for Manchester and Reading. &#160;For more information, see <a href="WDCI0006_Ledger_Accounts_and_Companies.html">Ledger Accounts and Companies</a>.</p>
+        <p><MadCap:variable name="General.ProductName" /> can then create different <strong>views</strong> of <MadCap:variable name="Variables.pl suppliers" /> (a view controls which <MadCap:variable name="Variables.pl suppliers" /> are displayed in the browse screen). To manage the example above, two or three separate views could be created: A global database view and a <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> view are mandatory. An additional Divisional View is optional. <MadCap:variable name="General.ProductName" /> Users are set up to have a default "User View". If XYZ Developments does not use&#160;ABC Materials, then ABC Materials would be excluded from the company View for XYZ Developments; the Procurement Manager for XYZ Developments&#160;would not see ABC Materials in his default View. If he amended his view to Global, he would see ABC Materials. He could then add ABC Materials to his Company view if XYZ Developments&#160;planned to purchase materials from ABC Materials. &#160;For more information. see <a href="WDCI0003_User_View.html">User View</a>.</p>
+        <p>In <MadCap:variable name="General.ProductName" />, a <strong>Status Code</strong> is used to say whether the <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> is "approved". There can be different status codes; for example: Unapproved, Approved, Preferred, Partner. Different statuses can be applied to each “View”. So the North Division could say that ABC Materials is "Preferred" and the South Division could set the status as merely "Approved". The Status at comapny level (XYZ Civils &amp; Construction) would be shown as "Approved", and the Group status would also be "Approved", because the lowest status level is propagated by <MadCap:variable name="General.ProductName" /> up the hierarchy. &#160;For more information, see <a href="WDSRM0021_Approval_levels_(Status_codes).html">Approval Levels (Status Codes)</a>.</p>
+    </body>
+</html>

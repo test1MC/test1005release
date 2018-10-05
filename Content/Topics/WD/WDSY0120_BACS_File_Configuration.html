@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="799" MadCap:lastWidth="601">
+    <head><title>[%=Variables.eft%] File Configuration</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print" MadCap:autonum="1 "><MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> File Configuration</h1>
+        <p><MadCap:variable name="General.ProductName" /> provides several standard&#160;<MadCap:variable name="Variables.eft" /> file formats which produce <MadCap:variable name="Variables.eft" /> files according to the requirements of various different banks.&#160; If none of these formats is suitable, you can configure the format of the <MadCap:variable name="Variables.eft" /> output file.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">Configurable <MadCap:variable name="Variables.eft" /> definitions are only available in <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" />, for <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, <span class="module">Subcontract Ledger</span> and <span class="module">Payroll</span> payments (and will work for <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" /><span class="module">Payroll</span>).</div>
+        <div class="process">
+            <h2 class="print" MadCap:autonum="1.1 ">To configure a <MadCap:variable name="Variables.eft" /> file:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSY2800BSFS"><MadCap:variable name="Variables.eft" /> File Definition</span>.
+<p><img src="../../Resources/Images/SY/SY_012001.png" class="FullWidth" /></p><p class="noteheader">NOTE</p><div class="note">You can export and import <MadCap:variable name="Variables.eft" /> file configurations using <span class="function" title="Function:%WSY2053FSFS">Export Document Definitions</span> and <span class="function" title="Function:%WSY2055Fsfs">Import Document Definition</span>.</div></li>
+                <li>Add a new definition record.</li>
+                <ul>
+                    <li>The <MadCap:variable name="Variables.eft" /> file can be:</li>
+                    <ul>
+                        <li>fixed-width (in which fields begins at the same position on each record)</li>
+                        <li>delimited (in which fields are separated by a specific character, such as a comma)</li>
+                        <li>XML</li>
+                    </ul>
+                    <li>The file consists of a body, which contains a line for each transaction, and can also have a header and a footer (which contain the content at the beginning and end of the file).&#160; Specify the codes you want to use for each of these.&#160; These codes are used when setting up the fields, to identify which section each field belongs to.
+<p><img src="../../Resources/Images/SY/SY_012002.png" /></p></li>
+                </ul>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+                <li>On the Fields tab, add records for each field.
+<p><img src="../../Resources/Images/SY/SY_012003.png" class="FullWidth" /></p></li>
+                <ul>
+                    <li>A number of tokens are available (see table below). <MadCap:variable name="General.ProductName" /> will replace the tokens with the appropriate data from the module in which the <MadCap:variable name="Variables.eft" /> file is generated (for example, in <span class="module">Subcontract Ledger</span>, the recipients will be subcontractors, in <span class="module">Expenses</span> the recipients will be employees).</li>
+                    <li>To use other fields that are not available as tokens, enter the field name. &#160;The tables that are available depend on the module:
+<ul><li>All modules: bank, co_bank.</li><li>PR: employee.</li><li>PL: ap_vendor, ap_invoice, ap_pay, ap_check.</li><li>SC: sc_mast, sc_check, sc_pay, sc_certificate.</li><li>LM: pp_person lm_invoice lm_check.</li></ul><p>If you need to include different fields depending on the module, create different file definitions - one for each module&#160;- using the appropriate fields.</p></li>
+                    <li>To use text that is the same every time the file is generated, enter the text in the <span class="field">Text </span>field.</li>
+                    <li>You can use Mappings to convert codes from <MadCap:variable name="General.ProductName" /> to the codes required by the bank.&#160; You can also use calculations to convert and process the data.</li>
+                </ul>
+                <li>XML files can contain blocks of XML code, with tokens inserted using curly brackets { }.
+<p><img src="../../Resources/Images/SY/SY_012004.png" class="FullWidth" /></p>
+To format fields correctly, or concatenate multiple fields, you can include a form in curly brackets { }. For example, the form CreDtTm contains two field tokens, <span class="fieldname">jCreate</span> and <span class="fieldname">cTime</span>.&#160; &#160;
+<p><img src="../../Resources/Images/SY/SY_012005.png" class="FullWidth" /></p>
+These two fields are used on the HEAD form (by specifying {FORM:CreDtTm}), and concatenated to include date and time in the format <em>YYYY-MM-DD</em>T<em>HH:MM:SS</em>.
+<p><img src="../../Resources/Images/SY/SY_012006.png" /></p></li>
+                <li>Enter the code for the <MadCap:variable name="Variables.eft" /> file definition as the value of the <span class="parameter">BACSMED </span>parameter in each module you want to use it in.</li>
+            </ol>
+            <h2 MadCap:autonum="1.2 ">Configurable <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> File Field Tokens</h2>
+            <p>The following field tokens are available:&#160;</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 50%;">
+                            <table class="type1">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">Header / Footer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>iKco</td>
+                                        <td><MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />
+                                        </td>
+                                        <td>Integer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBnk</td>
+                                        <td><MadCap:variable name="General.ProductName" /> bank code</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSector</td>
+                                        <td>Sector from which the payment is made.</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cMod</td>
+                                        <td>Module from which the file is generated</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBacsCur</td>
+                                        <td>Currency from <span class="parameter">CO/BACS-CUR </span>parameter - no longer used.</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBacsApplic</td>
+                                        <td><MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> application text (second entry in <span class="parameter">BACSMED </span>parameter)</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>iBacsUser</td>
+                                        <td>Payer's <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> ID (from <span class="parameter">BACSUSER </span>parameter)</td>
+                                        <td>Integer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBacsName</td>
+                                        <td>Payer's <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /> name (from <span class="parameter">BACSUSER </span>parameter)</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>jProcDate</td>
+                                        <td>Processing date</td>
+                                        <td>Date</td>
+                                    </tr>
+                                    <tr>
+                                        <td>jCreate</td>
+                                        <td>The date the file is created</td>
+                                        <td>Date</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cTime</td>
+                                        <td>The time the file is created</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBacsUser</td>
+                                        <td>&#160;</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSub</td>
+                                        <td>Submission number - entered at runtime</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cNarr</td>
+                                        <td>Bank statement narrative - entered at runtime</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cPWD</td>
+                                        <td>Password - entered at runtime</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dBacsTot</td>
+                                        <td>Total value of <MadCap:variable name="Variables.eft" /> transactions in the file</td>
+                                        <td>Decimal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>iBacsCnt</td>
+                                        <td>Number of transactions in the file</td>
+                                        <td>Integer</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&#160;</p>
+                            <p class="noteheader">NOTE</p>
+                            <div class="note">Although the tokens are grouped as "Body" or "Header / Footer",&#160;all tokens can be used on all form types: all header/footer details are available on the body lines; the details from the first body line are available on the header, and the details from the last body line are available on the footer.</div>
+                        </td>
+                        <td style="width: 50%;">
+                            <table class="type1">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">Body</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>cNum</td>
+                                        <td>Recipient's code</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cName</td>
+                                        <td>Recipient's name</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupAdd</td>
+                                        <td>Recipient's address (4 lines)</td>
+                                        <td>Character, extent 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupPcode</td>
+                                        <td>Recipient's <MadCap:variable name="Variables.postal code" /></td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupBankName</td>
+                                        <td>Recipient's bank account name</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupBranchname</td>
+                                        <td>Recipient's bank branch</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupBAdd</td>
+                                        <td>Recipient's bank address (4 lines)</td>
+                                        <td>Character, extent 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupBPostcode</td>
+                                        <td>Recipient's bank <MadCap:variable name="Variables.postal code" /></td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cPayeen</td>
+                                        <td>Recipient's payee name</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSortcode</td>
+                                        <td>Recipient's bank <MadCap:variable name="Variables.sort code" /></td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBaccno</td>
+                                        <td>Recipient's bank account number</td>
+                                        <td>Character, format "X(8)"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSocac or cRollno</td>
+                                        <td>Recipient's <MadCap:variable name="Variables.society roll number" /></td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cIBAN</td>
+                                        <td>Recipient's IBAN number</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSWIFT</td>
+                                        <td>Recipient's Swift code</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBnk_sort</td>
+                                        <td>Paying bank <MadCap:variable name="Variables.sort code" /></td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cBnk_acno</td>
+                                        <td>Paying bank account number</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cCoc_name</td>
+                                        <td>Paying <MadCap:variable name="Variables.kco company" /> name</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dNetPay</td>
+                                        <td>Net payment</td>
+                                        <td>Decimal, format "zzz,zz9.99-"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cChqRef</td>
+                                        <td>Transaction reference</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cOurBankname</td>
+                                        <td>Payer's bank name</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cOurBranchname</td>
+                                        <td>Payer's bank branch</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cOurSortcode</td>
+                                        <td>Payer's bank <MadCap:variable name="Variables.sort code" /></td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cOurAccno</td>
+                                        <td>Payer's bank account number</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cOurAccname</td>
+                                        <td>Payer's bank account name</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cCurrency</td>
+                                        <td>Payment currency code</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupCurrency</td>
+                                        <td>Recipient's account currency</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cSupCountry</td>
+                                        <td>Recipient's country code</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cCoc_vatregno</td>
+                                        <td>Payer's <MadCap:variable name="Variables.vat" /> registration number</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cCheckingSavings</td>
+                                        <td>&#160;</td>
+                                        <td>Character</td>
+                                    </tr>
+                                    <tr>
+                                        <td>lPrenote</td>
+                                        <td>Notification that this line is a pre-notification of payment - used in US</td>
+                                        <td>Logical</td>
+                                    </tr>
+                                    <tr>
+                                        <td>lBalanceEntry</td>
+                                        <td>Used in US.</td>
+                                        <td>Logical</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cStd18Fld7</td>
+                                        <td>For UK <span class="module">Payroll</span> this is the RTI tag once RTI is in use. Otherwise it evaluates to "0000".</td>
+                                        <td>Logical</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cEndToEndID</td>
+                                        <td>A unique number to identify the transaction (like a line number); required by SEPA.</td>
+                                        <td>Character</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="configuration">
+            <h2 class="print" MadCap:autonum="1.3 " />
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_bacsmed.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_BACSMED.htm" />
+                    <MadCap:relatedTopic src="../Parameters/P0/p0_bacsmed.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Reviewing Messages</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Reviewing Messages</h1>
+        <p>The message review feature allows you to review faxes, emails and SMS messages generated from <MadCap:variable name="General.ProductName" /> before they are sent, and delete them if you do not want to send them.&#160; If the message review feature is turned on, messages that are sent from a function that generates emails, faxes or SMS messages (for example: <span class="function" title="Function:%WSC1980EMAIL">Email Certificates</span>, <span class="function" title="Function:%WPL1992BCOB">Print <MadCap:variable name="Variables.eft" /> Remittances</span> or a mail merge function) will be automatically placed on a queue awaiting review.&#160;</p>
+        <p>If you are emailing or faxing reports or documents, you can choose whether to review them by <MadCap:variable name="Variables.tick" />ing or un<MadCap:variable name="Variables.tick" />ing the <span class="field">Review </span>box on the Output Options screen.</p>
+        <div style="width: 377px;height: 210px;position: relative;">
+            <div style="position: absolute;width: 35mm;height: 5mm;top: 6mm;left: 8mm;border: red 2px solid;">&#160;</div>
+            <img src="../../Resources/Images_S-U/UG_003401.png" />
+        </div>
+        <p>With the <span class="field">Review </span>field <MadCap:variable name="Variables.tick" />ed, when you submit a report job any related outbound email will appear on the My Message tab for review before it is sent. You will see the following message:</p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_013403.png" class="FullWidth" />
+        </p>
+        <p>With the <span class="field">Review </span>field un<MadCap:variable name="Variables.tick" />ed, when the report is generated any related fax or email will be sent immediately and will not be available for review.</p>
+        <div class="process">
+            <h2 class="print">To review faxes, emails and SMS messages:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBCRR">Report Status</span>.</li>
+                <li>Click the <span class="function" title="Function:%WSY5090BSIN">My Messages ({RO_sin_queue})</span> tab.</li>
+                <li>Make sure that the <span class="field">Status </span>selector is set to <span class="userselect">Queue (Queued) </span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/filter.svg" class="button" />.
+<p /><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Screenshot: My Queued Messages Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images/SY/SY_013401.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown><p>This shows any faxes, emails or SMS messages you have sent that need to be reviewed.&#160; Note that the tab title shows the number of messages awaiting review.</p></li>
+                <li>To see the content of the message, click the <img src="../../Resources/Images/COINS Graphics/SVG buttons/mail.svg" class="button" />, <img src="../../Resources/Images/COINS Graphics/SVG buttons/sms.svg" class="button" /> or <img src="../../Resources/Images/COINS Graphics/SVG buttons/enq.svg" class="button" /> button.&#160; The message opens in a new window.&#160; The attachments (such as the PDF or spreadsheet) are available as links.
+<p /><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Screenshot: Message Content</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/Images/SY/SY_013402.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>You can delete any messages you do not want to send.&#160; For example, you may decide to re-generate the messages using different message text or different selection criteria.</li>
+                <li>To approve messages so that they are sent, <a href="WDUG0026_Selecting_Records.html">select</a> the messages, choose <span class="userselect">Release </span>from the Choose Action list, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+            </ol>
+            <p>You can view messages that you have reviewed but which have not yet been sent (or - for faxes - which are waiting for confirmation of delivery) by changing the <span class="field">Status </span>selector.</p>
+            <h2>To view other users' messages and messages that have been sent:</h2>
+            <p><span class="function" title="Function:%WSY5050BSIN">ESB Outbound Messages</span> shows SMS, XML, fax&#160;and email messages that have been sent from <MadCap:variable name="General.ProductName" />.</p>
+            <p>The <span style="color: #000000;"><span class="field">Status </span>selector allows you you to show:</span></p>
+            <ul>
+                <li>Queued messages that are waiting to be reviewed by the user.&#160; These will show on the user's <span class="function" title="Function:%WSY5090BSIN">My Messages ({RO_sin_queue})</span> tab in <span class="function" title="Function:%WSYBCRR">Report Status</span>.&#160; </li>
+                <li>New (Unsent) messages which have been released by the user,&#160;and are waiting to be sent.&#160; If the send process is running, messages will only appear very briefly before being sent and moved on to the Done status.&#160;</li>
+                <li>Sent (Unconfirmed) messages, which are ESB/XML messages (not emails or SMS) that require a confirmation message from the intended recipient.&#160; They&#160;remain at&#160;the Sent (Unconfirmed) status until that confirmation is received.</li>
+                <li>Done (Complete).&#160; Messages that have been sent (and for which confirmation has been received, if required).</li>
+            </ul>
+        </div>
+        <div class="configuration">
+            <h2>To set up the ESB broker:</h2>
+            <ol>
+                <li>Run COINSadmin &gt; Environments &gt; Setup Environments &gt; Select the environment&#160;&#160; 
+<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Screenshot:&#160;COINSadmin Environment Setup Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><img src="../../Resources/Images/SY/SY_013404.png" /></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>On the screen above, set the <span class="field">ESB Broker </span>value to <span class="userinput">Y</span> and the <span class="field">Poll</span> value to <span class="userinput">10</span> (seconds)</li>
+                <li>Press <span class="key">F1</span> to save the options and then <span class="key">F1</span> again to return to the menu. </li>
+                <li>Run the <span class="userselect">Generate Scripts </span>option. Running this option causes the following line to be added to the broker-start_ALL.sh script (and consequently causes the new ESB broker process to start when the db brokers are started). 
+<div style="FONT-SIZE: 80%;" class="code">/u/coins/two/bin/esbbroker_start.sh&#160;&gt;/u/coins/two/var/diag/ESBBroker.log &amp;2&gt;1 &amp;</div></li>
+                <li>To initiate all the changes you have made up to now you will need to stop and re-start the webspeed agents and db brokers or alternatively leave this to be done automatically overnight.<br /></li>
+            </ol>
+            <p>You can set an individual user's review preference (whether the <span class="field">Review </span><MadCap:variable name="Variables.tick" />box is <MadCap:variable name="Variables.tick" />ed or not) using <span class="function" title="Function:%WSYBSUR">Users</span>, or the user can set their own preference using <span class="function" title="Function:%WSY2590SSUR">User Preferences</span>.&#160; The user can <MadCap:variable name="Variables.tick" /> or un<MadCap:variable name="Variables.tick" /> the box for individual reports.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_wfmtxn.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_msgrev.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

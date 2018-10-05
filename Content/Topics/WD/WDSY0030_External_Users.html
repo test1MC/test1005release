@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>External Users</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">External Users</h1>
+    <p>In addition to the password security, you can also provide different security according to where the users log in from.  This allows you, for example, to grant limited access to people logging in to <MadCap:variable name="General.ProductName" /> from outside your organ<MadCap:variable name="Variables.is" />ation.</p>
+    <p>You specify which IP address or addresses are counted as internal addresses; if anyone logs in from a different IP address they are deemed to be an external user. </p>
+    <p>External users will only be allowed to log in to <MadCap:variable name="General.ProductName" /> if the <span class="field">Extranet User </span>field on the user record is <MadCap:variable name="Variables.tick" />ed.  This prevents someone being able to log in to <MadCap:variable name="General.ProductName" /> from outside by guessing the user ID and password of an internal user.</p>
+    <p>In addition, you can specify, for each user ID, the IP addresses from which they are allowed to log in.  This means that, for example, you could specify the router address of the company from at which a user works.  This applies to internal users as well as external users.</p>
+    <p>For additional control over the access of external users, you can set up a dummy user which you set security against; the security settings for this user will be applied to all external users.  In order for an external user to be able to run a function, both the actual user ID and the dummy user ID must have access to that function.</p>
+    <div class="configuration">
+      <h2 class="print">External users - configuration</h2>
+      <p>Create a dummy user record and give it the access permissions you want to give external users.  Enter the user ID of this record in the <span class="parameter">SY/EXTUSER </span>parameter.</p>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDSY0124_Implement_External_User_Security.html" />
+        </MadCap:relatedTopics>
+      </p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_intips.htm" />
+          <MadCap:relatedTopic src="../Parameters/SY/sy_extuser.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

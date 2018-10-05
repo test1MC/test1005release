@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Assigning a <MadCap:variable name="Variables.pc rehirer" style="text-transform: capitalize;" /></title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Assigning a <MadCap:variable name="Variables.pc rehirer" style="text-transform: capitalize;" /></h1>
+    <p>If you need to get the get the item from someone else as a <MadCap:variable name="Variables.pc rehire" /> (this includes selling items on), <MadCap:variable name="General.ProductName" /> may assign a <MadCap:variable name="Variables.pc rehirer" /> automatically for assets you do not supply.  If you do supply the asset but you have none available, you can get <MadCap:variable name="General.ProductName" /> to suggest a <MadCap:variable name="Variables.pc rehirer" />, or assign one manually.</p>
+    <div class="process">
+      <h2 class="print">To get <MadCap:variable name="General.ProductName" /> to suggest a <MadCap:variable name="Variables.pc rehirer" />:</h2>
+      <ol>
+        <li>
+          <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the main item line or lines. (You can only "suggest a <MadCap:variable name="Variables.pc rehirer" />" for main item lines; <MadCap:variable name="General.ProductName" /> will fill in the same <MadCap:variable name="Variables.pl supplier" /> for any associated items.)</li>
+        <li>Select <span class="userinput">Suggest <MadCap:variable name="Variables.pc rehirer" /></span> from the Choose Action list and click <img src="../../Resources/Images/COINS Graphics/Icons 1105/actiongo.svg" class="button" />.</li>
+      </ol>
+      <h2>To assign a <MadCap:variable name="Variables.pc rehirer" /> manually:</h2>
+      <ol>
+        <ol>
+          <li>Click the link in the <span class="field">No </span>column.</li>
+          <li>Click the <MadCap:variable name="Variables.pc rehire" /> tab.</li>
+          <li>Click <img src="../../Resources/Images/COINS Graphics/Icons 1105/open.svg" class="button" />.</li>
+          <li>Enter the <MadCap:variable name="Variables.pc rehire" /> company and office, or use the lookup.</li>
+          <li>Click <img src="../../Resources/Images/COINS Graphics/Icons 1105/save.svg" class="button" />.</li>
+        </ol>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">If you assign a <MadCap:variable name="Variables.pc rehirer" /> manually and then use <span class="userinput">Suggest <MadCap:variable name="Variables.pc rehirer" style="text-transform: capitalize;" /></span>, <MadCap:variable name="General.ProductName" /> will not over-write the manually assigned <MadCap:variable name="Variables.pc rehirer" />. If you use <span class="userinput">Suggest <MadCap:variable name="Variables.pc rehirer" style="text-transform: capitalize;" /></span>first, you can then manually reassign the rehirers for individual lines.</div>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Setting up <MadCap:variable name="Variables.pc rehire" /> auto-assignment</h2>
+      <p>You need to be licensed for <span class="module">SRM </span>in order to use the auto-assignment feature.</p>
+      <p>When you select a pending <MadCap:variable name="Variables.pc hire" />, <MadCap:variable name="General.ProductName" /> will attempt to assign a <MadCap:variable name="Variables.pc rehirer" /> automatically, based on the set up, if there are no assets in the relevant asset group that are not disposed of.  If you choose Suggest <MadCap:variable name="Variables.pc rehirer" />, <MadCap:variable name="General.ProductName" /> uses the same set up rules to propose a <MadCap:variable name="Variables.pc rehirer" />, but will do so even if there are assets that are not disposed of.</p>
+      <p>
+        <MadCap:variable name="General.ProductName" /> looks at the <MadCap:variable name="Variables.pc plant" /> commodity code that is specified for the component on the web <MadCap:variable name="Variables.catalogue" /> <MadCap:variable name="Variables.pc plant" /> hierarchy (<span class="function" title="Function:%WPC2220BCMC"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Hierarchy</span>).  If no commodity code is specified, <MadCap:variable name="General.ProductName" /> looks at the parent group, then the parent of that group, until it finds a commodity code.  It then looks at the current trading agreement set up against that commodity code in <span class="module">SRM</span>, and uses the <MadCap:variable name="Variables.pl supplier" /> that is set up on that trading agreement as the <MadCap:variable name="Variables.pc rehirer" /> for the component. </p>
+      <p>So, as an example of setting up the rules for assigning a <MadCap:variable name="Variables.pc rehirer" />, suppose you get most of your safety equipment from <MadCap:variable name="Variables.pl supplier" /> A, but get high-visibility jackets from <MadCap:variable name="Variables.pl supplier" /> B.  In <span class="function" title="Function:%WPC2220BCMC"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Hierarchy</span> you have set up group 023 as Safety Equipment and group 0235 as High-Visibility Jackets.  In the <span class="field"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Commodity Code </span>field for group 023, enter a dummy commodity code, say ZZ023; in the <span class="field"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Commodity Code </span>field for group 0235, enter a different dummy commodity code, say ZZ0235.  In <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>, set up a <MadCap:variable name="Variables.kco company" />-level trading agreement (see <a href="WDSRM0014_Trading_Agreements.html">Trading Agreements</a>) for commodity code ZZ023, with a single <MadCap:variable name="Variables.pl supplier" /> - <MadCap:variable name="Variables.pl supplier" /> A; set up a <MadCap:variable name="Variables.kco company" />-level trading agreement for commodity code ZZ0235, with a single <MadCap:variable name="Variables.pl supplier" /> - <MadCap:variable name="Variables.pl supplier" /> B. </p>
+    </div>
+  </body>
+</html>

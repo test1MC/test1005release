@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Irish RCTDC Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Irish RCTDC Documents</h1>
+    <p>The RCTDC is an Irish tax document.  It can be used to produce a substitute form, which must be completed and signed by the contractor and issued to the subcontractor with payment.  The form relates to subcontractor payments made through both the <span class="module">Subcontract Ledger </span>and <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">Irish Revenue has stated that computer substitute forms must "<em>be reproduced with the same details and printed on paper of the same or similar quality as that used by the company on their headed notepaper</em>" and a sample must be submitted for approval.  The company name and logo should be reproduced at the top or bottom of the form. </div>
+    <p>RCTDC documents can be printed using the <span class="userinput">Print RCTDCs </span>action on the following screens: <span class="function" title="Function:%WSC1120BCOB">Payment Batches</span>, <span class="function" title="Function:%WSC1090BCOB">Manual Payment Entry</span>, <span class="function" title="Function:%WPL1120BCOB">Payment Batches</span>, <span class="function" title="Function:%WPL1050BCOB">Manual Payments</span>.  It will not be possible to print RCTDCs if there are insufficient RCTDC numbers available.   Printing RCTDCs will assign a number to the <MadCap:variable name="Variables.cheque" /> and increment the next number in the block.</p>
+    <p>If a <MadCap:variable name="Variables.cheque" /> that has an RCTDC associated with it is <MadCap:variable name="Variables.cancelled" />, you will be given a warning to contact your Local Tax District to advise that the <MadCap:variable name="Variables.cheque" /> has been <MadCap:variable name="Variables.cancelled" />.<br /></p>
+    <div class="process">
+      <h2 class="print">To configure an Irish RCTDC document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>. </li>
+        <li>Use the <span class="userinput">RCTDC (SC)</span> document type.  <MadCap:variable name="General.ProductName" /> provides a standard template RCTDC document, %SCRCTDC, which you can use as a starting point. </li>
+        <li>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </li>
+        <li>The following tables are available: sc_mast, sc_voucher, co_config.</li>
+        <li>All the configuration for the RCTDC can be done in the HEAD form.    </li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Configuration</h2>
+      <ol>
+        <li>Set <span class="parameter">SCIRE/RCTDCPRC </span>to <span class="userinput">Y</span>.</li>
+        <li>Set up the tax groupings for <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" /> using <span class="function" title="Function:%WCO2060BTGR">Tax Groups</span>.  These should be kept in sync with the <MadCap:variable name="Variables.kco companies" /> listed in <span class="parameter">SCIRE/LINKTAX</span>.</li>
+        <li>Record the RCTDC numbers from the Revenue using <span class="function" title="Function:%WSC2150BSCB">RCTDC Number Blocks</span>.   Set the parameter <span class="parameter">SCIRE/RCTDCWRN </span>to the level at which you want to receive warnings.</li>
+        <li>Fields to record whether the subcontractor is an individual or a partnership, and the date of birth or the partnership reference number, are available in <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span>.</li>
+        <li>The parameter <span class="parameter">SCIRE/REGNO </span>must also be populated in each <MadCap:variable name="Variables.kco company" /> with the tax registration number for that <MadCap:variable name="Variables.kco company" />, as this is printed on the RCTDC document.</li>
+      </ol>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SCIRE/SCIRE_REGNO.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="686" MadCap:lastWidth="600">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" /><a name="_Ref290291119"></a><a name="_Toc450312892"></a>Import of Workflow Emails</h1>
+        <p class="Body">Import of workflow emails can be done using either a mailbox or a public folder. </p>
+        <h2 MadCap:autonum="1.1">Using a Mailbox</h2>
+        <p class="Body">Using a mailbox to import workflow emails is the preferred method.</p>
+        <ol>
+            <li>Set up an email account for the inbound workflow emails.</li>
+            <li>Set the <span class="parameter">SY/WFETO</span> parameter to this email address.</li>
+            <li>Set the WorkflowMailBox parameter in the replication software settings file to this email address. </li>
+        </ol>
+        <p class="Body">The user account running the replication software needs access to the workflow mailbox if these accounts are different.</p>
+        <h2 MadCap:autonum="1.2">Using a Public Folder</h2>
+        <p class="Body">A new public folder should be created for this purpose.&#160; The folder needs to be given an email address and this address needs to be stored in the <span class="parameter">SY/WFETO</span> parameter as described in section <MadCap:xref href="Import of Workflow Emails.htm#_Ref290285402">1, Import of Workflow Emails</MadCap:xref>.</p>
+        <p class="Body">The replication account should be given permission level of at least “Editor” on the workflow folder. </p>
+        <p class="Body">The Default permissions should be set to “Reviewer” or lower.</p>
+        <p class="screenshot">
+            <img src="../../../Images/SY/SYS-Exchange-Server-2013-Integration/Public Folder Permissions - Reviewer Editor None.png" style="visibility: visible;mso-wrap-style: square;width: 311px;height: 109px;" />
+        </p>
+    </body>
+</html>

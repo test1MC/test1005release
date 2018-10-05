@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="2670" MadCap:lastWidth="474" MadCap:searchable="False">
+    <head>&#160;</head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Expense Types</h1>
+        <p>Expense types are records that define how different types of expense claim item are treated: for example, how they are costed and what information is required.</p>
+        <p>To add a new expense type</p>
+        <ol class="ListNumber3">
+            <li>Open <span class="Function">Expense Types</span>.</li>
+            <li>Right-click the list and click <span class="Field">Add New</span>.</li>
+            <li class="CAS_tab">On the <span class="CAS_tab">Details</span> tab, fill in the information as follows:</li>
+            <li class="Continue">
+                <table style="width: 100%;">
+                    <col style="width: 182px;" />
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td>Company</td>
+                            <td>The <MadCap:variable name="General.ProductName" />&#160;company that this expense type is used in (expense types are specific to a single company).</td>
+                        </tr>
+                        <tr>
+                            <td>Apply Validation To Type</td>
+                            <td>
+                                <p>This determines the fields that are required when entering the amount of the claim and how they are validated.</p>
+                                <ul style="list-style-type: circle;">
+                                    <li class="FiftyPercentMaxWidth">Limit. Users enter an amount, which is validated against a limit, such as a maximum value.</li>
+                                    <li class="FiftyPercentMaxWidth">Rate. Users enter a number of units; the rate per unit is set on the policy. This is used for expenses such as mileage which is paid at a fixed rate.</li>
+                                    <li class="FiftyPercentMaxWidth">Per Unit. Users enter a number of units and a rate per unit; the policy has a limit per unit. This is used for expenses such as hotel accommodation (where the units are the number of nights and the rate is the cost per night).</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Parent Type</td>
+                            <td>
+                                <p>You can group related expense types together as children of a parent expense type. For example, a "public transport" parent expense type might have children "train", "bus" and "plane". When the user selects the expense type, children of the same parent are shown together, below the parent.</p>
+                                <p>To make the current expense type a parent, leave this field blank.</p>
+                                <p>To make the current expense type a child, enter the name of the parent type.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Type Name</td>
+                            <td>The name of the expense type.</td>
+                        </tr>
+                        <tr>
+                            <td>Label Used for Amount</td>
+                            <td>The label that is displayed for the amount field.</td>
+                        </tr>
+                        <tr>
+                            <td>Label Used for Rate/Unit</td>
+                            <td>If the expense type is a Rate or Per Unit type, this is the label that is displayed for the rate per unit field.</td>
+                        </tr>
+                        <tr>
+                            <td>Show Odometer controls and map link</td>
+                            <td>If the expense type is a Rate type, you can allow users to calculate the mileage by entering the start and end odometer readings, or by plotting the distance on a map. To make these features available, <MadCap:variable name="Variables.tick" /> this box.</td>
+                        </tr>
+                        <tr>
+                            <td>General Ledger Code</td>
+                            <td>The General Ledger code that this expense will be costed to (when it is costed to the General Ledger).</td>
+                        </tr>
+                        <tr>
+                            <td>Contract <MadCap:variable name="Variables.Cost Head caps" /></td>
+                            <td>The contract cost head that this expense will be costed to (when it is costed to a contract).</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Tax Code</p>
+                            </td>
+                            <td>The tax code that applies to this expense type.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>Click <span class="Button">Save</span> to save your changes.</li>
+        </ol>
+    </body>
+</html>

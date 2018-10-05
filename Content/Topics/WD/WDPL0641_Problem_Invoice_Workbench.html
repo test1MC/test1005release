@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Problem Invoice Workbench</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Problem Invoice Workbench</h1>
+        <p>The Problem Invoice Workbench helps site, buying and accounts staff to identify and deal with "problem" invoices.&#160; A "problem" invoice is one that is flagged with one of the various query status codes defined in <MadCap:variable name="General.ProductName" /> - in other words it is not yet at a point where it can be paid.&#160; For example, the invoice could be on hold (for either financial or commercial reasons) or contain a missing ticket that has not yet been cleared by site.</p>
+        <p>There are different options for dealing with the invoice, depending on the owner and the <a href="WDPL0642_Query_Types.html">query type</a>.&#160; For example, approving the invoice or changing the hold code, or clearing the missing ticket GRN.</p>
+        <p>There are two problem invoice workbenches:</p>
+        <ul>
+            <li><span class="function" title="Function:%WPL9020BAIQ">Problem Invoices</span> gives you access to all "problem" invoices of which you are the owner.&#160; Filter options allow you to see invoices you do not own, but you cannot update them.</li>
+            <li><span class="function" title="Function:%WPL9021BAIQ">Problem Invoices (Accounts)</span> shows, and allows you to update, every "problem" invoice, regardless of who owns it.</li>
+        </ul>
+        <p>The workbenches determine the owner of the invoice based on the query type.&#160; </p>
+        <ol>
+            <li>If the query is a site related query (uncleared missing ticket or delivery/invoice quantity query), <MadCap:variable name="General.ProductName" /> assigns the owner based on the settings in <span class="function" title="Function:%WCI9010BWFE">User Roles</span>.</li>
+            <li>If there are no site queries against an invoice, <MadCap:variable name="General.ProductName" /> then checks for buying queries (problem with price of purchase order items) and assigns the owner based on <span class="function" title="Function:%WCI9010BWFE">User Roles</span>.</li>
+            <li>All other queried invoices are assigned to accounts.&#160; Also, site or buying staff can assign specific invoices to accounts for attention.&#160;</li>
+        </ol>
+        <div class="process">
+            <h2 class="print">To use the Problem Invoice Workbench:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL9020BAIQ">Problem Invoices</span> or <span class="function" title="Function:%WPL9021BAIQ">Problem Invoices (Accounts)</span>.
+<p>This displays posted invoices that have a query type against them.</p></li>
+                <li>Click the link in the <span class="field">Internal Reference</span> column.&#160; (If there is no link, you are not the owner of the invoice.)
+<p><MadCap:variable name="General.ProductName" /> displays the main details of the invoice; to <MadCap:variable name="Variables.enquire" /> on the full details, click the <span class="field">Internal Reference </span>link in the context area.&#160;You may need to look at the Matching tab to see the what the problem with the invoice is.</p></li>
+                <li>Do one of the following (the options available depend on your role and your permissions):</li>
+                <ul>
+                    <li>To amend certain details of the invoice, use the <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> button.</li>
+                    <li>To take the invoice off hold:
+<ol><li>Click the Approve tab.</li><li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />.</li><li>Clear the <span class="field">Invoice on Hold</span><MadCap:variable name="Variables.tick" /> box.</li><li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li></ol></li>
+                </ul>
+                <ul>
+                    <li>To cost a Registered or Provisionally Costed invoice:
+<ol><li>Choose <span class="userinput">Cost Invoice </span>from the Options menu.</li><li>Enter the costing distribution (see <a href="WDPL0213_Distributing_Invoice_Costs.html">Distributing Invoice Costs</a>).</li></ol></li>
+                    <li>To approve an invoice from the site perspective:
+<ol><li>Choose <span class="userinput">Site Approval</span> from the Options menu.
+<p>This approves all the deliveries on the invoice, and takes the invoice off hold if there are no further queries.</p></li></ol></li>
+                    <li>To approve an invoice from the buying perspective:
+<ol><li>Choose <span class="userinput">Buying Approval</span> from the Options menu.
+<p>This takes the invoice off hold, if there are no further queries.</p></li></ol></li>
+                    <li>To assign an invoice to the accounts department:</li>
+                    <ol>
+                        <li>Choose <span class="userinput">Assign to Accounts</span> from the Options menu.</li>
+                        <li>Enter a Note to explain why you are assigning the invoice to the accounts department.</li>
+                        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p>The invoice will still have the same query code, but will appear on the workbench of the person with the ACCOUNTS role for the contract or department to which the invoice relates.</p></li>
+                    </ol>
+                    <li>If the invoice is marked as having Uncleared Missing Tickets, use <span class="function" title="Function:%WPO1810BPGM">Missing Ticket Workbench</span> (see <a href="WDPO0512_Clearing_Missing_Tickets.html">Clearing Missing Tickets</a>) to clear any missing tickets (that is, to confirm that you have received the goods).</li>
+                </ul>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDPL0644_Setup.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

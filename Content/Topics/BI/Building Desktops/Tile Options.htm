@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="2318" MadCap:lastWidth="1169" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><a name="_Toc440873578"></a>Tile Options</h1>
+        <p>Desktop Tile Options allows you to set up alternative behaviour for the links on <MadCap:variable name="General.ProductName" /> Desktop tiles (for example, to open a specific tab or a named filter).&#160; These are then available as options that the user can select when configuring the tile.</p>
+        <p>In effect, this allows you to have the same function, multiple times, on a Desktop with each tile displaying different information.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Tile Options.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Building Desktops/Tile Options_1.png" class="FullWidth" />
+        </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="text-align: center;background-color: #c0c0c0;">
+                    <p>Field</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="text-align: center;background-color: #c0c0c0;">
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Function</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>The function to which the tile option should be made available.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Option</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>The ID of the tile option.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Description</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>A description of the tile option.&#160; This is used as the label for this option in the Options drop-down list on the tile maintenance screen.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Parameters</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>The parameters that should be passed to the link when the tile is selected.</p>
+                    <p>The parameters are a string of values that are set in the URL when the tile is selected.&#160; This may typically be :</p>
+                    <p>initTab to set a tab,</p>
+                    <p> initContainer to set a container tab or </p>
+                    <p>NamedFilter to set the named filter on that function to be used (if available).&#160; This is a comma separated list of the values to be used.</p>
+                    <p>queryFilter to determine the filter type to use (simple or advanced)</p>
+                    <p>queryColumnFilter to set the column that you are filtering on</p>
+                    <p>The parameters may be used either alone or in combination with ‘&amp;’ as the separator (no spaces).</p>
+                    <p>E.g. &amp;queryFilterType=simple&amp;NamedFilter=UnCommittedOrdersOnly,MyOrders</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Security Function</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>An optional security function associated with the option.</p>
+                    <p>Typically this would be used for tabs where the user will only be able to access a tab if the function is available to them and the tile value should therefore also only be available based on this function.&#160; If access is not available to the user then the option will be suppressed.</p>
+                    <p>If blank then the option will be available to all users.</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Build Condition</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>An optional build condition that determines whether the option is available.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

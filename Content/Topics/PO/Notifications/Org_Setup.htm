@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109" MadCap:lastBlockDepth="4" MadCap:lastHeight="950" MadCap:lastWidth="922">
+    <head><title>[%=Document Variables.Document Title%]</title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />eCommerce Organ<MadCap:variable name="Variables.is" />ation Setup</h1>
+        <p>To allow PO notifications to be configured for individual <MadCap:variable name="Variables.pl suppliers" /> or subcontractors, a new PONOTIFY record has been added to <span class="function">Organ<MadCap:variable name="Variables.is" />ation Setup</span>.
+ 
+The settings in this record override the global ones at the <MadCap:variable name="Variables.pl supplier" />, subcontractor or office level.
+</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Organ<MadCap:variable name="Variables.is" />ation Setup Screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/Procurement/PO Notifications/Organisation_Setup.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>The following settings are available:</p>
+        <ul>
+            <li><b>&lt;EnableNotifications&gt;[Y/N]&lt;/EnableNotifications&gt;</b> – enables or disables notifications for the specific company and office. If this is not set, then the value of the <span class="parameter">PO/DEFNTFEX</span> parameter is used.</li>
+            <li><b>&lt;MailTo&gt;[valid email]&lt;/MailTo&gt;</b> – overrides the office email address for notifications.</li>
+            <li><b>&lt;EmailTemplate&gt;[valid PONOTIFY-EXT template]&lt;/EmailTemplate&gt;</b> – specifies a custom email template to use for notifications.</li>
+            <li><b>&lt;AllowUncommit&gt;[Y/N]&lt;AllowUncommit&gt;</b> – allows orders to be uncommited after an email has been sent to the <MadCap:variable name="Variables.pl supplier" /> or subcontractor; default is N.</li>
+            <li><b>&lt;SendPOTypes&gt;[pot_types list]&lt;/SendPOTypes&gt;</b> – a can-do list of Order Types to send notifications for; default is ‘*’</li>
+        </ul>
+    </body>
+</html>

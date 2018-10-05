@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Create and Maintain Lookups</h1>
+        <p>Lookups apply to normal (fill in) fields, and to 'disabled with lookup' fields. Fields for which a lookup has been set up have a lookup button <img src="../../../Resources/Images/COINS Graphics/SVG buttons/disclear.svg" class="icon24px" />next to them; disabled with lookup fields have lookup and clear buttons next to them:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/Lookup_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/Lookup_1_1105.png" class="FullWidth" />
+        </p>
+        <p>The lookup button launches a separate browser, from which the user can select a record. The lookup then returns values to populate one or more fields on the form. If a user adds a new record whilst in a lookup (assuming this is allowed) then when they save the new record it will automatically be selected and returned from the lookup.</p>
+        <p>In Lookup Maintenance, enter a record for the field to provide a lookup for.</p>
+        <p>In the Lookup Function field enter the function to call for lookup. This function is a normal browse/list type page (and could even be say the maintenance function - the maintenance buttons will be retained if access security permits). Links are removed.</p>
+        <p>To provide different lookups for the same field on different functions, enter separate records with the function code in the Function field. If the Function field is blank, <MadCap:variable name="General.ProductName" /> uses this as the default lookup for the field.</p>
+        <p>The inline lookups are built using the existing page for the lookup button but there are two new options you can specify in the parameters of the lookup. quickFields and quickShow.</p>
+        <p>By default the inline lookup uses the same field (keycode/lookupcode) that is used by the lookup page and does a begins on that field. If you need to modify the field to another one or multiple then you can do this with quickFields. This is a comma separated list of field names to be matched when typing in the characters in the fill in. Example is poh_attention where quickFields is set to ppc_name,ppc_surname so the matching is on either of those fields.</p>
+        <p>In the parameter field for the lookup, it is possible to specify the following:</p>
+        <ul>
+            <li>keyfield=field. By default (if you do not specify a keyfield), the lookup will return the value of the field from the lookup record that has the same name as the field you are looking up (that is, the one specified in the Field field in Lookup Maintenance). By specifying a keyfield, you can get the value of a different field. For example, the Field may be avm_factnum, but the keyfield is specified as avm_num.</li>
+            <li>lookupCode=field-list. A list of other fields on the form that you want to populate (with the corresponding values from the keyCode list).</li>
+            <li>keyCode=field-list. A list of other fields in the same table that you want to get values from. If keyCode is blank, the values are taken from the field specified in lookupCode.</li>
+            <li>contextFields=field-list. A list of fields on the current page that are required for the context of the lookup (for example, the supplier code if you are looking up invoices). These will be passed to the lookup program and used in the query. See RO_hrs_desc lookup, which requires the current value of hrg_code from the form to be able to show the appropriate sub groups.</li>
+            <li>quickFields=field-list. A list of fields which the inline lookups will query (For example: quickFields=job_num,job_name - will return the following lookup when entering characters in the lookup field. It currently uses a begins to provide the search. Example will give you any job_num beginning with 10 or any job_name beginning with 10 as a drop down list. A max of 10 entries will be shown and if further information is available on the 11th line of the inline you will see ... If there is an exact match to the entry then the field will be filled in on leaving the field via tab or enter. By partial input the lookup button will reflect this search filter, by not entering any input the lookup filter will be remembered from previous entry.</li>
+            <li>quickShow=field-list. This will provide the fields to be displayed in the inline lookup.These fields can be either database fields or RO fields. It is advisable to keep this list to a minimal number.</li>
+            <li>quickSort=field+. This will predetermine the order the inline information is displayed.</li>
+        </ul>
+    </body>
+</html>

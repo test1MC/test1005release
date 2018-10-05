@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="382" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />FPS&#160;Reporting Changes</h1>
+        <h2 MadCap:autonum="1.1">Start Date Reporting</h2>
+        <p class="Body">For a pension type employee where the <span class="Field">Pension Death Benefit</span> flag is <MadCap:variable name="Variables.tick" />ed and neither the <span class="Field">Flexibly Accessing Pension</span> flag nor the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Serious Ill Health Lump Sum</span> (see <MadCap:xref href="Serious Ill Health Lump Sum.htm">1, <i>Serious Ill Health Lump Sum</i></MadCap:xref>) flags are <MadCap:variable name="Variables.tick" />ed, there is zero annual pension and there is no taxable pay component (in either the overall taxable pay or the pension taxable pay field), then no start date is included on the first FPS. This change applies already in 2016.</p>
+        <h2 MadCap:autonum="1.2">Pay Frequency Reporting</h2>
+        <p class="Body">For a pension type employee where the <span class="Field">Flexibly Accessing Pension</span> flag, the <span class="Field">Pension Death Benefit</span> flag, or the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Serious Ill Health Lump Sum</span> flag is <MadCap:variable name="Variables.tick" />ed, the correct pay frequency to report can be one-off, irregular or annual instead of the normal pay frequency for the payroll the employee is on. In this situation, a new field is available on the Real Time Information layout in <span class="Function">Employee Maintenance</span>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Employee Maintenance Screen</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/PR/PR Employee Maintenance Pay Frequency Field.png" class="FullWidth" MadCap:mediastyle="@media print { height: auto;width: 13cm; }" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Pay Frequency<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The pay frequency to report. The options are:</p>
+                    <ul>
+                        <li>Normal – to be used when part of the pension fund is withdrawn and payments are made each period (this is the default).</li>
+                        <li>One-Off – to be used when the whole pension fund is withdrawn in a single payment.</li>
+                        <li>Irregular – to be used when part of the pension fund is withdrawn and payments are irregular.</li>
+                        <li>Annual – to be used when part of the pension fund is withdrawn and payments are annual.</li>
+                    </ul>
+                    <p>An equivalent change has been made in COINSplus.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

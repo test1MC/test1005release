@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="7" MadCap:lastHeight="844" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Retention on Invoices - </MadCap:conditionalText>Order Entry</h1>
+        <p style="page-break-after: avoid;">If the order type is set up to allow retention to be entered (see <MadCap:xref href="Order Types.htm">1 - Retention on Invoices - Order Types</MadCap:xref>), <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">retention </MadCap:conditionalText>fields are available when entering an order.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Retention on Invoices/Order Entry.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Maximum Retention Type<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether the maximum retention is a value, or a percentage of the order amount.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Maximum Retention Value<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The maximum retention value for the order.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Retention %</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The retention percentage. This defaults from the <span class="field">Retention % (<MadCap:variable name="Variables.Purchase Ledger caps" />)</span> field on the Project Summary record for the <MadCap:variable name="Variables.jc contract" />.</p>
+                </div>
+            </div>
+        </div>
+        <p>If no maximum retention value is entered, it will be calculated automatically when the order is committed, based on the retention percentage and taking into account any additional charges and tax. The new PL parameter <span class="parameter">CALCRET</span> determines whether additional charges and tax are included in the calculation.</p>
+        <p>The retention fields can only be entered or updated while the order is uncommitted.</p>
+        <p>A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>column on the material orders browse shows the maximum retention.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Retention on Invoices/Order Browse.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

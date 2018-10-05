@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Set Up Rebates Types</h1>
+        <p>Rebate Types must be initially set up so that they can be available to developments for calculating claims.</p>
+        <p>
+            <img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>When a Rebate type is set up, a default rate can be entered that will appear on all plots (or it can be left blank to remind the end user that the rebates for a particular plot must be entered).</p>
+        <p>Enter the date range for which the rebate agreement is valid.</p>
+        <p>&#160;</p>
+        <p>Choose <MadCap:variable name="Variables.Sales Ledger caps" /> or <MadCap:variable name="Variables.Contract Sales" /> for your method of invoicing.&#160; Note that if <MadCap:variable name="Variables.Contract Sales" /> is used, the contract for your development must have a sales series created.&#160; If using <MadCap:variable name="Variables.Contract Sales" />, all projects would have a series created for this purpose.&#160; If using <MadCap:variable name="Variables.Sales Ledger caps" />, no series is required.</p>
+        <p>Select the supplier from which the rebate will be claimed.&#160; Note that in order to invoice the supplier, they must also be marked in the <MadCap:variable name="General.ProductName" /> Company Information System as both a supplier and a client, plus be set up with a client account in the <MadCap:variable name="Variables.Sales Ledger caps" />.</p>
+        <p>Select the appropriate Sales <MadCap:variable name="Variables.Vat caps" /> code/rate.</p>
+        <p class="p_5">Rebate Type&#160;&#160;&#160; </p>
+        <p>
+            <img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP_1.png" style="height: 26px;width: 222px;" class="img_1" />
+        </p>
+        <p>The rebate type method determines how the rebate amounts will be calculated and triggered as being ready for claim.&#160; </p>
+        <p>The types are:</p>
+        <p><span class="Strong_1">Fixed Amount</span><span class="span_1"> - The rebate is a fixed set amount per plot based on the rebate value entered on the agreement.&#160; Note the rebate can manually be overridden by plot.</span>
+        </p>
+        <p><span class="Strong_1">House Type</span><span class="span_1"> - The default rebate amount can be setup at standard house type level.&#160; At development level this can then be overridden for each house type used on a site.&#160; If no house type specific rebate amount is setup then the default rebate amount on the agreement will be used.&#160; Note the rebate can manually be overridden by plot.</span>
+        </p>
+        <p><span class="Strong_1">Product Usage</span><span class="span_1"> - The rebate amount is specific to the product installed.&#160; A list of products and their rebate amount can be set up against the rebate agreement.&#160; The product used can then be specified for each standard house type.&#160; At development level the product can then be overridden for each house type used on a site.&#160;&#160; Note the product used can also be manually&#160;overridden by plot.</span>
+        </p>
+        <p><span class="Strong_1">Turnover</span><span class="span_1"> - The rebate amount is related to the spend with the supplier/manufacturer.&#160; The rebate amount is calculated based on a scale charge.&#160; The calculation bands can be set up for each rebate agreement</span><span class="span_1">.&#160; </span>
+        </p>
+        <p class="p_6">The <MadCap:variable name="Variables.tick" />boxes:</p>
+        <p>
+            <img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP_2.png" style="height: 49px;width: 197px;" class="img_1" />
+        </p>
+        <p class="p_6">Are used for turnover rebates, whether the rebate applies to the&#160;increment only.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP_3.png" style="height: 24px;width: 174px;" class="img_1" />
+        </p>
+        <p class="p_7"><span class="span_1"><img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP.gif" style="height: 13px;width: 13px;" alt="http://uksloux039/coins/cplive/20170905141423/skin/v1105/hi/docimage/ticked.gif" class="img_1" /></span><span class="span_1">= The rebate is calculated based on the turnover amount that falls within each band.&#160;</span><span class="span_1"><br /></span><span class="span_1"><br />So for example if you set up bands with maximum values as follows:</span>
+        </p>
+        <table class="table_1">
+            <col style="width: 61pt;" />
+            <col style="width: 86pt;" />
+            <col style="width: 46pt;" />
+            <tbody>
+                <tr>
+                    <td class="td_3">
+                        <p class="p_8">Scale Point</p>
+                    </td>
+                    <td class="td_3">
+                        <p class="p_8">Maximum Value</p>
+                    </td>
+                    <td class="td_3">
+                        <p class="p_9"><span class="span_2">Per</span><span class="span_2">cent</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_4">
+                        <p class="p_10">1</p>
+                    </td>
+                    <td class="td_4">
+                        <p class="p_10">50,000</p>
+                    </td>
+                    <td class="td_4">
+                        <p class="p_10">0.0</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_4">
+                        <p class="p_10">2</p>
+                    </td>
+                    <td class="td_4">
+                        <p class="p_10">100,000</p>
+                    </td>
+                    <td class="td_4">
+                        <p class="p_10">1.0</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_4">
+                        <p class="p_10">3</p>
+                    </td>
+                    <td class="td_4">
+                        <p class="p_10">150,000</p>
+                    </td>
+                    <td class="td_4">
+                        <p class="p_10">1.5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p_11">
+            <br />an amount of <MadCap:variable name="Variables.$" />125,000 would incur a charge of 0.0% on the first <MadCap:variable name="Variables.$" />50,000, then 1.0% on the next <MadCap:variable name="Variables.$" />50,000, and 1.5% on the remaining <MadCap:variable name="Variables.$" />25,000.</p>
+        <ul class="ul_2">
+            <li class="ListParagraph"><span class="span_1">= The rebate is calculated based on the whole value, depending on which band it falls into.</span><span class="span_1"><br /></span><span class="span_1"><br />So for example, using the bands above, <MadCap:variable name="Variables.$" />125,000 would incur a charge of 1.5% of the whole <MadCap:variable name="Variables.$" />125,000.</span>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP_4.png" style="height: 25px;width: 133px;" class="img_1" />
+        </p>
+        <p class="p_12">For turnover rebates, whether to use a percentage when defining the scale bands.</p>
+        <p class="p_13">&#160;</p>
+        <p class="p_7"><span class="span_3"><img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP.gif" style="height: 13px;width: 13px;" alt="http://uksloux039/coins/cplive/20170905141423/skin/v1105/hi/docimage/ticked.gif" class="img_1" /></span><span class="span_3">= Use percentages.&#160; For example, 1.0% for amounts under <MadCap:variable name="Variables.$" />100,000.</span>
+        </p>
+        <p><span class="span_3"><img src="../../../Resources/Images_V-Z/VP/VAP Rebates/Set Up and Processing VAP_1.gif" style="height: 13px;width: 13px;" alt="http://uksloux039/coins/cplive/20170905141423/skin/v1105/hi/docimage/untick.gif" class="img_1" /></span><span class="span_3">= Use point charges.&#160; For example, <MadCap:variable name="Variables.$" />500 for amounts under <MadCap:variable name="Variables.$" />100,000.</span>
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

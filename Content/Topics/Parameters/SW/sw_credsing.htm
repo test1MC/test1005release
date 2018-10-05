@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SW/CREDSING - Credit notes print in Single style</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SW/CREDSING - </span> Credit notes print in Single style
+</div>
+<div class="param_def">
+<p>Whether to print FM credit notes in single style (<span class="userinput">Y</span> or <span class="userinput">N</span>). This means that you get a separate credit note for each FM <MadCap:variable name="Variables.fm job"/> and the invoice lines are at item level.</p>
+<p class="yesnolist"><span class="userinput">Y</span> = There is a credit notes menu under the FM invoicing menu, containing a credit note workbench, generate report, and process and printing utilities. The <span class="function" title="Function:%WFM7003Uswj">Credit Note Generation</span> process takes all SOR items and cost transactions that are negative and have a credit type of 'Credit Note' and creates separate credit notes per FM <MadCap:variable name="Variables.fm job"/> from them. The standard generate invoices process therefore only deals with positive values and items with negative values which have a credit type of 'invoice'.<br /><br />The print uses whatever style (consolidated, major category, cross <MadCap:variable name="Variables.jc contract"/>) is set on the FM <MadCap:variable name="Variables.fm job"/>.</p>
+<p class="yesnolist"><span class="userinput">N</span> = The <span class="function" title="Function:%WFM7001Uswj1">Invoice Generation</span> process deals with both negative and positive valued items and includes them on the same invoice. It is only classed as a credit note where the total invoice amount is negative.</p>
+</div>
+</body>
+</html>

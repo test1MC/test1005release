@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PR/JCSECUSR - Users to apply PR security to in Contract Status</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PR/JCSECUSR - </span> Users to apply PR security to in Contract Status
+</div>
+<div class="param_def">
+<p>A can-do list of user IDs to apply <SPAN class="module">Payroll</SPAN> security restrictions to on <SPAN class="module"><MadCap:variable name="Variables.JC Contract caps"/> Status</SPAN> cost transaction records.  This allows you to hide employee information on <MadCap:variable name="Variables.jc contract"/> cost transactions from users who should not be able to see them.</p>
+<P>If the user is in the <SPAN class="parameter">JCSECUSR </SPAN>list and has access to the employee record, then the employee number, description and composite description fields are displayed as normal.</P>
+<P>If the user is in the <SPAN class="parameter">JCSECUSR </SPAN>list but does not have access to the employee, they can still see the transactions, but the employee number is blanked out, and the description and composite description are replaced by the text "Payroll <SPAN class="prnotUSAUS greenc">timesheet</SPAN><SPAN class="prUSAUS orangec">timecard</SPAN>".</P>
+<P>This means that you can avoid the overhead of checking employee security for users if it is not relevant. Note that if the user is not in the <SPAN class="parameter">JCSECUSR </SPAN>list (or <SPAN class="parameter">JCSECUSR </SPAN>is blank), and the user had access to the cost transaction records, the employee details would be displayed as normal. </P>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../pr/pr_security.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

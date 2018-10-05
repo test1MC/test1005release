@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('..\..\..\Resources\MasterPages\OtherTopics.flmsp');" MadCap:lastBlockDepth="2" MadCap:lastHeight="5946" MadCap:lastWidth="1305" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Get/Set</h1>
+        <p>Unlike the previous services, Get/Set services do not require functions or pages to be set up as their operation is pre-defined.&#160; As suggested by the name, the purpose of a Get/Set service is to retrieve a specific record and set values within it.&#160; Get/Set cannot be used to add records, only retrieve/amend existing ones.</p>
+        <p>From the <MadCap:variable name="General.ProductName" /> Services Menu, select the SY – System hyperlink.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set.png" style="left: 0;" class="FullWidth" />
+            <br />Locate the SYESB007 – Field Get/Set entry </p>
+        <p>Select the hyperlink to view the service schema.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_1.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_2.png" style="left: 0;" class="FullWidth" />
+            <br />Create a new soapUI project and, from the service schema, copy the WSDL shortcut link into the initial WSDL field.</p>
+        <p>Click OK</p>
+        <p>Once the project has been created, run Request1 in the editor.</p>
+        <p>Replace the Input message in the editor with the simplified version from the Input Message Schema</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_3.png" class="FullWidth" />
+        </p>
+        <p>Enter the hostname, Environment and username/password detail.</p>
+        <p>Delete the lines for Group, extUser and extAuth</p>
+        <p>In the Body section of the Input Message, the first entries are:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_4.png" class="FullWidth" />
+        </p>
+        <p>These allow you to specify the table the record will come from and the fields that will be returned in the Output Message.&#160; The get statement is a comma separated list of fields.</p>
+        <p>The next lines relate to the criteria which will identify the record to be retrieved.&#160; The entries require the name of the key field and the value to be used to identify the record.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_5.png" class="FullWidth" />
+        </p>
+        <p>If there is more than one key field which identifies a record, you will need to copy the Criteria block for each required field.&#160; For example, for a table with two key fields:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_6.png" class="FullWidth" />
+        </p>
+        <p>Finally, the Set block of lines allow you to specify the field to be changed and the value to which is should be set.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_7.png" class="FullWidth" />
+        </p>
+        <p>As with the Criteria block, if more than one field is to be changed, there should be a block of set lines for each field.</p>
+        <p>In the following example, a supplier record in the ap_vendor table will be retrieved and the remarks field in the supplier record will be updated.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_8.png" class="FullWidth" />
+        </p>
+        <p>Sending this message should produce the following return with the Output message showing the three fields we requested in the get entry of the Input Message.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_9.png" class="FullWidth" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Remember that leaving the Test Message entry set to “true” will process the messages but will not apply the changes to the database.&#160; The test message must be set to “false” for database changes to occur.&#160; </p>
+        <p>If the database change is successful our example will have the following effect on the supplier record:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Get Set_10.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

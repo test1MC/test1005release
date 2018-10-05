@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Access to Mandatory Functions</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Access to Mandatory Functions</h1>
+        <p class="new">Certain functions are required by all users in order to run <MadCap:variable name="General.ProductName" /> standard features of <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" />.&#160; These functions have been given a role type of SYS; for example <span class="function" title="Function:%WHS1150SHSA">Activity Workbench</span> and its children, and&#160;<span class="function" title="Function:%WPL1006BCIM">Companies</span>.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note"><span class="new">If you are using <a href="WDSY0138_Menu_Item_Security.html">Menu Item Security</a>, a mandatory group as explained here is not needed; users automatically have access to all functions that have a role type of SYS.</span>
+        </div>
+        <p>Rather than granting access to a predefined list of %W functions that are needed to enable access to these standard features, it is possible to grant this access by setting up a group that has a Role Type entry of <span class="userinput">SYS,</span> as shown below: </p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_013501.png" />
+        </p>
+        <p>You can either enter <span class="userinput">*:SYS </span>to give access to all functions with the role type SYS, or specify individual module(s); for example: <span class="userinput">PL:SYS,SY:SYS</span>.</p>
+        <p>The list of functions included is defined by <MadCap:variable name="General.ProductName" />. If <MadCap:variable name="General.ProductName" /> introduces new features into standard product that all users should have, then these will be included in the&#160;Role Type of SYS.<br /></p>
+        <div class="configuration">
+            <h2 class="print">List of Mandatory Functions</h2>
+            <p>To get a list of all functions with Role Type = SYS, set the advanced filter in <span class="function" title="Function:%WSYBMSF">Function Maintenance</span> to Module: SY and Role Type: SYS.</p>
+        </div>
+    </body>
+</html>

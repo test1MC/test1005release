@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Inter-Divisional Postings</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Inter-Divisional Postings</h1>
+        <p>If <MadCap:variable name="General.ProductName" /> is set up to use inter-divisional accounts, then when a <span class="module">General Ledger</span> batch has postings that cross between sectors, and there is an imbalance (in double-entry terms) within each sector, <MadCap:variable name="General.ProductName" /> will automatically create additional balancing entries in an inter-divisional account in each sector.&#160; This means that each sector will always have a self-contained trial balance.&#160; This is an optional feature of using sectors. </p>
+        <p>If inter-divisional postings are used <strong>without</strong> sector<MadCap:variable name="Variables.is" />ed balance sheets, each sector will have its own balance sheet with an inter-divisional account.&#160; One sector will normally contain all the control accounts, with an inter-divisional balance representing transactions processed on behalf of all the other sectors. </p>
+        <p>For example:</p>
+        <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">&#160;</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Account </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">DR </p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">CR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Materials cost of <MadCap:variable name="Variables.$" />100 incurred in division 03 </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">03.1213 </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">100.00 </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1" />
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Corresponding entry in PL control account (division 00)</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">00.7800&#160; </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" />
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">100.00</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Balancing transactions to the inter-divisional control accounts</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">03.6D00</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1" />
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">100.00</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Balancing transactions to the inter-divisional control accounts</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">00.6D00 </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">100.00 </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1" />
+                </tr>
+            </tbody>
+        </table>
+        <p>If inter-divisional postings are used <strong>with</strong> sector<MadCap:variable name="Variables.is" />ed balance sheets, each sector will have its own self-balancing trial balance, including its own share of the control accounts.&#160; The inter-divisional accounts will only be used for other transactions which cross between sectors.&#160; This also sector<MadCap:variable name="Variables.is" />es the retained earnings at each year-end.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDGL0022_Sectorised_Balance_Sheets.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="configuration">
+            <h2 class="print">To set up inter-divisional postings:</h2>
+            <ol>
+                <li>Go to GL <span class="function" title="Function:%WGL9000SGLC">Configuration</span>.&#160;</li>
+                <li>Specify the code for the inter-divisional accounts; use underscores in place of the element that corresponds to the sector. For example: <span class="userinput">__.6D00</span>.</li>
+                <li>In <span class="function" title="Function:%WGL0000BSYP">GL Parameters</span>, set the parameter <span class="parameter">SUMIDIV </span>to <span class="userinput">Y</span>.</li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/GL/gl_sumidiv.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

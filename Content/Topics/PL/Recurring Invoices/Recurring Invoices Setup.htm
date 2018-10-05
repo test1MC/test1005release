@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="764" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />Recurring Invoices Setup</h1>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new function, </MadCap:conditionalText><span class="Function">Recurring Invoices Set-up</span>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">,</MadCap:conditionalText> allows you to set up the details of recurring invoices.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/PL/Recurring Invoices/RecInvSetup.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Code<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>A code for the recurring invoice.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Description<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>A description of the recurring invoice.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Supplier</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The supplier code.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Supplier Reference Base</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The base for the supplier reference - this is used to automatically generate the supplier references on actual monthly invoices. The supplier reference will be the supplier reference base plus a number from 01-9999; for example, Lease1/0001.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Invoice Number of Days</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The day of the month to use as the invoice date.</p>
+                    <p>For example, if this is 1, the invoice date will be the 1st of the month.</p>
+                    <p>If this is set to 30 or 31, the invoice date will be set to the last day of the month (including February).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Start Period</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.financial period" /> for the first recurring invoice.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Last Period</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.financial period" /> period for the final recurring invoice.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Next Period</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="Variables.financial period" /> in which the next recurring invoice will be generated.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Status</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The status of the recurring invoice.</p>
+                    <p>Possible statuses are:</p>
+                    <ul class="no-indent">
+                        <li>Template Invoice not found - no template record has been created.</li>
+                        <li>Cost Distribution Missing – the template invoice has a Costed distribution type but there are no cost distribution details.</li>
+                        <li>Cost Distribution Imbalance – the cost distribution value does not equal the goods amount of the template invoice.</li>
+                        <li MadCap:conditions="COINS.UKOnly"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Distribution Imbalance – ‘Multi-Lines <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" />’ has been selected on the invoice header but no <MadCap:variable name="Variables.vat" /> distribution has been entered.</li>
+                        <li>Invoicing Complete – all monthly invoices have been posted.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="Body">When you save the details of a new recurring invoice, this creates an invoice template. </p>
+        <p class="Body">Click the link in the <span class="Field">Code</span> column to update the template.</p>
+    </body>
+</html>

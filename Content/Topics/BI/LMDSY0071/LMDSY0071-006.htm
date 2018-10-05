@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Stages – Building the basic structure</h1>
+        <p>A quick reminder of the design for this Workflow:</p>
+        <p>Stage 1 - The business process is that someone at a level higher than the buyer must authorise an order before it can be issued (S1)</p>
+        <p>Stage 2 - The authoriser will be given the ability to commit the order (Process P1)</p>
+        <p>Stage 3 – An email will be sent to the buyer to advise them that the order is approved – an Email Stage (E1).&#160;</p>
+        <p>Click on the Diagram tab:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-012-1108.png" class="FullWidth" />
+        </p>
+        <p>This tab allows us to build the basic structure of our Workflow.&#160; The toolbar provides various tools to allow us to build our workflow.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_50_1106.png" class="FullWidth" />
+        </p>
+        <p>We start with our first stage in the design.&#160;Click the Stage Icon on the toolbar</p>
+        <p>&#160;</p>
+        <p>The Stage definition window will be presented.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-014-1108.png" class="FullWidth" />
+        </p>
+        <p>In the Stage section enter the following:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Label</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>S1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Approve Order</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Role</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>TRLEVEL1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Activity Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Task</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">Priority</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">Normal</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Function</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>%WPO1010SPOH</p>
+                        <p>Here we are giving the stage access to the Purchase Order Summary function, which will allow us to collect some information from the Order Header for use within the Workflow</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Click <span class="Button">OK</span> to save the stage</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-018-1108.png" class="FullWidth" />
+        </p>
+        <p>The stage that will follow E1 is Process P1 which will commit the order on the system.&#160;</p>
+        <p>Click the Process icon in the toolbar</p>
+        <p>For this stage, enter the following:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Label</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>P1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Commit Order</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-015-1108.png" class="FullWidth" />
+        </p>
+        <p>Select the Advanced Tab</p>
+        <p>This stage will mark the Order as Committed. For this we will use a special calculation known as a method, and there is a dedicated method statement for committing purchase orders.</p>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <colgroup>
+                <col style="width: 159px;" class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Calculation</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>method('poh-rsp.commitOrder')</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-016-1108.png" class="FullWidth" />
+        </p>
+        <p>Click <span class="Button">OK</span> to save P1</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-019-1108.png" class="FullWidth" />
+        </p>
+        <p>The stage that will follow P1 is E1, which will send an email to the buyer to confirm the approval.</p>
+        <p>Click the Email icon in the toolbar</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-020-1108.png" />
+        </p>
+        <p>For this stage, enter the following:</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;margin-left: auto;margin-right: 0;" class="TableStyle-COINSBasic" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Label</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>E1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Email Buyer to confirm approval</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Role</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Leave blank</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-017-1108.png" class="FullWidth" />
+        </p>
+        <p>Select the Email Tab.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-021-1108.png" class="FullWidth" />
+        </p>
+        <p>Once the Authoriser has completed their task, this stage will email the Buyer to let him know.&#160; We therefore need to tell this stage where to send the email, and what to put in the email subject and body.</p>
+        <p>In the Email subject Line, we will add the Order number by the use of a substitution.&#160; Poh_ordno is the field containing the Order Number in the database table.&#160; If we place the field name between curly braces {} the system will substitute the field value into the text.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;margin-left: auto;margin-right: 0;" class="TableStyle-COINSBasic" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Role Calculation</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>$pob_code</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Subject</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Order {poh_ordno} approved</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>HTML Email</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Tick this box</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-022-1108.png" class="FullWidth" />
+        </p>
+        <p>The Body of our email is going to give the buyer a link back to their order, so that from the email they can go directly into <MadCap:variable name="General.ProductName" /> and view the specific order that has been authorised.&#160; To do this we need to Launch notepad and bring back the text file of the Order hyperlink that we saved earlier (or go into the details of any purchase order and capture it again).</p>
+        <p>The Text will look something like:</p>
+        <p><span class="Emphasis">http://195.40.14.50/cgi-bin/oatrainbi/woframe.p?TopMenu=%25WPO&amp;pvCILevel=1&amp;program=wou005.p&amp;MainArea=%WPO1010SPOH&amp;%WPO1010SPOH=&amp;kco=10&amp;poh_mpo=M&amp;POLive=TRUE%20&amp;initFunction=%2525WPO101ABPHL&amp;RaisePOFromReqn=&amp;OptionOrderMenu=S&amp;po_hdrRowid=0x000000000014c704&amp;tip_type=MATERIAL&amp;UpdateMode=POHeader&amp;CIWTemplMode=&amp;CILevel=&amp;PILevel=&amp;job_num=&amp;jph_phase=&amp;jwb_code=&amp;REQLive=</span>
+        </p>
+        <p>First, delete the leading characters up as far as, but not including /woframe.p and replace them with, http://$[$cURL$]$</p>
+        <p>The reason we have to replace the beginning of the URL is that it is currently hardcoded to a particular <MadCap:variable name="General.ProductName" /> server and environment.&#160; Should you copy this workflow to another environment or change the server configuration in any way, the workflow link will break.&#160; This new prefix will ensure the current server and environment is dynamically created each time.</p>
+        <p>Having fixed the hardcoding of the server, we also need to make sure that the Purchase Order in the email is also dynamically changed depending on the actual order being processed.&#160; We need to make changes to the fields for the RowId, kco, poh_mpo, and tip_type.&#160; Replace as follows:</p>
+        <p style="font-weight: bold;">http://$[$cURL$]$/woframe.p?TopMenu=%25WPO&amp;pvCILevel=1&amp;program=wou005.p&amp;MainArea=%WPO1010SPOH&amp;%WPO1010SPOH=&amp;kco={kco}&amp;poh_mpo={poh_mpo}&amp;POLive=TRUE%20&amp;initFunction=%2525WPO101ABPHL&amp;RaisePOFromReqn=&amp;OptionOrderMenu=S&amp;po_hdrRowid={po_hdrRowid}&amp;tip_type={tip_type}&amp;UpdateMode=POHeader&amp;CIWTemplMode=&amp;CILevel=&amp;PILevel=&amp;job_num=&amp;jph_phase=&amp;jwb_code=&amp;REQLive=</p>
+        <p>These replacement values correspond to the initialise variables we set up earlier.&#160; Any fields that will ultimately be replaced within the workflow stages should be defined as variables.</p>
+        <p>Copy this text from notepad and return to the E1 Stage.</p>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasic-Column-Column1" style="width: 104px;" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Text</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Order {poh_ordno} has been authorised and committed</p>
+                        <p>Click link to view order</p>
+                        <p>&#160;</p>
+                        <p>http://$[$cURL$]$/woframe.p?TopMenu=%25WPO&amp;pvCILevel=1&amp;program=wou005.p&amp;MainArea=%WPO1010SPOH&amp;%WPO1010SPOH=&amp;kco={kco}&amp;poh_mpo={poh_mpo}&amp;POLive=TRUE%20&amp;initFunction=%2525WPO101ABPHL&amp;RaisePOFromReqn=&amp;OptionOrderMenu=S&amp;po_hdrRowid={po_hdrRowid}&amp;tip_type={tip_type}&amp;UpdateMode=POHeader&amp;CIWTemplMode=&amp;CILevel=&amp;PILevel=&amp;job_num=&amp;jph_phase=&amp;jwb_code=&amp;REQLive=</p>
+                        <p>&#160;</p>
+                        <p>Email has been sent by <MadCap:variable name="General.ProductName" /> internal email.&#160; Please do not reply.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-023-1108.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Select the Advanced Tab</p>
+        <p>Rather than use a defined role to decide who gets the email, we will use a role calculation to control this stages behaviour.&#160; In normal circumstances we would use this to read the buyer’s user ID from the Order Header, but for this example we will use our hard-coded variable that we set up in the Details Tab</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;margin-left: auto;margin-right: 0;" class="TableStyle-COINSBasic" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Role Calculation</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>$pob_code</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-024-1108.png" class="FullWidth" />
+        </p>
+        <p>Click <span class="Button">OK</span> to save Stage E1</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-027-1108.png" class="FullWidth" />
+        </p>
+        <p>Finally we need to create the END stage.</p>
+        <p>Click the Process Icon in the toolbar.</p>
+        <p>For this stage, enter the following:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: auto;margin-right: 0;" class="TableStyle-COINSBasic" cellspacing="0">
+            <colgroup>
+                <col style="width: 77px;" class="TableStyle-COINSBasic-Column-Column1" />
+                <col class="TableStyle-COINSBasic-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Label</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>END</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>END</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-025-1108.png" class="FullWidth" />
+        </p>
+        <p>Click <span class="Button">OK</span> to save the End Stage</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-026-1108.png" class="FullWidth" />
+        </p>
+        <p>There are no further stages to follow on, so we can now define the links between the stages.</p>
+        <p>The stages can then be dragged to a desired location on the page.&#160;For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-028-1108.png" />
+        </p>
+        <p>Each stage displays a link icon</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-029-1108.png" />
+        </p>
+        <p>You can drag the cursor from the square in the stage to another stage to create a link between the stages.</p>
+        <p>Link S1 to P1</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-030-1108.png" class="FullWidth" />
+        </p>
+        <p>Repeat the Process to Link P1 to E1, and then E1 to END</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-031-1108.png" class="FullWidth" />
+        </p>
+        <h2>Run Check.</h2>
+        <p>To perform a quick check of the structure, select the Check Tab.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-032-1108.png" class="FullWidth" />
+        </p>
+        <p>If there is nothing in this tab then that is a good indication that there are no loose ends or loop holes in the process.</p>
+        <p>Any errors listed must be corrected by returning to the Stages or Steps tabs.</p>
+        <h2>Launch Workflow</h2>
+        <p>To Test the workflow, Select Launch Test Workflow from the Action Drop-down and click the action button.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-034-1108.png" class="FullWidth" />
+        </p>
+        <p>This will launch the Workflow using the Purchase Order we opted to use as a test.&#160;</p>
+        <p>In edit mode, you may launch a workflow only 25 times before the Workflow will reject any further submissions.&#160; To reset the workflow and allow another 25 launches, select Purge Test Workflow and apply.&#160;</p>
+        <p>User NIGLON will now been given the task of approving this order.&#160; They will find this task in their Activity Workbench which they will access via the Activity Workbench option on the user menu.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-033-1108.png" class="HalfWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-035-1108.png" />
+        </p>
+        <p>&#160;</p>
+        <p>Here, the Approver can tick the Row Selector next to the Task and use the Action drop-down to Mark Action as Complete and click the Action Button to process the order, or</p>
+        <p>OR open the Task and complete Task via checkbox and click save.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-036-1108.png" class="FullWidth" />
+        </p>
+        <p>Once the task is completed, the Buyer will receive an email</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Stages Building the basic_21.png" class="FullWidth" />
+        </p>
+        <p>The hyperlink should then take the Buyer directly to the order details:</p>
+        <p>&#160;</p>
+    </body>
+</html>

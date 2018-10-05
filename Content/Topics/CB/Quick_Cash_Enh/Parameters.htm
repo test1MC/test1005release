@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109,COINS.PrintOnly">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Parameters</h1>
+        <p>The following new CB&#160;parameters control the functionality covered in this document.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <colgroup>
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+                <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            </colgroup>
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>QCRDFBNK</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>If this is set to Yes, the <span class="field">Bank Code</span> on a <span class="function">Quick Cash Receipt</span> batch defaults from the bank set up in <span class="function"><MadCap:variable name="Variables.Sales Ledger caps" /> Configuration</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>QCRHIJOB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>If this is set to Yes, the <MadCap:variable name="Variables.jc contract" /> number cannot be entered on the <span class="function">Quick Cash <MadCap:variable name="Variables.Cheque caps" /></span> entry screen, and the <span class="field"><MadCap:variable name="Variables.Jc Contract caps" /></span> (number) and <span class="field"><MadCap:variable name="Variables.Jc Contract caps" /> Name</span> fields are hidden. This means that the receipt cannot be allocated to invoices and certificates by <MadCap:variable name="Variables.jc contract" />; therefore the user will need to enter a customer code, meaning the receipt can only be allocated to invoices and certificates for that customer.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>LVCCPACB</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>This parameter affects the <span class="function">Allocate Customer Cash</span> function as follows:</p>
+                        <p class="yesnolist">Y = When Customer Cash is distributed to either <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or <span class="module"><MadCap:variable name="Variables.Contract Sales caps" /></span> and the amount entered does not get fully allocated, then the portion that is left will post to the <span class="module"><MadCap:variable name="Variables.Cash Book caps" /></span> as Customer Cash; that is, the unallocated amount will stay in <span class="module"><MadCap:variable name="Variables.Cash Book caps" /></span>. Note that the amount of the analysis line will be updated automatically to equal the amount allocated.</p>
+                        <p class="yesnolist">&#160;&#160;&#160;&#160;&#160;&#160;&#160;Also, if the total value of the analysis line(s) entered is less than the value of the customer cash, then the user does not need to enter a CC analysis line to the value of the difference as was standard practice before. Instead when the batch is selected to post, a warning message will be displayed to inform the user that the customer cash has not been fully allocated. If the user decides to continue then during posting a CC analysis line will be automatically created equal to the value of the customer cash that was not allocated.</p>
+                        <p class="yesnolist">N = When Customer Cash is distributed to either <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or <span class="module"><MadCap:variable name="Variables.Contract Sales caps" /></span> and the amount entered does not get fully allocated, then the portion that is left will post to either <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or <span class="module"><MadCap:variable name="Variables.Contract Sales caps" /></span> as unallocated cash.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

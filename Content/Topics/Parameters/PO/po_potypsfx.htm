@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/POTYPSFX - Suffix PO No with PO Type (list of types)</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/POTYPSFX - </span> Suffix PO No with PO Type (list of types)
+</div>
+<div class="param_def">
+<p>This allows you to add the order type to order numbers that are created automatically.</p>
+<p class="yesnolist"><span class="userinput">*</span> = Add the order type to all order numbers.<br />For example the normal order: <span style="white-space: nowrap;">M-1234/0001</span> (Material Order - <MadCap:variable name="Variables.Jc Contract caps"/> Number/Order Number) Would become: <span style="white-space: nowrap;">M-1234/0001N</span> (Material Order - <MadCap:variable name="Variables.Jc Contract caps"/> Number/Order Number+Order Type).</p>
+<p class="yesnolist">blank = no order numbers will be suffixed by the order type.</p>
+<p class="yesnolist">comma-separated list of order types = Orders of those types will be suffixed. For example if <span class="parameter">POTYPSFX</span> = <span class="userinput">C,B,N</span> only call-off orders, bulk orders and normal orders would be suffixed by their order-type. <br />If, in the comma-separated list <span class="userinput">FORCE=</span> is included, it is possible to set a letter to append to the end of <MadCap:variable name="Variables.pc plant"/> orders raised by the Force Allocation method. For example if <span class="parameter">POTYPSFX</span> = <span class="userinput">*,FORCE=F</span> then all orders will be suffixed with their order-type, except forced-allocation orders which will be suffixed by "F".</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1879" MadCap:lastWidth="1475">
+    <head>
+    </head>
+    <body>
+        <h1>Object Specific Methods</h1>
+        <p>&#160;</p>
+        <p>In addition to the methods above, there are a number of object-specific methods. For example the job-rsp object, which wraps the jc_job table has a method to update a report data store:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;login&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;user&gt;myloginname&lt;/user&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;password&gt;mypassword&lt;/password&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;CID&gt;1&lt;/CID&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;/login&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;!—First, select the job to update the store on using the standard</p>
+        <p class="code" style="text-indent: 1in;">Set&lt;tablename&gt;query method  --&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;call object="job-rsp" method="setjc_jobquery"</p>
+        <p class="code" style="text-indent: 1.5in;">pcQuery="FOR EACH jc_job where jc_job.kco = 1 and</p>
+        <p class="code" style="text-indent: 2in;">jc_job.job_num = ‘E12345’" /&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;!—Then set the value for report store LP001 to 100 --&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;call object="job-rsp" method="setRW_ContractDataStore"</p>
+        <p class="code" style="text-indent: 1.5in;">pcParam="LP001" pdValue="100" /&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p class="note">There is no need to call commitCurrent for a setRW_ContractDataStore operation. Whether commitCurrent is necessary for a particular object-specific method or not varies from method to method.</p>
+        <p>&#160;</p>
+        <p>By default, setRW_ContractDataStore uses the current period. Its full syntax is:</p>
+        <p style="font-weight: bold;"> pcParam  = "&lt;src_id&gt;|&lt;type&gt;|&lt;offset&gt;|&lt;period&gt;".</p>
+        <ul>
+            <li>Src_id is the name of the report store.</li>
+            <li>Type is TP for this period, TY for this year, or TD for to date and specifies which type of store to write.</li>
+            <li>Offset is a numeric field applied to type – e.g. type = TP, offset = -3 will be 3 periods before the current.</li>
+            <li>Period is a specific period end date. It can be used with the type and offset omitted to target a known period. E.g. “LP001|||24-08-2005”</li>
+        </ul>
+        <p>Some methods also require the relevant <MadCap:variable name="General.ProductName" /> company number to be specified.  This is done via the CID node on the login section of the XML message.</p>
+        <p>&#160;</p>
+    </body>
+</html>

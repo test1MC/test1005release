@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Adding to Standard Menus</title>
+        <style>/*<![CDATA[*/
+table.menu_example td
+{
+	padding: 0px;
+}
+table.menu_example img.button
+{
+	background-color: transparent;
+	text-align: middle;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Adding to Standard Menus</h1>
+        <p>If you are using <MadCap:variable name="General.ProductName" /> standard menus, you may decide that you would like to include your own custom functions, or additional standard functions, on the existing menus. &#160;Following the procedure outlined below will allow you to create a custom menu that <MadCap:variable name="General.ProductName" /> appends to the standard menu. &#160;If desired, you can also add further menus, as well as functions, under the custom menus to create a structure/group of client functions. &#160;Changes you make to menus in this way will not be overwritten if you upgrade to a new release of <MadCap:variable name="General.ProductName" />.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">Another procedure for creating custom menus involves making a + version of a function. This is discussed separately in <a href="WDSY0402_Making_Copies.html">Making Copies of Functions</a>.</div>
+        <div class="process">
+            <h2 class="print">Adding functions to standard menus</h2>
+            <p><strong>A. Background</strong>
+            </p>
+            <p />
+            <p><span class="function" title="Function:%WSYBMSF">Function Maintenance</span> in <MadCap:variable name="General.ProductName" /> OA contains the standard menu functions for each OA module. &#160;You can create a custom<MadCap:variable name="Variables.is" />ed menu that allows you to append custom functions or standard functions to a standard menu. &#160;These additional functions appear below the functions on the standard menu. &#160;&#160;</p>
+            <p>In order for these custom menu items to appear on the menu tree, you must create a new menu function in Function Maintenance, with the same code as the standard menu except beginning with U instead of %. For example, creating a menu function&#160;<strong>UWFMREP</strong>&#160;allows you to append functions to the standard&#160;<strong>%WFMREP</strong>&#160;menu.</p>
+            <table class="menu_example" border="0">
+                <tbody>
+                    <tr>
+                        <td><span style="text-decoration: underline;" data-mce-mark="1"><strong><em>Standard Menu&#160;</em></strong></span>
+                        </td>
+                        <td>&#160; &#160; &#160;</td>
+                        <td><span style="text-decoration: underline;" data-mce-mark="1"><strong><em>Custom Menu&#160;</em></strong></span>
+                        </td>
+                        <td>&#160; &#160; &#160;</td>
+                        <td><span style="text-decoration: underline;" data-mce-mark="1"><strong><em>Menu as Displayed</em></strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>%WxxREP</strong>
+                        </td>
+                        <td>&#160;</td>
+                        <td><strong>UWxxREP</strong>
+                        </td>
+                        <td>&#160;</td>
+                        <td>
+                            <img src="../../Resources/Images/COINS Graphics/SVG buttons/men.svg" class="icon24px" /> Reports&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160; Standard Function 1&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160; Custom Function 1</td>
+                        <td>&#160;</td>
+                        <td>&#160; &#160; <img src="../../Resources/Images/COINS Graphics/SVG buttons/rep.svg" class="icon24px" /> &#160;<span data-mce-mark="1">Standard Function 1&#160;</span></td>
+                    </tr>
+                    <tr>
+                        <td>&#160; Standard Function 2&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160; Custom Function 2</td>
+                        <td>&#160;</td>
+                        <td><span data-mce-mark="1">&#160; &#160; <img src="../../Resources/Images/COINS Graphics/SVG buttons/rep.svg" class="icon24px" /> &#160;</span><span data-mce-mark="1">Standard Function 2</span>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160; Standard Function 3&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160; &#160; <img src="../../Resources/Images/COINS Graphics/SVG buttons/rep.svg" class="icon24px" /> &#160;Standard Function 3&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td><span data-mce-mark="1">&#160; &#160; <img src="../../Resources/Images/COINS Graphics/SVG buttons/rep.svg" class="icon24px" /> &#160;</span><span data-mce-mark="1">Custom Function 1</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                        <td><span data-mce-mark="1">&#160; &#160; <img src="../../Resources/Images/COINS Graphics/SVG buttons/rep.svg" class="icon24px" /> &#160;</span><span data-mce-mark="1">Custom Function 2</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>&#160;</p>
+            <p><MadCap:variable name="General.ProductName" /> applies the Function Security of the calling menu (the standard % menu) to its associated ‘U’ menu. For example, if a user or group has access to %WPL1 they will also be deemed to have access to UWPL1.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Custom menus created using <a href="WDSY0402_Making_Copies.html">'plus’ versions of a function</a> will override any % and ‘U’ menus configured. ‘U’ menus will not append to a ‘plus’ menu.</div>
+            <p />
+            <p><strong>B. How to create custom menus&#160;</strong>
+            </p>
+            <p />
+            <p>This procedure describes how to use Function Maintenance to add user-defined versions of menus.</p>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p><em>Example:</em> Add functions to the FM Reports menu (<strong>%WFMENQ</strong>).</p>
+            </blockquote>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The <MadCap:variable name="Variables.Facilities Management" /> (FM) module is used to show examples throughout this procedure.</div>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBMSF">Function Maintenance</span> in the System module and click&#160;<img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.</li>
+                <li>Enter a <strong>Function</strong>&#160;with a code that matches the standard menu item code but replace the <span class="userinput">%</span> with a <span class="userinput">U</span>.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p><em>Example:</em> Add an FM function named <strong>UWFMREP</strong>.</p>
+            </blockquote>
+            <ol start="3">
+                <li>Enter a description for the function, such as "Additional FM Reports". (This description will not appear on the menus.)</li>
+                <li>Select Menu in the Type field.</li>
+                <li>Select the <strong>Module</strong> where this menu should be placed.</li>
+                <li>Select Menu in the Category field.
+<p><img src="../../Resources/Images/SY/SY_018201.png" class="FullWidth" /></p></li>
+                <li>Save the new function. You will not see any change to the standard menu until you add functions to this new menu.</li>
+                <li>Repeat Steps 1 to 7 above for each menu you wish to add to.</li>
+            </ol>
+            <p />
+            <p><strong>C. How to add functions to custom menus </strong>
+            </p>
+            <p />
+            <p>In Function Maintenance, you can add menu items to the function(s) you created in Part&#160;B above. To do this:</p>
+            <ol dir="ltr" style="margin-right: 0px;">
+                <li>Go to <span class="function" title="Function:%WSYBMSF">Function Maintenance</span> and click the function link for the menu you want to add to.
+<p dir="ltr"><em>Example:</em> For FM reports, click <strong>UWFMREP</strong> to add items to the custom report menu.</p></li>
+                <li>On the Function Maintenance detail screen, go to the <strong>Menu Items</strong> tab and click&#160;<img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.</li>
+                <li>Enter the function you want to add to the menu.
+<p dir="ltr"><em>Example:</em> If you have a custom function <strong>WCUALLFM001 - FM <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Summary - </strong>which you want to add to the Reports menu, you would enter <strong>WCUALLFM001</strong> as the function.</p><p><img src="../../Resources/Images/SY/SY_018202.png" /></p></li>
+                <li>Follow Steps 1 to 3 above to continue adding other functions to the menu.
+<p><strong>Remember:</strong> You can also continue at this point to add standard functions (beginning with <strong>%W</strong>) or further custom menus to this custom menu.</p></li>
+                <li>Once completed, the tree menu displays the function(s) you added to the custom menu.
+<p><em>Example:</em><MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Summary now appears on the FM Reports tree branch.</p><p><img src="../../Resources/Images/SY/SY_018203.png" /></p></li>
+                <li>Use Function Security to ensure that only users of appropriate authority are able to access the functions. If a user is not permitted to run a function, it will not appear on the menu. See <a href="WDSY0017_How_Function_Access_Works.html">How Function Access Works</a> for more information.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The example above uses the Report menu in FM, but you can use the same technique to append functions to any standard menu, including container (tab) menus and drop-down menus.</div>
+        </div>
+    </body>
+</html>

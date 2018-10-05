@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0013,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OA Designer - Merging data using Datasets</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Dicscovery Heading.flsnp" />
+        <h1>
+            <MadCap:annotation MadCap:createDate="2018-05-09T13:59:23.5621834+01:00" MadCap:creator="niglon" MadCap:initials="NL" MadCap:comment="REVIEW: Possible replacement with Dump Tables?" MadCap:editor="niglon" MadCap:editDate="2018-05-09T13:59:47.1590578+01:00">Using</MadCap:annotation> multiple Data Sets to merge data</h1>
+        <p class="note">You will need to have completed Discovery BI0009 before carrying out this exercise</p>
+        <p>This exercise will demonstrate how multiple Data Sets can be used to merge information from different tables in a report.</p>
+        <h2>Create the Function and Menu </h2>
+        <p>Create the function that will be used to run the report then add this function to an appropriate menu.&#160; </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Code</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">xx(Initials) + BI0013 e.g. NLBI0013</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Name </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">xxBI0013</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Module</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Contract Status</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Category</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Report</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Function Context</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Leave as defaulted from the Function Description.<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Function Program</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">wou005</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>We already have a page that we can re-use from the first exercise so the following parameter will allow us to use this:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Function Parameters</td>
+                    <td>stn_code=NLBI0009</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Creating the first new Data Set</h2>
+        <p>In Designer, navigate to Data Set Definitions.</p>
+        <p>&#160;</p>
+        <p>Select the add icon <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_6.png" style="visibility: visible;mso-wrap-style: square;width: 20px;height: 19px;" />.</p>
+        <p>Enter a Data Set name and description for the data set.&#160; For this exercise use your initials followed by BI0013.</p>
+        <p>In the Query box, enter:</p>
+        <p class="Example">FOR EACH jc_job WHERE jc_job.kco = {kco} {jobSelect}, <br />EACH ar_invoice OF jc_job .</p>
+        <p>We need to create an identifier for the Data Set table name.&#160; In this example call your table SLCSinvoice</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1b Using multiple.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <h2>Adding the Fields</h2>
+        <p>On the Fields Tab, click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" />and key in the following field:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Label</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Data Type</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Format</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Source</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">kco</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Company</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Integer</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">jc_job.kco</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">job_num</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Contract</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Character</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">x(8)</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">jc_job.job_num</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">slgross</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">SLGross</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Decimal</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">ar_invoice.rin_amount</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For both kco and job_num <MadCap:variable name="Variables.tick" /> the field called Key.&#160; This will summarise the Data Set by company and contract.</p>
+        <p>The third field is another direct source field:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1b Using multiple_1.png" style="visibility: visible;mso-wrap-style: square;width: 555px;height: 113px;" />
+        </p>
+        <p><span style="margin-right: 0pt;">1.4.4 </span>Creating the second new Data Set</p>
+        <p>In Designer, navigate to Data Set Definitions.</p>
+        <p>Click Add.</p>
+        <p>Enter a Data Set name and description for the data set.&#160; For this exercise use your initials followed by M2DS4.</p>
+        <p>In the Query box, enter:</p>
+        <p>FOR EACH jc_job WHERE jc_job.kco = {kco} {jobSelect}, <br />EACH cs_certificate OF jc_job .</p>
+        <p>We need to create an identifier for the Data Set table name.&#160; In order for the data to be merged, our data sets must all share the SAME table name, so we will use SLCSinvoice here too.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1b Using multiple_2.png" style="visibility: visible;mso-wrap-style: square;width: 544px;height: 127px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <h2>Adding the Fields</h2>
+        <p>On the Fields Tab, click Add <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_6.png" style="visibility: visible;mso-wrap-style: square;width: 20px;height: 19px;" /> and key in the following field:&#160; Note again that although the source data and/or calculations may be different it is vital that the same field names and labels etc are used across all the datasets to be merged.&#160; Failure to do this will cause the report to fail.</p>
+        <p>FieldLabelData TypeFormatSource</p>
+        <p>kcoCompanyInteger-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9jc_job.kco</p>
+        <p>job_numContractCharacterx(8)jc_job.job_num</p>
+        <p>For both kco and job_num <MadCap:variable name="Variables.tick" /> the field called Key.&#160; This will summarise the Data Set by company and contract.</p>
+        <p>The third field is another direct source field:</p>
+        <p>FieldLabelData TypeFormatSource</p>
+        <p>slgrossSL GrossDecimal-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9.99cs_certificate.cst_cur_gross__1</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1b Using multiple_3.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 133px;" />
+        </p>
+        <p><span style="margin-right: 0pt;">1.4.6 </span>Create the Report</p>
+        <p>Copy the report definition for xxM2exercise1 and rename it xxM2exercise1b.</p>
+        <p>For this new report, modify the query to read The contract table jc_job and then link it to our datasets – note that we only reference the single table name.</p>
+        <p>FOR EACH jc_job WHERE kco = {kco}{jobSelect},<br />EACH ttSLCSinvoice WHERE ttSLCSinvoice.kco = jc_job.kco <br />AND ttSLCSinvoice.job_num = jc_job.job_num</p>
+        <p>In the Data Set Definition field, list the Data Sets being used separated by commas.</p>
+        <p>NLM2DS3,NLM2DS4</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1b Using multiple_4.png" style="visibility: visible;mso-wrap-style: square;width: 529px;height: 353px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p>On the Body fields, delete all the columns after job name and replace with the following:</p>
+        <p>FieldLabelwidthCalculation<br />RO_ContractCosts^TDCosts TD20mmCostsTD = this;<br />RO_ContractRevenueRevenue TD20mmRevTD = this;<br />Profit TD20mmRevTD – CostsTD;<br />ttSLCSinvoice.SLGrossSales Balance20mm</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1b Using multiple_5.png" style="visibility: visible;mso-wrap-style: square;width: 548px;height: 273px;border-top-style: solid;border-top-width: 1pt;border-bottom-style: solid;border-bottom-width: 1pt;border-left-style: solid;border-left-width: 1pt;border-right-style: solid;border-right-width: 1pt;" />
+        </p>
+        <p>&#160;</p>
+        <h2>Running the report</h2>
+        <p>Run the function xxM2Exercise1b.&#160; You should get output similar to the following:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1b Using multiple_6.png" style="visibility: visible;mso-wrap-style: square;width: 602px;height: 413px;" />
+        </p>
+        <p>&#160;</p>
+        <p>The figures Sales balance figure will be a sum of the SL and CS figures.&#160; To prove this, run each data set in the Query Editor to see the values returned.</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Loading <MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Details</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Loading <MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Details</h1>
+        <p>You can load <MadCap:variable name="Variables.sc scheme" /> details from a CSV file, either to load new details or to update existing details.&#160; If a <MadCap:variable name="Variables.sc scheme" /> record of the same type already exists for a subcontractor, the load routine can do one of the following:</p>
+        <ul>
+            <li>Overwrite the existing details.</li>
+            <li>Only overwrite the existing details if the <MadCap:variable name="Variables.expiry" /> date in the file is later than the existing date (to load details of <MadCap:variable name="Variables.sc schemes" /> that have been renewed).</li>
+            <li>Not overwrite any existing details.</li>
+            <li>Create a new <MadCap:variable name="Variables.sc scheme" /> record of the same type.</li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To check the file before loading:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC9100USCW">Load <MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /> Data</span>.</li>
+                <li>Browse for the CSV file that contains the <MadCap:variable name="Variables.sc scheme" /> data.</li>
+                <li>In the <span class="field">Mode </span>field, select Check.&#160;</li>
+                <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /><span class="field">Detail </span>to show errors in the report.</li>
+                <li>Choose what you want to happen if there is already a matching <MadCap:variable name="Variables.sc scheme" /> record for a subcontractor.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p>The report lists each <MadCap:variable name="Variables.sc scheme" /> in the file, and shows what the result will be when the file is loaded.</p><p><img src="../../Resources/Images_S-U/SC/SC_131201.png" class="FullWidth" /></p></li>
+                <li>If possible, correct any errors in the CSV file before you load it.&#160;&#160;&#160;</li>
+            </ol>
+            <h2>To load the <MadCap:variable name="Variables.sc scheme" /> data:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC9100USCW">Load <MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /> Data</span>.</li>
+                <li>Browse for the CSV file that contains the <MadCap:variable name="Variables.sc scheme" /> data.</li>
+                <li>In the <span class="field">Mode </span>field, select Load.&#160;</li>
+                <li>Choose what you want to happen if there is already a matching <MadCap:variable name="Variables.sc scheme" /> record for a subcontractor.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">File format</h2>
+            <p>The format for the CSV file is: </p>
+            <p>· Account<br />· Scheme<br />· <MadCap:variable name="Variables.expiry" style="text-transform: capitalize;" /> Date<br />· Policy number<br />· Provider<br />· Name on Policy<br />· Reference<br />· Limit<br />· Start Date<br /></p>
+            <p>with no leading and trailing spaces on the fields.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SW/CANCSTAT - Status if cancel invoice</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SW/CANCSTAT - </span> Status if cancel invoice
+</div>
+<div class="param_def">
+<p>The FM <MadCap:variable name="Variables.fm job"/> status to use after an invoice has been cancelled. If this is blank, the <MadCap:variable name="Variables.fm job"/> status is set to blank.</p>
+<P>The cancel option allows you to cancel the invoice if it hasn't been printed. Depending on the cost type of the <MadCap:variable name="Variables.fm job"/>, it resets the <MadCap:variable name="Variables.fm job"/> to the state it was before the invoice was created. </P>
+<UL>
+<LI>For Transaction, complex SOR, SOR, Cost+ cost types: SOR items and/or cost transactions are reset so they are no longer marked as invoiced.</LI>
+<LI>For 'simple measured' cost types: valuations are reset so they can be billed again. </LI></UL>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  MasterPageLayout="/Content/Resources/PageLayouts/CEDoc_PDF-UK.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/CEDoc_PDF.css"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly] exclude[COINS.ScreenOnly or COINS.USOnly] "
+  conditions="COINS.UKOnly"
+  Medium="print">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">mCRM Additional Parameters</Variable>
+  </Variables>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

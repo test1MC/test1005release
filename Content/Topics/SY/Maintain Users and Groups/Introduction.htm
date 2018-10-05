@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />How Function Security Works</h1>
+        <p>When a user attempts to access a function: </p>
+        <ul>
+            <li><MadCap:variable name="General.ProductName" /> checks the access permissions for the user (as set up in User Function Access). If the user has explicitly been allowed or denied access, this overrides any group permissions that may have been set up. </li>
+            <li>If you are using Menu Item Security, <MadCap:variable name="General.ProductName" /> checks the parent function, which is an item on the <MadCap:variable name="General.ProductName" /> menu, to see whether the user has access and the function is of the correct access type.</li>
+            <li>If the user has access to the parent, they have access to the child function by default, unless the permission has been explicitly overridden.&#160; </li>
+        </ul>
+        <p>If the function is a menu, container or tab function, and the user has access to a function on that menu, container or tab, then the menu, container or tab is available.</p>
+        <ul>
+            <li>If the user's permission is G-Group access (the default), <MadCap:variable name="General.ProductName" /> checks the permissions for each group that the user belongs to, in the order the groups are defined on the user record, beginning with the Prime Group. <ol style="list-style-type: lower-alpha;"><li><MadCap:variable name="General.ProductName" /> checks the can-do lists of functions and role types that are allowed or denied on the group.&#160; If the function is included in any of these lists, the user is allowed or denied access accordingly.&#160; (Within the same group, deny takes priority over allow.) </li><li><MadCap:variable name="General.ProductName" /> then looks at the permissions for specific functions set up on the group record.&#160; If the group is allowed or denied access then that is the result. </li><li>If you are using Menu Item Security, <MadCap:variable name="General.ProductName" /> then checks the group access for the parent function; if the group is allowed access to the parent and the access type of the parent is the correct type, then the user is allowed access. </li><li>If the group record indicates G-Group access, <MadCap:variable name="General.ProductName" /> checks the next group. </li></ol></li>
+        </ul>
+        <p class="note">Because <MadCap:variable name="General.ProductName" /> evaluates the permissions on each group in turn, the sequence of the groups on a user's record is important.&#160; If a group denies access to a function, the user will not be able to access the function, even if a later group would allow access.</p>
+        <ul>
+            <li>Finally, if you have role-based licensing and your <MadCap:variable name="Variables.licence" /> includes roles that are appropriate, you can use these to grant access to users. If the user is not a "named role" user <MadCap:variable name="General.ProductName" /> checks any roles assigned to the user:<ol style="list-style-type: lower-alpha;"><li>If the function is included in the "Allow" can-do lists of functions or role types on any of the roles, the user is allowed access unless explicitly denied by user or group access permissions.</li><li>If the function is denied by the role, <MadCap:variable name="General.ProductName" /> continues by checking the user and group permissions.&#160; The user may still have access if allowed by user or group access permissions.&#160; </li></ol></li>
+        </ul>
+        <p class="note">If the user is a "named role" user, they will ONLY be able to access functions allowed by their roles; see Role-Based Licensing.</p>
+        <p>If none of the groups or roles explicitly allows access then the user is not allowed access.</p>
+        <p>When you create a new user record, all the permissions for that user are set to G-Group, so they only have access to those procedures and menus permitted for their group, until you explicitly change their access permission. Similarly, when you create a new group, all the permissions are G-Group. This means that, if you were to create a new group, and assign users to that group, without explicitly granting access permissions for either the group or the users, the users in that group would not be allowed access to anything.</p>
+        <p><MadCap:variable name="General.ProductName" /> always has a user called "SYSAdmin" and a group called "root". The SYSAdmin user has permission to do anything, as does any user who is in the root group who is not explicitly denied access. </p>
+        <p>The following illustration shows how group access permissions affect the access of individual users.&#160; For a particular function, group A allows access, group B denies access, and group C specifies group access:</p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Introduction.png" class="FullWidth" />
+        </p>
+        <p class="note">If you are using Menu Item Security:<br />If a function is a menu, the user may be allowed access because they have been given access to a menu item on that menu.<br />If the function is a child, the user may be allowed access because they have been given access to the parent function</p>
+        <p>&#160;</p>
+    </body>
+</html>

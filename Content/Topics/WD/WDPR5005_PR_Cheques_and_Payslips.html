@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1239" MadCap:lastWidth="1015">
+  <head>
+    <title>Configurable Payroll <MadCap:variable name="Variables.Cheques caps" /> and Payslips</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Configurable Payroll <MadCap:variable name="Variables.Cheques caps" /> and Payslips</h1>
+    <p>The <MadCap:variable name="Variables.cheque" /> and payslip print format allows you to configure documents for printing payroll <MadCap:variable name="Variables.cheques" />, payslips, or combined <MadCap:variable name="Variables.cheques" /> and payslips.</p>
+    <p>Define the layout of <MadCap:variable name="Variables.cheques" /> and payslips using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the System Module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <div class="process">
+      <h2 class="print">To configure PR <MadCap:variable name="Variables.cheques" /> or payslips:</h2>
+      <ol>
+        <li>Use the document type <span class="userinput"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" />/Payslip (PR)</span>.</li>
+        <li>In the <span class="field">Layout Type</span> field, select:</li>
+        <ul>
+          <li>
+            <span class="userinput">
+              <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" />
+            </span> to define the layout for <MadCap:variable name="Variables.cheques" />;</li>
+          <li>
+            <span class="userinput">Combined</span> to define the layout for combined <MadCap:variable name="Variables.cheques" /> and payslips;</li>
+          <li>
+            <span class="userinput">Remittance</span> to define the layout for payslips.</li>
+        </ul>
+        <li>
+          <p>The <MadCap:variable name="Variables.cheque" /> can be either at the top or at the bottom of the page. If the remittance lines take up more than one page, you will need to print a "VOID" form on the <MadCap:variable name="Variables.cheque" /> portion of the stationery on all pages after the first one. Configure a form for this and enter its name in the <span class="field">VOID <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Form </span>field, then, depending on whether the <MadCap:variable name="Variables.cheque" /> is at the top or bottom of the stationery, do one of the following:</p>
+          <ul>
+            <li>If the <MadCap:variable name="Variables.cheque" /> is at the top: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Top of Page</span>. In the <span class="field">Continuation Header Form</span> field, enter the name of the VOID form. Configure the Header Form to print the <MadCap:variable name="Variables.cheque" /> details.</li>
+            <li>If the <MadCap:variable name="Variables.cheque" /> is at the bottom: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Bottom of Page</span>. Configure a form to print the <MadCap:variable name="Variables.cheque" /> details, and enter that form name in both the Footer Form and Continuation Footer Form fields. <MadCap:variable name="General.ProductName" /> then replaces the footer with the VOID form after the first page.</li>
+          </ul>
+        </li>
+        <li>To print <MadCap:variable name="Variables.cheques" /> one per page, leave the <span class="field">Multiple <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> per Page?</span><MadCap:variable name="Variables.tick" />box blank, and configure the header or footer form to print the <MadCap:variable name="Variables.cheque" /> details. To print multiple <MadCap:variable name="Variables.cheques" /> per page, select <span class="field">Multiple <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> per Page?</span>, and configure the body form to print the <MadCap:variable name="Variables.cheque" /> details.</li>
+        <li>
+          <p>If you are using a tiered payslip (where, for example, tier 1 is used for payments and deductions column sets, and tier 2 is used for year-to-date and other item details), it has the following structure: header, body, tier 1 footer, tier 2 body, footer.  Give names to the tier 1 footer and the tier 2 body, and enter the number of lines for each.</p>
+        </li>
+        <li>To indicate whether or not a <MadCap:variable name="Variables.cheque" /> is a duplicate, use the field <span class="field">RO_Duplicate</span>.  This shows as blank on the original, and <span class="screentype">**********DUPLICATE**********</span> on reprints.</li>
+      </ol>
+      <h3>Tables used:</h3>
+      <p>co_config, pr_period, employee and pr_check<br />The BODY shows - pr_check<br />Extra tables - pp_organisation is available as it is linked from the employee</p>
+      <h3>The following special fields are available:</h3>
+      <p>RO_SpelledAmount - The <MadCap:variable name="Variables.cheque" /> amount spelled in words all on one line based on USA standards.</p>
+      <p>RO_usaAdd1, RO_usaAdd2, and RO_usaAdd3: Use these each on a separate line to print the address in USA formatting and without a blank line in the middle of the address if the name/address only uses three lines instead of four.</p>
+    </div>
+  </body>
+</html>

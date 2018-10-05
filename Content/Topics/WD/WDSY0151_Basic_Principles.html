@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Basic Principles - How Multi-Currency Works</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Basic Principles - How Multi-Currency Works</h1>
+        <p>
+            <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> operates as a multi-currency system; <MadCap:snippetBlock src="../../Resources/Snippets/COINSPlus.flsnp" /> can operate as a single-currency system or a multi-currency system; configuration defines which is in use.&#160; If single currency is in use, currency prompts on screens are <MadCap:variable name="Variables.grey" />ed out.&#160;Single currency <MadCap:variable name="Variables.kco companies" /> can be turned into multi-currency <MadCap:variable name="Variables.kco companies" />, but the reverse cannot be performed.</p>
+        <p>Each <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> has a "Base Currency" defined.&#160; A common approach is to have different base currencies in different <MadCap:variable name="Variables.kco companies" />, for example <MadCap:variable name="Variables.kco companies" /> 1, 2 and 3 in GBP, <MadCap:variable name="Variables.kco company" /> 4 in EUR, <MadCap:variable name="Variables.kco company" /> 5 in USD, and so on. There does not necessarily need to be any sequence to this. It is common for one currency to reflect the majority of the items and <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco companies" />, with other <MadCap:variable name="Variables.kco companies" /> configured to have Base in their own "Local Currency".</p>
+        <p>In the <MadCap:variable name="General.ProductName" /> database many key values (for example&#160;net, <MadCap:variable name="Variables.vat" />, discount, gross, etc) are actually held&#160;six times. In a single currency system just field 1 is used. In a multi currency system all&#160;six are used. Each of these&#160;six entries actually holds the value, and the exchange rate used. The&#160;six fields are :</p>
+        <p>1 - Document currency (for example&#160;invoice; the original transaction value)<br />2 - Base currency for the <MadCap:variable name="Variables.kco company" /><br />3 - Alternative base currency 1<br />4 - Alternative base currency 2<br />5 - Alternative base currency 3<br />6 - Account currency (for example&#160;<MadCap:variable name="Variables.pl supplier" /> account on PL, <MadCap:variable name="Variables.jc contract" /> currency on JC, etc)</p>
+        <p>The <strong>document currency </strong>is that of the transaction; for example, the invoice. An invoice in say USD may be processed through a <MadCap:variable name="Variables.kco company" /> operating overall in base of say GBP. If foreign currency is not involved this will be the same value as the base currency.</p>
+        <p>The <strong>account currency </strong>is that of the account for that transaction; for example, <MadCap:variable name="Variables.pl supplier" /> account currency for an invoice or <MadCap:variable name="Variables.jc contract" /> currency for a costing transaction. In very many cases these values will be the same as the document currency, and therefore the same as base. In practice, users are advised not to use the facility to have invoices of more than one currency on the same <MadCap:variable name="Variables.pl supplier" /> account, etc, but to keep different accounts for this purpose. This is not that <MadCap:variable name="General.ProductName" /> cannot handle this combination, but simply to guard against errors by input staff that could arise if this is allowed.</p>
+        <p><strong>Alternative base currencies</strong> are used for reporting in currencies other than the base currency; see <a href="WDSY0153_Alternative_Base_Currency.html">Alternative Base Currency</a>.</p>
+        <p>The currency values are calculated by <MadCap:variable name="General.ProductName" /> when the records are written to the system.&#160; If any of the Alternative Base currencies are not in use then the relevant fields will always be zero.</p>
+        <p>It is important in certain advanced areas of <MadCap:variable name="General.ProductName" /> to know how these six values are used. For example in the Report Writer users are offered a selection of fields and the currency items are shown as six entries; the user has to select the required one. If you do not require any multi-currency facility, and only want to report in Base currency, choose value 2. Regular end users, however, will not be presented with this at any point.</p>
+        <p />
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Example of Report Writer field selection</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The&#160;six lower entries are the six values for <MadCap:variable name="Variables.jc contract" /> costs by cost period.</p>
+                <p>
+                    <img src="../../Resources/Images/SY/SY_015101.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>In the case of <span class="module">General Ledger </span>balances a different approach is employed because the value fields are already held 12 times or more, one value for each period, and therefore three additional currency balance fields are held on this data, also with 12 or more values, to hold the alternative base values for each period.</p>
+        <p>In the case of <span class="module">General Ledger </span>transactions, GL accounts are always in the base currency of the <MadCap:variable name="Variables.kco company" />, and therefore it would be redundant to hold both Base and Account values, as they would always be the same. Therefore GL transactions have only&#160;five currency values held, not six. The one omitted is the last one, account currency. The same approach applies to <MadCap:variable name="Variables.vat" /> transactions.</p>
+        <p>Some standard <MadCap:variable name="General.ProductName" /> reports provide options for which currency they will report in, while others do not. Where there is no provision for foreign currency, the entries are always in the base currency of the <MadCap:variable name="Variables.kco company" />. </p>
+    </body>
+</html>

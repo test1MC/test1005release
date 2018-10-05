@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="2728" MadCap:lastWidth="854" MadCap:conditions="COINS.Internal">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Employee set up process</h1>
+        <h2>Standard items</h2>
+        <p>User maintenance, HR &amp; Payroll set up follow standard processes not covered by this guide</p>
+        <h2>Contract Security </h2>
+        <p>There are a few users e.g. Finance and Timesheet Administration, who will have access to all contracts.</p>
+        <p>Contract security should follow the structure shown below. Note that the Security list is based on the Contract Type. </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Employee set up process.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Employee set up process_1.png" class="FullWidth" />
+        </p>
+        <p>Client contracts are set as C01 or C04. Example of US Job set up where Job Type is C04.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Employee set up process_2.png" class="FullWidth" />
+        </p>
+        <p>All Internal contracts X*, I*, SUP*, S* (S* are pre sales contracts) have the Contract Type set as INT. All DEV* contracts have the Contract Type set as PDR.</p>
+        <p>The Code Txxn is the employees department contract for OH* timesheet activities. Set thus, employees cannot access another departments T contract.</p>
+        <p>The Code T is entered for any employee that does not enter timesheets. Employees that have left, and user groups (except TSENTRY) have a blank code. Setting the filter as shown below will show active employees for the logged in kco: </p>
+        <p> <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Employee set up process_3.png" class="FullWidth" /></p>
+        <p>Security is set up by User, not by User Group. User Groups should be blank, except for TSENTRY. </p>
+        <p>User Group TSENTRY:</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Employee set up process_4.png" class="FullWidth" />
+        </p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">TSENTRY settings should not be changed. </li>
+            <li style="list-style-type: disc;">TSENTRY provides automatic and appropriate permissions when selecting cross company client contracts. </li>
+            <li style="list-style-type: disc;">User specific permission overrides should not be set to invalidate the TSENTRY permissions.</li>
+            <li style="list-style-type: disc;">The reason behind this set up is so that each territory doesn’t have to worry about users in other territories accessing non client contracts via timesheet entry.</li>
+        </ul>
+        <h2>Contract Manager </h2>
+        <p>Under JC &gt; Set Up &gt; Set Up Maintenance &gt; Contract Manager screen – create the new employee as a Contract Manager and allocate their coins user id. Best to do this for all employees, because the Contract Manager control is based on allocation of the Contract Manager within either the Contract Maintenance screen, and/or within the SHO Workbench.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Employee set up process_5.png" class="FullWidth" />
+        </p>
+        <h2>JC Timesheet Employee maintenance</h2>
+        <p>Employee maintenance screen example shown below:</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PB/Employee-Setup-Guide/Employee set up process_6.png" class="FullWidth" />
+        </p>
+        <p>In the above example:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Department may link up with HR department depending upon config (Phil to add details).</li>
+            <li style="list-style-type: disc;">Department Approver (for timesheet approval – US only) will normally be the same department as the employee, but could be different if a Department Approver is approving employees from more than one department.</li>
+            <li style="list-style-type: disc;">External should be ticked if an external consultant set up for timesheet entry.</li>
+            <li style="list-style-type: disc;">Status should always be Employee. This is a memorandum field not relevant to <MadCap:variable name="General.ProductName" /> internal use.</li>
+            <li style="list-style-type: disc;">Entry period should always be Weekly</li>
+            <li style="list-style-type: disc;">The Analysis for timesheet entry employees should be Contract: Employees department T contract + 2499 + LA as shown. The 2499 has no effect on timesheet postings because the Timesheet Activity mapping takes precedence. The T contract determines the GL department to which the timesheet batch posts the credit entry.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

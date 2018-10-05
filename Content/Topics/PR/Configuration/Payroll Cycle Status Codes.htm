@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2466" MadCap:lastWidth="1486">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Payroll Cycle Status Codes</h1>
+        <p>&#160;</p>
+        <p>At any given time in the payroll process an employee always has a status associated with it. In order to move the payroll into a new period every employee has to go through the entire payroll cycle in each payroll period (week, month …).</p>
+        <p>To check the current employee’s status just select the Employee Maintenance menu under the relevant payroll frequency. You will find the status displayed for each individual employee in the last column on the presented screen.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PR/PR Configuration/PR-CFG-0001-1107.png" class="FullWidth" />
+        </p>
+        <p>The payroll statuses can only follow the below described route and to calculate the payroll correctly each employee has to go through all the statuses (with the exception of the status NEW) in each payment period.</p>
+        <p>You will also find that certain functions in <MadCap:variable name="General.ProductName" /> are linked to specific statuses, for example: you can only enter or edit timesheets while the status is START, RTI submission is only possible when employees have status PAID.</p>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 111px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 116px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Payroll Process</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Sub-Process</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Status</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Create New employee</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Blank. Does not appear in every payroll cycle, it
+only applies to a new starter before the first
+calculation.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="4">Payroll Input</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="4">START</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Only status where you are allowed to enter or
+edit timesheets &amp; statutory payments and fully
+amend employee records.
+The status will change from PAID to START by
+using Start New Period.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Employee Maintenance</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Enter leavers, make amendments to tax codes
+and employee static data, pensions, court
+orders and rarely changeable elements of pay.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">TimeSheet Entry</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Enter employees’ timesheets: include all the
+variable elements of pay, which tend to change
+every payroll period.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Inputting SSP, SMP,
+SAP, SPP</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Enter sickness (SSP), maternity (SMP),
+paternity (SPP), adoption (SAP) pay, when
+applicable.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="4">Calculate the Payroll</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="3">CALCED</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Calculates Gross &amp; Net Pay as well as TAX, NI,
+statutory payments, pensions etc, based on
+provided input.
+Use Reset function to return to the START
+status.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Processing Reports</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" rowspan="2">
+                        <p rowspan="2">Calculation will create {Frequency} Payroll
+Calculation report accessible from Report
+Status.
+</p>
+                        <p rowspan="2">Run other payroll reports and check the
+appropriate enquires to ensure the calculated
+data is correct.
+Use Reset to return to START status and amend
+the input and then Calculation to adjust the
+results.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Payroll Enquiries</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Create the Costing
+Batch</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Unposted</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Only UNPOSTED is a correct status! Incomplete
+denotes error you need to find (use Validate
+Batches) and correct before accepting the
+payroll.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="2">Accept the Payroll</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="2">ACCEPTED</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Watershed. No real action, only to denote the
+calculation is correct. Use Accept Payroll and
+the Next button.
+Cannot use Reset to return to START status. To
+revert to CALCED use Change Employee Status.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RTI submission</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Create FPS and EPS submissions to the HMRC.
+Submission will only be successful when status
+of all implicated employees is PAID.
+RTI report (found within Reports menu) with
+all data submitted to the HMRC can be created
+at any point after payroll is accepted.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="4">Pay Employees</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" rowspan="4">PAID</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">By selecting BACS Output and Print <MadCap:variable name="General.ProductName" /> will
+create a BACS file you can import into your
+BACS software.
+You will find the created {Frequency} Payroll
+BACS Output and Print report in the Report
+Status.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Produce Payslips</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Payslips can be produced any time after
+Calculation even before ACCEPTED status.
+Use Print Payslips function to create.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Pension output file</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Use Payment Data File Output to create the file
+and access it under My Files.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Post the Costing Batch</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">By using Post Batches the Unposted status
+changes to Posted and update the ledgers with
+payroll costs.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Start New Period</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">START</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Moves employees into a new pay period
+and resets the status back to START.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

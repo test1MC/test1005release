@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="499" MadCap:lastWidth="600">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />WF Stages - Stage</h1>
+        <p class="Body">A stage is where the workflow will require user interaction to complete the required part of the process and move the workflow onto the next stage.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_16.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_16_1106.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Role Calculation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A calculation to determine the user (or users) who must action this stage; used as an alternative to the Role. This calculation must result in one or more user names.&#160; If the role above is specified, the calculation variable “this” is assigned as the result of the role assignment.&#160; This can then be further manipulated by this calculation as required.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Check Calculation Result for Delegation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">If a workflow stage uses a role calculation,  instead of an assigned Role, delegation will not automatically kick-in - so if they are away the calculated role will always apply. You can now set it&#160;to check for delegation by ticking this field</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Select User</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">If the Role or Role Calculation results in a list of users, this determines how <MadCap:variable name="General.ProductName" /> treats the list.<br /><br />Role - Whatever the result of the Role or Role Calculation fields is, use that.&#160; If the result is two or more users, the task will appear on each user's workbench, but only one of them has to action the task.<br /><br />Individual - If the result is a list, the user who is handing on the task must first select one individual from the list to be the person to action the task.<br /><br />Group - The person who is handing on the task may select an individual, or assign it to everyone in the list.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Pre Calculation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Calculation to be performed before the stage. For example, you could use this to throw an error if a certain condition hasn't been met before the stage is run.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Post Calculation</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Calculation to be performed after the stage. For example, you could use this to send an email when the stage has been completed.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Link</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The label of another stage to which this stage is linked.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Condition</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A condition that must be true to enable the link.&#160; If this calculation evaluates to zero the link on this page is not enabled.&#160; If the calculation evaluates to a non-zero, or is blank, the link is enabled.<br /><br />If no condition is specified, the user must manually decide which of the specified links is to be enabled.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Default Link</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A default link can be specified on a stage of type STAGE (it must be one of the links defined in the 10 links above).&#160; If specified then when the task arrives at the stage the default stage specified is preloaded on the activity workbench task.&#160; If then user updates the completed flag then the next stage is already selected.&#160; They can also use the complete task browse action and the default link will be selected.&#160; This allows the most common link to be defaulted and eases the effort required by the user.&#160; The default link is shown on the diagram in green and with an asterisk after the link label and can be changed by double clicking the link and selecting the default link checkbox</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Activity Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">The activity type will be the type of action created on the Activity Workbench (determined by local configuration).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Priority</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">Priority will be high, normal or low. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Function</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">The function should be a valid <MadCap:variable name="General.ProductName" /> function which will be displayed as a link from the Activity Workbench. The function can be left blank if the action is to be performed outside of <MadCap:variable name="General.ProductName" /> or a suitable link is not available.&#160; The user will manually need to find and perform the task and then complete the stage in <MadCap:variable name="General.ProductName" />.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Workflow Email</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">Whether an email should be sent to the user of this stage to complete the action. This will only occur if the user has also been configured to request emails for this workflow.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Text</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">The text of the email that will be sent for this stage of the workflow.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Duration</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">Whether this stage has a duration associated with it. If the stage has a duration, the entry on the Activity Workbench will turn red if the stage is overdue.&#160; Ticking this will allow the following to be defined:</p>
+                        <p class="Body"> The duration of the stage (in the units shown in the next field).</p>
+                        <p class="Body">
+                            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_5.png" style="visibility: visible;mso-wrap-style: square;width: 358px;height: 40px;" />
+                        </p>
+                        <p class="Body"> The units for the duration of the stage.</p>
+                        <p class="Body"> When the duration is calculated from:</p>
+                        <p class="Body">Absolute = From the start of the workflow.</p>
+                        <p class="Body">Relative = From the start of this stage.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Monitor</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">The person whom <MadCap:variable name="General.ProductName" /> should notify if the stage is overdue. If the stage is overdue, <MadCap:variable name="General.ProductName" /> creates a duplicate action on the monitor's workbench, as an escalation type activity.</p>
+                        <p class="Body">Associated Parameters - SY/WFESC </p>
+                        <p class="Body">The activity workbench activity type to create if a workflow is escalated to the workflow monitor. You can configure different activity types for the activity workbench so that these escalation tasks stand out.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="Body">Reminder</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="Body">Whether to generate an Outlook reminder for the task. If you are using Outlook integration, this will generate an Outlook reminder for the user.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="Body">Timeout</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p class="Body">If ticked the following will be displayed:</p>
+                        <p class="Body">
+                            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_17.png" style="visibility: visible;mso-wrap-style: square;width: 334px;height: 40px;" />
+                        </p>
+                        <p class="Body">The default stage label to move to if the timeout is exceeded.</p>
+                        <p class="Body">If left blank then the next sequential stage will be used.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">Below is an example of a stage in PL Invoice Approval where, once the invoice has been reviewed by one role, the next stage available will be determined by the value of the invoice on the invoice.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_18.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Templates_18_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

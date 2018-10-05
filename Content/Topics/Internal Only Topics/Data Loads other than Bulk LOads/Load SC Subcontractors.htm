@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1841" MadCap:lastWidth="812">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Load Subcontractors</h1>
+        <p>&#160;</p>
+        <p class="note">These utilities are intended to be used by <MadCap:variable name="General.ProductName" /> Consultants and should never be used without prior discussion &amp; approval. </p>
+        <h2>Set Parameters
+</h2>
+        <p>&#160;</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Module</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Setting</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">PL</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">USECIS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">N</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">CI</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">ADDSCAC</p>
+                        <p class="TableCell">&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">SC</p>
+                        <p class="TableCell">(temporary workaround to create an SC address to avoid duplicate error)
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">CI</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableCell">AUTONUM</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">N</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">SY</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">EXPTYPE</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p class="TableCell">XML</p>
+                        <p class="TableCell"> (this will give you the shading for RO fields and should already be set)
+</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>
+Use Bulk Load as usual to Load SC
+</h2>
+        <p><a href="RG IAD Data Load SC.xlsx">(Example file RG IAD Data Load SC)</a>
+        </p>
+        <p>
+You can ignore the shaded columns A to S as these are RO fields and need not be populated.
+(This will probably change in 11.08, so start at Subcontractor Account Code)
+
+</p>
+        <p>Go to <span class="Function">Subcontract Ledger &gt; Subcontractors &gt; Subcontractor Maintenance</span></p>
+        <h2>Use Bulk Load as usual to Load SC CIS Details</h2>
+        <p><a href="RG IAD Data Load SC CIS.xlsx">(Example file RG IAD Data Load SC CIS)</a>
+        </p>
+        <p>You need to populate columns highlighted in yellow.</p>
+        <p>Go to <span class="Function">Subcontract Ledger &gt; CIS Tax &gt; Bulk CIS Maintenance</span></p>
+        <h2>Load CIW from SC
+</h2>
+        <p>Log in as Sysadmin</p>
+        <p>
+Go to System&gt;Toolbox&gt;Central Repository&gt;Create Companies from <MadCap:variable name="Variables.Purchase Ledger caps" /> Accounts.
+</p>
+        <p>
+            <img src="../../../Resources/Images/Internal Topics/DL-0002-1107.png" class="FullWidth" /><![CDATA[
+]]></p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" style="width: 507px;" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field	</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Setting</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Do you want to update details when the Subcontractor is already on file?</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Set to NO.</p>
+                        <p>This should only load subcontractors that do not already pre-exist in the CIW, so the next three options can be ignored.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" /></p>
+        <p> 
+Check the report that has been generated.</p>
+        <p>&#160;</p>
+        <p class="note">
+When complete reverse parameter settings.
+</p>
+    </body>
+</html>

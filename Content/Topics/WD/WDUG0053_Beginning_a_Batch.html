@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="1289" MadCap:lastWidth="1110">
+  <head>
+    <title>Beginning a Batch of Transactions</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Beginning a Batch of Transactions</h1>
+    <p>When you begin entering a batch, <MadCap:variable name="General.ProductName" /> displays the batch header screen.</p>
+    <p MadCap:conditions="COINS.v1109">Depending on how your system is set up, if you already have open, unposted batches an <span class="field">Open Batches</span> field displays a list of these. You can select an existing batch to add transactions to, or choose to create a new batch.</p>
+    <p>The <span class="field">Batch </span>and <span class="field">Reference </span>fields are for reference numbers that identify the batch.</p>
+    <ul>
+      <li>The <span class="field">Batch </span>field is for the batch number, an internal reference that <MadCap:variable name="General.ProductName" /> automatically assigns when you save the batch header. <MadCap:variable name="General.ProductName" /> generates the batch numbers in sequence. An auditor will need to use these to ensure that the audit trail is complete.</li>
+      <li>The <span class="field">Reference </span>field is for your reference for the batch. This can be any sequence of characters. You can use the lookup to find out which references have already been used. Alternatively, if your system is set up to produce automatic batch references, <MadCap:variable name="General.ProductName" /> generates the batch reference when you save the batch header.</li>
+    </ul>
+    <p class="noteheader">NOTE</p>
+    <div class="note">References and batch numbers need only be unique within the same batch type. Batches of different types may have the same reference and/or batch number. However, payment and cancel cash batches in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />, <MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" />, Subcontract Ledger, </span>and <span class="module"><MadCap:variable name="Variables.Contract Sales" style="text-transform: capitalize;" /> Ledger </span>share a single sequence of batch numbers, which are controlled by <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>batch types.</div>
+    <div class="process">
+      <h2 class="print">To enter a batch:</h2>
+      <ol>
+        <li>Fill in the fields as shown below:
+<table><tbody><tr><td><span class="field">Period</span></td><td>The <MadCap:variable name="Variables.financial period" /> that all the transactions in this batch will be posted to. Note that if you want to post transactions to more than one period, you need to enter them in separate batches.
+<p><MadCap:variable name="General.ProductName" /> automatically fills in the current period for the module you are working in. If the System Administrator has set other periods to be open, you can assign transactions to one of them: select the period.</p></td></tr><tr><td><span class="field">Transaction Date</span></td><td>The transaction date. <MadCap:variable name="General.ProductName" /> automatically fills in today's date, but you can enter a different date if you want.
+<p><MadCap:variable name="General.ProductName" /> uses the transaction date you enter in the batch header as the default transaction date for all the transactions, but you can choose a different transaction date for individual transactions.</p></td></tr><tr><td><span class="field">Transaction Type</span></td><td>Select a transaction type from the drop-down list.
+<p><MadCap:variable name="General.ProductName" /> uses the transaction type you enter in the batch header as the default transaction type for each transaction, but you can choose a different transaction type for individual transactions.</p><p>For example, if you were entering several invoices and one or two credit notes, you would choose "invoice" for the transaction type in the batch header, and change it to "credit note" for the <MadCap:variable name="Variables.cheque" /> transactions only. However, it is probably good practice to separate different transaction types in to separate batches.</p></td></tr><tr><td><span class="field">Description</span></td><td>Enter a description for the batch. <MadCap:variable name="General.ProductName" /> uses this as the default description for each transaction, and prints it at the top of the audit trail for the batch.</td></tr><tr><td><span class="field">Batch control totals</span></td><td>If the batch has been configured to use batch control totals you will be prompted for these. <MadCap:variable name="General.ProductName" /> compares these totals with the actual totals of the transactions you enter. At the end of the batch, <MadCap:variable name="General.ProductName" /> shows you whether the actual totals agree with the batch control totals.
+<p>The fields that are available as batch controls can be different for each batch type.</p></td></tr></tbody></table></li>
+        <li>When you have finished filling in the batch header information, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to go on to entering the transactions.
+<p class="noteheader">NOTE</p><div class="note">Sometimes the batch header is different from the example shown here. The differences are explained in the relevant documentation.</div></li>
+      </ol>
+    </div>
+  </body>
+</html>

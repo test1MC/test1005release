@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="810" MadCap:lastWidth="1023">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Data Display Colour Ranges</h1>
+        <p>Configuring Colour Ranges for use within <MadCap:variable name="General.ProductName" /> OA Reporting   simply enter the code for the Range and then enter a comma separated list containing the ranges and classes for this code.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Data Display Colour Ranges are Company Specific and must be configured in every company in which a report may be used.</p>
+        <p>To set up the <MadCap:variable name="Variables.colours" /> and ranges that <MadCap:variable name="General.ProductName" /> uses to display gauges and to highlight 'score' fields such as performance ratings :</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Code</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The code for the data display type.</p>
+                        <p>For gauges, this code must be entered as the value of the Populate field for the field to be displayed.</p>
+                        <p>For 'score' fields, this code must be passed as the first parameter to the {co_config.RO_rangeClass} method in the Class field (the score field/score value being compared should be the second parameter).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>The ranges and <MadCap:variable name="Variables.colours" /> for this code.</p>
+                        <p>These are of the form number,<MadCap:variable name="Variables.colour" />,[number,colour,] ... number, where number represents the value at which the colour display changes, and colour represents the colour used for displaying values between the two numbers on either side of it.</p>
+                        <p>For gauges, <MadCap:variable name="Variables.colour" /> is a hexadecimal RGB colour code. For example, 0,#00FF00,3,#FFFF00,7,#FF0000,10 gives the range 0 1 2 3 4 5 6 7 8 9 10.</p>
+                        <p>For 'score' fields, <MadCap:variable name="Variables.colour" /> is a cascading style sheet class defined in the user.css file.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2><span style="margin-right: 0pt;">2.2 </span>Error Handling</h2>
+        <p>Errors responses appear using standard SOAP fault syntax:</p>
+        <p>&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p>&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p>&lt;env:Body&gt;</p>
+        <p>&lt;env:Fault&gt;</p>
+        <p>&lt;env:Code&gt;</p>
+        <p>&lt;env:Value&gt;env:Sender&lt;/env:Value&gt; </p>
+        <p>&lt;/env:Code&gt;</p>
+        <p>&lt;env:Reason&gt;</p>
+        <p>&lt;env:Text&gt;Context record not found [SY704]&lt;/env:Text&gt; </p>
+        <p>&lt;/env:Reason&gt;</p>
+        <p>&lt;/env:Fault&gt;</p>
+        <p>&lt;/env:Body&gt;</p>
+        <p>&lt;/env:Envelope&gt;</p>
+        <p>If any error occurs, all actions in the XML request are rolled back.</p>
+    </body>
+</html>

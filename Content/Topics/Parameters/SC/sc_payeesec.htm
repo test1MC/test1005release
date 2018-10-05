@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SC/PAYEESEC - Payee Name Security</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SC/PAYEESEC - </span> Payee Name Security
+</div>
+<div class="param_def">
+<p>Whether COINS applies security to the <span class="field">Payee Name </span>and <span class="field">Subcontractor Name </span>fields in SC <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span>.</p>
+<p class="yesnolist"><span class="userinput">Y</span> = User permissions are maintained using <span class="function" title="Function:%WSC2011BCOS">Payee Name Security</span>. This can only be run if the <span class="parameter">SC/PAYEESEC </span>parameter is set to <span class="userinput">Y</span>. When run, a browser shows all users, and user security permissions for the name fields can be set for update permissions by entering * in the last column, or left blank to give non-update permissions.</p>
+<p class="yesnolist"><span class="userinput">N</span> = Any user can update the name fields.</p>
+<p>When <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span> is run, the program checks to see if the user has permissions to update the name fields; if the user does not have permissions and tries to amend the name fields, an error message is displayed.</p>
+<p>In <MadCap:snippetBlock src="../../../Resources/Snippets/coinsoa.flsnp"/>, as an alternative, you can use <span class="function" title="Function:%WSYBSFA">Field Access Maintenance</span>; see <a href="../../WD/WDSY0009_Access_to_Fields.html" target="_parent">Access to Fields</a>.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Isle of Man C14/C37</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Isle of Man C14/C37</h1>
+    <p>The SCC14C37 is an Isle of Man (only) tax document which produces a C14 Subcontractor?s Tax Deduction Card (to be given to the individual subcontractor), listing their payments and deductions over the year (effectively a summary of the <a href="WDSC0022_Isle_of_Man_C11.html">C11</a>). At the end of the print is a final page with the information required for the C37 to be returned to the Tax Authorities.</p>
+    <div class="process">
+      <h2 class="print">To configure an SCC14C37 document:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System Module</span>. </li>
+        <li>Use the <span class="userinput">SC Annual C14/C37 (IoM)</span> document type.</li>
+        <li>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </li>
+        <li>The following tables are available:</li>
+        <li>The SCC14C37 has the following tables available to it: sc_mast, sc_sc60, co_config.</li>
+        <li>The SCC14C37 has the following forms: </li>
+        <ul>
+          <li>The BODY form provides information from sc_mast and the client's information from co_config.  The required figures RO_TaxCertno, RO_LabourTaxYear, RO_MaterialsTaxYear, RO_TaxDeductedTaxYear which are all populated by calculations in the print program itself.</li>
+          <li>At the end of the document is the Contractor's Annual Return Form (by default C37).  This provides information about the client's company using the co_config table and the required statutory declaration wording and space for a signature.  There are number of RO fields: RO_C14Count, RO_TotalLabourTaxYear, RO_TotalMaterialsTaxYear, RO_TotalTaxDeductedTaxYear, which present the total annual values summarised from the SCC11.  These are all populated by calculations in the print program itself rather than being available as RO fields for a particular table. 
+<p />The field RO_TaxYears (on sc_mast) provides the current tax year as YYYY/YYYY.</li>
+          <li>The FOOT and CFOOT forms show a page count using the standard tokens.</li>
+        </ul>
+      </ol>
+    </div>
+  </body>
+</html>

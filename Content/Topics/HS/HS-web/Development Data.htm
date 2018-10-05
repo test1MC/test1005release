@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="4644" MadCap:lastWidth="1475" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Development Data</h1>
+        <h2>&#160;</h2>
+        <p>A sample XML message to send a query to <MadCap:variable name="General.ProductName" /> to access development information is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;login&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code" style="text-indent: 1.5in;">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code" style="text-indent: 1in;">&lt;/login&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;call object="hswssys1" method="dbquery" id="dbenq001" pcQuery="FOR EACH vp_site WHERE vp_site.kco = 1,FIRST jc_job OF vp_site" pcFields="kco,vsi_name,job_num,jcl_loc,kco,vsi_add__1,vsi_add__2,vsi_add__3,vsi_add__4,vsi_pcode,vsi_salesinfo,vsi_directions,vsi_phone,vsi_fax,vsi_email,vsi_url,vsi_northing,vsi_easting,vsi_offopen,vsi_sales,vsi_status,vsi_summary,vsi_sprice,vsi_eprice,RW_vsi_caption__1^1,vsi_lastrev" /&gt; </p>
+        <p class="code" style="text-indent: 0.5in;">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>The above message would retrieve development information for all developments in <MadCap:variable name="General.ProductName" /> company 1.&#160; As mentioned before the query is made against the hswssys1 <MadCap:variable name="General.ProductName" /> object with the dbquery method. </p>
+        <p>The pcQuery argument specifies the query to run in progress syntax. </p>
+        <p>The pcFields argument lists the fields to return in the output XML.&#160; The list of fields available on the jc_job and vp_site objects is available through the <MadCap:variable name="General.ProductName" /> OA database enquiry.</p>
+        <p>Note in the above example we have requested the value of a development caption field.&#160; The field RW_vsi_caption__1^1 would return the value of the 1st caption in the caption group with a caption group code of 1.</p>
+        <p>This would return a XML message with the following format:</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;call object="hswssys1" method="dbquery" id="dbenq001" </p>
+        <p class="code">pcQuery="FOR EACH vp_site WHERE vp_site.kco = 1 and (vp_site.job_num = '2006' or vp_site.job_num = '2009') ,FIRST jc_job OF vp_site" &#160; pcFields="kco,vsi_name,job_num,jcl_loc,kco,vsi_add__1,vsi_add__2,vsi_add__3,vsi_add__4,vsi_pcode,vsi_salesinfo,vsi_directions,vsi_phone,vsi_fax,vsi_email,vsi_url,vsi_northing,vsi_easting,vsi_offopen,vsi_sales,vsi_status,vsi_summary,vsi_sprice,vsi_eprice,RW_vsi_caption__1^1,vsi_lastrev"&gt;</p>
+        <p class="code">&lt;record vp_siteRowid="0x0029a8e2" jc_jobRowid="0x0012bf81"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;vsi_name&gt;Lakefieldsx&lt;/vsi_name&gt; </p>
+        <p class="code">&lt;job_num&gt;2006&lt;/job_num&gt; </p>
+        <p class="code">&lt;jcl_loc&gt;London&lt;/jcl_loc&gt; </p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;vsi_add__1&gt;10 Lakeside Way&lt;/vsi_add__1&gt; </p>
+        <p class="code">&lt;vsi_add__2&gt;Lakeside&lt;/vsi_add__2&gt; </p>
+        <p class="code">&lt;vsi_add__3&gt;Slough&lt;/vsi_add__3&gt; </p>
+        <p class="code">&lt;vsi_add__4&gt;Berkshire&lt;/vsi_add__4&gt; </p>
+        <p class="code">&lt;vsi_pcode&gt;SL2 1ZZ&lt;/vsi_pcode&gt; </p>
+        <p class="code">&lt;vsi_salesinfo&gt;Any other information goes here&lt;/vsi_salesinfo&gt; </p>
+        <p class="code">&lt;vsi_directions&gt;Take M25 to junction 8 then go left a bit and then right a &lt;/vsi_directions&gt; </p>
+        <p class="code">&lt;vsi_phone&gt;01753 501000&lt;/vsi_phone&gt; </p>
+        <p class="code">&lt;vsi_fax&gt;01753 501002&lt;/vsi_fax&gt; </p>
+        <p class="code">&lt;vsi_email&gt;lakefields@coins-global.com&lt;/vsi_email&gt; </p>
+        <p class="code">&lt;vsi_url&gt;www.coins-global.com/lakefields.html&lt;/vsi_url&gt; </p>
+        <p class="code">&lt;vsi_northing&gt;11111&lt;/vsi_northing&gt; </p>
+        <p class="code">&lt;vsi_easting&gt;22222&lt;/vsi_easting&gt; </p>
+        <p class="code">&lt;vsi_offopen&gt;Monday to Sunday from 11:00AM to 3:00PM&lt;/vsi_offopen&gt; </p>
+        <p class="code">&lt;vsi_sales&gt;A&lt;/vsi_sales&gt; </p>
+        <p class="code">&lt;vsi_status&gt;RELEASE&lt;/vsi_status&gt; </p>
+        <p class="code">&lt;vsi_summary&gt;Development of three bedroom houses all with ensuite etc ots more text and a little more blah blah blah&lt;/vsi_summary&gt; </p>
+        <p class="code">&lt;vsi_sprice&gt;180,000&lt;/vsi_sprice&gt; </p>
+        <p class="code">&lt;vsi_eprice&gt;250,000&lt;/vsi_eprice&gt; </p>
+        <p class="code">&lt;RW_vsi_caption__1_1&gt;Some caption text&lt;/RW_vsi_caption__1__&gt; </p>
+        <p class="code">&lt;vsi_lastrev&gt;2006-07-25T17:22:57&lt;/vsi_lastrev&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;record vp_siteRowid="0x0029a8e4" jc_jobRowid="0x0012bfc0"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;vsi_name&gt;Impetus&lt;/vsi_name&gt; </p>
+        <p class="code">&lt;job_num&gt;2009&lt;/job_num&gt; </p>
+        <p class="code">jcl_loc&gt;London&lt;/jcl_loc&gt; </p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;vsi_add__1&gt;5 Grange Road&lt;/vsi_add__1&gt; </p>
+        <p class="code">&lt;vsi_add__2&gt;Maidenhead&lt;/vsi_add__2&gt; </p>
+        <p class="code">&lt;vsi_add__3&gt;Berkshire&lt;/vsi_add__3&gt; </p>
+        <p class="code">&lt;vsi_add__4&gt;&lt;/vsi_add__4&gt;</p>
+        <p class="code">&lt;vsi_pcode&gt;SL1 1AA&lt;/vsi_pcode&gt; </p>
+        <p class="code">&lt;vsi_salesinfo&gt;Some other information&lt;/vsi_salesinfo&gt; </p>
+        <p class="code">&lt;vsi_directions&gt;Directions to the site&lt;/vsi_directions&gt; </p>
+        <p class="code">&lt;vsi_phone&gt;01628 123456&lt;/vsi_phone&gt; </p>
+        <p class="code">&lt;vsi_fax&gt;01628 123457&lt;/vsi_fax&gt; </p>
+        <p class="code">&lt;vsi_email&gt;sales@impetus.co.uk&lt;/vsi_email&gt; </p>
+        <p class="code">&lt;vsi_url&gt;www.impetus.co.uk&lt;/vsi_url&gt; </p>
+        <p class="code">&lt;vsi_northing&gt;99999&lt;/vsi_northing&gt; </p>
+        <p class="code">&lt;vsi_easting&gt;88888&lt;/vsi_easting&gt; </p>
+        <p class="code">&lt;vsi_offopen&gt;Monday to Friday 11am-4pm, Weekends 11am-5pm&lt;/vsi_offopen&gt; </p>
+        <p class="code">&lt;vsi_sales&gt;A&lt;/vsi_sales&gt; </p>
+        <p class="code">&lt;vsi_status&gt;CUSTCARE&lt;/vsi_status&gt; </p>
+        <p class="code">&lt;vsi_summary&gt;A secluded enclave in a sought after residential area, just eight 5 bedroom detached homes designed with light, space and architectural style in mind.&lt;/vsi_summary&gt; </p>
+        <p class="code">&lt;vsi_sprice&gt;300,000&lt;/vsi_sprice&gt; </p>
+        <p class="code">&lt;vsi_eprice&gt;400,000&lt;/vsi_eprice&gt; </p>
+        <p class="code">&lt;RW_vsi_caption__1_1&gt;&lt;/RW_vsi_caption__1_1&gt; </p>
+        <p class="code">&lt;vsi_lastrev&gt;2006-07-25T17:22:57&lt;/vsi_lastrev&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p class="note">As ^ and | are not allowed in XML node names, these are replaced with _ in the return message.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

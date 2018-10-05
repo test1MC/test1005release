@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="8" MadCap:lastHeight="426" MadCap:lastWidth="601">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />PCA Predict Parameters</h1>
+        <p style="page-break-after: avoid;">The following new SY parameters affect the <MadCap:variable name="Variables.behaviour" /> of integration with the PCA Predict web service which validates addresses, phone numbers, email addresses and bank account details.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">PCASERV</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Which validation services you want to use. You can select one or more of the following:</p>
+                        <ul>
+                            <li>Address Search</li>
+                            <li>Phone Number Validation</li>
+                            <li>Email Validation</li>
+                            <li>Bank Account Validation</li>
+                            <li>Geocoding</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">PCAKEY</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The <MadCap:variable name="Variables.licence" /> key for the PCA&#160;Predict web service.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">PCAADFLD</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>This allows you to override the default mapping and specify what each address line should be populated with. This is a list of PCA fields to use. It does not include the <MadCap:variable name="Variables.postal code" />.</p>
+                        <p>
+                            <img src="../../../Resources/Images/SY/PCA Predict Integration/PCAADFLD.png" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="page-break-after: avoid;">The following HS parameter now allows you to select additional fields to display if using the geocoding service.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">PIWXFLD</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Additional fields that can be prompted for when entering or updating a person in House Sales, Customer Care or Lettings Management. The list now includes:</p>
+                        <ul>
+                            <li>Easting/Northing</li>
+                            <li>Latitude/Longitude</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

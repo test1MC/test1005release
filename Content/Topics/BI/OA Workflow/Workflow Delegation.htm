@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Workflow Delegation</h1>
+        <p class="Body">Once all roles and responsibilities have been configured it is possible to delegate actions and tasks for users temporarily, for example during periods of annual leave.</p>
+        <p class="Body">When a workflow task is assigned to a user this table of delegations is consulted.&#160; If a record for the specific role exists for the user then that is used.&#160; If not then the record for all roles is used if it exists.&#160; If neither record is found then no delegation takes place and the original user is assigned the task.&#160; The date that the task is assigned is used to find the delegation record with the correct date range.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Delegation.png" MadCap:conditions="COINS.Pre-v1105" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Delegation_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">Simply define the user and role to be delegated.&#160; If the user belongs to several roles, you can enter more than one delegation record and assign each role to another user individually, or you may specify ALL and simply allocate all roles to another user.</p>
+        <p class="Body">Each delegation record may have each a unique start date.&#160;&#160; A blank start date is allowed indicating the delegation has no start date.&#160; A blank end date is also allowed indicating no end date.</p>
+        <p class="Body">Workflow Delegation is intended to stop new actions and tasks being assigned to a user who is unavailable.&#160; Any current actions and tasks will need to be reassigned manually.</p>
+        <p class="Body">A company specific delegation is also now available.&#160; If the company specific delegation is specified (in each company) then it is used.&#160; If it is blank then the global delegation is used.</p>
+        <p class="Body">The following business rules are applied:</p>
+        <ul>
+            <li>You are not allowed to overlap from/to dates for a single combination of user and role.&#160; i.e. only one delegation can apply on a single date.</li>
+            <li>The user must be valid and licensed for workflow</li>
+            <li>The delegate must be valid and licensed for workflow</li>
+            <li>The user and the delegate cannot be the same user</li>
+            <li>The company delegate can be blank indicating the global delegate should be used.</li>
+            <li>The global delegate can be left blank indicating that no delegation is to be done.&#160; This can be useful to leave the role records in place and just assign and remove the delegation as required.</li>
+        </ul>
+    </body>
+</html>

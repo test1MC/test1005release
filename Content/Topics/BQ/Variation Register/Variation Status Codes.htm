@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Variation Status Codes</h1>
+        <p><span class="Function">Variation Status Codes</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to set up status codes that can be allocated to variations in <span class="Function">Variation Register</span>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Variation Status Codes Maintenance</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BQ/Variation Register/Variation Status Codes Maintenance.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Code<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The status of the variation.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Description	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The description of the variation status.</p>
+                </div>
+            </div>
+            <div class="FieldBlock" style="page-break-inside: auto">
+                <div class="FieldLabel">
+                    <p>System Status</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The code for the system status. This determines the type of status you are setting up.</p>
+                    <p>You can create multiple variation status codes with the same system status if required so that these more detailed status codes are held against each variation for enquiry and reporting purposes. As a minimum to operating the Variation Register there should be a status code for each of the Registered, Live and Cancelled system status.</p>
+                    <p>The options are:</p>
+                    <ul>
+                        <li><span class="userselect">Registered</span>. Variations which have just been logged and the details are being prepared.</li>
+                        <li><span class="userselect">Budget Approval</span>. This is used to track variations where approval/​author<MadCap:variable name="Variables.is" />ation for the budget amount only has been requested. This would be a precursor to the <MadCap:variable name="Variables.bq bill" /> items being requested. Note no restriction will be placed on the <MadCap:variable name="Variables.bq bill" /> items being updated.</li>
+                        <li><span class="userselect">Budget Approved</span>. This is used to track variations where the budget has been approved.</li>
+                        <li><span class="userselect">Detail Approval</span>. This is used to track variations where approval/​author<MadCap:variable name="Variables.is" />ation for the complete variation including all the required <MadCap:variable name="Variables.bq bill" /> item changes has been requested.</li>
+                        <li><span class="userselect">Detail Approved</span>. This is used to track variations where the detail has been approved.</li>
+                        <li><span class="userselect">Live</span>. This is used to make the variation live. Once a variation is live, items will be able to be ordered and any further VAP budget updates will always include the revised <MadCap:variable name="Variables.bq bill" /> items. The details of the original <MadCap:variable name="Variables.bq bill" /> item revisions will be kept.</li>
+                        <li><span class="userselect">Cancelled</span>. This is used to track cancelled variations. When a variation is cancelled, the original <MadCap:variable name="Variables.bq bill" /> items are restored and any new items removed. Details of the proposed <MadCap:variable name="Variables.bq bill" /> item revisions will be kept.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Workflow</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The template code for the workflow to launch when a user selects this variation status.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Update</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether the user can manually select this status for a variation.</p>
+                    <p>If this is not <MadCap:variable name="Variables.tick" />ed, the status can only be set by a workflow.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Retired</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this variation status is retired.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Default Status for New Variation</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this status code is used as the default for a new variation.</p>
+                    <p>Only one status code can be flagged as the default.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Previous Status</p>
+                </div>
+                <div class="FieldDef">
+                    <p>A list of status codes. This allows you to control whether a specific status can be selected for a variation; if the current status of the variation is in this list, this status can be selected.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Update VAP Budget with Approved Cost</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether the Approved Cost for variations with this status should be included in the VAP budget when the <span class="Function">Update VAP Budget</span> process is run (see <MadCap:xref href="VAP Budget Update.htm">1 , Variations and VAP Budget Update</MadCap:xref>). This will be included against the stage and plot defined on the variation reason code (see <MadCap:xref href="Variation Reason Codes.htm">1 , Variation Reason Codes</MadCap:xref>).</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Update VAP Budget with Bill Items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether the amended <MadCap:variable name="Variables.bq bill" /> items associated with the variation should be included in the VAP budget update when the <span class="Function">Update VAP Budget</span> process is run. This is <MadCap:variable name="Variables.tick" />ed automatically if the system status is Live, and can’t be un<MadCap:variable name="Variables.tick" />ed.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Developments with No Bill Items Only</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this status code can only be used on developments where there are no <MadCap:variable name="Variables.bq bill" /> items (either house type or plot).</p>
+                    <p>This allows Variation Register to be used 'stand alone' on migrated sites where there is no <MadCap:variable name="Variables.bq bill" />. This status can then be used for 'Live' variations on these sites but have no validation of the <MadCap:variable name="Variables.bq bill" /> items against the approved amount.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Approved Cost Tolerance Check</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This allows the total cost of the <MadCap:variable name="Variables.bq bill" /> item changes to be checked against the Approved Cost for the variation. </p>
+                    <ul>
+                        <li><span class="userselect">No Check</span>. No tolerance check is to be done.
+</li>
+                        <li><span class="userselect">Percentage</span>. The check is based on the percentage variance only.
+</li>
+                        <li><span class="userselect">Amount</span>. The check is based on the amount only.
+</li>
+                        <li><span class="userselect">Lowest Percentage or Amount</span>. The check is based on the lowest of either the percentage or amount tolerance.
+</li>
+                        <li><span class="userselect">Highest Percentage or Amount</span>. The check is based on the highest of either the percentage or amount tolerance.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Tolerance Condition</p>
+                </div>
+                <div class="FieldDef">
+                    <p>When the cost tolerance check applies.</p>
+                    <ul>
+                        <li><span class="userselect">Above Only</span>. The tolerance check only applies if the <MadCap:variable name="Variables.bq bill" /> items exceed the approved cost.</li>
+                        <li><span class="userselect">Below Only</span>. The tolerance check only applies if the <MadCap:variable name="Variables.bq bill" /> items are less than the approved cost.</li>
+                        <li><span class="userselect">Above and Below</span>. The tolerance check applies regardless of whether the <MadCap:variable name="Variables.bq bill" /> items are greater than or less than the approved cost.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Tolerance %</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The percentage tolerance allowed.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Tolerance Amount</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The fixed tolerance amount.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

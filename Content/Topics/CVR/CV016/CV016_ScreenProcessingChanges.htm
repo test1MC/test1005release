@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="751" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1"><MadCap:variable name="Variables.CVR caps" /> Setup Changes</h1>
+        <h2 MadCap:autonum="1.1"><MadCap:variable name="Variables.CVR caps" /> Items</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field"><MadCap:variable name="Variables.CVR caps" /> Item?</span> field is found in the Subcontract <MadCap:variable name="Variables.CVR caps" /> Items properties area, as shown in <MadCap:xref href="#ForecastItemsFlag" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. If <MadCap:variable name="Variables.tick" />ed, additional fields appear below it.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="ForecastItemsFlag"></a><MadCap:variable name="Variables.CVR caps" /> Item Field</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV016_Images/ItemsForecastFlag.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Item for Spread Start Date</p>
+        <p class="IndentBold">Item for Spread End Date</p>
+        <p class="IndentFieldDef">The range of <MadCap:variable name="Variables.CVR caps" /> spread periods can be custom<MadCap:variable name="Variables.is" />ed using these start/end dates.</p>
+        <p class="IndentBold">Source for Actual Values</p>
+        <p class="IndentFieldDef">When updating a <MadCap:variable name="Variables.CVR caps" /> Item, this is the source for the Actual Values (options are <strong>Calculation</strong>, <strong>Manual Input</strong>, <strong>RSP&#160;Field</strong>), such as periods prior to the current <MadCap:variable name="Variables.CVR caps" /> period.</p>
+        <MadCap:pageBreak />
+        <p class="IndentBold">Period Calculation</p>
+        <p class="IndentFieldDef">This field is enabled if <strong>Calculation </strong>is selected as a source of the Actual Values. The calculation expression entered here is used for <MadCap:variable name="Variables.CVR caps" /> historical (actual) period level calculations.</p>
+        <p class="IndentBold">RSP Field for Actual Values</p>
+        <p class="IndentFieldDef">The RSP field from which to obtain Actual Values.</p>
+        <p class="IndentBold">Source for <MadCap:variable name="Variables.CVR caps" /> Values</p>
+        <p class="IndentFieldDef">The method to use for spreading an item over the remaining periods for a <MadCap:variable name="Variables.contract" />. The options are <strong>Calculation</strong>, <strong>Even Spread</strong>, <strong>Manual</strong>, and <strong>Proration</strong>.</p>
+        <p class="IndentBold">Period Calculation</p>
+        <p class="IndentFieldDef">This field is enabled if <strong>Calculation </strong>is selected as a source of the <MadCap:variable name="Variables.CVR caps" /> Values. The calculation expression entered here is used for <MadCap:variable name="Variables.CVR caps" /> future period level calculations.</p>
+        <h2 MadCap:autonum="1.2"><MadCap:variable name="Variables.CVR caps" /> Models</h2>
+        <h3 MadCap:autonum="1.2.1"><MadCap:variable name="Variables.CVR caps" /> Views - Custom Query</h3>
+        <p class="Body">A <span class="Field">Custom Query </span>field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in Browse Views setup for Views such as Cost Code (shown in <MadCap:xref href="#CustomQuery" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>), <MadCap:variable name="Variables.Sv Variation caps" />, etc. It appears for all <MadCap:variable name="Variables.CVR caps" /> views (except <MadCap:variable name="Variables.Contract caps" /> <MadCap:variable name="Variables.CVR caps" />).</p>
+        <p class="Body">Use this field to enter part of a WHERE clause to append a certain View’s body query.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CustomQuery"></a>Custom Query Field</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV016_Images/CustomQuery.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.2.2"><a name="Subcontr"></a>Subcontract <MadCap:variable name="Variables.CVR caps" /> View</h3>
+        <p class="Body">A <strong>Subcontract <MadCap:variable name="Variables.CVR caps"></MadCap:variable> </strong>View type appears as an Add Type option in <MadCap:variable name="Variables.CVR caps" /> Views maintenance, as shown in <MadCap:xref href="#SubcForecastViewOption" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. When selected, you can add information about this view in the properties area, as shown in <MadCap:xref href="#SubcForecastViewProps" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="SubcForecastViewOption"></a>Subcontract <MadCap:variable name="Variables.CVR caps" /> View Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV016_Images/SubcForecastOption.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="SubcForecastViewProps"></a>Subcontract <MadCap:variable name="Variables.CVR caps" /> View Properties</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV016_Images/SubcForecastProps.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Header Summary</p>
+        <p class="IndentFieldDef">The Field Group to show as a Header summary in browse View.</p>
+        <p class="IndentBold">Number of Fixed Columns</p>
+        <p class="IndentFieldDef">The number of columns you wish to be fixed on the screen. For example, when configuring a view, you may want the code and description to remain on the screen when scrolling left and right through the <MadCap:variable name="Variables.CVR caps" /> periods. This option allows you to fix these columns on the screen.</p>
+        <p class="IndentBold">Suppress Actual Periods</p>
+        <p class="IndentFieldDef">Whether to suppress <MadCap:variable name="Variables.CVR caps" /> Amounts in the actual periods in the <MadCap:variable name="Variables.CVR caps" /> screen.</p>
+        <p class="IndentFieldDef">The <strong>Subtotal Amount (Actuals) </strong>column can be configured in the <MadCap:variable name="Variables.CVR caps" /> Fields tab to show subtotal values of the actual periods.</p>
+        <p class="IndentBold">View Usage</p>
+        <p class="IndentFieldDef">Whether this view should be shown as <strong>Page Only</strong>, <strong>Report Only</strong>, or <strong>Report and Page</strong>.</p>
+        <p class="IndentBold">Build Condition</p>
+        <p class="IndentFieldDef">This is the Build Condition used to suppress or display a View, depending on the user's Role.</p>
+        <p class="IndentBold">Order Number</p>
+        <p class="IndentFieldDef">Select the range of subcontractor order numbers to report on.</p>
+        <p class="IndentBold">Subcontract Type</p>
+        <p class="IndentFieldDef">Select the range of subcontract type codes to report on. The codes are defined in <span class="module">Subcontract Ledger &gt; Setup Maintenance &gt; Subcontract Types</span>.</p>
+        <p class="IndentBold">Trade</p>
+        <p class="IndentFieldDef">The subcontract trade to report on.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Labour caps" />/Non-<MadCap:variable name="Variables.Labour caps" /></p>
+        <p class="IndentFieldDef">Whether to report on <strong><MadCap:variable name="Variables.Labour caps" /> Only</strong>, <strong>Non-<MadCap:variable name="Variables.Labour caps" /> Only</strong>, or <strong>Both </strong><MadCap:variable name="Variables.Labour caps" /> and Non-<MadCap:variable name="Variables.Labour caps" />.</p>
+        <p class="IndentBold">Complete/Incomplete</p>
+        <p class="IndentFieldDef">Whether to report on <strong>Complete Only</strong>, <strong>Incomplete Only</strong>, or <strong>Both </strong>Complete and&#160;Incomplete.</p>
+        <p class="IndentBold">Custom Query</p>
+        <p class="IndentFieldDef">Enter the part of a WHERE clause to append to a certain View’s body query.</p>
+        <h1 MadCap:autonum="2"><MadCap:variable name="Variables.CVR caps" /> Workbench Changes</h1>
+        <h2 MadCap:autonum="2.1"><MadCap:variable name="Variables.CVR caps" /> Grid Filtering - Custom Query</h2>
+        <p class="Body">You can filter <MadCap:variable name="Variables.CVR caps" /> Views (implemented in <MadCap:variable name="Variables.CVR caps" /> as <MadCap:variable name="General.ProductName" /> OA Ajax Grid) by Cost Code, as shown in <MadCap:xref href="#CCForecastView" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>. When the filter is applied, selection criteria determine the set of records available for <MadCap:variable name="Variables.CVR caps" /> input. Also, if you entered a Custom Query property, it is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>appended to the WHERE clause of the <MadCap:variable name="Variables.CVR caps" /> View query and applied when selecting database records.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="CCForecastView"></a>Cost Code <MadCap:variable name="Variables.CVR caps" /> View</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV016_Images/GridFilterCustomQuery.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.2"><MadCap:variable name="Variables.CVR caps" /> Items and Generate <MadCap:variable name="Variables.CVR caps" /> Spread</h2>
+        <h3 MadCap:autonum="2.2.1">Online <MadCap:variable name="Variables.CVR caps" /> Items Recalculation</h3>
+        <p class="Body"><span class="Function"><MadCap:variable name="Variables.CVR caps"></MadCap:variable> Items</span> handles Subcontract Item full values. It can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>also cater for <MadCap:variable name="Variables.CVR caps" /> values recalculation.</p>
+        <h3 MadCap:autonum="2.2.2">Background Update of <MadCap:variable name="Variables.CVR caps" /> Items</h3>
+        <p class="Body">If a Subcontract <MadCap:variable name="Variables.CVR caps" /> Item is selected for update in <span class="Function">Update <MadCap:variable name="Variables.CVR caps" /> Items</span>, <MadCap:variable name="Variables.CVR caps" /> values of the Item are recalculated as for other <MadCap:variable name="Variables.CVR caps" /> Items. The processing of Subcontract Item <MadCap:variable name="Variables.CVR caps" /> values is also <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>allowed for:</p>
+        <ul>
+            <li class="ListBullet3">Update <MadCap:variable name="Variables.CVR caps" /> Items, Recalculate Summary Values</li>
+            <li class="ListBullet3">Re-Spread <MadCap:variable name="Variables.CVR caps" /> Values (as a part of <MadCap:variable name="Variables.CVR caps" /> Update)</li>
+            <li class="ListBullet3">Generate <MadCap:variable name="Variables.CVR caps" /> Spread</li>
+            <li class="ListBullet3">Roll Up Spread to Item</li>
+            <li class="ListBullet3">Process <MadCap:variable name="Variables.CVR caps" /> Snapshot data</li>
+        </ul>
+        <h2 MadCap:autonum="2.3">Generate New <MadCap:variable name="Variables.CVR caps" /> and Copy <MadCap:variable name="Variables.CVR caps" /></h2>
+        <p class="Body">When a new <MadCap:variable name="Variables.CVR caps" /> is generated as a copy of a previous one, or by using the <strong>Copy previous adjustments </strong>option, previous adjustments are copied as part of the initial <MadCap:variable name="Variables.CVR caps" /> Update processing. When an existing <MadCap:variable name="Variables.CVR caps" /> is copied via the <MadCap:variable name="Variables.CVR caps" /> Workbench, manually entered data are copied from the original <MadCap:variable name="Variables.CVR caps" /> to the new <MadCap:variable name="Variables-US.CVR" />.</p>
+        <p class="Body"><MadCap:variable name="Variables.CVR caps" /> values of Subcontract Items are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>also processed by these programs.</p>
+        <h2 MadCap:autonum="2.4">Print <MadCap:variable name="Variables.CVR caps" /></h2>
+        <p class="Body">The&#160;<strong><MadCap:variable name="Variables.CVR caps"></MadCap:variable> Print </strong>program <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>supports Custom Query filtering in <MadCap:variable name="Variables.CVR caps" /> Grid Views and the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Subcontract <MadCap:variable name="Variables.CVR caps" /> grid type.</p>
+    </body>
+</html>

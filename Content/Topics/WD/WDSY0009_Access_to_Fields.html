@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1452" MadCap:lastWidth="891">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Access to Fields</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Access to Fields</h1>
+    <p>If a user has access to a database table (see <a href="WDSY0010_Table_Access_Security.html">Table Access Security</a>), by default they have access to all the fields in that table. You can control the access that users have to specific fields, using <span class="function" title="Function:%WSYBSFA">Field Access Maintenance</span>.</p>
+    <p>You can prevent a user from being able to see or access the field at all, or you can allow them only to view the field but not update it, or only to add new data but not change existing data.</p>
+    <p>You can control the access for an individual user, or for all users. For example, if you only want two users to be able to update the <span class="field">Account Closed </span>field on <span class="function" title="Function:%WPL2000BAVM"><MadCap:variable name="Variables.Pl Suppliers caps" /></span>, you could set one Read Only access record for all users, and two Update access records for the users you want to be able to update the field:</p>
+    <table class="TableStyle-COINSBasic" style="width: 75%;mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">
+              <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />
+            </p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Function</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Field</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">User</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+            <p class="TableHeader">Access</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="right">1</p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">%WPL2000BAVM</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_closed</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Read Only</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="right">1</p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">%WPL2000BAVM</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">avm_closed</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jsmith</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Update</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <p align="right">1</p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">%WPL2000BAVM</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">avm_closed</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">kjones</td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Update</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>You must set up a "base" function for a given field. <u>If <MadCap:variable name="General.ProductName" /> doesn't find a base function, it doesn't check for any other Field Access records for that field.</u> A base function for a particular field is one with <MadCap:variable name="Variables.kco company" /> set to 0, function and user set to blank, and access set to the level required:</p>
+    <table class="TableStyle-COINSBasic" style="width: 75%;mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">
+              <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />
+            </p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">Function</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">User</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Access</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <p align="right">0</p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">hpe_cost </td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Hidden </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If there is a base record, the hierarchy for field access is as follows:</p>
+    <table border="1" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic">
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader"> </p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p class="TableHeader">
+              <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />
+            </p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p style="text-align: center;">Function</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p style="text-align: center;">Field</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+            <p style="text-align: center;">User</p>
+          </th>
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+            <p class="TableHeader"> </p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">1</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>Controls the access of one user in the specified <MadCap:variable name="Variables.kco company" />, on the specified function.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">2</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center"> </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>Controls the access of one user in the specified <MadCap:variable name="Variables.kco company" />, for all functions.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">3</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">0</p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>Controls the access of one user in all <MadCap:variable name="Variables.kco companies" />, for the specified function.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">4</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">0</p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center"> </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>Controls the access of one user in all <MadCap:variable name="Variables.kco companies" />, for all functions.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">5</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>Controls the access of all users in the specified <MadCap:variable name="Variables.kco company" />, on the specified function.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">6</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>Controls the access of all users in the specified <MadCap:variable name="Variables.kco company" />, on any function.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">7</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;">0</p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <p style="text-align: center;"> </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+            <p>Controls the access of all users in all <MadCap:variable name="Variables.kco companies" />, on the specified function.</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td width="4%" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <p style="text-align: center;">8</p>
+          </td>
+          <td width="12%" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <p style="text-align: center;">0</p>
+          </td>
+          <td width="11%" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <p style="text-align: center;"> </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <p style="text-align: center;"> </p>
+            <p align="center">
+              <span style="color: green;font-family: Wingdings;">ü</span>
+            </p>
+          </td>
+          <td width="8%" class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+            <p style="text-align: center;"> </p>
+          </td>
+          <td width="55%" class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+            <p>Controls the access of all users in all <MadCap:variable name="Variables.kco companies" />, on any function.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>So for example if there is an access record like (1) with all four fields completed, that will override an access record like (3).</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">You cannot use <span class="function" title="Function:%WSYBSFA">Field Access Maintenance</span> to grant a higher level of access than the function allows; for example, you cannot grant update access to a field that is read-only, but you can grant read-only access to a field that is updateable.</div>
+    <p>You can also set up field access for groups:</p>
+    <ol>
+      <li>In <span class="function" title="Function:%WSYBSFA">Field Access Maintenance</span>, set up the access for the field, entering a group code in the <span class="field">User </span>column.</li>
+      <li>Run <span class="function" title="Function:%WSY3000RSFA">Group Field Access</span> and select the group. 
+<p>This creates a copy of the group's field access record for each user that belongs to the group. </p><p class="warningheader">WARNING</p><div class="warning">If there are any existing field access records for the same field/user combination, this will overwrite them.</div></li>
+    </ol>
+  </body>
+</html>

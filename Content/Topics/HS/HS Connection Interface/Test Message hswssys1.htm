@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="2583" MadCap:lastWidth="1521">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Test Message (hswssys1)</h1>
+        <p>&#160;</p>
+        <p>For testing purposes the message object hswssys1 contains a testMessage method.&#160; This allows you to pass a simple message to <MadCap:variable name="General.ProductName" /> and receive a response back containing the message.</p>
+        <p>A sample XML message to send a query to <MadCap:variable name="General.ProductName" /> to access development information is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;login&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code" style="text-indent: 1.5in;">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code" style="text-indent: 1.5in;">&lt;CID&gt;1&lt;/CID&gt; </p>
+        <p class="code" style="text-indent: 1in;">&lt;/login&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;call object="hswssys1" method="testMessage" id="0987654321"&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;Test&gt;</p>
+        <p class="code" style="text-indent: 2in;">&lt;Message&gt;Hello World&lt;/Message&gt; </p>
+        <p class="code" style="text-indent: 1.5in;">&lt;/Test&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;/call&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>This would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code" style="text-indent: 0.5in;">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;call object="hswssys1" method="testMessage" id="0987654321"&gt;</p>
+        <p class="code" style="text-indent: 2in;">&lt;Test&gt;</p>
+        <p class="code" style="text-indent: 2.5in;">&lt;YourMessage&gt;Hello World&lt;/YourMessage&gt; </p>
+        <p class="code" style="text-indent: 2in;">&lt;/Test&gt;</p>
+        <p class="code" style="text-indent: 2in;">&lt;returnvalue /&gt; </p>
+        <p class="code" style="text-indent: 1.5in;">&lt;/call&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>If you leave the message blank you can test the error response.&#160; With a blank message the following message will be returned:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;env:Body&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;env:Fault&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;env:Code&gt;</p>
+        <p class="code" style="text-indent: 2in;">&lt;env:Value&gt;env:Sender&lt;/env:Value&gt; </p>
+        <p class="code" style="text-indent: 1.5in;">&lt;/env:Code&gt;</p>
+        <p class="code" style="text-indent: 1.5in;">&lt;env:Reason&gt;</p>
+        <p class="code" style="text-indent: 2in;">&lt;env:Text&gt;Test message is blank&lt;/env:Text&gt; </p>
+        <p class="code" style="text-indent: 1.5in;">&lt;/env:Reason&gt;</p>
+        <p class="code" style="text-indent: 1in;">&lt;/env:Fault&gt;</p>
+        <p class="code" style="text-indent: 0.5in;">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

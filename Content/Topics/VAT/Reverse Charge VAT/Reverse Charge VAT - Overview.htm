@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2065" MadCap:lastWidth="1129">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Reverse Charge <MadCap:variable name="Variables.Vat caps" /></MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="Documents.ReleaseOverview">Reverse Charge <MadCap:variable name="Variables.Vat caps" /> (24620)</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">
+                <MadCap:conditionalText MadCap:conditions="Documents.NotReleaseOverview"> - </MadCap:conditionalText>
+            </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="Documents.NotReleaseOverview">Overview</MadCap:conditionalText>
+        </h1>
+        <p class="Body">Changes have been made to handle Reverse Charge and EU Acquisition <MadCap:variable name="Variables.Vat caps" /> for purchases of goods and services by UK <MadCap:variable name="General.ProductName" /> clients.  These changes will also help with two other requirements: partially recoverable <MadCap:variable name="Variables.Vat caps" /> and partially zero-rated <MadCap:variable name="Variables.Vat caps" />. <MadCap:conditionalText MadCap:conditions="Documents.ReleaseOverview">See <a href="https://www.coins-global.com/storage/documents/OA-CE-VT004-ReverseChargeVAT-UK.pdf" target="_blank">OA-CE-VT004</a> for details.</MadCap:conditionalText></p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">Note that the handling of the Reverse Charge on sales of goods and services is excluded from the scope of this PDR as it is likely to be required by few, if any, UK <MadCap:variable name="General.ProductName" /> clients.</p>
+        <h2 MadCap:conditions="Documents.NotReleaseOverview">Solution Outline</h2>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The outline of the solution is as follows:</p>
+        <ul>
+            <li MadCap:conditions="Documents.NotReleaseOverview">A new <MadCap:variable name="Variables.Vat caps" /> Code Substitution table in which users can define <MadCap:variable name="Variables.Vat caps" /> Code substitutions mapping one source <MadCap:variable name="Variables.Vat caps" /> Code to two or more target <MadCap:variable name="Variables.Vat caps" /> Codes. See <MadCap:xref href="Reverse Charge VAT - VAT Code Substitutions.htm">1, <i>Reverse Charge VAT - VAT Code Substitutions</i></MadCap:xref>.</li>
+            <li MadCap:conditions="Documents.NotReleaseOverview">When transactions in <MadCap:variable name="Variables.Purchase Ledger caps" />, Subcontract Ledger and <MadCap:variable name="Variables.Cash Book caps" /> are posted, <MadCap:variable name="General.ProductName" /> checks the <MadCap:variable name="Variables.vat" /> distribution against the <MadCap:variable name="Variables.Vat caps" /> Code substitution table and replaces any <MadCap:variable name="Variables.vat" /> distribution lines for <MadCap:variable name="Variables.Vat caps" /> Codes listed in that table with multiple <MadCap:variable name="Variables.vat" /> distribution lines as defined in the table. See <MadCap:xref href="Reverse Charge VAT - Transaction Processing.htm">1, <i>Reverse Charge VAT - Transaction Processing..</i></MadCap:xref>.</li>
+        </ul>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">For example a <MadCap:variable name="Variables.vat" /> distribution for Reverse Charge Input <MadCap:variable name="Variables.Vat caps" /> which would have a zero <MadCap:variable name="Variables.Vat caps" /> rate (so that <MadCap:variable name="Variables.vat" /> would not be added to the payment) would be substituted with two <MadCap:variable name="Variables.vat" /> distribution lines: one for Output <MadCap:variable name="Variables.Vat caps" /> at 20% and one for Input <MadCap:variable name="Variables.Vat caps" /> at 20% (so that these entries would be posted and appear on the <MadCap:variable name="Variables.Vat caps" /> Return).</p>
+        <h2 MadCap:conditions="Documents.NotReleaseOverview">Background</h2>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">Normally <MadCap:variable name="Variables.vat" /> is calculated by the seller of goods and services and is added to the sales invoice.  The <MadCap:variable name="Variables.vat" /> is then paid to the seller by the purchaser of those goods/services along with the purchase price.  The <MadCap:variable name="Variables.vat" /> is paid over to HMRC by the seller on their <MadCap:variable name="Variables.Vat caps" /> Return.  The purchaser may (subject to certain restrictions) recover that <MadCap:variable name="Variables.vat" /> from HMRC on their <MadCap:variable name="Variables.Vat caps" /> Return.  The Reverse Charge has been introduced in certain situations to prevent fraudulent abuse of the system.  Where items fall within the scope of the Reverse Charge, the seller does not add <MadCap:variable name="Variables.vat" /> to their sales invoice and the payment by the purchaser does not include <MadCap:variable name="Variables.vat" />.  The purchaser then calculates the <MadCap:variable name="Variables.vat" /> that would otherwise have been charged by the seller and pays it over to HMRC on their <MadCap:variable name="Variables.Vat caps" /> Return.  The purchaser may also (subject to certain restrictions) recover that <MadCap:variable name="Variables.vat" /> from HMRC on their <MadCap:variable name="Variables.Vat caps" /> Return.  The <MadCap:variable name="Variables.vat" /> on the sale and purchase on the purchaser’s <MadCap:variable name="Variables.Vat caps" /> Return are thus normally equal and opposite resulting in a nil effect on the amount paid to HMRC.  However, failure to include these entries on the <MadCap:variable name="Variables.Vat caps" /> Return is an offence and is subject to substantial penalties.</p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">For acquisition of goods from other EU countries, a process similar to the Reverse Charge applies, although this is technically known as Acquisition Tax rather than Reverse Charge.</p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">Note that following the EU Referendum result, the UK will remain a member of the EU until the exit process is completed.  After that, it is likely that <MadCap:variable name="Variables.vat" /> rules will remain largely unchanged at least initially – dependant partly on the negotiated terms of exit from the EU.  In the longer term, there is uncertainty as to what changes may be made to <MadCap:variable name="Variables.vat" />. These changes provide for a solution with a significant amount of configurability which should offer a degree of flexibility to cope with future changes in requirements.</p>
+        <h2 MadCap:conditions="Documents.NotReleaseOverview">Situations where Reverse Charge <MadCap:variable name="Variables.Vat caps" /> Applies</h2>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">There are a number of different situations where the Reverse Charge applies in the UK:</p>
+        <h3 MadCap:conditions="Documents.NotReleaseOverview">EU Services Reverse Charge</h3>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The requirements for this are documented in Section 18 of VAT Notice 741A ‘Place of supply of services’ which was published on 24 Feb 2010.</p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The specified services to which the reverse charge applies are:</p>
+        <ul>
+            <li MadCap:conditions="Documents.NotReleaseOverview">B2B general rule services from an overseas supplier;</li>
+            <li MadCap:conditions="Documents.NotReleaseOverview">Certain other services performed in the UK by an overseas supplier.</li>
+        </ul>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">For the detailed definitions and exclusions see VAT Notice 741A.</p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The requirements are basically that the VAT amount is entered in both Box 1 and Box 4 of the VAT Return (assuming that the VAT is recoverable) and the net amount is entered in both Box 6 and Box 7 of the VAT Return.</p>
+        <h3 MadCap:conditions="Documents.NotReleaseOverview">Domestic Reverse Charge</h3>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The requirements for this are documented in VAT Notice 735 ‘VAT domestic reverse charge on specified goods and services’ which was first published on 1 Feb 2013 and last updated on 27 April 2015.</p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The specified goods to which the reverse charge applies are:</p>
+        <ul>
+            <li MadCap:conditions="Documents.NotReleaseOverview">Mobile phones and computer chips (subject to a de minimis of £5,000);</li>
+            <li MadCap:conditions="Documents.NotReleaseOverview">Wholesale gas and electricity.</li>
+        </ul>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The specified services to which the reverse charge applies are:</p>
+        <ul>
+            <li MadCap:conditions="Documents.NotReleaseOverview">Emission allowances.</li>
+        </ul>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">For the detailed definitions and exclusions see VAT Notice 735.</p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The requirements are essentially the same as for the EU Services Reverse Charge except that the net amount of the services is not included in box 6 of the VAT Return.</p>
+        <h3 MadCap:conditions="Documents.NotReleaseOverview">EU Acquisitions Tax</h3>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The requirements for this are documented in VAT Notice 700 ‘The VAT guide’ which was first published on 1 Feb 2013 and last updated on 1 April 2015.</p>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The specified goods to which the acquisition tax applies are:</p>
+        <ul>
+            <li MadCap:conditions="Documents.NotReleaseOverview">Goods acquired into the UK from another EU country.</li>
+        </ul>
+        <p class="Body" MadCap:conditions="Documents.NotReleaseOverview">The accounting for acquisition tax is essentially the same as for Reverse Charge VAT although the entries on the VAT Return are slightly different.  The requirements are basically that the VAT amount is entered in both Box 2 and Box 4 of the VAT Return (assuming that the VAT is recoverable) and the net amount is entered in Box 6, Box 7 and Box 9 of the VAT Return.</p>
+    </body>
+</html>

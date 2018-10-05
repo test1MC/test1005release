@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="822" MadCap:lastWidth="842">
+    <head><title>Printing the [%=Variables.Cheque caps%] Amount in Words</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print" MadCap:autonum="1 ">Printing the <MadCap:variable name="Variables.Cheque caps" /> Amount in Words</h1>
+        <p><MadCap:variable name="General.ProductName" /> provides special fields that allow you to print the amount of the <MadCap:variable name="Variables.cheque" /> in words, either as individual words for each digit, or as a line of text that represents the amount.&#160; The 'line of text' versions use the appropriate wording for the currency (for example, Dollars and Cents or Pounds and Pence).</p>
+        <div class="process">
+            <h2 class="print" MadCap:autonum="1.1 ">To print the <MadCap:variable name="Variables.cheque" /> amount in words:</h2>
+            <ul>
+                <li>To print a line with the following format:
+<p><span class="screentype"><strong>ONE ZERO NINE SEVEN FIVE THREE 64</strong></span></p><p>On <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span><MadCap:variable name="Variables.cheque" /> documents, add a line containing the field <span class="screentype fieldname">RO_cbd_digitword__<em>n</em></span> where <em>n</em> is the position (1 = units, 2 = tens, 3 = hundreds, and so on). Repeat this field for each position. Use <span class="screentype fieldname">RO_cdb_pence </span>for the pence/cents amount in figures:</p><p><img src="../../Resources/Images_A-C/CB/CB_000201.png" class="FullWidth" /></p>
+The following table shows the fields to use on other <MadCap:variable name="Variables.cheque" /> documents:
+<table class="type1" border="0"><thead><tr><th>Module</th><th>Words Field</th><th>Pence/Cents</th></tr></thead><tbody><tr><td><span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span></td><td><span class="fieldname">RO_acs_digitWord__<em>n</em></span></td><td><span class="fieldname">RO_acs_pence</span></td></tr><tr><td><span class="module">Subcontract Ledger</span></td><td><span class="fieldname">RO_scs_digitWord__<em>n</em> &#160;</span></td><td><span class="fieldname">RO_scs_pence&#160;</span></td></tr><tr><td><span class="module">Payroll</span></td><td><span class="fieldname">RO_prk_AmountWord__<em>n</em> &#160;</span></td><td><span class="fieldname">RO_prk_AmountPence&#160;</span></td></tr></tbody></table></li>
+                <li>To print the payee and the amount in "full text"; for example:
+<p><span class="screentype"><strong>Apex Industrial Ltd. ***************</strong><br /><strong>ONE HUNDRED AND TWENTY THREE <span style="text-transform: uppercase;"><MadCap:variable name="Variables.co_curunit" style="text-transform: uppercase;" /></span>S 99<MadCap:variable name="Variables.co_curdec" style="text-transform: uppercase;" /> ONLY ****************</strong><br /><strong>*************************************************************</strong></span></p><p>On <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span><MadCap:variable name="Variables.cheque" /> documents, add consecutive lines containing the fields <span class="screentype fieldname">RO_cbd_chqnarr*</span>, <span class="screentype fieldname">RO_cbd_digitLine1</span> and <span class="fieldname"><span class="screentype">RO_cbd_digitLine2</span>.</span></p><p>The following table shows the fields to use on other <MadCap:variable name="Variables.cheque" /> documents.</p><table class="type1" border="0"><tbody><tr><th>Module</th><th>Payee &#160;</th><th>Text Line &#160;</th></tr><tr><td><span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> &#160;</td><td><span class="fieldname">RO_acs_jointPayeen* </span></td><td><span class="fieldname">RO_acs_famountWords&#160;&#160;&#160;</span></td></tr><tr><td><span class="module">Subcontract Ledger</span>&#160;</td><td><span class="fieldname">RO_scs_jointPayeen* &#160;</span></td><td><span class="fieldname">RO_scs_amtWords__<em>n</em>&#160;</span></td></tr><tr><td><span class="module">Payroll</span>&#160;</td><td>&#160;&#160;</td><td><span class="fieldname">RO_prk_AmountWords__<em>n</em>&#160;</span></td></tr></tbody></table></li>
+            </ul>
+        </div>
+        <div class="configuration">
+            <h2 class="print" MadCap:autonum="1.2 ">Configuration</h2>
+            <p>Use <span class="function" title="Function:%WCO2001BCUR">Currencies</span> to specify the currency name (such as Dollars or Pounds) and the currency sub unit (such as Cents or Pence) to print on <MadCap:variable name="Variables.cheques" />.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CO/co_curunit.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_curdec.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_curplu.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

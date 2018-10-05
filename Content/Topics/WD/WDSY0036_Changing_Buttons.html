@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Changing Buttons and Other Images</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Changing Buttons and Other Images</h1>
+    <p>Buttons and other images on <MadCap:variable name="General.ProductName" /> screens are held in the /images/ directory of your <MadCap:variable name="General.ProductName" /> installation.</p>
+    <p>You can change the images on the screen by copying the image files to a new location and changing them.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0515_Location_of_Images_and_Other_Files.html" />
+        <MadCap:relatedTopic src="WDSY0034_Changing_Colours.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To set up a user-defined images directory:</h2>
+      <ol>
+        <li>Underneath the webserver base document directory there will be a <strong>coins</strong> directory. Create a new directory underneath this, and create a directory called <strong>images</strong> underneath that; for example: <strong>coins/bespoke/images</strong>.</li>
+        <li>Copy all the contents of the Standard images directory into this user images directory. </li>
+        <li>Set the <span class="parameter">SY/WEBIMGS </span>parameter to the name of the parent directory of the images directory.  For example: <span class="userinput">bespoke</span>.
+<p class="noteheader">NOTE</p><div class="note">If you also have user-defined directories for scripts and styles, set <span class="parameter">SY/WEBBASE </span>to the parent directory of the images, scripts and styles directories, and set <span class="parameter">SY/WEBIMGS </span>to <span class="userinput">$WEBBASE</span>.</div></li>
+        <li>You can then modify the images in the user directory, or add your own.</li>
+        <li>If you want different images for each <MadCap:variable name="Variables.kco company" />, create different directories under the webserver base document directory (for example: <strong>coins/company1/images</strong>, <strong>coins/company2/images</strong>) and set the <span class="parameter">SY/WEBIMGS</span> parameter in each <MadCap:variable name="Variables.kco company" /> to point to the releavant <MadCap:variable name="Variables.kco company" /> directory.</li>
+      </ol>
+      <p>You can place logos and background images specific to reports anywhere underneath the webserver base directory.  Use the <span class="parameter">SY/WEBLOGO</span> parameter to specify the logo.  Do not place these files anywhere underneath <strong>$BASE/app</strong>.</p>
+    </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_webimgs.htm" />
+          <MadCap:relatedTopic src="../Parameters/SY/sy_weblogo.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

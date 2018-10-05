@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="876" MadCap:lastWidth="601">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Format of Requisition Numbers</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Format of Requisition Numbers</h1>
+    <p>You can configure the format of purchase requisition numbers, so that they show information about the requisition. </p>
+    <p>Requisition numbers can be up to 15 characters long. </p>
+    <p>The simplest format for a requisition number would be a single numerical sequence for your entire <MadCap:variable name="Variables.kco company" />. To do this, set <span class="parameter">PRNUM1 </span>to <span class="userinput">comp</span>, and <span class="parameter">PRFORM </span>to <span class="userinput">99999999 </span>(or however many digits you want in the number, up to 15).</p>
+    <p>But you may want the number to show other information: </p>
+    <ul>
+      <li>You can show any one of the following as the <strong>base</strong> part of the requisition number: </li>
+      <ul>
+        <li>For material, <MadCap:variable name="Variables.pc plant" /> or subcontract requisitions: <MadCap:variable name="Variables.jc contract" />, location, group, <MadCap:variable name="Variables.jc contract" /> type, or any one of the four <MadCap:variable name="Variables.jc contract" /> analysis sets. Use the PO parameter <span class="parameter">PRNUM1</span>. </li>
+        <li>For overhead requisitions: department or one of the four <span class="mODULE">General Ledger </span>account elements. Use the PO parameter <span class="parameter">PRNUM2</span>. </li>
+        <li>For workshop requisitions: location or <MadCap:variable name="Variables.pc jobcard" />. Use the PO parameter <span class="parameter">PRNUM3</span>. </li>
+        <li>For overhead requisitions: asset code or department code. Use the PO parameter <span class="parameter">PRNUM4</span>. </li>
+        <p />For example, to include the <MadCap:variable name="Variables.jc contract" /> code in the requisition number, set <span class="screentype">PRNUM1 </span>to <span class="userinput"><MadCap:variable name="Variables.fm job" /></span>. <MadCap:variable name="General.ProductName" /> prefixes the number with the <MadCap:variable name="Variables.jc contract" /> code. There will be a different sequence of numbers for each prefix; for example: <span class="screentype">1/00001, 1/00002 </span>and <span class="screentype">2/00001, 2/00002</span>. 
+<p />NOTE: To generate different sequences for each <MadCap:variable name="Variables.kco company" />, set the above parameters to <span class="userinput">comp</span>. The <MadCap:variable name="Variables.kco company" /> number is not shown as part of the requisition number. </ul>
+      <li>To indicate the <strong>type </strong>of requisition (for example, material, <MadCap:variable name="Variables.pc plant" /> or subcontract), enter the prefixes against the following PO parameters: </li>
+      <ul>
+        <li>
+          <span class="parameter">ASREQPFX</span> (Asset) </li>
+        <li>
+          <span class="parameter">OVREQPFX</span> (Overhead) </li>
+        <li>
+          <span class="parameter">PLREQPFX</span> (<MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />) </li>
+        <li>
+          <span class="parameter">PRREQPFX</span> (Material) </li>
+        <li>
+          <span class="parameter">SCREQPFX</span> (Subcontract) </li>
+        <li>
+          <span class="parameter">STREQPFX</span> (<MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" />) </li>
+        <li>
+          <span class="parameter">WSREQPFX</span> (Workshop) </li>
+      </ul>
+      <p>For example, <span class="screentype">MAT-, OHD-, PLT- </span>would produce requisition numbers such as <span class="userinput">MAT-00001, MAT-00002, OHD-00001, PLT-00001, OHD-00002</span> and so on. </p>
+    </ul>
+    <p>You can combine any of the above, and all are optional. <MadCap:variable name="General.ProductName" /> generates separate sequences for each different prefix. </p>
+    <p>Subcontract requisitions always have different sequences from material/<MadCap:variable name="Variables.pc plant" /> requisitions, even if you are not using any prefixes. The parameter <span class="parameter">SRFORM </span>governs the format of subcontract requisition sequence numbers, and <span class="parameter">SRNUM1 </span>governs the base. </p>
+    <p>You can change the next number in any of the sequences. See <a href="WDPO5012_Number_Sequences.html">Number Sequences</a>. </p>
+    <p>To summar<MadCap:variable name="Variables.is" />e: </p>
+    <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" style="width: 24px;" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th style="TEXT-ALIGN: center;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;" colspan="3" class="TableStyle-COINSBasic-HeadE-Column1-Header1">Type </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableHeader"> </p>
+          </th>
+          <th style="TEXT-ALIGN: center;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;" colspan="3" class="TableStyle-COINSBasic-HeadE-Column1-Header1">Base </th>
+          <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></th>
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">Sequence </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td style="VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 2px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 2px;border-bottom-style: solid;border-bottom-width: 2px;" class="TableStyle-COINSBasic-BodyE-Column1-Body1"></td>
+          <td style="VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;" class="TableStyle-COINSBasic-BodyE-Column1-Body1">Asset<br />Overhead<br /><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /><br />Material<br />Subcontractor<br /><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /><br />Workshop </td>
+          <td style="MARGIN-TOP: 0px;VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 2px;border-right-color: #000000;border-top-style: solid;border-top-width: 2px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #000000;" class="TableStyle-COINSBasic-BodyE-Column1-Body1"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"></p>
+          </td>
+          <td style="VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 2px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 2px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #000000;" class="TableStyle-COINSBasic-BodyE-Column1-Body1"></td>
+          <td style="VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;" class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+            <MadCap:variable name="Variables.Jc Contract caps" />
+            <br />Location<br />Group<br />etc. :</td>
+          <td style="VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 2px;border-right-color: #000000;border-top-style: solid;border-top-width: 2px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 2px;border-bottom-color: #000000;" class="TableStyle-COINSBasic-BodyE-Column1-Body1"></td>
+          <td style="VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;text-align: center;" class="TableStyle-COINSBasic-BodyE-Column1-Body1">/</td>
+          <td style="VERTICAL-ALIGN: middle;border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;" class="TableStyle-COINSBasic-BodyD-Column1-Body1">Sequence </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td colspan="2" class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">Governed by:</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <span class="parameter">ASREQPFX</span>,<br /><span class="parameter">OVREQPFX</span>,<br /><span class="parameter">PLREQPFX</span>,<br /><span class="parameter">PRREQPFX</span>,<br /><span class="parameter">SCREQPFX</span>,<br /><span class="parameter">STREQPFX</span>,<br /><span class="parameter">WSREQPFX</span></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <span class="parameter">PRNUM1</span>, <br /><span class="parameter">PRNUM2</span>, <br /><span class="parameter">PRNUM3</span>, <br /><span class="parameter">PRNUM4</span>,<br /><span class="parameter">SRNUM1</span></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"> </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p>
+              <span class="parameter">PRFORM </span>
+            </p>
+            <p MadCap:conditions="COINS.v1108">
+              <span class="parameter">PRASFORM</span>
+            </p>
+            <p MadCap:conditions="COINS.v1108">
+              <span class="parameter">PROVFORM</span>
+            </p>
+            <p MadCap:conditions="COINS.v1108">
+              <span class="parameter">PRSTFORM</span>
+            </p>
+            <p MadCap:conditions="COINS.v1108">
+              <span class="parameter">PRWSFORM</span>
+            </p>
+            <p>
+              <span class="parameter">SRFORM </span>
+            </p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td colspan="2" class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">Examples:</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">M-</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">1000</td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">/</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">0005</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">P-</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">
+            <p class="TableCell"> </p>
+          </td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">Civil</td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;"></td>
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">/</td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1" style="border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;">B0102 </td>
+        </tr>
+      </tbody>
+    </table>
+    <p />
+  </body>
+</html>

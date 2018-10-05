@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="390" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Document Management Extended Search - </MadCap:conditionalText>Process OCR Queue</h1>
+        <p class="Body"><span class="Function">Process OCR Queue</span> is a new function on the Document Management- Administration menu. It enables the OCR process to be run, either on demand or scheduled using the standard <MadCap:variable name="General.ProductName" /> report scheduler. No input is required on this function.</p>
+        <p class="Body"><span class="Function">Process OCR Queue</span> processes any images (that are specified in <span class="parameter">OCRCAT</span>) scanned since the last time OCR was run. It will only process those files added after the functionality has been installed and configured.</p>
+        <p class="Body">In addition, if the DM parameter <span class="parameter">GENSRCPDF</span> is set to <span class="userinput">Y</span> (and Tesseract version 3.03 or later is installed), the process will create a searchable PDF file for images specified in <span class="parameter">OCRCAT</span>. These files are stored as revisions of the original scanned images in the <MadCap:variable name="General.ProductName" /> database under the <span class="module">Document Management</span> module. All subsequent image retrieval will return the searchable PDF file.</p>
+        <p class="Body">If the DM parameter <span class="parameter">OCROSOLR</span> is set to <span class="userinput">Y</span>, the extracted text will be passed to the Solr database.</p>
+    </body>
+</html>

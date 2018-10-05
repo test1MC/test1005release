@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Ground Rent and Service Charges</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Ground Rent and Service Charges</h1>
+    <p>
+      <span class="module">House Sales </span>allows you to bill ground rent, service charges and other charges automatically.  Normally the bill is produced based on information held against the plot, though you can also enter charges manually.  This is intended for simple ground rent during the period before the freehold is sold ? it is not designed as a full rental ledger.</p>
+    <ul>
+      <li>Standard ground rent and/or service charge calendars can be set up for each <MadCap:variable name="Variables.vp site" /> to handle monthly, quarterly, half-yearly or annual due dates.</li>
+      <li>Rents and/or service charges may be charged either in advance or in arrears.</li>
+      <li>The annual ground rent and/or service charge amount is input and held against each plot. </li>
+      <li>For charges in advance, <MadCap:variable name="General.ProductName" /> can automatically calculate the amount due on legal completion and include this in the completion statement.</li>
+      <li>A batch process is run periodically to generate ground rent and/or service charge charges for each plot due.</li>
+      <li>Manual charges or adjustments can be input. </li>
+      <li>Invoices are produced via a mail-merge routine to Microsoft Word.  Statements and reminder letters can also be produced via mail-merge to Microsoft Word.</li>
+      <li>Cash is input via the <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>and allocated to charges.</li>
+      <li>Standard reports are available for balances, charges and unallocated cash.  Information is available for <MadCap:variable name="Variables.enquiry" /> through the Financials options within <span class="function" title="Function:%WHS1010SHCG">Sales Workbench</span>, and is also available in configurable reports.</li>
+    </ul>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDHS0200_Entering_Cash_for_Ground_Rent_and_Service_Charges.html" />
+        <MadCap:relatedTopic src="WDHS0104_Mail_Shots.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To process rent and charges:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WHS1290BCOB">Charge Input / Process</span>.</li>
+        <li>Enter the batch header details.</li>
+        <li>To add ground rent or service charge transactions:</li>
+        <ol>
+          <li>From the Options menu, select Process Ground Rent / Service Charges.</li>
+          <li>Select which charges to process, and which dates to process for.<span class="null"><p /></span>The Period determines the <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> to which the entries will be posted.  The Date range will determine the Rents and/or Service Charges processed: charges in arrears will be included if the end date is in the range; charges in advance will be included if the start date is in the range.  Charges already processed will not be processed again even if the same selection criteria are used, so it is safe to do a further run to pick up any charges that were not set-up at the time of an earlier run.</li>
+        </ol>
+        <li>To add other charges, add the transctions manually.</li>
+        <li>Post the charge batch <a href="WDUG0056_Posting_a_Batch.html">as normal</a>.  This will generate the <span class="module">House Sales</span> journal from which the <span class="module">General Ledger </span>and/or <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status </span>postings are generated.</li>
+      </ol>
+      <h2>To print the invoices: </h2>
+      <p>Either use <span class="function" title="Function:%WHS1960FHST">Print House Sales Journals</span> with suitable selection criteria or use <span class="function" title="Function:%WHS1760FHSP">New Charge Mail Shot</span> with suitable selection criteria.  Note that, by either method, one invoice will be produced for each charge.  Therefore, if both rent and service charge are due, two invoices will be produced.<br /></p>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Rent and charges - configuration</h2>
+      <p>On each plot, set up the amount of the ground rent or service charge:</p>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WVP2110BVSI"><MadCap:variable name="Variables.vp site" style="text-transform: capitalize;" /> Maintenance</span>.</li>
+        <li>Click the <MadCap:variable name="Variables.vp site" /> record link.</li>
+        <li>Choose the <strong>Plot</strong> tab.</li>
+        <li>Open the plot record.</li>
+        <li>On the plot details screen, enter the annual <span class="field">Ground Rent </span>and/or <span class="field">Service Charge</span>.</li>
+        <li>Save the plot record.</li>
+      </ol>
+      <p>If billing periods are different across <MadCap:variable name="Variables.vp sites" />, set up the billing frequency on the <MadCap:variable name="Variables.vp site" />:</p>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WVP2110BVSI"><MadCap:variable name="Variables.vp site" style="text-transform: capitalize;" /> Maintenance</span>.</li>
+        <li>Click the <MadCap:variable name="Variables.vp site" /> record link.</li>
+        <li>Choose the <strong>More&gt;</strong> tab, then the <strong>Ground Rent Periods </strong>or <strong>Service Charge Periods</strong> tab.</li>
+        <li>Enter records on the <strong>Periods</strong> tab to say when each payment is due.  <MadCap:variable name="General.ProductName" /> will divide the annual payment across the number of payment periods.</li>
+      </ol>
+      <p>On any <MadCap:variable name="Variables.vp site" /> where Billing Periods have not been set up, the standard Billing Periods will be used.</p>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDHS0199_Ground_Rent_and_Service_Charges_Configuration.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Creating an Overhead Purchase Order</h1>
+        <h2>Module: Procurement</h2>
+        <p>Creating an Overhead Purchase order can account for non-job materials purchased. This will allow for accurate matching of the Overhead materials when entering in the AP Invoice.</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>To begin, go to Procurement &gt; More Orders &gt; Overhead Orders, and click Add. </li>
+        </ol>
+        <p class="caption">Figure 1: Clicking Add on the Overhead Orders Workbench</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase.png" style="visibility: visible;mso-wrap-style: square;width: 596px;height: 345px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li>The next screen will create the header record. Beginning on the Main Tab, fill out all of the required details. Mandatory fields are boxed in red. </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">PO Number: Based on system-specific parameter settings, this field will either be left blank and auto-generated, or manually entered by the user. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Type: The type of order to be created. Typically, this will be “N-Normal Order (w/Quantities)” or “L-Lump Sum Purchase Order”.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Confirmation Order: This can be used to denote the PO was given to the Supplier verbally – this is for informational purposes only and has no effect on processing.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Accrual Type: This field is first given as “–Unknown”. Once the Header is saved, the value is determined by the Overhead Department (GRN, Order, or None) and Purchase Order Type. It is not possible to directly edit this field.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Department: The Overhead Department to which this order relates. As for any field on the order entry screen that is followed by the look-up icon (the “…”), enter either by typing the number or clicking the button. When typing, note that a list of applicable departments appears in the drop down selection.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Supplier: The Supplier from which this material is being ordered.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Office: If there is only one office for the supplier, this field populates automatically. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Attention: This field can be used to record the name of contact at the Supplier. If a contact has been set up on the Company record and marked as an Order contact, it will default in here. This field can be filled even if a contact has yet to be added.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Sales/Use Tax: Enter the default tax code to be used on line items for this order. It can be overwritten on each line if necessary.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Direct Pay?: Check this box if sales tax is to be accrued and paid by the company directly to the tax authorities instead of the Supplier. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Fixed: Whether the Freight amount is fixed. The Fixed checkbox determine if the entered freight is the control value. If an amount has been entered, the charge amount on each Purchase Order line is calculated by pro-rating the charge total on the Header across all the lines. If the charge on the header is flagged as Fixed then the charge can never be recalculated from the sum total of the lines (unless the user unchecks the Fixed box).</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Order Date: Type in the date (MM/DD/YY format) or select another date, if desired.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Due Date: Type in a date (MM/DD/YY format) or select a date.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Description: Enter a description of the purchase. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Buyer: Select the Buyer. The default is the User ID of the user entering the Purchase Order.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Special Instructions: Enter Information for the Supplier on delivery. These fields are for informational purposes only.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Special Terms: If this setting in COINS is configured, Special Terms can be specified for this PO which differ from the normal Terms specified on the Supplier record.</li>
+        </ul>
+        <p class="caption">Figure 2: Main Tab of Overhead Order Header, Fields Completed</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase_1.png" style="visibility: visible;mso-wrap-style: square;width: 518px;height: 363px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li>If applicable, move to the Requisitions Tab and enter in all relevant information. These fields are not mandatory.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Requisitioned by: If Requisitions are used, you can add the user who requisitioned the overhead materials to be included with this order. This field is not validated unless a specific Requisition number is to be used and free form text can be entered for informational purposes only. If a Requisition Number is to be used, this needs to be a valid user who entered the Requisition.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Requisition Numbers: Enter the requisitions numbers for which this order will fulfill.</li>
+        </ul>
+        <p class="caption">Figure 3: Requisition Tab</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase_2.png" style="visibility: visible;mso-wrap-style: square;width: 587px;height: 145px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+            <li>Check the Addresses Tab to ensure that defaulted address are correct.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 57pt;">
+            <li style="list-style-type: disc;">Order To: This section defaults from the Supplier record. The address can be changed as needed.</li>
+            <li style="list-style-type: disc;">Deliver To: This section defaults from the Overhead Department. It can be changed as needed. Additionally, the Address Code of an Alternative Address on the Overhead Department record can be entered and the address fields will change accordingly.</li>
+        </ul>
+        <p class="caption">Figure 4: Address Tab</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase_3.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 440px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="5">
+            <li>After reviewing the tabs, click Save in the bottom right of the screen. (Figure 4)</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="6">
+            <li>Once the Order has been saved, the Overhead Order number is assigned. From this point on, the Overhead Department, and Purchase Order number, cannot be changed.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="7">
+            <li>The clicking of the Save button has also moved the screen to the Purchase Order Lines screen. When adding a new line, choose first the type of item to add using the Item Drop-down menu next to the Add button.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Material: Materials to purchase, picked from Commodity Code list. They will be costed to a GL account specified by the combination of Overhead Department and Material Code GL masking.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Stock: Can add specific items from the Inventory Items file. This will not take items out of Inventory but can be used to quickly add a specific inventory items and descriptions. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Text: Use when adding free form text to be printed on the PO form.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Extra: If Commodity Extras are used, they can be added.</li>
+        </ul>
+        <p class="caption">Figure 5: Item Drop-Down Menu on the Purchase Order Lines Page</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase_4.png" style="visibility: visible;mso-wrap-style: square;width: 544px;height: 156px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="8">
+            <li>In this example, Material was selected to Add. Fill out all of the necessary fields in the new Material line.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Department: The Overhead Department to which this line relates.</li>
+            <li style="list-style-type: disc;">Code: The Material Commodity Code for the item being ordered.</li>
+            <li style="list-style-type: disc;">Description: The Description of the item. It defaults from the Material code and can be overwritten</li>
+            <li style="list-style-type: disc;">Quantity: The quantity of items.</li>
+            <li style="list-style-type: disc;">Un: The Unit of Measure for this line item. It will default from the first Unit of Measure on the Material Code used.</li>
+            <li style="list-style-type: disc;">Price: The price per unit of the item.</li>
+            <li style="list-style-type: disc;">Per: The unit of pricing. It will default from the first Unit of Price on the Material Code. A suggested best practice is to always have it be the same as the Unit of Measure.</li>
+            <li style="list-style-type: disc;">Disc%: Any discount to be applied to the Price entered.</li>
+            <li style="list-style-type: disc;">Sales/Use Tax: The Sales tax code from the Order Header will default in. It can be changed on a per-line basis.</li>
+            <li style="list-style-type: disc;">Freight: The freight amount on the line.</li>
+        </ul>
+        <ul style="list-style-type: circle;margin-left: 90pt;">
+            <li style="list-style-type: circle;">Note: if the Freight was marked as Fixed on the header, there will be a warning line at the bottom of the PO, unless the freight on this line, or the sum of the freight on multiple lines, equals what was entered on the header. (Figure 7)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">The Tax Amount and the Line Total will update after saving.</li>
+        </ul>
+        <p class="caption">Figure 6: New Material Line with Fields Filled</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase_5.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 170px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="9">
+            <li>When all details are complete, click the Save icon to save the line. The next line will open for entry. It will be the same type of line as the one above it (Stock, Material, Text, etc.). Click the Undo button to exit line editing mode. Any changes on that line will not be saved.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="10">
+            <li>Add additional lines as needed, and click Next when complete.</li>
+        </ol>
+        <p class="caption">Figure 7: Additional Lines</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase_6.png" style="visibility: visible;mso-wrap-style: square;width: 625px;height: 357px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="11">
+            <li>Clicking Next pushed the user back to the Overhead Order Workbench. After selecting the row of the newly created order, or several rows, the Action bar at the bottom of the screen can be used here to perform several key functions:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Commit Orders: Allows, if applicable, GRN’s and AP Invoices to be entered against this order. Typically, committing the Order is done immediately after completing it.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Print Orders: Prints orders which, depending on system setup, could also commit them.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Draft Print Orders: Allows for printing orders without ever being able to commit the orders. This style of print will have a large DRAFT watermark on it to denote that it is not finalized.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Create Amendment Variation Order: Creates a change order for the original PO.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Create Cancellation Order:</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Un-commit Orders: Allows you to un-commit order if the order hasn’t been invoiced against.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Force Complete Orders: Manually completes orders that may still have a commitment left on them.</li>
+        </ul>
+        <p class="caption">Figure 8: Overhead Order Workbench Action Bar</p>
+        <p>
+            <img src="../../Resources/Images/16.6 - PRIME PO - Archiving Purchase Orders/Creating an Overhead Purchase_7.png" style="visibility: visible;mso-wrap-style: square;width: 448px;height: 186px;" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

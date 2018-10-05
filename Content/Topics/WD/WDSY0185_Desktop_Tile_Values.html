@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Desktop Tile Values</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Desktop Tile Values</h1>
+        <p>Smart tiles show values (such as the number of unposted batches or the value of payments received).&#160; There are several standard functions that are set up to show values (see <a href="WDUG0099_Smart_Tiles.html">Smart Tiles</a>). &#160;In addition you can set up your own calculations to show values on specific functions.</p>
+        <p>
+            <img src="../../Resources/Images_S-U/UG_9406.png" />
+        </p>
+        <div class="process">
+            <h2 class="print">To set up a function to show additional values:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSY1260BSXC">Desktop Tile Values</span>.</li>
+                <li>Add a new record.</li>
+                <li>In the <span class="field">Info Code</span> field:</li>
+                <ul>
+                    <li>If you want the values to be available to an individual&#160;function, enter<span class="userinput"> FUNCTION.<em>&lt;MainArea&gt;</em></span> where <em><span class="userinput">&lt;MainArea&gt;</span></em> is the code of the function.&#160;</li>
+                    <li>If you want the values to be available as additional values on&#160;functions that&#160;are already set up to&#160;show values, enter the info code&#160;for those functions.&#160; For example, batch input functions have the info code cosval.batches; if you enter<span class="userinput"> cosval.batches</span>, your new value will be available on all the batch input functions that already use that info code.&#160; You can find the info code by looking at the parameters of the function.
+<p><img src="../../Resources/Images/SY/SY_018502.png" class="FullWidth" /></p></li>
+                    <li>If you leave <span class="field">Info Code</span> blank, the new value will be available on all functions.</li>
+                </ul>
+                <li>In the <span class="field">Info ID </span>field, enter a code to identify the value.&#160; The combination of Info Code and Info ID must be unique.</li>
+                <li>In the <span class="field">Description</span> field, enter a description for the value; this is used as the label on the tile (and as the option that the user can select when configuring the tile).</li>
+                <li>If you want to use a specific configuration table (other than co_config, sysparam and menuparm, which&#160;are available by default), enter it in the <span class="field">Configuration Tables</span> field.</li>
+                <li>Enter the calculation that will return the value.</li>
+                <li>Save the record.</li>
+            </ol>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3212" MadCap:lastWidth="2105">
+    <head>
+    </head>
+    <body>
+        <h1>Data Migration - Common Considerations</h1>
+        <h2>Sequence of Migration
+</h2>
+        <p>The general rule of thumb when migrating data is to migrate the most ‘static’ data first. This ensures that there will be relatively few (if any) additional records to migrate between the initial load and user acceptance. This also means that many of the migration tasks will have been completed before the more time critical transactional data is captured and loaded.
+</p>
+        <h2>Manual Data Entry
+</h2>
+        <p>The value of a manual data entry as a migration tool should never be underestimated. Since all data is validated as it is entered there is no risk of data being incomplete or inconsistent. Also, the time required to manually enter records can be estimated with some accuracy; an automatic conversion may require development effort to get data in the correct format and so there will be greater risk in any time estimates.
+</p>
+        <p>Manual Data Entry has the additional benefit of working as training exercise. Users of the system gain plenty of experience of how to enter relevant data and create required accounts during the take on procedure meaning that when the system goes live they will proficient users of <MadCap:variable name="General.ProductName" />. 
+</p>
+        <p>The assumption may be that manual Data Entry of accounts is a menial task but if the data cleansing is performed simultaneously with the entry then it requires users with knowledge of both the source system and the data contained in it.
+</p>
+        <p>Whilst manual data entry many not be appropriate for all of a data migration it can be used in conjunction with other tools. The volume of data may be the final arbiter of which method is used.
+</p>
+        <h2>Differentiate Old and New Transaction Data
+</h2>
+        <p>It is advisable to differentiate between old loaded data and new manually entered transaction data in the <MadCap:variable name="General.ProductName" /> system. This will allow users in future to easily identify old transferred data which may behave differently in the system, for example with less dig down capabilities.
+</p>
+        <p>A simple way is add new “dummy” transaction types which will only be used for the take on transactions. For VAT transactions it is particularly desirable to use specific take on VAT codes to avoid polluting the live VAT return with take on data.
+</p>
+        <p>Another option for differentiating between old and new data is with different numbering formats. For example, new transactions could allow for six instead of five digits in the numbering part of the reference number or old transactions could all be given a specific prefix. As well allowing users to easily identify old transactions this approach also ensures that any new auto-generated reference numbers won’t clash with any transactions transferred from the old system.
+</p>
+        <h2>Configuration Changes
+</h2>
+        <p>For some of the data load procedures to work System Parameters will need to be changed from the values they will have on the live system. If data is being loaded into a live system this means that either data loads will have to be done out of hours or usual activity will need to be temporarily suspended.
+</p>
+        <p>Configuration values and Parameters should be checked which relate to any of the following functionality:
+</p>
+        <ul>
+            <li>Posting to General Ledger.
+</li>
+            <li>Automatic numbering.</li>
+            <li>
+Duplicate checking.
+</li>
+            <li>Cross-reference validation, e.g. Purchase Order number validation.
+</li>
+            <li>Date validation.
+</li>
+        </ul>
+        <p>General Ledger and Contract Status postings should be disabled when loading take on transactions if General Ledger balances are to be loaded separately. (If the data load had to be done during working hours the General Ledger transactions could be manually reversed but this is not the preferred option.)
+</p>
+        <h2>Source Data Reference Numbers
+</h2>
+        <p>It is likely that users will often need to refer to their old system to answer a query relating to a transaction loaded in to <MadCap:variable name="General.ProductName" />. To simplify this process put as much data as possible to help identify the source transaction into the imported transaction, even if this just a comma separated list of references in a description field.
+</p>
+        <h2>Data Mapping
+</h2>
+        <p>None of the automated <MadCap:variable name="General.ProductName" /> data load functions offer any data mapping options for automatically converting data such as supplier numbers, contract numbers, VAT codes, or transaction codes from old value to their new values in <MadCap:variable name="General.ProductName" />. Any such transformation of data must be done either by the data extraction route or by using an intermediate tool, such as Microsoft Excel.</p>
+        <h2>
+Microsoft Excel
+</h2>
+        <p>Microsoft Excel is commonly used for editing and reformatting data between exporting it from the legacy system and importing it in to <MadCap:variable name="General.ProductName" />. There is no reason not to use Excel for this, but there a few issues to be aware of:
+</p>
+        <ul>
+            <li>Excel will strip off any leading zeros for a number field unless it is configured not to. This means account numbers like 000001 will be converted to 1 which will cause problems.</li>
+            <li>If any financial calculations are performed in Excel they should be rounded to 2 decimal places in the spreadsheet before the spreadsheet is exported as text to ensure accuracy.
+</li>
+            <li>Any date fields should be explicitly formatted in Excel to ensure they are in the correct format when exported.
+</li>
+        </ul>
+        <h2>Foreign Currency Transactions
+</h2>
+        <p>Where possible any Foreign Currency transactions should either be excluded from the data load or converted to the primary currency (usually GBP) before being added to <MadCap:variable name="General.ProductName" />.
+</p>
+        <p>The <MadCap:variable name="General.ProductName" /> software does handle foreign currency transactions but reconciling historical foreign currency transactions can be extremely difficult.
+</p>
+        <h2>Old Open Transactions
+</h2>
+        <p>It is easy to assume that any transaction with an outstanding balance is open. However, it is common for older transactions with outstanding balances on a legacy system to be regarded as closed by the customer and so not required to be transferred to <MadCap:variable name="General.ProductName" />. This means care has to be taken when selecting which transactions to import.
+</p>
+        <h2>Verification and Testing
+</h2>
+        <p>No matter how carefully data is exported into from the source system and imported in to <MadCap:variable name="General.ProductName" /> there will be problems. Getting all the data reconciled will require assistance from the customer and possibly several iterations of the load process, meaning both test and productions systems will be required.
+</p>
+        <p>Data should be released to the customer to inspect during the migration, not once all the data has been loaded. For example, load transactions on as module by module basis, releasing each module to the customer to check once it has been completed.
+</p>
+        <h2><MadCap:variable name="Variables.Financial Periods caps" />
+</h2>
+        <p>When loading historical financial data consider the level of detail required. It may be possible to load data from the previous year as a year end balances in the final period; contracts spanning multiple years may require multiple year end balances.
+</p>
+        <p>When loading data period by period for the current year, closed periods can be loaded and reconciled long before the new <MadCap:variable name="General.ProductName" /> system goes live.</p>
+        <h2>
+
+Minimise Data
+</h2>
+        <p>Liaise with the client about how the amount of data to be migrated can be minimised. Various methods should be explored, including:
+</p>
+        <ul>
+            <li>Keeping the legacy system available for a reasonable time for detailed historic enquiries rather than trying to migrate ALL the detailed information into Coins.</li>
+            <li>
+Delay entering invoices and certificates that will not be paid on the legacy system. This will minimise the number of ‘open’ invoices to be transferred.</li>
+            <li>
+Investigate old and/or disputed balances and either resolve them, reverse them or write them off.
+•	Try and avoid any part paid transactions as these are cumbersome to deal with.
+
+</li>
+        </ul>
+    </body>
+</html>

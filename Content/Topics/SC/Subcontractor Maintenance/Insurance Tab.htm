@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1550" MadCap:lastWidth="694" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Insurance Tab</h1>
+        <p>The Insurance Tab allows you to record details of insurance policies and other schemes for the subcontractor. These are used in validation when entering orders and certificates, committing orders, and processing payments.</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/Subcontractor Maintenance/Insurance Details_1_1105.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 152px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1" style="height: 19px;">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" style="font-size: 11pt;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1" style="height: 36px;">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Scheme</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">The Type of Scheme</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Category</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p>The category of this scheme. </p>
+                        <p>This can be:</p>
+                        <ul>
+                            <li>Insurance - Policy Details, Expiry Date etc</li>
+                            <li>Dated Items - Expiry Date but no insurance-related details such as Policy Number etc</li>
+                            <li>Qualification - These are for compliance items that simply need to be met once and do not expire</li>
+                        </ul>
+                        <p class="note">When using the Search box, simply enter the first letter of the required category.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Expiry Date</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p>The expiry date of the scheme.</p>
+                        <p class="note">If this field is greyed out, this means the scheme category has been changed to 'Qualification' since the date was entered.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Policy Number</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p>The scheme number.</p>
+                        <p class="note">If this field is greyed out, this means the scheme category was previously 'Insurance' but has been changed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Provider</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p>The name of the insurance provider if applicable.</p>
+                        <p class="note">If this field is greyed out, this means the scheme category was previously 'Insurance' but has been changed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Name on Policy</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">
+                        <p>The actual name to be found on the policy document (if different from the supplier / subcontractor).</p>
+                        <p class="note">If this field is greyed out, this means the scheme category was previously 'Insurance' but has been changed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">Status</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1" style="font-size: 11pt;">
+                        <p>The status of the information held for the scheme.</p>
+                        <p>The statuses are <MadCap:variable name="Variables.colour" />-coded:</p>
+                        <ul>
+                            <li>Red = 'Missing Details' if any of the required details are missing; 'Expired' if the expiry date has passed; 'Not Met' if the requirements of a Qualification scheme have not been met.</li>
+                            <li>Amber = Number of days remaining less than a set number;</li>
+                            <li>Green = Number of days remaining before the expiry date, or 'Met' if the requirements of a Qualification scheme have been met.</li>
+                        </ul>
+                        <p>These statuses are not shown if the Validate flag is set to no. </p>
+                        <p class="note">The Validate flag has no meaning on order-specific schemes.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

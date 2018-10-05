@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/WIP/COINS Mail Assistant (Superseded).fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Old Branding/DonHTG_PDF-UK (old branding).flpgl"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly or COINS.v1105]exclude[COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly]"
+  conditions="COINS.UKOnly"
+  Medium="print"
+  OutputFile="[%=Document Variables.Document Reference%]_[%=Document Variables.File Name%]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    PreserveTrackedChanges="true" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Configure and Use COINS Mail Assistant</Variable>
+    <Variable
+      Name="Document Variables/Document Title">Configure and Use COINS Mail Assistant</Variable>
+    <Variable
+      Name="Document Variables/File Name">Configure_and_Use_COINS_Mail_Assistant</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">LMDSY0064</Variable>
+    <Variable
+      Name="Document Variables/Doc Version">0.3</Variable>
+    <Variable
+      Name="Document Variables/Modules">System, House Sales</Variable>
+    <Variable
+      Name="Document Variables/Region">UK</Variable>
+    <Variable
+      Name="Document Variables/Version">11.05 </Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/Exchange UK CE Documents.fldes" />
+  </Destinations>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

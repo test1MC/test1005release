@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2213" MadCap:lastWidth="836">
+    <head>&#160;</head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Read Only Fields</h1>
+        <p>In addition to the standard tables and fields in the coins database, Open Architecture also uses the RSP's to provide access to certain calculated and non standard fields. These are known as "RO" or Read Only fields and are also fully documented in the Database Enquiry.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RO Fields_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/COINS Database/RO Fields_1_1106.png" class="FullWidth" />
+        </p>
+        <p>Although these fields have certain restrictions, they are incredibly powerful when used in enquiries and reports.</p>
+        <p>In most instances RO_ fields will provide information from related tables to the main queried table – for example summary cost information at Contract Level, or descriptions from an associated Lookup Table without the Page or Report designer having to query and access many tables from the coins database.</p>
+        <p>Many of the calculated fields reflect similar fields to the coins + Configurable Reporter, such as Accruals, Costs and Revenue fields. These fields can then be passed parameters to enhance the information returned to a report. Typically these fields can be limited by dates, values and financial periods as well simply parameters such as “TD" for a To Date value.</p>
+        <p>In the Database Enquiry RO_ fields are shown in a format as the example below. Any parameters immediately after the caret are mandatory; each parameter is then separated by a pipe. Any parameters which are encapsulated in square brackets are optional.</p>
+        <p>&#160;</p>
+        <p class="Example">RO_ContractCosts^&lt;PeriodType&gt;[|&lt;PeriodOffset&gt;[|&lt;FDate&gt;[|PhaseMasks[|CostcodeMasks[|CategoryMasks[|AnalysisMask]]]]]</p>
+        <p>&#160;</p>
+        <p>Many RO fields allow for period selection with a period offset</p>
+        <p>Period offsets have 3 options</p>
+        <p>-	a relative offset (number of periods forward or back), e.g.</p>
+        <ul>
+            <li>0         Same period</li>
+            <li>1          Next period</li>
+            <li>2          2 periods in future</li>
+            <li>-1        Previous period</li>
+            <li>-2        2 periods in past</li>
+        </ul>
+        <p>For <MadCap:variable name="Variables.CVRs" /> these work slightly differently to other parts of <MadCap:variable name="General.ProductName" /> as we use the <MadCap:variable name="Variables.CVR" /> periods to calculate the offset and there may be less of these than GL periods.  E.g. we may have CVR periods for jan, mar, may, jul (every 2 months).  In a May CVR the use of -1 offset would return March</p>
+        <p>-	period number with a year offset, like this:</p>
+        <ul>
+            <li>	!01+0              period 1 of current financial year</li>
+            <li>	!02+0              period 2 of current financial year</li>
+            <li>	!01-1               period 1 of previous financial year</li>
+            <li>	!12-1               period 12 of previous financial year</li>
+            <li>Period number must always be 2 characters so you need leading zero for 1-9</li>
+            <li>-	Absolute period number with year</li>
+            <li>	!0117              period 1 of financial year 2017</li>
+            <li>	!1217              period 12 of financial year 2017</li>
+            <li>	!0116              period 1 of financial year 2016</li>
+            <li>	!1216              period 12 of financial year 2016</li>
+        </ul>
+    </body>
+</html>

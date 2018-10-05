@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Union Reciprocity</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Union Reciprocity</h1>
+        <table class="SpecificTopic">
+            <tbody>
+                <tr>
+                    <td class="Edge">&#160;</td>
+                    <td><span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+                    <td class="Edge">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>When clients are subject to collective bargaining agreements, they need to recognize Work Unions, or the union governing the <MadCap:variable name="Variables.jc contract" />, as well as the employee's Home Union. <span class="function" title="Function:%WPR244FPUY">Union Reciprocity</span> in <span class="module">Payroll </span>helps to do this by allowing users to define which Union Calculations will apply when an employee's Home Union differs from his Work Union.</p>
+        <p>There are several factors to be considered if you want Union Reciprocity to work correctly in OA <span class="module">Payroll</span>. These factors are discussed in some detail below.</p>
+        <div class="process">
+            <h2 class="print">Factors to consider when you want Union Reciprocity to work correctly:</h2>
+            <p>Union Reciprocity Function </p>
+            <p dir="ltr" style="margin-right: 0px;">You can use the <span class="function" title="Function:%WPR244FPUY">Union Reciprocity</span> function to either add a new reciprocal agreement between two unions or to modify an existing agreement.</p>
+            <ol>
+                <ol>
+                    <li>In <span class="module">Payroll</span>, go to Global Setup &gt; US Specifics&#160;&gt; <span class="function" title="Function:%WPR244FPUY">Union Reciprocity</span>.</li>
+                    <li>Enter the <span class="field">Home Union</span>, <span class="field">Work Union</span>, and <span class="field">Effective Date </span>of the reciprocal agreement.</li>
+                </ol>
+            </ol>
+            <p>For illustration purposes, the screenshot below shows the <span class="field">Home Union </span>as <span class="userinput">CA255</span>, the <span class="field">Work Union </span>as <span class="userinput">CA117</span>, and the <span class="field">Effective Date </span>of the reciprocal agreement as <span class="userinput">01/01/08</span>.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PR/PR_007001.png" class="FullWidth" />
+            </p>
+            <ol>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />. You are presented with a screen listing all of the active (non-dormant) union calculations for both the home and work unions.</li>
+            </ol>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007002.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <ol start="4">
+                <ol start="4">
+                    <li>Select which calculations should be used when an employee's home union and work union match the unions previously selected for this reciprocal agreement.</li>
+                </ol>
+            </ol>
+            <p>For illustration purposes, in the screenshot above you could select certain calculations that would only calculate when the employee's home union is CA255 and the work union is CA117.</p>
+            <p>To select the record(s) of the calculations you wish to use, you may do one of the following:</p>
+            <ol start="4">
+                <ul>
+                    <li>Select individual records by opening each record and <MadCap:variable name="Variables.tick" />ing the <span class="field">Calculate </span>box, or</li>
+                    <li>Select multiple records, choose <span class="userinput">Assign to Reciprocal Agreement </span>in the <span class="field">Choose Action </span>selector and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />. The <span class="field">Calculate </span>box is automatically selected for all of the records you chose. For example, the screenshot above shows that four records have been selected (calculation numbers 2, 4, 6, 9) and marked to calculate.</li>
+                </ul>
+            </ol>
+            <p />
+            <p>Union Reciprocity Detail <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /></p>
+            <p>The <span class="function" title="Function:%WPR2441BPUY">Union Reciprocity Detail</span><MadCap:variable name="Variables.enquiry" /> can help you identify which union calculations will be subject to computation when a specific Home/Work Union reciprocal agreement is set up in <span class="function" title="Function:%WPR244FPUY">Union Reciprocity</span>.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Only those union calculations in <span class="function" title="Function:%WPR244FPUY">Union Reciprocity</span> that have been marked to calculate appear on this <MadCap:variable name="Variables.enquiry" />. For example, the screenshot below shows that the four calculations selected in <span class="function" title="Function:%WPR244FPUY">Union Reciprocity</span> above are listed on this <MadCap:variable name="Variables.enquiry" /> (calculation numbers 2, 4, 6, 9).</div>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007003.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <p />
+            <p><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" />
+            </p>
+            <p>You may choose to configure your <MadCap:variable name="Variables.jc contracts" /> to manage the defaulting of the work union onto the Timecard. There is a Union Defaults tab in <span class="function" title="Function:%WPR228BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span> where you can define which union should default as the work union for the <MadCap:variable name="Variables.jc contract" /> based on an employee's trade.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">This information can also be viewed in the <span class="function" title="Function:%WJC2300BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span> in <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status</span>.</div>
+            <p>In the example below, if the trade on the Timecard is 30, the Work Union will be CA117.</p>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007004.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Profile tab in Employee Maintenance </p>
+            <p>The employee's Home Union is defined on the Profile tab of <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>. You can also define the trade here and default it onto the Timecard. The trade can be overwritten during timecard entry if necessary.</p>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007005.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Timesheets </p>
+            <p>When entering timecards in <span class="function">Timesheets</span>, the Work Union can either default from <span class="function" title="Function:%WJC2300BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span>, or it can be manually entered or overridden.</p>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007006.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <p />
+            <p>Pay Calculations </p>
+            <p><span class="function" title="Function:%WPR227BPAC">Pay Calculations</span> use Union Calculations as defined in <span class="function" title="Function:%WPR244FPUY">Union Reciprocity</span>.</p>
+            <blockquote dir="ltr" style="margin-right: 0px;">
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_007007.png" class="FullWidth" />
+                </p>
+            </blockquote>
+            <p />
+        </div>
+    </body>
+</html>

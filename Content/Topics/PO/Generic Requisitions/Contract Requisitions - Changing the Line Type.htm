@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="757" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"><MadCap:variable name="Variables.Jc Contract caps" /> Requisitions - </MadCap:conditionalText>Changing the Line Type</h1>
+        <p class="Body">If the new PO parameter <span class="parameter">ALWTYPCH</span> is set to Y and the <MadCap:variable name="Variables.jc contract" /> requisition has been issued, three new options appear in the Actions menu at the foot of the Requisition Lines screen:</p>
+        <ul class="CompactList">
+            <li><span class="Function">Change Line Type to Material/<MadCap:variable name="Variables.Pc Plant caps"></MadCap:variable></span>
+            </li>
+            <li><span class="Function">Change Line Type to <MadCap:variable name="Variables.St Stock caps"></MadCap:variable></span>
+            </li>
+            <li><span class="Function">Change Line Type to Text</span>
+            </li>
+        </ul>
+        <p class="Body">So, for example, if the person raising the requisition simply entered their requirement as a text line the buyer could change this line to a material/<MadCap:variable name="Variables.pc plant" /> line or <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.st stock" /> code line.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/Procurement/Generic Requisitions/GenReqsChangeLineType.png" class="FullWidth" MadCap:conditions="COINS.UKOnly" />
+            <img src="../../../Resources/Images_P-R/Procurement/Generic Requisitions/GenReqsChangeLineTypeUS.png" MadCap:conditions="COINS.USOnly" />
+        </p>
+        <p class="Body">If the system has been configured to allow the line type to be changed, a new column <MadCap:variable name="Variables.labelled" /> <span class="Field">Line Type</span> appears to the left of the <span class="Field">Item</span> column.  This shows the line type as a single character, with a tooltip explaining what the single character means.</p>
+        <p class="Body">The <span class="Field">Code</span> field is then validated either as a material/<MadCap:variable name="Variables.pc plant" /> code or <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.st stock" /> code with reference to the line’s new line type, and all other fields on the line are re-validated according to the new line type.  So, for example, the unit of quantity may need to be amended.  The lookup button also reacts according to the line type.  </p>
+        <p class="Body">If the line type selected is “Text”, the <span class="Field">Code</span> field does not appear. </p>
+        <p class="Body">If a line is changed using this technique, the data originally entered is shown in a single new field on the requisition line, and the user ID of the person making the change and the date of the change are also shown in two new fields on the requisition line. </p>
+        <p class="Body">If any order has been placed against a requisition line then it is no longer possible to amend the line type of that line.</p>
+    </body>
+</html>

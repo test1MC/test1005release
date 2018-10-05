@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="3467" MadCap:lastWidth="1212" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Applying to forms</h1>
+        <p>&#160;</p>
+        <p>Applying alternate line shading to forms is a little different to how it is applied to reports. Forms do not have defined sections as reports do. Instead “forms” can be defined on the fly and “forms” do not have any properties of their own.</p>
+        <p>The following steps will be completed using the <MadCap:variable name="General.ProductName" /> OA web interface.</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Log into your coins environment using the <MadCap:variable name="General.ProductName" /> OA web interface. Navigate to the OA Reporting &amp; BI → Document Designer → Document Designer menu option and drill into the form that you want to modify. Go to the Document tab as shown below:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to forms.png" class="FullWidth" /><br />Note the names of the Header Form and the Body Form</li>
+            <li>We need to initialise the variable that has been defined in the alternate line shading report field styles, created in <MadCap:xref href="Create report field styles.htm">Create report field styles</MadCap:xref>. To do this go to the Fields tab and open the first field that is part of the named Header Form and add the calculation as shown below:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to forms_1.png" class="FullWidth" /> <img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to forms_2.png" class="FullWidth" /><br />This will initiaise the lineBackgroundColour variable to white and the first line of detail will be shaded. If your preference is to have the first line unshaded, then set the lineBackgroundColour variable to an empty string:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to forms_3.png" class="FullWidth" /><br />Save your changes.</li>
+            <li>Identify the first field that is associated with the named Body Form and insert a new field on the same Row number but with a lower Column number so that is is ordered before all other Body Form fields, but does not create an additional row in the Body Form. You may need to reorder the existing Body Form fields to be able to insert this new field. The new field should be defined as follows:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to forms_4.png" class="FullWidth" />Note the zero width field and the calculation:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to forms_5.png" class="FullWidth" /><br />Each line of the Body Form will alternate between #FFF (HTML <MadCap:variable name="Variables.colour" /> code for white) and #F7F7F7 (HTML colour code for an off-white shade). These colour codes can be tailored to your specific requirements.<br /></li>
+        </ol>
+        <div class="note">Note that some <MadCap:variable name="General.ProductName" /> forms, for example Purchase Orders, contain additional forms that may appear in the place of the named Body Form. In these instances, step 3 will need to be repeated for each of these forms if they are to also be alternately shaded.</div>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+            <li>Now visit all other fields associated with the named Body Form and set the Style field to the appropriate report field style:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to forms_6.png" class="FullWidth" /></li>
+        </ol>
+        <p>Once all fields of the named Body Form have been modified to use the created report field style, test the changes to ensure that the form lines are shading as expected.</p>
+    </body>
+</html>

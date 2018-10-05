@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/_GITSFBRANCH - Git Safe repository branch name</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/_GITSFBRANCH - </span> Git Safe repository branch name
+</div>
+<div class="param_def">
+<p><div>It is a valid branch name and used to <MadCap:variable name="Variables.sy check"/> the installed 'custom data' git repository branch is pointing to the required branch for this environment.</div>
+<p><strong>Examples:</strong> <strong>test</strong>  or  <strong>live</strong>  or  <strong>qa </strong></p></p>
+<p>This parameter is used in conjunction with the logical <strong>_GITSAFE</strong> parameter. If  <strong>_GITSAFE</strong> = TRUE, the data identified by the <strong>_COINSDATAID</strong> parameter will be dumped and loaded to and from disk. Said data will be further secured in the git branch identified by this parameter.</p>
+<p>GitSafe also secures <MadCap:variable name="Variables.sl customer"/> overrides and customisation data. These are <strong>+*</strong> and <strong>$*</strong> respectively. For example: +WSYBSUR function and $WSABDCE function would be dumped and loaded from disk. Said data will then be further secured in this git branch.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/Stylesheets/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Configuration Changes</h1>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">The </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new </MadCap:conditionalText>SE parameter, <span class="parameter">ABTAXPCT</span>, in COINS OA allows an <MadCap:variable name="Variables.Se Agreement caps" /> Billing Sales Taxable % Method. When this is set to <strong>Y</strong>, the <span class="Field">% Taxable</span> field is visible in the <MadCap:variable name="Variables.Se Agreement caps" />, regardless of whether the Revenue Tax Code is referenced.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/Stylesheets/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p class="TableCell">ABTAXPCT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Allow <MadCap:variable name="Variables.Se Agreement caps" /> Billing Sales Taxable % Method</p>
+                        <p><strong>Note: </strong>The <span class="Field">% Taxable</span> field will be seen in the <MadCap:variable name="Variables.Se Agreement caps" /> when the parameter is set to Y, regardless of the <strong>Revenue Tax Code </strong>referenced.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum="2 "><MadCap:variable name="Variables.Se Agreements caps" />
+        </h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Scheduled Billing Taxable % </span>field is available under <strong>Scheduled Billing </strong>in <i><MadCap:variable name="Variables.Se Agreements caps" /> &gt; Locations tab &gt; <MadCap:variable name="Variables.Se Agreement caps" /> Allowable Work Details &gt; Billing &amp; Sales Tax tab</i>, as shown in <MadCap:xref href="#SchedBillTaxPC" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. It is only visible and enabled when <span class="Field">Scheduled Billing </span>is selected as <strong>Revenue Taxable </strong>and parameter <span class="parameter">SE/ABTAXPCT</span> is set to <strong>Y</strong>.</p>
+        <p class="Body">The value in this field allows for two decimal positions; it enforces the value to be positive and to not exceed 100. (In COINS Ti, this value is a whole number that cannot exceed 100.) The value of <strong>0 </strong>in this field is recogn<MadCap:variable name="Variables.is" />ed as 100 percent.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="SchedBillTaxPC"></a>Scheduled Billing Taxable % Field</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE051_Images/SE051_SchedBillTaxPC.png" class="MaxPrintWidth" />
+        </p>
+        <h1 MadCap:autonum="3 "><MadCap:variable name="Variables.Se Agreement caps" /> Billings</h1>
+        <p class="Body">COINS Ti supports separate Taxable Amount values on a transaction through the use of a separate <span class="Field">Taxable Amount </span>field. However, in COINS OA, every transaction is taxable, and the value of the tax is based on the Tax Code referenced. The <span class="Function">Generate <MadCap:variable name="Variables.Se Agreement caps" /> Scheduled Billings</span> and <span class="Function">Generate Time of Service </span>functions <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>allow you to create two separate <MadCap:variable name="Variables.Se Service Order caps" /> Scheduled Billing Detail Lines (see <MadCap:xref href="#RevTaxDefaults" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>): (1) one line holds the taxable portion; and (2) the other line holds the non-taxable portion.</p>
+        <ul>
+            <li class="ListBullet1">The <i>taxable portion</i> references the <MadCap:variable name="Variables.Se Agreement caps" />’s <span class="Field">Revenue Taxable Tax Code </span>and is the first line created.</li>
+            <li class="ListBullet1">The <i>non-taxable portion </i>references the <MadCap:variable name="Variables.Se Agreement caps" />’s <span class="Field">Revenue Exempt Tax Code</span>. Any rounding result is applied to the Taxable Detail Line. The sum of the two lines must equal the value of the <strong>Scheduled Amount</strong>. </li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="RevTaxDefaults"></a>Revenue Tax Defaults</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE051_Images/SE051_RevTaxDefaults.png" class="MaxPrintWidth" />
+        </p>
+        <ul>
+            <li class="ListBullet1">The <span class="Function">Generate <MadCap:variable name="Variables.Se Agreement caps" /> Scheduled Billings </span>function uses the <strong>Taxable % </strong>entered in the <MadCap:variable name="Variables.Se Agreement caps" />, since both the <MadCap:variable name="Variables.Se Service Order caps" /> and the detail lines are created as one transaction. The <span class="Function">Generate Time of Service </span>(TOS) function (see <MadCap:xref href="#GenTOS" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>) uses the <strong>Taxable % </strong>visible on the <MadCap:variable name="Variables.Se Service Order caps" />’s Allowable Work.</li>
+        </ul>
+        <p class="NoteHeader">NOTE:</p>
+        <div class="note">The <strong>Taxable % </strong>has no effect when a Scheduled Billing Detail Line (<MadCap:xref href="#SchedBillDetLine" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>) is manually entered. You must enter the applicable Amount and Revenue Tax Code on each Scheduled Billing Detail Line added.</div>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="GenTOS"></a>Generate Time of Service</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE051_Images/SE051_GenTOS.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="SchedBillDetLine"></a>Scheduled Billing Detail Line</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE051_Images/SE051_SchedBillDetLine.png" class="MaxPrintWidth" />
+        </p>
+        <h1 MadCap:autonum="4 ">Print Invoices</h1>
+        <p class="Body">If you wish to use the Taxable % process, you must have your Invoice Documents modified. This is due to the <span class="Function">Print Invoices </span>function only printing one line for all Scheduled Billings Detail Lines on a <MadCap:variable name="Variables.Se Service Order caps" /> if the <MadCap:variable name="Variables.Se Service Order caps" />’s <span class="Field">Allowable Work Taxable %</span> is not 100 (or 0).</p>
+        <p class="Body">RO fields now on the Invoice header contain the <span class="Field">Invoice Taxable Amount </span>(RO_sei_TaxableAmt) and <span class="Field">Invoice Nontaxable Amount</span> (RO_sei_NontaxableAmt). You may want to have your Invoice Documents adjusted to print the breakout of Taxable and Nontaxable amounts.</p>
+        <ul>
+            <li class="ListBullet1">If the Invoice Line’s Tax value is &lt;&gt; 0, the Line’s <strong>Taxable Amount </strong>is calculated. <strong>Note:</strong> Retention is not considered as Taxable.</li>
+            <li class="ListBullet1">The difference between the Line’s Amount and the <strong>Taxable Amount </strong>is reported as the Nontaxable Amount.</li>
+        </ul>
+    </body>
+</html>

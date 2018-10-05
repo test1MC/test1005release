@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>SY/LDAPHASH - LDAP Hash Algorithm</title>
+    </head>
+    <body>
+        <div class="param_id">
+            <MadCap:concept term="Parameters" /><span class="parameter">SY/LDAPHASH - </span> LDAP Hash Algorithm
+</div>
+        <div class="param_def">
+            <p>The LDAP password hashing algorithm to use.</p>
+            <p>There may be times when using LDAP Directory user authentication that the COINS server is not able to communicate with the corporate LDAP Directory servers published by your network. To avoid any failed COINS login attempts, COINS can retain the last successfully-used password and use it when no LDAP servers can be contacted.</p>
+            <p>If this parameter is not set (has an empty value), the default, then COINS will not cache any user passwords. In this instance, if COINS loses connectivity with the LDAP Directory servers, then users will not be authenticated and COINS logins will fail.</p>
+            <p>The value of this parameter must be chosen from a valid list of supported one-way hashing algorithms. Select the hashing algorithm that suits your specific corporate security policy. Once set and on a successful login attempt, COINS will encode the user's password, using the selected hashing algorithm, and store the encoded password on the user's COINS account. In the event that the COINS server loses connectivity with the LDAP Directory servers, this cached password will be used to determine whether or not the user can access COINS.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p>The remaining input of the PL Invoice details, is as standard PL invoice entry routine.</p>
+        <h2><span style="margin-right: 0pt;">5.1.2 </span>Add (or Amend Unposted) Invoice – With Scan</h2>
+        <p>This function appears on the standard <MadCap:variable name="Variables.Purchase Ledger caps" /> menu as illustrated below. This routine is operated in exactly the same way as its non-Shared Service equivalent.&#160; The user selects either the Batch or the Pool&#160; &amp; Bulk auto indexes the images.</p>
+        <p>A PL invoice batch is created for the current user, for the current PL financial period and in the current logged-in company (i.e. NOT necessarily the user’s prime company).  “Empty” PL invoices are created and put in the PL invoice batch just created and a “pointer” record created in the Shared Serve PL invoice batch’s line table as shown below.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/The remaining input of the.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 122px;" />
+        </p>
+        <p>Note that a specially formatted “Temporary Internal Reference”&#160; is generated for each “empty” invoice.&#160; The reason for doing this is because, by definition, Shared Service invoices may well end up in a different company&#160; and each company may have a different strategy for generating internal references.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/The remaining input of the_1.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 130px;" />
+        </p>
+        <p>As each invoice is saved, it is inserted into (or moved to) a purchase invoice batch for the current user and PL financial period in the destination company.&#160; If no such un-posted PL invoice batch already exists, then it is created automatically.</p>
+        <p>If there is no current PL financial period in the destination company then the following error message displayed “No current PL period available for company ” and the save action rejected.</p>
+        <p>As stated, an invoice may need to be moved from one PL invoice batch to a batch in another company.&#160; This, in theory, could happen any number of times.&#160; The system ensures that the batch totals of each of these batches, corresponds correctly to the number of invoices in each batch.</p>
+        <h2><span style="margin-right: 0pt;">5.1.3 </span>Post batches</h2>
+        <p>Batches are posted by selecting them on the main Scanned Invoice Batches screens.&#160; All associated PL invoice batches in the various destination companies are posted. Example below: Enter invoices via Scan.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/LMDAP0040/The remaining input of the_2.png" style="visibility: visible;mso-wrap-style: square;width: 624px;height: 341px;" />
+        </p>
+    </body>
+</html>

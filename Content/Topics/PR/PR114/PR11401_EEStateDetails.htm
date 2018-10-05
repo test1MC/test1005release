@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Employee State Details</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Employee Maintenance</h1>
+        <p MadCap:conditions="COINS.PrintOnly">The information below shows you how an Employee's State Detail information can be set up and processed in PR&#160;Employee Maintenance if the Home Address State is changed.</p>
+        <h2 MadCap:autonum="1.1 ">Other Tab</h2>
+        <p class="Body">The <strong>Update State Details </strong>layout appears on the Employee update page in PR <i>Employee Maintenance &gt; Employee Details tab &gt; Other tab</i>, as shown in <MadCap:xref href="#UpdateStateDetailsLayout" class="ImageRef"><i>Figure 1:  Update State Details Layout</i></MadCap:xref>. It allows you to change an Employee's file for the Home State, Primary Work State, Primary SUTA State, Primary DBL State, and Primary Work Comp State.</p>
+        <p class="Body">This layout is enabled when the Home Address State has been changed.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="UpdateStateDetailsLayout"></a>Update State Details Layout</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR114_Images/PR114_UpdateStateDetailsLayout.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Processing</h2>
+        <p class="Body">Based on which values are changed for an Employee in the Employee file of the new State, a new record is created, and the existing file is updated. This process uses the following guidelines:</p>
+        <ul>
+            <li>If  a Yes/No State field is set to <strong>Yes</strong>, the new or existing record of the new State uses the new value in the appropriate field.</li>
+            <li>Yes/No State fields must be selected.</li>
+            <li>If a Yes/No State field is set to <strong>No</strong>, the value of the old State is used in the appropriate field.</li>
+            <li>The <span class="Field">Primary Work Comp Code </span>field fills in any existing value from the old State record. It can be left blank.</li>
+            <li>Only one State record can be designated as the Primary Work State, Primary SUTA State, Primary DBL State, and Primary Work Comp State.</li>
+            <li>Only one State record can be designated as  the Home State.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 ">State Details Tab</h2>
+        <p class="Body">Any changes made in the <strong>Update State Details </strong>layout are automatically recorded on the State Details tab in PR&#160;<span class="Function">Employee Maintenance</span>, as shown in <MadCap:xref href="#EmployeeStateChgResult" class="ImageRef"><i>Figure 2:  Sample Employee State Change</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="EmployeeStateChgResult"></a>Sample Employee State Change</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR114_Images/PR114_EmployeeStateChgResult.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

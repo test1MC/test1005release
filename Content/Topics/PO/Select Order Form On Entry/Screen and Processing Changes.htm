@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="770" MadCap:lastWidth="600">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OA-CE-PRSelectOrderFormOnEntry.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:conditions="COINS.PrintOnly" MadCap:autonum="1">
+            <MadCap:concept term="Topics" /><a name="_Toc456881029"></a>Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="1.1"><a name="_Toc456881030"></a>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Selecting the Order Form During Order Entry</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Updated PO Entry Pages</MadCap:conditionalText>
+        </h2>
+        <p class="Body">When entering a new order the print form selector field, <span class="Field">Use Order Form</span>, appears on the PO Entry page if the Order’s Type is in PO/FRMSELEC list. The field is shown under the following fields, depending on the type of order: </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1"><i>Order Type</i>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p>Fields</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> Orders</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p><MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> Number</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Overhead Orders</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Department</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Workshop Orders</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Workshop Ref</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Asset Orders</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Asset Code</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Orders</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Department/Location</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p><MadCap:variable name="Variables.pc rehire" style="text-transform: capitalize;" /> Orders</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Department/Depot</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Caption" MadCap:autonum="Figure 1: "><MadCap:variable name="Variables.jc contract" style="text-transform: capitalize;" /> Order Entry Screen</p>
+        <p class="screenshot">
+            <img src="../../../Images/Select Order Form On Entry/Screen and Processing Changes.png" style="width: 482px; height: 330px;" class="FullWidth" />
+        </p>
+        <p class="Body">The field defaults to the value of the appropriate PO Print Form parameter. It is possible to amend the Order Form if the original order is not committed.</p>
+        <p class="Body">The field is only available for update when entering new orders, not for <MadCap:variable name="Variables.po variations" />.</p>
+        <p class="Body">This functionality is available on the purchase order entry pages (from Orders Live / Inc. Archived) as well as when raising an order from requisitions / subcontract instructions and from packages:</p>
+        <p class="Caption" MadCap:autonum="Figure 2: ">Raising an Order from a Requisition Line</p>
+        <p class="screenshot">
+            <img src="../../../Images/Select Order Form On Entry/Screen and Processing Changes_1.png" style="left: 0; width: 529px; height: 328px;" class="FullWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.1"><a name="_Toc456881032"></a>Head/Site Order</h3>
+        <p class="Body">Depending on whether the order is a head office order or a site order, the value of the appropriate PO parameter will be used: PO/POFRM for material head office and PO/POFRM&#8209;S for material site order.</p>
+        <h3 MadCap:autonum="1.1.2"><a name="_Toc456881033"></a>Service Order Related Orders</h3>
+        <p class="Body">The default values of the order forms for material/subcontract orders are taken from the appropriate PO parameters – POSEFRM or SCSEFRM.</p>
+        <h2 MadCap:autonum="1.2"><a name="_Toc456881034"></a>Templates</h2>
+        <p class="Body">The select form functionality is not available for order templates but the order form is available for amendment when copying a template to a regular order.</p>
+        <h2 MadCap:autonum="1.3"><a name="_Toc456881035"></a>Copying Orders</h2>
+        <p class="Body">When an order is copied, the value of <span class="Field">Use Order Form</span> is not copied. The default form for a copied order is the same as when an order is manually created, but can be amended.</p>
+    </body>
+</html>

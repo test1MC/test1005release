@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Configuration</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Configuration</h1>
+        <p class="Body">Although there are no new parameters in COINS&#160;OA for printing W-2 Forms, some existing parameters are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>being used in relevant functions, as listed below.</p>
+        <ul>
+            <li><strong>Enable Emailing Forms </strong>- Payslips use Global PR parameter <span class="parameter">DEFPRN</span>. W-2 Forms use the <strong>Employee Print Method - Email </strong>prompt, which is checked at run time.</li>
+            <li><strong>Assign Password to PDF </strong>- Payslips and W-2 Forms use the same Global PR parameter <span class="parameter">USESLIPPWD</span>.</li>
+        </ul>
+        <div class="notelabel" MadCap:conditions="COINS.PrintOnly">NOTE:</div>
+        <div class="note">There is an option to include debugging information in the Report Status Log File, which is turned on by adding DEBUG to the value of the <span class="parameter">USESLIPPWD </span>parameter. Under normal use, <span class="parameter">USESLIPPWD </span>= Y, N, or YES. In debug mode, <span class="parameter">USESLIPPWD </span>= YDEBUG, NDEBUG, or YESDEBUG, etc.</div>
+        <ul>
+            <li><strong>From Email Address </strong>- Payslips use the period specific parameter <span class="parameter">MAILFROM </span>or the Global PR parameter <span class="parameter">MAILFROM</span>. W-2 Forms only use the Global PR parameter <span class="parameter">MAILFROM</span>.</li>
+            <li><strong>BCC Email Address </strong>- Payslips use the period specific parameter <span class="parameter">MAILBCC </span>or the Global PR parameter <span class="parameter">MAILBCC</span>. W-2 Forms use only the Global PR parameter <span class="parameter">MAILBCC</span>.</li>
+            <li><strong>Email Subject </strong>- Payslips use the period specific parameter <span class="parameter">MAILSUBJ </span>or the Global PR parameter <span class="parameter">MAILSUBJ</span>. W-2 Forms use <i>COINS PR W2 Form for Year + YEAR</i>.</li>
+        </ul>
+    </body>
+</html>

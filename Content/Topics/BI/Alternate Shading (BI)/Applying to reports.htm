@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-au" MadCap:lastBlockDepth="4" MadCap:lastHeight="3327" MadCap:lastWidth="1212">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Applying to reports</h1>
+        <p>&#160;</p>
+        <p>To apply alternate line shading to <MadCap:variable name="General.ProductName" /> reports, we will use the calculation fields on the report forms rather than in “hidden” fields, as was necessary in forms.</p>
+        <p>The following steps will be completed using the <MadCap:variable name="General.ProductName" /> OA web interface.</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Log into your coins environment using the <MadCap:variable name="General.ProductName" /> OA web interface. Navigate to the OA Reporting &amp; BI → Designer → Report Designer menu option and drill into the report that you want to modify. Go to the Forms tab as shown below:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to reports.png" class="FullWidth" /></li>
+            <li>Identify the inner most Header Form. We will use this form to initialise the line shading variable defined in <MadCap:xref href="Create report field styles.htm">Create report field styles</MadCap:xref>. In this example we have defined the variable: lineBackgroundColour. Open the inner most header form and add the calculation as shown:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to reports_1.png" class="FullWidth" /><br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to reports_2.png" class="FullWidth" />This will initiaise the lineBackgroundColour variable to white and the first line of detail will be shaded. If your preference is to have the first line unshaded, then set the lineBackgroundColour variable to an empty string:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to reports_3.png" class="FullWidth" />Save your changes.</li>
+            <li>Open the BODY form and add the calculation to alternate the line shading as shown below:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to reports_4.png" class="FullWidth" /> <img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to reports_5.png" class="FullWidth" /> Each line of the Body Form will alternate between #FFF (HTML <MadCap:variable name="Variables.colour" /> code for white) and #F7F7F7 (HTML colour code for an off-white shade). These colour codes can be tailored to your specific requirements.</li>
+            <li>Go to the Fields tab and visit all fields associated with the BODY Form and set the Style field to the appropriate report field style:<br /><img src="../../../Resources/Images_A-C/BI/Alternate Shading (BI)/Applying to reports_6.png" class="FullWidth" /> Once all fields of the BODY Form have been modified to use the created report field style, test the changes to ensure that the report lines are shading as expected.<br /></li>
+        </ol>
+    </body>
+</html>

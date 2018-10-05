@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Exercise 1c – Using Datasets for Exporting Data </h1>
+        <p>This exercise will demonstrate how a dataset can be used to export data in Excel format only without the need to create a detailed report definition.</p>
+        <h2>Create the Function and Menu </h2>
+        <p>Create the function that will be used to run the report then add this function to an appropriate menu.&#160; </p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Function Code</td>
+                    <td>Initials + M2 + Exercise No.e.g. NLM2Exercise1c</td>
+                </tr>
+                <tr>
+                    <td>Function Name</td>
+                    <td>Description identifier.E.g. NLM2EX1c</td>
+                </tr>
+                <tr>
+                    <td>Function Module</td>
+                    <td>Contract Status</td>
+                </tr>
+                <tr>
+                    <td>Function Category</td>
+                    <td>Report</td>
+                </tr>
+                <tr>
+                    <td>Function Context</td>
+                    <td>Leave as defaulted from the Function Description.</td>
+                </tr>
+                <tr>
+                    <td>Function Program </td>
+                    <td>wou005</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>We already have a page that we can re-use from the first exercise so the following parameter will allow us to use this:</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Function Parameters</td>
+                    <td>stn_code=nlm2exercise1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1c Using Datasets.png" class="FullWidth" />
+        </p>
+        <h2>Create the Report Section</h2>
+        <p>For this exercise we only want to create a dump of the data from the dataset straight to Excel so we only need to specify the dataset to be used – we do not need to define any Forms .</p>
+        <p>Set up the report section:</p>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col style="width: 139px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Report Section</td>
+                    <td>Give the report section the same name as the function created.</td>
+                </tr>
+                <tr>
+                    <td>Header Tables</td>
+                    <td>Leave Blank</td>
+                </tr>
+                <tr>
+                    <td>Body Table</td>
+                    <td>Enter the name of the database table being reporting on; in this case our temporary table from the Exercise 1 dataset ttcontract</td>
+                </tr>
+                <tr>
+                    <td>Body Query</td>
+                    <td>FOR EACH ttcontract<br></br></td>
+                </tr>
+                <tr>
+                    <td>DataSet</td>
+                    <td>Specify the name of the Data Set that contains the temporary table.&#160; In this case xxM2DS1 (replace xx with your initials).</td>
+                </tr>
+                <tr>
+                    <td>Page Layout </td>
+                    <td>Select %A4RLAND-A4 Report Landscape .</td>
+                </tr>
+                <tr>
+                    <td>Class</td>
+                    <td>Select the font class to use.&#160; Since the user listing report doesn't have many fields on, use Arial 8pt (a larger font than Arial 6pt).</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1c Using Datasets_1.png" class="FullWidth" />
+        </p>
+        <p>Do NOT define any forms or fields.</p>
+        <h2>Running the report</h2>
+        <p>Run the function xxM2Exercise1c.&#160; On the output queue you will not get a pdf file generated only an Excel and XML.</p>
+        <p>Opening the Excel you should get output similar to:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Exercise 1c Using Datasets_2.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

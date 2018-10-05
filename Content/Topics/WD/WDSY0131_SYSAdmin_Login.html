@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>SYSAdmin Login</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">SYSAdmin Login</h1>
+        <p>The SYSAdmin login is a special login to <MadCap:variable name="General.ProductName" /> that is given special administrator rights so that any function in the system can be run. It also has additional super-user powers that can be used to correct certain issues and can be given temporary designer capability to allow the UI to be modified.</p>
+        <p>It has historically been used by <MadCap:variable name="General.ProductName" /> as a support login on most clients' systems, as it provides access to all functions. In the past, some clients have expressed concern that the SYSAdmin user could not always be identified for audit purposes.</p>
+        <p><MadCap:variable name="General.ProductName" /> now logs the actual user who is logging in as SYSAdmin at the point of login so that they can be identified. Only users who are set up as administrators can log in as the SYSAdmin user.</p>
+        <h2>How It Works</h2>
+        <p>When you log in to <MadCap:variable name="General.ProductName" /> as SYSAdmin you will be required to identify and authenticate an additional user ID and password and this will be logged for future identification of activity by SYSAdmin.</p>
+        <h3>Login Screen</h3>
+        <p>When you login to <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> you are presented with a login screen to identify your user ID and password.</p>
+        <p>If you enter SYSAdmin as the user ID, an additional &gt;<span class="field">Actual User ID</span> and &gt;<span class="field">Password</span> field will appear.</p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_013101.png" />
+        </p>
+        <p>You will need to enter the SYSAdmin password in the first &gt;<span class="field">Password</span> field, and then your own user ID and password in order to gain access to the system as SYSAdmin. The actual user ID used cannot be SYSAdmin; it must be another active licensed user.</p>
+        <h3><MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" />
+        </h3>
+        <p>In the <span class="function" title="Function:%WSYBSYL">Current Users</span><MadCap:variable name="Variables.enquiry" />, the login record that is created as a result of the SYSAdmin login also identifies the actual user used. This is shown as the user ID of the actual user, following the IP address.</p>
+        <p>The <span class="function" title="Function:%WMS5011BMSO">User Logging {Enquiry}</span> for the SYSAdmin user (in <span class="function" title="Function:%WSYBSUR">Users</span>) also shows the user ID of the actual user.</p>
+        <p>The title bar still shows the login as SYSAdmin; this will be the user that is recorded against, for example, batch records, audit records, and report requests. If required it will be possible to cross reference the record in question with the creation time and this <MadCap:variable name="Variables.enquiry" /> to identify the actual user that made the change.</p>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>In general, all users who are allowed to log in using the SYSAdmin user ID must be listed in the <span class="field">Administrators </span>field in <span class="function" title="Function:%WSYBMNP">Module/<MadCap:variable name="Variables.licence" style="text-transform: capitalize;" /> Maintenance</span>.</p>
+            <p>
+                <img src="../../Resources/Images/SY/SY_013102.png" class="HalfWidth" />
+            </p>
+            <h3><MadCap:variable name="General.ProductName" /> Support Users</h3>
+            <p>Normally the actual user ID used for a SYSAdmin login needs to be a licensed <MadCap:variable name="General.ProductName" /> user but <MadCap:variable name="General.ProductName" /> employees are able to log in without this being necessary. As part of the upgrade process for v10.22 a "coins" user ID is created (if it does not already exist).&#160; This is marked as a non-licensed user (Named User: N) so that it does not take up a named user <MadCap:variable name="Variables.licence" />.</p>
+            <p>Clients may wish to set up actual user records for <MadCap:variable name="General.ProductName" /> employees.&#160; This is possible by removing the generic "coins" user (if required) and creating users as required.&#160; Each of these users should not be set as a named user, which prevents them from being used to access the system, but with a group code of "root" so that they can be used to allow a SYSAdmin login.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SY/sy_loghistr.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

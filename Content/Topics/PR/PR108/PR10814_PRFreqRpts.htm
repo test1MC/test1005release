@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Payroll Frequency Reports</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">PR&#160;Frequency Reports</h1>
+        <p class="Body">This section discusses the Payroll Frequency reports as they apply to Timesheet Input Groups.</p>
+        <h2 MadCap:autonum="1.1 ">Unchanged Reports</h2>
+        <p class="Body">The reports listed below remain the same in v11.08 (they do not accommodate Timesheet Input Groups); they continue to run on the entire payroll period.</p>
+        <ul>
+            <li>Missing Timecard Report</li>
+            <li>Missing Trades for Jobs</li>
+            <li>Payroll Exception Report</li>
+            <li>Starters and Terminated Employees Report</li>
+            <li>Headcount Report</li>
+            <li>Pay Method Analysis Report</li>
+            <li><MadCap:variable name="Variables.Labour caps" /> Hours Analysis Report</li>
+            <li>Pending CDR Txns</li>
+            <li>Configurable Timecard Export</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">Updated Reports</h2>
+        <p class="Body">As of v11.08, the reports listed below were updated to allow the use of Timesheet Input Groups.</p>
+        <h3 MadCap:autonum="1.2.1 ">Timecard Report</h3>
+        <p class="Body">If TS Input Groups are in use for the company, the <span class="Function">Timecard Report </span>(<i>PR &gt; Frequency &gt; Reports</i>), which sorts, breaks, and totals by group, <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>has the following:</p>
+        <ul>
+            <li>A Timesheet Input Group ordered list on the report selection criteria, as shown in <MadCap:xref href="#TimecardRptScreen" class="ImageRef"><i> Timecard Report Screen</i></MadCap:xref>. This determines which groups should be processed. It also includes all of your own groups, subordinate frozen and unfrozen groups for the entered current unposted Regular/Adjusting period, Future period or future comma-separated period lists, and the blank group.</li>
+            <li>A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>field labeled <span class="Field">Group </span>on the report. It is hidden for Recurring periods.</li>
+        </ul>
+        <p class="Body">The <span class="Field">Period Type </span>combo box <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes the following items:</p>
+        <ul>
+            <li>A Regular or Adjusting period type if there is a current unposted Regular or Adjusted period. The Periods are set up with the current period number and cannot be updated.</li>
+            <li>A Future period type if there are future non-MCC periods. The Periods are available for a single future period or a comma-separated list of future periods.</li>
+            <li>A Recurring period type. The Period is set up as 999 and cannot be updated.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="TimecardRptScreen"></a>Timecard Report Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TimecardRptScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">Only time cards under the selected groups are included in the report. A TS Groups field is found in both versions of the report (by Employee and by Job).</p>
+        <ul>
+            <li>For the report version by Employee (<MadCap:xref href="#TCRptbyEmployee" class="ImageRef"><i> Timecard Report by Employee</i></MadCap:xref>), the sort order and grouping are by Group by Employee.</li>
+            <li>For the report version by Job (<MadCap:xref href="#TCRptbyJob" class="ImageRef"><i> Timecard Report by Job</i></MadCap:xref>), the sort order and grouping are by Group by Job.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="TCRptbyEmployee"></a>Timecard Report by Employee</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TCRptbyEmployee.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 3: "><a name="TCRptbyJob"></a>Timecard Report by Job</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TCRptbyJob.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body"><strong>NOTE:</strong>&#160;The Company Timecard Report, PR Frequency Timecard Report for Recurring Period, and PR Frequency Timecard Report for which TS Input Groups are not in use for the company, work as before.</p>
+        <h3 MadCap:autonum="1.2.2 ">Edit Report</h3>
+        <p class="Body">If TS Input Groups are in use for the company, the <span class="Function">Edit Report </span>(<i>PR &gt; Frequency &gt; Reports</i>), which sorts, breaks, and totals by group, <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>has the following:</p>
+        <ul>
+            <li>A Timesheet Input Group ordered list on the report selection criteria, as shown in <MadCap:xref href="#EditRptScreen" class="ImageRef"><i> Edit Report Screen</i></MadCap:xref>. It also includes all of your own groups, subordinate frozen and unfrozen groups for the entered current unposted Regular/Adjusting period, and the blank group.</li>
+            <li>A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>field labeled <span class="Field">Group </span>on the report. It is hidden for posted Regular/Adjusting periods.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 4: "><a name="EditRptScreen"></a>Edit Report Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_EditRptScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">Only time cards under the selected groups are included in the report. A <span class="Field">TS Groups </span>field is found in both versions of the report (Summary and Detail).</p>
+        <ul>
+            <li class="li">For the Detail report version (<MadCap:xref href="#EditRptDetail" class="ImageRef"><i> Detail Edit Report</i></MadCap:xref>), the sort order and grouping are by Group by Employee.</li>
+            <li class="li">For the Summary report version, the report includes the Net (<MadCap:xref href="#EditRptSum_NetGroup" class="ImageRef"><i> Summary Edit Report – Net for Group</i></MadCap:xref>) and Burden (<MadCap:xref href="#EditRptSum_BurdenGrp" class="ImageRef"><i> Summary Edit Report – Burden for Group</i></MadCap:xref>) information for each group (sorted by group), as well as the total Net (<MadCap:xref href="#EditRptSum_TotalNet" class="ImageRef"><i> Summary Edit Report – Total Net</i></MadCap:xref>) and Burden (<MadCap:xref href="#EditRptSum_TotalBurden" class="ImageRef"><i> Summary Edit Report – Total Burden</i></MadCap:xref>) information.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 5: "><a name="EditRptDetail"></a>Detail Edit Report</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_EditRptDetail.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 6: "><a name="EditRptSum_NetGroup"></a>Summary Edit Report – Net for Group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_EditRptSum_NetGroup.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 7: "><a name="EditRptSum_BurdenGrp"></a>Summary Edit Report – Burden for Group</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_EditRptSum_BurdenGrp.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 8: "><a name="EditRptSum_TotalNet"></a>Summary Edit Report – Total Net</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_EditRptSum_TotalNet.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 9: "><a name="EditRptSum_TotalBurden"></a>Summary Edit Report – Total Burden</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_EditRptSum_TotalBurden.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body"><strong>Note: </strong>The Costing Workbench Edit Report, PR Frequency Edit Report for posted Period, and PR Frequency Edit Report for which TS Input Groups are not in use for the company, work as before.</p>
+        <h2 MadCap:autonum="1.3 ">New Reports</h2>
+        <p class="Body">As of v11.08, the reports listed below are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available for use with Timesheet Input&#160;Groups.</p>
+        <h3 MadCap:autonum="1.3.1 ">Group Validation Report</h3>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Group Validation Report </span>is found on the <i>PR &gt; Frequency &gt; Reports </i>menu. It is a version of the Costing Workbench Validate Batches report for the selected TS Input Groups. The report is only available if the TS Input Groups are in use for the company.</p>
+        <p class="Body">A Timesheet Input Groups ordered list on the Group Validation screen (<MadCap:xref href="#GrpValidationRpt" class="ImageRef"><i> Group Validation Report Screen</i></MadCap:xref>) determines which groups should be processed. It includes all of your own groups, as well as subordinate frozen and unfrozen groups for the entered current unposted Regular/Adjusting period.</p>
+        <p class="Body">Information is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>also included regarding the current PR Period, Year, PR Batch, and <MadCap:variable name="Variables.Financial Date caps" />.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 10: "><a name="GrpValidationRpt"></a>Group Validation Report Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_GrpValidationRpt.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">Sample screens are shown below of the Group Validation Report with errors (<MadCap:xref href="#GrpValRpt_withErrors" class="ImageRef"><i> Group Validation Report – with errors</i></MadCap:xref>) and without errors (<MadCap:xref href="#GrpValRpt_withoutErrors" class="ImageRef"><i> Group Validation Report – without errors</i></MadCap:xref>).</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 11: "><a name="GrpValRpt_withErrors"></a>Group Validation Report – with errors</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_GrpValRpt_withErrors.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 12: "><a name="GrpValRpt_withoutErrors"></a>Group Validation Report – without errors</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_GrpValRpt_withoutErrors.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3 MadCap:autonum="1.3.2 ">Group Batch Analysis Summary Report</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Group Batch Analysis Summary Report </span>is found on the<i> PR &gt; Frequency &gt; Reports</i> menu. It is a version of the Costing Workbench Batch Analysis Summary Report for the selected TS Input Groups. The report is only available if the TS Input Groups are in use for the company.</p>
+        <p class="Body">A Timesheet Input Groups ordered list on the Group Batch Analysis Summary Report screen (<MadCap:xref href="#GrpBatchAnalysisSumRptScreen" class="ImageRef"><i> Group Batch Analysis Summary Report Screen</i></MadCap:xref>) determines which groups should be processed. It also includes all of your own groups, as well as subordinate frozen and unfrozen groups for the entered current unposted Regular/Adjusting period.</p>
+        <p class="Body">Information is included about the current PR Period, Year, PR Batch, and <MadCap:variable name="Variables.Financial Date caps" />. A standard Employee Selection tab is also <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 13: "><a name="GrpBatchAnalysisSumRptScreen"></a>Group Batch Analysis Summary Report Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_GrpBatchAnalysisSumRptScreen.png" class="MaxPrintWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">A sample screen is shown below of the Group Batch Analysis Summary Report (<MadCap:xref href="#GrpBatchAnalysisSumReport" class="ImageRef"><i> Group Batch Analysis Summary Report</i></MadCap:xref>). It is sorted and grouped by TS Input Groups, then by <MadCap:variable name="Variables.Financial Periods caps" />.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 14: "><a name="GrpBatchAnalysisSumReport"></a>Group Batch Analysis Summary Report</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_GrpBatchAnalysisSumReport.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3 MadCap:autonum="1.3.3 ">Group PL Analysis Report</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Group PL Analysis Report </span>is found on the <i>PR &gt; Frequency &gt; Reports</i> menu. It is a version of the Costing Workbench PL Analysis Report for the selected TS Input Groups. The report is only available if the TS Input Groups are in use for the company.</p>
+        <p class="Body">A Timesheet Input Groups ordered list on the Group PL Analysis Report screen (<MadCap:xref href="#GrpPLAnalysisRptScreen" class="ImageRef"><i> Group PL Analysis Report Screen</i></MadCap:xref>) determines which groups should be processed. It also includes all of your own groups, as well as subordinate frozen and unfrozen groups for the entered current unposted Regular/Adjusting period.</p>
+        <p class="Body">Information is included about the current PR Period, Year, PR Batch, and <MadCap:variable name="Variables.Financial Date caps" />. A standard Employee Selection tab is also <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 15: "><a name="GrpPLAnalysisRptScreen"></a>Group PL Analysis Report Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_GrpPLAnalysisRptScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">A sample screen is shown below of the Group PL Analysis Report (<MadCap:xref href="#GrpPLAnalysisSumReport" class="ImageRef"><i> Group Batch Analysis Summary Report</i></MadCap:xref>). If the reports run for several groups only, the following warning appears: <i>The PL Analysis report was not run for all groups. The Invoice information may not be complete.</i></p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 16: "><a name="GrpPLAnalysisSumReport"></a>Group Batch Analysis Summary Report</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_GrpPLAnalysisSumReport.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

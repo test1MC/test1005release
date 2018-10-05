@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Timesheet Input Group Security</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Timesheet Input Group Security</h1>
+        <p class="Body">The <span class="Function">Timesheet Input Group Security </span>function allows you to create a comma-separated list of subordinate users to determine who can access Timesheet Input Groups (other than the owner).</p>
+        <h2 MadCap:autonum="1.1 ">Menu Option</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Timesheet Input Group Security </span>menu option is found on the <i>Payroll &gt; Company Setup &gt; Security </i>menu, as shown in <MadCap:xref href="#TSInputGrpSecurity_Menu" class="ImageRef"><i>Figure 1:  Menu Option</i></MadCap:xref>. </p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="TSInputGrpSecurity_Menu"></a>Menu Option</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputGrpSecurity_Menu.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Browse Screen</h2>
+        <p class="Body">When you select <span class="Function">Timesheet Input Group Security </span>from the menu, a browse screen appears, as shown in <MadCap:xref href="#TSInputGrpSecurity_Screen" class="ImageRef"><i>Figure 2:  Browse Screen</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="TSInputGrpSecurity_Screen"></a>Browse Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR108_Images/PR108_TSInputGrpSecurity_Screen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">User ID</p>
+        <p class="IndentFieldDef">The ID of the COINS user.</p>
+        <p class="IndentBold">Name</p>
+        <p class="IndentFieldDef">The name of the user or group with this ID.</p>
+        <p class="IndentBold">Subordinates</p>
+        <p class="IndentFieldDef">This is a comma-separated list of subordinate users. You cannot be your own subordinate since the subordination should be hierarchical. However, two users could be listed as subordinates to each other, and therefore have access to each other's groups.</p>
+        <ul>
+            <li>An asterisk (*) value means that all groups and timesheets are available for the user.</li>
+            <li>As owner, you have access to the timesheets under your own TS Input Groups and under the TS Input Groups of your subordinates.</li>
+            <li>A blank value means that you do not have subordinates and therefore only have access to your own groups.</li>
+        </ul>
+        <p class="Body" style="text-align: center;"><span style="font-weight: bold; color: #f37321;">Table 1:&#160;Subordinate User Example</span>
+        </p>
+        <table style="width: 454px;height: 129px;border-left-style: solid;border-left-width: 1px;border-left-color: #a9a9a9;border-right-style: solid;border-right-width: 1px;border-right-color: #a9a9a9;border-top-style: solid;border-top-width: 1px;border-top-color: #a9a9a9;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #a9a9a9;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="TableHeader_1">COINS&#160;USER</p>
+                    </td>
+                    <td>
+                        <p class="TableHeader_1">SUBORDINATES</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="TableCell">CARSTO</p>
+                    </td>
+                    <td>
+                        <p class="TableCell">EVGBEL,JOHTWA</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>EVGBEL</p>
+                    </td>
+                    <td>
+                        <p>CARSTO,JOHTWA</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>JOHTWA</p>
+                    </td>
+                    <td>
+                        <p>EVGBEL,CARSTO</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>VIVPET</p>
+                    </td>
+                    <td>
+                        <p>*</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">In the example shown in Table 1 above, user VIVPET is the Payroll Manager and has access to all payroll Timesheet Input Groups.   The other users have equal rights to each other’s groups.</p>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>BOQ Resources Set Up</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print"><MadCap:variable name="Variables.bq boq" /> Resources Set Up</h1>
+        <p>Resources are the master list of "things that are needed to build a property".&#160;&#160;The resources hold the details that are used as defaults for various fields on the <MadCap:variable name="Variables.bq boq" /> detail lines.</p>
+        <p>Resources can be linked to one or more of the following: a material commodity code, a subcontract trade code or a <MadCap:variable name="Variables.pc plant" /> commodity code.&#160; These are used when raising orders through <span class="module">Procurement</span>.&#160;</p>
+        <p>The resource can also hold default details for various fields including which of the six&#160;(or fewer depending on how many have been set up) cost categories apply to the selected resource.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;" />
+        </p>
+        <p class="Body">&#160;</p>
+        <p class="Body">All <MadCap:variable name="Variables.bq bill" /> items within <MadCap:variable name="Variables.bq boq" /> are essentially Resources, resources exist for the purpose of compiling a <MadCap:variable name="Variables.bq bill" /> and being able order from that, giving a clear outline of where you are in the build process and being able to accurately report back to the <MadCap:variable name="Variables.CVR" />.</p>
+        <p class="Body"><MadCap:variable name="Variables.Bq Bill caps" /> Resources are set up in <MadCap:variable name="Variables.bq boq" /> &gt; Setup &gt; Maintenance, this in essence is your library where you can add or retire resources. An example of what the <MadCap:variable name="Variables.Bq Bill caps" /> Resource Library looks like is shown below.</p>
+        <p class="Body">NOTE: it is never advised to delete a resource but instead retire when no longer required.</p>
+        <p class="Body_1">
+            <img src="../BQ/BOQ Images/Resources.png" style="height: 325px; width: 602px;" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../BQ/BOQ Images/Resources_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">Each Resource is set up to either be a Material or Subcontract element, with everything else falling into the ‘OT’ or ‘Other’ category.</p>
+        <p class="Body">Each Resource must be associated to a package, as a Material Resource, a Material Package can only be selected, the same logic applies if the resource is a Subcontract.</p>
+        <p class="Body">NOTE: all resources are linked to cost heads (Contract Status) and commodities (Procurement)</p>
+        <p class="Body">&#160;</p>
+        <h2 class="Heading2">Adding a Resource</h2>
+        <p class="Body">To add a resource, the ADD button must be selected from within the <MadCap:variable name="Variables.Bq Bill caps" /> Resource screen.</p>
+        <p class="Body_1">
+            <img src="../BQ/BOQ Images/Resources_1.png" style="height: 35px; width: 601px;" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../BQ/BOQ Images/Resources_1_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">you are then presented with the following screen where you can detail information about the resource that you are going to add.</p>
+        <p class="Body_1">
+            <img src="../BQ/BOQ Images/Resources_2.png" style="height: 452px; width: 601px;" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../BQ/BOQ Images/Resources_2_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">NOTE: Resource item numbering tends to follow the cost head structure; this is so that it is easily visible the cost head that it is associated to;</p>
+        <p class="Body">The first 4 characters of the resource should be the cost head that will be associated to it, whilst the next 4 characters following the hyphen are unique identifiers. Example Below;</p>
+        <p class="Body_1">
+            <img src="../BQ/BOQ Images/Resources_3.png" style="height: 19px; width: 602px;" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../BQ/BOQ Images/Resources_3_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">We will now add a resource to the library following the previous example of ‘Quoins Material’</p>
+        <p class="Body">Our Resource will be a new red Quoin brick following the same cost head and commodity structure as HA12-0001, as the Quoin procurement process would be exactly the same, the payment stages associated will also mimic HA12-0001.</p>
+        <p class="Body_1">
+            <img src="../BQ/BOQ Images/Resources_4.png" style="height: 442px; width: 602px;" class="FullWidth" />
+        </p>
+        <p class="Body">There are a number of different options when creating a new resource, some of which exist as <MadCap:variable name="Variables.tick" /> boxes to the right hand side of the main screen.</p>
+        <p class="Body"><span class="span_4">House Type Dependant</span> – this allows you to use tokens within the Description, tokens such as $vud_name$ are fields that exist on the ‘vud’ table, more fields on this table can be found by doing a search of ‘vud’ in System &gt; System Enquiry &gt; Database Enquiry.</p>
+        <p class="Body"><span class="span_4">Substitute</span> – allows the ‘on the fly’ swop out of resources of similar type/price, this allows you to swop an item such as a Red Quoins Brick with potentially a Dark Red Quoins Brick</p>
+        <p class="Body"><span class="span_4">Override Description </span>– Allows you, up to the point of ordering to change the description</p>
+        <p class="Body">Once you have selected the quantity unit and specified any material waste, you can then assign the resource to a category type, i.e Material or Subcontract.</p>
+        <p class="Body_1">
+            <img src="../BQ/BOQ Images/Resources_5.png" style="height: 138px; width: 602px;" class="FullWidth" />
+        </p>
+        <p class="Body">in this case I have ticked Material, no default price needs to be given at this stage, the price unit, status and type need to be filled out. </p>
+        <p class="Body">Commodity selection is done using the etcetera lookup, like cost heads, commodities are formed based on the cost head structure so the first four characters will be related cost head.</p>
+        <p class="Body_1">
+            <img src="../BQ/BOQ Images/Resources_6.png" style="height: 116px; width: 602px;" class="FullWidth" />
+        </p>
+        <p class="Body">As the first four characters of the commodity, Resource and Cost head are the same, within the ‘other details’ section, in this case the cost head should be ‘HA12’. Selecting this will automatically bring back the payment stage information set up against the cost head selected.</p>
+        <p class="Body">Estimating section defaults to ‘STD’ as none other exists, you have the ability now to assign a default material package.</p>
+        <p class="Body"><span style="color: #ff4500;">NOTE: a package must be assigned to new resources, as this is needed to be able to browse the resource items on workbenches
+        </span>
+        </p>
+        <p class="Body">once you are happy with the information against the resource click save, this then publishes it to the library.</p>
+        <div class="configuration">
+            <p>Use <span class="function" title="Function:%WBQ0000SBQC">Configuration</span> to specify which cost categories are relevant to <MadCap:variable name="Variables.Bq Bill of Quantities caps" />, and whether costing is determined by the <MadCap:variable name="Variables.bq bill" /> structure or the commodity codes linked to resources.</p>
+            <p>The BQ parameters <span class="parameter">CATMAT</span>, <span class="parameter">CATPLT </span>and <span class="parameter">CATSUB </span>determine which of the cost categories represent material, <MadCap:variable name="Variables.pc plant" /> and subcontract costs.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/BQ/bq_onecat.htm" />
+                    <MadCap:relatedTopic src="../Parameters/BQ/bq_sizeunit.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1483" MadCap:lastWidth="720">
+  <head>
+    <title>Property Portal Interface</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Property Portal Interface</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> can automatically load new sales leads from property portals Rightmove, Zoopla and Smart New Homes into <MadCap:variable name="General.ProductName" />.  These leads appear on the ?To Review? tab of the <span class="function" title="Function:%WHS1060SHVI"><MadCap:variable name="Variables.hs prospects" style="text-transform: capitalize;" /> Workbench</span>.  </p>
+    <div class="process">
+      <h2 class="print">How it works</h2>
+      <p>
+        <MadCap:variable name="General.ProductName" /> background processes poll the FTP sites of these property portals at regular intervals and check for any new CSV or XML files (depending on the format that the portal uses). These files are downloaded via FTP to the <MadCap:variable name="General.ProductName" /> server where the contents are processed.</p>
+      <ul>
+        <li>The parameters <span class="parameter">SNHFTPU</span>, <span class="parameter">SNHFTPP </span>and <span class="parameter">SNHHOST </span>specify the FTP connection and login details for Smart New Homes.</li>
+        <li>The parameters <span class="parameter">RMFTPU</span>, <span class="parameter">RMFTPP </span>and <span class="parameter">RMHOST </span>are used to specify the FTP connection and login details for Rightmove.</li>
+        <li>The parameters <span class="parameter">ZLFTPU</span>, <span class="parameter">ZLFTPP </span>and <span class="parameter">ZLHOST </span>specify the FTP connection and login details for Zoopla.</li>
+        <li>The parameter <span class="parameter">BASEDIR </span>specifies the base directory on the <MadCap:variable name="General.ProductName" /> server that the messages will be stored in.</li>
+        <li>The parameter <span class="parameter">POLL </span>determines the polling interval, and the parameter <span class="parameter">RETRIES </span>determines how many times the brokers should retry loading messages if they encounter an error. The parameter <span class="parameter">EMAILERR </span>specifies the email address to which details of any errors the brokers encounter will be sent.</li>
+        <li>The parameters <span class="parameter">RMUSER</span>, <span class="parameter">SNHUSER </span>and <span class="parameter">ZLUSER </span>specify the <MadCap:variable name="General.ProductName" /> user IDs for the respective brokers.</li>
+      </ul>
+      <p>For each new lead a new <MadCap:variable name="Variables.hs prospect" /> record is created in <MadCap:variable name="General.ProductName" />. The new <MadCap:variable name="Variables.hs prospects" /> are placed on the ‘To Review’ tab of the <span class="function" title="Function:%WHS1060SHVI"><MadCap:variable name="Variables.hs prospects" style="text-transform: capitalize;" /> Workbench</span> where duplication checking can then be done. <MadCap:variable name="Variables.hs prospects" style="text-transform: capitalize;" /> are loaded according to the following parameters:</p>
+      <ul>
+        <li>
+          <span class="parameter">DEFKCO </span>specifies which <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> the <MadCap:variable name="Variables.hs prospects" /> are loaded into.</li>
+        <li>
+          <span class="parameter">SNHSRC</span>, <span class="parameter">RMSRC </span>and <span class="parameter">ZLSRC </span>determine the source of <MadCap:variable name="Variables.enquiry" /> for the <MadCap:variable name="Variables.hs prospect" /> record.</li>
+        <li>
+          <span class="parameter">REAMOVE </span>determines the reason for move for the <MadCap:variable name="Variables.hs prospect" /> record.</li>
+        <li>
+          <span class="parameter">PORTLOI </span>determines the level of interest.</li>
+        <li>An <MadCap:variable name="Variables.enquiry" /> event is created on the <MadCap:variable name="Variables.hs prospect" />'s history; the parameters <span class="parameter">SNHEVCODE</span>, <span class="parameter">RMEVCODE </span>and <span class="parameter">ZLEVCODE </span>determine the event code.</li>
+        <li>The purchaser status code on the <MadCap:variable name="Variables.hs prospect" /> record is determined by the parameters <span class="parameter">PUREXCH</span>, <span class="parameter">PURFTB</span>, <span class="parameter">PURINV</span>, <span class="parameter">PURNHTS</span>, <span class="parameter">PURNMK</span>, <span class="parameter">PUROFF</span>, <span class="parameter">PUROMK</span>, <span class="parameter">PURPTS </span>and <span class="parameter">PURUNK</span>.</li>
+      </ul>
+      <p>After a CSV file or XML message has been processed, it is archived on the <MadCap:variable name="General.ProductName" /> server and the CSV file or XML message is deleted from the portal's FTP site.</p>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Property Portal Interface Configuration</h2>
+      <p>You can set the parameters for controlling how the property portal interfaces work using <span class="function" title="Function:%WHS0002BSYP">Portal Parameters</span>.  See <a href="WDHS5013_Property_Portal_Parameters.html">Property Portal Parameters</a>.</p>
+      <p>The background processes need to be configured to run via a UNIX cron job.  They are:</p>
+      <ul>
+        <li>Rightmove - hsupprm.p</li>
+        <li>Zoopla - hsuppzl.p</li>
+        <li>Smart New Homes - hsuppsnh.p</li>
+      </ul>
+    </div>
+  </body>
+</html>

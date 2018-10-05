@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Posting a VAT Return</h1>
+        <p>After the VAT Return has been submitted, it must be posted. The posting Status is<MadCap:variable name="Variables.colour" />coded</p>
+        <p>Green = Posted</p>
+        <p>Amber = Unposted</p>
+        <p>Red = Cancelled</p>
+        <h2>To post the Return:</h2>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Go to VAT Returns Workbench.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li>On the VAT Returns tab, select the Return.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li>Choose the Post VAT Return to GL action.</li>
+        </ol>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0009/Posting a VAT Return.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0009/Posting a VAT Return_1.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>If GL posting is completed before Submitting or Marking manually Submitted a warning will be displayed</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0009/Posting a VAT Return_2.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0009/Posting a VAT Return_3.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0009/Posting a VAT Return_4.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Posting a VAT Return will transfer the returned balances from the VAT&#160;control accounts to a separate VAT&#160;Debtor/Creditor Account. The balance on this account will then be cleared by posting of the cash payment/receipt to/from HMRC.</p>
+        <p>This process;</p>
+        <ul>
+            <li>avoids the need to allow manual postings to the VAT&#160;control accounts for this monthly/quarterly cash posting. </li>
+            <li>Only unposted returns can be posted. </li>
+            <li>create and post a GL batch </li>
+            <li>with one line per unique GL control account for VAT codes (excluding non-recoverable VAT input VAT codes) included in the return with a value of the total VAT for VAT Codes linked to that GL Control Account (Positive VAT&#160;output VAT creates a Debit entry and Positive VAT input VAT creates a Credit Entry).</li>
+            <li>The total of these lines is then reversed and posted to the Creditor/Debtor Account for the VAT Registration.</li>
+            <li>Sets the Posting Status for the Return is changed to "Posted".</li>
+        </ul>
+        <p>The VAT Return is updated with the GL Batch Number</p>
+        <p>
+            <img src="../../../../Resources/Images_V-Z/VAT-WB-0009/Posting a VAT Return_5.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>A posted return can be unposted.</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Go to VAT Returns Workbench.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li>On the VAT Returns tab, select the Return.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li>Choose the Unpost VAT Return to GL action.</li>
+        </ol>
+        <p>This makes the reverse entries to those that were made when the VAT Return was posted.</p>
+        <p>&#160;</p>
+        <p class="note">For Multiple Company returns Intercompany posting must be enabled</p>
+    </body>
+</html>

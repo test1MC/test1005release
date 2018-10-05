@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>PR Payroll Calculation</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">PR&#160;Payroll Calculation</h1>
+        <p class="Body">Payroll <span class="Function">Calculation </span>processing (<i>Payroll &gt; [frequency]&gt; Calculation</i>) <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>combines time card analysis with <MadCap:variable name="Variables.Jc Contract caps" /> <MadCap:variable name="Variables.Cost Head caps" /> masking. Listed below are examples of the processing that can occur.</p>
+        <ul>
+            <li>
+If the mask is _ _ _ L, an attempt is made to substitute the first 3 characters from the time card’s <MadCap:variable name="Variables.Cost Head caps" />. If 3 characters are not available, a warning is received during PR&#160;Calculation that the Payroll Redirection analysis for certain items (such as Gross <MadCap:variable name="Variables.Labour caps" />, Gross <MadCap:variable name="Variables.Labour caps" /> Premium Only, Taxes, etc.) is invalid.</li>
+            <li>If the <MadCap:variable name="Variables.Jc Contract caps" /> <MadCap:variable name="Variables.Cost Head caps" /> mask is 100_, and the <MadCap:variable name="Variables.Cost Head caps" /> is L on the time card level, the resulting <MadCap:variable name="Variables.Cost Head caps" /> is 100L.</li>
+            <li>If the <MadCap:variable name="Variables.Jc Contract caps" /> <MadCap:variable name="Variables.Cost Head caps" /> mask is _ _ _, the resulting <MadCap:variable name="Variables.Cost Head caps" /> is retrieved completely from the time card level.</li>
+            <li>If the cost code of the Payroll Redirection analysis does not exist, an Invalid Analysis error is received during Validate Batch or other appropriate TS Group validations. Processing is automatically stopped, and you must address the problem by making necessary corrections and ensuring that Payroll Redirection works.
+</li>
+        </ul>
+    </body>
+</html>

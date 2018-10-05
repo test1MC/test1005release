@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="602" MadCap:lastWidth="601" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Screen and Processing Changes</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Configuration</h1>
+        <h2 MadCap:autonum="1.1 ">New PO&#160;Parameter</h2>
+        <p class="Body">The PO parameter <span class="parameter">STTAXDEF </span>has been added to the Procurement module. This parameter is only relevant for US companies (where the CO parameter <span class="parameter">TAXTYPE </span>is set to SALES).</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 101px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 519px;" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">STTAXDEF</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p><![CDATA[	]]><MadCap:variable name="Variables.St Stock caps" /> Orders – Default Sales Tax Code on PO line from:</p>
+                        <p>•	Location (Default) (Code = “L”)</p>
+                        <p>•	<MadCap:variable name="Variables.St Stock caps" /> Item (Code = “I”)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 ">Changed PO Parameters</h2>
+        <p class="Body">The PO&#160;parameters in the table below have been changed to include functionality for Sales Tax Code defaulting in the Procurement module when they are set to <strong>Y</strong>.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 101px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 519px;" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ALWMLAAS</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Allow multiple Analysis Types on Asset Orders</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">ALWMLAMA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Allow multiple Analysis Types on Material Orders</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">ALWMLAWS</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Allow multiple Analysis Types on Workshop Orders</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum="2 ">Screen and Processing Changes</h1>
+        <p class="Body">The Sales Tax Code referred to throughout this document is held against the <MadCap:variable name="Variables.St Stock caps" /> Items <span class="Field">Tax </span>code, as shown in <MadCap:xref href="#SalesTaxCode" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="SalesTaxCode"></a>Sales&#160;Tax Code</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/PO023_Images/PO023_SalesTaxCode.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.1 ">PO Entry</h2>
+        <h3 MadCap:autonum="2.1.1 ">Standard Order Entry</h3>
+        <p class="Body">When <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:variable name="Variables.St Stock caps" /> Item is added to <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:variable name="Variables.St Stock caps" /> Order on any PO&#160;Order (see <MadCap:xref href="#StdPOEntry" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref> as an example), the system <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>checks the status of <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PO parameter<span class="parameter"> STTAXDEF</span>.</p>
+        <ul>
+            <li class="ListBullet3">If the parameter is set to <strong>I</strong>, and the <MadCap:variable name="Variables.St Stock caps"></MadCap:variable> Item selected in the <strong>Code </strong>column (#1) has a non-blank Sales Tax Code, that Item's Sales Tax Code defaults into the <strong>Sales/Use Tax Code </strong>column (#2).</li>
+            <li class="ListBullet3"> If the parameter is not set to <strong>I</strong>, the Sales Tax Code of the <MadCap:variable name="Variables.St Stock caps" /><strong> Location </strong>(#3) defaults into the <strong>Sales/Use Tax Code </strong>column (#2).</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="StdPOEntry"></a>Standard Order Entry</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/PO023_Images/PO023_StdPOEntry.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="2.1.2 ">Single Form Order Entry</h3>
+        <p class="Body">When <MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:variable name="Variables.St Stock caps" /> Item is added to a Single Form <MadCap:variable name="Variables.St Stock caps" /> Order in <i>More Orders &gt; Orders (Single Form) &gt; Add <MadCap:variable name="Variables.St Stock caps" /> Order - Single Form Entry</i> (see <MadCap:xref href="#SingleFormEntry" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>), the system <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>checks the status of <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PO parameter<span class="parameter"> STTAXDEF</span>.</p>
+        <ul>
+            <li class="ListBullet3">If the parameter is set to <strong>I</strong>, and the <MadCap:variable name="Variables.St Stock caps" /> Item selected in the <strong>Code </strong>column (#1) has a non-blank Sales Tax Code, that Item's Sales Tax Code defaults into the <strong>Tax Code </strong>column (#2).</li>
+            <li class="ListBullet3"> If the parameter is not set to <strong>I</strong>, the Sales Tax Code of the <MadCap:variable name="Variables.St Stock caps" /> <strong>Location </strong>(#3) defaults into the <strong>Tax Code </strong>column (#2).</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="SingleFormEntry"></a>Single Form Order Entry</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/PO023_Images/PO023_SingleFormEntry.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.2 ">Multi Analysis Type Orders</h2>
+        <p class="Body">When PO&#160;parameters <span class="parameter">ALWMLAAS</span> (<MadCap:variable name="Variables.Se Asset caps" /> Orders), <span class="parameter">ALWMLAMA</span> (Material Orders), and <span class="parameter">ALWMLAWS</span> (Workshop Orders) are set to <strong>Y</strong>, you can add "true" <MadCap:variable name="Variables.St Stock caps" /> lines to other types of both Standard and Single Form purchase orders. If they are set to <strong>N</strong>, you cannot add any <MadCap:variable name="Variables.St Stock caps" /> Items to an <MadCap:variable name="Variables.Se Asset caps" />/Material/Workshop order. The same logic also applies for how to default the Sales Tax Code when a <MadCap:variable name="Variables.st stock" /> code is added to any of these orders.</p>
+    </body>
+</html>

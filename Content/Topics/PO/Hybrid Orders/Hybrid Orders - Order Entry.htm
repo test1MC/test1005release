@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="778" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Hybrid Orders - </MadCap:conditionalText>Order Entry</h1>
+        <p class="Body">If the PO parameter <span class="parameter">USEHYBPO</span> is set to Y, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Line Add Type of Material - LS is available for the following major types of order.</p>
+        <ul class="CompactList">
+            <li>Material</li>
+            <li>Overhead</li>
+            <li>Workshop</li>
+            <li>Asset</li>
+        </ul>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/Procurement/Hybrid POs/LSAddType.png" />
+        </p>
+        <p class="Body">This line type is not available on the following types of order, because they are already lump sum order types:</p>
+        <ul class="CompactList">
+            <li>Subcontract</li>
+            <li><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />
+            </li>
+            <li><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" />
+            </li>
+            <li><MadCap:variable name="Variables.pc rehire" style="text-transform: capitalize;" />
+            </li>
+        </ul>
+        <p class="Body">On lump sum lines, the <span class="Field">Quantity</span>, <span class="Field">Un</span> (unit), <span class="Field">Price</span> and <span class="Field">Per</span> fields are not available, and the <span class="Field">Amount</span> field is an input field in which you enter the lump sum amount.</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_P-R/Procurement/Hybrid POs/LumpSumLine.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.1">Committing the Order</h2>
+        <p class="Body">If the order being committed contains at least one lump sum line, <MadCap:variable name="General.ProductName" /> does not issue a warning that there are zero value line items, even if the parameter <span class="parameter">WARNUNPR</span> is set to Y.</p>
+        <h2 MadCap:autonum="1.2">Printing the Order</h2>
+        <p class="Body">When printing lump sum lines, the following fields display as blank:</p>
+        <ul class="CompactList">
+            <li>Quantity Ordered [pol_qty]</li>
+            <li>Unit of Quantity [pol_uoq]</li>
+            <li>Price [pol_price]</li>
+            <li>Per [pol_per]</li>
+            <li>Discount (1 to 5) [pol_disc, pol_disc2 etc]</li>
+        </ul>
+        <h2 MadCap:autonum="1.3">GRN Entry</h2>
+        <p class="Body">Just as with Lump Sum Orders, Lump Sum lines are never GRN’d even if the order itself is set for GRNs.  Lump Sum lines are therefore not visible during GRN Entry.</p>
+        <h2 MadCap:autonum="1.4">Invoice Matching</h2>
+        <p class="Body">If the order is marked as requiring GRNs, invoice matching lines are created for any lump sum lines on the order.</p>
+    </body>
+</html>

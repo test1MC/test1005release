@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Sector Security</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Sector Security</h1>
+    <p>
+      <span class="function" title="Function:%WGL2120BCOS">GL Security Maintenance</span> allows you to control which users are allowed access to which GL accounts. You can determine the access for individual users or for groups. </p>
+    <p>If you are using sectors it would be common to apply GL security to the GL element that is configured as "Sector".</p>
+    <p>Applying GL security as above will mean that users cannot access accounts outside their sector when using functions that access the <span class="module">General Ledger</span> directly (for example, GL account <MadCap:variable name="Variables.enquiries" />), but it will not prevent them from seeing transactions in other ledgers.  For example, the view of <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> Invoices would not be restricted.  </p>
+    <p>However, if you are using Sector-Based Ledgers for a module and GL security is set as above, the security also applies to <em>all</em> transactions associated with the GL security settings; therefore users will only see, for example, <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> Invoice transactions for the sector or sectors that fall within their GL security settings.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0006_Account_and_Contract_Security.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print">To apply sector security:</h2>
+      <ol>
+        <li>Sectors must be enabled (see <a href="WDGL0020_Sectors.html">Sectors</a>).</li>
+        <li>In <span class="function" title="Function:%WGL0000BSYP">GL Parameters</span>, set the parameter <span class="parameter">ACCTSEC </span>to <span class="userinput">gla_el<em>n</em></span> (where <em>n</em> is the number of the element that identifies the sector).</li>
+        <li>Use <span class="function" title="Function:%WGL2120BCOS">GL Security Maintenance</span> to control which users have access to which elements (and therefore which sectors). </li>
+      </ol>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/GL/gl_acctsec.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

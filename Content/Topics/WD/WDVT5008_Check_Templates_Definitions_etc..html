@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="820" MadCap:lastWidth="601">
+    <head><title>Check Templates, Definitions etc.</title>
+    </head>
+    <body>
+        <div class="overview">
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Check Templates, Definitions etc.</h1>
+            <h2>Check Transaction Templates</h2>
+            <p>There are four types of transaction template in <MadCap:variable name="General.ProductName" /> which could potentially include lines with standard rate <MadCap:variable name="Variables.vat" /> codes. These are as follows:</p>
+            <ul>
+                <li><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /> Standing Journals</li>
+                <li>General Ledger Standing Journals</li>
+                <li><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /> Repeat Invoices</li>
+                <li>House Sales Journals (including Plot and Part Exchange)</li>
+            </ul>
+            <p>You can update these transaction templates manually, as you are unlikely to have a large number of them. You should check the templates in advance, and consider the tax point date on the transactions which will use them. Change any <MadCap:variable name="Variables.vat" /> codes to the new standard codes after you have processed all transactions at the old rate, but before you start to process transactions at the new rate.</p>
+            <p>If you need to use templates with the new rate before you have finished processing transactions at the old rate, you will need to set up new templates with the new rate.&#160; It is not expected that most clients will have many (if any) transaction templates which include standard rated <MadCap:variable name="Variables.vat" /> lines and, therefore, need updating. However, all clients using <MadCap:variable name="General.ProductName" /> House Sales should carefully check their House Sales Journals, as this is probably the most likely of these transaction types to include such lines.</p>
+            <h2>Check Certificate Definitions</h2>
+            <p>If you have configured your own certificate definitions in Subcontract Ledger or <MadCap:variable name="Variables.Contract Sales" /> Ledger, ensure that the <MadCap:variable name="Variables.vat" /> is not calculated on a cumulative basis. If it is, you need to change this before the rates change. The majority of clients will have checked and, if necessary, corrected this for previous rate changes.&#160; However, any certificate definitions which have been added or amended since then&#160;should be checked.</p>
+            <p>Check that the <span class="field">Calc Cumulative</span> field on the <MadCap:variable name="Variables.vat" /> line is set to <span class="userinput">N</span>.</p>
+            <p>Certificates configured by <MadCap:variable name="General.ProductName" /> will correctly have <MadCap:variable name="Variables.vat" /> set up with <span class="field">Calc Cumulative</span> =&#160;<span class="userinput">N</span>.</p>
+            <h2>Consider Copied Transactions</h2>
+            <p>A standard feature in <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> is to allow you to create a new transaction from a copy&#160;of an existing transaction – this is available in all ledgers. In <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" />, the only relevant transactions that can be copied are GL Journals. If you use this feature, you need to ensure that the <MadCap:variable name="Variables.vat" /> code on any copied transactions whose tax point date is on or after rate change date is set appropriately.</p>
+            <h2>Consider Configured Reports, etc</h2>
+            <p>Although it is unlikely, if you have any bespoke or configured reports, screens or workflows that are filtered by <MadCap:variable name="Variables.vat" /> code, you will need to update these to take account of the new codes. Please contact <MadCap:variable name="General.ProductName" /> if you need consultancy to do this.</p>
+        </div>
+    </body>
+</html>

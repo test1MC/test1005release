@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1137" MadCap:lastWidth="988" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:onlyLocalStylesheets="False">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Main Menu Security Exclusions</h1>
+        <p>When using main menu security (SY/MENUSEC=Y) then when access to a function is checked if the function is NOT a main menu function then it is checked using the Read Only and Update indicator.</p>
+        <p>Each function of this type has an attribute which specifies which main menu item it belongs to and whether it is a read only capability or an update capability.  If the user has read only access to the main menu item then they also are granted access to the read only sub functions.  If they have update access then they are granted both read only and update access to the sub functions.</p>
+        <p>This access can be modified by setting specific access for the desired functions.  If specific access is defined then this is used in preference to the main menu security read only/update access described above.</p>
+        <p>This is now modified as follows.  If the decision comes down to a read only/update access on a sub function to a main menu item then if the function is one of the six types specified in below and set in the parameter value then access will be denied.</p>
+        <p>From 11.04 the capability was added to change the default access for a main menu item from Y-YES to G-Group (so that further groups are then checked).</p>
+        <p>A new system parameter has been added</p>
+        <p><b>MENUEXC</b>	Main Menu Exclude Function Types</p>
+        <p>This will be a comma separated list of function types that should be excluded from the main menu security access model.</p>
+        <ul class="FirstLevelLessIndentation" style="list-style-type: circle;">
+            <li style="text-align: left;">A=Add</li>
+            <li style="text-align: left;">B=Bulk</li>
+            <li style="text-align: left;">C=Concurrent</li>
+            <li style="text-align: left;">D=Delete</li>
+            <li style="text-align: left;">X=Export</li>
+            <li style="text-align: left;">U=Update</li>
+        </ul>
+        <p>  So setting SY/MENUEXC to B,D would mean that main menu security would not allow access to Bulk and Delete functions at all.  If bulk and delete options are required then they would have to be specifically granted access in normal group security access (or user security access although this is not recommended).</p>
+        <p>&#160;</p>
+    </body>
+</html>

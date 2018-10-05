@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>National Insurance Number Verification Request</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">National Insurance Number Verification Request</h1>
+        <p>A National Insurance Number Verification Request (NVR) allows an employer to check that NI numbers provided by new employees are valid, or to obtain the correct NI number from other employee identity details where it is not known.</p>
+        <p>The Verification Status shows alongside the NI number on the National Details Tab in Employee Maintenance. &#160;</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>National Insurance Layout Showing Verification Status</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_012801.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>This can have values of:</p>
+        <ol>
+            <li><span style="font-size: 1em;">&lt;blank&gt; - NI not verified, no NVR planned.</span>
+            </li>
+            <li><span style="font-size: 1em;">‘To Verify’ – will be picked up on the next NVR submitted.</span>
+            </li>
+            <li><span style="font-size: 1em;">‘Being Verified’ – the NVR has been sent, but the response has not yet been received.</span>
+            </li>
+            <li><span style="font-size: 1em;">‘Verified’ - the NI number has been verified by the HMRC.</span>
+            </li>
+        </ol>
+        <p>Users will only be able to update this field when it is one of the first two options and only be able to set it to one of the first two options. Changing the NI number will cause the verification status to change to ‘To Verify’.</p>
+        <p>When an NVR is submitted, <MadCap:variable name="General.ProductName" /> includes in the submission all employees for which the NI number is flagged as ‘To Verify’ in Employee Maintenance. The verification status field on these employees is updated to ’Being Verified’. Responses to NVRs will be sent by the HMRC via the <a href="WDPR0129_Data_Provisioning_Service.html">Outgoing Data Provisioning Service (DPS)</a> and picked up using <span class="function" title="Function:%WPR731RENO">DPS Report</span>.</p>
+        <p>When the NI number response&#160;from HMRC is downloaded, <MadCap:variable name="General.ProductName" /> updates&#160;the employee record, if appropriate, to correct or blank out the NI number and adjust the verification status to either blank (when no NI number found) or ‘Verified’ (when we know we have a correct NI number).</p>
+        <p>NVRs do not appear on the frequency-specific versions of the HMRC Workbench.</p>
+    </body>
+</html>

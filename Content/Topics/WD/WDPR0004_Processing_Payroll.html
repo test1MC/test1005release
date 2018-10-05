@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="785" MadCap:lastWidth="601">
+  <head>
+    <title>Processing Payroll</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Processing Payroll</h1>
+    <p>Before processing <span class="module">Payroll</span>, there are a number of steps that should be performed initially to set it up in effective working order. If you have not already performed these steps, please refer to the <strong>Initial Payroll Setup</strong> section of Payroll online documentation (under <strong>US Specific Topics</strong>). Otherwise, the payroll process outlined below will not work correctly for you.</p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">How to process Payroll:</h2>
+      <ol>
+        <li>Open a <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> in <span class="module">General Ledger</span> using <span class="function" title="Function:%WGL2010BGLP">Global Periods Maintenance</span>.</li>
+        <li>In <span class="function">Period Maintenance</span> for each pay cycle:<ul><li>Set up period maintenance. Allowable period types are <span class="userinput">Future</span>, <span class="userinput">Regular</span>, and <span class="userinput">Adjusting</span>.</li><li>Determine the Payroll Month, Payroll Period, and <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" />.</li></ul></li>
+        <li>In <span class="function">Add Recurring Timesheets</span> for each pay cycle, add recurring timecards. Make sure the selected timecards are converted correctly.</li>
+        <li>Add employee timesheets, using <span class="function" title="Function:%WP6100BPRK">Timesheet Input</span> in any pay cycle (Weekly, Monthly, Twice Monthly, <MadCap:variable name="Variables.2-weekly" style="text-transform: capitalize;" />, <MadCap:variable name="Variables.4-weekly" style="text-transform: capitalize;" />).<p><strong>Before adding these timesheets, there are a number of pre-processing considerations you should be aware of, as listed below:</strong></p><ul><li>You may enter multiple <MadCap:variable name="Variables.cheques" />.</li><li>Review the defaults from <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>, including TC Default rules, Tax Distribution Methods, Valid State/Local/WC Code on file for Payroll <MadCap:variable name="Variables.kco companies" /> and <MadCap:variable name="Variables.jc contracts" />.</li><li>Review the defaults from the <span class="function" title="Function:%WPR220BQRU"><MadCap:variable name="Variables.pr unions" style="text-transform: capitalize;" /></span> and <span class="function" title="Function:%WPR228BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span> files, such as union and rate defaults.</li><li>Review restrictions, such as not processing for terminated employees, completed <MadCap:variable name="Variables.jc contracts" />, and dormancy.</li><li>Enter timesheets for multiple states, and check the defaults for these states in <span class="function" title="Function:%WP69200BEMP">Employee Maintenance</span>.</li><li>Enter timesheets with various <MadCap:variable name="Variables.pr effective date" />s to test the rate defaulting, <span class="function" title="Function:%WPR221BPUC">Union Calculations</span> defaulting, <span class="function" title="Function:%WPR228BPJO"><MadCap:variable name="Variables.Jc Contract caps" /> Calculations</span> defaulting, and <span class="function" title="Function:%WPR227BPAC">Pay Calculations</span> defaulting.</li></ul></li>
+        <li>Print a listing.</li>
+      </ol>
+    </div>
+  </body>
+</html>

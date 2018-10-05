@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Workflow Template (2 way email)</h1>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-063-1108.png" class="FullWidth" />
+        </p>
+        <p>Two (2) way email functionality allows the user to complete tasks via email links and eliminates the need for users to log in and access the Activity Workbench. In this example of workflow template it shows the use of the 2 way email functionality. At each level of the authorisation process an email is sent to the role and the options which would normally appear on the activity workbench when completing the tasks are provided to the user as links on the email.&#160; By selection of the correct link an email is sent back to the workflow and the task is updated accordingly, and the workflow moves on to the next task.</p>
+        <p>Please see an example of the email which the user would receive when the workflow is launched.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template 2 way email_1.png" class="FullWidth" />
+        </p>
+        <p>As the Order is outside the limit of the user with the task the option to pass up to a higher authorisation level and the option to reject the order appear on the email.&#160; When selecting the option to send to Department Head an email is created with the subject line encoded with the relevant details required action the task and to move the workflow onto the next stage.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template 2 way email_2.png" class="FullWidth" />
+        </p>
+        <p>Subject Line shows the following detail.</p>
+        <p>Complete:1st Level Authorisation:-Dept. Head Approval-Kerry Brown (HM-ng1/0089) (WFID=10/54/4,NextStage=5-kerbro,cozddlKDadkTdSlB)</p>
+        <p>NB. This has encoded data so that not just any email cannot be created to move the workflow on.</p>
+        <p>Approver – Dept. Heard - As the order limit is within this users limit the option to Commit or Reject is available for this user.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template 2 way email_3.png" class="FullWidth" />
+        </p>
+        <p>The workflow is setup in the same manner that any other workflow is created.&#160; The difference is that instead of a separate stage for the emails they are marked as 'Workflow Emails'&#160; within the stage and the {options} are added to the bottom of the text of the email to insert any links.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template 2 way email_4.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/Workflow Template 2 way email_5.png" class="FullWidth" />
+        </p>
+        <h2>User defined Variables</h2>
+        <p>The ability to use Workflow variable has also been demonstrated in this example.</p>
+        <p>This functionality provides the ability to assign values to different users therefore allowing a single calculation to test the validity of an action.&#160;</p>
+        <p>A user can have different values for different variables to which they have been assigned. If a user has not been assigned individually the system will look for a default roll value where the user is left blank.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Workflow-Exercises/LMDSY0071-064-1108.png" />
+        </p>
+        <p>The variables can be access via an RO field which will look at the logged in user to establish the value of the variable at run time.</p>
+        <p>buylimit=sysuser.RO_sur_wfvar^buyerlimit;</p>
+        <p>This can be assigned either as an initial calculation or can be defined as a pre-calculation on a single stage.</p>
+        <p>&#160;</p>
+    </body>
+</html>

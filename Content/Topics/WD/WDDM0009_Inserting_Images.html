@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Inserting Images in Documentation Topics</title>
+    <style>/*<![CDATA[*/
+img.btn
+{
+	vertical-align: middle;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Inserting Images in Documentation Topics</h1>
+    <p>You can use the <img src="../../Resources/Images/insert-image1.png" /> item on the HTML editor's right-click menu to insert an image, but you need to know the URL of the image.  If you want to use any of the standard images that are shipped with <MadCap:variable name="General.ProductName" /> (for example, screenshots or button images), you need to use an image token in the text.</p>
+    <div class="process">
+      <h2 class="print">To insert a standard <MadCap:variable name="General.ProductName" /> image:</h2>
+      <ul>
+        <li>In the text, type <span class="userinput"><span class="null">$I</span>$<em>imagename</em>$<span class="null">I</span>$</span>.  For example: <span class="userinput"><span class="null">$I</span>$pic03<span>.</span>gif$<span class="null">I</span>$</span>.</li>
+        <li>For a button, type <span class="userinput"><span class="null">$I</span>$<em>imagename</em>|button$<span class="null">I</span>$</span>.  For example: <span class="userinput"><span class="null">$I</span>$add.svg|button$<span class="null">I</span>$</span>. (You can find the name of a button file by right-clicking on the button in <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> and selecting Save Picture As...  This will open a <MadCap:variable name="Variables.dialogue" /> box with the File Name filled in; note the name and close the <MadCap:variable name="Variables.dialogue" /> box.)</li>
+        <li>For a screenshot, type <span class="userinput">$<span class="null">J</span>$<em>imagename</em>$<span class="null">J</span>$</span>.  This inserts the screenshot as a hidden image, with a link that displays the screenshot.  By default, <MadCap:variable name="General.ProductName" /> displays the screenshot using the cascading style sheet class "screen".  You can override the class by entering <span class="userinput">$<span class="null">J</span>$<em>imagename|class</em>$<span class="null">J</span>$ </span>(for example: <span class="userinput">$<span class="null">J</span>$screen35.gif|small$<span class="null">J</span>$</span>).</li>
+        <li>You can also use the lookup: select either Image or Button.</li>
+      </ul>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Inserting images - configuration</h2>
+      <p>Standard documentation images are held in the /docimage/ directory.</p>
+      <p>Standard button images are held in the /images/ directory.</p>
+    </div>
+  </body>
+</html>

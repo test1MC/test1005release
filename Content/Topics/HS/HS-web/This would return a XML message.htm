@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2>&#160;</h2>
+        <p>This would return a XML message with the following format:</p>
+        <p>&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p>&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p>&lt;env:Body&gt;</p>
+        <p>&lt;call object="hswsppe1" method="fetchAddress" id="0987654321"&gt;</p>
+        <p>&lt;Address&gt;</p>
+        <p>&lt;AddressLine1&gt;10 Chester Road&lt;/AddressLine1&gt; </p>
+        <p>&lt;AddressLine2&gt;SUTTON COLDFIELD&lt;/AddressLine2&gt; </p>
+        <p>&lt;AddressLine3&gt;&lt;/AddressLine3&gt; </p>
+        <p>&lt;AddressLine4&gt;&lt;/AddressLine4&gt; </p>
+        <p>&lt;PostCode&gt;B73 5BW&lt;/PostCode&gt; </p>
+        <p>&lt;/Address&gt;</p>
+        <p>&lt;Address&gt;</p>
+        <p>&lt;AddressLine1&gt;10 Glovers Trust Homes&lt;/AddressLine1&gt; </p>
+        <p>&lt;AddressLine2&gt;Chester Road&lt;/AddressLine2&gt; </p>
+        <p>&lt;AddressLine3&gt;SUTTON COLDFIELD&lt;/AddressLine3&gt; </p>
+        <p>&lt;AddressLine4&gt;&lt;/AddressLine4&gt; </p>
+        <p>&lt;PostCode&gt;B73 5BW&lt;/PostCode&gt; </p>
+        <p>&lt;/Address&gt;</p>
+        <p>&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p>&lt;/call&gt;</p>
+        <p>&lt;/env:Body&gt;</p>
+        <p>&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>Note there are a number of post codes in the UK with more than one possible address, as in the above example.</p>
+        <p>&#160;</p>
+        <p>If no matching addresses could be found then the following message will be returned:</p>
+        <p>&#160;</p>
+        <p> &lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p>&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p>&lt;env:Body&gt;</p>
+        <p>&lt;env:Fault&gt;</p>
+        <p>&lt;env:Code&gt;</p>
+        <p>&lt;env:Value&gt;env:Sender&lt;/env:Value&gt; </p>
+        <p>&lt;/env:Code&gt;</p>
+        <p>&lt;env:Reason&gt;</p>
+        <p>&lt;env:Text&gt;Address does not exist (B73 5BWx) [SY885]&lt;/env:Text&gt; </p>
+        <p>&lt;/env:Reason&gt;</p>
+        <p>&lt;/env:Fault&gt;</p>
+        <p>&lt;/env:Body&gt;</p>
+        <p>&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

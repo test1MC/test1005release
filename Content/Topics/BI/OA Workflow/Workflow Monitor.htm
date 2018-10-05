@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="674" MadCap:lastWidth="600">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1" MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Workflow Monitor&#160;</h1>
+        <p class="Body">A Monitor is the user who <MadCap:variable name="General.ProductName" /> should alert with a duplicate task if a stage extends beyond the expected duration. If a stage is overdue, <MadCap:variable name="General.ProductName" /> creates a duplicate action on the monitor's workbench with an escalation type activity.</p>
+        <p class="Body">The escalation type activity is defined in the System Parameter WFESC</p>
+        <p class="Body">NOTE - This MUST be a different action type to that being used within the Workflow stages to allow for appropriate escalation and completion of tasks.</p>
+        <p class="Body">It is possible to assign a Monitor to a workflow as a whole or to individual stages. The monitor specified on the template will be used unless there is a specific monitor specified on the stage itself. </p>
+        <p class="Body">To use the monitor a duration will need to be specified against the stage:</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Monitor.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Monitor_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">Duration Whether this stage has a duration associated with it. If the stage has a duration, the entry on the Activity Workbench will turn red if the stage is overdue.</p>
+        <p class="Body"> The duration of the stage (in the units shown in the next field).</p>
+        <p class="Body"> The units for the duration of the stage.</p>
+        <p class="Body"> When the duration is calculated from:</p>
+        <p class="Body">Absolute = From the start of the workflow.</p>
+        <p class="Body">Relative = From the start of this stage.</p>
+        <p class="Body">The monitor can then be selected from the list of Roles.</p>
+        <p class="Body">There is a background process (syu9999.p – Background Monitor) which will need to be run against the <MadCap:variable name="General.ProductName" /> database so that as Stages become overdue the appropriate monitor can be applied. These processes will also be required by any Delay stages to ensure that once the delay has elapsed the workflow moves onto the next linked stage(s).</p>
+    </body>
+</html>

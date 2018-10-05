@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Format V (National Australia Bank)</title>
+    <style>/*<![CDATA[*/
+table.type1
+{
+	width: 80%;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Format V (National Australia Bank)</h1>
+    <p>Records are up to 80 characters long.  Fields are delimited with a comma (,); a slash (/) is used to delimit the last non-text field in a record if the statement line needs to be continued in a new record.</p>
+    <p>Each record begins with a two-digit identifier:</p>
+    <ul>
+      <li>The first record in each 'logical file' for a customer begins with 01; the last record begins with 99.</li>
+      <li>Within the 'logical file', the first record in each group (Originator/As-Of Date combination ) begins with 02; the last record begins with 98.</li>
+      <li>Within each group, the first record in each account block begins with 03; the last record begins with 49.</li>
+      <li>Transaction records begin with 16.</li>
+      <li>Continuation records begin with 88.</li>
+    </ul>
+    <p>
+      <MadCap:variable name="General.ProductName" /> only imports record types 02, 03 and 16.</p>
+    <h2>Record type 01 - File header</h2>
+    <p>The first record in the file is the File header.</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '01'</td>
+        </tr>
+        <tr>
+          <td>Sender identification </td>
+          <td>Not used</td>
+        </tr>
+        <tr>
+          <td>Receiver identification</td>
+          <td>Next recipient of file</td>
+        </tr>
+        <tr>
+          <td>File creation date</td>
+          <td>System date, format yymmdd</td>
+        </tr>
+        <tr>
+          <td>File creation time</td>
+          <td>System time, Format hhmm. Expressed in AEST using a 24-hour clock. For End-of-day (Main) files this will be '0000'</td>
+        </tr>
+        <tr>
+          <td>File sequence number</td>
+          <td>Always '1'</td>
+        </tr>
+        <tr>
+          <td>Physical record length</td>
+          <td>Number of characters in each record 
+<p>This includes the two-character Record type and the record delimiter (if any)</p></td>
+        </tr>
+        <tr>
+          <td>Blocking factor</td>
+          <td>Number of physical records in a block</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Record type 02 - Group header</h2>
+    <p>The first record in each group of records is the Group header. It follows either the File header record (record type '01') or a Group trailer record (record type '98').</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '02'</td>
+        </tr>
+        <tr>
+          <td>Ultimate receiver identification </td>
+          <td>As for the Receiver identification field in the File header (record type '01') record</td>
+        </tr>
+        <tr>
+          <td>Originator identification</td>
+          <td>Originator of file. This is the bank ID, an 8-character alphanumeric field used by NAB to identify banks</td>
+        </tr>
+        <tr>
+          <td>Group status</td>
+          <td>Always '1' (original)</td>
+        </tr>
+        <tr>
+          <td>As-of date</td>
+          <td>Statement date in format yymmdd</td>
+        </tr>
+        <tr>
+          <td>As-of time</td>
+          <td>This is always '0000'</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Record 03 - Account identification and summary status</h2>
+    <p>The first record for each account is the Account identifier and summary status record. It follows either a Group header (record type '02') or an Account trailer (record type '49') record.</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '03'</td>
+        </tr>
+        <tr>
+          <td>Commercial account number</td>
+          <td>Customer commercial account number at the bank of origin. This is your bank account number. It excludes the BSB number for NAB domestic accounts.</td>
+        </tr>
+        <tr>
+          <td>Currency code</td>
+          <td>SWIFT currency code</td>
+        </tr>
+        <tr>
+          <td>Transaction codes</td>
+          <td>Three-digit account summary code</td>
+        </tr>
+        <tr>
+          <td>Amounts</td>
+          <td>Amount expressed with two implied decimal places and optional trailing sign. For currencies with no decimal component, for example Japanese Yen, the last two digits are always zero. If there is no trailing sign, the amount is positive.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The Transaction code and Amount fields are repeated for each account summary code. The account summary codes can appear in any order, but each code appears only once.</p>
+    <h2>Record type 16 - Transaction detail</h2>
+    <p>A Transaction detail record follows either the Account identifier and summary status (record type '03') record or another Transaction detail (record type '16') record.</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '16'</td>
+        </tr>
+        <tr>
+          <td>Transaction code</td>
+          <td>Three-digit transaction detail code</td>
+        </tr>
+        <tr>
+          <td>Amount</td>
+          <td>Amount expressed with two implied decimal places. For currencies with no decimal component, for example Japanese Yen, the last two digits are always zero. The amount is unsigned. The transaction code determines DR or CR.</td>
+        </tr>
+        <tr>
+          <td>Funds type</td>
+          <td>Always '0' (immediately available)</td>
+        </tr>
+        <tr>
+          <td>Reference number</td>
+          <td>Optional alphanumeric field defined by the originator. The contents of this field depend upon the source of the transaction. For example, it could be a <MadCap:variable name="Variables.cheque" /> number for <MadCap:variable name="Variables.cheque" /> transactions.</td>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td>Optional alphanumeric field defined by the originator. The contents of this field depend upon the source of the transaction. For example, it could provide dishonour details for a dishonoured <MadCap:variable name="Variables.cheque" />. No delimiter is used at the end of a record that has text in the last field.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Record type 49 - Account trailer</h2>
+    <p>The last record for each account is the Account trailer. That is, it follows the last Transaction detail record (record type '16') for an account. If there are no transactions, it follows the Account identifier and summary status record (record type '03').</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '49'</td>
+        </tr>
+        <tr>
+          <td>Account control total A </td>
+          <td>The sum of amount fields in record types '03' (including the amounts for account summary codes 965,966,967,968,969), '16', and '88' for the account.</td>
+        </tr>
+        <tr>
+          <td>Account control total B</td>
+          <td>The sum of all amount fields in record types '03' (excluding the amounts for account summary codes 965,966,967,968,969), '16' and '88' for the account.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Account control totals A and B have two implied decimal places and an optional preceding sign. If there is no preceding sign, the amount is positive.</p>
+    <h2>Record type 88 - Continuation (optional)</h2>
+    <p>Continuation records are used as overflow records. That is, the format of this record continues the same format as the record immediately preceding it. It can follow any record type.</p>
+    <p>In practice, it is only required for the following records:</p>
+    <ul>
+      <li>Account identifier and summary status (record type '03') </li>
+      <li>Transaction detail (record type '16').</li>
+    </ul>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '88'</td>
+        </tr>
+        <tr>
+          <td>Remainder of record</td>
+          <td>Continuation of record format from record immediately preceding this continuation record</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Record type 98 - Group trailer</h2>
+    <p>The last record in each group of records is the Group trailer. It follows the last Account trailer (record type '49') record for the group.</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '98'</td>
+        </tr>
+        <tr>
+          <td>Group control total A</td>
+          <td>The sum of the Account control totals A in all Account trailer (record type '49') records in this group</td>
+        </tr>
+        <tr>
+          <td>Number of accounts</td>
+          <td>The number of accounts in this group. That is the number of Account identifier and summary status (record type '03') records in this group.</td>
+        </tr>
+        <tr>
+          <td>Group control total B</td>
+          <td>The sum of the Account control totals B in all Account trailer (record type '49') records in this group</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Record type 99 - File trailer</h2>
+    <p>The last record in each file of records is the File trailer.</p>
+    <table class="type1">
+      <tbody>
+        <tr>
+          <th>Field</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Record type</td>
+          <td>Always '99'</td>
+        </tr>
+        <tr>
+          <td>File control total A</td>
+          <td>The sum of the Group control totals A in all Group Trailer (record type '98') records in this file</td>
+        </tr>
+        <tr>
+          <td>Number of groups</td>
+          <td>The number of groups in this file. That is, the number of Group header (record type '02') records in this file.</td>
+        </tr>
+        <tr>
+          <td>Number of records</td>
+          <td>The total number of records in this file. This includes the File header and File trailer records but excludes any device-oriented or job control records.</td>
+        </tr>
+        <tr>
+          <td>File control total B</td>
+          <td>The sum of the Group control totals B in all Group Trailer (record type '98') records in this file</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

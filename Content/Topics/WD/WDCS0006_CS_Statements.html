@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="848" MadCap:lastWidth="601">
+  <head>
+    <title>Configurable [%=Variables.Contract Sales%] Statements</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Configurable <MadCap:variable name="Variables.Contract Sales" /> Statements</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> lets you design documents for printing <MadCap:variable name="Variables.Contract Sales" /> statements. In this way you can print to your company's requirements and use pre-printed stationery. </p>
+    <p>Define the layout of configurable documents using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System</span> Module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">To define the format for printing statements:</h2>
+      <ol>
+        <li>Use the document type <span class="userinput">Statements (CS)</span>.</li>
+        <li>In the <span class="field">Document</span> field, enter a name for the statement document (for example: CSSTMT). You can define different documents to print statements with different layouts. When you print the statement, <MadCap:variable name="General.ProductName" /> gives you a choice of which document to use.</li>
+        <li>In the <span class="field"><MadCap:variable name="Variables.ageing" style="text-transform: capitalize;" /> Type</span> and <span class="field">Days</span> fields, specify how you want the outstanding total amounts to be broken down over time.</li>
+      </ol>
+      <p>
+        <MadCap:variable name="Variables.Contract Sales" style="text-transform: capitalize;" /> statement documents use the following fixed form types:</p>
+      <ul>
+        <li>CERT: Lines for certified amounts not fully paid. These use the tables cs_certificate, cs_series, jc_job.</li>
+        <li>INV: Lines for <MadCap:variable name="Variables.Sales Ledger caps" /> invoices not fully paid. These use the tables ar_invoice, jc_job.</li>
+        <li>CSCASH: Lines for cash received but not allocated to a certificate. These use the tables cs_check, jc_job.</li>
+        <li>SLCASH: Lines for cash received but not allocated to an invoice. These use the tables ar_check, jc_job.</li>
+      </ul>
+      <p>In addition, each of the 4 body forms (CERT, INV, CSCASH, SLCASH) has the following calculated fields available: <span class="screentype">RO_txn_aged[6]</span>, <span class="screentype">RO_txn_amt, RO_txn_bal</span>, <span class="screentype">RO_txn_unalloc</span>.</p>
+      <p>The following running totals are also available: <span class="screentype">RO_tot_aged[6]</span>, <span class="screentype">RO_tot_amt</span>, <span class="screentype">RO_tot_bal</span>, <span class="screentype">RO_tot_unalloc</span>, <span class="screentype">RO_tot_tpByID^CSCERTID</span>, <span class="screentype">RO_tot_cumByID^CSCERTID</span>.</p>
+    </div>
+  </body>
+</html>

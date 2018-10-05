@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="280" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="1.1">JC <MadCap:variable name="Variables.Contracts caps" /></h2>
+        <h3 MadCap:autonum="1.1.1">Main Tab</h3>
+        <p class="Body">The <span class="Field">Master <MadCap:variable name="Variables.Contract caps"></MadCap:variable></span> field, which was originally located in the <MadCap:variable name="Variables.CVR caps" /> tab of<i> <MadCap:variable name="Variables.Contract caps" /> Status &gt; <MadCap:variable name="Variables.Contracts caps" /> &gt; <MadCap:variable name="Variables.Contract caps" /> Update</i>, has been moved to the Main tab, as shown in <MadCap:xref href="#MasterJobMain" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. It is only shown if the <MadCap:variable name="Variables.Contract caps" /> is <strong>not </strong>a Master <MadCap:variable name="Variables.Contract caps" />. </p>
+        <p class="Body">If the <MadCap:variable name="Variables.Contract caps" /> is a Master <MadCap:variable name="Variables.Contract caps" />, the corresponding Subsidiary <MadCap:variable name="Variables.Contracts caps" /> are displayed, as shown in <MadCap:xref href="#SubsidiaryJobMain" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="MasterJobMain"></a> Master <MadCap:variable name="Variables.Contract caps" /> Field on Main Tab</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC021_Images/MasterJobMain.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="SubsidiaryJobMain"></a> Subsidiary <MadCap:variable name="Variables.Contracts caps" /> Field on Main Tab</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC021_Images/SubsidiaryJobMain.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.2">Filter Options</h3>
+        <p class="Body">The following Filter options are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the <MadCap:variable name="Variables.Contracts caps" /> browse (as shown in <MadCap:xref href="#JobFilters" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>):</p>
+        <ul>
+            <li class="ListBullet1"><strong>Master <MadCap:variable name="Variables.Contracts caps"></MadCap:variable></strong> – Displays all the <MadCap:variable name="Variables.Contracts caps" /> with Subsidiary <MadCap:variable name="Variables.Contracts caps" />.</li>
+            <li class="ListBullet1"><strong>Subsidiary <MadCap:variable name="Variables.Contracts caps" /></strong> - Displays all the <MadCap:variable name="Variables.Contracts caps" /> with a Master (parent) <MadCap:variable name="Variables.Contract caps" />.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="JobFilters"></a> <MadCap:variable name="Variables.Contracts caps" /> Filters</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC021_Images/MasterFilters.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.1.3">Validations</h3>
+        <p class="Body">The validations listed below have been added to <MadCap:variable name="Variables.Contract caps" /> Status for Subsidiary <MadCap:variable name="Variables.Contracts caps" /> that have an associated Master <MadCap:variable name="Variables.Contract caps" />.</p>
+        <p class="IndentBold">Updating Master <MadCap:variable name="Variables.Contract caps" /> Field</p>
+        <p class="IndentFieldDef">If the Subsidiary <MadCap:variable name="Variables.Contracts caps" /> <MadCap:variable name="Variables.Sv Variations caps" /> are linked to a Master <MadCap:variable name="Variables.Contract caps" />, the <span class="Field">Master <MadCap:variable name="Variables.Contract caps" /></span> field on a Subsidiary <MadCap:variable name="Variables.Contract caps" /> is disabled. There is also validation that ensures the<span class="Field"> Master <MadCap:variable name="Variables.Contract caps" /></span> field is unchanged when a <MadCap:variable name="Variables.Sv Variation caps" /> of a Subsidiary <MadCap:variable name="Variables.Contract caps" /> is already linked to a Master <MadCap:variable name="Variables.Contract caps" />.</p>
+        <p class="IndentBold">Deleting Master <MadCap:variable name="Variables.Contract caps" /></p>
+        <p class="IndentFieldDef">When a Master <MadCap:variable name="Variables.Contract caps" /> is deleted, all links created with the Subsidiary <MadCap:variable name="Variables.Contracts caps" /> are also deleted.</p>
+        <p class="IndentBold">Deleting Subsidiary <MadCap:variable name="Variables.Contract caps" /></p>
+        <p class="IndentFieldDef">When a Subsidiary <MadCap:variable name="Variables.Contract caps" /> is deleted, all the links created with the Master <MadCap:variable name="Variables.Contract caps" /> are also deleted.</p>
+        <h2 MadCap:autonum="1.2">SV <MadCap:variable name="Variables.Sv Variations caps" /></h2>
+        <p class="Body">The ability to create a Revenue <MadCap:variable name="Variables.Sv Variation caps" /> from SV <MadCap:variable name="Variables.Sv Variations caps" /> belonging to <MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:variable name="Variables.boq" /> that is not Revenue only has been extended to also include Subsidiary <MadCap:variable name="Variables.Contracts caps" />.</p>
+        <p class="Body">You can create <MadCap:variable name="Variables.Sv Variations caps" /> for a Master <MadCap:variable name="Variables.Contract caps" /> from Subsidiary <MadCap:variable name="Variables.Contracts caps" /> under the following conditions:</p>
+        <ul>
+            <li class="ListBullet1">Master <MadCap:variable name="Variables.Contract caps" /> and Subsidiary <MadCap:variable name="Variables.Contracts caps" /> are configured to use <MadCap:variable name="Variables.Commercial Manager caps" />.</li>
+            <li class="ListBullet1">Master <MadCap:variable name="Variables.Contract caps" /> has a Revenue Bill.</li>
+            <li class="ListBullet1">Subsidiary <MadCap:variable name="Variables.Contract caps" /> has a bill other than Revenue.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <h3 MadCap:autonum="1.2.1">Create Revenue <MadCap:variable name="Variables.Sv Variation caps" /> Action</h3>
+        <p class="Body"><MadCap:variable name="Variables.Contracts caps" /> with a Master (parent) <MadCap:variable name="Variables.Contract caps" /> are called Subsidiary <MadCap:variable name="Variables.Contracts caps" />. If the Subsidiary <MadCap:variable name="Variables.Contract caps" /> has <MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:variable name="Variables.boq" /> that is not revenue only, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Create Revenue <MadCap:variable name="Variables.Sv Variation caps" /></strong> action is shown on the <MadCap:variable name="Variables.Sv Variations caps" /> browse in <MadCap:variable name="Variables.Commercial Manager caps" />, as shown in <MadCap:xref href="#CreateRevCRAction" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>. This action creates the Revenue <MadCap:variable name="Variables.Sv Variation caps" /> for the selected <MadCap:variable name="Variables.Contract caps" />.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="CreateRevCRAction"></a>Create Revenue <MadCap:variable name="Variables.Sv Variation caps" /> Action</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC021_Images/CreateRevCRAction.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Multi-selection of <MadCap:variable name="Variables.Sv Variations caps" /> is allowed to create a single Revenue <MadCap:variable name="Variables.Sv Variation caps" />. However, you cannot select:</p>
+        <ul>
+            <li class="ListBullet1"><![CDATA[	]]><MadCap:variable name="Variables.Sv Variations caps" /> of types associated with <MadCap:variable name="Variables.Sv Internal caps" />, Budget Transfer, Rate Change, or Re-measure.</li>
+            <li class="ListBullet1"><![CDATA[	]]><MadCap:variable name="Variables.Sv Variations caps" /> already linked to an existing Revenue <MadCap:variable name="Variables.Sv Variation caps" />.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.2">Create Revenue <MadCap:variable name="Variables.Sv Variation caps" /> Screen</h3>
+        <p class="Body">After you select the <strong>Create Revenue <MadCap:variable name="Variables.Sv Variation caps" /></strong> action, you are prompted with a selection screen, as shown in <MadCap:xref href="#CreateRevCRScreen" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="CreateRevCRScreen"></a>Create Revenue <MadCap:variable name="Variables.Sv Variation caps" /> Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC021_Images/CreateRevCRScreen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Contract caps" />/<MadCap:variable name="Variables.boq" /></p>
+        <p class="IndentFieldDef">Originally named <MadCap:variable name="Variables.boq" />, this field was renamed <MadCap:variable name="Variables.Contract caps" />/<MadCap:variable name="Variables.boq" /> and moved to the top of the screen. It includes all <MadCap:variable name="Variables.Sv External caps" /> <MadCap:variable name="Variables.boq" />s from both current and Master <MadCap:variable name="Variables.Contracts caps" />.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Sv Variation caps" /> Type</p>
+        <p class="IndentFieldDef">Select the type of <MadCap:variable name="Variables.Sv Variation caps" /> to be used for the Revenue <MadCap:variable name="Variables.Sv Variation caps" />. Types associated with <MadCap:variable name="Variables.Sv Internal caps" />, Budget Transfer, Rate Change, or Re-measure are excluded.</p>
+        <p class="IndentBold">Pricing Method</p>
+        <p class="IndentFieldDef">Select either<strong> D-Detailed </strong>or <strong>T-Totals</strong> as the Pricing Method.</p>
+        <p class="IndentBold">Status</p>
+        <p class="IndentFieldDef">Select the status to be associated with the Revenue <MadCap:variable name="Variables.Sv Variation caps" />.</p>
+        <p class="IndentBold">Sales Series</p>
+        <p class="IndentFieldDef">If there is only one <MadCap:variable name="Variables.Contract caps" /> Sales Series for the selected <MadCap:variable name="Variables.Contract caps" />, that will be the default for the <span class="Field"><MadCap:variable name="Variables.Contract caps" /> Sales Series</span> field.</p>
+        <p class="IndentBold">Create Items</p>
+        <p class="IndentFieldDef">If a Totals Pricing Method was selected, this field is not shown on the screen. When it is shown, select one of the following options for the items you would like to create:</p>
+        <ul>
+            <li class="ListBullet3"><strong>1 - Single Item for all the Selected </strong>
+            </li>
+            <li class="ListBullet3"><strong>2 - Item per Selected <MadCap:variable name="Variables.Sv Variation caps" /></strong>
+            </li>
+            <li class="ListBullet3"><strong>3 - All Items from Selected <MadCap:variable name="Variables.Sv Variations caps" /></strong>
+            </li>
+        </ul>
+        <p class="IndentBold">Revenue Analysis from Sales Series of selected <MadCap:variable name="Variables.Sv Variations caps" /></p>
+        <p class="IndentFieldDef">This field is only shown on the screen when the Pricing Method is Detailed <strong>and </strong>Option 2 or 3 are selected in the <strong>Create Items </strong>field.</p>
+        <h2 MadCap:autonum="1.3">SV <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Variations caps" /></h2>
+        <p class="Body">The <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Variations caps" /> browse (see <MadCap:xref href="#CostCRScreen" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>) in <MadCap:variable name="Variables.Commercial Manager caps" /> is displayed when you drill down on a <MadCap:variable name="Variables.Sv Variation caps" /> belonging to a Revenue only bill. This browse previously only showed the <MadCap:variable name="Variables.Sv Variations caps" /> of a selected <MadCap:variable name="Variables.Contract caps" /> belonging to <MadCap:conditionalText MadCap:conditions="COINS.USOnly">an </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">a </MadCap:conditionalText><MadCap:variable name="Variables.boq" /> that was not Revenue only. It has <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>been modified to show the <MadCap:variable name="Variables.Sv Variations caps" /> of Subsidiary <MadCap:variable name="Variables.Contracts caps" />.</p>
+        <p class="Body">Additional changes made to this browse screen are explained in the sections below.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="CostCRScreen"></a><MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Variations caps" /> Screen</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC021_Images/CostCRScreen.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.1">Named Filters</h3>
+        <p class="Body">The filters (All, Linked, Unlinked) have been modified to handle current/Subsidiary <MadCap:variable name="Variables.Contract caps" /> numbers.</p>
+        <h3 MadCap:autonum="1.3.2">Columns</h3>
+        <p class="Body">The following columns are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>shown on the screen:<ul><li><MadCap:variable name="Variables.Contract caps" /></li><li><MadCap:variable name="Variables.boq" /></li><li>Type</li><li>Number</li><li>Description</li><li>Status</li><li>Estimated/Proposed Cost</li><li>Estimated/Proposed Revenue</li><li>Linked</li></ul></p>
+        <h3 MadCap:autonum="1.3.3">Actions</h3>
+        <p class="Body">The actions list found on the browse screen is shown in <MadCap:xref href="#CostCRActions" class="Figurenumberonly"><i>Figure 7</i></MadCap:xref>.<br /></p>
+        <p class="Caption" MadCap:autonum="Figure 7: "><a name="CostCRActions"></a> <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Variations caps" /> Actions</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC021_Images/CostCRActions.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Action Definitions</p>
+        <p class="IndentBold"><strong>Link/Unlink to this <MadCap:variable name="Variables.Sv Variation caps" /></strong>
+        </p>
+        <p class="IndentFieldDef">Allows you to link/unlink <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Variations caps" /> of Subsidiary <MadCap:variable name="Variables.Contracts caps" /> to the Revenue <MadCap:variable name="Variables.Sv Variation caps" /> of the Master <MadCap:variable name="Variables.Contract caps" />.</p>
+        <p class="IndentBold"><strong>Update <MadCap:variable name="Variables.Sv Variation caps" /> Status</strong>
+        </p>
+        <p class="IndentFieldDef">You can change the status of a <MadCap:variable name="Variables.Sv Variation caps" /> belonging to Subsidiary <MadCap:variable name="Variables.Contracts caps" />.</p>
+        <p class="IndentBold"><strong>Release <MadCap:variable name="Variables.Sv Variation caps" /> for Approval/Rejection</strong>
+        </p>
+        <p class="IndentFieldDef">You can release <MadCap:variable name="Variables.Sv Variations caps" /> for Workflow. The Release for Approval and Release for Rejection actions depend on Master <MadCap:variable name="Variables.Contract caps" /> workflow settings. If any selected <MadCap:variable name="Variables.Sv Variations caps" /> belong to Subsidiary <MadCap:variable name="Variables.Contracts caps" />, the workflow parameters of that <MadCap:variable name="Variables.Contract caps" /> are used in processing.</p>
+        <p class="IndentBold"><strong>Print <MadCap:variable name="Variables.Sv Variations caps" /></strong>
+        </p>
+        <p class="IndentFieldDef">You can print <MadCap:variable name="Variables.Sv Variations caps" /> of Subsidiary <MadCap:variable name="Variables.Contracts caps" />.</p>
+    </body>
+</html>

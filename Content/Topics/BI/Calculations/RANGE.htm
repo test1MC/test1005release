@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="859" MadCap:lastWidth="1036">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />RANGE</h1>
+        <p>These two functions will allow the comparison of data against series of other values:</p>
+        <p>The RANGE function will return 1 or 0 for a true or false result when comparing a value against an upper and lower limit and should be used in the format:</p>
+        <p>RANGE(value,lowerlimit,upperlimit)</p>
+        <p>Therefore:</p>
+        <p>RANGE(5,1,10)would return&#160; 5&#160;&#160; (true returns value)</p>
+        <p>RANGE(5,10,20)would return&#160; 0&#160;&#160;&#160; (false)</p>
+        <p>In the example below, the RANGE function has been used within an IF function to calculate values in <MadCap:variable name="Variables.Ageing caps" /> columns for <MadCap:variable name="Variables.Purchase Ledger caps" /> invoices, where the variable Days has been calculated as an integer value of the days between TODAY and the Due Date on the Invoice:</p>
+        <p>AgeDays = (TODAY - datestring(ap_invoice.ain_duedt))</p>
+        <p>IF(AgeDays,LE,30,ap_invoice.ain_balance,0);</p>
+        <p>IF(RANGE(AgeDays,31,60),GT,1,ap_invoice.ain_balance,0);</p>
+        <p>IF(RANGE(AgeDays,61,90),GT,1,ap_invoice.ain_balance,0);</p>
+        <p>IF(AgeDays,GT,90,ap_invoice.ain_balance,0); </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Report Writer/RANGE.png" style="visibility: visible;mso-wrap-style: square;width: 378px;height: 303px;" />
+        </p>
+    </body>
+</html>

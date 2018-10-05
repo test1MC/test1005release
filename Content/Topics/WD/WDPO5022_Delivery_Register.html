@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Setting Up the Delivery Register</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Up the Delivery Register</h1>
+        <p>The Delivery Register allows you to record detailed information about deliveries of concrete and reinforcing steel. &#160;See&#160;<a href="WDPO0550_Delivery_Register.html">Delivery Register</a>.</p>
+        <p>To use the Delivery Register, set the PO parameter <span class="parameter" data-mce-mark="1">USEDELRG</span> to Y.</p>
+        <h2>Locations</h2>
+        <p>Locations&#160;are codes that identify the locations on a <MadCap:variable name="Variables.jc contract" /> that you can record deliveries against. Set these up using <span class="function" title="Function:%WJC1080FJOB">Location Category</span>.</p>
+        <h2>Registry Types</h2>
+        <p>The registry type determines which questions are used when recording information on the delivery register (currently you can only use one type for concrete, and one type for reinforcing steel). &#160;&#160;</p>
+        <ol>
+            <li>Use <span class="function" title="Function:%WTI2414BTRT">Registry Type Maintenance</span> to set up the codes and descriptions for the registry types.</li>
+            <li>For each registry type, you can set up two groups of questions:<br /><br /><ul><li><strong>Test sets</strong> contain questions that relate to quality tests (these are intended mainly for concrete deliveries; the Concrete Test Register Report shows the responses to these questions)</li><li><strong>Field sets</strong> contain other questions.&#160;</li></ul><p>The procedure for setting these up is the same:</p></li>
+            <ol>
+                <li>Click the link in the <span class="field" data-mce-mark="1">Type</span> column.</li>
+                <li>On the appropriate tab (Test Set or Configurable Fields), add a new record.</li>
+                <li>Click the link in&#160;the <span class="field" data-mce-mark="1">Test Set</span> or <span class="field" data-mce-mark="1">Field Set</span> column.</li>
+                <li>Set up a record for each question. &#160;For each question, choose the type of response you want (for example, a decimal or integer value, text, or one or more items from a list). &#160;If you choose 'List', click the link in the <span class="field" data-mce-mark="1">Field</span> column and set up the entries in the list.</li>
+            </ol>
+            <li>Set the PO parameters <span class="parameter" data-mce-mark="1">DREDCONC</span> and <span class="parameter" data-mce-mark="1">DREGREO</span> to identify which codes you have used for the registry types for concrete and reinforcing steel respectively.</li>
+            <li>Set the PO parameters&#160;<span class="parameter" style="font-size: 1em;" data-mce-mark="1">DRTCONC</span>&#160;and&#160;<span class="parameter" style="font-size: 1em;" data-mce-mark="1">DRTREO</span>&#160;to identify which codes you have used for the test sets for concrete and reinforcing steel respectively.</li>
+            <li>Set the PO parameters&#160;<span class="parameter" data-mce-mark="1">DRFCONC</span>&#160;and&#160;<span class="parameter" data-mce-mark="1">DRFREO</span>&#160;to identify which codes you have used for the field sets for concrete and reinforcing steel respectively.</li>
+        </ol>
+        <h2>Commodity Codes&#160;</h2>
+        <p>In order for a commodity code to use a register, it will need to be configured in <span class="function" title="Function:%WTI100ABTSV">Materials</span>.</p>
+        <p>If you are using the Delivery Register, when you update a commodity the <span class="field" data-mce-mark="1">Registry Type</span> field is available on the Main tab.</p>
+        <ul>
+            <li>If you want <MadCap:variable name="General.ProductName" /> to prompt for Delivery Register information when users enter a GRN for this commodity, select the registry type to use.</li>
+            <li>Leave the field blank if you do not want to use the Delivery Register for the commodity.</li>
+        </ul>
+        <p>To update groups of detail commodity codes, enter a registry type code on the commodity header code, and on the <span class="function" title="Function:%WTI1001FTSV">Copy Header Data to Details</span> screen, <MadCap:variable name="Variables.tick" /> the <span class="field" data-mce-mark="1">Copy Registry Type?</span> box.</p>
+        <div class="configuration">
+            <h2 class="print">Parameters</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_usedelrg.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_dregconc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_dregreo.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_drtconc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_drtreo.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_drfconc.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_drfreo.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" MadCap:lastBlockDepth="5" MadCap:lastHeight="763" MadCap:lastWidth="600">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="OA Designer;Topics" />Sum</h1>
+        <p>
+            <MadCap:concept term="Datasets" />This method will combine and sum rows from two or more dataset in to one or more new datasets.</p>
+        <p>Suppose we have a dataset ttCostRev</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Kco</p>
+                </td>
+                <td>
+                    <p>Job_num</p>
+                </td>
+                <td>
+                    <p>dCosts</p>
+                </td>
+                <td>
+                    <p>dRev</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>100</p>
+                </td>
+                <td>
+                    <p>1000</p>
+                </td>
+                <td>
+                    <p>100</p>
+                </td>
+                <td>
+                    <p>150</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>100</p>
+                </td>
+                <td>
+                    <p>1001</p>
+                </td>
+                <td>
+                    <p>200</p>
+                </td>
+                <td>
+                    <p>250</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>100</p>
+                </td>
+                <td>
+                    <p>1002</p>
+                </td>
+                <td>
+                    <p>0</p>
+                </td>
+                <td>
+                    <p>100</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>100</p>
+                </td>
+                <td>
+                    <p>1003</p>
+                </td>
+                <td>
+                    <p>100</p>
+                </td>
+                <td>
+                    <p>0</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>Then the resulting dataset ttKcoSum </p>
+        <table>
+            <tr>
+                <td>
+                    <p>Kco</p>
+                </td>
+                <td>
+                    <p>dCosts</p>
+                </td>
+                <td>
+                    <p>dRev</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>100</p>
+                </td>
+                <td>
+                    <p>400</p>
+                </td>
+                <td>
+                    <p>500</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p>would be produced with the following commands</p>
+        <p>Method('syuds.sumSource','CostRev','');<br />Method('syuds.sumTable','KcoSum','kco','','dCosts,dRev');<br />Method('syuds.sumExec');</p>
+        <p>SumSource specifies the input dataset and a condition to apply to that set of records.</p>
+        <p>sumTable specifies the output summary required.&#160; The first parameter is the output dataset name (without the tt prefix), the second parameter is the key fields, the third parameter is other fields to be assigned (similar to key fields but not used to find uniqueness e.g. keys=kco, fields=coc_name), the fourth parameter is the fields to sum.</p>
+        <p>sumExec executes the summing and creates the required output datasets.&#160; Multiple sumTable methods may be used to create multiple summaries on a single pass through the source data.</p>
+        <p>A short version with defaults exists</p>
+        <p>Method('syuds.sum','CostRev','','KcoSum','kco','','dCosts,dRev');</p>
+        <p>With the following parameters input table, condition, output table, keys, fields, sum fields. </p>
+        <p>&#160;</p>
+    </body>
+</html>

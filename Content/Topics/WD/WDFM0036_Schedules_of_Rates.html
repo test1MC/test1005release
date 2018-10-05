@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="824" MadCap:lastWidth="1046">
+  <head>
+    <title>Schedules of Rates</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Schedules of Rates</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> FM allows you to store multiple schedules of rates against each major category on a <MadCap:variable name="Variables.jc contract" />.</p>
+    <p>You can have different types of schedules. For example:</p>
+    <ul>
+      <li>You can have different material, <MadCap:variable name="Variables.labour" />, and <MadCap:variable name="Variables.pc plant" /> schedules, with different fields.</li>
+      <li>You can have different schedules to allow for rate changes over time, allowing you to retain a history of changes and prepare new schedules in advance.</li>
+    </ul>
+    <p>You can prepare the schedules in a spreadsheet and load them into <MadCap:variable name="General.ProductName" />. There is also a maintenance function within <MadCap:variable name="General.ProductName" />.  </p>
+    <div class="process">
+      <h2 class="print">To set up schedules of rates types:</h2>
+      <ol>
+        <li>Use the parameter <span class="parameter">SORFIELD</span> to define names for the additional fields you want to use. For example: <span class="userinput">Length|Width|Miles|</span>.</li>
+        <li>Use <span class="function" title="Function:%WFM2100BFMR">SOR Types</span> to set up the different schedule types and which standard and additional fields you want to display or update on each type. For example, if you do not use invoice classes or <MadCap:variable name="Variables.po variations" />, you can hide these fields.</li>
+        <li>If you are using schedule types to record rate changes over time, set the current schedule type.</li>
+        <li>You can change the current schedule type for individual <MadCap:variable name="Variables.jc contracts" />:</li>
+        <ol>
+          <li>Open the <MadCap:variable name="Variables.jc contract" /> in <MadCap:variable name="General.ProductName" /><span class="function" title="Function:%WFM1000BJOB"><MadCap:variable name="Variables.jc contracts" style="text-transform: capitalize;" /></span>.</li>
+          <li>Choose <MadCap:variable name="Variables.Jc Contract caps" /> Setup from the Options menu.</li>
+          <li>On the <MadCap:variable name="Variables.Jc Contract caps" /> Details tab, change the <span class="field">Current SOR Type</span>.</li>
+        </ol>
+      </ol>
+      <h2>To load a schedule of rates:</h2>
+      <ol>
+        <li>Use <span class="function" title="Function:%WFM9000USOW">Load SOR Items</span> to import a schedule to a major category.</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Schedules of rates configuration</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SW/sw_sorfield.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

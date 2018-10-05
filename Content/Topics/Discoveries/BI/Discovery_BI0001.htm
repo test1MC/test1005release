@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="3973" MadCap:lastWidth="1050" class="topic" MadCap:snippetVariables="Document Variables.Discovery Number:BI0001,;Topic Variables.Discovery Number:BI0001,">
+    <head><title>OA General - Finding Field Names in OA</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Discovery BI0001 - Finding Field Names in OA</h1>
+        <p>&#160;</p>
+        <p style="font-family: 'Arial Rounded MT Bold';">Example – finding the field names for the supplier details.</p>
+        <p>Navigate to the <MadCap:variable name="Variables.Purchase Ledger caps" /> module.</p>
+        <p>Add the following text to the end of the URL </p>
+        <p class="IndentBold">&amp;helpmode=prompt </p>
+        <p MadCap:conditions="COINS.Pre-v1105">Open the <MadCap:variable name="General.ProductName" /> Side frame help <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Finding Field Names in OA.png" style="visibility: visible;mso-wrap-style: square;width: 24px;height: 21px;" /></p>
+        <p>Select 'Toggle Help' from the User Drop Down Menu</p>
+        <p>Run the Supplier Enquiry</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Finding Field Names in OA_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Finding Field Names in OA_1_1105.png" class="FullWidth" />
+        </p>
+        <p>The field name in () should point you to the correct table in the database enquiry.</p>
+        <p>Each table has a three letter Table ID displayed on the right hand column of the Database Enquiry, e.g. avm, this is also the prefix of the field names within to the table.</p>
+        <p>The next step is to find the table from the Database Enquiry Screen</p>
+        <p>Navigate to Database Enquiry.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Finding Field Names in OA_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p MadCap:conditions="COINS.Pre-v1105">Using Ctrl-F, search for the tables three characters&#160; (e.g . avm) .&#160; The field for supplier account number is avm_num, the prefix avm indicates that the field belongs in the table ap_vendor.</p>
+        <p>Using the filters at the top of the screen, search for the tables three characters (e.g. avm) in the ID field</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Finding Field Names in OA_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Finding Field Names in OA_3_1105.png" class="FullWidth" />
+        </p>
+        <p>Follow the link to view the available fields within that table.</p>
+        <p>Example:<br />In order to produce a <MadCap:variable name="Variables.Purchase Ledger caps" /> Supplier Listing Report you may need to know the field names for:</p>
+        <p>Account Number<br />Name<br />Address<br />Postcode<br />Telephone Number<br />Contact</p>
+        <p>Note: Supplier address has four lines and this is indicated in the database enquiry by an array number enclosed in square brackets at the end of the supplier address field.&#160; So to include only lines 1 and 2 of a supplier address the fields selected within a report would be avm_add__1 and avm_add__2.</p>
+        <p>The first two characters of the table name reference the module, for example, <b>ap</b> indicates Accounts Payable/<MadCap:variable name="Variables.Purchase Ledger caps" />.</p>
+        <p>&#160;</p>
+    </body>
+</html>

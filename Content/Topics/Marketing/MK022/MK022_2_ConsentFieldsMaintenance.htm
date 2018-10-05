@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Consent Fields and Maintenance</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">GDPR in <MadCap:variable name="Variables.Marketing" />: </MadCap:conditionalText>Consent Fields and Maintenance</h1>
+        <h2 MadCap:autonum="1.1">SY Data Consent Categories</h2>
+        <p class="Body">Several fields can be added to a Contacts record in order for you to record which type of correspondence a contact can receive. The <span class="Function">Data Consent Categories </span>function allows you to determine the data for which you wish to gather information. This function was originally only an HS function found in <i>House Sales &gt; General Setup</i>. It is now an SY&#160;function that can also be found in<i> <MadCap:variable name="Variables.Marketing" /> &gt; Setup &gt;&#160;General Setup</i>. A sample screen is shown in <MadCap:xref href="#DCCategories" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>.</p>
+        <p class="Body">You can use this function to set up methods of contact (such as Email, Fax, Cell Phone, Work Phone)  and whether the contact can be contacted via that method.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="DCCategories"></a>Data Consent Categories Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_DataConsentCats.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">To accommodate the information for both House Sales and <MadCap:variable name="Variables.Marketing" />, the columns were changed as follows:</p>
+        <ul>
+            <li class="ListBullet3">Replaced the Mapping column with the <strong>HS/CC&#160;Mapping</strong> column.</li>
+            <li class="ListBullet3">Added a column labeled <strong>CRM&#160;Mapping </strong>with two choices<strong>:&#160;Do Not Mail </strong>and <strong>&lt;Not Applicable&gt;</strong>. After one of these records is marked <strong>Do Not Mail</strong>, the remaining records are marked as <strong>&lt;Not Applicable&gt;</strong> and cannot be changed.</li>
+        </ul>
+        <h2 MadCap:autonum="1.2">MK Data Consent Migration</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Data Consent Migration </span>function is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in<i> <MadCap:variable name="Variables.Marketing" /> &gt; Administration</i>. The selection screen allows you to set the values of the Consent fields (set up in <span class="Function">Data Consent Categories</span>) for all Contacts, as shown in <MadCap:xref href="#DCMigration" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="DCMigration"></a>Data Consent Migration Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_DCMigration.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">[Various Consent Fields]</p>
+        <p class="IndentFieldDef">For each field on this screen, you can select how you wish to handle consent information. The choices are:</p>
+        <ul>
+            <li class="ListBullet4">Unknown</li>
+            <li class="ListBullet4">Yes</li>
+            <li class="ListBullet4">No</li>
+            <li class="ListBullet4">Do Not Mail</li>
+        </ul>
+        <p class="IndentBold">Source of Consent</p>
+        <p class="IndentFieldDef">Use this field to select the source for the data consent of the fields above. The options in this field are set up in MK&#160;<span class="Function">Data Consent Sources</span>.</p>
+        <h2 MadCap:autonum="1.3">SY Data Consent Sources</h2>
+        <p class="Body">A <span class="Function">Data Consent Sources </span>function  was originally only an HS function found in <i>House Sales &gt; General Setup</i>. It is now an SY&#160;function that can also be found in <i>CRM &gt;&#160;Administration</i>. It allows you to set up definitions for data consent sources (the places where you learned what a Contact's preferences were). A&#160;sample screen is shown in <MadCap:xref href="#DCSources" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>.</p>
+        <p class="Body">A list of these sources are found in the Consent section of <i><MadCap:variable name="Variables.Marketing"></MadCap:variable> &gt;&#160;Contacts &gt;&#160;Contact Details</i>, where they can be used to record the source of the consent data.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="DCSources"></a>Data Consent Sources Screen</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/MK022_Images/MK022_DCSources.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4">Consents Audit History Tab</h2>
+        <p class="Body">A <strong>Consents Audit History </strong>tab is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>found in the Main section of the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Contacts layout, as shown in <MadCap:xref href="#ConsentAuditHist" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>.  Each time the value of a Consent Category or its source is changed, an audit of the change is shown on this screen.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="ConsentAuditHist"></a>Consents Audit History Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/MK022_Images/MK022_ConsentsAuditHistory.png" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

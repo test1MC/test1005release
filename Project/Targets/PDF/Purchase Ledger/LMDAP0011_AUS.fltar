@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="PL Invoice Matching 3 Way"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  PatchHeadingLevels="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  InjectEmptyPages="true"
+  ConditionTagExpression="include[COINS.v1105 or COINS.AUOnly]exclude[COINS.1104 or COINS.Pre-v1105 or &quot;COINS.v1105 UK&quot; or COINS.ScreenOnly]"
+  conditions="COINS.PrintOnly"
+  MasterToc="/Project/TOCs/PL/LMDAP0011.fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ConvertBookmarks="true" />
+  <Variables>
+    <Variable
+      Name="Variables/eft">EFT</Variable>
+    <Variable
+      Name="Variables/Purchase Ledger caps">Accounts Payable</Variable>
+  </Variables>
+</CatapultTarget>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/CHMIN - Prompt for Minor Codes on PO Header</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/CHMIN - </span> Prompt for Minor Codes on PO Header
+</div>
+<div class="param_def">
+<p>Whether buyers can globally override the minor code of <MadCap:variable name="Variables.cost heads"/> associated with all line items on a purchase order.</p>
+<P>Where the minor code (the final character or characters of the <MadCap:variable name="Variables.cost head"/>) is used as an identifier to report exceptions (such as Buying Error, Schedule Error, Addenda, Site Loss and so on) this allows buyers to change the value of the minor code on all items within the order.</P>
+<P>Set <FONT color="#000000"><SPAN class="parameter">CHMIN </SPAN>to Y, and </FONT><FONT color="#000000"><SPAN class="parameter">CHROOT </SPAN>to the number of characters at the start of the cost code that will not be replaced.  <STRONG>We also recommend you have the "<FONT color="#000000"><SPAN class="parameter">ALWCHOV1</SPAN>" parameter (Allow <MadCap:variable name="Variables.Cost Head caps"/> Overrides in PO entry) set to "Y", so that you can amend any costings that are not valid.)</FONT></STRONG></FONT></P>
+<P>In order header input, buyers can now input a set of characters that will replace that part of the commodity <MadCap:variable name="Variables.cost head"/> not referred to by PO parameter <FONT color="#000000"><SPAN class="parameter">CHROOT </SPAN>for every commodity line on the order. </FONT></P>
+<P>If required, a buyer can still override individual lines. </P>
+<P class="noteheader">Additional notes</P>
+<DIV class="note">
+<UL>
+<LI>The order could include commodities linked to a variety of <MadCap:variable name="Variables.Cost Head caps"/> "Roots" but each of these would have the same range of "minor codes" available, so adding one of these to the end of the code should always result in a valid <MadCap:variable name="Variables.cost head"/>.</LI>
+<LI>You cannot use Minor Codes and Default <MadCap:variable name="Variables.Cost Heads caps"/> functionality (setup against an Order Type) on a Purchase Order (COINS will display an error message on [F1] of the Order Header.)</LI>
+<LI>You cannot enter a Minor Code on a template order.</LI>
+<LI>
+<P>If updating an existing PO that previously did not have a minor code, COINS will apply the new Minor code to all existing PO lines. If the existing PO did have a Minor Code, it will only apply the new Minor Code to lines that had the old Minor Code (that is, lines that had not been purposely overridden). </P>
+<P>If the existing PO did have a Minor Code, and this is blanked out when updating the Header, all the existing lines will be regenerated without any reference to a Minor Code (except for those that have purposely been overridden). </P></LI>
+<LI>You cannot use Minor Codes when copying POs or Template POs. </LI>
+<LI><MadCap:variable name="Variables.Po Variations caps"/> - when creating a VO, the Minor Code from the original order is not brought forward, (it can always be re-entered). Any Minor Code will only affect new lines, not lines brought forward from the previous/original PO. (Any subsequent change to the Minor Code will only affect these new lines). </LI></UL></DIV>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../po/po_alwchov1.htm" /><MadCap:relatedTopic src="../po/po_chroot.htm" /><MadCap:relatedTopic src="../po/po_chsus.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

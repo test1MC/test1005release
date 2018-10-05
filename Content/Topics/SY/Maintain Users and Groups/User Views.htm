@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:lastBlockDepth="6" MadCap:lastHeight="796" MadCap:lastWidth="624" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />User Views</h1>
+        <p>User views allow different users to see different lists of companies and projects. For example, <MadCap:variable name="General.ProductName" /> may hold information about thousands of companies, but staff at a local office may only need to see companies that they deal with.  Staff at a different local office may need to see a different list of companies, and staff at a regional office may need to see a larger list that includes all the companies visible to the local offices.</p>
+        <p>Views relate to an organisational hierarchy.  For example:</p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/UserViews_1.gif" class="FullWidth" />
+        </p>
+        <p>The names for the different levels (operating company, region, office in the example above) will depend on the way your system has been set up. You can have up to five levels. The top level view shows the entire database; the lowest view might be the site level.  A view is based on a combination of the level and the entity at that level.  For example, one view might be "Level 3 - Southern Region" and another view might be "Level 4 - Slough Office".</p>
+        <p>A user's view is the lowest level at which they are able to view the database.  The user can always change their view to see the views at higher levels (for example a user whose view is "Level 4 - Slough Office" will be able to change their view to see the companies and projects that are visible in "Level 3 - Southern Region".  They can add companies and projects from higher levels to their view.</p>
+        <p>In general, all users with the same view will see the same data.  So if users Smith and Jones both have the Slough office view, and Smith adds a company to the view, Jones will also see that company.  However, an individual user's view can be restricted to only see companies of certain types; for example, user Thomas may only need to see the suppliers that the Slough office deals with, and not subcontractors.</p>
+        <p MadCap:conditions="COINS.Pre-v1105">From the System module select <span class="Emphasis">User Maintenance &gt; Function Security &gt; Maintain User Views</span></p>
+        <p>From the System module select <span class="Emphasis">User Maintenance &gt; Maintain User Views</span></p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/User Views_1_1105.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/User Views_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <ul>
+            <li>Select the hyperlink for the User and then click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" />button. Enter the details in the relevant fields. </li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/User Views_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/User Views_2_1105.png" class="FullWidth" />
+        </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p>Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p>Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Module(s):</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The module for which you want to define the view for example PO or MK.&#160; Leave blank to define the same view for all modules.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Type(s):</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Which type of company (for example, supplier, subcontractor) the user will see. Leave blank to see all types.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Level:</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The number of the user's base level - their lowest (most restricted) view of the database.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Company:</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>A way of defining further the view that the User will see.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Region:</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>A way of defining further the view that the User will see.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>Office:</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>A way of defining further the view that the User will see.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>Contract;</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>A way of defining further the view that the User will see.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li>Click <img src="../../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="icon24px" /><MadCap:conditionalText MadCap:conditions="COINS.Pre-v1105">Save</MadCap:conditionalText></li>
+        </ul>
+    </body>
+</html>

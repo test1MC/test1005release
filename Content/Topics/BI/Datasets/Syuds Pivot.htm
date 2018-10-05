@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="6908" MadCap:lastWidth="1238" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINS.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Syuds.Pivot</h1>
+        <p>
+            <MadCap:concept term="Datasets" />A new program has been introduced that is designed to be called in the initialize calculation of an OA report.&#160; It is handed a dataset name and a series of criteria and transforms the named dataset in to three dynamic datasets which are designed to be easier to print in a matrix.</p>
+        <p>Syuds.Pivot take the following form:</p>
+        <p class="Example">method('syuds.pivot','[Source]','sumtype='[]'','[Row Fields]','[Column Fields]','[Sum Fields]',[Columns],[Total Column]);</p>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');" class="TableStyle-COINS" cellspacing="0">
+            <col class="TableStyle-COINS-Column-Column1" style="width: 108px;" />
+            <col class="TableStyle-COINS-Column-Column1" style="width: 524px;" />
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Source</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p>the name of the temp table source data that is required to be pivoted</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">SumType</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p>sumtype="" is a condition to extract only selected records. SumType='' will extract alll records</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Row Fields</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p>the fields that will be used to create unique rows in the resulting pivoted dataset</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Column Fields</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p>The field(s) which will be used to create the columns of the array of data in the resulting pivoted dataset</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Sum Fields</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p> the fields to be  be summed and added to the resulting pivot dataset</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">Columns</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">
+                        <p> the number of columns per page</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">Total Column</td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1">
+                        <p>1 means add a total column (the sum of all the columns on the report), 0 means no total column and instead a total field will be added</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following calculation might be used in the initiation calculation of a report which contains a dataset ttTest.&#160; The dataset ttTest can be any type of temp table generated and prepared for a report.</p>
+        <p class="Example">method('syuds.pivot','Test','sumtype=""','acctcode,acctname','kco','acctturn,acctpay',2,1);</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/Matrix Pivot Report.png" class="FullWidth" />
+        </p>
+        <p>Suppose we had the following data :</p>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');width: 100%;margin-left: 0;margin-right: auto;" class="TableStyle-COINS" cellspacing="0">
+            <caption>Table ttTest</caption>
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Kco</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Acctcode</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Acctname</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Accturn</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Acctpay</th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1">Sumtype</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Supplier A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>50</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: left;">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Supplier A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>150</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: left;">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>3</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Supplier A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>200</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: left;">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Supplier A</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>450</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>150</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: left;">
+                        <p>TOT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>Supplier B</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>300</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="text-align: left;">
+                        <p>300</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="text-align: left;">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="text-align: left;">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="text-align: left;">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="text-align: left;">
+                        <p>Supplier B</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="text-align: left;">
+                        <p>300</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="text-align: left;">
+                        <p>300</p>
+                    </td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1" style="text-align: left;">
+                        <p>TOT</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Running the pivot method above would result in three temp tables being created.</p>
+        <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINS.css');" class="TableStyle-COINS" cellspacing="0">
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Table</th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">ttTestPage</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">containing page and column information</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1">ttTestRow</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1">containing row data</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">ttTestCol</td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1">containing column data</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');width: 100%;margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-COINS" cellspacing="0">
+            <caption>Table ttTestPage</caption>
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">iPageSequence</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">iColumn</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">cColumnLabel__1</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">cColumnLabel__2</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">bUsed__1</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">bUsed__2</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">bFirst</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">bLast</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">Kco_1</th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1" style="font-size: 9pt;">Kco2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">Yes</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">Yes</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">Yes</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">No</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="font-size: 9pt;">2</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">3</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">3</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">Total</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">Yes</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">Yes</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">No</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">Yes</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">3</td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1" style="font-size: 9pt;">?</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');width: 100%;margin-left: 0;margin-right: auto;" class="TableStyle-COINS" cellspacing="0">
+            <caption>Table ttTextCol</caption>
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">iColumn</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">iPageSequence</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">iPageColumn</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">cColumnLabel</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 9pt;">bTotalColumn</th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1" style="font-size: 9pt;">Kco</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">No</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="font-size: 9pt;">1</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">No</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="font-size: 9pt;">2</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">3</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">3</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">No</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="font-size: 9pt;">3</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">4</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">2</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">4</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">Yes</td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1" style="font-size: 9pt;">?</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');width: 100%;margin-left: 0;margin-right: auto;" class="TableStyle-COINS" cellspacing="0">
+            <caption>Table: ttTestRow</caption>
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <col class="TableStyle-COINS-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctnum</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctname</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">iCount__1</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">iCount__2</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">iCount__3</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">iCount__4</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctturn__1</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctturn__2</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctturn__3</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctturn__4</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctpay__1</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctpay__2</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1" style="font-size: 8pt;">Acctpay__3</th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1" style="font-size: 8pt;">Acctpay__4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">A</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">Supplier A</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">3</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">100</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">150</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">200</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">450</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">50</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">0</td>
+                    <td class="TableStyle-COINS-BodyE-Column1-Body1" style="font-size: 9pt;">100</td>
+                    <td class="TableStyle-COINS-BodyD-Column1-Body1" style="font-size: 9pt;">150</td>
+                </tr>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">B</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">Supplier B</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">0</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">0</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">1</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">300</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">0</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">0</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">300</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">300</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">0</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1" style="font-size: 9pt;">0</td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1" style="font-size: 9pt;">300</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>If the total options is set to zero (no) then the final array entry is suppressed and separate total fields are created iCountTotal, AcctTurnTotal and AcctPayTotal with the values as you would expect.</p>
+        <p>The records with SumType=TOT would not be processed because they were excluded with the query condition.</p>
+        <p>If a page size of 0 is specified then no paging will take place and a single ttPage record (iPageSequence=1) will be produced with the extent of the value fields being the same as the number of columns.</p>
+        <h2>Report Design</h2>
+        <p>
+            <MadCap:concept term="OA Designer" />The temp tables (ttTestRow and ttTestPage) produced are designed to be used in OA designer and there are supporting methods and techniques to allow a matrix report to be built.</p>
+        <p>The query used on the report should be FOR EACH ttTestPage, EACH ttTestRow.&#160; This will repeat all the rows on each page sequence (assuming there are multiple sequences of pages for all the columns to be fitted on).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/ttTestCol.png" class="FullWidth" />
+        </p>
+        <p>The sort order should include the page sequence at the top to allow the pages to come out in the correct sequence.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/ttTestCol_1.png" class="FullWidth" />
+        </p>
+        <p>You should apply a hard page to the iPageSequence level.</p>
+        <p>The fields of the report should be set out as you require using fields from the ttTestRow temp table.&#160; The columns of the matrix can be specified using {ttTestPage.iColumn__n} where n is the page column number.&#160; The columns can be labeled using {ttPage.cColumnLabel__n} where n is the page column number.&#160; The total column will have a label of “TOTAL" in this field.&#160; The column fields are also replicated in ttPage.cKco__n except that the total column will have a ? value in it.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/ttTestCol_2.png" class="FullWidth" />
+        </p>
+        <p>A build condition should be used on the column fields so that they are not built when not used.&#160; The syuds.buildColumnUsed condition takes two parts to the parameter.&#160; The table name TEST (without the tt) and the page column number.</p>
+        <h2>Sample Output</h2>
+        <p>With a total field</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/ttTestCol_3.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>With a total column</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/ttTestCol_4.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/Datasets/ttTestCol_5.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="710" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 &#160;&#160;&#160;&#160;">
+            <MadCap:concept term="Topics" />GRN Purchase Orders</h1>
+        <p class="Body">Similar changes have been made for GRN purchase orders.</p>
+        <h2 class="Heading2" MadCap:autonum="1.1 &#160;&#160;&#160;">Match Action</h2>
+        <p class="Body">When the "Match" action is taken, the following will now occur:</p>
+        <ul class="MultiLevelBullets">
+            <li>If the selected invoice matching line (or lines) refer to a <MadCap:variable name="Variables.jc contract"></MadCap:variable> that uses WBS codes:</li>
+            <li class="ListBullet2">If the new PO&#160;parameter ALWCLSST = N, and if the section associated with the WBS&#160;code on any of the related GRN distribution lines is closed, an error is displayed and matching is prevented.</li>
+            <li class="ListBullet2">If the new PO&#160;parameter ALWCLSCC = N, and if the cost code on any of the related GRN distribution lines is closed, an error is displayed and matching is prevented.</li>
+        </ul>
+        <p class="Body">In this case you will not be able to complete the invoice matching process unless the closed code is re-opened. If the new PO&#160;parameter ALWCHOV5 = Y, you will be able to override the closed code, and change it to an open code.</p>
+        <h2 class="Heading2" MadCap:autonum="1.2 &#160;&#160;&#160;">Overriding the WBS Code and Cost Code</h2>
+        <p class="Body">If the new parameter ALWCHOV5 = Y, for each GRN distribution line the following additional fields appear on the line when updating a matching line:</p>
+        <p class="Body"><span class="Field">WBS&#160;Code</span> (if the <MadCap:variable name="Variables.jc contract"></MadCap:variable> uses WBS&#160;codes)</p>
+        <p class="Body"><span class="Field"><MadCap:variable name="Variables.cost head" style="text-transform: capitalize;"></MadCap:variable></span>
+        </p>
+        <p class="Body"><span class="Field">Cost Category</span>
+        </p>
+        <p class="Body">In addition, the Quantity field has been renamed <span class="Field">GRN&#160;Allocation</span>, and is not updateable.</p>
+        <p class="Body">The default values for these fields are taken from each of the GRN&#160;distribution lines.</p>
+        <p class="Body">If the WBS Code, <MadCap:variable name="Variables.cost head" style="text-transform: capitalize;" /> or Category have been overridden an asterisk is shown in a new column at the right of the Matching browse.</p>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Quick Cash Receipt</h1>
+        <p>The following changes have been made to <span class="function">Quick Cash Receipt Entry</span>.</p>
+        <h2>Default Bank on Batch Header</h2>
+        <p>If the new CB parameter <span class="parameter">QCRDFBNK</span> is set to Yes, the <span class="field">Bank Code</span> on the batch header screen defaults from the <span class="field">Default Bank</span> set up in <span class="function"><MadCap:variable name="Variables.Sales Ledger caps" /> Configuration</span>.</p>
+        <p>User access to the <span class="field">Bank Code</span> field can then be restricted to Read Only using <span class="function">Field Access Maintenance</span>.</p>
+        <h2><MadCap:variable name="Variables.Cheque caps" /> Entry Screen</h2>
+        <p>The <span class="field">Customer Name</span> field has been moved from the Body Update form to the Body form.</p>
+        <p>If there is any existing unallocated cash for a customer, this is displayed after the <span class="field">Customer Name</span> field, with the label <span class="field">Prior Unallocated Cash</span>.</p>
+        <p>If the new CB&#160;parameter <span class="parameter">QCRHIJOB</span> is set to Yes, the <MadCap:variable name="Variables.jc contract" /> code and name fields are not displayed.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><MadCap:variable name="Variables.Cheque caps" /> Entry – Updated Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/CB/Quick_Cash_Enh/Cheque_Entry.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2><MadCap:variable name="Variables.Cheque caps" /> Summary Screen</h2>
+        <p>A new field is displayed in the allocation header, <MadCap:variable name="Variables.labelled" /> <span class="field">Prior Unallocated Cash</span>. This displays any existing unallocated cash for the customer, either in <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> or as Customer Cash.</p>
+        <h2>To Allocate Browse</h2>
+        <p>A new column has been added, <MadCap:variable name="Variables.labelled" /> <span class="field">Bad Debt</span>. Any invoice or certificate that is a bad debt will have a <MadCap:variable name="Variables.tick" /> in the column (otherwise blank) and the column will be highlighted in red.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>To Allocate Browse</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/CB/Quick_Cash_Enh/To_Allocate.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>A standard column set has been added to the browse.</p>
+    </body>
+</html>

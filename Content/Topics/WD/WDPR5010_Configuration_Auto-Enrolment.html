@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Configuration</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Configuration</h1>
+        <p>Below is an overview&#160;of the configuration process:</p>
+        <ol>
+            <li>Register any relevant pension schemes with the pension regulator (outside <MadCap:variable name="General.ProductName" />).&#160; </li>
+            <li>Set the parameters.</li>
+            <li>Record the staging date.</li>
+            <li>Set the annual thresholds.</li>
+            <li>Set up a pay item to record earnings for auto-<MadCap:variable name="Variables.enrolment" />, and add this to the Configuration screen and to the employee sequences.</li>
+            <li>Identify each qualifying pension scheme and mark whether it is a contract-based scheme.</li>
+            <li>If desired, specify which schemes the notification types will be created for.</li>
+            <li>Create the necessary email and document templates for notifications.</li>
+        </ol>
+        <div class="process">
+            <h2 class="print">Detailed Configuration</h2>
+            <h2>Staging Date</h2>
+            <p>Record the staging date (the date when automatic <MadCap:variable name="Variables.enrolment" /> is switched on for your business) on the PAYE scheme tab in <span class="function" title="Function:%WPR730BSTE">HMRC Workbench</span>.&#160;</p>
+            <MadCap:dropDown class="screenshot">
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Staging Date Field on the HMRC Workbench</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>
+                        <img src="../../Resources/Images_P-R/PR/PR_501001.png" />
+                    </p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+            <h2>Annual Thresholds</h2>
+            <p>In <span class="function" title="Function:%WPR299BTNI">Annual Details for Tax Year</span>, record the following amounts (as set by law):</p>
+            <ul>
+                <li>QELT &#160;Qualifying Earnings Lower Threshold</li>
+                <li>QEUT&#160; &#160;Qualifying Earnings Upper Threshold</li>
+                <li>AET &#160;Auto-<MadCap:variable name="Variables.enrolment" /> Trigger</li>
+            </ul>
+            <p />
+            <MadCap:dropDown class="screenshot">
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Annual Details Auto <MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Fields</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>
+                        <img src="../../Resources/Images_P-R/PR/PR_501002.png" />
+                    </p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+            <p>These values are held as annual values: <MadCap:variable name="General.ProductName" /> converts to period-specific by dividing by the number of periods and rounding up to whole pounds.&#160; For example if annual threshold is £42,475 then to get 4-weekly we divide by 13 which gives £3,267.308, and this is rounded up to £3,268.&#160;&#160;</p>
+            <h2>Pay Items</h2>
+            <p>In <span class="function" title="Function:%WPR210BQRI">Pay Items</span>, set up a new pay item, to which all the components that contribute to the earnings for auto-<MadCap:variable name="Variables.enrolment" /> figure (as specified by the Pensions Regulator) need to be added.</p>
+            <p>In <span class="function" title="Function:%WPR211SQRP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Configuration</span>, on the Significant Item Numbers tab, enter the number of this pay item in the <span class="field">Earnings for Auto <MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /></span>field.</p>
+            <p />
+            <MadCap:dropDown class="screenshot">
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Payroll Configuration Significant Item Numbers Fields</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>
+                        <img src="../../Resources/Images_P-R/PR/PR_501003.png" />
+                    </p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+            <p>In <span class="function" title="Function:%WPR240BPSQ">Item Sequences</span>, add this new pay item to any relevant sequence definitions and update the individual employee sequences.</p>
+            <p>After the calculation:</p>
+            <ul>
+                <li>The input field on this item will hold the total auto-<MadCap:variable name="Variables.enrolment" /> earnings.</li>
+                <li>The period amount field will hold the qualifying earnings.</li>
+                <li>The rate field will hold a flag for the category of worker, as follows: 0 – non-entitled, 1 – entitled worker, 2 – non-eligible worker, 3 – eligible worker</li>
+            </ul>
+            <p>&#160;</p>
+            <h2>Pension Schemes</h2>
+            <p>In <span class="function" title="Function:%WPR236BQRN">Pensions</span>, for each <em>qualifying</em> pension, record:</p>
+            <ul>
+                <li>That the scheme has been certified – that is, it is a qualifying pension.</li>
+                <li>Whether it is contract-based (a group personal pension scheme) and a pension provider has been appointed to run the scheme.</li>
+            </ul>
+            <p />
+            <MadCap:dropDown class="screenshot">
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Pension Details Auto <MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Fields</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>
+                        <img src="../../Resources/Images_P-R/PR/PR_501004.png" />
+                    </p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+            <p>&#160;</p>
+            <h2>Notification Types</h2>
+            <p>In <span class="function" title="Function:%WSYBCRTHR0">Lookup Codes</span>, the "Pension Auto <MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Notification Types" lookup type holds the notification types used by the software.&#160; <MadCap:variable name="General.ProductName" /> creates these automatically; you can identify which pension schemes each notification type will be automatically created for (for example, if a pension provider is handling notifications for a scheme, you may not want to include notifications in that scheme).&#160; Leaving the <span class="field">Pension Schemes </span>field blank means the notification will be created for all schemes.</p>
+            <p>For details of the individual types, see <a href="WDPR0122_Notification_Types.html">Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> Notification Types</a>.</p>
+            <p>&#160;</p>
+            <h2>Employee Maintenance</h2>
+            <p>Payroll will automatically <MadCap:variable name="Variables.enrol" /> employees when the pay calculation is run (see <a href="WDPR0115_Pay_Calculation.html">Auto-<MadCap:variable name="Variables.enrolment" style="text-transform: capitalize;" /> and Pay Calculation</a>), if they are eligible jobholders.&#160;</p>
+            <p>For employees who already belong to a qualifying pension scheme, <MadCap:variable name="General.ProductName" /> will update the employee record to show this.&#160; Eligible jobholders already in non-qualifying schemes will additionally be enrolled into a qualifying scheme.</p>
+            <p>If an employee is to be enrolled in a qualifying scheme other than the default scheme, fill in the scheme name in Employee Maintenance.</p>
+            <p>If you want to email notifications where possible, you need to populate the employee email address. This can be done using Employee Maintenance or using the Employee Load.</p>
+            <p>&#160;</p>
+            <h2>Notification Templates</h2>
+            <p>As part of the auto-<MadCap:variable name="Variables.enrolment" /> process, <MadCap:variable name="General.ProductName" /> generates notifications to employees and pension providers.&#160; These notifications can be sent by email, produced as a printable document, or generated as a mail merge data file you can use with external software. The Pensions Regulator website (<a href="http://www.thepensionsregulator.gov.uk/automatic-enrolment.aspx" target="_blank">http://www.thepensionsregulator.gov.uk/automatic-enrolment.aspx</a>) gives more information about the requirements for notifications, and provides some letter templates you can base notifications on.&#160; However you will need to prepare the templates in the format that <MadCap:variable name="General.ProductName" /> uses.</p>
+            <p>Use <span class="function" title="Function:%WSY2380BCXC">Merge File Maintenance</span> to identify the necessary templates (email and document) for each type of notification and to associate the files with each of the functions (pages) on which you want them to be available.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">The names of the files generated by the merge process are based on the name of the merge file, so it is a good idea to make the merge file names meaningful.</div>
+            <ul>
+                <li>&#160;%WPR387REMP&#160;Notifications Report (merge area – all pay frequencies)</li>
+                <li>%WPR02040BENO&#160;Weekly Employee Notifications</li>
+                <li>%WPR12040BENO&#160;Monthly Employee Notifications&#160;</li>
+                <li>%WPR22040BENO&#160;2-Weekly Employee Notifications&#160;</li>
+                <li>%WPR32040BENO&#160;4-Weekly Employee Notifications&#160;</li>
+            </ul>
+            <p />
+            <MadCap:dropDown class="screenshot">
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Merge File Maintenance Showing Files Set Up for the Notification Report</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>
+                        <img src="../../Resources/Images_P-R/PR/PR_501005.png" class="FullWidth" />
+                    </p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+            <p>See <a href="wdsy0025_Setting_Up_a_Generic_Mail_Merge.html">Setting Up a Generic Mail Merge</a>, for more information.</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Parameters</h2>
+Set the following parameters for each pay frequency you use (in the Pensions parameter group in <a href="WDPR5009_Frequency-Specific_Parameters.html">Frequency-Specific Payroll Parameters</a>):
+<p><MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;"><MadCap:relatedTopic src="../Parameters/P0/p0_AESCHEME.htm" /><MadCap:relatedTopic src="../Parameters/P0/p0_AEDEFRUL.htm" /><MadCap:relatedTopic src="../Parameters/P0/p0_AEPCNTEE.htm" /><MadCap:relatedTopic src="../Parameters/P0/p0_AEPCNTER.htm" /><MadCap:relatedTopic src="../Parameters/P0/p0_AEPCNTCO.htm" /></MadCap:relatedTopics></p></div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Processing Transactions</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Processing Transactions</h1>
+    <p>Each <MadCap:variable name="Variables.labour" /> transaction is checked against the <MadCap:variable name="Variables.labour" /> rates configuration (see <a href="WDFM0051_Labour_Rates.html"><MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Rates</a>). If one is found and the validation has been passed, an SOR item is created for the FM <MadCap:variable name="Variables.fm job" /> determined from the transaction's cost code (where section = FM <MadCap:variable name="Variables.fm job" />).  </p>
+    <p>The description of the SOR item is '&lt;Standard SOR item description&gt; &lt;pay date from load file&gt;'.  If a <MadCap:variable name="Variables.labour" /> rate record is found, the associated SOR item must exist as a standard one for the <MadCap:variable name="Variables.fm job" />'s major category and the 'current' SOR type.</p>
+    <p>If different transactions cause the same SOR item, description, and pay date (for the same SOR type and major category), they are collected together under the same item (unless the existing record has been invoiced).</p>
+    <p>What validation occurs and what value appears on the SOR item is determined by costing group: </p>
+    <ul>
+      <li>1 (Normal time) and 2 (Overtime) are charged to an FM <MadCap:variable name="Variables.fm job" /> and should always be recovered. Therefore, a <MadCap:variable name="Variables.labour" /> rate record must be found. The SOR item quantity will be set to the import file 'hours' field; the SOR item unit value will be the 'rate per hour' field on the <MadCap:variable name="Variables.labour" /> rates record; and the SOR item unit cost will be the 'value' field from the file. </li>
+      <li>3 (Allowances), 4 (Leave), 5 (Superannuation) [Note: actually coded as other than cost group 1 &amp; 2] are not always recoverable. For that reason, if a <MadCap:variable name="Variables.labour" /> rate record is not found, the loaded line will be marked as 'skipped' and not as 'error'. 
+<p />If found, the SOR item quantity will be set to the import file 'value' field; the SOR item unit value will be the 'rate per hour' field on the <MadCap:variable name="Variables.labour" /> rates record; and the SOR item unit cost will be zero. 
+<p />There are no hours associated with these (non-1 &amp; 2 cost group) records. The SOR rate held for these will effectively be a % mark-up (such as 10% mark-up will have a 'rate per hour' of 1.1). <br /></li>
+    </ul>
+  </body>
+</html>

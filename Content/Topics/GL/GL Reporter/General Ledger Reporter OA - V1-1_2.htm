@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:conditions="COINS.Redacted">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Adding an Account Line</h1>
+        <p>The Account Line will retrieve specific data from the General Ledger account record. These accounts are already created and maintained in the General Ledger module. </p>
+        <p>
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_1.png" class="FullWidth" />
+        </p>
+        <p>The <span style="font-weight: bold;">Account Maintenance</span> browse screen lists all the information regarding the accounts and what information/data can be used. </p>
+        <p>Account Lines will display information from the General Ledger account record. For example you may want the balance of the account, the description of the account or the account number. These would all require an Account Line to be selected. </p>
+        <p>You select which accounts to include in the report by entering an account row, and filling in a ‘From’ and ‘To’ range, or a ‘can-do’ list in the Matches field. You can select accounts by the whole account, sector, expense code, analysis set etc. You can also use Report Tokens to allow the user to specify which accounts to include when they run the report. If an account line is shown in detail, a line will appear in the report for every individual account that is included in the selection. If the line is shown in Summary (detail flag un-ticked), only one line will be displayed showing the balance of the entire account range selected. Therefore, it is possible for the report definition to just contain one Account line (selecting all accounts) and if ticked as Detailed, <MadCap:variable name="General.ProductName" /> will display a row in the report for every account.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_2.png" class="FullWidth" />
+        </p>
+        <p>Select the <span style="font-weight: bold;">Account Line</span> from the dropdown list. Select the <span style="font-weight: bold;">Add</span> button. </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_3.png" class="FullWidth" />
+        </p>
+        <p class="ListParagraph">
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_4.png" class="FullWidth" />
+        </p>
+        <p class="ListParagraph">
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_5.png" class="FullWidth" />
+        </p>
+        <p class="ListParagraph">Enter additional information for the <span style="font-weight: bold;">Report Row</span>.</p>
+        <p class="Body">The new line is displayed showing the details required for input. Not all fields will be required to be entered. </p>
+        <p class="Body">In our example we are entering details for the account number. The fields required for input are defined in the table below. </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p style="font-weight: bold;">Field:</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p style="font-weight: bold;">Description:</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Line:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The line number of the report row.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Description:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The description of the data you want to be displayed. This will print in a ‘Row Description’ column but not others such as ‘Account Description’. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Level:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The Level you wish to use. Account lines at the same level will be displayed together in a column on the report. This can be used for totals. In our example we are using just one level</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Account:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The General Ledger account number or range of accounts for this line. Filtering can be used on each part of the full account code depending on the General Ledger accounts configuration. Matches or ‘can do’ lists can be defined to include tokens that are entered by the user at report run time to filter accounts and values to be included in the report.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Sector:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>A sector or range of sectors to retrieve account balances for the report.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Expense:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>An expense code or range of expense codes to retrieve account balances.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Main Headings:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The Main Headings to retrieve account balances e.g.&#160; 5 = Fixed Assets, 6 = Current Assets, 7 = Creditors etc.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Statutory Analysis:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The Statutory Analysis code or range to retrieve account balances</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Company Group:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The group of companies to report on.&#160; </p>
+                        <p>This allows the user to write reports which access <MadCap:variable name="General.ProductName" /> companies other than the ‘current’ company.&#160; I.e. you may be writing a report in company No. 001, but wish to report on companies 001, 002 and 003. Specify the company group to select from here. Note that it may therefore be desirable to create a company group for each individual <MadCap:variable name="General.ProductName" /> company (in the System module of <MadCap:variable name="General.ProductName" />) as well as a group of ‘all companies’.&#160; That way, you could specify a report that produced either report rows or columns of each <MadCap:variable name="General.ProductName" /> company, plus a consolidated view.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Currency Type:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The base currency for conversion if you are using more than one currency.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Percent Line:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The line number to reflect as a % of another row e.g. Profit as a % of Total Sales. </p>
+                        <p>Enter the row number of the report that you would like to show this line amount as a percentage of.&#160; Note that the row number that you refer to must already exist in the report definition.&#160; (i.e. it must be above this current line in the report).&#160; i.e. row 10 could not contain a reference to row 11 in its percentage line field. However, row 11 could contain a reference to row 10. </p>
+                        <p>Note that the Column tab lines must also be flagged as a % line for these calculations to work. Otherwise the report will show the value of the row, rather than its % value.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Divide Row:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The line number to divide a row by another row.&#160; </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Sort:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The order to sort the report.&#160; This allows you to sort by account, account code element or analysis set so that accounts will show in an order different to the full account code sequence. You can have up to 5 levels of sort.&#160; e.g. 1 = Account, 2= Analysis Code, 3 = Branch, 4 = Dept, 5 = Detail.&#160; </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Header/Footer Level:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The level corresponds to a set of header and footer column fields configured in <span style="font-weight: bold;">Report Columns.</span> The header/footer allows you to specify which header/footer to use at the relevant break for the corresponding sort option. These header or footer lines are then referenced on the Column tab of the report.</p>
+                        <p>e.g. if you put a 6 in the header/footer level, then it would use&#160;the columns you had set up for show on levels H6 and F6 when displaying the header and footers.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Print Line:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Print the line on the report or just process to accumulate report values.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Print Zero:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Print zero balances on the report.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Reverse Value:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Display negative values as positive and vice versa.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Detail:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>To print balances in detail or a summary. Detail mode will show all account codes in the selected filter ranges for account codes with one line for each account code. Summary mode will total all account balances on this report as one line.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Print When:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The type of balances to be printed on reports i.e. debits, credits.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Account Type:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="ListParagraph" style="margin-left: 0pt;">The type of accounts to be included in the report i.e. Balance Sheet only, Profit and Loss only, or All Accounts.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Save Into:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>This field is used for calculations and total rows of accounts which will then be printed and used on total lines. The unique name to group values for saving into this row i.e. the name of the accumulator. This allows you to add or subtract from a subtotal in a report (which you can ‘name’ to call upon later).</p>
+                        <p>e.g. In a Profit and Loss Report, Sales might be added into an accumulator named for ‘Sales’ and Cost of Sales might be added into an accumulator named ‘CoS’ and these two would then be totalled into an accumulator called ‘GP’ for Gross Profit. Multiple Account lines and/or total lines can ‘save into’ a total.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Operand:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>This works with the ‘Save Into’ field for calculations. Determines whether the values are added to or subtracted from the accumulator value i.e.&#160; + or -</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Class:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The font name and size for the report e.g. Arial or Bold, 10pt or 12pt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Variant:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>A variant to be used for Header or Footer Total.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td style="background-color: #auto;border-left-style: solid;border-left-width: 1pt;border-left-color: black;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Extra:</p>
+                    </td>
+                    <td style="background-color: #auto;border-right-style: solid;border-right-width: 1pt;border-right-color: black;border-bottom-style: solid;border-bottom-width: 1pt;border-bottom-color: black;" class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>The format for the variant.  </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">Enter all the required fields for the details for the account line of data that you require to be added to the report. Note that in the screen shot below the fields for Account, Sector, Expense, Main Headings and Statutory Analysis will vary from system to system depending on the General Ledger configuration. </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_6.png" class="FullWidth" />
+        </p>
+        <p class="Body">You may want to enter some filters and selections in the <span style="font-weight: bold;">Lookup</span> fields for specific data to be displayed in your report, i.e. a specific range of accounts.  </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_7.png" class="FullWidth" />
+        </p>
+        <ol>
+            <li>Select the codes that you require from the list. <p class="Body"><img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_6.png" class="FullWidth" /></p></li>
+            <li>
+                <p class="Body">Select the <span style="font-weight: bold;">Save</span> button. </p>
+                <p class="Body">
+                    <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_8.png" class="FullWidth" />
+                </p>
+                <p class="Body">The <span style="font-weight: bold;">Account Line</span> will be entered and a new <span style="font-weight: bold;">Account Line</span> will be opened to enter more information for other accounts. </p>
+                <p class="Body">
+                    <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_9.png" class="FullWidth" />
+                </p>
+            </li>
+            <li>
+                <p class="Body">Select the <span style="font-weight: bold;">Undo</span> button if you do not want to enter a new<span style="font-weight: bold;"> Account</span> <span style="font-weight: bold;">Line</span>. </p>
+                <p class="Body">
+                    <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_10.png" class="FullWidth" />
+                </p>
+                <p class="Body">You can also use the filters to add strings of codes to match, rather than using the <span style="font-weight: bold;">From</span> field and <span style="font-weight: bold;">To</span> fields for the <span style="font-weight: bold;">Lookup</span> filters.&#160; </p>
+                <p class="Body">
+                    <img src="../../../Resources/Images_G-I/GL/GL Reporter/General Ledger Reporter OA - V1-1_2_11.png" class="FullWidth" />
+                </p>
+            </li>
+        </ol>
+        <p class="Body">You can have as many <span style="font-weight: bold;">Account Lines</span> as you require for the report. </p>
+        <p class="Body">The report will still show a blank page if run and you will not be able to view the report in the <span style="font-weight: bold;">Report Status</span> browse screen. We have explained what we want to see, however have not detailed how we want to see it. </p>
+    </body>
+</html>

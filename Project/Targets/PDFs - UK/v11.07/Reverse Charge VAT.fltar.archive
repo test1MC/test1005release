@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Complete/Reverse Charge VAT (24620).fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/CEDoc_PDF-UK.flpgl"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly or COINS.v1105 or Documents.NotReleaseOverview]exclude[COINS.Pre-v1105 or COINS.ScreenOnly or COINS.USOnly or Documents.ReleaseOverview]"
+  conditions="COINS.UKOnly"
+  Medium="print"
+  OutputFile="[%=Document Variables.Document Reference%]-[%=Document Variables.File Name%]-UK"
+  InjectEmptyPages="false"
+  InjectBookHeadings="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Navigate COINS OA</Variable>
+    <Variable
+      Name="Document Variables/Document Title">Reverse Charge VAT</Variable>
+    <Variable
+      Name="Document Variables/File Name">ReverseChargeVAT</Variable>
+    <Variable
+      Name="Document Variables/Modules">VAT</Variable>
+    <Variable
+      Name="Document Variables/PDR">24620</Variable>
+    <Variable
+      Name="Document Variables/Region">UK</Variable>
+    <Variable
+      Name="Document Variables/Version">11.07</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">OA-CE-VT004</Variable>
+    <Variable
+      Name="Document Variables/Doc Version">1.0</Variable>
+    <Variable
+      Name="Document Variables/Draft?"> </Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/Exchange UK CE Documents.fldes" />
+  </Destinations>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

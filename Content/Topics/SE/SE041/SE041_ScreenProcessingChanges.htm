@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="802" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="1.1">Service Order Detail Lines</h2>
+        <p class="Body">You can access the <span class="Field">Ready for Invoicing </span>flag (<MadCap:xref href="#SODetailLines" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>) in both Add and Update mode on Service Order Detail Lines (unless the <span class="Field">Billing Method </span>is <strong>NB-Nonbillable</strong>). This flag can be manually <MadCap:variable name="Variables.tick" />ed (set to <strong>Y</strong>), even when the <span class="Field">Subtotal Amount </span>is $0.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="SODetailLines"></a><MadCap:variable name="Variables.Se Service Order caps" /> Detail Lines</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE041_Images/SODetLines.png" class="MaxPrintWidth" />
+        </p>
+        <p class="NoteHeaderIndent">NOTE:</p>
+        <div class="NoteIndent1">When saving a record for a Detail Line referencing the <strong>NB-Nonbillable Billing Method</strong>, the process behaves as previously by setting the <span class="Field">Ready for Invoicing </span>flag to un<MadCap:variable name="Variables.tick" />ed and not displaying it on the screen.</div>
+        <MadCap:pageBreak />
+        <p class="Body">The process <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>does the following:</p>
+        <ul>
+            <li class="ListBullet3">If you add a Service Order Detall Line and have a non-zero Subtotal Amount, the <span class="Field">Ready for Invoicing </span><MadCap:variable name="Variables.tick" />box is <MadCap:variable name="Variables.tick" />ed.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">If you add a Service Order Detail Line and have a zero Subtotal Amount, the <span class="Field">Ready for Invoicing </span><MadCap:variable name="Variables.tick" />box may be <MadCap:variable name="Variables.tick" />ed.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">If you update a Service Order Detail Line that has a zero Subtotal Amount by changing the <span class="Field">Billing Method</span> to <strong>NB-Nonbillable</strong>, the <span class="Field">Ready for Invoicing </span><MadCap:variable name="Variables.tick" />box is reset to un<MadCap:variable name="Variables.tick" />ed and does not appear on the screen when saved.</li>
+        </ul>
+        <h2 MadCap:autonum="1.2">Generate Functions</h2>
+        <p class="Body">All Generate functions <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>automatically set the <span class="Field">Ready for Invoicing </span>flag to un<MadCap:variable name="Variables.tick" />ed when the value of a Detail Line is $0. This section describes the various Generate functions to which this applies.</p>
+        <h3 MadCap:autonum="1.2.1">Detail Line Generation - Visit Details</h3>
+        <p class="Body">If you generate Service Order lines from Material and <MadCap:variable name="Variables.Labour caps" /> lines set up in Visit Details, only the line with a non-zero Subtotal Amount is marked as <b>Ready for Invoicing</b>. Below is a sample setup in which Material line 2 and <MadCap:variable name="Variables.Labour caps" /> line 2 will be marked as ready for invoicing.</p>
+        <ul>
+            <li class="ListBullet3">Material line 1 - includes FA-Flat Amount billing method and zero flat amount.</li>
+            <li class="ListBullet3">Material line 2 - includes FA-Flat Amount billing method and <strong>non-zero flat amount</strong>.</li>
+            <li class="ListBullet3">Material line 3 - set to NB-Nonbillable.</li>
+            <li class="ListBullet3"><MadCap:variable name="Variables.Labour caps" /> line 1 - includes non-zero Regular hours, non-zero Charged hours, and Billing Method = HR-Hourly, with no corresponding <MadCap:variable name="Variables.Labour caps" /> Billing Rates record (zero amount).</li>
+            <li class="ListBullet3"><MadCap:variable name="Variables.Labour caps" /> line 2 - includes non-zero Regular hours, non-zero Charged hours, and Billing Method = HR-Hourly, with a corresponding <MadCap:variable name="Variables.Labour caps" /> Billing Rates record (<strong>non-zero amount</strong>).</li>
+        </ul>
+        <MadCap:pageBreak />
+        <h3 MadCap:autonum="1.2.2">Detail Line Generation - Quantity Installed</h3>
+        <p class="Body">If you generate a Detail Line in a <strong>Quantity Installed </strong>record of the <i>Service Orders &gt;&#160;Finance tab menu</i> &gt; <i>Quantity Installed menu option</i> based on the setup below, the Quantity Installed has a zero Subtotal Amount and the <span class="Field">Ready for Invoicing </span>flag is not <MadCap:variable name="Variables.tick" />ed.</p>
+        <ul>
+            <li class="ListBullet3">An <strong>I-Unit Price</strong> <MadCap:variable name="Variables.Cost Head caps" /> group is set up and contains costs used for the UP&#160;Billing Item setup.</li>
+            <li class="ListBullet3">Cost Codes have been created for the Service Order in <i>Service Order Utilities &gt; Create Cost Codes</i>.</li>
+            <li class="ListBullet3">In <i>Job Status &gt;&#160;Input &gt;&#160;Enter Quantity Installed</i>, a <MadCap:variable name="Variables.Contract caps" /> matches the costing <MadCap:variable name="Variables.Contract caps" /> of the Service Order's Allowable Work.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.3">Detail Line Generation - Add-ons</h3>
+        <p class="Body">If you generate an Add-on for Service Order lines based on the setup outlined below,  the Flat Amount Add-on generates with a zero Subtotal Amount and the  <b>Ready for Invoicing</b> flag is not <MadCap:variable name="Variables.tick" />ed.</p>
+        <ul>
+            <li class="ListBullet3">Add-on is a <MadCap:variable name="Variables.Cost Head caps" /> Group with Billing Type = <strong>FA-Flat Amount</strong> and a zero Flat Amount value.</li>
+            <li class="ListBullet3">There is at least one other Detail Line marked as <strong>Ready For Invoicing </strong>but not invoiced yet.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.4">Detail Line Generation - Costs</h3>
+        <p class="Body">If you generate Detail Lines from Costs in a  JNL-GL/JC&#160;Journal Batch containing a zero amount transaction and non-zero (positive/negative) hours, the lines generated have a zero Subtotal Amount and the <b>Ready for Invoicing</b> flag is not <MadCap:variable name="Variables.tick" />ed. </p>
+        <h3 MadCap:autonum="1.2.5">Detail Line Generation - Purchase Order</h3>
+        <p class="Body">If you generate Detail Lines from a Purchase Order with a zero price/line total, the lines generated have a zero Subtotal Amount and the <b>Ready for Invoicing</b> flag is not <MadCap:variable name="Variables.tick" />ed.</p>
+        <h3 MadCap:autonum="1.2.6">Service Order Invoice</h3>
+        <p class="Body">If you generate an Invoice from a Service Order with at least two Detail Lines (non-zero Subtotal Amount and zero Subtotal Amount), the Detail Line with a zero value is available in the Invoice.</p>
+    </body>
+</html>

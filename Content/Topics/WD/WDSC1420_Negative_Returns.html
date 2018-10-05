@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Negative Returns</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Negative Returns</h1>
+    <p>HMRC will not accept entries on the CIS 300 for a subcontractor with a negative net value.  You must notify HMRC separately.</p>
+    <p>If the net position for a subcontractor after running the <span class="function" title="Function:%WSC7500RSCN">Process Month End Return</span> is negative (for example if you have <MadCap:variable name="Variables.cancelled" /> a payment for which you made a submission in the previous month, and have not made sufficient payments since to cover the difference), <MadCap:variable name="General.ProductName" /> excludes the entry from the submission. </p>
+    <p>In this case you should notify HMRC of the negative return(s) (using the CIS helpline).  </p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">When contacting HMRC to inform them, do not use the expression <strong>"negative return</strong>".  Instead, say that you want to make an amendment to the previous return, as the negative amounts represent cancellations or adjustments to previously returned figures.</div>
+    <p>You can then indicate in <MadCap:variable name="General.ProductName" /> that you have notified HMRC.</p>
+    <p>The <span class="function" title="Function:%WSC7540RCOG">Monthly Status Report</span> indicates the number of negative returns, and the number for which you have not notified HMRC (that is, you have not indicated in <MadCap:variable name="General.ProductName" /> that you have notified HMRC).<br /></p>
+    <div class="process">
+      <h2 class="print">To indicate that you have notified HMRC</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSC9020BCOI"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Monthly Return Submissions</span>.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> to open the return record.</li>
+        <li>On the Negative Returns tab, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> next to the return line.</li>
+        <li>
+          <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field">Notified? </span>box to indicate that you have notified HMRC.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+      </ol>
+    </div>
+  </body>
+</html>

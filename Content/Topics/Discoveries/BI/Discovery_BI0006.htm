@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="3201" MadCap:lastWidth="823" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0006,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Enhancing the Contract Report created in BI0004</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Dicscovery Heading.flsnp" />
+        <h1>Calculated Fields</h1>
+        <h2>Copy the  Report created in BI0004</h2>
+        <p>Copy each of the Function, Page and Report Sections of the example created in Discovery BI0004 and call them xxM1Exercise9 (where xx = your initials).</p>
+        <h2>Add Calculated Fields</h2>
+        <p>To calculate a value from fields on the report, create variables within the report to hold the values of the fields, then create a new calculation field to hold (and display) the result.</p>
+        <p>In the Field field of the Costs to Date line, enter a $variable name to accumulate the totals for this field… and assign the value of the of the RO field in the calculation box.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Width</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Calculation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">$dCosts</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Costs to Date</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">20mm</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">dCosts = jc_job.RO_ContractCosts^TD</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Enhancing the Contract Report.png" class="FullWidth" />
+        </p>
+        <p>Repeat this procedure for the Revenue To Date.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Width</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Calculation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">$dRev</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Revenue to Date</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">20mm</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">dRev = jc_job.RO_ContractRevenue^TD</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Enhancing the Contract Report_1.png" class="FullWidth" />
+        </p>
+        <p>Add a new line for Profit.&#160; This does not need a field name, since it is not actually a database field however we are going to assign a variable as we are going to use this field in a further calculation.&#160; Fill in the fields as follows:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 77px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Width</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Calculation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">$dProf</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Profit</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">20mm</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">dprof=dRev - dCosts<br /><br />This subtracts the value in the variable dCosts from the value in the variable dRev and displays the result
+<br /><br />NOTE: Leave a space either side of the minus sign.
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Enhancing the Contract Report_2.png" class="FullWidth" />
+        </p>
+        <p>Add a new line for Profit Margin.  Fill in the fields as follows:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 195px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 107px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 60px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Width</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Calculation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Must be blank as percentage should calculated at time of calculation not accumulate</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Profit Margin</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">20mm</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1"> IF(dRev,EQ,0,0,(dProf / dRev) * 100);<br /><br />This calculation will calculate the Margin as a percentage figure. It will also allow for the case if drev is zero and force the answer to be zero. (As dividing by zero is not possible.)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Set the Format to &gt;&gt;,&gt;&gt;9.99%</p>
+        <p>Because this is not an actual database field, it is necessary to specify a display format.&#160; (Fields in the database have a pre-defined format.Always allow for Neg figures)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Enhancing the Contract Report_3.png" class="FullWidth" />
+        </p>
+        <p>Run your report and check that you have output similar to:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Enhancing the Contract Report_4.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Custom<MadCap:variable name="Variables.is" />ing Help Text</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Custom<MadCap:variable name="Variables.is" />ing Help Text</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p><MadCap:variable name="General.ProductName" /> provides a screen that shows help text for each function and the fields on that function. In addition to the text that is provided with <MadCap:variable name="General.ProductName" />, you can add your own help text for functions and individual fields. This allows you to enhance the help to address the needs of your users, or to provide help for user-defined fields such as analysis sets. This "user text" is displayed with a different <MadCap:variable name="Variables.colour" />ed background, to differentiate it from the standard <MadCap:variable name="General.ProductName" /> help text (you can modify the appearance of the user text). User text will not be overwritten when you upgrade <MadCap:variable name="General.ProductName" />.</p>
+                    </td>
+                    <td rowspan="2" style="width: 20%">
+                        <img src="../../Resources/Images/SY/SY_003301.png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>To provide your own help text for a field or function</h2>
+                        <ol>
+                            <li>In the Address box at the top of the documentation window, type <span class="userinput">&amp;helpMode=edit</span> at the end of the URL, and press <span class="key">Return</span> to refresh the window.</li>
+                            <li>Move the mouse pointer over your profile picture and in the user menu, click <img class="button" src="../../Resources/Images/COINS Graphics/SVG buttons/help.svg" /> Toggle Help.
+<p>The help frame now has editing buttons.</p></li>
+                            <li>Click <img class="button" src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" /> next to the nugget you want to add the text to.</li>
+                            <li>Click the User tab.</li>
+                            <li>Enter the user text.</li>
+                            <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+                        </ol>
+                        <h2>To custom<MadCap:variable name="Variables.is" />e help using Help Maintenance</h2>
+                        <ol>
+                            <li>Identify the help nugget you want to change.</li>
+                            <li>Go to <span class="function" title="Function:%WSYBSYW">Help Maintenance</span>.</li>
+                            <li>Search for the help record for the field or function.<p class="noteheader">NOTE</p><Div class="note">If both the Field and the Function are specified, the text is function-specific; that is, it only appears for that field on that function.</Div></li>
+                            <li>Open the record.</li>
+                            <li>Enter your text in the fields on the User Text tab:</li>
+                            <ul>
+                                <li>The <span class="field">User Text </span>field is shown with the text that is normally shown.</li>
+                                <li>The <span class="field">Additional Text </span>field is shown when the user clicks the More... link.<p class="noteheader">NOTE</p><Div class="note">Consider giving display-only access to the standard help text fields (syw_ttext1, syw_ttext2 etc), and only allowing users to update the user text fields (syw_ttext3 and syw_vtext3).</Div></li>
+                            </ul>
+                            <li>Save the help record.</li>
+                        </ol>
+                        <h2>To modify the way the user help text is displayed</h2>
+                        <ol>
+                            <li>Edit the cascading style sheet file docuser.css.</li>
+                            <li>Add a style declaration for div.usertext.</li>
+                        </ol>
+                        <p>For example, to change the background <MadCap:variable name="Variables.colour" /> to pale yellow, you could enter</p>
+                        <p><span class="screentype">div.usertext{background-color:#ffffdd}</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0035_Help_text_additional_information.html" />
+            </MadCap:relatedTopics>
+        </p>
+    </body>
+</html>

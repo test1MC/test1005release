@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="821" MadCap:lastWidth="624">
+  <head>
+    <title>Subcontractor Records</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Subcontractor Records</h1>
+    <p>Before you can use <span class="module">Subcontract Ledger</span>, you need to enter key details about each subcontractor. You can add details of new subcontractors, or change the information about existing ones, at any time. </p>
+    <p>To create a new subcontractor choose the office from the drop down list showing the CIW.</p>
+    <p>
+      <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span> allows you to add and maintain details of subcontractors.This screen displays a list of all subcontractors that have been set up in the <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" /> you are currently using. You can add the details of a new subcontractor here, view and amend the details of an existing subcontractor, or delete a subcontractor record if it is no longer required.</p>
+    <p>
+      <span class="function" title="Function:%WSC2000SSBM">Subcontractor</span> allows you to show details about the subcontractor.</p>
+    <p>
+      <span class="function" title="Function:%WSC2000BSBMT1">Payment Details</span> shows details relating to how the subcontractor is paid.</p>
+    <p>
+      <span class="function" title="Function:%WSC2000BSBMT13">Payment Method</span> allows you to set the subcontractor's payment details.</p>
+    <p>The <span class="function" title="Function:%WSC2000BSBMT2">Tax &amp; <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /></span> tab allows you to enter details of the subcontractor's <MadCap:variable name="Variables.vat" /> and Income Tax papers.</p>
+    <p>
+      <span class="function" title="Function:%WSC2000BSBMT3">Contacts</span> shows details of contacts at the subcontractor's company.
+</p>
+    <p>The <span class="function" title="Function:%WSC2000BSBMT5">Unions, CITB, H&amp;S</span> tab shows information about trade union and training board membership, and health and safety representation. This information is for your reference only; it is not used in processing.</p>
+    <p>The <span class="function" title="Function:%WSC2000BSBMT7">Analysis</span> tab shows the analysis sets for the subcontractor.</p>
+    <p>
+      <span class="function" title="Function:%WSC2000BSBMT28">G/L Codes</span> allows you to override the control accounts for the subcontractor (for example, to use inter-<MadCap:variable name="Variables.kco company" /> accounts).</p>
+    <p>The <span class="function" title="Function:%WSC2000BSBMT6">Reference Formats</span> tab shows the formats for reference numbers that are allowed for this subcontractor.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSC0825_Dormant_Subcontractor_Processing.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <h2 class="print" MadCap:autonum="1.1 ">Subcontractor records</h2>
+      <p>If you want to pay a subcontractor through <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> as a <MadCap:variable name="Variables.pl supplier" /> of subcontract <MadCap:variable name="Variables.labour" />, and the <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> account is factored, set up the accounts as follows: </p>
+      <p />
+      <table>
+        <tbody>
+          <tr>
+            <th>P/L Account</th>
+            <th>Factor A/C</th>
+            <th>S/C <MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /></th>
+            <th>S/C Account</th>
+            <th>Factor A/C</th>
+          </tr>
+          <tr>
+            <td>SUB001</td>
+            <td>FACTOR</td>
+            <td>Y</td>
+            <td>SUB001</td>
+            <td>FACTOR</td>
+          </tr>
+          <tr>
+            <td>FACTOR </td>
+            <td />
+            <td>Y </td>
+            <td>FACTOR </td>
+            <td />
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/SC_SCADDMND.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_SUBHOLD.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_DEFDUE.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_SCPOCMND.htm" />
+          <MadCap:relatedTopic src="../Parameters/AT/at_bankacc.htm" />
+          <MadCap:relatedTopic src="../Parameters/AT/at_sortcode.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_SUBACCT.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" /><span style="margin-right: 0pt;">15 </span>Launching Workflow </h1>
+        <p>&#160;</p>
+        <p class="Body">There is a standard method available for launching workflows from within the OA framework using the standard calculation syntax, this is as follows :</p>
+        <p class="Body">&#160;&#160;&#160; ifexec(var,EQ,1) method('wfuwfp01.startWorkFlow','WORKFLOWCODE');</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">There is a standard method available for a bulk change of status to a group of records from within the OA framework using the standard calculation syntax, this is as follows:</p>
+        <p class="Body">&#160;&#160;&#160;&#160;&#160; Method(‘wfuwfp01.completeWorkflowForRowid’,’{xx_xxxRowid}’,’ WORKFLOWCODE’, ’Status From’,’Status To’,’Notes for history’)</p>
+        <p class="Body">&#160;&#160;&#160;&#160;&#160; Method(‘wfuwfp01.completeWorkflowForRowid’,’{ap_invoiceRowid}’,’TIM’, ’*’,’A’,’Notes for history’)</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">In the above example this method will update - All invoices within query for workflow named ‘TIM’ will convert ‘all status’ to ‘status A’ and adding a Note to the History. The activity WB task will be completed if it belongs to the person doing the completion otherwise it will be removed.</p>
+        <p class="Body">This can be used in reports, on pages or from a database trigger, indeed anywhere where a calculation is performed.</p>
+    </body>
+</html>

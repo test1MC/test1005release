@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Setting Up <MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Types</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Up <MadCap:variable name="Variables.sc scheme" style="text-transform: capitalize;" /> Types</h1>
+        <p><span class="function" title="Function:%WSC2060BSCY"><MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /></span> allows you to set up the types of insurance or <MadCap:variable name="Variables.sc schemes" /> you want to check for, and the <MadCap:variable name="Variables.behaviour" /> for each type.</p>
+        <p>The values that can be set are the validation settings that apply generally for <MadCap:variable name="Variables.sc schemes" /> of this type (whether to give error or warning when a transaction is entered; how many days prior to <MadCap:variable name="Variables.expiry" /> to check; whether to validate at payment run).</p>
+        <p>You can add and amend <MadCap:variable name="Variables.sc schemes" />, and change the status of the <MadCap:variable name="Variables.sc scheme" /> between 'none', 'default,' and 'mandatory'. </p>
+        <p><MadCap:variable name="Variables.sc schemes" style="text-transform: capitalize;" /> marked as default will be set against a new subcontractor when added.</p>
+        <p><MadCap:variable name="Variables.sc schemes" style="text-transform: capitalize;" /> marked as Mandatory cannot be deleted for a subcontractor. (Note: if the SC parameter <span class="parameter">INSMAND </span>= <span class="userinput">Y</span> then the <MadCap:variable name="Variables.expiry" /> date, provider, and <MadCap:variable name="Variables.sc scheme" /> number must be entered if the <MadCap:variable name="Variables.sc scheme" /> type is mandatory).</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSC1305_Overriding_Validation.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To set up a new <MadCap:variable name="Variables.sc scheme" /> type:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC2060BSCY"><MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /></span>.</li>
+                <li>Add a new record. </li>
+                <li>Select the category of the <MadCap:variable name="Variables.sc scheme" />.</li>
+                <ul>
+                    <li>Insurance - These require insurance-related information such as policy number and provider.</li>
+                    <li>Dated Items - These items have <MadCap:variable name="Variables.expiry" /> dates but do not show insurance-related fields.</li>
+                    <li>Qualification - These are for compliance items which simply need to be met once and do not expire.&#160; These are more likely to be used on a subcontract than a subcontractor.</li>
+                </ul>
+                <li>Set up when to make the <MadCap:variable name="Variables.sc scheme" /> checks and what action to take. 
+<p><img src="../../Resources/Images_S-U/SC/SC_131101.png" /></p><p>There are separate checks for order entry, order committing, invoice or certificate entry, payment due, and payment processing (see <a href="WDSC1302_Checks_Made.html"><MadCap:variable name="Variables.sc insother" style="text-transform: capitalize;" /> - Checks Made</a>). </p><p>The checks can be set so that <MadCap:variable name="General.ProductName" /> checks for a date earlier than the actual <MadCap:variable name="Variables.expiry" />, so you can be warned if the <MadCap:variable name="Variables.sc scheme" /> is due to expire.</p><p />To set one or more of these checks:&#160;</li>
+                <ol>
+                    <li>Set the drop-down fields as follows:</li>
+                    <ul>
+                        <li>To prevent the transaction if the test fails, set it to <span class="userinput">Error</span>.</li>
+                        <li>To issue a warning if the test fails but allow the user to continue the transaction, set it to <span class="userinput">Warning</span>.</li>
+                        <li>To issue a warning if the test fails before the <MadCap:variable name="Variables.expiry" /> date, and an error if the test fails after the <MadCap:variable name="Variables.expiry" /> date, set it to <span class="userinput">2-Level</span>.&#160;</li>
+                        <li>To switch off the entry checks, mark the test as <span class="userinput">&lt;None&gt;</span>. </li>
+                    </ul>
+                    <li>Set the <span class="field">Days prior to <MadCap:variable name="Variables.expiry" /></span>field as appropriate: </li>
+                    <ul>
+                        <li>Zero = <MadCap:variable name="Variables.expiry" /> date. </li>
+                        <li>Non-zero value&#160;= the number of days before the <MadCap:variable name="Variables.expiry" /> date that the test would fail.&#160;&#160; </li>
+                    </ul>
+                    <p>
+                        <img src="../../Resources/Images_S-U/SC/SC_131102.png" />
+                    </p>
+                </ol>
+                <li>If the <span class="field">Add Levy</span> field is available, a levy can be added to the certificate amount if the insurance check fails.&#160; This field will only show if the SC parameter <span class="parameter">LEVYITEM </span>has a valid certificate definition line ID entered.&#160; To add the rate on the associated definition line to the certificate if the insurance check fails, <MadCap:variable name="Variables.tick" /> the <span class="field">Add Levy </span>field.</li>
+                <li>The payment processing check, if it is <MadCap:variable name="Variables.tick" />ed, always works off the <MadCap:variable name="Variables.expiry" /> date.</li>
+                <li>On the Custom Fields tab, choose any additional fields you want to display when updating the details of this <MadCap:variable name="Variables.sc scheme" /> for a subcontractor.</li>
+                <li>You can set up the <MadCap:variable name="Variables.sc scheme" /> to be shared across <MadCap:variable name="Variables.kco companies" />; see <a href="WDSC1313_Sharing_Schemes.html">Sharing <MadCap:variable name="Variables.sc schemes" style="text-transform: capitalize;" /> Across <MadCap:variable name="Variables.kco companies" style="text-transform: capitalize;" /></a>.</li>
+                <li>Save the record.</li>
+                <li>Use the Choose Action selector to change the status if you want to apply the new <MadCap:variable name="Variables.sc scheme" /> to existing and new subcontractors automatically. See <a href="WDSC1314_Applying_Schemes_to_Subcontractors.html">Applying <MadCap:variable name="Variables.sc schemes" style="text-transform: capitalize;" /> to Subcontractors</a>.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Custom Fields</h2>
+            <p>You can add custom fields to any <MadCap:variable name="Variables.sc scheme" />, to allow you to record and validate additional information.&#160; You need to set up a single list of all the fields you might want to include against any of the <MadCap:variable name="Variables.sc schemes" />.</p>
+            <h3>To set up user-defined <MadCap:variable name="Variables.sc scheme" /> fields:</h3>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSY2730BSTE">Page Field Sets</span>.</li>
+                <li>Click the link for the Function %WSC2000BSCW.</li>
+                <li>Set the <span class="field">Field Set </span>selector to <span class="userinput">User Defined</span>.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> to create a new&#160;field set; for example: UWSYI%WSC2000BSCW0001.</li>
+                <li>Add a record for each user defined field.&#160; The field names are of the form scw_custom_xx__n, where xx represents the data type (ch = character; in = integer, da = date; de = decimal; lo = logical), and n the number of the field.&#160; For example, scw_custom_da__1 will be a date field.
+<p class="noteheader">NOTE</p><div class="note">You can set up a maximum of 25 fields&#160;for each data type.</div></li>
+                <li>Save the field set.</li>
+                <li>To make a field required, add it to the list in the SC parameter <span class="parameter">MISSING</span>.</li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_INSMAND.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_LEVYITEM.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SC/sc_MISSING.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Reviewing Unmatched <MadCap:variable name="General.ProductName" /> Payment Records</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Reviewing Unmatched <MadCap:variable name="General.ProductName" /> Payment Records</h1>
+    <p>Before you can complete the return reconciliation, you need to ensure that any unmatched <MadCap:variable name="General.ProductName" /> tax return details that have payment dates within the period covered by the RCT return have been cleared.  The most likely reason for there being such unmatched records is negative certificates, for which you cannot make payment notifications.</p>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSC1534_Reconciling_the_Return_Details.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To review and clear unmatched payments:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSC1440BSDS">Return Reconciliation Workbench</span>.</li>
+        <li>Click the link on the return you want to reconcile.</li>
+        <li>On the <MadCap:variable name="General.ProductName" /> Details tab, review the return detail records.  You can set the filter to <span class="userselect">Unmatched</span> to show any unmatched payments. </li>
+        <li>Clear the unmatched payments in one of the following ways:</li>
+        <ul>
+          <li>If there are any transactions in the list that are not within the scope of the RCT Return:</li>
+          <ol>
+            <li>Select the records.</li>
+            <li>Choose <span class="userselect">Ignore</span> from the action menu.</li>
+          </ol>
+          <li>If there are payment records with equal positive and negative values:</li>
+          <ol>
+            <li>Select both records.</li>
+            <li>Choose <span class="userselect">Ignore</span> from the action menu.</li>
+          </ol>
+          <li>If there is a negative payment record with no corresponding positive transaction:</li>
+          <ol>
+            <li>Select the record.</li>
+            <li>Choose <span class="userselect">Offset</span> from the action menu.  <MadCap:variable name="General.ProductName" /> displays a list of transactions for the same subcontractor. </li>
+            <li>Select a record to offset the negative payment against (this must have a positive value equal to or greater than the negative value of the negative payment record).</li>
+          </ol>
+        </ul>
+      </ol>
+    </div>
+  </body>
+</html>

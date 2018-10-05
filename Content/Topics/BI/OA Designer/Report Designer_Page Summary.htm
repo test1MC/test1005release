@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1044" MadCap:lastWidth="1091">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Page Summary</h1>
+        <p>Create a Page to be associated with the function. This is not the layout of the report but the web page to be displayed when running the report - that is, the selection criteria (the page will include 'Output Options' by default in addition to any other selection criteria defined).</p>
+        <p>As with browse, create the Page, using the same code as the calling Function. However, with reports there are additional fields which are populated to provide functionality (typically predefined Report Selection criteria).</p>
+        <p>In the Header section of the Page, define a FSP (Form Service Procedure) for the Body Table to be reported on; this will provide certain tools and functionality to the report such as standard selection criteria. <MadCap:xref href="Forms Service Procedures and Report Selection Generates.htm">Forms Service Procedures and Report Selection Generates</MadCap:xref></p>
+        <p>There are no other Body details required on the webpage as this is just the selection page for the report (the actual detail; fields, columns etc. are maintained in the Report Section).</p>
+        <p>Click Save to save the Page and move on to Forms and Filters.</p>
+        <p>Although the Page is to be associated with a report it is necessary to create an Update Form in the Page to allow the user running the report to enter their appropriate selection criteria.</p>
+        <p>Once the Update Form has been created, then add the fields. If standard selection pages are to be used (see FSP's above) add a blank field to the page and ensure that the GENERATE field points to the correct selectionGenerate in the Form Service Procedure.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Fields defined for pages for report selection need to be flagged as Add and Update and must be associated with an 'Update' Form to allow entry of selection criteria.</p>
+        <p>Each field can be assigned a Tab - the selection will appear on that Tab (The Tab must exist as a function, by standard convention the table is named funcT where func is the function/page/report code and T designates tab. See additional information on naming conventions).</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Although Named Filters and Browse Filters appear as available in Reports there are only used in <MadCap:variable name="General.ProductName" /> OA for Page Design</p>
+        <p>.</p>
+    </body>
+</html>

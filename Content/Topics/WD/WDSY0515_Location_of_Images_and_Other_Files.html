@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Location of Images and Other Files</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Location of Images and Other Files</h1>
+    <p>Standard files are deployed by COINSAdmin into directories under <strong>$BASE/app/xcode/db </strong>on site.  By default <MadCap:variable name="General.ProductName" /> will look for files in these directories.</p>
+    <h2>Standard installation</h2>
+    <p>In a standard <MadCap:variable name="General.ProductName" /> installation, for each environment, the Unix variable $BASE points to the environment's installation directory.  For each environment, the following directories exist:</p>
+    <p>
+      <strong>$BASE/app/xcode/db/images -</strong> holds the screen images and the <MadCap:variable name="General.ProductName" /> logos.</p>
+    <p>
+      <strong>$BASE/app/xcode/db/style</strong> - holds the style sheets.</p>
+    <p>
+      <strong>$BASE/app/xcode/db/scripts -</strong> holds the scripts.</p>
+    <p>
+      <strong>$BASE/app/xcode/db/docimage</strong> - holds images for the online documentation.</p>
+    <p>You should never place anything that is user-defined into these directories. It is likely that COINSAdmin will override and/or delete these files.  If you want to add your own images, styles or scripts, or modify our standard ones, you need to create user-defined directories and point COINS to those.</p>
+    <h2>Base document directory</h2>
+    <p>There will also be a webserver base document directory.  The location of this directory can vary from server to server. On an HP machine it would be <strong>/opt/hpws/apache/htdocs</strong>. (If you cannot find it on a particular server, do a Unix find for index.html.) Below this will be a <strong>coins</strong> directory, and below that, directories corresponding to each environment.  Below each environment directory will be directories for images, styles and scripts that are linked to the directories below <strong>$BASE/app</strong>.</p>
+    <p>Parameters will be set as follows:</p>
+    <ul>
+      <li>
+        <span class="parameter">SY/WEBBASE </span>would be blank.</li>
+      <li>
+        <span class="parameter">SY/WEBIMGS </span>would be $WEBBASE</li>
+      <li>
+        <span class="parameter">SY/WEBSTYLE </span>would be $WEBBASE</li>
+      <li>
+        <span class="parameter">SY/WEBLOGO </span>would be blank.</li>
+      <li>
+        <span class="parameter">SY/WEBROOT </span>specifies the server name. </li>
+    </ul>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0034_Changing_Colours.html" />
+        <MadCap:relatedTopic src="WDSY0036_Changing_Buttons.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_webstyle.htm" />
+          <MadCap:relatedTopic src="../Parameters/SY/sy_webimgs.htm" />
+          <MadCap:relatedTopic src="../Parameters/SY/sy_weblogo.htm" />
+          <MadCap:relatedTopic src="../Parameters/SY/sy_stylevar.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

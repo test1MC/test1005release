@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Create <MadCap:variable name="Variables.eft" style="text-transform: capitalize;" /></h1>
+        <p>Once you have created and <a href="WDPL0420_Freezing_the_Payment_Batch.html">frozen</a> the payment batch, you can print the <MadCap:variable name="Variables.cheques" /> and generate <MadCap:variable name="Variables.eft" /> payments.&#160; </p>
+        <MadCap:snippetBlock src="../PL/Processing Payments/Check_Batch_Frozen.flsnp" />
+        <p>If you print <MadCap:variable name="Variables.eft" /> remittances separately from processing the <MadCap:variable name="Variables.eft" /> payments, you must print the remittances after you have processed the payments.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDPL0430_Printing_Cheques_and_Remittance_Advices.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To process <MadCap:variable name="Variables.eft" /> payments:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WPL1991BCOB">Create <MadCap:variable name="Variables.eft" /></span>.<MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Create <MadCap:variable name="Variables.eft" /> – Select Batch</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Images/PL/LMDAP0011/Process BACS Payments_1.png" alt="LMDAP0037SC6" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" /></p><p><img src="../../Images/PL/LMDAP0011/Process BACS Payments_1_1105AUS.png" class="FullWidth" MadCap:conditions="COINS.AUOnly" /></p><p><img src="../../Images/PL/LMDAP0011/Process BACS Payments_1_1105UK.png" class="FullWidth" MadCap:conditions="COINS.v1105 UK" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+            </ol>
+            <ol MadCap:continue="true">
+                <li>In the <span class="field">Batch Number </span>column, click the link for the batch that contains the payments you want to process.</li>
+                <li>Select a configurable <MadCap:variable name="Variables.cheque" /> document.&#160; (You need to do this even though you are not printing <MadCap:variable name="Variables.cheques" />.)<MadCap:dropDown class="screenshot" MadCap:conditions="COINS.USOnly"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Select Check Form</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/USA Imports/2.7 - PRIME AP - Electronic Payments (EFT)/Create and Print EFTs from_2.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>On the Main tab it will show you the number of items in the <MadCap:variable name="Variables.eft" /> payment<p><img src="../../Images/PL/LMDAP0011/Process BACS Payments_2.png" alt="LMDAP0037SC7" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" /></p><p><img src="../../Images/PL/LMDAP0011/Process BACS Payments_2_1105AUS.png" class="FullWidth" MadCap:conditions="COINS.AUOnly" /></p><p><img src="../../Images/PL/LMDAP0011/Process BACS Payments_2_1105UK.png" class="FullWidth" MadCap:conditions="COINS.v1105 UK" /></p></li>
+                <li>On the  <MadCap:variable name="Variables.eft" /> Processing tab:<ul><li>Select the bank account from which the payments will be made.</li><li>Verify the date to appear in the <MadCap:variable name="Variables.eft" /> file; this defaults to today’s date.</li></ul><MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Create the <MadCap:variable name="Variables.eft" /></MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Images/PL/LMDAP0011/Process BACS Payments_3.png" alt="LMDAP0037SC8" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" /></p><p MadCap:conditions="COINS.AUOnly"><img src="../../Images/PL/LMDAP0011/Process BACS Payments_3_1105AUS.png" class="FullWidth" MadCap:conditions="COINS.AUOnly" /></p><p MadCap:conditions="COINS.UKOnly"><img src="../../Images/PL/LMDAP0011/Process BACS Payments_3_1105UK.png" class="FullWidth" MadCap:conditions="COINS.v1105 UK" /></p><p><img src="../../Resources/USA Imports/2.7 - PRIME AP - Electronic Payments (EFT)/Create and Print EFTs from_3.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>Select any Output Options.&#160;</li>
+                <li>Click <MadCap:snippetText src="../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" />. <br /><br /><MadCap:variable name="General.ProductName" /> displays a message informing you of the number of <MadCap:variable name="Variables.cheques" /> and/or <MadCap:variable name="Variables.eft" /> payments that will be included in the payment run. To continue, click <span class="key">OK</span>. Otherwise, click <span class="key">Cancel</span> to return to the selection fields.<br /><br />Depending on the output options you selected, <MadCap:variable name="General.ProductName" /> either displays a "Task completed successfully" message to tell you that the print request has been sent, or displays a "Generating" page, and then displays the printable output PDF file).</li>
+                <li>Next, print the <MadCap:variable name="Variables.eft" /> remittances; use <span class="function" title="Function:%WPL1992BCOB">Print <MadCap:variable name="Variables.eft" /> Remittances</span>.<MadCap:dropDown class="screenshot" MadCap:conditions="COINS.USOnly"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Print EFT</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p><img src="../../Resources/USA Imports/2.7 - PRIME AP - Electronic Payments (EFT)/Create and Print EFTs from_6.png" class="FullWidth" /></p></MadCap:dropDownBody></MadCap:dropDown></li>
+                <li>You can print a Payment List to check that the payments are correct (use <span class="function" title="Function:%WPL3230BCOB">Payment List</span>).</li>
+                <li>Finally, you need to <a href="WDUG0056_Posting_a_Batch.html">post the batch</a>.</li>
+            </ol>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDUG0056_Posting_a_Batch.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+        <div class="configuration">
+            <h2 class="print"><MadCap:variable name="Variables.eft" /> payments</h2>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_bacsfile.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_bacsmed.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_bacsuser.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

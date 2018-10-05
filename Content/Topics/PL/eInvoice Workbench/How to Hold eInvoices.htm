@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2624" MadCap:lastWidth="1267">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />How to Hold eInvoices</h1>
+        <p>This secton describes how the eInvoice workbench processes PL transactions, invoices and credit notes that require a Purchase Order (“PINVs”) and transactions that do not require a PO (“PINNs”) with respect to setting the HOLD status and HOLD codes. The relevant PL and PO parameters listed are taken into account.</p>
+        <h2>Relevant Parameters</h2>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="3" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>PL Parameters (pltail1.p) </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Param.</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Description </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Typical value</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>APPRCOST</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Approve invoice after costing</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>DEFHCODE</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default Hold Code&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                    <p>(The value must be in the PL Setup Commercial Hode Code table.)&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>GEN</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>DEFHOLD</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default Invoice Hold&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                    <p>Valid entries are Y or N.</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EAPPRCST</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>eInvoice override for APPRCOST </p>
+                    <p>Valid entries are Y, N or ‘’ (blank). Y or N will override the value found in APPRCOST in the eInvoice workbench, blank will leave APPRCOST unchanged.</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EDEFHOLD</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Allows optional holding of eInvoices. </p>
+                    <p>Valid entries are Y, N or ‘’ (blank). </p>
+                    <p>Y or N will override the value found in DEFHOLD in the eInvoice workbench, blank will leave DEFHOLD unchanged.&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EDEFHCOD</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default Hold Code for eInvoice batch creation.</p>
+                    <p>Overrides the value in DEFHCODE if and only if EDEFHOLD is true. (The value must be in the PL Setup Commercial Hode Code table.)</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>ECO</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>EHLDPINV</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Allow PINV eInvoices to be held</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>HLDREGIN</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Auto Hold Registered Invoices&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOCST</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Allow PINN eInvoices to be costed</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>Y</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOCH</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Default costhead for costed PINNs&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>MAT1</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');width: 100%;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td colspan="3" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>PO Parameters (potail1.p)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Param.</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>Description </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINSBasic-Body-Body1">
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>NONPOTTS</p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                    <p>List of PL T/Types not requiring PO&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                </td>
+                <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                    <p>PINN,PCRN</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <h2>Transaction processing</h2>
+        <p>There are two classes of PL transactions, invoices and credit notes that require a Purchase Order (“PINVs”) and transactions that do not require a PO (“PINNs”) each follow separate routes through the workbench programs.</p>
+        <p>Regardless of transaction type, “Loading” a transaction in the workbench will first compare the value of the invoice with the Supplier’s authorisation limit. If DEFHOLD is true an invoice value exceeding this limit will mark the transaction as being on hold. The transaction hold code will be set to the value of DEFHCODE.</p>
+        <h2>PINN processing</h2>
+        <p>The Transaction Type code (coj_type) of a PINN transaction will be included in the NONPOTTS parameter list. </p>
+        <p>After pressing the &lt;Details&gt; button in the workbench, if NONPOCST is false or the invoice refers to a PO the transaction is given distribution type “R”. </p>
+        <p>If NONPOCST is true and the transaction does not have a PO number (a PINV transaction with no PO number would be in error), costing detail my be entered. If costing has been entered the transaction is given distribution type “C” and the Supplier’s authorisation limit is checked again. If the invoice value exceeds this limit the transaction put on hold. The transaction hold code will be set to the value of DEFHCODE. If APPRCOST, possibly modified by EAPPRCST, is true further hold processing is offered as follows:</p>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">If HLDREGIN is false and the distribution type is not “R” the user may change the transaction’s hold status. If HLDREGIN is true and the distribution type is “R” the transaction is put on hold. For a transaction on hold the user may then change the hold code. </li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">If HLDREGIN is true and the transaction’s distribution type is “R” the transaction is put on hold. The transaction hold code is set to the value of DEFHCODE possibly modified EDEFHCOD.</li>
+        </ul>
+        <h2>PINV processing </h2>
+        <p>The Transaction Type code (coj_type) of a PINV transaction will not be included in the NONPOTTS parameter list. </p>
+        <p>If HLDREGIN is true and the transaction’s distribution type is “R” the transaction is put on hold. The transaction hold code is set to the value of DEFHCODE possibly modified EDEFHCOD.</p>
+        <p>If EHLDPINV is true further hold processing is offered as follows:</p>
+        <ul style="list-style-type: disc;margin-left: 18pt;">
+            <li style="list-style-type: disc;">If HLDREGIN is false and the distribution type is not “R” the user may change the transaction’s hold status. If HLDREGIN is true and the distribution type is “R” the transaction is put on hold. For a transaction on hold the user may then change the hold code. </li>
+        </ul>
+        <h2>Batch creation </h2>
+        <p>The batch creation process is common for all transaction types. If DEFHOLD, possibly modified by EDEFHOLD is true the user is prompted for a hold code, defaulted to DEFHCODE possibly modified EDEFHCOD, which need not be entered. If HLDREGIN is true and the distribution type is “R” the transaction is put on hold and the hold code set the value entered. For any transaction on hold and with no code the hold code is set the value entered.</p>
+        <p>The transaction is passed to the General Ledger.</p>
+        <p>&#160;</p>
+    </body>
+</html>

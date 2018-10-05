@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Printing the <MadCap:variable name="Variables.Cheque caps" /> Amount in Words</title>
+    </head>
+    <body>
+        <h1 class="print">Printing the <MadCap:variable name="Variables.Cheque caps" /> Amount in Words<MadCap:concept term="Topics" /></h1>
+        <p>You can either print the words for each digit in the amount, or print the amount in "full text".</p>
+        <ul>
+            <li>To print a line with the following format:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span style="color: #800080;">ONE ZERO NINE SEVEN FIVE THREE 64 </span></p></blockquote><p>add a line containing the field <span class="field">RO_acs_digitword__<em>n</em></span>where <em>n</em> is the position (1 = units, 2 = tens, 3 = hundreds, and so on). Repeat this field for each position. Use <span class="field">RO_acs_pence&#160;</span>for the pence/cents amount:</p><p><img src="../../Resources/Images_P-R/PL/PL_508001.gif" /></p></li>
+            <li>To print the payee and the amount in "full text"; for example:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span style="color: #800080;">Anderson &amp; Little ******************<br />ONE HUNDRED AND TWENTY THREE POUNDS 99p ONLY ****************<br />*************************************************************&#160;&#160;</span></p></blockquote><p>add consecutive lines containing the fields <span class="field">RO_avm_payeen*, RO_acs_famountWords__1</span> and <span class="field">RO_acs_famountWords__2.</span></p></li>
+            <li>To print the "Pay text" (the payee name and the amount in figures, with no spaces), for example:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span style="color: #800080;">ANDERSON&amp;LITTLE123.99ONLY****************** </span></p></blockquote><p>use the field <span class="field"><span class="field">RO_acs_payText</span>. </span></p></li>
+            <li>To print the <MadCap:variable name="Variables.cheque" /> amount in words on one line, using the USA format, for example:
+<blockquote dir="ltr" style="margin-right: 0px;"><p><span style="color: #800080;">ONE HUNDRED AND TWENTY THREE DOLLARS 99CENTS</span></p></blockquote>
+use the field <span class="field">RO_SpelledAmount</span>.</li>
+        </ul>
+        <p>For further details see <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a>.</p>
+        <p><MadCap:variable name="General.ProductName" /> has a standard set of messages that you can print in the header and/or footer of <MadCap:variable name="Variables.cheques" /> and/or remittances. For details about the messages available in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, see <a href="WDPL5081_Conditional_Messages.html">Conditional Messages</a>.</p>
+        <div class="configuration">
+            <p>Use <span class="function" title="Function:%WCO2001BCUR">Currencies</span> to specify the currency name (such as Dollars or Pounds) and the currency sub unit (such as Cents or Pence) to print on <MadCap:variable name="Variables.cheques" />.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/CO/co_curunit.htm" />
+                    <MadCap:relatedTopic src="../Parameters/CO/co_curdec.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

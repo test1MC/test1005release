@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Configure LDAP Directory User Authentication</h1>
+        <p>This section provides instructions for <MadCap:variable name="General.ProductName" /> system administrators on the steps required to implement LDAP Directory user authentication from within <MadCap:variable name="General.ProductName" />.</p>
+        <p>Traditionally, <MadCap:variable name="General.ProductName" /> has maintained its own user accounts, each with an associated authentication token (password). From v11.04, <MadCap:variable name="General.ProductName" /> has been enhanced to allow the authentication of <MadCap:variable name="General.ProductName" /> users by utilising their Corporate Directory domain password.</p>
+        <p>This method of user authentication only requires the successful configuration of the <MadCap:variable name="General.ProductName" /> server for communications with the corporate LDAP Directory servers. Users do not need to be logged into your corporate domain to be able to access <MadCap:variable name="General.ProductName" />.</p>
+        <p>&#160;</p>
+        <p class="note">Always test this process in an up to date, non-live environment before attempting it on a LIVE environment.<br />When performing this process on a LIVE environment we recommend that you have a working, complete backup of the LIVE environment.</p>
+        <p>&#160;</p>
+        <h2>Prerequisites</h2>
+        <p>The user performing the tasks in this How To must have:</p>
+        <ul>
+            <li>
+                <p>Administrative (root) access to the <MadCap:variable name="General.ProductName" /> server</p>
+            </li>
+            <li>
+                <p>“root” access in <MadCap:variable name="General.ProductName" /> OA</p>
+            </li>
+            <li>
+                <p>Access to OpenLDAP libraries for the <MadCap:variable name="General.ProductName" /> server’s operating system</p>
+            </li>
+            <li>
+                <p>Access to the OpenSSL package for the <MadCap:variable name="General.ProductName" /> server’s operating system (only if using SSL)</p>
+            </li>
+            <li>
+                <p>Access to the Corporate Directory signing certificate authority’s (CA) certificate (only if using SSL)</p>
+            </li>
+            <li>
+                <p>Access to change the name server – for example editing the resolv.conf file</p>
+            </li>
+            <li>
+                <p>Ability to change firewalls to allow ports 636 and 53 inbound and outbound</p>
+            </li>
+        </ul>
+        <p>Microsoft Active Directory requirements:</p>
+        <ul>
+            <li>
+                <p>Support for LDAP v3 clients</p>
+            </li>
+            <li>
+                <p>Support either Simple binding or SASL DIGEST-MD5 binding</p>
+            </li>
+            <li>
+                <p>Support for LDAP (port 389) and LDAPS (port 636)</p>
+            </li>
+            <li>
+                <p>Internal DNS IP addresses</p>
+            </li>
+            <li>
+                <p>Internal AD Domain Name</p>
+            </li>
+        </ul>
+        <p>COINS Cloud requirements:</p>
+        <ul>
+            <li>
+                <p>Site to Site VPN or MPLS required</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

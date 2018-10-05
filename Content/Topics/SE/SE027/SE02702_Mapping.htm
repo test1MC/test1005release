@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Mapping</title>
+    </head>
+    <body>
+        <h1><MadCap:variable name="Variables.Se Service Order caps" /> Tooltip</h1>
+        <p class="Body">A Google map <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>appears in the <MadCap:variable name="Variables.Se Service Order caps" /> tooltip by default (see <MadCap:xref href="#SOGoogleMap" class="ImageRef">Figure: <i>Google Map</i></MadCap:xref>), unless the <span class="parameter">SE/SDMAPORD </span>parameter is set to <strong>N</strong>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="SOGoogleMap"></a>Google Map</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/GoogleMap.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <MadCap:pageBreak />
+        <h1><MadCap:variable name="Variables.Se Visit caps" /> Tooltip</h1>
+        <p class="Body">A Google map <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>appears in the <MadCap:variable name="Variables.Se Visit caps" /> tooltip by default (see <MadCap:xref href="#VisitGoogleMap" class="ImageRef">Figure: <i>[%=Variables.Se Visit caps%] Google Map</i></MadCap:xref>), unless the <span class="parameter">SE/SDMAPVIS </span>parameter is set to <strong>N</strong>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="VisitGoogleMap"></a><MadCap:variable name="Variables.Se Visit caps" /> Google Map</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/VisitGoogleMap.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h1>S&amp;D&#160;Maps</h1>
+        <p class="Body">A map shown in the left pane of the S&amp;D&#160;screen (see <MadCap:xref href="#MapPane" class="ImageRef">Figure: <i>Map Pane</i></MadCap:xref>) is loaded automatically if the <span class="parameter">SDMAP </span>parameter is set to <strong>Y</strong>. This pane is resizable and collapsible.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="MapPane"></a>Map Pane</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/MapPane.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <h2>Map Pins</h2>
+        <p class="Body">The S&amp;D&#160;Map shows three types of pins: <MadCap:variable name="Variables.Se Technician caps" />, <MadCap:variable name="Variables.Se Visit caps" />, and Unscheduled <MadCap:variable name="Variables.Se Service Order caps" />. Each pin is explained below.</p>
+        <p class="IndentBold">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/TechPin.png" /><MadCap:variable name="Variables.Se Technician caps" />
+        </p>
+        <p class="IndentFieldDef">This pin displays as a hard hat and shows a different <MadCap:variable name="Variables.colour" /> for each  <MadCap:variable name="Variables.Se Technician caps" />. The current position for a <MadCap:variable name="Variables.Se Technician caps" /> is obtained from the last known <MadCap:variable name="Variables.Se Technician caps" /> <MadCap:variable name="Variables.Se Visit caps" /> activity (such as dispatch, travel, on hold, complete). If there is no current position available, the company address is used. The pin tooltip shows the <MadCap:variable name="Variables.Se Technician caps" /> name. If you click the pin, a hypothetical route starts at the <MadCap:variable name="Variables.Se Technician caps" />'s current position and includes all <MadCap:variable name="Variables.Se Technician caps" /> <MadCap:variable name="Variables.Se Visits caps" />, sorted by <MadCap:variable name="Variables.Se Visit caps" /> start time, as shown in <MadCap:xref href="#TechRteMap" class="ImageRef">Figure: <i>Technician Route Map</i></MadCap:xref>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="TechRteMap"></a>Technician Route Map</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/TechRouteMap.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p class="IndentBold">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/VisitPin.png" class="MaxPrintWidth" /> <MadCap:variable name="Variables.Se Visit caps" /></p>
+        <p class="IndentFieldDef">This pin uses the same <MadCap:variable name="Variables.colour" /> as a <MadCap:variable name="Variables.Se Technician caps" /> assigned for the <MadCap:variable name="Variables.Se Visit caps" />. The <MadCap:variable name="Variables.Se Visit caps" /> position is obtained from the <MadCap:variable name="Variables.Se Visit caps" /> <MadCap:variable name="Variables.Se Service Order caps" /> location address. The pin tooltip shows the <MadCap:variable name="Variables.Se Visit caps" /> number.</p>
+        <p class="IndentBold">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/UnschedSOPin.png" class="MaxPrintWidth" /> Unscheduled <MadCap:variable name="Variables.Se Service Order caps" /></p>
+        <p class="IndentFieldDef">This is a grey pin showing any <MadCap:variable name="Variables.Se Service Order caps" /> that currently does not have a scheduled <MadCap:variable name="Variables.Se Visit caps" />. The pin can be dragged and dropped on the Weekly/Daily Board to schedule a <MadCap:variable name="Variables.Se Visit caps" />. If you hover your mouse over the pin, a tooltip appears, as shown in <MadCap:xref href="#UnschedSOTooltip" class="ImageRef">Figure: <i>Unscheduled [%=Variables.Se Service Order caps%] Tooltip</i></MadCap:xref>. This tooltip displays information such as the <MadCap:variable name="Variables.Se Service Order caps" />, Status, Location, Phone, Description, Called date and time (starts with "C"), and Promised date and time (starts with "P").</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="UnschedSOTooltip"></a>Unscheduled <MadCap:variable name="Variables.Se Service Order caps" /> Tooltip</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/UnschedSOPinTooltip.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <ul>
+            <li>
+                <p>If a Location does not have Latitude/Longitude fields filled in, its address is geocoded via a corresponding Google Maps service to obtain the Latitude/Longitude coordinates. Geocoding results are stored in browser local storage for reuse purposes.</p>
+            </li>
+            <li>If an Address is not specified accurately at the Location level, geocoding may result in more than one coordinates set. If this occurs, the first result is picked and a corresponding pin is shown with a red border.</li>
+        </ul>
+        <h2>Map Toolbar</h2>
+        <p class="Body">A toolbar is found above the map, as shown in <MadCap:xref href="#Toolbar" class="ImageRef">Figure: <i>Map Toolbar</i></MadCap:xref>. It gives you <MadCap:variable name="Variables.Se Technician caps" /> multi-select control that allows <MadCap:variable name="Variables.Se&#160;Technicians caps" /> to be filtered out and their <MadCap:variable name="Variables.Se Visits caps" /> to be shown/not shown on the map. </p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="Toolbar"></a>Map Toolbar</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE027_Images/Toolbar.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+    </body>
+</html>

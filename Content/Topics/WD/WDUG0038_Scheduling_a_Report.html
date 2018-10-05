@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Scheduling a Report</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Scheduling a Report</h1>
+        <p>Scheduling a report means that you can generate reports with the same selections on a recurring basis (for example: every day, or on the 15<sup>th</sup> of each month, or every second Wednesday), automatically.</p>
+        <p>You can also schedule other background processes, such as committing orders, in the same way.</p>
+        <p>When the date and time specified on the schedule is reached, <MadCap:variable name="General.ProductName" /> places the request on the current queue, and if the next date and time is still within the date range of the schedule, <MadCap:variable name="General.ProductName" /> puts a new scheduled item on the scheduled list.</p>
+        <div class="process">
+            <h2 class="print">To set up a scheduled report:</h2>
+            <ol>
+                <li>Define the report options for the report in the usual way.</li>
+                <li>On the Output Options tab, select <span class="field">Scheduled</span>.</li>
+                <li>You may want to change the report title to identify this scheduled report.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays the Scheduler Update screen.&#160;</p></li>
+                <li>Enter the time of day you want <MadCap:variable name="General.ProductName" /> to generate the report, and the range of dates over which you want the schedule to apply. <MadCap:conditionalText MadCap:conditions="COINS.v1108">Depending on how <MadCap:variable name="General.ProductName" /> is configured, you may not be allowed to schedule reports during certain times; this restriction is shown next to the <span class="Field">Time</span> field.</MadCap:conditionalText></li>
+                <li>Select a schedule.&#160; The schedules are pre-defined by your system administrator.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> displays <span class="function" title="Function:%WSYBCRR">Report Status</span> with the Scheduled tab selected.&#160; This lists the scheduled report selections you can use (including the one you just saved), and shows the date and time when each of the reports will next be generated.&#160;</p></li>
+            </ol>
+            <h2>To change the selection criteria or output options for a scheduled report:</h2>
+            <ol>
+                <li>Click the link in the <span class="field">Description </span>column.</li>
+                <li>Make your changes to the selection criteria or output options.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> returns you to <span class="function" title="Function:%WSYBCRR">Report Status</span>, and does not generate the report.&#160;</p></li>
+            </ol>
+            <p>To change the name of a scheduled report, or the details of the schedule, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />, type a new name in the <span class="field">Description </span>field, then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDUG0037_Changing_Dates_on_Saved_and_Scheduled_Reports.html" />
+                    <MadCap:relatedTopic src="WDUG0046_Examples_of_Schedules.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Report schedules - configuration</h2>
+            <p>Use <span class="function" title="Function:%WSY2090BSTE">Standard Schedules</span> to set up schedules for reports.&#160;</p>
+            <p MadCap:conditions="COINS.v1108">You can restrict the times at which reports can be scheduled using the PM parameter <span class="parameter">SCHRTIME</span>, and which users the restriction applies to using the PM parameter <span class="parameter">SCHUSERS</span>.</p>
+            <p MadCap:conditions="COINS.v1108">
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PM/pm_schrtime.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PM/pm_schusers.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

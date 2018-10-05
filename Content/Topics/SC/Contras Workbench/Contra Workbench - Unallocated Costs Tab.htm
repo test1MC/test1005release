@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1 style="page-break-before: avoid;">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Contras Workbench - </MadCap:conditionalText>Unallocated Costs Tab</h1>
+        <p class="Body">The Unallocated Costs tab shows all cost transactions that match the criteria for unallocated contra costs (specified by the parameters <span class="parameter">SC/CONTJSC</span>, <span class="parameter">SC/CONTCAT</span>, <span class="parameter">SC/CONTSEC</span> and <span class="parameter">SC/CONTACT</span>; see <MadCap:xref href="Initial Configuration.htm">1, <i>Contras Workbench - Initial Configuration</i></MadCap:xref>). These transactions represent costs that you may want to recover by a contra charge.</p>
+        <p class="Body">You can either match transactions against other transactions, or create a contra  record for them. Transactions that have been linked to a contra will be marked as matched when a <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> invoice for the contra has been created and posted.</p>
+        <p class="Caption" MadCap:conditions="COINS.Internal">Unallocated Costs Tab</p>
+        <p class="screenshot" MadCap:conditions="COINS.Internal">&lt;Screenshot Required&gt;</p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Cost Code	</div>
+                <div class="FieldDef">The cost code of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Description	</div>
+                <div class="FieldDef">The description of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Cat</div>
+                <div class="FieldDef">The cost category of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Fin Date</div>
+                <div class="FieldDef">The <MadCap:variable name="Variables.financial date" /> of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Src</div>
+                <div class="FieldDef">The module in which the source transaction was entered.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Tran Type</div>
+                <div class="FieldDef">The transaction type of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Key</div>
+                <div class="FieldDef">The account code of the supplier, customer or subcontractor from the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Int Ref</div>
+                <div class="FieldDef">The internal reference of the source transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Ext Ref</div>
+                <div class="FieldDef">The external reference of the transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Tran Date</div>
+                <div class="FieldDef">The date of the transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Composite Description</div>
+                <div class="FieldDef">The composite description of the transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Amount</div>
+                <div class="FieldDef">The amount of the transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Matched</div>
+                <div class="FieldDef">Whether the transaction has been fully <MadCap:annotation MadCap:createDate="2016-11-24T11:25:15.1664668+00:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="&quot;Matched&quot; here seems to apply to contras as well." MadCap:editor="Don Barwick" MadCap:editDate="2016-11-24T11:25:36.8726372+00:00">matched </MadCap:annotation>to another transaction or a contra. This can be updated using concurrent update (if the transaction has not already been linked to a contra).</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <MadCap:annotation MadCap:createDate="2016-11-24T11:19:28.7354946+00:00" MadCap:creator="Don Barwick" MadCap:initials="DJB" MadCap:comment="&quot;Matched Amt&quot; implies that you can match part of the amount; how would you do this?" MadCap:editor="Don Barwick" MadCap:editDate="2016-11-24T11:19:50.3764946+00:00">Matched Amt</MadCap:annotation>
+                </div>
+                <div class="FieldDef">The amount that has been matched to this transaction.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">&#160;</div>
+                <div class="FieldDef">
+                    <p>An additional column shows the status of the transaction:</p>
+                    <ul class="CompactList">
+                        <li>Blank – Not matched.</li>
+                        <li>M – Fully Matched.</li>
+                        <li>C – Linked to a contra and cannot be matched.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Contra Ref</div>
+                <div class="FieldDef">Shows the contra reference once a contra has been created against the cost. A link opens the contra in a new window.</div>
+            </div>
+        </div>
+        <p class="Body">The following actions are available:</p>
+        <ul>
+            <li><span class="Function">Create Contra</span> – This creates a contra for each selected transaction. The contras appear on the Contras tab (see <MadCap:xref href="Contra Workbench - Contras Tab.htm">, <i>Contra Workbench - Contras Tab</i></MadCap:xref>). </li>
+            <li><span class="Function">Match</span> – This allows you to match unallocated transactions with each other. As long as the balance of the transactions you select is zero, applying this action will set the status of the transactions to Matched.</li>
+            <li><span class="Function">Unmatch</span> – This allows you to mark previously-matched transactions as unmatched. As long as the balance of the transactions you select is zero, applying this action will set the status of the transactions to Unmatched.</li>
+        </ul>
+        <p class="Body">You can also match (or unmatch) transactions using concurrent update; only the <span class="Field">Matched</span> <MadCap:variable name="Variables.tick" />box is available for update.</p>
+        <h2>Refresh Data Option</h2>
+        <p class="Body">The <span class="Function">Refresh Data</span> option allows you to regenerate the unallocated cost transactions. This is useful if you have changed the parameters that identify the coding for unallocated costs. You also have the option to delete existing unallocated cost transactions that do not match the current parameter settings (as long as they have not been linked to contras).</p>
+        <p class="Caption">Refresh Data Selection Screen</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_S-U/SC/SC Contra Workbench/Refresh Data Selection Screen.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Date</div>
+                <div class="FieldDef">Whether the date used to refresh the data is the <MadCap:variable name="Variables.financial date" /> or the transaction date.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Start Date</div>
+                <div class="FieldDef">The date of the earliest transaction to include.</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">Delete Unallocated Costs</div>
+                <div class="FieldDef">Whether to delete existing unallocated cost transactions that are not matched and not linked to a contra.</div>
+            </div>
+        </div>
+        <p class="Body">The option runs a background task to create unallocated cost transactions for all cost transactions of the <MadCap:variable name="Variables.jc contract" /> that match the criteria for unallocated contra costs, that are later than the selected date and for which there is not already a linked unallocated cost transaction.</p>
+    </body>
+</html>

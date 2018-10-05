@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Costing Distribution</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Costing Distribution</h1>
+    <p>It is now possible to create detailed costing distribution from the order lines. There are a number of pre-conditions:</p>
+    <ul>
+      <li>Parameter <span class="parameter">PO/SCWBS </span>must be set to <span class="userinput">L</span> (WBS at line level)</li>
+      <li>Parameter <span class="parameter">SC/DISTBD </span>must be set to <span class="userinput">Y</span></li>
+      <li>Parameter <span class="parameter">SC/IDORIG </span>must be set (enter ID to create breakdown created from order lines) and optionally parameter <span class="parameter">SC/IDVAR</span>.</li>
+      <li>Certificate definition lines with the ID specified in <span class="parameter">SC/IDORIG </span>above must have breakdown box <MadCap:variable name="Variables.tick" />ed.</li>
+      <li>
+        <span class="field">This Payment</span> value on the breakdown item is non-zero.</li>
+      <li>No distribution lines exist for the certificate.</li>
+    </ul>
+    <p>A distribution line will be created for each non-zero breakdown item which has been generated from the purchase order (for example, where the <span class="field">Item</span> column isn't blank). The costing code will be taken from the order line and the amount will be the <span class="field">This Payment</span> amount.</p>
+    <p>There may be differences between the total of the distribution created from order lines and the certificate costed value (cost line 1), such as for additional breakdown items, discounts, retention, etc. If so, another distribution record is created for the difference. This is costed to the first default costing on the subcontract. Certificate definitions allow for 2 separate costed amounts (and cost codes) so it is possible to structure the definition appropriately.</p>
+    <div class="configuration">
+      <h2 class="print">Costing Distribution</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_scwbs.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_DISTBD.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_IDORIG.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/SC_IDVAR.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

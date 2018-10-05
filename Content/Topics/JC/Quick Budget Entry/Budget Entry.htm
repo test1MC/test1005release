@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="6" MadCap:lastHeight="865" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Budget Entry Workbench</h1>
+        <p><span class="function">Input Budget Workbench</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows the user to enter budget costs against cost codes. It is available on the <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status</span> Input menu if either of the JC&#160;parameters <span class="parameter">BUDMANUPD</span> or <span class="parameter">FORECURR</span> are not blank.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Quick Budget Entry/Budget Entry Browse.png" class="FullWidth" />
+        </p>
+        <p>The initial screen is a browse of <MadCap:variable name="Variables.jc contracts" />. Body selectors allow you to select which <span class="field">Period</span> and <span class="field">Budget</span> to enter the budget for. If the new JC&#160;parameter <span class="parameter">BUDMANUPD</span> is blank, only the Forecast At Completion budget is available; otherwise, any entry in <span class="parameter">BUDMANUPD</span> that exists in <span class="function">Memo Data Types</span> and has type “U-Unlocked” is available.</p>
+        <p>Following the link on a <MadCap:variable name="Variables.jc contract" /> displays the <span class="function">Budget Input Workbench</span>. </p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Quick Budget Entry/Budget Entry Workbench.png" class="FullWidth" />
+        </p>
+        <p>This is a browse of cost codes, which depends on the setting of <span class="parameter">JC/USECCCAT</span>.</p>
+        <ul>
+            <li>If <span class="parameter">USECCCAT</span> is <i>not</i> set to <span class="userselect">All</span> or <span class="userselect">Used</span>, budget costs can be entered at cost code level. There is only one row per cost code, and only cost codes which have a non-blank input method are shown.</li>
+            <li>If <span class="parameter">USECCCAT</span> is set to to <span class="userselect">All</span> or <span class="userselect">Used</span>, budget costs can be entered at cost code/category level. There are multiple rows per cost code.</li>
+        </ul>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>If the selected <MadCap:variable name="Variables.jc contract" /> is a <MadCap:variable name="Variables.Commercial Manager caps" /> <MadCap:variable name="Variables.jc contract" /> and the selected budget type is one of the restricted budgets specified by the following JC&#160;parameters, the <span class="function">Budget Entry Workbench</span> will be read-only: <span class="parameter">BUDAPP</span>, <span class="parameter">BUDCURR</span>, <span class="parameter">BUDVARI</span>, <span class="parameter">BUDRMRC</span>, <span class="parameter">BUDPRMRC</span>, <span class="parameter">BUDXFER</span>, <span class="parameter">BUDPEND</span>, <span class="parameter">BUDUNAPP</span>.</p>
+            </div>
+        </div>
+        <p>If the budget input method is Hours, the Budget Input:&#160;<span class="field">Rate</span> and Budget:&#160;<span class="field">Hours at Completion</span> fields are updateable.</p>
+        <p>If the budget input method is Value, the Budget:&#160;<span class="field">Cost at Completion</span> field is updateable.</p>
+        <p>If the budget input method is Quantity, the Budget:<span class="field">&#160;Qty to Complete</span> field is updateable - this is available as an additional column set field.</p>
+        <p>Links on the <span class="field">Actuals</span>, <span class="field">Remaining Commitment</span> and <span class="field">Acruals</span> columns open <MadCap:variable name="Variables.enquiries" /> in a frame.</p>
+        <p>
+            <img src="../../../Resources/Images_J-L/JC/Quick Budget Entry/Remain Commit Enquiry.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

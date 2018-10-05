@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Overview</h1>
+        <p class="Body">Previously, when the <span class="parameter">PRHR </span>Company parameter was used (to ensure employee record management between HR and PR modules), the HR Personnel <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> was disabled and could not be entered since it is synced with the PR Employee <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" />. For example, if an employee handed in their notice, the HR user was unable to enter the last day of service on the <MadCap:variable name="Variables.mk leaver" style="text-transform: capitalize;" /> screen.</p>
+        <p class="Body">For the UK Region, this occurred because the Employee <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> is tied to PR processes to <MadCap:variable name="Variables.Financial Periods caps" />; consequently, the <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> in HR was only updated when the PR <MadCap:variable name="Variables.mk leaver" /> status eventually reached number ‘2’, which was after the employee had left. This process resulted in the following issues:</p>
+        <ul>
+            <li class="ListBullet3">Caused the management of large scale redundancies or normal <MadCap:variable name="Variables.mk leaver" /> processes to be difficult.</li>
+            <li class="ListBullet3">Forced users to create fields or use the HR ‘status’ flag to denote a <MadCap:variable name="Variables.mk leaver" />.</li>
+            <li class="ListBullet3">Produced inaccurate HR reports since employees would often have left but still remained current until Payroll processing was completed.</li>
+        </ul>
+        <p class="Body">In an effort to alleviate these issues, Human Resources has been updated to allow the entry of the <MadCap:variable name="Variables.leaving date" style="text-transform: capitalize;" /> from the Personnel screen, even if the <span class="parameter">CO/PRHR</span> parameter has been set, as long as the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>parameter <span class="parameter">HR/HRPRLEAV </span>is set to <strong>WORKBENCH</strong>.</p>
+        <p class="Body" MadCap:conditions="COINS.PrintOnly">Details about the changes made in <MadCap:variable name="General.ProductName" />&#160;OA are described in this document.</p>
+    </body>
+</html>

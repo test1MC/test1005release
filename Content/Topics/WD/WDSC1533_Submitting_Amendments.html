@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Submitting Amendments to an RCT Return</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Submitting Amendments to an RCT Return</h1>
+    <p>When the reconciliation is complete, if you have made any amendments to the deduction summary records, the Stage field in <span class="function" title="Function:%WSC1440BSDS">Return Reconciliation Workbench</span> shows Data Ready; this means the reconciliation is complete but there are items within the return which have been flagged as Add, Amend, Cancel or Carry Forward.  You need to submit the amendments electronically to Revenue.</p>
+    <div class="process">
+      <h2 class="print">To submit amendments to a return:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSC1440BSDS">Return Reconciliation Workbench</span>.</li>
+        <li>Select the Return record and choose <span class="userselect">Submit to Revenue</span> from the action menu.</li>
+        <li>Confirm that you want to submit the amendments to the current return.
+<p>During this process the request can have one of the following stages:</p><ul><li><span class="bgamber">Update Pending</span> - The updates to the return have been sent to Revenue but the response has not been received. This stage should only be transitory unless there is a communication problem with Revenue. </li><li><span class="bggreen">Successfully Filed</span> - The updates to the return have been sent to Revenue and a successful response has been received.  Thus the return has been filed.</li><li><span class="bgred">Filing Error</span> - The updates to the return have been sent to Revenue but an error response has been received. 
+<p><strong>&gt; The error(s) will need to be resolved and cleared so that the return is ready to send again.</strong></p></li></ul></li>
+      </ol>
+      <h2>To clear submission errors:</h2>
+      <p>If the Stage of the Return record is Filing Error, or if it remains at Update Pending:</p>
+      <ol>
+        <li>Select the Return record.</li>
+        <li>Choose <span class="userselect">Clear Error for Retry</span> from the action menu.
+<p><MadCap:variable name="General.ProductName" /> sets the Stage to Data Ready if the reconciliation is complete, otherwise it is set to Incomplete.</p></li>
+      </ol>
+      <h2>Late Returns</h2>
+      <p>If you try to submit the amendments (or try to update the Return) after the due date, you will not be able to.  The stage will change to <span class="bgred">Late</span>, You will have to report the late updates to Revenue outside of <MadCap:variable name="General.ProductName" />.  You can then use the <span class="userselect">Show as Manually Filed</span> action to indicate that you have done so.</p>
+    </div>
+  </body>
+</html>

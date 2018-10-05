@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Maximum Accrual Amount Added to Accrual Rate Record</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Benefit Plan Details</h1>
+        <p class="Body">When <strong>Rate per Hour </strong>is selected from the <span class="Field">Accrual Method </span>field in <i>Human Resources &gt; Accrual Plans Workbench &gt; Details tab</i>, the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Yearly Maximum Accrual Plan </span>field is enabled, as shown in <MadCap:xref href="#RatePerHr" class="ImageRef"><i> Rate Per Hour Accrual Method</i></MadCap:xref>. This field controls whether the Accrual Plan stops employees from accruing hours once they have reached a certain number of accrued hours for a given date range.</p>
+        <p class="Body"><strong>Note:</strong> The Accrued Hours cannot exceed the Yearly Maximum Accrual Hours for that plan rate.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="RatePerHr"></a>Rate Per Hour Accrual Method</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_G-I/HR/HR026_Images/HR026_AccrualPlanRatePerHour.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h1 MadCap:autonum="2 ">Plan Rates - Accrual Rates</h1>
+        <p class="Body">When the <span class="Field">Accrual Method </span>field is <strong>Rate per Hour </strong>and the <span class="Field">Yearly Maximum Accrual Plan </span>field is <MadCap:variable name="Variables.tick" />ed, the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Yearly Maximum Accrual </span>field is enabled on the Plan Rates tab in <i>Human Resources &gt; Accrual Plans Workbench</i>, as shown in <MadCap:xref href="#YearlyMaxAccrual" class="ImageRef"><i> Yearly Maximum Accrual</i></MadCap:xref>. This field sets the maximum amount of hours that can be accrued for the time period of that benefits plan.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="YearlyMaxAccrual"></a>Yearly Maximum Accrual</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_G-I/HR/HR026_Images/HR026_YearlyMaxAccrual.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+        <h1 MadCap:autonum="3 ">Benefits Plan - Plan Date Ranges</h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Plan Year Start/End Dates </strong>tab is available on the <i>Human Resources &gt;  Accrual Plans Workbench</i>, as shown in <MadCap:xref href="#PlanYrStartEndDates" class="ImageRef"><i> Plan Year Start/End Dates Tab</i></MadCap:xref>. This tab is only visible when the <span class="Field">Accrual Method </span>field is <strong>Rate per Hour </strong>and the <span class="Field">Yearly Maximum Accrual Plan </span>field is <MadCap:variable name="Variables.tick" />ed.</p>
+        <div class="NoteIndent1" style="font-weight: normal;" MadCap:conditions="COINS.PrintOnly"><strong>NOTE:</strong>
+        </div>
+        <div class="note">These dates can be maintained years in advance.</div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 3: "><a name="PlanYrStartEndDates"></a>Plan Year Start/End Dates Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="text-align: center;">
+                    <img src="../../../Resources/Images_G-I/HR/HR026_Images/HR026_PlanYrStartEndDates.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Year</p>
+        <p class="IndentFieldDef">The Payroll year to be used for the Plan.</p>
+        <p class="IndentBold">Start Date<br />End Date</p>
+        <p class="IndentFieldDef">The range of the start and end dates that can be set up for different Companies and Payroll Frequencies. When calculating the current accrued amount, the calculation uses the most applicable Plan Year’s Start/End Date record.</p>
+        <p class="IndentBold">Company</p>
+        <p class="IndentFieldDef">This is the company number for which the accrual period applies; enter 0 or blank to indicate all companies.</p>
+        <p class="IndentBold">Payroll Frequency</p>
+        <p class="IndentFieldDef">This can be either an acceptable Payroll Frequency or left blank. The calculation first finds the Company, then the Payroll Frequency. For example, if there are two Plan Date ranges found for an employee in Weekly Payroll and Company 20, as shown below, Plan Date range #2 is used.</p>
+        <ol>
+            <li class="ListNumber3">Company 0, Weekly Payroll Frequency</li>
+            <li class="ListNumber3">Company 20, blank Payroll Frequency</li>
+        </ol>
+        <h1 MadCap:autonum="4 ">Timecards</h1>
+        <p>Changes to accruals in a <strong>Rate Per Hour Plan</strong> are created as Timecards are entered, transferred, or converted to a Regular or Adjusting Period. Entry of timecards to a future period will not create accruals.</p>
+    </body>
+</html>

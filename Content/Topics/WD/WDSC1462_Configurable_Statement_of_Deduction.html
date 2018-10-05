@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1919" MadCap:lastWidth="1136">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Configurable Statement of Deduction</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable Statement of Deduction</h1>
+    <p>If you choose to issue the subcontractor with a monthly statement of deduction (as opposed to including the statutory details on a remittance advice or certificate), you will need to configure the statement form.</p>
+    <div class="process">
+      <h2 class="print">To configure the statement form</h2>
+      <ol>
+        <li>Use <span class="function" title="Function:%WSYBSFS">Document Designer</span>.</li>
+        <li>Create a new document of type Statement of Deduction.</li>
+        <li>
+          <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <strong>Statement Of Deduction</strong><MadCap:variable name="Variables.tick" />box. 
+				<p>This marks the form as a statutory statement of deduction; when the statement is printed, <MadCap:variable name="General.ProductName" /> stamps the payments with the date, time and user who printed the statement. This marks the form as a statutory statement of deduction; when the statement is printed, <MadCap:variable name="General.ProductName" /> stamps the payments with the date, time and user who printed the statement.</p></li>
+        <li>You can configure most of the fields in the HEAD form.  If you want to include the detail of individual payments, these can go in the BODY form. 
+<p>See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for general information about using <span class="function" title="Function:%WSYBSFS">Document Designer</span>.</p></li>
+      </ol>
+      <p>The form must include the following details: </p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <thead>
+          <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+            <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Details to include</th>
+            <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Field</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">contractor's own name</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">coc_name</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <p>contractor's employer's tax reference<br /><span style="size: smaller;">(note this is NOT the contractor's UTR)</span></p>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">coc_contref</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">the end date of the tax month in which the payment was made<br />such as "tax month ending 5 May 2007" </td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">RO_endDate</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">subcontractor's name</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">sbm_name</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">subcontractor's unique taxpayer reference number (UTR)</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">sc7_utr</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+              <p>subcontractor's personal verification number </p>
+              <p>if the subcontractor could not be verified and a deduction at the higher rate has been made</p>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+              <p>sc7_vernoum</p>
+              <p>
+                <br />Note: sc7_vernoum only shows the verification number if the subcontractor is unmatched; to show the verification number regardless of the subcontractor's status, use sc7_verno.</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">the gross amount of the payments made to the subcontractor</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">RO_GrossAmount</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">the cost of any materials that has reduced the amount against which the deduction has been applied</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">RO_materialsAmount</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">the amount of the deduction</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">RO_taxDeducted</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+              <p>a clear indication if the statement is a duplicate</p>
+            </td>
+            <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+              <p>RO_duplicateFlag<br />This displays the text from the format (for example, DUPLICATE) if the user <MadCap:variable name="Variables.tick" />s the Duplicate <MadCap:variable name="Variables.tick" />box.<br /></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>You may want to include other details on the form.  For example:</p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+        <thead>
+          <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+            <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Details</th>
+            <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Field</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">address (for posting)</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+              <p>sbm_add__1-4, </p>
+              <p>sbm_pcode</p>
+            </td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">subcontractor's account number</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">sbm_code</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">the rate of deduction</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">str_rate</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">amount liable to taxation</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">RO_taxableAmount</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">details of individual payments - these can go on the BODY form</td>
+            <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">srt_pdate <br />srt_ref    <br />RO_sbs_order<br />RO_scn_gross<br />srt_mattp <br />srt_payetp <br />srt_source</td>
+          </tr>
+          <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+            <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">details of any additions (such as <MadCap:variable name="Variables.vat" />) or deductions (such as CITB levy) outside the scope of taxation to arrive at the amount actually paid</td>
+            <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+              <p>These amounts are configured on the certificate definition; all the fields on the certificate definition are available using the ItemIDs:</p>
+              <p>RO_sbp_scd_cum^itemID<br />RO_sbp_scd_cur_tp__1^itemID</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>You can include conditional messages to inform subcontractors about other information such as <MadCap:variable name="Variables.expiry" /> of insurance.</p>
+      <p>Configure these messages using <span class="function" title="Function:%SC222-E">Statement of Deduction Messages</span>.</p>
+    </div>
+  </body>
+</html>

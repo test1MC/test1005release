@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>RCT Certificate Document Configuration</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">RCT Certificate Document Configuration</h1>
+    <p>You are required to give details from the deduction author<MadCap:variable name="Variables.is" />ation to the subcontractor. You may find it convenient to do this using the payment certificate or remittance advice, so you may want to change the configuration of these documents to include deduction author<MadCap:variable name="Variables.is" />ation details.</p>
+    <p>See <a href="WDSC0007_SC_Certificates.html">Configurable Subcontractor Certificates</a>, <a href="WDSC0001_SC_Cheques_and_Remittances.html">Configurable Subcontractor <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> and Remittances</a>.</p>
+    <p>Where a principal arranges for the following details to be made available to the subcontractor in writing or in electronic format he will be deemed to satisfy the Revenue requirement (Section 530(4)):</p>
+    <ul>
+      <li>the name and tax reference number of the principal</li>
+      <li>the name and tax reference number of the subcontractor</li>
+      <li>the gross amount of the payment including the amount of any RCT deducted</li>
+      <li>the amount of the RCT deducted</li>
+      <li>the rate at which RCT was deducted</li>
+      <li>the date of the payment</li>
+      <li>the unique reference number issued by the Revenue Commissioners on the related deduction authorisation</li>
+    </ul>
+    <p>The table below lists the fields you need to use to print this information:</p>
+    <p />
+    <table class="Type1">
+      <tbody>
+        <tr>
+          <th />
+          <th>SC Field </th>
+          <th>PL Field</th>
+        </tr>
+        <tr>
+          <td>Principal Name </td>
+          <td colspan="2">
+            <span class="FieldName">co_config.coc_sysparam^SCIRE|PRINNAME</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Tax Reference (Principal)</td>
+          <td colspan="2">
+            <span class="FieldName">co_config.coc_sysparam^SCIRE|REGNO</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Subcontractor Name </td>
+          <td colspan="2">
+            <span class="FieldName">sc_mast.sbm_name</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Tax Reference (Subcontractor)</td>
+          <td colspan="2">
+            <span class="FieldName">sc_mast.sbm_ppsn</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Gross Amount (including RCT Deduction)</td>
+          <td>
+            <span class="FieldName">sc_pay.spy_cur_amt__2 + sc_pay.spy_cur_tax__2</span>
+          </td>
+          <td>
+            <span class="FieldName">ap_pay.apy_cur_amt__2 + ap_pay.apy_cur_tax__2</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Amount of RCT Deducted </td>
+          <td>
+            <span class="FieldName">sc_pay.spy_cur_tax__2</span>
+          </td>
+          <td>
+            <span class="FieldName">ap_pay.apy_cur_tax__2</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Rate of RCT Deduction </td>
+          <td>
+            <span class="FieldName">sc_certificate.sc7_rate</span>
+          </td>
+          <td>
+            <span class="FieldName">ap_check.sc7_rate</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Payment Date</td>
+          <td>
+            <span class="FieldName">sc_check.scs_cdate</span>
+          </td>
+          <td>
+            <span class="FieldName">ap_check.acs_cdate</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Reference Number </td>
+          <td>
+            <span class="FieldName">sc_pay.spy_dref </span>
+          </td>
+          <td>
+            <span class="FieldName">ap_pay.apy_dref</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <p class="noteheader">NOTES</p>
+    <div class="note">
+      <p>The relevant fields are only available on the OA versions of certificates and remittance advices.</p>
+      <p>Until your <MadCap:variable name="General.ProductName" /> documents have been configured, an alternative would be to provide a printed copy of the deduction authorisation from the ROS inbox.</p>
+    </div>
+  </body>
+</html>

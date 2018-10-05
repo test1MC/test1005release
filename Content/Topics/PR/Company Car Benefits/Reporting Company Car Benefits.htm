@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="7" MadCap:lastHeight="497" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics;11.08" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Reporting Company Car Benefits </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Overview</MadCap:conditionalText>
+        </h1>
+        <p>From 2017 details of payrolled company car benefits can optionally be included on FPS submissions. This will become mandatory from April 2018. Company car information is not reportable on an EYU so these changes will apply to FPS submissions only.</p>
+        <p>The car data is entered in <span class="module">Fixed Assets</span>. This can then be allocated to a HR person, which can be done from within <span class="module">Payroll</span> <span class="function">Employee Maintenance</span> as well as in HR. </p>
+        <p>It is not essential to payroll company car benefits; they can just be operated as old-style benefits in kind and reported on the employee’s P11D.</p>
+        <h1 MadCap:conditions="COINS.PrintOnly" style="page-break-before: avoid;" MadCap:autonum="2 ">Initial Configuration</h1>
+        <p>Because <span class="module">Fixed Assets</span> is being used, you will need to have this module if you want to payroll any company car benefits. It is not however necessary to have the HR module as the HR records can be created simply by setting up Payroll-HR linking with the CO parameter <span class="parameter">PRMAKEHR</span> set to ‘Y’ (see <MadCap:xref href="../../WD/WDHR5111_Payroll-HR_Linking_Of_Salary_and_Benefits.html" class="doclink"><i>Payroll-HR Linking</i> in the online documentation</MadCap:xref>).</p>
+        <p>Pay items need to be set up to include the benefit in the payroll calculation, and the PR&#160;parameter <span class="parameter">BIKITEMS</span> needs to include these pay items.</p>
+        <h1 MadCap:conditions="COINS.PrintOnly" style="page-break-before: always;" MadCap:autonum="3 ">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="3.1 ">Adding a Company Car</h2>
+        <p>When you add a vehicle type asset, the ‘Fleet’ tab appears; this allows you to enter the car details needed for reporting via RTI.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PR/Reporting Company Car/Asset - Fleet Tab.png" class="FullWidth" />
+        </p>
+        <div MadCap:conditions="COINS.PrintOnly">
+            <p>New fields have been added:</p>
+            <div class="FieldTable">
+                <div class="ListHead">
+                    <div class="ColHead">Field</div>
+                    <div class="ColHead">Description</div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">
+                        <p>Capital Contribution Paid by Employee</p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>This <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new field </MadCap:conditionalText>holds the capital contribution paid by the employee; this is needed to calculate the price to report on the FPS (which is the list price plus the price of any accessories minus the capital contribution paid by the employee).</p>
+                    </div>
+                </div>
+                <div class="FieldBlock">
+                    <div class="FieldLabel">
+                        <p>CO2</p>
+                    </div>
+                    <div class="FieldDef">
+                        <p>A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>selection field allows you to record whether there is an approved CO<sub>2</sub>&#160;emissions value; if not, this is sent as an ‘X’ on the FPS submission. Setting the field to ‘Approved Value’ (the default) displays the CO<sub>2</sub> emissions field. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum="3.2 ">Allocating a Company Car to a Person</h2>
+        <p>In <span class="function">Employee Maintenance</span>, the Allocated Assets tab is available if there is a linked HR person (this is the same screen as in <span class="function">HR Personnel Workbench</span> &gt; Links &gt; Issued Items). Here you can allocate fixed asset records to personnel including, but not restricted to, company cars.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PR/Reporting Company Car/Ee Maintenance Allocated Assets.png" class="FullWidth" />
+        </p>
+        <p MadCap:conditions="COINS.PrintOnly">A new drop-down field has been added:</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>BIK&#160;Status	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The benefit in kind status of the asset.</p>
+                    <ul>
+                        <li>Not BIK – there is no benefit in kind (this is the default when no fleet details record says this is BIK).</li>
+                        <li>Non-payroll BIK – it is a benefit in kind not put through payroll which will be reported on the P11D (this is the default when the fleet details record says this is BIK).</li>
+                        <li>Payrolled BIK – it is a payrolled benefit in kind which will be reported via RTI.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p>For company cars which are benefits, additional information is required on a year-by-year basis. For BIK vehicles, a link appears on the asset code. Clicking on the link brings up a pop up screen where the fields for a tax year can be entered. </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PR/Reporting Company Car/Vehicle Year Data.png" class="FullWidth" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Vehicle Benefit	</p>
+                </div>
+                <div class="FieldDef">
+                    <p> The value of vehicle benefit for the tax year.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Fuel Benefit	</p>
+                </div>
+                <div class="FieldDef">
+                    <p> The value of fuel benefit for the tax year.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Free Fuel From</p>
+                </div>
+                <div class="FieldDef">
+                    <p> The first date free fuel was made available to the employee within the tax year.</p>
+                </div>
+            </div>
+            <div class="FieldLabel">
+                <p>Free Fuel To </p>
+            </div>
+            <div class="FieldDef">
+                <p> The last date free fuel was made available to the employee within the tax year.</p>
+            </div>
+        </div>
+        <h2 MadCap:autonum="3.3 ">HMRC Workbench &gt; RTI
+</h2>
+        <p>The validation and XML generation has been updated to cover payrolled company cars.
+The data is submitted automatically in the first FPS in the year from which the benefit applies. </p>
+        <p>If there is a change to any of this car information during the year, the full set of car fields is resubmitted. If a payrolled company car is removed (by deleting the record or changing it so that it is no longer a payrolled car), the change will set the amounts to zero and the last available day for the car to be the same as the first available day. This is only an appropriate course of action when a mistake has been made and should not be done when a company car benefit is simply withdrawn from an employee at a later date.
+</p>
+        <h3 MadCap:autonum="3.3.1 ">RTI Report</h3>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Columns have been added to the <span class="function">RTI Report</span> </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">The <span class="function">RTI&#160;Report</span> includes columns </MadCap:conditionalText>for the possible 15 payrolled company cars which can be reported per employee on an FPS.</p>
+    </body>
+</html>

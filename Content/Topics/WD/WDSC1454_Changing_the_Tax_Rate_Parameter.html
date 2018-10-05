@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="664" MadCap:lastWidth="601">
+  <head>
+    <title>Changing the Tax Rate Parameter</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Changing the Tax Rate Parameter</h1>
+    <p>A new basic rate of deduction (20%) came into force when the CIS scheme was introduced on 6th April 2007. You need to set the SC parameter <span class="parameter">PAYE%</span> to <span class="userinput">20</span>. You need to do this <strong>after</strong> you have completed processing the last payment run before 6th April 2007, and <strong>before </strong>you start processing the first payment run after 6th April 2007.</p>
+    <p>We <strong>strongly recommend</strong> you have the SC parameter <span class="parameter">TAXATPAY </span>set to <span class="userinput">Y</span>. (If you have <span class="parameter">TAXATPAY </span>set to <span class="userinput">N</span>, you will have to reverse out any unpaid transactions before you change the <span class="parameter">PAYE%</span> parameter, as they must be paid at the new rate.)</p>
+    <p>Assuming <span class="parameter">TAXATPAY </span>is set to <span class="userinput">Y</span>, the point at which tax is finally calculated depends on the SC parameter <span class="parameter">TAXSTAGE</span>. This can be set to either <span class="userinput">FREEZE </span>(<MadCap:variable name="General.ProductName" /> makes the payment calculation when the payment batch is frozen) or <span class="userinput">PAY </span>(<MadCap:variable name="General.ProductName" /> makes the payment calculation when the payment is actually produced).</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">The parameter for the higher tax rate, <span class="parameter">HPAYE%</span>, is only used under the 2007 scheme, so you can set this any time before the scheme starts.</div>
+    <p>You must also ensure that the tax line in subcontractor certificate definition is NOT set to <span class="userinput">Calc. Cumulative</span>; if yours is, contact <MadCap:variable name="General.ProductName" /> for advice. If the tax line is set to <span class="userinput">Calc. Cumulative</span>, the new deduction rate will be applied to cumulative payments.</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/sc_paye_25.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_TAXATPAY.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_TAXSTAGE.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

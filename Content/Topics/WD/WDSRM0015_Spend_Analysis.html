@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="955" MadCap:lastWidth="736">
+  <head>
+    <title>Spend Analysis</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Spend Analysis</h1>
+    <p>The group spend analysis can inform your policy decisions by telling you who you have spent most with, and what you have spent most on, over the last three years.</p>
+    <p>The spend analysis is available within <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>:</p>
+    <ul>
+      <li>To see who you spend with, use the Group Spend subtab on the Subcontractors and <MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /> tabs.  These show the subcontractors and <MadCap:variable name="Variables.pl suppliers" /> in your current view.</li>
+      <li>To see what you spend on, use the Spend subtab on the Trades and Materials tabs. 
+<p class="noteheader">NOTE</p><div class="note"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> spend is included on the Materials tab.</div></li>
+    </ul>
+    <p>The <MadCap:variable name="Variables.enquiries" /> show the spending with <MadCap:variable name="Variables.pl suppliers" /> and subcontractors in your current view, across all your <MadCap:variable name="Variables.kco companies" /> (that is, NOT just the amount you spend). The spend values are based on the <MadCap:variable name="Variables.turnover" />, specifically, this is the value of goods (ex. <MadCap:variable name="Variables.vat" />) on posted invoices (whether or not they have been costed) and the values from posted certificates.</p>
+    <p>You can sort the <MadCap:variable name="Variables.enquiry" /> according to the value of spending in each of the three years shown, or the total spending over the three years.</p>
+    <div class="configuration">
+      <h2 class="print">Spend analysis configuration</h2>
+      <p>To provide the data for these <MadCap:variable name="Variables.enquiries" />, you need to run <span class="function" title="Function:%WCI7300RXXX">Generate Data for Spend <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /></span>.  You can set this up to run as a scheduled function.  Since the <MadCap:variable name="Variables.enquiry" /> is intended as a basis for setting policy rather than an up-to-the-minute <MadCap:variable name="Variables.enquiry" />, you may decide that you don't need to run it every day.</p>
+      <p>The <span class="function" title="Function:%WCI5230BAIN">Spend (Commodity)</span> shows spending for commodities on the invoice.  Some invoices do not go through invoice matching, so they have no commodity information associated with them.  You can <MadCap:variable name="Variables.analyse" /> these under a "dummy" commodity code.  Set up the commodity code (using <span class="function" title="Function:%WTI100ABTSV">Materials</span>) and set the SRM parameter <span class="parameter">COMMDIR </span>to refer to this code.</p>
+      <p>Because <span class="function" title="Function:%WCI5230BAIN">Spend (Commodity)</span> treats registered invoices according to the period in which they were registered, if an invoice was registered in the final period of one year and costed in the first period of the next, the invoice value will appear in the earlier year. You need to set up a commodity code for <MadCap:variable name="General.ProductName" /> to show these values under, and set the SRM parameter <span class="parameter">COMMREG </span>to refer to this code.</p>
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDBI0319_Scheduling_Reports.html" />
+        </MadCap:relatedTopics>
+      </p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SRM/srm_COMMDIR.htm" />
+          <MadCap:relatedTopic src="../Parameters/SRM/srm_COMMREG.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

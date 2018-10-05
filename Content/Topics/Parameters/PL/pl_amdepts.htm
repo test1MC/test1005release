@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/AMDEPTS - Specific Automatching for Departments</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/AMDEPTS - </span> Specific Automatching for Departments
+</div>
+<div class="param_def">
+<p>Whether to allow Automatic Invoice Matching to be applied selectively against Overhead Departments.</p>
+<P>Enter a can-do list in the form <EM>deptmask|x,deptmask|x,... </EM>where <EM>deptmask </EM>matches against department codes and <EM>x</EM> is either 0 (zero) (invoices for departments matching the mask will not be auto-matched) or 2 (invoices for departments matching the mask will be 2-way matched if possible).  For example, <SPAN class="userinput">1*|2,9*|2 </SPAN>will attempt to match for invoices on <MadCap:variable name="Variables.jc contracts"/> that belong to departments with codes beginning 1 or 9. </P>
+<P>If the parameter is blank or a department does not match any mask then the auto-matching rule from the <FONT color="#000000"><SPAN class="parameter">PL/AUTOINVM</SPAN> parameter applies.</FONT></P>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../pl/pl_autoinvm.htm" /><MadCap:relatedTopic src="../pl/pl_amjobs.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Allocating Foreign Currency Differences to <MadCap:variable name="Variables.Jc Contract caps" /> Status Instead of General Ledger</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Allocating Foreign Currency Differences to <MadCap:variable name="Variables.Jc Contract caps" /> Status Instead of General Ledger</h1>
+    <p>Some users may wish to allocate their foreign exchange variances, both real<MadCap:variable name="Variables.is" />ed and unreal<MadCap:variable name="Variables.is" />ed, as a <span class="module"><MadCap:variable name="Variables.Jc Contract caps" /> Status </span>cost transaction instead of directly to a <span class="module">General Ledger </span>account. By appropriate configuration of the GL account relationship in the normal <MadCap:variable name="General.ProductName" /> manner, these entries will pass through to associated GL accounts as well, like any other cost posting.</p>
+    <p>Identify the following:</p>
+    <ul>
+      <li>If WBS is in use on <MadCap:variable name="Variables.jc contracts" />, a default WBS to be used for the exchange variance postings.</li>
+      <li>A <MadCap:variable name="Variables.cost head" /> and cost category to be used.</li>
+    </ul>
+    <p>Set up the following</p>
+    <ul>
+      <li>JC parameters <span class="parameter">FXCHCAT </span>and <span class="parameter">FXCHCATU </span>with the <MadCap:variable name="Variables.cost head" /> and cost category, separated by a <MadCap:variable name="Variables.full stop" /> in the normal cost code way.</li>
+      <li>The default WBS code for Foreign Exchange Variance, if WBS codes are in use (use <span class="function" title="Function:%WJC712BJCD">Default WBS Codes Maintenance</span> in <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />).</li>
+    </ul>
+    <p>It is the presence of a setting in the parameters <span class="parameter">FXCHCAT </span>and <span class="parameter">FXCHCATU </span>that turns this alternative feature on. If only one of the two items is desired to be processed to <MadCap:variable name="Variables.jc contract" /> costing, populate only that parameter.</p>
+    <p>When processing, the <MadCap:variable name="Variables.jc contract" /> is taken from the default <MadCap:variable name="Variables.jc contract" /> on the invoice header (PL and SL) or the relevant <MadCap:variable name="Variables.jc contract" /> (CS and SC). This allows postings to <MadCap:variable name="Variables.jc contract" /> from purchase invoices which are only registered and not yet fully costed.</p>
+    <p>Note that the option for foreign exchange <MadCap:variable name="Variables.jc contract" /> postings is only for P&amp;L accounts, and not for Balance Sheet accounts.</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/JC/jc_fxchcat.htm" />
+          <MadCap:relatedTopic src="../Parameters/JC/jc_fxchcatu.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

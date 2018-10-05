@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="3" MadCap:lastHeight="7387" MadCap:lastWidth="1161">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Transfer a Fix File or Service Pack or Multiple Fix File or Service Packs</h1>
+        <p>&#160;</p>
+        <p>In some cases you may wish to transfer the Fix File or Service Packs and place them into the System Administrator’s home directory in the UNIX operating system. To enable them to do this and be able to transfer the Fix File or Service Pack between two computers / servers they would use an FTP (File Transfer Protocol) program such as FileZilla, or other similar software/shareware. </p>
+        <p>In this example we are going to explain the process using the Windows XP command prompt. However you will need to modify the steps based on the FTP program that you are using. </p>
+        <p>&#160;</p>
+        <div>
+            <p class="note">We would suggest that you read through this section first before you progress with the transfer, to enable you to collate the information, file names and locations required. Otherwise the system will time you out whilst trying to locate them, at each stage, and you will then have to start from the Run screen again</p>
+        </div>
+        <p>The Fix File or Service Pack has already been saved on the C:\ drive in a specific folder called Fixes. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Download the Fix_7.png" class="FullWidth" />
+        </p>
+        <p>Select the Start button at the bottom left of the screen to display the Start Menu. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service.png" class="FullWidth" />
+        </p>
+        <p>Select the Run option from the list of options.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_1.png" class="FullWidth" />
+        </p>
+        <p>This will display the Run screen for you to input the details in the relevant fields.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_2.png" class="FullWidth" />
+        </p>
+        <p>Input the command “ftp xxxx”, where xxxx is the <MadCap:variable name="General.ProductName" /> Server’s Name or the IP Address. To find the Server Name or the IP address you could ask your System Administrator. Select the OK button</p>
+        <p>The C:\WINDOWS\ Dos screen will be displayed. The curser is flashing on the User field. Enter your User Name in the User field and select the Return key. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_3.png" class="FullWidth" />
+        </p>
+        <p>The Password field will be displayed for you to enter your password. The field will remain blank as you enter your password. Select the Return key. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_4.png" class="FullWidth" />
+        </p>
+        <p>The screen will display the ftp&gt; prompt for you to enter the file transfer mode. </p>
+        <p>&#160;</p>
+        <p class="note">Make sure that the file is transferred via a binary transfer. This will ensure that the Fix File or Service Pack is in the right format for it to run on the UNIX environment. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_5.png" class="FullWidth" />
+        </p>
+        <p>To alter the current FTP to a Binary mode, enter bin at the ftp&gt; prompt. Select the Return key. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_6.png" class="FullWidth" />
+        </p>
+        <p>The screen will display the message that you are “Switching to Binary mode”. The ftp&gt; prompt is displayed on the next line to enter your instruction.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_7.png" class="FullWidth" />
+        </p>
+        <p>We need to inform the system where the current Fix File or Service Packs are stored. These are in our Local Change Directory, under a folder called Fixes. The system prefers to have shortened instructions, like Text Talk. We can use the shortcut lcd = Local Change Directory.</p>
+        <p>At the ftp&gt; prompt enter lcd c:\fixes. Select the Return key.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_8.png" class="FullWidth" />
+        </p>
+        <p>The message will be displayed “Local directory now C:\Fixes” and the ftp&gt; prompt is on the next line to enter your instruction. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_9.png" class="FullWidth" />
+        </p>
+        <p>Now that we have established where the current Fix File or Service Packs are held, the next stage is to inform the system where we want to transfer them to, which is our current UNIX Server. </p>
+        <p>To locate where this is enter “pwd” at the ftp&gt; prompt and select the Return key. (pwd = Print Working Directory). </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_10.png" class="FullWidth" />
+        </p>
+        <p>The location of the Print Working Directory will be displayed on the next line. In this example it is “/home/coins”. The ftp&gt; prompt is on the next line to enter your instruction. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_11.png" class="FullWidth" />
+        </p>
+        <p>We recommend that you create a folder called fixes in the /home/coins directory to keep continuity. This stage would only have to be done once, as on the C:\ drive. </p>
+        <p>Enter “mkdir fixes” at the ftp&gt; prompt and select the Return key. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_12.png" class="FullWidth" />
+        </p>
+        <p>A message is displayed stating “/home/coins/fixes created”</p>
+        <p>We want to be able to change this to the Fixes folder. To change the folder, enter “cd fixes” at the ftp&gt; prompt and select the Return key.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_13.png" class="FullWidth" />
+        </p>
+        <p>A message will be displayed stating “Directory successfully changed”. </p>
+        <p>To check that you are in the correct folder enter “pwd” at the ftp&gt; prompt and select the Return key to display the directory you are in. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_14.png" class="FullWidth" />
+        </p>
+        <p>This will display the “/home/coins/fixes”. The ftp&gt; prompt is on the next line to enter your instruction. </p>
+        <p>From here the process if different for transfer a single Fix File or Service Pack and multiple Fix Files or Service Packs. </p>
+        <h2>Transfer a Single Fix File or Service Pack</h2>
+        <p>Once we have defined where either Fix Files or Service Packs that we want are held and also where we wish to transfer it to, the next step is to actually transfer it. (Should you have Multiple Files refer to the next section)</p>
+        <p>To do this we need to enter the full details of the name of the file, as there may be more than one held in the Fixes folder. The instruction code to transfer is put. </p>
+        <p>At the ftp&gt; prompt enter “put TheNameOfTheFile.tar”. For example put v1022-63365.tar. Select the Return key.</p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_15.png" class="FullWidth" />
+        </p>
+        <p>The system will go and find the file. The message will be displayed “PORT command successful. File receive OK”. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_16.png" class="FullWidth" />
+        </p>
+        <p>There is other information available regarding the file size and the number of seconds to transfer it. The ftp&gt; prompt is available on the next line to enter your instruction. </p>
+        <p>Should you enter the wrong file name the message “Vxx.yy-nnnnn.tar: File not found” will be displayed. The ftp&gt; prompt is available to rekey the correct file name. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_17.png" class="FullWidth" />
+        </p>
+        <p>Once the file has been transferred we can leave the C:\WINDOWS\ Dos screen. At the ftp&gt; prompt enter “bye”. Select the Return key. </p>
+        <p>The screen will display “Goodbye” on the next line and close the window automatically. </p>
+        <p>We have transferred the Fix File or Service Pack from the local C:\drive to the UNIX Server, in the right format, for you to deploy at a later time. (See the section on Deploying a Fix)</p>
+        <h2>For Multiple Transfer of Fix File or Service Packs</h2>
+        <p>Once we have defined where either the Fix File or Service Packs that we want are held and also where we wish to transfer them to, the next step is to actually transfer them. </p>
+        <p>However one thing to check before you start using the mput option is the Interactive mode is Off. If this is in a status of ON the system will ask you to confirm each file that is being transferred. You will be required to enter “y” for every file you are transferring. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_18.png" class="FullWidth" />
+        </p>
+        <p>To check the status of the Interactive mode, enter “prompt” at the ftp&gt; prompt - this will display the status of the Interactive mode. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_19.png" class="FullWidth" />
+        </p>
+        <p>To change the Interactive Mode enter “prompt” at the ftp&gt; prompt - this will change the status of the Interactive mode.</p>
+        <p>To do this we need to know what files we are transferring. It could be all the files in the Fixes folder, or just specific ones, i.e. all files relating to a specific version number - v1022, v1021. The instruction code to transfer multiple files in the system is mput and wildcards are used.&#160; </p>
+        <p>At the ftp&gt; prompt enter “mput *” - this will transfer ALL the files that are saved in the Fixes folder. </p>
+        <p>Alternatively if all the files are for a specific version at the ftp&gt; prompt enter “mput v1022-*” - this will transfer all the files that start with v1022- and any alphanumeric after. Select the Return key. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_20.png" class="FullWidth" />
+        </p>
+        <p>The message will be displayed “PORT command successful. File receive OK” for each of the files that have been transferred. There is other information available regarding the file size and the number of seconds to transfer each one. </p>
+        <p>
+            <img src="../../../Resources/Images/SY/SY Installing Fixes/Transfer a Fix File or Service_21.png" class="FullWidth" />
+        </p>
+        <p>The ftp&gt; prompt is available on the next line to enter your instruction. </p>
+        <p>Once the file has been transferred we can leave the C:\WINDOWS\ Dos screen. At the ftp&gt; prompt enter bye. Select the Return key. </p>
+        <p>The screen will display “Goodbye” on the next line and close the window automatically. </p>
+        <p>We have transferred the Fix File or Service Pack from the local C:\drive to the UNIX Server, in the right format, for you to deploy at a later time. (See the section on Deploying a Fix)</p>
+        <p>&#160;</p>
+    </body>
+</html>

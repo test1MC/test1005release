@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Setting Up a Generic Mail Merge</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Setting Up a Generic Mail Merge</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> allows you to add a merge feature to any browse screen, so that users can merge data from selected records to: </p>
+    <ul>
+      <li>a Word document </li>
+      <li>an email message </li>
+      <li>a spreadsheet </li>
+    </ul>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDUG0018_Mail_Merge.html" />
+      </MadCap:relatedTopics>
+    </p>
+    <div class="process">
+      <h2 class="print">To add the merge feature to a screen, you need to:</h2>
+      <ol>
+        <li>Create a master document:
+<p>Word document</p><ol><li>Create the Word document. At the points where you want to insert data from <MadCap:variable name="General.ProductName" />, type the name of the database field, enclosed in braces. For example:
+<div style="background-color: #eee;margin-left: 5mm;margin-right: 5mm;"><br /><center><table style="border-bottom: white 1pt solid;border-left: black 1pt solid;background-color: white;width: 80%;border-top: black 1pt solid;border-right: black 1pt solid;"><tbody><tr><td width="70%"> </td><td width="30%" style="text-align: left;"><p style="margin-top: 0pt; font-family: 'Times New Roman'" MadCap:conditions="COINS.UKOnly">Construction Industry Solutions Ltd.<br /><MadCap:variable name="General.ProductName" /> Building<br />11 St Laurence Way<br />Slough<br />SL1 2EA</p><p style="margin-top: 0pt; font-family: 'Times New Roman'" MadCap:conditions="COINS.USOnly">Construction Industry Solutions Corp.<br /><MadCap:variable name="General.ProductName" /> Building<br />6 Airport Park Blvd.<br />Latham, NY 12110-6404</p></td></tr><tr><td><p style="margin-top: 0pt;text-align: left;"><span style="font-family: 'Times New Roman';">{ppo_search_name}</span></p><p style="margin-top: 0pt;text-align: left;"><span style="font-family: 'Times New Roman';">{ppo_adddr__1}</span></p><p style="margin-top: 0pt;text-align: left;"><span style="font-family: 'Times New Roman';">{ppo_addr__2}</span></p><p style="margin-top: 0pt;text-align: left;"><span style="font-family: 'Times New Roman';">{ppo_addr__3}</span></p><p style="margin-top: 0pt;text-align: left;"><span style="font-family: 'Times New Roman';">{ppo_addr__4}</span></p><p style="margin-top: 0pt;text-align: left;"><span style="font-family: 'Times New Roman';">{ppo_pcode}</span></p><p style="text-align: left;"> </p><p style="text-align: left;"><span style="font-family: 'Times New Roman';">Dear {ppo_1stname},</span></p></td><td style="text-align: left;"><p><span style="font-family: 'Times New Roman';">20 September 2017</span></p></td></tr></tbody></table></center></div></li><li>Save the document as an RTF file.</li></ol><p class="noteheader">NOTE</p><Div class="note">If you used Word to create the document, after you have saved it as a .rtf file open the .rtf file in WordPad and save it. This removes unwanted hidden characters that can cause the merge to fail.</Div><p>Email message</p><ol><li>Create a text file with the content of the email message.  At the points where you want to insert data from <MadCap:variable name="General.ProductName" />, type the name of the database field, enclosed in braces with slashes before them.  For example:
+<div style="background-color: #eee;margin-left: 5mm;margin-right: 5mm;"> </div><center style="background-color: #eee;margin-left: 5mm;margin-right: 5mm;"><table style="border-bottom: white 1pt solid;border-left: black 1pt solid;background-color: white;width: 80%;border-top: black 1pt solid;border-right: black 1pt solid;"><tbody><tr><td width="70%"><p style="text-align: left;"><span class="screentype">To: <span class="wrap">\{poraddresssad_email}</span><![CDATA[  ]]></span></p><p style="text-align: left;"><span class="screentype">From: coins@coins-global.com</span></p><p style="text-align: left;"><span class="screentype">cc: </span></p><p style="text-align: left;"><span class="screentype">Subject: <MadCap:variable name="Variables.holiday" style="text-transform: capitalize;" /> entitlement</span></p><p style="text-align: left;"> </p><p style="text-align: left;"><span class="screentype">Dear <span class="wrap">\{ppo_1stname},</span><![CDATA[  ]]></span></p><p style="text-align: left;"><span class="screentype">You have now worked at the company for over <span class="wrap">\ro_service_yrs</span> years and your annual <MadCap:variable name="Variables.holiday" /> entitlement is <span class="wrap">\{ppo_holent__1}</span> days. For this year, you have <span class="wrap">\{ro_availhols}</span> days remaining....</span></p></td></tr></tbody></table></center> 
+<p class="noteheader">NOTE</p><div class="note">End the message file with a blank line.</div></li><li>Save the file with a .msg extension.</li></ol><p /><p>Spreadsheet</p><ol><li>Create a spreadsheet file. On the first line, enter the column headings for the fields you want to include. On the second line, enter the names of the database fields, enclosed in braces with backslash characters (<span class="userinput">\</span>) before them. For example:
+<p> </p><table><tbody><tr><th><span style="font-size: 8pt;">Email address</span></th><th><span style="font-size: 8pt;">Name</span></th><th><span style="font-size: 8pt;">Length of service</span></th><th><span style="font-size: 8pt;"><MadCap:variable name="Variables.holiday" style="text-transform: capitalize;" /> entitlement</span></th><th><span style="font-size: 8pt;"><MadCap:variable name="Variables.holiday" style="text-transform: capitalize;" /> available</span></th></tr><tr><td><span style="white-space: nowrap;font-size: 8pt;">\ {poraddresssad_email}</span></td><td><span style="white-space: nowrap;font-size: 8pt;">\{ppo_1stname}</span></td><td><span style="white-space: nowrap;font-size: 8pt;">\{ro_service_yrs}</span></td><td><span style="white-space: nowrap;font-size: 8pt;">\{ppo_holent__1}</span></td><td><span style="white-space: nowrap;font-size: 8pt;">\{ro_availhols}</span></td></tr></tbody></table>
+ </li><li>Save the file with a .csv extension.</li></ol><p /><p><MadCap:snippetBlock src="../../Resources/Snippets/mmfieldnote.flsnp" /></p></li>
+        <li>In <span class="function" title="Function:%WSY2380BCXC">Merge File Maintenance</span>:<br /><br /><ol><li>Add a new record.</li><li>Specify the function code for the browse screen you want to add the merge feature to.  Enter a description for the mail merge document - this will appear as an entry on the dropdown list.</li><li>Save the record.</li><li>Use the <span class="userselect" data-mce-mark="1">Upload Merge File </span>action to place the file in the <strong>$BASE/var/merge/</strong> directory of the <MadCap:variable name="General.ProductName" /> system.</li></ol></li>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">If you add the Merge feature to a screen, you may want to add a note to the side-frame help for that screen; see <a href="WDSY0033_Customising_Help_Text.html">Custom<MadCap:variable name="Variables.is" />ing Help Text</a>. To add a link to the <a href="WDUG0018_Mail_Merge.html">Mail Merge</a> topic, enter <span class="prevent-token-replace">$O$</span><span class="prevent-token-replace2">%WDUG0018$O$ in the Help editor</span>.</div>
+      <p> </p>
+    </div>
+  </body>
+</html>

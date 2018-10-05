@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="1242" MadCap:lastWidth="1305">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Recurring problems</h1>
+        <h2>Stylesheet view not rendering OA.</h2>
+        <p>The location of the stylesheet in OA is determined by the ec\ XSLLOCOA parameter , XML text will be displayed if the correct stylesheet is not available in the location that the XSLLOCOA parameter is pointing too.</p>
+        <p>The value of this parameter usually points to the document root of the web host program.</p>
+        <p>&#160;</p>
+        <p class="Example"> “/var/www/html” – Located using command “grep -i 'DocumentRoot' /etc/httpd/conf/httpd.conf”</p>
+        <p>&#160;</p>
+        <p>The document root is usually made up of shortcuts to the <MadCap:variable name="General.ProductName" /> application directory e.g “/u/coins/live/app/xcode/db/style” otherwise it will be its own directory and <MadCap:variable name="General.ProductName" /> stylesheets should be present here. </p>
+        <p>The files listed below should be available in the directory listed, if not they should be copied to this directory and given 777 permissions. </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/Recurring problems.png" class="HalfWidth" />
+        </p>
+        <p>Stylesheets can be copied from the <MadCap:variable name="General.ProductName" /> Plus directory if they are not available locally.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/Recurring problems_1.png" class="HalfWidth" />
+            <br />
+        </p>
+        <p>If the stylesheet files are not available on the contractors system, the eCommerce developers will be able to provide them.</p>
+    </body>
+</html>

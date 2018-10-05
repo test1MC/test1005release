@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Electronic Verification</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Electronic Verification</h1>
+        <p>Under this method, you input the basic CIS details in <MadCap:variable name="General.ProductName" /> and then submit this to HMRC from <MadCap:variable name="General.ProductName" /> using <span class="function" title="Function:%WSC2070BSBM"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification</span>.&#160; The verification details will be received back into <MadCap:variable name="General.ProductName" /> and updated without the need for manual user input.&#160; A verification workbench (<span class="function" title="Function:%WSC9030BCOI"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification Submissions</span>) allows you to manage this process.&#160; This option is only available within <MadCap:variable name="General.ProductName" /> OA.&#160; It relies on successful electronic communication between your <MadCap:variable name="General.ProductName" /> server and HMRC.&#160; In case of communication problems, you can use the off-line verification method as a fallback.</p>
+        <p>Diagram<br /><img src="../../Resources/Images_S-U/SC/SC_140501.jpg" /><br /><a href="http://www.coins-global.com/cp_root/storage/documents/cis_tax_electronic_verification_process.pdf" target="_blank"><img src="../../Resources/Images/pdf5.gif" /> View high-resolution PDF diagram</a><br /></p>
+        <p>When using electronic verification there are three different modes: "Match", Verify" and "Auto".<br />For subcontractors whose details are matched it makes no difference which mode is used:</p>
+        <ul>
+            <li>The verification status will be "matched"; the details in <MadCap:variable name="General.ProductName" /> match the details held by HMRC and you can pay the subcontractor.&#160; The "Tax Treatment" shows whether the subcontractor is to be paid gross or net at the lower rate of 20%.&#160;
+<p>&#160;</p>
+However the result for subcontractors whose details do not match the HMRC records will be completely different depending on the mode you use:</li>
+            <li>Match mode: If the details in <MadCap:variable name="General.ProductName" /> do not match the details held by HMRC, the verification status will be "Failed". No unique verification number will be issued (and no payments may be made). This gives the contractor the opportunity to check the details before resubmitting for matching or verification.&#160; For example, the subcontractor's name in <MadCap:variable name="General.ProductName" /> may be different from the name as held by HMRC, in which case you need to amend the record in <MadCap:variable name="General.ProductName" />.&#160;</li>
+            <li>Verify mode: The verification status will be "Unmatched".&#160; HMRC will give you a unique verification number for the subcontractor under which you must make payments at the higher rate of deduction.&#160;
+<p>&#160;</p>
+A subcontractor whose verification status is unmatched will have to apply to HMRC in order to get their status changed.&#160; In order to prevent subcontractors being classed as unmatched in error (for example, because of a mistake in the information you hold about them), we strongly recommend that you generally use "Match" first and only use "Verify" for subcontractors which you expect to pay under higher rate of deduction.</li>
+            <li>Auto mode is provided for compliance with certain requirements of HMRC testing.&#160; Auto mode creates a mixed submission of subcontractor data: those with a verification status of "New" are submitted as a "Match", and those with a verification status of "Failed" are submitted as a "Verify".&#160; This assumes that you have corrected any problems with records that have a "Failed" status before you run another Auto submission.&#160; Because of this, we suggest you do not use "Auto".</li>
+        </ul>
+        <p>Diagram<br /><img src="../../Resources/Images_S-U/SC/SC_140502.gif" /></p>
+        <p>You can select up to 100 subcontractors for verification in a single submission.&#160; <MadCap:variable name="General.ProductName" /> prevents you from selecting more than 100 subcontractors for verification.&#160; HMRC will return a verification reference which applies to all matched subcontractors in the submission; all unmatched subcontractors will have a unique reference consisting of the submission verification reference and a unique one- or two-character suffix.&#160; The verification reference is your proof that you have gone through the verification process.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">There is nothing to stop you from re-verifying a subcontractor at any time if you think the subcontractor's status may have changed.</div>
+        <div class="process">
+            <h2 class="print">To verify subcontractors electronically:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC2070BSBM"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification</span>. 
+<p /><img src="../../Resources/Images_S-U/SC/SC_140503.gif" /></li>
+                <li>You can use the filter to restrict the records that are shown:</li>
+                <ul>
+                    <li>Use New to show only new verification lines - these have not been submitted.</li>
+                    <li>Use Attention Required to show records with a status of new, failed or submitting.</li>
+                </ul>
+                <li>Select the subcontractors you want to submit for verification.</li>
+                <li>Use the Choose Action selector to select the verification submission mode you want to use (Match, Verify or Auto), then click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />. 
+<p />If you selected more than 100 records that would be submitted, <MadCap:variable name="General.ProductName" /> will not let you continue.&#160; Deselect some of the records and verify them as a separate submission. 
+<p /><MadCap:variable name="General.ProductName" /> generates the XML file and submits it to HMRC via the Government Gateway.&#160; The submission will appear in the submission workbench, but will also create a background <MadCap:variable name="Variables.fm job" /> that appears in the standard <MadCap:variable name="General.ProductName" /> report status queue.&#160; It is this report queue entry that actually does the submission. 
+<p><MadCap:variable name="General.ProductName" /> then continues to poll the Government Gateway until it receives a response; it then updates the subcontractors' verification status.</p></li>
+                <li>You can use <span class="function" title="Function:%WSC2070BSBM"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification</span> to see the status of the subcontractors. You can also use <span class="function" title="Function:%WSC9030BCOI"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Verification Submissions</span> to see the progress of the submission.<br /></li>
+            </ol>
+        </div>
+    </body>
+</html>

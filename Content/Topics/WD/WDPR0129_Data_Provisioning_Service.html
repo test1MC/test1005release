@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Data Provisioning Service (DPS)</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Data Provisioning Service (DPS)</h1>
+        <p>The Data Provisioning Service (DPS) is a system that HMRC uses to make notices and reminders available.</p>
+        <p>The <span class="function" title="Function:%WPR731RENO">DPS Report</span> uses the DPS to request any new messages from HMRC for each DPS data type on every PAYE scheme sequentially where a start date has been set. The report can be scheduled to download messages regularly. The messages received can then be viewed in the HMRC Workbench, on the Notifications or Employee Notices tab (depending on the type of message).</p>
+        <h2>Start Dates for DPS</h2>
+        <p>The DPS layout on the PAYE Scheme tab of the HMRC Workbench allows you to enter the information required for using the Outgoing Data Provisioning Service.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">DPS Layout on PAYE Scheme Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_012901.png" />1</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>This allows you to set the <span class="field">Start Date</span> for each of the seven DPS data types:</p>
+        <ol>
+            <li><span style="font-size: 1em;">P6/P6B – for employee tax code changes during a tax year (also includes week 1 basis and previous pay and tax).</span>
+            </li>
+            <li><span style="font-size: 1em;">P9 – for employee tax code changes from the start of a tax year (also includes week 1 basis).</span>
+            </li>
+            <li><span style="font-size: 1em;">SL1 – for starting student loan deductions.</span>
+            </li>
+            <li><span style="font-size: 1em;">SL2 – for stopping student loan deductions.</span>
+            </li>
+            <li><span style="font-size: 1em;">RTI Notifications – corrections to employee NI numbers, or employer-level notifications (for example penalty notices for late submissions).</span>
+            </li>
+            <li><span style="font-size: 1em;">Annual Reminders – general employer reminders.</span>
+            </li>
+            <li><span style="font-size: 1em;">Notifications – for P35, P11Db or incentive letters.</span>
+            </li>
+        </ol>
+        <p>The <span class="field">Last Checked</span> date is a read-only field for information only.</p>
+        <h2>DPS Report</h2>
+        <p>Messages are downloaded from the DPS using <span class="function" title="Function:%WPR731RENO">DPS Report</span>. Messages will only be downloaded when a start date is set and this start date is not in the future. &#160;If the start date is changed, <MadCap:variable name="General.ProductName" /> will download all messages from the new start date, including any that have previously been downloaded. Any messages that there are already records for in <MadCap:variable name="General.ProductName" /> will be ignored.</p>
+        <p>For each PAYE scheme, the report shows a line per DPS data type with the initial pre-existing number of actions still to be applied, the number of new messages downloaded, the number of actions applied now (for employee messages), the number of actions which cannot be applied, the total number of outstanding actions to be applied and a message, if needed, which will show the error message returned if the request failed for any reason or the fact that <MadCap:variable name="General.ProductName" /> has not been set up to download this type of message for the PAYE scheme.</p>
+        <h2>DPS Actions</h2>
+        <p><MadCap:variable name="General.ProductName" /> automatically checks and applies any outstanding actions for employee DPS messages when the message is downloaded, when starting a new period or when running the payroll calculation.</p>
+        <p>For NI number responses the employee record will always be updated, if appropriate, when the message is downloaded to correct or blank out the NI number and adjust the verification status to either blank (when no NI number found) or ‘Verified’ (when we know we have a correct NI number).</p>
+        <p>For tax code and student loan changes the update will be made only if the employee is in the START stage of the Payroll cycle and the change is applicable at the time (based on the effective date on the DPS message).</p>
+        <h2>Notifications</h2>
+        <p>The Notifications browse on the global HRMC Workbench displays all employer level messages received from the DPS; these are those for:</p>
+        <ul>
+            <li><span style="font-size: 1em;">Annual Reminders (general employer reminders).</span>
+            </li>
+            <li><span style="font-size: 1em;">Notifications (for P35, P11Db or incentive letters).</span>
+            </li>
+        </ul>
+        <p>as well as some of the RTI Notifications.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Notifications Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_012902.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Employee Notices</h2>
+        <p>The Employee Notices browse on the frequency-specific versions of the HMRC Workbench displays all employee level messages received from the DPS; these are those for:</p>
+        <ul>
+            <li>P6/P6B (employee tax code changes during a tax year).</li>
+            <li>P9 (employee tax code changes from the start of a tax year).</li>
+            <li>SL1 (starting student loan deductions).</li>
+            <li>SL2 (stopping student loan deductions).</li>
+            <li>RTI Notifications (correct employee NI numbers).</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Employee Notices Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_012903.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

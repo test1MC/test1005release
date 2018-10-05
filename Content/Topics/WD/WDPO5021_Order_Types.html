@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Order Types</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Order Types</h1>
+    <p>Purchase Order Types define the different types of purchase order you can create. They differ mainly in the way orders behave if the order value is exceeded, and in the defaults that are set up on them. You can also override the costing for specific types of order.  Order types can be used as a filter on reports and <MadCap:variable name="Variables.enquiries" />.</p>
+    <p>You can set up any number of order types, for example: </p>
+    <ul>
+      <li>normal one-off orders (quantity class <span class="userinput">Confirmed</span> (C); call this type N; N is the default order type), </li>
+      <li>bulk orders (quantity class <span class="userinput">Estimate</span> (E); we recommend you call this type B), </li>
+      <li>call-off orders (quantity class <span class="userinput">Hidden</span> (H)), </li>
+      <li>maximum orders (quantity class <span class="userinput">Maximum</span> (&lt;)). </li>
+    </ul>
+    <p>Note also that: </p>
+    <ul>
+      <li>to use reserved orders, you must set up an order type with a code of <span class="userinput">R</span>; </li>
+      <li>to use template orders, you must set an order type with a code of <span class="userinput">T</span>; </li>
+      <li>to prevent the use of reserved or template orders, do not set up order types with codes <span class="userinput">R</span> or <span class="userinput">T</span>. </li>
+      <li>On reserved and template orders, <MadCap:variable name="General.ProductName" /> ignores the quantity class. </li>
+    </ul>
+    <div class="process">
+      <h2 class="print">To set up purchase order types:</h2>
+      <p>Use <span class="function" title="Function:%WPO2010BPOT">Purchase Order Types</span>.</p>
+      <p>There is a separate procedure for maintaining Subcontract Order Types (<span class="function" title="Function:%WPO2020BPOT">Subcontract Order Types</span>). The only types you need are normal and reserved orders. The quantity class is ignored for Subcontract orders - set it to <span class="userinput">Confirmed</span>.</p>
+      <p class="noteheader">NOTE</p>
+      <div class="note">For housebuilders schedule orders, you must enter as the value of the parameter <span class="parameter">HBORDTYP </span>a comma-separated list of the order types that are linked to schedules. You must also enter as the value of the parameter <span class="parameter">HBBLKTYP </span>a list of the order types that correspond to bulk schedule orders. All the order types in <span class="parameter">HBBLKTYP </span>must also be in <span class="parameter">HBORDTYP</span>.</div>
+    </div>
+  </body>
+</html>

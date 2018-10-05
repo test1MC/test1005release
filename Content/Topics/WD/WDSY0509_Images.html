@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Images on Configurable Documents</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Images on Configurable Documents</h1>
+    <p>You may want to include images, such as a company logo, on the document.</p>
+    <p>To include an image called <em>filename.gif</em>: </p>
+    <ol>
+      <li>In the <span class="field">Field</span> field, enter:</li>
+      <ul>
+        <li>
+          <span class="userinput">IMAGE^<em>filename</em></span> (if the image file exists in the /images/ directory of the <MadCap:variable name="General.ProductName" /> installation).</li>
+        <li>
+          <span class="userinput">IMAGE^/<em>relative-path</em>/<em>filename</em></span> (if the image exists in a different directory on the webserver; <em>relative-path</em> is the relative path on the webserver to the directory where the image is stored).</li>
+        <p class="noteheader">NOTES</p>
+        <div class="note">
+          <ol>
+            <li>The image files must be gif images, and the filenames of the image files must be in lowercase.</li>
+            <li>Do not add the .gif extension after <span class="userinput">IMAGE^<em>filename</em></span></li>
+          </ol>
+        </div>
+      </ul>
+      <li>Specify the height and width of the image.</li>
+      <li>Select View As: <span class="userinput">PICTURE</span>. </li>
+    </ol>
+    <p>If you want an image that relates to the whole page of a document (for example: a watermark, or a logo that shows down the side of the page), set this up on the Report Page Layout used for the document. </p>
+  </body>
+</html>

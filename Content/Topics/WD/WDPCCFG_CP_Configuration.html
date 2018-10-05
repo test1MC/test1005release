@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="447" MadCap:lastWidth="722">
+  <head>
+    <title>CP Configuration</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">CP Configuration</h1>
+    <p>To set up <span class="module">Cash Profiles</span>, you need to:</p>
+    <ul>
+      <li>Use the GL parameter <span class="parameter">CPJRNLS</span> to identify which General Ledger transaction types are <span class="module">Cash Profiles </span>transactions.</li>
+      <li>Use the CP parameter <span class="parameter">CPROFILE </span>to turn on <span class="module">Cash Profiles</span>.</li>
+      <li>Set up global (<MadCap:variable name="Variables.kco company" />) interest rates and, if necessary, interest rates for individual <MadCap:variable name="Variables.jc contracts" />.</li>
+    </ul>
+    <p>You may also need to enter or create initial balances for existing <MadCap:variable name="Variables.jc contracts" /> by using <span class="function" title="Function:%WCP9030FCPR">Cash Profile Recalculation</span> and <span class="function" title="Function:%WCP9010BJOB">Entering Take-on Balances</span>.</p>
+    <p>If you want to post <MadCap:variable name="Variables.jc contract" /> cash journals from <span class="module">Payroll</span>, you must also set the PR parameter <span class="parameter">CPROFILE</span> to <span class="userinput">Y</span>.</p>
+    <p>
+      <MadCap:xref href="../Parameters/CP/cp_parameters.htm">Cash Profile Parameters</MadCap:xref>
+    </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/GL/gl_cpjrnls.htm" />
+          <MadCap:relatedTopic src="../Parameters/CP/cp_cprofile.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_cprofile.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

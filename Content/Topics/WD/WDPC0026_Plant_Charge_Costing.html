@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1799" MadCap:lastWidth="797">
+  <head>
+    <title>
+      <MadCap:variable name="Variables.Pc Plant caps" /> Charge Costing</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">
+      <MadCap:variable name="Variables.Pc Plant caps" /> Charge Costing</h1>
+    <p>When posting charges for <MadCap:variable name="Variables.pc plant" /> or <MadCap:variable name="Variables.st stock" /> items, <MadCap:variable name="General.ProductName" /> can determine the <MadCap:variable name="Variables.cost head" /> and category for the costs.  If you want to create costed invoices, set the <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> parameter <span class="parameter">INTCOST </span>to <span class="userinput">Y</span>.</p>
+    <p>By default, <MadCap:variable name="General.ProductName" /> uses the process below to determine the costing when creating an invoice.  The codes in square brackets are used in parameters to modify the <MadCap:variable name="Variables.behaviour" /> (see <a href="#Paramete">Parameters</a> below).  </p>
+    <ul>
+      <li>If the <MadCap:variable name="Variables.cost head" /> and category are specified on the dispatch, <MadCap:variable name="General.ProductName" /> uses those. <strong>[C1]</strong></li>
+      <li>If not, and if the invoice is for an internal client <MadCap:variable name="Variables.kco company" />, <MadCap:variable name="General.ProductName" /> looks for the <MadCap:variable name="Variables.cost head" /> and category specified on the following, in order:</li>
+      <ul>
+        <li>Commodity from client's purchase order. <strong>[C18]</strong></li>
+        <li>
+          <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> item re-order commodity. (This is specific to assets of type X with a <MadCap:variable name="Variables.st stock" /> item that matches the commodity code.) <strong>[C14]</strong></li>
+        <li>Commodity in client <MadCap:variable name="Variables.kco company" />: <strong>[C17]</strong></li>
+        <li>For <MadCap:variable name="Variables.sundry" /> charges <MadCap:variable name="General.ProductName" /> looks for a commodity with the same code: </li>
+        <ul>
+          <li>For assets, <MadCap:variable name="General.ProductName" /> looks for a commodity that is mapped to the asset. </li>
+          <li>For <MadCap:variable name="Variables.st stock" />, <MadCap:variable name="General.ProductName" /> looks to the re-order commodity code, taking it from the client if present, else from the current <MadCap:variable name="Variables.kco company" />.</li>
+        </ul>
+        <li>Group code in client <MadCap:variable name="Variables.kco company" />. <strong>[C2]</strong></li>
+        <li>Item code in client <MadCap:variable name="Variables.kco company" />. <strong>[C3]</strong></li>
+        <li>
+          <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> parameter <span class="parameter">JCCCCAT </span>in client <MadCap:variable name="Variables.kco company" />. <strong>[C6]</strong></li>
+      </ul>
+      <li>If the item was <MadCap:variable name="Variables.pc rehired" />, <MadCap:variable name="General.ProductName" /> takes the costing from the original item that was requested on the sales order, or if the item was added in Pending <MadCap:variable name="Variables.pc hires" style="text-transform: capitalize;" /><MadCap:variable name="General.ProductName" /> looks for a unique item that is mapped to the commodity code on the dispatch. 
+<p /><p class="noteheader">NOTE</p><div class="note">By default, <MadCap:variable name="General.ProductName" /> does not consult the <MadCap:variable name="Variables.pc rehire" /> PO commodity or the item code for <MadCap:variable name="Variables.pc rehires" />, but you can instruct <MadCap:variable name="General.ProductName" /> to look at these by including these steps using <span class="userinput">!C15</span> - <MadCap:variable name="Variables.pc rehire" style="text-transform: capitalize;" /> PO commodity and <span class="userinput">!C19 </span>- Item code in the parameters.</div></li>
+      <li>If none of the above apply (or <MadCap:variable name="General.ProductName" /> is unable to determine the costing from the above), the following are then consulted in order:</li>
+      <ul>
+        <li>
+          <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> re-order commodity <strong>[C16]</strong></li>
+        <li>
+          <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> group  <strong>[C10]</strong></li>
+        <li>
+          <MadCap:variable name="Variables.sundry" style="text-transform: capitalize;" /> charge  <strong>[C11]</strong></li>
+        <li>Asset group <strong>[C9]</strong></li>
+        <li>
+          <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> parameter <span class="parameter">JCCCCAT </span><strong>[C12]</strong></li>
+        <li>Fixed Assets parameter <span class="parameter">JOBCC </span><strong> [C13]</strong><br /></li>
+      </ul>
+    </ul>
+    <h2>
+      <a name="Paramete"></a>Parameters</h2>
+    <p>You can modify the default process (either generally or for specific types of charge) by including or excluding steps.  To do this, enter a can-do list of the steps to exclude (or include - see the paragraph about <MadCap:variable name="Variables.pc rehired" /> items) in the appropriate <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> parameter:</p>
+    <ul>
+      <li>
+        <span class="parameter">INTXCCME </span>general list </li>
+      <li>
+        <span class="parameter">INTXCCMC </span>for <MadCap:variable name="Variables.sundry" /> charges </li>
+      <li>
+        <span class="parameter">INTXCCMK </span>for kits</li>
+      <li>
+        <span class="parameter">INTXCCMP </span>for <MadCap:variable name="Variables.pc plant" /> items </li>
+      <li>
+        <span class="parameter">INTXCCMS </span>for <MadCap:variable name="Variables.st stock" /></li>
+      <li>
+        <span class="parameter">INTXCCMV </span>for vehicles </li>
+      <li>
+        <span class="parameter">INTXCCMX </span>for <MadCap:variable name="Variables.pc rehires" /></li>
+    </ul>
+    <p>For example, if the <MadCap:variable name="Variables.cost head" /> structure in your <MadCap:variable name="Variables.kco company" /> is different from that in the <MadCap:variable name="Variables.pc plant" /> <MadCap:variable name="Variables.pc hire" /> <MadCap:variable name="Variables.kco company" />, you might set <span class="parameter">INTXCCME </span>to <span class="userinput wrap">C18, C14, C17, C2, C3, C6</span> to prevent <MadCap:variable name="General.ProductName" /> getting the costing from the other <MadCap:variable name="Variables.kco company" />. </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTCOST.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_JCCCCAT.htm" />
+          <MadCap:relatedTopic src="../Parameters/FA/fa_jobcc.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTXCCME.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTXCCMC.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTXCCMK.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTXCCMP.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTXCCMS.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTXCCMV.htm" />
+          <MadCap:relatedTopic src="../Parameters/PC/PC_INTXCCMX.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

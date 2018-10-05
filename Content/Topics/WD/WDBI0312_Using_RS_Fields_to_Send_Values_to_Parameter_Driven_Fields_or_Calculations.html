@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Using RS_Fields to Send Values to Parameter Driven Fields or Calculations</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Using RS_Fields to Send Values to Parameter Driven Fields or Calculations</h1>
+        <p>Some of the fields available on <MadCap:variable name="General.ProductName" /> (predominately financial) are parameter driven.</p>
+        <p>This means that a parameter should be used when calling the field in order for it to return values. Example:</p>
+        <p>The field: ?RO_job_costs^&lt;PeriodType&gt;[|&lt;PeriodOffset&gt;[|&lt;FDate&gt;]]? on the jc_job table uses parameters to return values.</p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; jc_job.RO_job_costs ^TD|0|\<MadCap:variable name="Variables.rs_start_date__2\" style="text-transform: capitalize;" /><br />Will use the <MadCap:variable name="Variables.financial date" /> as entered on the report selection for the field \<MadCap:variable name="Variables.rs_start_date__2\" style="text-transform: capitalize;" /></p>
+        <p>If the user enters:</p>
+        <p>
+            <img src="../../Resources/Images_A-C/BI/BI_031201.gif" />
+        </p>
+        <p>The system would convert this to:</p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; jc_job.RO_job_costs ^TD|0|31/05/04</p>
+        <p>Therefore the query would return costs up to 31/05/04</p>
+        <p>Please check the Database <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /> section for specific information on each parameter driven field.</p>
+        <p>In the same fashion RS_fields runtime values can be passed unto calculations. Example:</p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; substring$("\<MadCap:variable name="Variables.rs_job_num__3\" style="text-transform: capitalize;" />",3,2)</p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160; Where the field \<MadCap:variable name="Variables.rs_job_num__3\" style="text-transform: capitalize;" /> was given a value of ?ZELDA1? at runtime, would return ?LD?. <br /><br />.</p>
+    </body>
+</html>

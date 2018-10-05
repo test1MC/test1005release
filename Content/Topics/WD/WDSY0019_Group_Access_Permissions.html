@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2448" MadCap:lastWidth="1023">
+    <head><title>Setting Function Access for a Group</title>
+        <style>/*<![CDATA[*/
+@media print
+{
+	p.NoteHeader,
+	div.Note
+	{
+		page-break-after: avoid;
+		page-break-before: avoid;
+	}
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Function Access for a Group</h1>
+        <p>You can set permissions for several users together using groups.&#160; Each user belongs to one or more groups.&#160; Each group specifies the functions that members of the group have access to (and may also specify functions that members of the group are denied access to).</p>
+        <p><span class="new">You can define the permissions on a group by building them up from the permissions on other groups.&#160; This means you can create sub groups that give access to related functions, and list the appropriate sub groups on each "main" group.&#160; See <a href="WDSY0141_Main_Groups_and_Subgroups.html">Main Groups and Subgroups</a>.</span>
+        </p>
+        <p>You can specify groups of functions, using wildcards, to provide a "broad brush" set of access permissions; you can then "fine tune" this by&#160;specifying additional functions to which the group has or does not have access.&#160;</p>
+        <div class="process">
+            <h2 class="print">To set a group's function access using wildcards:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBSUR1">Groups</span>.</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images/SY/SY-0019-1-1107.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> to open the group record.</li>
+            </ol>
+            <ol MadCap:continue="true">
+                <li>In the <span class="field">Deny Functions </span>and <span class="field">Functions </span>fields, enter can-do lists for the functions you want to deny or allow access to.
+<p>For example, if you want to allow access to all the functions in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> except the <MadCap:variable name="Variables.pl supplier" /> update functions, you could set up a group with <span class="userinput">%WPL*</span> in the <span class="field">Functions </span>field, and <span class="userinput">%WPL2000BAVMA,%WPL2000BAVMU,%WPL2000BAVMD</span> in the <span class="field">Deny Functions </span>field.&#160; This would deny the ability to add, update or delete a <MadCap:variable name="Variables.pl supplier" />.</p><p><img src="../../Resources/Images/SY/SY-0019-2-1107.png" class="FullWidth" /></p><p>Alternatively, to allow some users access to all the functions in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, you could set up two groups, an "allow" group which gives access to <span class="userinput">%WPL*</span>, and a "deny" group which denies access to the add, update and delete <MadCap:variable name="Variables.pl supplier" /> functions.&#160; If you put this "deny" group before the "allow" group in a user's group list, that user will not have access to the add, update and delete functions; other users without the "deny" group but with the "allow" group will have access to all the <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> functions.</p><p>If there are <a href="WDSY0114_Role-Based_Licensing.html">roles</a> that provide the functions you want, you can add these to the group; users who belong to the group will have access to all the functions in the role (or will be denied access, if you enter the role in the <span class="field">Deny Module/Role Type </span>field).</p></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <h2 class="section">To set a group's access to specific functions:</h2>
+            <p>These only take effect if the functions are not already included in the "allow" or "deny" lists - see above.</p>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBSUR1">Groups</span>.</li>
+                <li>Click the link in the <span class="field">Group ID </span>column of the group whose access permissions you want to change. <MadCap:variable name="General.ProductName" /> displays the Group Function Access screen for that group.
+<p class="note">You cannot change the access rights for the Root group or SYSAdmin user.</p></li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the record or records you want to set permissions for.</li>
+                <li>In the Choose Action list, select:&#160;</li>
+                <ul>
+                    <li><span class="userinput">Set Access to Yes </span>to allow access (or to allow read only access if using <a href="WDSY0138_Menu_Item_Security.html">Menu Item Security</a>)</li>
+                    <li class="new"><span class="userinput">Set Access to Yes-Update </span>to allow update access (only available if you are using Menu Item Security)</li>
+                    <li><span class="userinput">Set Access to No</span> to prevent access.</li>
+                    <li><span class="userinput">Set Access to Group </span>to use the setting from the next group in the user's list.&#160;</li>
+                </ul>
+            </ol>
+            <p class="note">Because <MadCap:variable name="General.ProductName" /> evaluates the permissions on each group in turn, the sequence of the groups on a user's record is important.&#160; If a group denies access to a function, the user will not be able to access the function, even if a later group would allow access.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDSY0049_User_Groups.html" />
+                    <MadCap:relatedTopic src="WDSY0135_Access_to_Mandatory_Functions.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

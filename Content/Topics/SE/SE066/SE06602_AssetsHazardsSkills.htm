@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Location [%=Variables.Se Assets caps%], Hazards, and Skills Fields</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Location <MadCap:variable name="Variables.Se Assets caps" />, Hazards, Skills Fields</h1>
+        <p class="Body"> The <span class="Function">Locations </span>function of Service Management can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>be company (kco) specific for <MadCap:variable name="Variables.Se Assets caps" />, Hazards, and <MadCap:variable name="Variables.Se Technician caps" /> Skills fields, as described below.</p>
+        <div class="notelabel" MadCap:conditions="COINS.ScreenOnly">NOTE:</div>
+        <div class="notebody" MadCap:conditions="COINS.ScreenOnly">Corresponding functionality for this feature is also found in Mobile Tech versions 1.9 and above.</div>
+        <h2 MadCap:autonum="1.1 ">Location <MadCap:variable name="Variables.Se Assets caps" /></h2>
+        <p class="Body">A <span class="Field">Do Not Allow Company List </span>field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in <i>Service Management &gt;&#160;Locations &gt; <MadCap:variable name="Variables.Se Assets caps"></MadCap:variable> tab</i> on a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Do Not Allow Company List tab, as shown in <MadCap:xref href="#AssetsDoNotAllow" class="ImageRef"><i>Figure 1:  [%=Variables.Se Assets caps%] Do Not Allow Company List</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="AssetsDoNotAllow"></a><MadCap:variable name="Variables.Se Assets caps" /> Do Not Allow Company List</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_S-U/SE/SE066_Images/SE066_AssetsDoNotAllow.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li class="ListBullet1">   The <strong>Available </strong>list only lists the Companies with the Location in view.    It does not display a full list of Companies in the database.</li>
+            <li class="ListBullet1">When adding an <MadCap:variable name="Variables.Se Asset caps" />, the Do Not Allow Company List is automatically set to all other Companies in view for the Location.</li>
+            <li class="ListBullet1">You may use the arrows on this screen to add or delete a current Company from the lists.     An <MadCap:variable name="Variables.Se Asset caps" /> cannot be deleted if it is referenced on any <MadCap:variable name="Variables.Se Agreement caps" />, <MadCap:variable name="Variables.Se Service Order caps" />, or parent <MadCap:variable name="Variables.Se Asset caps" />.</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">Location Hazards</h2>
+        <p class="Body">A <span class="Field">Do Not Allow Company List </span>field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in <i>Service Management &gt;&#160;Locations &gt; Hazards tab</i>, as shown in <MadCap:xref href="#HazardsDoNotAllow" class="ImageRef"><i>Figure 2:  [%=Variables.Se Assets caps%] Do Not Allow Company List</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="HazardsDoNotAllow"></a><MadCap:variable name="Variables.Se Assets caps" /> Do Not Allow Company List</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_S-U/SE/SE066_Images/SE066_HazardsDoNotAllow.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li class="ListBullet1">Since the Location RO field that returns the Number of Hazards (RO_slc_NumOfHaz) counts all Hazards, its label was changed to <strong>Number of Hazards – All Companies</strong>.  </li>
+            <li class="ListBullet1">
+                <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">An </MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new </MadCap:conditionalText>RO field <strong>Number of Hazards – This Company</strong> (RO_slc_NumOfHazKco) counts the number of Hazards for the current company.  It is found on all browses that reference the original RO field.</li>
+        </ul>
+        <h2 MadCap:autonum="1.3 ">Location <MadCap:variable name="Variables.Se Technician caps" /> Skills</h2>
+        <p class="Body">A <span class="Field">Do Not Allow Company List </span>field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in <i>Service Management &gt;&#160;Locations &gt; <MadCap:variable name="Variables.Se Technician caps" /> Skills tab</i>, as shown in <MadCap:xref href="#TechSkillsDoNotAllow" class="ImageRef"><i>Figure 3:  [%=Variables.Se Technician caps%] Skills Do Not Allow Company List</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="TechSkillsDoNotAllow"></a><MadCap:variable name="Variables.Se Technician caps" /> Skills Do Not Allow Company List</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE066_Images/SE066_TechSkillsDoNotAllow.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4 ">Data Published to M1X</h2>
+        <p class="Body">The <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Do Not Allow Company List </span>field in Location <MadCap:variable name="Variables.Se Assets caps" /> and Location Hazards are published to M1X as follows:</p>
+        <ul>
+            <li class="ListBullet3">Location <MadCap:variable name="Variables.Se Assets caps" /> - published via Database</li>
+            <li class="ListBullet3">Location Hazards - published via Process</li>
+        </ul>
+    </body>
+</html>

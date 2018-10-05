@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Scripts</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Scripts</h1>
+    <p>The report agent is a Progress batch session running pm99b.p. There are a number of configuration options which can be passed in to pm99b.p using the Progress -param start-up parameter. These are passed in as a pipe-separated list of name/value pairs, for example:</p>
+    <div class="Code">-param ?TIMEOUT=120|SERVER=OTHER?</div>
+    <p>The options are:</p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Option</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>
+            <p>TIMEOUT</p>
+          </td>
+          <td>
+            <p>Over-rides the PM parameter <span class="parameter">TIMEOUT</span>.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>GENPROCS</p>
+          </td>
+          <td>
+            <p>Over-rides the PM parameter <span class="parameter">GENPROCS</span>. Also over-rides the maximum report processes specified for a report agent family (if SERVER argument provided).</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>SERVER</p>
+          </td>
+          <td>
+            <p>Report agent family name. If specified then the report agent family must be defined within <MadCap:variable name="General.ProductName" />. The report agent family definition will be used to determine the maximum number of report processes (unless GENPROCS is also passed as a start-up parameter) and the report queues this agent will process.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="configuration">
+      <h2 class="print">Scripts</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PM/pm_timeout.htm" />
+          <MadCap:relatedTopic src="../Parameters/PM/pm_genprocs.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="494" MadCap:lastWidth="1052" MadCap:conditions="COINS.Redacted">
+    <head><title></title>
+    </head>
+    <body>
+        <p class="FieldLabel">
+            <MadCap:concept term="Topics" /><a name="_Toc454289655"></a><span class="Field">Calculation</span>
+        </p>
+        <p class="IndentFieldDef">The calculation is run when the form is submitted. It can be used to set scores or update fields on the form.&#160; There is an array of score fields on the submitted form that you can store scores in, and when used the score appears on the audit workbench. </p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Mobile Form Calculations</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_S-U/SS/23515 HandS Site Audit/Mobile Forms Set Up_1.png" style="width: 602px; height: 271px;" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+            <img src="../../../Resources/Images_S-U/SS/23515 HandS Site Audit/SCR_SS_Mobile_Form_Calculations_11.05.png" class="FullWidth" />
+        </p>
+        <p class="IndentFieldDef">To assign a score you assign a variable smk_score__<i>n</i> where <i>n</i> is the array index 1 to 9.</p>
+        <p class="IndentFieldDef">Each field on the form that has a field ID assigned to it will also populate a variable in the calculation, and some new functions have been added to make getting score from these variables easy.&#160;</p>
+        <p class="IndentFieldDef">In the example below the form has a number of criteria and each is given an operational and admin score.&#160; The operational scores all have field IDs ending OP, and the admin ending AD, so score 1 is the total points for operational, 2 the admin total.&#160; Scores 3 &amp; 4 are the percentage – the scores are out of 4 so 25 x average is the same as 100 x average / 4.&#160; The varaverage function ignores fields with a blank entry (not applicable). </p>
+        <p class="IndentFieldDef">smk_score__1 = vartotal('*OP');<br />smk_score__2 = vartotal('*AD');<br />smk_score__3 = 25 * varaverage('*OP');<br />smk_score__4 = 25 * varaverage('*AD');<br />smk_score__5 = if(smk_score__3,GE,90,1,0) + if(smk_score__3,GE,80,1,0) + if(smk_score__3,GE,70,1,0) + 1;<br />$cRANK = entry$(smk_score__5,'FAIL,BRONZE,SILVER,GOLD',',');<br />$RW_smk_fid^RANK = cRank;</p>
+        <p class="IndentFieldDef">In the last three lines of the calculation above we set a field on the form based on the operational percentage; if over 90% the value is “GOLD”, if over 80 “SILVER”, and so on.&#160; </p>
+    </body>
+</html>

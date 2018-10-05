@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1178" MadCap:lastWidth="518">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Fabrication - </MadCap:conditionalText>Overview</h1>
+        <p class="Body">Fabrication is to support low volume, high effort making of items, where you want to be able to capture costs from <span class="module">Payroll</span>, <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> and <span class="module"><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /></span>; for example, bespoke pieces made in a metal shop. These may be one-off items made for a <MadCap:variable name="Variables.jc contract" /> or customer, or may be made to add to your <MadCap:variable name="Variables.st stock" />.</p>
+        <p class="Body">Fabrications are different from <MadCap:variable name="Variables.st stock" /> assemblies, which are more suited for higher volume, lower effort items for which you do not need to capture <MadCap:variable name="Variables.labour" /> costs, but can use a standard value; for example, assembly of roof trusses.</p>
+        <h2><a name="Fabricat"></a>Fabricating for <MadCap:variable name="Variables.Jc Contract caps" /></h2>
+        <p class="Body">A site orders some bespoke items and you want to charge them actual cost.  <span class="module">Payroll</span>, <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> and <span class="module"><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /></span> costs debit the fabrication job card – hitting the WIP account – as the items are fabricated. Once all costs have landed the job card is posted.</p>
+        <h2>Fabricating for Customer</h2>
+        <p class="Body">You want to charge a customer a fixed price. The fixed price value creates a zero job card cost with recharge equal to the fixed price. The job card costs from <span class="module">Payroll</span>, <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> and <span class="module"><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /></span> have zero recharge.</p>
+        <p class="Body">For cash flow you may wish to cost to the customer before all costs have hit the job card – there can be quite a delay if <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> costs are involved. The options are to post the job card without closing, or post the job card and allow late costs in configuration.</p>
+        <p class="Body">Posting the job card moves Costs from WIP to workshop costs as in “Fabricating for <MadCap:variable name="Variables.Jc Contract caps" />“, and creates <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <span class="module"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span> invoice which will cost to the customer and give revenue to the job card.</p>
+        <h2>Fabricating <MadCap:variable name="Variables.St Stock caps" /></h2>
+        <p class="Body">The job card should be set to recharge to the workshop’s overhead <MadCap:variable name="Variables.jc contract" />. You can do this at cost or use quantity x unit cost of the item being made for the debit to <MadCap:variable name="Variables.st stock" /> control.  When using a unit cost the difference will be workshop revenue.</p>
+        <p class="Body">You  will likely want to have the items for use as soon as they are ready, so there will be a negative issue of the items fabricated, at the point of completing the job card. This issue will cost to the job card.</p>
+    </body>
+</html>

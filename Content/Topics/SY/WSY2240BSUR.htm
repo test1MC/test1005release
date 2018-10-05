@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Images/SY/Mail Assistant/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Assume User ID</h1>
+        <p>Location : <span class="Function">System &gt; User Maintenance &gt; Assume User ID</span></p>
+        <p>
+            <img src="../../Resources/Images/SY/WSY2240BSUR-1108-0001.png" class="FullWidth" />
+        </p>
+        <p>Assume User ID allows support users to assume the identity of another user provided they have appropriate security settings. This is intended for support users to log in as another user to check what that user is experiencing.</p>
+        <table style="width: 100%; caption-side: bottom; mc-table-style: url('../../Resources/Images/SY/Mail Assistant/COINSBasic.css'); margin-left: auto; margin-right: 0;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 133px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">User ID</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The ID of the <MadCap:variable name="General.ProductName" /> user.<br />This field links to:<br />Assume User</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">User Name</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The name of the user or group with this ID.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Prime Group</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The first group for this user.<br />Other users who belong to this group (that is, have this group in their group list) will be able to see this user's reports, post their batches, etc., if they have a higher security level than (or - depending on configuration - the same security level as) this user.<br />The parameter SY/EQACCESS determines whether users with the same security level can post each other's batches.<br />  See Batch and Print Security.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Email</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">The email address of the user.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>By following the link in the User ID column, you will be presented with an encoded URL that you can paste in to an InPrivate browse window which will log you in as that user. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images/SY/WSY2240BSUR-1108-0002.png" class="FullWidth" />
+        </p>
+        <p>The link is valid for 30 seconds only. Your name is recorded in the log file for each action you perform whilst logged in as the other user. You can assume the other user's ID without logging them out as this type of access allows a duplicate login.</p>
+        <p>&#160;</p>
+        <p class="note">SYSAdmin user and root group are both banned from being assumed. SYSAdmin user can assume any other user.</p>
+        <MadCap:relationshipsProxy class="relatedTopics" />
+    </body>
+</html>

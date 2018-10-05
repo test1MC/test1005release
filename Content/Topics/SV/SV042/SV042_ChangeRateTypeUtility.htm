@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Change Rate Type Utility</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Change Rate Type Utility</h1>
+        <h2 MadCap:autonum="1.1 ">Menu Option</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Change Rate Type Utility </span>menu option is available in <i><MadCap:variable name="Variables.Commercial Manager caps" /> &gt; Selected <MadCap:variable name="Variables.Jc Contract caps" /> &gt; Admi</i>n, as shown in <MadCap:xref href="#ChangeRateTypeMenu" class="ImageRef"><i>Figure 1:  Change Rate Type Utility Menu Option</i></MadCap:xref>. This utility lets you replace an existing Rate Type with another Rate Type.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="ChangeRateTypeMenu"></a>Change Rate Type Utility Menu Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV042_Images/ChgRateTypeUtil_Menu.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Selection Screen</h2>
+        <p class="Body">When you select <span class="Function">Change Rate Type Utility </span>from the menu (<MadCap:xref href="#ChangeRateTypeMenu" class="ImageRef"><i>Figure 1:  Change Rate Type Utility Menu Option</i></MadCap:xref> above), a selection screen appears, as shown in <MadCap:xref href="#ChgRateTypeScreen" class="ImageRef"><i>Figure 2:  Change Rate Type Utility Screen</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="ChgRateTypeScreen"></a>Change Rate Type Utility Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SV/SV042_Images/ChgRateTypeUtil_Screen.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">The following rules apply when attempting to change a Rate Type using this utility:</p>
+        <ul>
+            <ol>
+                <li class="ListNumber1">If no <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Valuation caps" /> transactions exist, you can make any changes to the new Rate Type.</li>
+                <li class="ListNumber1">If no Payroll <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Valuation caps" /> transactions exist, you can create any new Rate Type with the same source types.</li>
+                <li class="ListNumber1">If Payroll <MadCap:variable name="Variables.Sv Internal caps" /> <MadCap:variable name="Variables.Sv Valuation caps" /> transactions exist, but are not linked to an application or certificate, you can make changes according to Rule #2 above, and all transactions will be recalculated for the new Extra Payroll Groups data.</li>
+            </ol>
+        </ul>
+        <h2 MadCap:autonum="1.3 ">Before Running Utility</h2>
+        <p class="Body">Before running the utility, you should first void all posted certificates if any of the following conditions exist:</p>
+        <ul>
+            <li class="ListBullet3">The new Rate Type has different source types and existing transactions,</li>
+        </ul>
+        <ul>
+            <li class="ListBullet3">The new Rate Type has the same source types but different Extra Payroll Groups, and billed Payroll <MadCap:variable name="Variables.Sv Internal caps" /> transactions exist.</li>
+        </ul>
+        <div class="notelabel">NOTE:</div>
+        <div class="note">An error message displays for <MadCap:variable name="Variables.Sv Internal caps" /> Transactions billed to posted certificates, which states that you need to void all of them first.</div>
+        <p class="Body">For <MadCap:variable name="Variables.Sv Internal caps" /> Transactions billed to voided certificates, the utility does the following:</p>
+        <ul>
+            <li class="ListBullet3">Purges all <MadCap:variable name="Variables.Sv Internal caps" /> transactions linked to voided certificates.</li>
+            <li class="ListBullet3">Resets all source transactions back to unbilled.</li>
+        </ul>
+        <p class="Body">The new Rate Type is set for the <MadCap:variable name="Variables.Jc Contract caps" /> level; it is set to blank for all series.</p>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Overview</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Overview</h1>
+        <p class="Body">Some COINS OA users experienced <MadCap:variable name="Variables.cheque" /> numbers being stored incorrectly against the PR <MadCap:variable name="Variables.Cheque caps" /> record when two Print <MadCap:variable name="Variables.Cheque caps" /> processes for the same bank were run simultaneously. A stop was added to prevent both the simultaneous Print <MadCap:variable name="Variables.Cheque caps" /> processes and the return of the user to <span class="Function">Print <MadCap:variable name="Variables.Cheques caps"></MadCap:variable></span>.</p>
+        <p class="Body">However, users received an error that Print <MadCap:variable name="Variables.Cheques caps" /> was already in process for the bank and were subsequently returned to the Main tab of <span class="Function">Print <MadCap:variable name="Variables.Cheques caps" /></span> (thus re-defaulting the bank number). Once returned to the Main tab, if a user did not refresh the page before waiting to click the <span class="Button">Next Action </span>button after the <span class="Function">Print <MadCap:variable name="Variables.Cheques caps" /></span> function was completed, the <MadCap:variable name="Variables.cheque" /> number presented was not necessarily the next available number. This caused issues when the <MadCap:variable name="Variables.cheque" /> number assigned to the <MadCap:variable name="Variables.cheque" /> record was a duplicate and did not match the printed <MadCap:variable name="Variables.cheque" /> number or the values included in the Positive Pay files sent to the bank.</p>
+        <p class="Body" MadCap:conditions="COINS.PrintOnly">Changes have <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">therefore </MadCap:conditionalText>been made in COINS&#160;OA Payroll to resolve this issue<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> and are discussed in detail in this document</MadCap:conditionalText>.</p>
+        <p MadCap:conditions="COINS.ScreenOnly">This section discusses how COINS&#160;OA&#160;Payroll resolved this issue.</p>
+    </body>
+</html>

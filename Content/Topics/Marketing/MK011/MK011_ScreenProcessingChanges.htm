@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="784" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly] " MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">System and User Requirements</h1>
+        <p class="Body">In order to use COINS&#160;MS&#160;Outlook integration functionality, there are certain system and user requirements that must be met. This section discusses these requirements.</p>
+        <h2 MadCap:autonum="1.1">Add-on Installation Requirements</h2>
+        <p class="Body">You must install a preconfigured COINS&#160;MS&#160;Outlook Add-On onto a machine with MS Outlook. While installing, you should only be prompted for an installation path;  all other configuration and COINS connection settings are predefined.</p>
+        <p class="IndentBold">Please consult your COINS&#160;representative for more information on installing this Add-On.</p>
+        <h2 MadCap:autonum="1.2">COINS Server Side Integration Management</h2>
+        <p class="Body"><span class="Function">[Is this explained in 23434_LMDSY0065_HOW_TO_Configure_Server_2013_Integration.pdf in MK&#160;Source folder?]</span> </p>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>menu item  called <strong>MS Outlook Integration Setup </strong>is found on the COINS System module menu. Overall integration settings are available and should be handled by the COINS server side, from COINS System module new MS Outlook Setup Screen.<span style="color: #8b0000; font-weight: bold;"> <span style="color: #ff0000;">[can't find this]</span></span></p>
+        <p class="Body" style="color: #ff0000;">The MS Outlook Integration Options contain  the Settings and Switches window, where you can enable or disable the integration with Outlook, allow or disallow users to use the integration functionality, configure the integration settings, and restrict data movement between two systems etc.</p>
+        <h3 style="color: #ff0000;" MadCap:autonum="1.2.1">General Integration Screen of Integration</h3>
+        <p class="Body" style="color: #ff0000;">When you Allow MS Outlook Integration (via a Check Box -- might also be a parameter), thes settings control general configuration and enable/disable the Email, Contact, and Journals integration, etc.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">COINS Side Add Management and Setup</p>
+        <p class="Body" style="color: #ff0000;text-align: center;">&#160;</p>
+        <p class="Body" style="color: #ff0000;">There are a set of options per component for Add-on permissions and configuration. It is enabled only if <span class="Field">Allow MS Outlook Integration </span>is selected. These options are listed below:</p>
+        <ul>
+            <li class="ListBullet1" style="color: #ff0000;">Allow Email integration with MS Outlook</li>
+            <li class="ListBullet1" style="color: #ff0000;">Allow attachments integration with MS Outlook</li>
+            <li class="ListBullet1" style="color: #ff0000;">Allow Companies integration with MS Outlook</li>
+        </ul>
+        <p class="IndentFieldDef" style="color: #ff0000;">There should be two separate options.</p>
+        <ul>
+            <li class="ListBullet2" style="color: #ff0000;">COINS to Outlook Integration Only (One-way).  With this option, the user can only view their COINS Companies within Outlook.  Any updates made in COINS will synchronize with Outlook.</li>
+            <li class="ListBullet2" style="color: #ff0000;">Full Integration (Two-way).  With this option, along with the above functionality the user can also create new Company in Outlook that will integrate with COINS.</li>
+            <li class="ListBullet1" style="color: #ff0000;">Allow Contacts integration with MS Outlook</li>
+        </ul>
+        <p class="IndentFieldDef" style="color: #ff0000;">There should be 3 separate options:</p>
+        <ul>
+            <li class="ListBullet2" style="color: #ff0000;">COINS to Outlook Integration Only (One-way).  With this option, the user can only synchronize with existing COINS Contacts.  No new Contacts.  For existing Contacts in Outlook, the user should have the ability to sync (verify) that Contact with corresponding Contact in COINS.</li>
+            <li class="ListBullet2" style="color: #ff0000;">Restricted Two-way Integration.  With this option, the user can only synchronize with existing COINS Contacts.  Updates can be made in Outlook and synchronized with COINS.   For existing Contacts in Outlook, the user should have the ability to sync (verify) that Contact with corresponding Contact in COINS.</li>
+            <li class="ListBullet2" style="color: #ff0000;">Full Integration (Two-way).  With this option, along with the above functionality the user can also create new Contact in Outlook that will integrate with COINS.  Duplicate check should occur before creating in COINS.</li>
+            <li class="ListBullet1" style="color: #ff0000;">Allow Project integration with MS Outlook.  Hold for future release.</li>
+            <li class="ListBullet1" style="color: #ff0000;">Allow Journals integration with MS Outlook</li>
+            <li class="ListBullet1" style="color: #ff0000;">Enable offline synchronization in COINS</li>
+        </ul>
+        <p class="Body" style="color: #ff0000;">Each Integrated Component to have own specific settings screen</p>
+        <p class="Body" style="color: #ff0000;">Email Integrations Settings (there could be more specifics settings with regards to allowed actions, i.e. create, change, and delete).</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of emails from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of emails from MS Outlook to COINS</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of emails attachments from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of emails attachments from MS Outlook to COINS</p>
+        <p class="Body" style="color: #ff0000;">•	Allow Update of COINS Events</p>
+        <p class="Body" style="color: #ff0000;">•	Allow offline synchronization</p>
+        <p class="Body" style="color: #ff0000;">Companies Integrations Settings  (there could be more specifics settings with regards to allowed actions, i.e. create , change, delete).</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of companies  from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of companies from MS Outlook to COINS</p>
+        <p class="Body" style="color: #ff0000;">•	Allow offline synchronization</p>
+        <p class="Body" style="color: #ff0000;">Contacts Integrations Settings (there could be more specifics settings with regards to allowed actions, i.e. create , change, delete).</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Contacts  from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Contacts from MS Outlook to COINS</p>
+        <p class="Body" style="color: #ff0000;">•	Allow offline synchronization</p>
+        <p class="Body" style="color: #ff0000;">Projects Integrations Settings  (there could be more specifics settings with regards to allowed actions, i.e. create , change, delete).  On Hold for Future Release.</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Projects  from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Projects from MS Outlook to COINS</p>
+        <p class="Body" style="color: #ff0000;">•	Allow offline synchronization</p>
+        <p class="Body" style="color: #ff0000;">Journals Integrations Settings  (there could be more specifics settings with regards to allowed actions, i.e. create , change, delete).</p>
+        <p class="Body" style="color: #ff0000;">Tasks</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Tasks from COINS to MS Outlook To DO list</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of TO DO list  from MS Outlook to COINS Tasks</p>
+        <p class="Body" style="color: #ff0000;">•	Allow offline synchronization</p>
+        <p class="Body" style="color: #ff0000;">Meetings</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Meetings from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Meetings from MS Outlook to COINS</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synch of recurring Meetings from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of recurring Meetings from MS Outlook to COINS</p>
+        <p class="Body" style="color: #ff0000;">•	Allow offline synchronization</p>
+        <p class="Body" style="color: #ff0000;">Events</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Events from COINS to MS Outlook</p>
+        <p class="Body" style="color: #ff0000;">•	Allow synchronization of Events from MS Outlook to COINS.  On Hold for Future Release.</p>
+        <p class="Body" style="color: #ff0000;">•	Allow offline synchronization</p>
+        <p class="Body" style="color: #ff0000;">COINS Journals and MS Outlook Activities Mapping.</p>
+        <p class="Body" style="color: #ff0000;">MS Outlook has several built-in Activity types, which are Appointments, Meetings and Event (that all also could be set as recurring). COINS have another set of activity types, which are Journals (Tasks, Meetings) the screen for mapping and enabling activities of two systems should be provided.</p>
+        <p class="Body" style="color: #ff0000;">Issues: we will need to map all kind of MS outlook activates (Meetings, Events, Appointments, except To Do) to single COINS Meeting type of appropriate Journal.</p>
+        <p class="Body" style="color: #ff0000;">Or will need to be able to differentiate COINS Meetings by some additional Attribute or description. (see the screen below).</p>
+        <p class="Body" style="color: #ff0000;">Figure. COINS – Outlook Activities mapping.</p>
+        <p class="Body">&#160;</p>
+        <h3 MadCap:autonum="1.2.2">Outlook Add-on Side Integration Management</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>COINS Add-On related menu is available on the MS Outlook Account Information page when the </p>
+        <p class="Body">In MS Outlook add-on configuration and settings menu user should be able to define/edit preinstalled COINS connection settings. Will need the ability to schedule auto synchronization scheduled parameter (i.e for each 30 min).</p>
+        <p class="Body">In this menu there should available “synch now” button in MS Outlook (it also might be available on several other places in Outlook, to be defined later.</p>
+        <p class="Body">Account settings will allow defining Outlook objects types and folders  you want to synchronize with COINS appropriate entities.</p>
+        <p class="Body">A dialog wizards contain tree view of Outlook calendars and dropdown list of COINS Journals  types … that should be synch into particular Outlook calendar.</p>
+        <p class="Body">MS Outlook Default calendar will be used typically for all COINS activities, and should be set as default for all COINS Journals at the first run after add-on installation; User then might configure this on demand.</p>
+        <p class="Body">Figure. MS Outlook Add-on settings</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Following fields to be available for establishing the connections to COINS: COINS Server, Database, COINS user id, password, kco??? (Different kco might be handled by separate folders similar to different Outlook mail account data, to be defined).</p>
+        <p class="Body">1.	to have single Kco – drop down on the level of Add-on settings, so when MS outlook connected to  COINS database we could switch between allowed to this user kcos</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">All data from COINS to Outlook will came from this selected kco, and all new entries in Outlook will be associated with this kco as well.</p>
+        <p class="Body">2.	There will be no kco switch within MS Outlook, but all kco associated with current user will be shown as separated folders in Outlook, each will list  associated contacts, companies , projects etc .</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">However if Companies and Projects are stored globally in COINS , first one seems to be more suitable , user still be able to switch between kco but list of integrated COINS items in Outlook UI  to be a single  plaint structure.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Assumed: Data synchronization supposed to be executed for both way, sending the changes in Outlook t COINS, and also updating data changed from server.</p>
+        <p class="Body">3.4.3.1	Other MS outlooks required changes</p>
+        <p class="Body">By impact off add-on and integration some of MS outlook standard forms controls and custom UI element to be added.</p>
+        <p class="Body">When any action supposed to be taken on not connected with CRM elements (natively Outlook entities and that not supposed to be synchronized) all customized forms, fields, control needs to be inactive or hidden.</p>
+        <p class="Body">All COINS  item that are integrated or MS Outlook items that marked to synchronized with COINS will have an indicator, icon to differentiate them on a list of general MS Outlook data.</p>
+        <p class="Body">Synch Icon (disabled, enabled)</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">MS Outlook Ribbon to have contextual depended section for COINS commands, will become active if you select some element that is COINS or should be synch to coins.</p>
+        <p class="Body">On the Ribbon should be also Synch All button, that will be available all the time not deepened on selected in Outlook item, On press should verify if the COINS server connection could be established and synchronized all date that is changed from last time according to timestamp.</p>
+        <p class="Body">Figure. Contextual Ribbon menu</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">COINS Kco specifics view could be implemented as separate folders list, or within a single folder with particular filtering by kco (based on assumption made at this moment first one approach supposed to more convenient and feasible, both technical implementation and usability purposes).</p>
+        <p class="Body">By following this approach  COINS Projects and Companies to be list as folders within Kco ,  elements of modules could be browsed similar as outlook emails records , for add will be action , for new item a custom screen form will be available to fill in (still should look as native Outlook UI component).  All COINS special fields to be mapped to custom MS Outlook fields.</p>
+        <p class="Body">Figure. Kco and COINS folders list</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Figure. MS Outlook new Item add (Company)</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">3.4.4	Company and Contacts and Projects</p>
+        <p class="Body">From MS outlook standard menu pane, new COINS section to be available. There should be a list of integrated COINS objects (Contactsand Companies, and Projects) available in there. Each kco will be shown as separate list (similar to different Outlook mails accounts).  In case if managers will have a multiple kco assigned in COINS to view or add items to the particular kco instance they will just click on appropriate folder and expand it in Outlook.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">3.4.4.1	Contacts</p>
+        <p class="Body">All “My Contacts” available for particular User in COINS will be transferred to MS Outlook. </p>
+        <p class="Body">COINS Contacts folder to appear in a folder in Outlook.</p>
+        <p class="Body">Only marked with COINS Synch button Contacts should be synchronized back to COINS from Outlook (from COINS to Outlook all current user Contacts will be auto transferred to Outlook if allowed by Contacts synch settings).</p>
+        <p class="Body">All Contacts transferred from COINS will have the Synch Marker enabled.</p>
+        <p class="Body">For new Contacts in MS Outlook within a context custom Coins Ribbon segment Synch button will be accessible.</p>
+        <p class="Body">Figure. COINS Contacts Synch in Outlook</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">•	Ability to create new contacts and synchronize them with existing COINS Contacts and Companies.</p>
+        <p class="Body">Figure. New COINS linked Contact</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">When creating a new COINS Contact in Outlook:</p>
+        <p class="Body">•	User to have ability to select if this will be a COINS Contact or Outlook only Contact.</p>
+        <p class="Body">•	“Smart” Auto-fill to drop down as user types.</p>
+        <p class="Body">•	Auto-populate fields if Contact already exists in COINS.</p>
+        <p class="Body">•	For existing Contacts in Outlook, user can click on the “Verify with COINS” checkbox to update any fields  that may have changed in COINS.</p>
+        <p class="Body">•	New Contact form in Outlook required to accommodate COINS fields.</p>
+        <p class="Body">Table. Contact Fields Mapping</p>
+        <p class="Body">MS outlook Contact	COINS Contact</p>
+        <p class="Body">Title (within Full Name)	Title</p>
+        <p class="Body">First (within Full Name)	First Name</p>
+        <p class="Body">Middle (within Full Name)	Enhancement: field exists but needs to be added to Contact page (%WMK1401BPCN).</p>
+        <p class="Body">Last (within Full Name)	Last Name/Surname</p>
+        <p class="Body">Suffix (within Full Name)	Letters</p>
+        <p class="Body">Nickname	Enhancement:  Add existing from pp_contact table to Contact Details</p>
+        <p class="Body">Company 	Company</p>
+        <p class="Body">•	If Contact belongs to multiple companies this supposed to show particular that is indicted as Main (check box).</p>
+        <p class="Body">•	All COINS Associated to the contact companies will be shown in separate custom list (or grid).</p>
+        <p class="Body">Job title</p>
+        <p class="Body">Job Title</p>
+        <p class="Body">File As	  N/A</p>
+        <p class="Body">Email	Email</p>
+        <p class="Body">Display As	 N/A</p>
+        <p class="Body">Web page address	 Enhancement:  RO field from Company to be placed under Fax field.</p>
+        <p class="Body">IM address	No Appropriated (will not be synch).  Enhancement:  Add existing from pp_contact to Contact Details</p>
+        <p class="Body">Business Phone</p>
+        <p class="Body">(Outlook has a breakdown for Country/Region, City/Area Code, Local Number, and Extension)	Phone (main)</p>
+        <p class="Body">Extension (within phone numbers)	Assume: Extensions from COINS should store with numbers in Outlook.  Extension for Business Phone</p>
+        <p class="Body">Home Phone	Home – There is a field for Home phone {pcn_home} within pp_contact table but currently not included in Contact Details.  We could either add this field or lookup the Home number in the Telephones Tab.</p>
+        <p class="Body">Business Fax</p>
+        <p class="Body">Fax</p>
+        <p class="Body">Mobile Phone</p>
+        <p class="Body">Mobile</p>
+        <p class="Body">Address Business	</p>
+        <p class="Body">RO_cdd_add__1</p>
+        <p class="Body">RO_cdd_add__2</p>
+        <p class="Body">RO_cdd_add__3</p>
+        <p class="Body">RO_CoPcode</p>
+        <p class="Body">Issue/Enhancement:  Country missing from Contact’s Address</p>
+        <p class="Body">Address Home	Where Address Type = Home.  Parameter setting for Outlook setup</p>
+        <p class="Body">This is the Mailing Address (check Box)	??? Address Business</p>
+        <p class="Body">Notes</p>
+        <p class="Body">For this field, use the singular Contact Notes</p>
+        <p class="Body">Assistant’s Name</p>
+        <p class="Body">Personal Assistant</p>
+        <p class="Body">Car	No Appropriated (will not be synch)</p>
+        <p class="Body">ISDN	No Appropriated (will not be synch)</p>
+        <p class="Body">Pager	No Appropriated (will not be synch)</p>
+        <p class="Body">Primary 	No Appropriated (will not be synch)</p>
+        <p class="Body">Radio	No Appropriated (will not be synch)</p>
+        <p class="Body">Telex 	No Appropriated (will not be synch)</p>
+        <p class="Body">TTY/TDD	No Appropriated (will not be synch)</p>
+        <p class="Body">Office</p>
+        <p class="Body">Office from Main Company (office type HEAD)</p>
+        <p class="Body">Office on Contact Details</p>
+        <p class="Body">Profession</p>
+        <p class="Body">Enhancement:  add {pcn_profession} to Contact Details.  Not that important.</p>
+        <p class="Body">Manager’s Name	No Appropriated (will not be synch)</p>
+        <p class="Body">Assistance Name	</p>
+        <p class="Body">Nick Name</p>
+        <p class="Body">Spouse/Partner	Partner Title {ppc_partnertitle} Partner First Name {ppc_partner}, Last Name {ppc_partnersname}</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Custom	Married (check box)</p>
+        <p class="Body">Title</p>
+        <p class="Body">Title</p>
+        <p class="Body">Suffix	No Appropriated (will not be synch)</p>
+        <p class="Body">Birthday	 Enhancement: Add {pcn_dob} to Contact Details/Further Details</p>
+        <p class="Body">Anniversary 	 Enhancement:  Add {pcn)_anniversary) to Contact Details/Further Details</p>
+        <p class="Body">N/A	Initials</p>
+        <p class="Body">N/A	Gender</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">N/A	Identified Comments</p>
+        <p class="Body">CustomN/A	Grade</p>
+        <p class="Body">Custom – Yes this should be included on Outlook form	Sales Rep</p>
+        <p class="Body">Custom- Yes	Origin</p>
+        <p class="Body">Custom - Yes	Work Group</p>
+        <p class="Body">Custom - Yes	Sub Group</p>
+        <p class="Body">Custom – Yes (if being used)	Sub Group 2</p>
+        <p class="Body">Custom – Yes (if being used)	Sub Group 3</p>
+        <p class="Body">N/A – only need to show who the main contact is on the custom Company form.	Main Contact (check box)</p>
+        <p class="Body">N/A	Start Date</p>
+        <p class="Body">Custom (will be show a list of all associated in COINS projects as a list of grid).  Columns to include:</p>
+        <p class="Body">•	Project Number</p>
+        <p class="Body">•	Project Name</p>
+        <p class="Body">•	Client Name</p>
+        <p class="Body">•	Project Role</p>
+        <p class="Body">•	Status</p>
+        <p class="Body">•	Sub Status</p>
+        <p class="Body">•	Value	Opportunities/Projects</p>
+        <p class="Body">To be shown in Activities custom section 	Journals</p>
+        <p class="Body">Custom - Yes	Mailing lists</p>
+        <p class="Body">Addresses mapping</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Address will be based on COINS combined fields Address1, Address 2, Address 3, State, Zip Code and Country.</p>
+        <p class="Body">3.4.4.2	Companies</p>
+        <p class="Body">•	In Company record, ability to see all associated Contacts, Events, and CRM Projects (i.e. Leads, Proposals, Jobs)</p>
+        <p class="Body">•	Ability to update allowed fields online and offline (based on user permissions).</p>
+        <p class="Body">3.4.4.3	Projects (2nd Release)</p>
+        <p class="Body">•	Setting for Projects in a users CRM/COINS folder to appear in a folder in Outlook.</p>
+        <p class="Body">•	Based on User Permissions, user could have access to only Project they are Sales Rep of (or other defined roles), Projects in the users My CRM, or all/no Projects.</p>
+        <p class="Body">•	Ability to update online and offline.</p>
+        <p class="Body">Figure. MS Outlook Contacts, Companies, Project browse</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">3.4.5	Journals (Meetings/Tasks)</p>
+        <p class="Body">Appointments (Activity in Outlook to COINS Journals) synchronization should be both ways and will be controlled by COINS server side management settings. Activities will be synchronized along with their reminders if any exist.</p>
+        <p class="Body">It will only take place if Activates synch is allowed in Integration Server management settings (appropriate flags are checked on general and per component level, also is activities synch mapping enabled).</p>
+        <p class="Body">3.4.5.1	Tasks</p>
+        <p class="Body">All tasks created in COINS will be sync’d to MS Outlook Tasks.</p>
+        <p class="Body">For Tasks created in Outlook to sync with COINS, they must be checked/designated for synchronization with COINS.</p>
+        <p class="Body">All task transferred from COINS will have the Synch Marker enabled.</p>
+        <p class="Body">For new task in MS Outlook, a custom COINS Ribbon segment with Synch button will be available.</p>
+        <p class="Body">Figure. Task Synch Ribbon action</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">On click it should reload/unhide the customized MS Outlook Task form that contained all necessary COINS fields and lookups.</p>
+        <p class="Body">Figure. New COINS Outlook Task Form</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">It is required for Tasks:</p>
+        <p class="Body">•	Tasks to originate in Outlook and/or COINS.</p>
+        <p class="Body">•	Ability to identify the Task as a COINS task or not either through new COINS button or by Task Type.</p>
+        <p class="Body">•	Ability to update Tasks in both Outlook and COINS</p>
+        <p class="Body">•	Ability to attached docs</p>
+        <p class="Body">•	Synchronization of Tasks created offline in Outlook</p>
+        <p class="Body">•	Synchronize a task in Outlook to a COINS Companies/Contacts/Events/Projects/Personnel</p>
+        <p class="Body">Figure. MS Outlook to COINS Task UI fields Mappings</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Table. Task Fields Mapping</p>
+        <p class="Body">MS outlook Task	COINS Task</p>
+        <p class="Body">Subject</p>
+        <p class="Body">Subject</p>
+        <p class="Body">Start Date</p>
+        <p class="Body">Action Date (Date)</p>
+        <p class="Body">Custom 	Action Date (Time)</p>
+        <p class="Body">Due Date</p>
+        <p class="Body">Due Date</p>
+        <p class="Body">Custom – Yes this is required	Type</p>
+        <p class="Body">Status</p>
+        <p class="Body">•	Not Started</p>
+        <p class="Body">•	In Progress</p>
+        <p class="Body">•	Completed</p>
+        <p class="Body">•	Waiting on someone else</p>
+        <p class="Body">•	Deferred 	Status</p>
+        <p class="Body">•	Not Started</p>
+        <p class="Body">•	In Progress</p>
+        <p class="Body">•	Completed</p>
+        <p class="Body">•	Waiting</p>
+        <p class="Body">•	Deferred</p>
+        <p class="Body">Priority</p>
+        <p class="Body">•	Normal</p>
+        <p class="Body">•	Low</p>
+        <p class="Body">•	High 	Priority</p>
+        <p class="Body">•	Normal</p>
+        <p class="Body">•	Low</p>
+        <p class="Body">•	High</p>
+        <p class="Body">% Complete</p>
+        <p class="Body">% Complete</p>
+        <p class="Body">Reminder yes, no – check box</p>
+        <p class="Body">Reminder yes, no – check box</p>
+        <p class="Body">Reminder Date drop down</p>
+        <p class="Body">Date</p>
+        <p class="Body">Reminder Hours drop down</p>
+        <p class="Body">Time</p>
+        <p class="Body">Owner</p>
+        <p class="Body">Author</p>
+        <p class="Body">Description</p>
+        <p class="Body">Description</p>
+        <p class="Body">Custom – Yes this is required	Progress</p>
+        <p class="Body">Not necessary	Input Date</p>
+        <p class="Body">Not necessary	Category</p>
+        <p class="Body">Custom - Yes	User</p>
+        <p class="Body">Private	Private </p>
+        <p class="Body">Custom - Yes	Complete</p>
+        <p class="Body">Custom – Yes custom	Company</p>
+        <p class="Body">Office (only in lookup of Company)</p>
+        <p class="Body">Custom	Contact</p>
+        <p class="Body">Custom	Project</p>
+        <p class="Body">Custom	Personnel</p>
+        <p class="Body">Custom	Event</p>
+        <p class="Body">Total Work	No Appropriated</p>
+        <p class="Body">Actual Work Hours	No Appropriated</p>
+        <p class="Body">Mileage 	No Appropriated</p>
+        <p class="Body">Billing Information	No Appropriated</p>
+        <p class="Body">Custom	Reassigned By</p>
+        <p class="Body">Or</p>
+        <p class="Body">Enhancement:  Checkbox for “Assign Task”.  When checked, a Tab appears within the Task with functionality to assign the Task to multiple Personnel.  Checkboxes for “Keep an updated copy of this task on my task list” and “send me a status report when this task is complete”.</p>
+        <p class="Body">Custom	Next Stage</p>
+        <p class="Body">Recurrence	Enhancement:  Add Recurrence functionality to Tasks</p>
+        <p class="Body">•	If completion = 0%, cannot be selected status different from Not Started.</p>
+        <p class="Body">•	If completion not equal to 0%, Not Started status is not allowed.</p>
+        <p class="Body">•	If completion is 100%, only allowed status should be completed.</p>
+        <p class="Body">MS Outlook has a strict drop down values for reminder time and COINS has a free entry field (assumed this needs to be change with align to Outlook).   Correction:  The dropdown is optional, user can type in a specific time.  Although not required, it is desired to have a dropdown in COINS task for ease of use.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Issues: Outlook Task could be a Recurrent based – yes, COINS enhancement needed</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Other Not Mapped Outlook Tasks items:</p>
+        <p class="Body">Tags: Categories</p>
+        <p class="Body">Issue: Outlook follow up Tags has totally different logic from COINS follow up</p>
+        <p class="Body">Issue: Categories cannot be mapped.  Possible solution:  Can we map Categories to match Journal Types via Parameters?</p>
+        <p class="Body">Issue: According to Mockup will need to associate Task with Task to COINS Company Office, there is no appropriate in Outlook.  We need to have Offices data to be synch with Companies and accessible in Outlook.   Not necessary, addressed in about table.  Do not need to map office.</p>
+        <p class="Body">3.4.5.2	Meetings (MS Outlook Appointments, Events)</p>
+        <p class="Body">All Meetings from COINS will be transferred to MS Outlook default calendar.</p>
+        <p class="Body">Only marked with COINS Synch button task should be synchronized with COINS CRM from Outlook (from COINS to Outlook all current user Meetings will be auto transferred to Outlook if allowed by Meetings synch settings).</p>
+        <p class="Body">All Meetings transferred from COINS will have the Synch Marker enabled.</p>
+        <p class="Body">For new Meeting in MS Outlook within a context custom Coins Ribbon segment Synch button will be accessible.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">On click it should reload/unhide the customized MS Outlook Meeting form that contained all necessary COINS fields and lookups.</p>
+        <p class="Body">Figure. Customized Outlook Form for COINS Meeting</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">It is required for Meetings:</p>
+        <p class="Body">•	Meetings to originate in Outlook or COINS.</p>
+        <p class="Body">•	Ability to identify the Meeting as a COINS task or not either through new COINS button or by Type.</p>
+        <p class="Body">•	Ability to update Meetings in both Outlook and COINS</p>
+        <p class="Body">•	Ability to attached docs</p>
+        <p class="Body">•	Synchronization of Meetings created offline in Outlook</p>
+        <p class="Body">•	Synchronize a Meeting in Outlook to a COINS Companies/Contacts/Events/Projects/Personnel.</p>
+        <p class="Body">•	Ability to invite multiple attendees</p>
+        <p class="Body">Figure. MS Outlook to COINS Meeting UI fields Mappings</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">Table. Meetings Fields Mapping</p>
+        <p class="Body">MS outlook Meeting	COINS Meeting</p>
+        <p class="Body">Subject</p>
+        <p class="Body">Subject</p>
+        <p class="Body">To</p>
+        <p class="Body">Contact</p>
+        <p class="Body">Location</p>
+        <p class="Body">Location</p>
+        <p class="Body">Start Time</p>
+        <p class="Body">Action Date (Date)</p>
+        <p class="Body">Start Time (Time)</p>
+        <p class="Body">Action Date (Time)</p>
+        <p class="Body">End Time</p>
+        <p class="Body">Due Date</p>
+        <p class="Body">•		•</p>
+        <p class="Body">Priority (if available as for Tasks or Custom)</p>
+        <p class="Body">•	Normal</p>
+        <p class="Body">•	Low</p>
+        <p class="Body">•	High 	Priority (might be removed from COINS meetings ?)</p>
+        <p class="Body">•	Normal</p>
+        <p class="Body">•	Low</p>
+        <p class="Body">•	High</p>
+        <p class="Body">Custom  	Reminder yes, no – check box</p>
+        <p class="Body">Reminder Hours drop down</p>
+        <p class="Body">Period of time before (HH:MM)</p>
+        <p class="Body">All Day Event (check box)</p>
+        <p class="Body">All Day Meeting (check box)</p>
+        <p class="Body">Custom   (Owner if available as for Tasks or Custom)	Author</p>
+        <p class="Body">Description</p>
+        <p class="Body">Description</p>
+        <p class="Body">Custom	Type</p>
+        <p class="Body">Custom	Input Date</p>
+        <p class="Body">Custom	Category</p>
+        <p class="Body">Custom	User</p>
+        <p class="Body">Custom	Private</p>
+        <p class="Body">Custom	Progress</p>
+        <p class="Body">Custom	Complete</p>
+        <p class="Body">Custom	Follow up</p>
+        <p class="Body">Custom	Follow up type</p>
+        <p class="Body">Company (or Custom)	Company</p>
+        <p class="Body">Custom	Office</p>
+        <p class="Body">Custom	Project</p>
+        <p class="Body">Custom	Personnel</p>
+        <p class="Body">Custom	Event</p>
+        <p class="Body">Custom	Mailing List</p>
+        <p class="Body">Accepted ()	No Appropriated</p>
+        <p class="Body">Declined ()	No Appropriated</p>
+        <p class="Body">Tentative ()	No Appropriated</p>
+        <p class="Body">Required (attendees)	No Appropriated</p>
+        <p class="Body">Optional (attendees)	No Appropriated</p>
+        <p class="Body">Resources (attendees)	No Appropriated</p>
+        <p class="Body">Issue: Priority</p>
+        <p class="Body">Issue: Reminders structure mismatched</p>
+        <p class="Body">MS Outlook has a strict drop down values for remainder before meeting time and COINS has a free entry field (assumed this needs to be change with align to Outlook).</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">3.4.6	Email Integration</p>
+        <p class="Body">When link an email to COINS there should be a possibility to associate additional contacts or personnel but only to One Project or One event</p>
+        <p class="Body">3.4.6.1	New Emails</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">•	COINS Icon within email.   User clicks on icon to get a popup box.</p>
+        <p class="Body">o	Company field:  Lookup table, linked to [ci_company] table in COINS, include columns for Company Name, Office Name, Address and Contact.  Within lookup, user can filter and search by Company Name, City, State and Country, Work Group and Sub Groups, Sales Rep and My Companies.</p>
+        <p class="Body">o	Contact field:  Lookup table includes columns for Last Name, First Name, Middle Name.  If Company is selected, only Contacts of that Company are available.  If no Company is selected, all Contacts are available.  When a Contact is selected, the Company of that Contact will autofill the Company field.</p>
+        <p class="Body">o	Project field:  Lookup table, linked to [pi_project] table in COINS, include columns for Project Name, Client Name, Description, Project Number, Status, Sub Status.  Filter/search by Project Name, Address (city/state/country), Project Number, Sales Rep, Work Group, Sub Groups and My Projects.</p>
+        <p class="Body">o	Personnel:  Lookup table linked to pp_organisation table in COINS.</p>
+        <p class="Body">o	Event:  Lookup linked to event table in COINS.</p>
+        <p class="Body">o	Mailing:  Lookup linked to mailing table in COINS.</p>
+        <p class="Body">o	Attachment: Email attachments will load as document attachments to the email integrated in COINS.  The user can uncheck the checkbox if the attachments are not needed in COINS.</p>
+        <p class="Body">o	Autofill:  User can use lookup or begin typing in each field for an auto-fill dropdown.  Dropdown results by any part of the record field name.  No wildcards needed for search.</p>
+        <p class="Body">o	Smart Autofill:  Based on the email address in the “To” field of the email, the Email Integration will Autofill with the corresponding Company, Contact and/or Personnel that matches that email address with COINS.</p>
+        <p class="Body">	If more than one email address is listed, the popup will search and display the first email listed.  When the user selects “Add” within the popup, the fields will Autofill with the next matching email address to COINS.</p>
+        <p class="Body">3.4.6.2	Existing Emails in Outlook</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">•	Select email or multiple emails in Outlook from any Outlook folder and synchronize them to selected Companies, Contacts, Project, Event, Mailing and Personnel in COINS.</p>
+        <p class="Body">•	Ability to integrate with additional Companies, Contacts, Projects and Personnel with the Add button.</p>
+        <p class="Body">•	Ability to save the attachments to the Email Activity in COINS (see checkbox in above example).  Also have the ability to not save attachments to COINS by unchecking the Attachments checkbox.</p>
+        <p class="Body">•	Ability to update the COINS CRM Events records.</p>
+        <p class="Body">o	COINS CRM has an Events workbench.  An Event contains lists of contacts.   Currently COINS has the capability of sending email invitations to these event lists.   With Outlook Integration, need the ability for return emails from the Invitation Lists to automatically update the Accepted or Declined fields in the COINS Event (will also possible have a “Tentative” field – to be determined).  These emails should also automatically link to the event, the contact and the contact’s company.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">3.4.7	Definition of Offline</p>
+        <p class="Body">The Offline for MS Outlook Add-on should be any state when COINS server is not available, and Add-on to synchronization transaction cannot be executed, from this point all changes to COINS integrated entities in Outlook should be stored locally and will be synchronized by time stamp in any possible occasion to synch with COINS Server (such connection availability will be checked by scheduled synch operation or on demand by pressing the Synch Now button).</p>
+    </body>
+</html>

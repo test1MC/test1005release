@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="836" MadCap:lastWidth="601">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>[%=Variables.Fm Application caps%] and Invoice Fields</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">
+      <MadCap:variable name="Variables.Fm Application caps" /> and Invoice Fields</h1>
+    <p>The following fields are available on both <MadCap:variable name="Variables.Fm Application caps" /> and Invoice documents.</p>
+    <p />
+    <table class="TableStyle-COINSBasic" border="0" style="mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <col class="TableStyle-COINSBasic-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">SOR items</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_completevalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Complete - This figure gives a value for the amount of work that has been completed (that is, items marked as 'Ready for Invoicing' but not yet invoiced as well as work already invoiced). </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_sorcost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> SOR Item Estimated Cost (quantity * cost) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_soricmarkup </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total SOR Item Invoice Class Markup </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_sorvalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total SOR Item Value (excluding markup) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_sorvaluemkp </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total SOR Item Value (including markup) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_totalvalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This figure gives a value for the amount that is invoicable (either work done but not yet invoiced or work already invoiced) (RO_swj_wipvalue + RO_swj_completevalue) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> SOR Item Value (quantity * value) (includes Invoice class mark-up) (same as RO_swj_sorvaluemkp) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_wipvalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This figure gives a value for the amount of work in Returns the total percent complete of all sor items not yet marked as Ready for Invoicing (value * % complete). </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Instructed</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_instructedcost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Instructed Cost - The instructed cost is the total of 'billable' cost transactions (once the markup has been applied). The figure includes the amount that has already been invoiced. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_instructedcosticmkp </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Instructed cost invoice class mark-up </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_instructedicmkp </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Instructed Invoice Class Mark-up </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_instructedSORicmkp </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Instructed SOR item Invoice Class Mark-up </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_instructedSORvalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The 'Schedule of Rates' Items total instructed value is the accumulated total value of any 'approved' schedule of rate items (includes ic markup) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_instructedvalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The 'Instructed' figure gives a value for the amount of work that can potentially be invoiced for this <MadCap:variable name="Variables.fm job" />. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Ready for invoicing</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_rficost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total value of cost transactions currently marked as Ready for Invoicing on this <MadCap:variable name="Variables.fm job" /> (includes any markups) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_rfivalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total value of scheduled items currently marked as Ready for Invoicing on this <MadCap:variable name="Variables.fm job" /> (includes ic markup) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_servicefees </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total value of 'service fee' scheduled items currently marked as Ready for Invoicing on this <MadCap:variable name="Variables.fm job" /> (includes ic markup) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_totrfivalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The total amount that is ready for invoicing. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">
+              <MadCap:variable name="Variables.fm applications" style="text-transform: capitalize;" />
+            </p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_AppliedFor </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total amount Applied For </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_AppliedForMonth </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total amount Applied For (Calendar Month) Masked:&lt;Date&gt; </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_application </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Gross Amount of <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /><br />(Status: A=Applied for, C=Certified, Q=Queried, X=Cancelled, I=Invoiced, *=All) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_application_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total Amount of <MadCap:variable name="Variables.fm application" style="text-transform: capitalize;" /><br />(Status: A=Applied for, C=Certified, Q=Queried, X=Cancelled, I=Invoiced, *=All) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Invoiced
+							</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_sjv_invoiced </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Gross Invoiced Amount (FM invoices) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_sjv_invoiced_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Net Invoiced Amount (FM invoices) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_invoiced </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Invoiced (as recorded in SL) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_invoiced_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Invoiced (Net) (as recorded in SL) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_invoiced_vat </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Invoiced (<MadCap:variable name="Variables.vat" />) (as recorded in SL) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_invoicedcost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Invoiced Cost transaction - The invoiced cost is the total of 'billable' cost transactions (after the markup has been applied) that have been invoiced. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_invoices </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Number of FM <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Invoices </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_totinvoicedvalue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The total value invoiced so far (both schedule of rates items and cost transactions) (includes invoice charges) (should be same as RO_sjv_invoiced_net) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Revenue
+							</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_FMJobRevenue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">FM <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Revenue as held in <MadCap:variable name="Variables.Jc Contract caps" /> Status (Masked) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_revenue_FM_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Revenue of FM posted invoices (Net) - revenue of all posted FM Invoices (i.e. Excluding other revenue) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_revenue_other_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Other Revenue (Net) - revenue against this <MadCap:variable name="Variables.fm job" /> in SL that was added not via FM Invoicing (for example, Journalled revenue) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Costs
+							</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_FMJobCosts </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Calculates the total amount of cost transactions associated with an FM <MadCap:variable name="Variables.fm job" /> for the given period (Masked: &lt;PeriodType&gt;[|&lt;PeriodOffset&gt;[|&lt;FDate&gt;[|&lt;CategoryMasks&gt;[|&lt;CostcodeMasks&gt;]]]]) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_FMJobHrs </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">FM <MadCap:variable name="Variables.fm job" style="text-transform: capitalize;" /> Actual Hours (Masked: &lt;PeriodType&gt;[|&lt;PeriodOffset&gt;[|&lt;FDate&gt;[|&lt;CostcodeMasks&gt;[|&lt;CategoryMasks&gt;[|&lt;AnalysisMask&gt;]]]]]) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_accrued </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The total amount of accrued costs incurred to date. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_accruedMAPL </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Accrued Materials and <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Costs in <MadCap:variable name="Variables.jc contract" /> currency for this <MadCap:variable name="Variables.fm job" /> entered using the Procurement system </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_accruedPL </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Accrued <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Non-allocated Costs in <MadCap:variable name="Variables.jc contract" /> currency for this <MadCap:variable name="Variables.fm job" /> entered using the Procurement system </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_accruedSC </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Accrued Subcontract Costs in <MadCap:variable name="Variables.jc contract" /> currency for this <MadCap:variable name="Variables.fm job" /> entered using the Procurement system </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_act_cost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The total actual costs against this <MadCap:variable name="Variables.fm job" /> or JC Section to date. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_committed </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Committed Costs - The total amount of committed costs incurred to date. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_committed_masked </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Committed costs (masked: &lt;CostcodeMasks&gt;[|&lt;CategoryMasks&gt;] </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_committedSC </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Committed Subcontract Costs in <MadCap:variable name="Variables.jc contract" /> currency for this <MadCap:variable name="Variables.fm job" /> entered using the Procurement system </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_ignoredcost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The ignored total cost is the value of all the cost transactions associated with the FM <MadCap:variable name="Variables.fm job" /> that have been classed as not being billable due to their category. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_unbillablecost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The unbillable cost total is the value of all the cost transactions that have been marked as unbillable. The 'Billable' flag can be set/unset on the 'Costs' tab. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Profit Margin
+							</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_margin% </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">sw_job.swj_invoice_td - RO_FMJobCosts("TD") / sw_job.swj_invoice_td * 100 </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Not used in Transaction invoice type
+							</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_act_value </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This value is the total of any FM Invoices, <MadCap:variable name="Variables.fm applications" style="text-transform: capitalize;" /> and CS certificates for this <MadCap:variable name="Variables.fm job" /> (Complex measured). </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_certifyValue </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Certified Value (only used with 'simple Measured' invoice type) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_CHE </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The total amount of Claims Handling Element for this <MadCap:variable name="Variables.fm job" />. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_comparison </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Returns the difference between the total value of the <MadCap:variable name="Variables.fm job" /> and the current costs (complex measured). </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_cost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Costs - This field contains the total amount of Costs (in the <MadCap:variable name="Variables.Jc Contract caps" /> Status ledger) against this <MadCap:variable name="Variables.fm job" /> or JC Section (Cost+). </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_discount </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The total discount applicable to this <MadCap:variable name="Variables.fm job" /> (cost+). </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Returns the total net value of this <MadCap:variable name="Variables.fm job" /> (only used in . </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_vat </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Returns the total <MadCap:variable name="Variables.vat" /> value of this <MadCap:variable name="Variables.fm job" />. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_avail_amt </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This is the Original Value of the <MadCap:variable name="Variables.fm job" /> minus any ONTE values on Tasks. It therefore holds the total amount available to be used on Tasks. </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_AF </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Applied For - This field returns the total value of all <MadCap:variable name="Variables.fm applications" /> on this <MadCap:variable name="Variables.fm job" /> (Complex measured). </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_AF_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total net value of all <MadCap:variable name="Variables.fm applications" /> on this <MadCap:variable name="Variables.fm job" />.(Complex measured) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_AF_vat </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total <MadCap:variable name="Variables.vat" /> value of all <MadCap:variable name="Variables.fm applications" /> on this <MadCap:variable name="Variables.fm job" /> (Complex measured) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_cert </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total value of all certified <MadCap:variable name="Variables.fm applications" /> on this <MadCap:variable name="Variables.fm job" /> (Complex measured) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_cert_net </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total net value of all certified <MadCap:variable name="Variables.fm applications" /> on this <MadCap:variable name="Variables.fm job" /> (Complex measured) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_value_cert_vat </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This field returns the total <MadCap:variable name="Variables.vat" /> value of all certified <MadCap:variable name="Variables.fm applications" /> on this <MadCap:variable name="Variables.fm job" /> (Complex measured) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_profitloss </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Total Profit/Loss Calculated as: RO_FMJobRevenue("TD") - RO_swj_act_cost - RO_swj_committed - RO_swj_accrued* is a character field </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Budgets
+							</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_budget </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Returns the JC budget value for the FM <MadCap:variable name="Variables.fm job" /> for the given period depending on CalcType where CalcType = VALUE, COST, QTY, HRS, MARGIN (difference between value and cost), or MARGIN% (difference between value and cost as a proportion of cost)<br />Masked: &lt;CalcType&gt;[|&lt;BudgetType&gt;[|PeriodType[|&lt;PeriodOffset&gt;[|&lt;FDate&gt;[|&lt;CostcodeMasks&gt;[|&lt;CategoryMasks&gt;]]]]]]) </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr class="TableStyle-COINSBasic-Head-Header1">
+          <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" colspan="2">
+            <p class="TableHeader">Profit/Loss
+							</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_FMJobRevenue("TD") </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_act_cost </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_swj_committed </td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1"> </td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">RO_swj_accrued </td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1"> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <h2 MadCap:autonum="1.1 ">Additional fields</h2>
+    <p>
+      <strong>
+        <em>sw_invline.spare_dec1</em>
+      </strong> - net value for the invoice line<br /><strong><em>sw_invline.spare_dec2</em></strong> - <MadCap:variable name="Variables.vat" /> value for the invoice line<br /><strong><em>sw_invline.sjv_value</em></strong> - gross value for the invoice line</p>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>
+              <em>swj_totnett <br />swj_totvat<br />swj_totgrss</em>
+            </strong>
+          </td>
+          <td style="VERTICAL-ALIGN: middle;">- </td>
+          <td style="VERTICAL-ALIGN: middle;">These give the total for the <MadCap:variable name="Variables.fm job" /> within the <MadCap:variable name="Variables.fm application" />.  That is, these fields only work when used on an FM <MadCap:variable name="Variables.fm application" /> or invoice form.  They can be used on all invoice styles.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For invoice class subtotal:</p>
+    <p>
+      <strong>
+        <em>fmi_code </em>
+      </strong>- invoice class code<br /><strong><em>fmi_desc</em></strong> - invoice class description</p>
+    <p>Note: these fields can only be used on these forms not generally</p>
+    <p>
+      <strong>
+        <em>fmi_totnett</em>
+      </strong> - total net value for invoice class<br /><strong><em>fmi_totnett_mk^0</em></strong> - total net value minus all mark-ups for invoice class<br /><strong><em>fmi_totvat_mk^0</em></strong> - total <MadCap:variable name="Variables.vat" /> value minus all mark-ups for invoice class<br /><strong><em>fmi_totgrss_mk^0</em></strong> - total gross value minus all mark-ups for invoice class<br /><strong><em>fmi_markup1</em></strong> - mark-up 1 % for invoice class<br /><strong><em>fmi_totnett_mk^1</em></strong> - total net value due to mark-up 1 for invoice class<br /><strong><em>fmi_totvat_mk^1</em></strong> - total <MadCap:variable name="Variables.vat" /> value due to mark-up 1  for invoice class<br /><strong><em>fmi_totgrss_mk^1</em></strong> - total gross value due to mark-up 1 for invoice class<br /><strong><em>fmi_markup2</em></strong> - mark-up 2 % for invoice class<br /><strong><em>fmi_totnett_mk^2</em></strong> - total net value due to mark-up 2 for invoice class<br /><strong><em>fmi_totvat_mk^2</em></strong> - total <MadCap:variable name="Variables.vat" /> value due to mark-up 2 for invoice class<br /><strong><em>fmi_totgrss_mk^2</em></strong> - total gross value due to mark-up 2 for invoice class<br /></p>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head>
+        <link href="../../../Resources/TableStyles/COINS_LR_Simple.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Dynamic Links/Navigation Buttons/Options Menus</h1>
+        <p>Currently the in-line page has been hard-coded to always look at one contract.&#160; We are now going to change this so that the drill-down will dynamically know from which contract it is being called.</p>
+        <h2>Edit the Function of the Detail Page</h2>
+        <p>We will now add the ROWID of the tables known to the calling page. As we need to tell the Detail Page (Exercise 2 &amp; 3) where it has come from.&#160;&#160; We add ROWID's to the parameter of a function.</p>
+        <table style="width: 100%; caption-side: top; mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                    <td class="TableStyle-COINS_LR_Simple-BodyB-Column1-Body1">Function Parameter</td>
+                    <td class="TableStyle-COINS_LR_Simple-BodyA-Column1-Body1"> jc_jobRowId={jc_jobRowId}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>Update the Query to be Dynamic</h2>
+        <p>&#160;</p>
+        <p>In the Body Tab  on Exercise 2 we need to update the Query to read.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css');border-left-style: none;border-left-width: 0.5pt;border-left-color: #97999b;border-right-style: none;border-right-width: 0.5pt;border-right-color: #97999b;border-top-style: none;border-top-width: 0.5pt;border-top-color: #97999b;border-bottom-style: none;border-bottom-width: 0.5pt;border-bottom-color: #97999b;margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>Header Table</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>jc_job</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>Body Query</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>FOR EACH jc_costcode WHERE jc_costcode.kco = {kco}<br /> AND jc_costcode.job_num = '{job_num}'</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_1.png" class="FullWidth" />
+        </p>
+        <p>Click the Save Button <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 1 Review Writing_4.png" style="width: 25px;height: 25px;" /> to save the form.</p>
+        <h2><span style="margin-right: 0pt;">4.3 </span>Running the Function</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_2.png" alt="33.png" class="FullWidth" />
+        </p>
+        <p>Calling page now passes rowID of jc_job record to the detail pages.</p>
+        <p>However, in order to choose another contract, the user must return to the previous screen.</p>
+        <h2><span style="margin-right: 0pt;">4.4 </span>Add Navigation Buttons to Detail Screen</h2>
+        <p>On the Header Tab of the Summary Page (Exercise 3) - you can enter the function name of the calling procedure (Exercise 1) into the Header Query Field.&#160; </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_3.png" class="FullWidth" />
+        </p>
+        <p>This will add the Navigation buttons to the context section of your page enabling the ability to Navigate to different Contracts without the need to go back to the previous screen. The navigation buttons which are available -&#160; FIRST,NEXT,PREV,LAST.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_4.png" alt="35.png" class="FullWidth" />
+        </p>
+        <h2>Add Options Menu to Screen.</h2>
+        <p>Go to Function of the Detail Screen (Exercise 3) - Copy this function as a Menu Function and Add an 'O' to the end of the function Name.</p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINS_LR_Simple.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-COINS_LR_Simple" cellspacing="0">
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <col class="TableStyle-COINS_LR_Simple-Column-Column1" />
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>Function</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>xxM3Exercise3O&#160;&#160;&#160;&#160;&#160;&#160; (This is an 'O' not a zero)</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>Name</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>Can be left or changed to identify as Options Menu</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>Type</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>Change to Menu</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>Module</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>Leave as Current Module</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-COINS_LR_Simple-Body-Body1">
+                <td class="TableStyle-COINS_LR_Simple-BodyE-Column1-Body1">
+                    <p>Category</p>
+                </td>
+                <td class="TableStyle-COINS_LR_Simple-BodyD-Column1-Body1">
+                    <p>Change Category to also be Menu.</p>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_5.png" class="FullWidth" />
+        </p>
+        <p>It will not appear on the page until a program has been added to the menu. </p>
+        <p>Select the new function via the link and go to Menu Items </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_6.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Add the following standard <MadCap:variable name="General.ProductName" /> function to the menu.&#160;&#160;&#160; %WJCRJOB – (Contract Summary Profit Report). </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_7.png" class="FullWidth" />
+        </p>
+        <p>Now run the function again, and an Option menu should be available on the top right of the screen.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/M3 Exercises/Exercise 4 Dynamic Links navigation_8.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Buy-in Progression Setup</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Buy-in Progression Setup</h1>
+    <p>The <span class="function" title="Function:%WHS102ASHPX">Part Exchange Workbench - Buyin Progresssion</span> tab on the Plot Summary of the <span class="function" title="Function:%WHS1020SHPX">Part Exchange Workbench</span> shows on a single screen the steps that the buy-in of a part exchange property must go through, the expected dates for each step, and if the step has happened, the date that it happened.  To set up the list of steps, use <span class="function" title="Function:%WHS2251BSRC">PX Buyin Progression</span>.</p>
+    <div class="process">
+      <h2 class="print">To configure the buy-in progression screen:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WHS2251BSRC">PX Buyin Progression</span>.</li>
+        <li>For each step you want on the Buy-in Progression screen, enter a line record. <MadCap:variable name="General.ProductName" /> fills in the line number by default; you can change it if you want to insert a line between two existing lines.</li>
+        <li>Each line can show either an actual date or an expected date or both. Specify where you want <MadCap:variable name="General.ProductName" /> to get the each date from. </li>
+        <p>Actual dates can be one of the following:</p>
+        <ul>
+          <li>The date when a Sales Workbench Event or Part-Exchange Workbench Event occured. In the <span class="field">Source</span> field, select <span class="userinput">Event Date</span> or <span class="userinput">Plot Event</span> and in the <span class="field">Event</span> field enter or select the code of the event. If the event is a construction stage, you also need to enter the code for the stage.</li>
+          <li>Manually entered by the user.  In the <span class="field">Source</span> field, select <span class="userinput"><span class="userinput">Manual Input</span></span>.</li>
+          <li>Any of various key dates that relate to the buy-in (exchange deadline date, offer accepted date, offer deadline, offer sent, unconditional exchange date) or the associated plot (exchange deadline, unconditional exchange date). In the <span class="field">Source</span> field, select the appropriate code.</li>
+        </ul>
+        <p>Expected dates can be one of the following: </p>
+        <ul>
+          <li>Manually entered by the user. In the <span class="field">Source</span> field, select <span class="userinput">Manual Input</span>. To have <MadCap:variable name="General.ProductName" /> enter a default date (which the user can update) based on the number of days after the reservation date of the associated plot, enter the number of days in the <span class="field">Plot Reserve Offset</span> field.</li>
+          <li>Any of various key dates that relate to the buy-in (exchange deadline date, expected completion date, expected exchange date, expected occupation date) or the associated plot (exchange deadline date, expected build completion date, expected completion date, expected exchange date, expected occupation date). In the <span class="field">Source</span> field, select the appropriate code. To use the date as a default and allow the user to update it, <MadCap:variable name="Variables.tick" /> the <span class="field">Update</span> field.</li>
+          <li>An expected date entered on the Sales Progression screen.  In the <span class="field">Source</span> field, select <span class="userinput">Plot Expected Date Input</span>, then enter the line number of the line on the Sales Progression screen.</li>
+        </ul>
+        <li>If you do not want the line to show a date in one column, set the corresponding <span class="field">Source</span> field to <span class="userinput">Not Applicable</span>.</li>
+      </ol>
+    </div>
+  </body>
+</html>

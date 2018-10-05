@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="2939" MadCap:lastWidth="1521" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Part Exchange Data</h1>
+        <p>&#160;</p>
+        <p>A sample XML message to send a query to <MadCap:variable name="General.ProductName" /> to access part exchange information is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswssys1" method="dbquery" </p>
+        <p class="code">pcQuery="FOR EACH hs_partex WHERE hs_partex.kco = 1" pcFields="kco,hpx_code,hpx_add__1,hpx_add__2,hpx_add__3,hpx_add__4,hpx_pcode,hpx_location,hpx_desc,RW_hpx_caption__4^1,RW_hpx_caption__5^1,job_num,vwb_code" /&gt; </p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p class="code">&#160;</p>
+        <p>The above request would retrieve all part exchange properties in <MadCap:variable name="General.ProductName" /> company 1.&#160; Note in the above example we have requested the value of a PX caption field.&#160; The field RW_hpx_caption__4^1 would return the value of the 4th caption in the caption group with a caption group code of 1.</p>
+        <p>&#160;</p>
+        <p>This would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswssys1" method="dbquery" </p>
+        <p class="code">pcQuery="FOR EACH hs_partex WHERE hs_partex.kco = 1" pcFields="kco,hpx_code,hpx_add__1,hpx_add__2,hpx_add__3,hpx_add__4,hpx_pcode,hpx_location,hpx_desc,RW_hpx_caption__4^1,RW_hpx_caption__5^1,job_num,vwb_code"&gt;</p>
+        <p class="code">&lt;record hs_partexRowid="0x00f03229"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;hpx_code&gt;176&lt;/hpx_code&gt; </p>
+        <p class="code">&lt;hpx_add__1&gt;Coins Building&lt;/hpx_add__1&gt; </p>
+        <p class="code">&lt;hpx_add__2&gt;The Grove&lt;/hpx_add__2&gt; </p>
+        <p class="code">&lt;hpx_add__3&gt;Slough&lt;/hpx_add__3&gt; </p>
+        <p class="code">&lt;hpx_add__4&gt;&lt;/hpx_add__4&gt; </p>
+        <p class="code">&lt;hpx_pcode&gt;SL1 1QP&lt;/hpx_pcode&gt; </p>
+        <p class="code">&lt;hpx_location&gt;1&lt;/hpx_location&gt; </p>
+        <p class="code">&lt;hpx_desc&gt;A flat in slough&lt;/hpx_desc&gt; </p>
+        <p class="code">&lt;RW_hpx_caption__4_1&gt;000176.jpg&lt;/RW_hpx_caption__4_1&gt; </p>
+        <p class="code">&lt;RW_hpx_caption__5_1&gt;TRUE&lt;/RW_hpx_caption__5_1&gt; </p>
+        <p class="code">&lt;job_num&gt;star7&lt;/job_num&gt; </p>
+        <p class="code">&lt;vwb_code&gt;b2&lt;/vwb_code&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;record hs_partexRowid="0x00e7ef82"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;hpx_code&gt;177&lt;/hpx_code&gt; </p>
+        <p class="code">&lt;hpx_add__1&gt;5 Summer Lane&lt;/hpx_add__1&gt; </p>
+        <p class="code">&lt;hpx_add__2&gt;Maidenhead&lt;/hpx_add__2&gt; </p>
+        <p class="code">&lt;hpx_add__3&gt;Berskhire&lt;/hpx_add__3&gt; </p>
+        <p class="code">&lt;hpx_add__4&gt;&lt;/hpx_add__4&gt; </p>
+        <p class="code">&lt;hpx_pcode&gt;SL6 4EE&lt;/hpx_pcode&gt; </p>
+        <p class="code">&lt;hpx_location&gt;02&lt;/hpx_location&gt; </p>
+        <p class="code">&lt;hpx_desc&gt;3 bed detached siutuated close to local amenities.&lt;/hpx_desc&gt; </p>
+        <p class="code">&lt;RW_hpx_caption__4_1&gt;front_elevation_000177.jpg&lt;/RW_hpx_caption__4_1&gt; </p>
+        <p class="code">&lt;RW_hpx_caption__5_1&gt;FALSE&lt;/RW_hpx_caption__5_1&gt; </p>
+        <p class="code">&lt;job_num&gt;star7&lt;/job_num&gt; </p>
+        <p class="code">&lt;vwb_code&gt;b2&lt;/vwb_code&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p class="code">&#160;</p>
+    </body>
+</html>

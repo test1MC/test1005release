@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/Stylesheets/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>[%=Variables.Se Service Order caps%] Billing</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 "><MadCap:variable name="Variables.Se Service Order caps" /> Billing</h1>
+        <p class="Body">In order for a billable value to be calculated for a nonbillable <MadCap:variable name="Variables.Cost Head caps" />, the <MadCap:variable name="Variables.Se Service Order caps" /> must reference the substitute <MadCap:variable name="Variables.Cost Head caps" /> within a billable <MadCap:variable name="Variables.Cost Head caps" /> Group (for example, AEX).   The billable <MadCap:variable name="Variables.Cost Head caps" /> Group defines the Billing Method to use for the nonbillable activity.  To calculate a billable value, the <span class="Field">Bill-To </span>field in the <MadCap:variable name="Variables.Se Service Order caps" /> must be set to <strong>Customer </strong>via Allowable Work.</p>
+        <p class="Body">When <strong>Generating Detail Lines from Costs</strong>, <strong><MadCap:variable name="Variables.Se Visit caps" /> Detail</strong>, and <strong>PO Lines, </strong>the <strong>Apply Billing Rates</strong> process is run if a line's <span class="Field">Billing Method </span>is NOT nonbillable.    Processing a nonbillable line <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>occurs when the parameter <span class="parameter">SE/BILAGRCH</span> contains a matching <MadCap:variable name="Variables.Cost Head caps" />. Processing is as follows:</p>
+        <ul>
+            <li class="ListBullet3">The Line’s <span class="Field"><MadCap:variable name="Variables.Cost Head caps"></MadCap:variable></span> is substituted before <strong>Apply Billing Rates</strong> is run.   </li>
+            <li class="ListBullet3">The substitute <span class="Field"><MadCap:variable name="Variables.Cost Head caps" /></span>, <span class="Field"><MadCap:variable name="Variables.Cost Head caps" /> Group</span>, and <span class="Field">Billing Method </span>are assigned to the billing line.</li>
+            <li class="ListBullet3">The <strong>Generate From Costs </strong>process sets the <span class="Field">Billing Method </span>based on the billable values returned.   <strong>Generate From <MadCap:variable name="Variables.Se Visit caps"></MadCap:variable> Detail </strong>and other processes must set the following fields on the Detail Line from the substitute <span class="Field"><MadCap:variable name="Variables.Cost Head caps" /> Group</span>:</li>
+            <li class="ListBullet4"><span class="Field">Billing Method</span>
+            </li>
+            <li class="ListBullet4"><span class="Field">Cost Multiplier</span>
+            </li>
+            <li class="ListBullet3">The calculated <strong>Subtotal Amount </strong>for the line is copied to the <span class="Field">Discount Amount </span>and multiplied by -1, resulting in a <span class="Field">Total Amount </span>of $0.00 for the line, as shown in <MadCap:xref href="#SubtotalDiscountAmts" class="ImageRef"><i>Figure 1:  Subtotal and Discount Amounts</i></MadCap:xref>.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="SubtotalDiscountAmts"></a>Subtotal and Discount Amounts</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE064_Images/SE064_SubtotalDiscountAmts.png" class="MaxPrintWidth" />
+        </p>
+        <MadCap:pageBreak />
+        <p class="NoteHeaderIndent">Notes:</p>
+        <ul>
+            <li class="ListBullet3">The value of Estimate Tax is $0 since the Line’s <span class="Field">Total Amount </span>is $0.</li>
+            <li class="ListBullet3">Add-ons based on the Cost Multiplier are not calculated since the <span class="Field">Total Amount </span>is $0.</li>
+        </ul>
+    </body>
+</html>

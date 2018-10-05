@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="671" MadCap:lastWidth="1302">
+  <head>
+    <title>Asset Captions</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Asset Captions</h1>
+    <p>Captions are fields that allow you to record information about an asset that would not normally be held in the <MadCap:variable name="General.ProductName" /> system as standard, and for which fields are not provided.</p>
+    <p>Captions on their own are for information only; you can <MadCap:variable name="Variables.enquire" /> and report on them, but there is no processing associated with them.  However, you can link asset captions to triggers, so that when you update a caption, <MadCap:variable name="General.ProductName" /> updates the triggers linked to it.  This means <MadCap:variable name="General.ProductName" /> can issue warnings, or stop users selecting the asset, when certain <MadCap:variable name="Variables.expiry" /> conditions have been met (for example, when a service or insurance renewal is due); see <a href="WDFA0006_Linking_Triggers_to_Captions.html">Linking Triggers to Captions</a>.<br /></p>
+    <div class="process">
+      <h2 class="print">To set up captions:</h2>
+      <ol>
+        <li>Set up caption groups (using <span class="function" title="Function:%WFA2154BCGR&quot;">Caption Maintenance</span> to set up Captions.</li>
+        <ul>
+          <li>The <span class="field">Group </span>and <span class="field">Type </span>you select on the caption govern the additional tabs available after you click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+          <li>For character captions, you can update a list of allowable values. If you want to allow any value (in other words, to make the caption a free-text field) leave the list blank.</li>
+          <li>For captions that belong to groups configured as Update or Warn, specify which functions allow you to update the caption: Dispatch, Return, Workshop <MadCap:variable name="Variables.pc jobcard" style="text-transform: capitalize;" />, Timesheet, Daily Timesheet, Picking List Workbench.</li>
+          <li>For captions that belong to groups configured as Update, add the triggers.
+<p class="noteheader">NOTE</p><div class="note">Workshop <MadCap:variable name="Variables.pc jobcard" style="text-transform: capitalize;" /> already allows update of an <span class="field">Odometer </span>field. If you want to use the odometer reading to update a trigger, use a caption for odometer and ignore (or hide) the existing <span class="field">Odometer </span>field.</div></li>
+        </ul>
+        <li>On <span class="function" title="Function:%WFA2010BFAG&quot;">Asset Captions Defaults</span>.</li>
+        <li>If both of these are blank, <MadCap:variable name="General.ProductName" /> uses the default on the caption.</li>
+        <MadCap:relationshipsProxy class="relatedTopics" />
+      </ol>
+    </div>
+  </body>
+</html>

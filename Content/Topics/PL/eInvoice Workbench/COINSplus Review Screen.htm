@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />COINSplus Review Screen</h1>
+        <p>A list of individual invoices is presented in this screen.&#160; Pressing the Create button invokes the standard <MadCap:variable name="Variables.Purchase Ledger caps" /> batch creation program. When this process is complete a true PL batch of invoices is created from all invoices not held back in the workbench and without an exception flag<MadCap:footnote class="footnote"><p> If the PL/AUTOPSTE parameter is set to Y (or the PL/AUTOPSTE parameter is blank and the PL/AUTOPOST parameter is set to Y) the invoices are placed on the invoice register; otherwise an unposted batch of invoices is created to be dealt with later in the <MadCap:variable name="Variables.Purchase Ledger caps" />.</p></MadCap:footnote>. The Invoices will then be cleared from the workbench leaving only those purposely held or those that require further attention to resolve any exceptions. </p>
+        <p>When all invoices in a message have been moved to the <MadCap:variable name="Variables.Purchase Ledger caps" /> the message is no longer visible in the workbench’s Load/Pending screen.</p>
+        <p>An invoice for whatever reason that cannot be moved to the <MadCap:variable name="Variables.Purchase Ledger caps" /> will be flagged as ERR in the right hand column, an error or more precisely an exception. </p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">COINSplus Review screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/COINSplus Review Screen.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>By clicking Filter you will see only those invoices that have been flagged as exceptions. By clicking Status you can see what the exception is for a particular invoice.&#160;&#160; </p>
+        <p>More detail about an invoice can be seen by pressing the Details button and, if possible, any exceptions can be resolved here. Erroneous Purchase Order numbers and duplicated Supplier Invoice numbers can be corrected in the workbench. If an exception can’t be resolved the invoice will remain in the workbench. If the parameter EC/SHOWINV<MadCap:footnote class="footnote"><p> Parameters are shown preceded by the module where they are found. So EC/SHOWINV indicates that the SHOWINV parameter is available in the Ecommerce configuration program.</p></MadCap:footnote> is set to Y and you have dual monitors, then a rendered, stylesheet, view of the XML invoice will appear on the second monitor.</p>
+        <p>How the supplier account is sought is determined by the PL/ACCNODEF parameter<MadCap:footnote class="footnote"><p> The parameter can be overridden on a supplier by supplier basis by giving the &lt;AccountNumberDefault&gt; tag in the eCommerce Configuration HUB record a supplier specific value.</p></MadCap:footnote>. If set to PO and the invoice XML refers to a valid purchase order in the current <MadCap:variable name="General.ProductName" /> company then the supplier account is drawn from the purchase order <MadCap:footnote class="footnote"><p> The workbench will use the PL Account number derived from the PO even if it is for supplier other than the one sending the message. In this case an exception is indicated.</p></MadCap:footnote>. If set to MSG the contractor’s supplier account code is thought to be known to the supplier, or the ETC hub, and it is contained in the &lt;BuyersCodeForSupplier&gt; tag in the XML.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">&#160;&#160; COINSplus eInvoice Detail screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/COINSplus Review Screen_1.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">COINSplus eInvoice stylesheet screen</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/COINSplus Review Screen_2.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <table>
+            <tr>
+                <td>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Fig 2.4 </p>
+                </td>
+            </tr>
+        </table>
+        <p>The transaction type is set initially from the BASDA-<MadCap:variable name="General.ProductName" /><MadCap:footnote class="footnote"><p> See the <MadCap:variable name="General.ProductName" /> eCommerce Configuration Guide for more information about setting up BASDA-<MadCap:variable name="General.ProductName" /> mappings. </p></MadCap:footnote> mapping and typically it is one that requires the invoice to reference a Purchase Order (commonly called INV or PINV transactions). </p>
+        <p>In the Details screen, the order number and the invoice transaction type may be changed. A unique invoice reference number for the supplier and a valid contract will be required. Some supplier’s may be able to send you costing information in the XML message if so the costing distribution can also be entered on pop-up form using the data sent by the supplier and preset defaults<MadCap:footnote class="footnote"><p> See the Appendix HOW TO Change PINV to PINN also published on <a href="http://www.coins-global.com"><span class="Hyperlink">www.coins-global.com</span></a> for more information about the configuration of this option.</p></MadCap:footnote>. </p>
+        <p>Pop up forms allow you to change the VAT distribution and the financial hold code. Default values for the financial hold code are enabled by the PO/HLDOKCRN and PO/HLDOKINV parameters. The parameters PL/EAUTOMHI and PL/EAUTOMHC if set blank will overrule PO/HLDOKINV and PO/HLDOKCRN treating them always as NO<MadCap:footnote class="footnote"><p> For more information see the Appendix HOW TO Hold Transactions in the eInvoice Workbench also published on www.coins-global.com.</p></MadCap:footnote>.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">COINSplus Labour Content form</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/COINSplus Review Screen_3.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>&#160;</p>
+        <p>If an invoice is associated with a Supplier that is also linked to a Subcontractor record in the same company (they share the same account code), or the associated PO is flagged to be for operated plant then a Labour Content component can be noted on the invoice. If the PL/LABCONT% parameter has a value this is used to determine what percentage of the total invoice value will be allocated as a Labour Content value.</p>
+        <p>An associated purchase order can viewed by pressing the Purchase Order  button. You can view the invoice line details of by pressing the Lines  button. </p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">COINSplus eInvoice Lines</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/COINSplus Review Screen_4.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>&#160;</p>
+        <p>It is possible to hold back or retain an invoice in the workbench. These held invoices cannot be moved to the <MadCap:variable name="Variables.Purchase Ledger caps" />.&#160; Held invoices are flagged with H on the right-hand side of the Review screen and the label of the button changes according to the action that can be performed on the invoice from Hold to Off Hold and vice versa. Pressing CTRL-H takes all invoices off hold. There are two parameters that allow a whole selection of invoices to be put on hold based on the invoice value as they come into the workbench<MadCap:footnote class="footnote"><p> The parameters EC/ LOVALINV and EC/ LOVALHLD can be set such that all invoices below or above a certain value can be put on hold. Set LOVALINV to the value to be used, typically <MadCap:variable name="Variables.$" />200; set LOVALHLD to LOW or HIGH to indicate whether the check should be greater than or less than.</p><p>&#160;</p></MadCap:footnote>. </p>
+        <p>Pressing Addresses button shows the Invoice To and Deliver To addresses as sent in the XML message in a pop up form.</p>
+        <p>If the invoice references a <MadCap:variable name="General.ProductName" /> purchase order then pressing P Order button shows the standard <MadCap:variable name="General.ProductName" /> Procurement Purchase Order Enquiry screen for that order.</p>
+        <p>Pressing the View  button or CTRL-V  shows the rendered, stylesheet view of the selected invoice, see Fig 2.4. The image has a Print  button to produce a hardcopy of the image.</p>
+        <p>Pressing CTRL-P prints the current message batch of invoices. The data presented in the report is drawn from the original XML message.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">COINSplus Invoice message batch hardcopy</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p>
+            <img src="../../../Resources/Images_P-R/PL/eInvoice Workbench/COINSplus Review Screen_5.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <p>&#160;</p>
+    </body>
+</html>

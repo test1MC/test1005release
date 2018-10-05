@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="683" MadCap:lastWidth="1805" MadCap:onlyLocalStylesheets="False" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Parent and Child Functions</h1>
+        <p>The vast majority of functions are subordinate functions to a menu item.  For example the payments tab on the supplier maintenance screen is subordinate to the supplier maintenance screen which is itself subordinate to the supplier browse that appears on the menu.  Each function in the system is assigned a parent function that resides on a menu.   Functions that reside on a menu have themselves as parents, and are referred to as "menu items".</p>
+        <p>If you are using Menu Item Security, <MadCap:variable name="General.ProductName" /> looks at the parent function when determining whether to grant a user access to a function; if the user has access to the parent, <MadCap:variable name="General.ProductName" /> automatically grants access to the child (unless this has been specifically denied using detailed function security).</p>
+        <p>Even if you are not using Menu Item Security, you can use System &gt; User Maintenance &gt; Function Security &gt; Main Menu Security to see the children of a function.</p>
+        <h2>Generic Functions</h2>
+        <p>Some functions do not belong to an individual parent but are used on several different functions (sometimes across several modules); for example: Post Batches, Post Batches with Report and Batch Posting/Listing Report.  These functions have been placed on special menus in each module which have codes of the form %WxxCO, where xx is the module code and CO indicates "common" -- the functions on the menu are common to the module  (for example: %WPLCO).    The default for functions like this will be no access; you can set access permissions for these in exactly the same way as 'normal' functions.  The special menus are never displayed in the menu tree, but are shown at the end of the module menu in the function access maintenance screens.  This helps you decide which generic functions you need to consider for a module.</p>
+        <p>Some functions are generic functions which users should have access to in order to use <MadCap:variable name="General.ProductName" /> properly (for example, the Batch Details Tab and Batch Transactions Tab on the batch summary, which apply to all batches of all batch types).  These functions do not belong to a specific menu item, but are fundamental to the use of <MadCap:variable name="General.ProductName" />.  This type of generic function has a role type of SYS.  If you are using Menu Item Security, any function with the role type SYS is available to all users.  You can deny access to functions like this if you really think it is necessary, but this is not the intention.</p>
+    </body>
+</html>

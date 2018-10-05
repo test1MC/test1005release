@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Valuation Payment Stage Print</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Valuation Payment Stage Print</h1>
+    <p>The Valuation Payment Stage Print document format allows you to print out the Sales Valuation Payment Stages details. </p>
+    <p>Valuation Payment Stage Print documents show a line for each payment stage.</p>
+    <p>Define the layout of configurable documents using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the <span class="module">System </span>Module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <div class="process">
+      <h2 class="print">To define the format for valuation payment stage prints:</h2>
+      <ol>
+        <li>Use the document type <span class="userinput">Valuation Payment Stage Print (CS)</span>.</li>
+      </ol>
+      <p>The following tables are available:</p>
+      <p>cs_valuation, jc_job, cs_valcert, cs_series, co_config, ar_cust</p>
+      <p>The BODY form shows: the stage in the valuation cycle, the date of the valuation, the date when payment for this valuation is due, stage details such as Gross Cumulative, Retention Cumulative, Discount Cumulative and Net Cumulative. Use the field RO_cvc_pvalue^ plus the number that identifies the item in the certificate definition (1 is GRC, 2 is RET, 3 is COS and so on), and <span class="userinput">/P</span> to use the This Period values. For example: <span class="field">RO_cvc_pvalue^3/P</span>.</p>
+      <p>There are other forms:</p>
+      <ul>
+        <li>BODYHEAD - labels for body fields. To display labels for the items, use the field <span class="field">RO_cvl_plabel^</span> plus the corresponding number and value type. For example: <span class="field">RO_cvl_plabel^3/P</span>.</li>
+        <li>CASH - cash received. This shows: reference, <MadCap:variable name="Variables.cheque" /> number, date, bank, gross amount, net amount, void flag. Tables are cs_pay, cs_check.</li>
+        <li>HEAD - header. This shows: <MadCap:variable name="Variables.jc contract" />, phase, series, valuation, customer.</li>
+        <li>TOTAL - totals. This shows: totals of applied for, gross certified, retention, discount, <MadCap:variable name="Variables.vat" />, net payment due, cash received, C/S balance, <MadCap:variable name="Variables.sundry" /> balance. Table is cs_valopen. Use the field <span class="field">RO_Total^ </span>plus the ID of the item you want to total. For example: <span class="field">RO_Total^CSINV</span>.</li>
+      </ul>
+    </div>
+  </body>
+</html>

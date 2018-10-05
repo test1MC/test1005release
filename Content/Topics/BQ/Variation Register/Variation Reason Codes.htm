@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Variation Reason Codes</h1>
+        <p style="page-break-after: avoid;"><span class="Function">Variation Reasons</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to maintain the Variation Reason Codes which can be allocated to variations in <span class="Function">Variation Register</span>. </p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Variation Reason Codes Maintenance</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_A-C/BQ/Variation Register/Variation Reason Maintenance.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Code<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The code to identify the reason for the variation.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Description<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Description of the reason.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>System Reason</p>
+                </div>
+                <div class="FieldDef">
+                    <p>	
+The code for the system reason. This determines the type of reason you are setting up.
+</p>
+                    <p>
+You can create multiple variation reason codes with the same system reason if required so that these more detailed reason codes are held against each variation for enquiry and reporting purposes.</p>
+                    <p>The options are:</p>
+                    <ul class="CompactList">
+                        <li><span class="userselect">Internal Variation</span>
+                        </li>
+                        <li><span class="userselect">Client Extra</span>
+                        </li>
+                        <li><span class="userselect">Client Incentive</span>
+                        </li>
+                        <li><span class="userselect">Client Option</span>
+                        </li>
+                        <li><span class="userselect">Contra Charge</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Budget DrawDown</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this reason represents a budget draw down.
+</p>
+                    <p>If this is ticked, you are reducing the value of a <MadCap:variable name="Variables.bq bill" /> item which holds a budget and putting the value into an item which is now going to be ordered. The negative amounts (the reduction or deletion of a <MadCap:variable name="Variables.bq bill" /> item) will be ignored – only the positive items (increases or additions) will be included. The net value will normally be zero.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p><MadCap:variable name="Variables.Cost Head caps" />
+                    </p>
+                </div>
+                <div class="FieldDef">
+                    <p>The cost head against which a budget allowance is to be assigned in the VAP budget (see <MadCap:xref href="VAP Budget Update.htm">1 , Variations and VAP Budget Update</MadCap:xref>).</p>
+                    <p>If this is left blank, no allowance will be allocated to the VAP budget.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Stg</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The payment stage against which the allowance is to be assigned in the VAP budget.
+</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Plot</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The plot against which the allowance is to be assigned in the VAP budget
+</p>
+                    <p>If this is left blank, no allowance will be allocated to the VAP budget.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Retired</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this variation reason is retired.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

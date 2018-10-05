@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/WFEBACK - Send workflow emails in background</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/WFEBACK - </span> Send workflow emails in background
+</div>
+<div class="param_def">
+<P>Whether you want emails generated via the <SPAN class="module">House Sales</SPAN> workflow functionality to be sent in background.</P>
+<P>By default emails are sent in foreground; this can prevent transactions from being entered in COINS if your email server is not responding.  Setting this to <STRONG>Y</STRONG> will queue the emails in the COINS database for delivery.</P>
+<P>If you wish to enable this option you will also need to setup the procedure syu041.p to run in background via a Unix crontab job.  Once started this will continue to run and check for new queued emails which need to be delivered.</P>
+<P>You can setup the procedure syu042.p to shutdown the background email process at the end of the day.</P>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sy/sy_wfelog.htm" /><MadCap:relatedTopic src="../sy/sy_wfepoll.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

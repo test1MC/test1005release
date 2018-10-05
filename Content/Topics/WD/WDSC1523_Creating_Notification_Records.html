@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Creating Notification Records</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Creating Notification Records</h1>
+        <p>In order to submit contract notifications electronically from <MadCap:variable name="General.ProductName" />, you first need to create a contract notification record for the relevant contract.&#160; Contract notification records in <MadCap:variable name="General.ProductName" /> can come from various different sources.&#160;&#160;A relevant contract could be represented by:</p>
+        <ul>
+            <li>A subcontract. 
+</li>
+            <li>A purchase order. 
+</li>
+            <li>A subcontract order. 
+</li>
+            <li>A subcontractor (ongoing contract).</li>
+        </ul>
+        <p>After you have created the contract notification, you can submit it electronically; see <a href="WDSC1522_Submitting_Notification.html">Submitting Contract Notifications</a>.</p>
+        <div class="process">
+            <h2 class="print">To create a notification record for a subcontract:</h2>
+            <ol>
+                <li>Set up the subcontract details in <span class="function" title="Function:%WSC2010BSBS">Subcontract Maintenance</span>.</li>
+                <ul>
+                    <li>If the <span class="field"><span class="field">RCT-able </span></span>field is displayed, ensure it is set correctly.</li>
+                    <li>Leave the&#160;<span class="field">Ongoing Contract </span>box un<MadCap:variable name="Variables.tick" />ed.&#160;(If the subcontractor has ongoing contract details recorded and the subcontract forms part of that ongoing contract, no separate contract notification is required.)</li>
+                    <li>For electronic notification, leave the <span class="field">Contract ID </span>field blank.&#160;</li>
+                    <li>The <span class="field">Contract Notification Method </span>field will show as 'Manual' until the notification has been submitted.</li>
+                    <li>You can enter the start and end dates at this point, or later on the <span class="function" title="Function:%WSC1500HSFY">Contract Notification Workbench</span>.</li>
+                </ul>
+                <li>Go back to the <span class="function" title="Function:%WSC2010BSBS">Subcontract Maintenance</span> browse.</li>
+                <li>Use the <span class="userselect">Create New Contract Notification </span>action to add a record for the subcontract to the <span class="function" title="Function:%WSC1500HSFY">Contract Notification Workbench</span>.
+<p><img src="../../Resources/Images_S-U/SC/SC_152301.png" /></p><p class="noteheader">NOTE</p><div class="note">You can also use <span class="function" title="Function:%WSC1370BSBS">Subcontract RCT Details Review/Update</span> to create the notification record.</div></li>
+            </ol>
+            <h2 class="Section">To create a notification record for a subcontract order or&#160;purchase order:</h2>
+            <ol>
+                <li>Enter a subcontract order, or a&#160;purchase order for&#160;a <MadCap:variable name="Variables.pl supplier" /> that is linked to a subcontractor account, in Procurement.</li>
+                <li>Commit the order.
+<p class="noteheader">NOTE</p><div class="note"><p>This assumes that <MadCap:variable name="General.ProductName" /> is set up to create the notification record when the order is committed.&#160; If <MadCap:variable name="General.ProductName" /> is not set up this way:</p><ul><li>For&#160;orders paid through Subcontract Ledger&#160;you will need to create the notification record using the <span class="userselect">Create New Contract Notification </span>action on <span class="function" title="Function:%WSC1370BSBS">Subcontract RCT Details Review/Update</span>.</li><li>For orders paid through <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, the contract notification needs to be done outside of <MadCap:variable name="General.ProductName" />, and the details recorded manually on the order or the first invoice.</li></ul></div></li>
+            </ol>
+            <h2 class="Section">To create a notification record for an ongoing contract:</h2>
+            <ol>
+                <li>Set up the subcontractor record (see <a href="WDSC1498_Subcontractor_RCT_Details.html">Subcontractor RCT Details</a>).</li>
+                <li>Go to <span class="function" title="Function:%WSC1360BSBM">Subcontractor RCT Details Review/Update</span>.</li>
+                <li>Use the <span class="userselect">Create New Contract Notification </span>action.</li>
+            </ol>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>Any subcontract record which is not a Relevant Contract (but which is for an RCT registered subcontractor) would need to be flagged as such by setting the <span class="field">RCT-able </span>field to <span class="userinput">N</span>: this will then allow payments on that subcontract without following RCT rules in the same way as for a subcontractor who has the tax scheme set as X for exempt. (To display the <span class="field">RCT-able </span>field, the SC parameter <span class="parameter">SBSTAX </span>needs to be set to <span class="userinput">Y</span>, and the SY parameter <span class="parameter">TERMCODE </span>needs to be set to <span class="userselect">%IRE</span>.)</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SCIRE/scire_AUTOCRCN.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SCIRE/scire_LOCNSRCE.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

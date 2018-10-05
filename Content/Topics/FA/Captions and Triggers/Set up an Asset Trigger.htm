@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="644" MadCap:lastWidth="624" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Set up an Asset Trigger</h1>
+        <p>To set up a trigger:</p>
+        <p>Go to Fixed Assets &gt; Setup &gt; Maintenance &gt; Asset Trigger Definitions.</p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Trigger_Definition_1.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Trigger_Definition_2.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 129px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Trigger</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>A code to identify the trigger (this indicates the event which is due when the trigger expires).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">Text to describe the trigger</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Data Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Select the data type, which is the type of information this trigger represents.</p>
+                        <p>Character = x(8) format (for example: abc123)</p>
+                        <p>Date = 99/99/99 format (for example: 12/08/11)</p>
+                        <p>Decimal = -&gt;&gt;,&gt;&gt;9.99 format (for example: 123.45)</p>
+                        <p>Integer = -&gt;,&gt;&gt;&gt;,&gt;&gt;9 format (for example: 345)</p>
+                        <p>Logical = Y/N format (for example: Y or N)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Format</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The Progress display format to be used for the trigger</p>
+                        <p>The value in this field is automatically filled in based on the Data Type selected, but it can be changed.<br /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="COINS.ScreenOnly">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Trigger Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The trigger type. This, combined with the Value, determines how the expiry value for the trigger is reset. The types available depend on the data type.</p>
+                        <p MadCap:conditions="COINS.ScreenOnly">
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>More..</MadCap:expandingHead>
+                                <MadCap:expandingBody><![CDATA[
+
+]]><br /><MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Trigger Types.flsnp" /><![CDATA[
+
+]]></MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="COINS.PrintOnly">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Trigger Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">
+                            <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Trigger Types.flsnp" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Value</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>This is the reset value, which determines what the Expires field on the trigger is reset to. The entry in Trigger Type governs how the trigger is reset.</p>
+                        <p>The trigger has a current value and a "trigger point" - a value at which it expires/is triggered.  Which of these changes on reset is affected by the trigger type.  For example:</p>
+                        <ul>
+                            <li>If you are doing a 10k service on a car you will want the current reading to be unaffected by reset and the trigger point to be updated (from 50K to 60K for example).  You would do this with a PL (plus) type trigger - there is no "Reset To" and "Value" (10k) will determine the reset trigger point value (new trigger point will be current + Value).</li>
+                            <li>For a 500 hour use service, you may want the trigger point to be constant (500) and the current reading to reset.  This would be done with a GE type, and "Reset To" would be zero.</li>
+                        </ul>
+                        <p>Triggers can be reset to a fixed value (like "0" or "yes"), to the current value of the trigger plus or minus a fixed number, or to a number of days, months or years after today's date.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Reset To</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>The value to which you want <MadCap:variable name="General.ProductName" /> to reset the current value when the trigger is reset (for EQ, GE or LE type triggers).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">Main Trigger</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Link this trigger as a secondary to primary trigger.</p>
+                        <p>This can be used in situations where the event can be fired for more than one reason; for example, service every 10k or 6 months.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">Validation</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>How <MadCap:variable name="General.ProductName" /> responds when someone selects the asset.</p>
+                        <p>The trigger can be set up to give either a warning or an error message when the asset is selected (for example when entering a dispatch or changing an item on hire). How do you want this trigger to behave?</p>
+                        <ul>
+                            <li>None. <MadCap:variable name="General.ProductName" /> does not give a warning or an error.</li>
+                            <li>Warning. <MadCap:variable name="General.ProductName" /> issues a warning message but allows you to select the asset. Use this, for example, if the trigger relates to a service or inspection that is not mandatory.</li>
+                            <li>Error. <MadCap:variable name="General.ProductName" /> will not allow you to select the asset. Use this, for example, if the trigger relates to a service that must be done before the asset can be dispatched.</li>
+                        </ul>
+                        <p class="note">In workshop procedures, all errors are treated as warnings. This means that you can still book the asset into the workshop.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <h2 MadCap:autonum="1.1 ">Table of Trigger Types and how they are reset</h2>
+        <p>
+            <img src="../../../Resources/Images_D-F/Fixed Assets/Trigger TYpe Table_1.png" class="FullWidth" />
+        </p>
+    </body>
+</html>

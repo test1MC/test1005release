@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Communication with Revenue - Configuration</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Communication with Revenue - Configuration</h1>
+    <h2>ROS Certificate and Other Technical Requirements</h2>
+    <p>The ROS digital certificate needs to be installed on your <MadCap:variable name="General.ProductName" /> server. </p>
+    <ol>
+      <ol>
+        <li>Download a ZIP file containing the required files from the <a href="http://www.coins-global.com/cp_root/h/Client_Area/Certificate_Configuration_Files/1376/" target="_blank">client area of the <MadCap:variable name="General.ProductName" /> website</a>.</li>
+        <li>A Java runtime minimum version 1.6.0_21 must be available on the <MadCap:variable name="General.ProductName" /> server.  Set the value of the new SCIRE parameter <span class="parameter">JAVAHOME </span>to the location of the "bin" directory under this Java runtime. Typically this will be /usr/java/jre1.6.0_26/bin.</li>
+        <li>Load the ros_root.crt file to the keystore:</li>
+        <ol>
+          <li>Copy ros_root.crt to the server using binary FTP, not necessarily but usually, to <span class="Screen">$DLC/certs</span>.</li>
+          <li>Set environment variable $DLC to be the location of version 10.2b of Progress, (typically <span class="Screen">/usr/opt/dlc/v102b</span>)</li>
+          <li>Load the certificate to the keystore using this command line:<br />    <span class="Screen">cd $DLC/certs;$DLC/bin/mkhashfile ros_root.crt</span></li>
+          <li>Verify that it has been loaded using this command line:<br />    <span class="Screen">cd $DLC/certs;$DLC/bin/certutil -list</span><br />The last entry in the list should have the certificate number ff783690.</li>
+        </ol>
+        <li>Create a directory under <span class="Screen">$BASE/var </span>called IERCT (uppercase)</li>
+        <li>These directories must exist:</li>
+        <ul>
+          <li class="screen">$BASE/var/IERCT/wsdl</li>
+          <li class="screen">$BASE/var/IERCT/java</li>
+          <li class="screen">$BASE/var/IERCT/tmp</li>
+          <li class="screen">$BASE/var/IERCT/logs</li>
+        </ul>
+      </ol>
+    </ol>
+    <p>All directories should have rwxrwxrwx (777) permissions.</p>
+    <ol>
+      <li>The client security p12 file (for example, YourName.p12) must be available in <span class="Screen">$BASE/var/IERCT/wsdl</span>.</li>
+      <li>Copy the webservice WSDL file (rct.wsdl) to <span class="Screen">$BASE/var/IERCT/wsdl</span>.</li>
+      <li>Copy the <MadCap:variable name="General.ProductName" /> Java class program (IEROSDigitalSigner.class) to <span class="Screen">$BASE/var/IERCT/java</span>.</li>
+      <li>You also need to set parameters to reflect this configuration; see <a href="WDSC0005_Irish_Tax_Parameters.html">Irish Subcontractor Tax Parameters</a>. 
+<p class="noteheader">NOTE</p><div class="note">All files copied in 6, 7 and 8 above should have rw-rw-rw- (666) permissions. If FTP'ed, this must be done using BINARY mode.</div></li>
+    </ol>
+    <h2>Communication with Revenue</h2>
+    <p>To prove that your <MadCap:variable name="General.ProductName" /> system is able to communicate with the Revenue systems, you need to run the Townshend test. </p>
+    <p>Run the Townshend test from the COINSplus "dot" prompt:</p>
+    <p style="font-family: 'Courier New';margin-left: 1cm;">sctshend.p</p>
+    <p>(No parameters required.)</p>
+    <p>The report outputs to screen and to <span style="font-family: 'Courier New';">$BASE/var/IERCT/logs/townshend.log</span>.</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SCIRE/scire_IERCTCRT.htm" />
+          <MadCap:relatedTopic src="../Parameters/SCIRE/scire_IERCTDIR.htm" />
+          <MadCap:relatedTopic src="../Parameters/SCIRE/scire_IERCTPWD.htm" />
+          <MadCap:relatedTopic src="../Parameters/SCIRE/scire_IERCTSVR.htm" />
+          <MadCap:relatedTopic src="../Parameters/SCIRE/scire_IERCTUSR.htm" />
+          <MadCap:relatedTopic src="../Parameters/SCIRE/scire_IERCTWSD.htm" />
+          <MadCap:relatedTopic src="../Parameters/SCIRE/scire_JAVAHOME.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Managing Return Submissions</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Managing Return Submissions</h1>
+    <p>You can use <span class="function" title="Function:%WSC9020BCOI"><MadCap:variable name="Variables.cis" style="text-transform: capitalize;" /> Monthly Return Submissions</span><strong></strong>to manage the submissions.  If everything is working normally, you should not need to use these functions.</p>
+    <p>You can:</p>
+    <ol>
+      <li>View the status of a submission.  This is shown on the main screen.</li>
+      <li>View the details of a submission: click <img src="../../Resources/Images/COINS Graphics/SVG buttons/detail.svg" class="button" />.</li>
+      <li>View negative returns and mark them when you have notified HMRC (see <a href="WDSC1420_Negative_Returns.html">Negative Returns</a>).</li>
+      <li>View any errors: click <img src="../../Resources/Images/COINS Graphics/SVG buttons/detail.svg" class="button" /> and look at the Errors tab.</li>
+      <li>Restart a request.  If the submission times out (that is, if <MadCap:variable name="General.ProductName" /> does not receive a response from the Government Gateway after a specified number of requests), the status will be set to 'Timeout'.  In this case <MadCap:variable name="General.ProductName" /> will automatically create a delayed background entry, which will run a restart after a specified number of minutes. However you can delete this so you can restart manually.  As soon as you choose Restart, the status changes to 'Restarted'.  If you try to restart and the status is not correct you will get an error (so <MadCap:variable name="General.ProductName" /> will not let you restart twice by mistake).</li>
+      <ul>
+        <li>
+          <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the request and select Restart from the Choose Action menu.</li>
+      </ul>
+      <li>Submit a request.  You should not normally need to use this, but if there is a fatal error with the submission or a problem that corrupts the data, you might want to re-submit the request after the problem has been sorted out.  Submit starts from the beginning, whereas Restart picks up from the most recent event.</li>
+      <ul>
+        <li>
+          <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the request and select Submit from the Choose Action menu.</li>
+      </ul>
+      <li>Output the XML file without submitting it to HMRC.  This may be useful for testing. </li>
+      <ul>
+        <li>
+          <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the request and select Output XML from the Choose Action menu. 
+<p>The file will be in the IR-CIS-CIS300MR directory below the base directory specified by the SCUK/EGOVRDIR parameter, and will have a name of the form &lt;attempt ID&gt;pst1.xml.</p></li>
+      </ul>
+      <li>Load an XML file as if it were a response from HMRC.  This may be useful for testing. </li>
+      <ul>
+        <li>Select Load XML from the Choose Action menu. 
+<p><MadCap:variable name="General.ProductName" /> will look for a file with a name of the form &lt;attempt-ID&gt;get1.xml in the IR-CIS-CIS300MR directory below the base directory specified by the <span class="parameter">SCUK/EGOVRDIR </span>parameter.<br /></p></li>
+      </ul>
+    </ol>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SCUK/scuk_egovrdir.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

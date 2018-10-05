@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Check Parameter Settings</title>
+    </head>
+    <body>
+        <div class="overview">
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Check Parameter Settings</h1>
+            <p>You should check the following parameters in advance of the rate change, but only change them on or as soon as possible after the new rates come into effect. &#160;If any of the parameters are currently blank, you do not need to update them. Some of the parameters listed may be in modules for which you are not licensed -- you should ignore these.</p>
+            <p>There are two types of parameters that are affected:</p>
+            <ul>
+                <li>Parameters that specify default <MadCap:variable name="Variables.vat" /> codes.
+<p>If these refer to a standard rate <MadCap:variable name="Variables.vat" /> code at the current rate, replace this with the equivalent <MadCap:variable name="Variables.vat" /> code at the new rate (for example, if changing from 15% to 17.5% and the parameter refers to the 15% standard rate sales code (such as S11), enter the 17.5% standard rate sales code (such as S1).</p><p>Parameters affected:</p><ul><li>CO parameter <span class="parameter">DEFVAT</span></li><li>BQ parameter <span class="parameter">DEFVAT</span></li><li>SC parameter <span class="parameter">DEFSBVAT</span></li><li>VP parameters <span class="parameter">REBVAT</span> and <span class="parameter">DEFVATCD</span></li><li>FM parameter <span class="parameter">XSVATCDE</span></li></ul></li>
+                <li>Parameters that specify a list of available <MadCap:variable name="Variables.vat" /> codes.
+<p>Add any new standard codes to the list as appropriate. You may later want to remove the <MadCap:variable name="Variables.vat" /> codes that use the current rates from these lists, but this should only be done after all relevant transactions at the current rate have been processed.</p><p>Parameters affected:</p></li>
+                <ul>
+                    <li>CS parameter <span class="parameter">WEBVAT </span>(affects <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> only)</li>
+                    <li>SC parameter <span class="parameter">WEBVAT </span>(affects <MadCap:snippetBlock src="../../Resources/Snippets/COINSOA.flsnp" /> only)</li>
+                </ul>
+            </ul>
+            <p>Also, for Ireland, update the CO parameter <span class="parameter">PRINCIP</span>, which is a list of reverse charge <MadCap:variable name="Variables.vat" /> codes, to include the new codes. You can change this before the rates change.</p>
+        </div>
+        <div class="process">
+            <h2 class="print">To change the parameters (ON or AFTER the date of the rate change):</h2>
+            <ol>
+                <li><span style="font-size: 1em;">Go to <span class="function" title="Function:%WCB0020BSYP"><MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Parameters</span>.</span>
+                </li>
+                <li><span style="font-size: 1em;" data-mce-mark="1">Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> against the parameter.</span>
+                </li>
+                <li><span style="font-size: 1em;" data-mce-mark="1">Type the new standard <MadCap:variable name="Variables.vat" /> code, or add the new codes to the list, as appropriate.</span>
+                </li>
+                <li><span style="font-size: 1em;" data-mce-mark="1">Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</span>
+                </li>
+            </ol>
+        </div>
+    </body>
+</html>

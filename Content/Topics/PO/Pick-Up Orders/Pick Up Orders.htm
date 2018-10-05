@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="6" MadCap:lastHeight="712" MadCap:lastWidth="601">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics;11.08" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Pick Up Orders </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Overview</MadCap:conditionalText>
+        </h1>
+        <p>It is common practice, particularly for service technicians, to physically go to a supplier to purchase and pick up required materials when the need is identified. Recommended best practice is to request a purchase order at time of purchase and provide the required details to the back office. As the goods are being immediately picked up it is known at the time of entry that the goods are "received". </p>
+        <p>A <MadCap:variable name="General.ProductName" /> purchase order can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>be marked as “Pick Up” at the time of order entry.  When a Pick Up order is committed, a GRN for all items on the order is created.</p>
+        <p>The following major types of order cater for “Pick Ups”:</p>
+        <ul class="CompactList">
+            <li>Material</li>
+            <li><MadCap:variable name="Variables.Pc Plant caps" />
+            </li>
+            <li>Overhead</li>
+            <li>Workshop</li>
+            <li>Asset</li>
+            <li><MadCap:variable name="Variables.St Stock caps" />
+            </li>
+        </ul>
+        <p>Note that whilst <MadCap:variable name="Variables.pc plant" /> orders are included in the list, additional fields such as Serial Number that are normally entered as part of the manual GRN Entry routine are set to blank.</p>
+        <h1 MadCap:conditions="COINS.PrintOnly" style="page-break-before: avoid;" MadCap:autonum="2 ">Initial Configuration</h1>
+        <h2 MadCap:autonum="2.1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Pick Up Orders - </MadCap:conditionalText>Parameters</h2>
+        <p>The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PO&#160;parameter allows you to enable the pick up order functionality.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">ALWPUORD</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">Whether to allow pick up orders.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:conditions="COINS.PrintOnly" style="page-break-before: always;" MadCap:autonum="3 ">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="3.1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Pick Up Orders - </MadCap:conditionalText>Order Entry</h2>
+        <p>If the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PO&#160;parameter <span class="parameter">ALWPUORD</span> is set to Y, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><MadCap:variable name="Variables.tick" />box, <span class="field">Pick Up Order?</span>, allows you to mark the order as a pick up order. </p>
+        <p>
+            <img src="../../../Resources/Images_P-R/Procurement/Pick Up Orders/Order Entry Fields.png" class="FullWidth">
+            </img>
+        </p>
+        <p>If the accrual type of the order (which depends on the type of the order, the analysis (<MadCap:variable name="Variables.jc contract"></MadCap:variable>, department), and the supplier office) means that GRNs are NOT to be entered, or if the order being created is a template order, this <MadCap:variable name="Variables.tick"></MadCap:variable>box is automatically un<MadCap:variable name="Variables.tick"></MadCap:variable>ed and disabled.</p>
+        <p>If the order being created is <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp"></MadCap:snippetText> <MadCap:variable name="Variables.st stock"></MadCap:variable> order and the PO parameter <span class="parameter">AUTOSTK</span> is set to Y, the option to “Commit/Print/GRN/Batch” does not appear in the Options menu on the Order Summary screen.  This is because the pick up order functionality effectively replaces that option (although the order will not be automatically printed).</p>
+        <h2 MadCap:autonum="3.2 ">PO&#160;Commit</h2>
+        <p>When a pick up order is committed, <MadCap:variable name="General.ProductName" /> creates a GRN for all items on the order.</p>
+        <p>If the order being committed is a variation order, only additional quantities are auto-GRN’d.  Note that you cannot reduce the quantity on an existing line because if a GRN line is present, the revised order quantity cannot be lower than the delivered quantity. </p>
+        <h2 MadCap:autonum="3.3 ">Order Browse Screens</h2>
+        <p style="page-break-inside: avoid;">If the PO parameter <span class="parameter">ALWPUORD</span> is set to Y, an additional filter called “Pick Up Orders Only” is available on all browses for the affected major order types, and the <span class="field">Pick Up Order?</span>&#160;field is available in the column sets.</p>
+    </body>
+</html>

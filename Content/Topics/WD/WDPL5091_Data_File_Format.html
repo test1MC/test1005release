@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="819" MadCap:lastWidth="601">
+  <head>
+    <title>[%=Variables.<MadCap:variable name="Variables.Purchase Ledger caps" /> caps%] Electronic Invoice Data File Format</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">
+      <MadCap:variable name="Variables.Purchase Ledger caps" /> Electronic Invoice Data File Format</h1>
+    <p> </p>
+    <p>The following file format is used by <span class="function" title="Function:%WPL9400RAIN">Load Electronic Invoices</span>.</p>
+    <p>Fields must be separated by spaces. Alphanumeric fields must be enclosed in quotation marks <span class="nw">(" ")</span>. Any blank alphanumeric field must be ""; blank numeric fields must be set to 0; blank date fields must be set to ?.</p>
+    <h2 MadCap:autonum="1.1 ">Header Line</h2>
+    <p>Each invoice must begin with an invoice header line. The header line must be preceded by a line containing only the letter <span style="color: purple;">H.</span></p>
+    <p>The invoice header line must contain the following fields:</p>
+    <ul>
+      <li>
+        <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />
+      </li>
+      <li>Invoice date</li>
+      <li>Invoice received date (if <span class="parameter">PL/ENTERREC</span> = <span class="userselect">Y</span>)</li>
+      <li>Gross amount</li>
+      <li>Source ledger code</li>
+      <li>Transaction type</li>
+      <li>
+        <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> amount</li>
+      <li>Due date</li>
+      <li>Discount date</li>
+      <li>Discount</li>
+      <li>Description</li>
+      <li>Hold code, reason</li>
+      <li>P O number</li>
+      <li>
+        <MadCap:variable name="Variables.supplier reference" style="text-transform: capitalize;" />
+      </li>
+      <li>Distribution type (R/P/C)</li>
+      <li>
+        <MadCap:variable name="Variables.Jc Contract caps" />, Department, Sector</li>
+      <li>Currency Code</li>
+      <li>Internal reference</li>
+    </ul>
+    <p>If <span class="parameter">CO/TAXTYPE</span>=<span class="userselect">SALES</span>, an additional line containing the following header fields is also required:</p>
+    <ul>
+      <li>Merchandise Amount</li>
+      <li>Freight Amount</li>
+      <li>Sales Tax Code</li>
+      <li>Sales Tax Amount</li>
+      <li>Consult PL Hold Code parameters (Y or N: if this is Y, the parameters <span class="parameter">HLDREGIN</span>, <span class="parameter">DEFHOLD</span>, <span class="parameter">DEFHCODE</span>, <span class="parameter">DEFFINH </span>and <span class="parameter">DEFCODEF </span>will be consulted and the relevant hold codes set).</li>
+    </ul>
+    <h2 MadCap:autonum="1.2 ">Cost Distribution, <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Distribution, Invoice Lines and Intrastat Lines </h2>
+    <p>Cost distribution lines, <MadCap:variable name="Variables.vat" /> distribution lines, invoice lines and optional Intrastat distribution lines then follow in any order.</p>
+    <p>Invoice cost distribution lines must be preceded by a line containing only the letter D, and contain the fields:</p>
+    <ul>
+      <li>Amount</li>
+      <li>Analysis type (1 - <MadCap:variable name="Variables.Jc Contract caps" />, 2 - <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />, 3 - General Ledger, 5 - Workshop)</li>
+      <li>Analysis (for example, <MadCap:variable name="Variables.jc contract" />/cost code/category, GL account)</li>
+      <li>
+        <MadCap:variable name="Variables.pr effective date" style="text-transform: capitalize;" />
+      </li>
+      <li>Summary (YES/NO)</li>
+      <li>Description</li>
+      <li>PO Number  </li>
+      <li>Sales Tax code</li>
+      <li>Quantity</li>
+      <li>Units</li>
+    </ul>
+    <p> </p>
+    <p>
+      <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Distribution lines must be preceded by a line containing only the letter V, and contain the fields:</p>
+    <ul>
+      <li>
+        <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> code</li>
+      <li>
+        <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> amount</li>
+      <li>Goods amount</li>
+      <li>Summary (YES/NO)</li>
+    </ul>
+    <p> </p>
+    <p>Invoice lines must be preceded by a line containing only the letter L, and contain the fields:</p>
+    <ul>
+      <li>Part code</li>
+      <li>Part description</li>
+      <li>Quantity</li>
+      <li>UOQ</li>
+      <li>Price</li>
+      <li>Per (UOM)</li>
+      <li>Discount</li>
+      <li>Amount</li>
+      <li>
+        <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> reference</li>
+      <li>Delivery date</li>
+      <li>
+        <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> rate</li>
+    </ul>
+    <p> </p>
+    <p>Intrastat distribution lines must be preceded by a line containing only the letter I, and contain the fields:</p>
+    <ul>
+      <li>Mass</li>
+      <li>Value</li>
+      <li>Commodity code</li>
+      <li>Summary (YES/NO)</li>
+      <li>Date</li>
+      <li>Transaction nature</li>
+      <li>Delivery terms</li>
+      <li>Transport method</li>
+    </ul>
+    <p> </p>
+    <p>Each invoice must end with a line containing only the letter <span style="color: purple;">E. </span></p>
+    <p>UK example (<span class="parameter">CO/TAXTYPE</span>=blank):</p>
+    <p>
+      <span class="screentype">H <br /><span title="Supplier Code">"A1000"</span><span title="Invoice Date">09/01/2015</span> 37.5 "PL" "INV" 17.5 ? ? 5 "Invoice" "" "PO09121" "XYZ118" "C" "000" "GBP" ""<br />D <br />10 3 00.00.020 ? NO "Item 1" "" "" "" ""<br />D <br />5 1 1000.M1000.MA 28/12/2014 NO "Item 2" "" "" "" "" <br />D <br />5 2 CAA101.01 ? NO "Item 3" "" "" "" "" <br />V <br />1 17.5 100 <br />E <br />H <br />: <br />: <br />E </span>
+    </p>
+    <p> </p>
+    <p>USA example (<span class="parameter">CO/TAXTYPE</span>=<span class="userselect">SALES</span>):</p>
+    <p>H<br />"003287" 06/01/2015 253.00 "PL" "APIN" 0 ? ? 0 "Invoice" "" "" "21433ws0" "C" ",090" "USD" ""<br />240.00 13.00 "NY-ALB" 0 FALSE<br />D<br />151.50 3 "046.01.505100" 06/30/2015 NO "Item 1" "" "NY-ALB" 1 "EA"<br />D<br />101.50 3 "046.01.505100" 06/30/2015 NO "Item 2" "" "NY-ALB" 1 "EA"<br />E</p>
+    <div class="configuration">
+      <h2 class="print" MadCap:autonum="1.3 ">Parameters</h2>
+The following parameters are consulted for US <MadCap:variable name="Variables.kco companies" /> if the if the "Consult PL Hold Code Parameters" field in the load file = Y. 
+<p><MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;"><MadCap:relatedTopic src="../Parameters/PL/pl_hldregin.htm" /><MadCap:relatedTopic src="../Parameters/PL/pl_defhold.htm" /><MadCap:relatedTopic src="../Parameters/PL/pl_defhcode.htm" /><MadCap:relatedTopic src="../Parameters/PL/pl_deffinh.htm" /><MadCap:relatedTopic src="../Parameters/PL/pl_defcodef.htm" /></MadCap:relatedTopics></p></div>
+  </body>
+</html>

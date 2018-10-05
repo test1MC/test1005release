@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>eRCT - Certificate Entry</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">eRCT - Certificate Entry</h1>
+        <p>To minim<MadCap:variable name="Variables.is" />e issues with Payment Notifications and RCT Returns, the Payment Notification should be done as close as possible to the point of payment, but legally must be before payment (unless prevented from doing so by failure of Revenue systems or other cause outside of the Principal's control).&#160; Since Payment Certificates may remain unpaid on <MadCap:variable name="General.ProductName" /> for some time, these will be input and posted before Payment Notification which will be processed following selection for payment.</p>
+        <p>There is no significant change to the process of entering subcontract certificates, but there are various new warning/error messages:</p>
+        <ul>
+            <li>Depending on the setting of the <span class="parameter">SCIRE/STOPUNRG </span>parameter, <MadCap:variable name="General.ProductName" /> will warn or prevent you entering a certificate for a subcontract that has not been notified.</li>
+            <li>Depending on the setting of the <span class="parameter">SCIRE/ STOPEXP </span>parameter, if the contract end date (the Finish Date of the subcontract) is more than six months ago, <MadCap:variable name="General.ProductName" /> will warn or prevent you entering a certificate.</li>
+            <li>If the contract end date is in the past but is within the last six months, <MadCap:variable name="General.ProductName" /> will warn you that the payment needs to be made within six months of the contract end date.</li>
+        </ul>
+        <div class="process">
+            <h2 class="print">To enter certificates in OA:</h2>
+            <p class="noteheader">NOTE</p>
+            <div class="note">You can also use <a href="WDSC1110_Draft_Certificates.html">Draft Certificates</a>, in either <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" /> or <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />.</div>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSC1010BCOB">Input Certificates</span>.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> to create a new certificate batch.</li>
+                <li>Fill in the batch details and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+                <li>On the Transactions tab, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" /> to add a new certificate.</li>
+                <li>Enter the details to identify the subcontract.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+                <li>Enter the certificate details.
+<p><img src="../../Resources/Images_S-U/SC/SC_150301.png" /></p></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" /> to save the certificate.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> to return to the Transactions tab.</li>
+            </ol>
+            <p>After you have entered all the certificates in the batch, you need to post the batch:</p>
+            <ol>
+                <li>Go to the main <span class="function" title="Function:%WSC1010BCOB">Input Certificates</span> browse.</li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the batch you want to post.</li>
+                <li>In the Choose Action list in the button bar, select <span class="userselect">Post Batches</span>.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+            </ol>
+        </div>
+    </body>
+</html>

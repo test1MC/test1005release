@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2456" MadCap:lastWidth="1059">
+    <head><title>Converting a Requisition Header to a PO</title>
+    </head>
+    <body>
+        <div class="process">
+            <MadCap:concept term="Topics" />
+            <h1 class="print">Converting a Requisition Header to a PO</h1>
+            <p>From the Requisitions tab, you will see a list of all Requisitions.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">
+                <p>You can filter to see Unordered Requisitions.</p>
+            </div>
+            <p>
+                <img src="../../Images/PO/PO_000401.png" class="FullWidth" />
+            </p>
+            <p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> a Requisition from the list, and select the "Raise PO" action (and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />).</p>
+            <p>This takes you to an Order Header screen. Some of the details are brought across from the Requisition (eg <MadCap:variable name="Variables.Jc Contract caps" />, Description, Due Date). The <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> will need to be entered.</p>
+            <p>
+                <img src="../../Images/PO/PO_000402.png" class="FullWidth" />
+            </p>
+            <p>Clicking <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" /> will auto-generate the PO number (if auto-generating), and will create PO Lines, from the unordered Requisition lines. It will then take you onto the PO Summary, where the newly created PO lines can be updated.</p>
+            <p>In the PO Summary, go to the Lines tab to update these new PO lines:</p>
+            <p>
+                <img src="../../Images/PO/PO_000403.png" class="FullWidth" />
+            </p>
+            <p class="noteheader">NOTES</p>
+            <div class="note">
+                <ol>
+                    <li>The Price is brought across from the Requisition line if the PO parameter <span class="parameter">PRPRTOPO</span> is set to <span class="userinput">Y</span>.</li>
+                    <li>Text lines will also be brought across from the Requisition, if the PO parameter <span class="parameter">PORQTXT</span> is set to <span class="userinput">Y</span>.</li>
+                </ol>
+            </div>
+            <p>The Quantity of a line can be amended on the Purchase Order, although it cannot be changed to a quantity greater that the quantity on the Requisition.</p>
+            <p>If the Quantity is reduced from 10 to 6, say, a quantity of 4 will now be outstanding, and will appear on the Outstanding Requisition Items tab, and will be available to be ordered.</p>
+            <p>
+                <img src="../../Images/PO/PO_000404.png" class="FullWidth" />
+            </p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">
+                <ol>
+                    <li>Deleting a PO line that has been created from a Requisition, will mean that the Requisition Item is now unordered, and will be available again to be re-ordered.</li>
+                    <li>When updating these item details, it is possible to update the original Requisition Line's Quantity and Units. This would be necessary for tracking purposes, for example, if a quantity of "20 NO" was Requisitioned, but the item could only be ordered in boxes of 20, if the purchase order was changed to "1 BOX" without changing the original requisition details, coins would consider the requisition to have an outstanding quantity of 19.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="configuration">
+            
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_prprtopo.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_porqtxt.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

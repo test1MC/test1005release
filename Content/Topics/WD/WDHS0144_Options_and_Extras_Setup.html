@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1262" MadCap:lastWidth="666">
+  <head>
+    <title>
+      <MadCap:variable name="Variables.Hs Options caps" /> and <MadCap:variable name="Variables.Hs Extras caps" /> Setup</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">
+      <MadCap:variable name="Variables.Hs Options caps" /> and <MadCap:variable name="Variables.Hs Extras caps" /> Setup</h1>
+    <p>When they reserve a plot, purchasers can choose which <MadCap:variable name="Variables.hs options" /> and <MadCap:variable name="Variables.hs extras" /> they want with the purchase.  You can choose how to define the lists of <MadCap:variable name="Variables.hs options" /> and <MadCap:variable name="Variables.hs extras" /> that are available to the salesperson. You can have: </p>
+    <p />
+    <ul>
+      <li>a single list for the whole <MadCap:variable name="Variables.kco company" /></li>
+      <li>separate lists for each standard house type</li>
+      <li>separate lists for each <MadCap:variable name="Variables.vp site" /></li>
+      <li>separate lists for each house type on a <MadCap:variable name="Variables.vp site" /></li>
+      <li>separate lists for each individual plot on a <MadCap:variable name="Variables.vp site" /></li>
+    </ul>
+    <p>If you are using anything other than a single list for the whole <MadCap:variable name="Variables.kco company" />, you can copy the list (or items from it) from one record to another.</p>
+    <div class="process">
+      <h2 class="print">Example - to set up a <MadCap:variable name="Variables.kco company" />-wide list of <MadCap:variable name="Variables.hs extras" />:</h2>
+      <ol>
+        <li>Set the <span class="parameter">LEVEXT </span>parameter to <span class="userinput">COMPANY</span>. </li>
+        <li>Set up <MadCap:variable name="Variables.kco company" />-wide lists of <MadCap:variable name="Variables.hs extras" /> using <span class="function" title="Function:%WHS2150BHSE">Standard <MadCap:variable name="Variables.Hs Extras caps" /></span>.
+<p><![CDATA[ ]]></p>
+These <MadCap:variable name="Variables.hs extras" /> are available on all plots.</li>
+      </ol>
+      <h2>Example - to set up <MadCap:variable name="Variables.hs option" /> lists for each <MadCap:variable name="Variables.vp site" />:</h2>
+      <p><![CDATA[ ]]></p>
+      <ol>
+        <li>Set the <span class="parameter">LEVOPT </span>parameter to <span class="userinput">DEV</span>.</li>
+        <li>Set up <MadCap:variable name="Variables.kco company" />-wide lists of <MadCap:variable name="Variables.hs options" /> using <span class="function" title="Function:%WHS2210BHOP">Standard <MadCap:variable name="Variables.Hs Options caps" /></span>.</li>
+        <li>When maintaining a <MadCap:variable name="Variables.vp site" /> (using <span class="function" title="Function:%VP2111-A">Developments</span> in<MadCap:snippetText src="../../Resources/Snippets/COINSplus.flsnp" />), select Standard <MadCap:variable name="Variables.Hs Options caps" /> from the popup menu.</li>
+        <li>Press <span class="key">F7</span> to copy the list, or options from the list, from elsewhere.  You can copy from the <MadCap:variable name="Variables.kco company" /> list, a list on a standard house type, a list on a <MadCap:variable name="Variables.vp site" /> house type, a list on another <MadCap:variable name="Variables.vp site" />, or a list on a plot. </li>
+        <li>If necessary, you can change the standard price or specification for the <MadCap:variable name="Variables.hs option" /> on this <MadCap:variable name="Variables.vp site" />.</li>
+        <li>You can also copy the list from the <MadCap:variable name="Variables.vp site" /> to plots or house types on the <MadCap:variable name="Variables.vp site" />.</li>
+      </ol>
+      <p><![CDATA[ ]]></p>
+    </div>
+    <div class="configuration">
+      <h2 class="print">
+        <MadCap:variable name="Variables.Hs Options caps" /> and <MadCap:variable name="Variables.hs extras" /> setup</h2>
+      <p>You need to specify the levels at which <MadCap:variable name="Variables.hs options" /> and <MadCap:variable name="Variables.hs extras" /> are maintained.</p>
+      <p>You need to specify whether <MadCap:variable name="Variables.sundry" /> <MadCap:variable name="Variables.hs extras" /> must be author<MadCap:variable name="Variables.is" />ed separately.</p>
+      <p>If you are linking <MadCap:variable name="Variables.hs options" /> and <MadCap:variable name="Variables.hs extras" /> to construction stages, you also need to specify whether they may be ordered after the cut-off date for the construction stage.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/HS/hs_authexco.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_authopco.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_authsund.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_levext.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_levopt.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

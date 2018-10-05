@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1002" MadCap:lastWidth="1144">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Functions and Calculations</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Functions and Calculations</h1>
+    <p>
+      <strong>Standard Mathematical Functions</strong>
+    </p>
+    <table style="WIDTH: 337px;HEIGHT: 57px;mc-table-style: url('../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+      <tbody>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">+ - / *</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">add, subtract, divide and multiply</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">^</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Exponent (a to the power of b)</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">fact(n)</td>
+          <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Returns factorial n (that is, n*(n-1)*(n-2)?)</td>
+        </tr>
+        <tr class="TableStyle-COINSBasic-Body-Body1">
+          <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">pi</td>
+          <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Returns the value of pi ( <span style="FONT-FAMILY: Symbol;">p</span> )</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Example : <br />     <span class="field">{jc_job.ro_contractcosts^td} - {jc_job.ro_contractcosts^tp}; </span></p>
+    <p>
+      <span class="field"></span>
+      <strong>Strings, Characters and Integers</strong>
+    </p>
+    <p>Calculations can only be performed on data of the correct type, that is, an IF statement can only be performed on an integer or decimal value.</p>
+    <p>Typical error messages which may be reported in the Log File are :</p>
+    <pre>"Primary expected but found string".</pre>
+    <pre>"Invalid Character in Numeric Input ?"</pre>
+    <p>To convert data to the correct format to perform calculations you can use the $ sign :</p>
+    <p />
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <span class="field">var </span>
+          </td>
+          <td>a simple variable will expect a numerical.</td>
+        </tr>
+        <tr>
+          <td>
+            <span class="field">$var </span>
+          </td>
+          <td>This defines the variable var as a string - it will therefore expect character format data.</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <span class="field">$IF$(a,EQ,b,'Tony','Bob') </span>
+    <p />
+    <table>
+      <tbody>
+        <tr>
+          <td>          </td>
+          <td>This IF calculation is being performed on an integer but will return a string (character value).</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <span class="field">$var = IF$(a,EQ,b,'Tony','Bob') </span>
+    </p>
+    <table>
+      <tbody>
+        <tr>
+          <td>          </td>
+          <td>assigns the value returned from the IF statement into the variable as a string.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p />
+    <p>Note : Date format fields require special consideration ? please see below. </p>
+    <p>To display a numerical value as a character, the STRING function should be used :</p>
+    <p>
+      <span class="field">string$(12345,"-&gt;&gt;,&gt;&gt;9.99")   </span>would return "12,345.00"<br /></p>
+  </body>
+</html>

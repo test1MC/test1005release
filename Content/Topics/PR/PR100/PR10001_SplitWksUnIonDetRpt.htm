@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Split Weeks in Union Detail Report</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Split Weeks in Union Detail Report</h1>
+        <p class="Body">The Union Detail Report in Payroll can split out wage rates when a change occurs within a Payroll period. Union <MadCap:variable name="Variables.Jc Contracts caps" /> will renew on the first of a month, which could fall within any day during the payroll period.  Union rates for employees usually change when <MadCap:variable name="Variables.Jc Contracts caps" /> renewals take effect during the Payroll period<MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">, and COINS OA users wanted the Union Detail Report to break out rates based on the dates of the wages before and after the <MadCap:variable name="Variables.Jc Contract caps" /> went into effect</MadCap:conditionalText>.</p>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">To satisfy this request, the </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">The </MadCap:conditionalText>PR Union Detail Report can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>split Union Calculations by Weeks for all records into two sections as a result of the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">addition of a new </MadCap:conditionalText><span class="Field">Summary Date </span>field:</p>
+        <ul>
+            <li><strong>First section </strong>- goes up to the Summary Date, and</li>
+            <li><strong>Second section </strong>- summar<MadCap:variable name="Variables.is" />es the information on and after the Summary Date.</li>
+        </ul>
+        <p class="Body">This <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">enhancement </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">report functionality </MadCap:conditionalText>is applicable for the US, Canadian, and Australian markets.</p>
+        <h2 MadCap:autonum="1.1 ">Union Detail Report Selection Screen</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Summary Date </span>option is available on the Union Detail Report selection screen, as shown in <MadCap:xref href="#RptSelScreen" class="ImageRef"><i>  Report Selection Screen</i></MadCap:xref>. When you input a Summary Date in this field, it is used to split all records into two sections, with the first section going up to the Summary Date, and the second section that summar<MadCap:variable name="Variables.is" />es the information on and after the Summary Date.</p>
+        <p class="NoteHeader" MadCap:conditions="COINS.PrintOnly">NOTE:</p>
+        <div class="note">When a Summary Date is entered, you will not be able to use the <span class="Field">Select the Weeks </span>option.</div>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 1: "><a name="RptSelScreen"></a> Report Selection Screen</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR100_Images/PR100_RptSelScreen.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Union Detail Report Samples</h2>
+        <p class="Body">Based on whether the <span class="Field">Summary Date </span>is entered, the Union Detail Report generates as follows:</p>
+        <ul>
+            <li>If the <span class="Field">Summary Date </span>field is entered (not blank), Union Calculations by Weeks for all records of the Union Detail Report are split into 2 sections, as shown in <MadCap:xref href="#UnionDetRptSplit" class="ImageRef"><i> Union Detail Report (split into 2 sections)</i></MadCap:xref>. The first section goes up to the Summary Date, and the second section summar<MadCap:variable name="Variables.is" />es the information on and after the Summary Date.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 2: "><a name="UnionDetRptSplit"></a>Union Detail Report (split into 2 sections)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR100_Images/PR100_UnionDetRpt_Split.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <ul>
+            <li>If the <span class="Field">Summary Date </span>field is not entered (blank), Union Calculations by Weeks for all records of the Union Detail Report are not split into sections, as shown in <MadCap:xref href="#UnionDetRptNoSplit" class="ImageRef"><i> Union Detail Report (with no split by Summary Date)</i></MadCap:xref>.</li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 3: "><a name="UnionDetRptNoSplit"></a>Union Detail Report (with no split by Summary Date)</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR100_Images/PR100_UnionDetRpt_NoSplit.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.3 ">Include Amount Based Earnings</h2>
+        <p class="Body">If the <span class="Field">Include Amount Based Earnings </span>field is <MadCap:variable name="Variables.tick" />ed, it <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>also includes the following sections for timecards with amount based Earning Categories (see the Union Calculations example in <MadCap:xref href="#UnionCalcs" class="ImageRef"><i> Union Calculations Example</i></MadCap:xref>):</p>
+        <ul>
+            <li><strong>Regular Amount</strong>
+            </li>
+            <li><strong>Overtime Amount</strong>
+            </li>
+            <li><strong>Double Time Amount</strong>
+            </li>
+        </ul>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Figure 4: "><a name="UnionCalcs"></a>Union Calculations Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR100_Images/PR100_UnionCalcs.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

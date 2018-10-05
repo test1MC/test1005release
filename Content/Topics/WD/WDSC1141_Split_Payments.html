@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Split Subcontractor Payments</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Split Subcontractor Payments</h1>
+    <p>Sometimes payments to subcontractors need to be separated either for <MadCap:variable name="Variables.jc contract" /> or individual certificates. You can control payments to subcontractors such that payment by subcontractor, by <MadCap:variable name="Variables.jc contract" /> or by transaction are possible. You can set up defaults on subcontractor and subcontract records, which will default down to the certificate record where it will also be updateable.</p>
+    <div class="process">
+      <h2 class="print">To process split payments:</h2>
+      <ol>
+        <li>In <span class="function" title="Function:%WSC2000BSBM">Subcontractor Maintenance</span>, on the <span class="function" title="Function:%WSC2000BSBMT13">Payment Method</span> tab, set the <span class="field">Payment Type </span>field as follows:
+<p class="yesnolist"><span class="userinput">Subcontractor </span>= payment for each subcontractor -- this will be default value and also the value used if the feature is suppressed.</p><p class="yesnolist"><span class="userinput"><MadCap:variable name="Variables.Jc Contract caps" /></span> = Separate payments for each <MadCap:variable name="Variables.jc contract" />.</p><p class="yesnolist"><span class="userinput">Separate</span> = Separate payments for each transaction (certificate).</p></li>
+        <li>When you raise a new subcontract order (or a new subcontract record), the <span class="field">Payment Type </span>will default to the setting from the subcontractor. You can change this. If you change the <span class="field">Payment Type </span>on a committed order, the subcontract record will be updated accordingly.</li>
+        <li>You cannot change the payment type when raising a <MadCap:variable name="Variables.po variation" />; you will need to update the subcontract.</li>
+        <li>When you enter a certificate, you can specify how to pay that certficiate using the <span class="field">Payment Type </span>field on the certificate record.</li>
+        <li>When you freeze the payment batch, <MadCap:variable name="General.ProductName" /> creates one payment record for each certificate or <MadCap:variable name="Variables.jc contract" /> as required by the payment type set on the certificate.</li>
+      </ol>
+    </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SC/sc_PAYTYPE.htm" />
+          <MadCap:relatedTopic src="../Parameters/SC/sc_SPLITCHQ.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="3350" MadCap:lastWidth="1080">
+    <head><title>Bulk Add, Update and Copy</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Bulk Add, Update and Copy</h1>
+        <p>Many transaction pages allow you to enter or update several records at once, by pasting from an Excel spreadsheet.&#160;<MadCap:variable name="General.ProductName" /> validates the records in order, in exactly the same way as if they had been entered by hand, and any errors will back out the whole transaction.</p>
+        <p>The bulk add feature is useful for loading large numbers of records from a spreadsheet, both for standard details (such as <MadCap:variable name="Variables.pl supplier" /> details) and also transactions (for example, for accountants loading substantial line entries for General Ledger month-end journals).</p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>Bulk maintenance is a powerful tool, but should be used with care. </p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>More details...</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The main consideration is the volume of data being accessed via bulk maintenance. You might experience time out or data issues if the volume of data is significant. If you need to maintain many records, consider the nature of the data you are loading and the number of records in your source spreadsheet.</p>
+                        <p>Each browse will be different, for example a simple lookup table with just a code and description may successfully handle 1000s of records. In contrast, costing distribution records with many fields, most of which will require validation (<MadCap:variable name="Variables.jc contract" />, costing analysis, <MadCap:variable name="Variables.financial dates" />, cost effective dates, GL accounts), may only process a few hundred records in a single transaction. <MadCap:variable name="General.ProductName" /> cannot be definitive on exact numbers for each browse as there are many internal and external factors that may affect each transaction.</p>
+                        <p>For large numbers of more complex records, <MadCap:variable name="General.ProductName" /> would recommend breaking down the bulk transaction into several, smaller blocks of data to ensure that the paste and save complete successfully.</p>
+                        <p>If you use bulk maintenance is used on a regular basis for processing data, you should consider other options for data loading in the system. There are many other options (Data Import routines, Workspaces, WebServices) that may be much more appropriate to meet the business needs.</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </div>
+        </div>
+        <div class="process">
+            <p><strong>To use bulk update:</strong>
+            </p>
+            <ol>
+                <li>Either:
+<ol><li><MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the records you want to update.</li><li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/bulk.svg" class="button" /> and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" />.</li></ol><p>Or:</p><ol><li>Click&#160;<img src="../../Resources/Images/COINS Graphics/SVG buttons/bulk.svg" class="button" /> and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/multi.svg" class="button" /> to update all records in the current browse.</li></ol><p><MadCap:variable name="General.ProductName" /> opens an Excel window and transfers the data.</p><p class="noteheader">NOTE</p><div class="note">If you are using <strong>Office 2007</strong>, you may get a message telling you the file you are trying to open is in a different format from the file extension:
+<p style="text-align: center;"><img src="../../Resources/Images/SY/SY_Excel_Msg.png" /></p><p>If so, click <span class="key">Yes</span> to open the file.</p></div></li>
+                <li>Make any changes to the data in the Excel window.
+<p class="noteheader">NOTES</p><div class="note"><ol><li>Cells with a <MadCap:variable name="Variables.grey" /> background will not be updated in <MadCap:variable name="General.ProductName" />; do not change these.</li><li>The final two columns show the time the record was last updated and the database ID.&#160; Do not change these since they are used for checking when putting the record back.&#160; If you do, the update will fail.</li></ol></div></li>
+                <li>Select all the data in the Excel window, including the column headings. Either:</li>
+                <ul>
+                    <li>Press&#160;<span class="key">Ctrl</span>+A then <span class="key">Ctrl</span>+C.</li>
+                    <li>Click the Select All button, then choose Copy from the Edit menu.<br /><br /><img src="../../Resources/Images/ExcelSelectAll.gif" /></li>
+                </ul>
+                <li>Paste the data into the large input field in <MadCap:variable name="General.ProductName" />.
+<p>&#160;</p><img src="../../Resources/Images_S-U/UG_004701.png" /></li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <p />
+            <p><strong>To use bulk add:</strong>
+            </p>
+            <ol>
+                <li>Click&#160;<img src="../../Resources/Images/COINS Graphics/SVG buttons/bulk.svg" class="button" /> and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.</li>
+                <li>
+                    <p><MadCap:variable name="General.ProductName" /> opens an Excel window with the appropriate column headings.</p>
+                </li>
+                <li>Enter the data you want to add in the Excel window.
+<p class="noteheader">NOTE</p><div class="note"><ol><li>Column labels with <MadCap:variable name="Variables.grey" /> backgrounds mean the field will not update the database.&#160; Leave these blank.</li><li>If you already have the transactions in a spreadsheet, you can copy them into the Excel window.&#160;Make sure you get the data in the correct columns!</li></ol></div></li>
+                <li>Select all the data in the Excel window, including the column headings. Either:
+<ul><li>Press&#160;<span class="key">Ctrl</span>+A then <span class="key">Ctrl</span>+C.</li><li>Click the Select All button, then choose Copy from the Edit menu.<br /><br /><img src="../../Resources/Images/ExcelSelectAll.gif" /></li></ul></li>
+                <li>Paste the data into the large input field in <MadCap:variable name="General.ProductName" />.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <p />
+            <p><strong>To use bulk copy: </strong>
+            </p>
+            <ol>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/tag.flsnp" /> the record or records you want to copy.</li>
+                <li>Click&#160;<img src="../../Resources/Images/COINS Graphics/SVG buttons/bulk.svg" class="button" /> and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/copy.svg" class="button" />.
+<p><MadCap:variable name="General.ProductName" /> opens an Excel window and transfers the data.</p></li>
+                <li>Make any changes to the records in the Excel window.&#160;
+<p><MadCap:variable name="General.ProductName" /> saves these as new records, so you need to change the contents of any field or fields that uniquely identify a record (for example, a <span class="field">Code</span> field). You can copy the record in Excel.&#160;</p><p class="noteheader">NOTES</p><div class="note">Cells with a <MadCap:variable name="Variables.grey" /> background will not be updated in <MadCap:variable name="General.ProductName" />; do not change these.</div></li>
+                <li>Select all the data in the Excel window, including the column headings. Either:
+<ul><li>Press&#160;<span class="key">Ctrl</span>+A then <span class="key">Ctrl</span>+C.</li><li>Click the Select All button, then choose Copy from the Edit menu.<br /><br /><img src="../../Resources/Images/ExcelSelectAll.gif" /></li></ul></li>
+                <li>Paste the data into the large input field in <MadCap:variable name="General.ProductName" />.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <p>&#160;</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Bulk update features - configuration</h2>
+            <p>The <span class="field">Bulk</span>&#160;button is only available on a browse if there is a corresponding function ending with "B".&#160; For example, %WSC2013BVPT is <span class="function" title="Function:%WSC2013BVPT">Subcontract Rates</span>, and %WSC2013BVPTB is the function that enables the <span class="field">Bulk</span>&#160;button on the <span class="function" title="Function:%WSC2013BVPT">Subcontract Rates</span> page.</p>
+            <p>Bulk maintenance needs to be used carefully.&#160;If used incorrectly it could cause data problems.&#160; You should consider restricting access to bulk maintenance.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDSY0017_How_Function_Access_Works.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

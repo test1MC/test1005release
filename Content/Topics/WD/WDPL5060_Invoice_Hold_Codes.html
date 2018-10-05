@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Invoice Hold Codes</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Invoice Hold Codes</h1>
+        <p>Invoice Hold Codes are used to identify why an invoice has been put on hold, and to prevent it from being paid until it has been approved. </p>
+        <p>There are two types of Invoice Hold Codes; "Commercial" and "Financial" . Depending on your company's organ<MadCap:variable name="Variables.is" />ational structure, the hold codes might be controlled by two different individuals or departments. </p>
+        <ul>
+            <li>Commercial (default) Hold Code - for use by the Commercial Department, for example, when a delivery has been delayed and the transaction should not be processed until full delivery of the goods has been made; or the goods were damaged and transactions should not be processed until the goods are replaced. </li>
+            <li>Financial Hold Code - for use by the Finance Department, for example; when the transaction is not to be paid before a certain date; or the Finance Department are awaiting receipt of due credit before the next payment is made. </li>
+        </ul>
+        <p>For details about using Invoice Hold Codes, see <a href="WDPL0220_Holding_and_Approving_Invoices.html">Holding and Approving Invoices</a>.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note"><MadCap:variable name="General.ProductName" /> also allows you to put <MadCap:variable name="Variables.pl supplier" /> accounts on hold. For further details about this feature, see <a href="WDPL0116_Supplier_Hold.html"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Hold</a>. </div>
+        <div class="process">
+            <h2 class="print">To set up invoice hold codes:</h2>
+            <p>Use</p>
+            <ul>
+                <li><span class="function" title="Function:%WPLBCTA1">Commercial Hold Codes Maint</span>
+                </li>
+                <li><span class="function" title="Function:%WPLBCTA2">Financial Hold Codes Maint</span>
+                </li>
+            </ul>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Parameters</h2>
+            <p>The parameters <span class="parameter">APPRENT</span> and <span class="parameter">APPRCOST</span> determine whether you can hold or approve invoices after entering them and after costing them. The parameter <span class="parameter">APPRREG</span> determines whether you can approve registered invoices. The parameter <span class="parameter">APPRPAID</span> determines whether you can amend a hold code on invoices after they have been paid. </p>
+            <p>The parameter <span class="parameter">DEFHOLD</span> determines whether transactions are put on hold automatically, using the default hold code specified by the parameter <span class="parameter">DEFHCODE</span>. </p>
+            <p>The parameter <span class="parameter">DEFFINH</span> determines whether the financial hold frame appears by default as well as the default (commercial) hold code frame. The parameter <span class="parameter">USEFINH </span>determines whether your system is using financial hold codes.</p>
+            <p>The parameters <span class="parameter">PAYHOLD</span> and <span class="parameter">PAYHOLDA</span> determine whether you are able to pay held invoices. </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_apprent.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_apprcost.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_apprreg.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_apprpaid.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhold.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_defhcode.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_deffinh.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_usefinh.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_payhold.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_payholda.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

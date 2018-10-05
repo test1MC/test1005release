@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Configurable Subcontractor <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> and Remittances</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Configurable Subcontractor <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> and Remittances</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> allows you to design and create various layouts for printing <MadCap:variable name="Variables.cheques" /> and remittances onto your own company pre-printed stationery. </p>
+    <p />
+    <p>Define the layout of <MadCap:variable name="Variables.cheques" /> and remittances using <span class="function" title="Function:%WSYBSFS">Document Designer</span> in the System Module. See <a href="WDSY0501_Configurable_Documents.html">Configurable Documents</a> for information on how to define configurable documents. </p>
+    <div class="process">
+      <h2 class="print">To define a document for <MadCap:variable name="Variables.cheques" /> and/or remittances:</h2>
+      <ol>
+        <li>Use the document type <span class="userinput"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" />s/Remittances (SC)</span>.</li>
+        <li>In the <span class="field">Layout Type</span> field, select:</li>
+        <ul>
+          <li>
+            <span class="userinput">
+              <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" />
+            </span> to define the layout for <MadCap:variable name="Variables.cheques" />;</li>
+          <li>
+            <span class="userinput">Remittance </span>to define the layout for a remittance;</li>
+          <li>
+            <span class="userinput">Combined</span> to define the layout for a combined <MadCap:variable name="Variables.cheque" /> and remittance.</li>
+        </ul>
+        <li>You can set up the following forms:</li>
+        <ul>
+          <li>header/footer - In the header form, put information to appear on the top of the remittance advice, such as the subcontractor's name and address. In the footer, put any additional information that is needed. Put the details that will be printed on the <MadCap:variable name="Variables.cheque" /> in the header or footer (see below). Header and footer use tables co_config, sc_mast, sc_check.</li>
+          <li>BODY - In the body form, put a single line containing details of the certificates paid. Body forms use tables sc_pay, sc_certificate, sc_subcon, jc_job.</li>
+          <li>TCARD - To print the timecard details for a payment, use form type TCARD. TCARD forms use table sc_timecard.</li>
+          <li>VAP - To print the VAP details for a payment, use form type VAP. VAP forms use tables vp_subcon, vp_subcc, vp_certdet, vp_unitdef, jc_stndcc, vp_wbsdef, vp_site.</li>
+          <li>DAYWORK - To print the dayworks details for a payment, use form type DAYWORK. DAYWORK forms use table vp_daywork.</li>
+        </ul>
+        <li>To print the timecard, VAP or dayworks lines before the body line to which they relate, <MadCap:variable name="Variables.tick" /> the <span class="field">Details First?</span><MadCap:variable name="Variables.tick" />box.</li>
+        <li>To configure a combined <MadCap:variable name="Variables.cheque" />/remittance document, configure the <strong>body</strong> form to print the remittance lines. The <MadCap:variable name="Variables.cheque" /> can be either in the header or in the footer. If the remittance lines take up more than one page, you will need to print a 'VOID' form on the <MadCap:variable name="Variables.cheque" /> portion of the stationery on all pages after the first one. Configure a form called VOID, then, depending on whether the <MadCap:variable name="Variables.cheque" /> is at the top or bottom of the stationery, do one of the following:</li>
+        <ul>
+          <li>If the <MadCap:variable name="Variables.cheque" /> is at the top: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Top of Page</span>. In the <span class="field">Continuation Header Form</span> field, enter <span class="userinput">VOID</span>. Configure the Header Form to print the <MadCap:variable name="Variables.cheque" /> details.</li>
+          <li>If the <MadCap:variable name="Variables.cheque" /> is at the bottom: in the <span class="field"><MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> Location</span> field, select <span class="userinput">Bottom of Page</span>. Configure a form to print the <MadCap:variable name="Variables.cheque" /> details, and enter that form name in both the <span class="field">Footer Form</span> and <span class="field">Continuation Footer Form</span> fields. <MadCap:variable name="General.ProductName" /> then replaces the footer with the VOID form after the first page.</li>
+        </ul>
+      </ol>
+      <h3>The following fields are available:</h3>
+      <p>To print details from the certificate:</p>
+      <p>
+        <span class="screentype fieldname">RO_scd_tp^<em>&lt;CERTID&gt;</em></span>
+      </p>
+      <ol>
+        <ol>for the amount on the current certificate (where</ol>
+      </ol>
+      <p>
+        <span class="screentype">
+          <em>&lt;CERTID&gt;</em>
+        </span>
+      </p>
+      <ol>is the Item ID from the certificate definition).</ol>
+      <p>To print running totals:</p>
+      <p>
+        <span class="screentype">
+          <span class="fieldname">RO_tot_amt</span>, <span class="fieldname">RO_tot_vat</span>, <span class="fieldname">RO_tot_paye</span>, <span class="fieldname">RO_tot_net</span>, <span class="fieldname">RO_tot_disc</span>, <span class="fieldname">RO_tot_tpByID^<em>&lt;CERTID&gt;</em></span>, <span class="fieldname">RO_tot_cumByID^<em>&lt;CERTID&gt;</em></span></span>
+      </p>
+      <ol>
+        <ol>(where</ol>
+      </ol>
+      <p>
+        <em>
+          <span style="color: #000063;font-family: 'Courier New';">&lt;CERTID&gt;</span>
+        </em>
+      </p>
+      <ol>is the Item ID from the certificate definition).</ol>
+    </div>
+  </body>
+</html>

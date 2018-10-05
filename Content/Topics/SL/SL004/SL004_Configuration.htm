@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Configuration</title>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Configuration</h1>
+        <p class="Body"> SL parameter <span class="parameter">SECSTMT </span>was added to the <MadCap:variable name="Variables.Sales Ledger caps" /> module.<br /></p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p>SL/SECSTMT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>Allow to print SL statements by sectors (Y/N)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">This <span class="parameter">SECSTMT </span>parameter lets you print SL&#160;statements by sector without switching on the SL parameter <span class="parameter">SECTLED</span>. Different combinations of these two parameters result in the following:</p>
+        <p class="Body">(GL) SECTOR=Y, (SL) SECTLED=Y, (SL) SECSTMT = N - Division is on the Statement Screen</p>
+        <p class="Body">(GL) SECTOR=Y, (SL) SECTLED=Y (SL) SECSTMT = Y - Division is on the Statement Screen</p>
+        <p class="Body">(GL) SECTOR=Y, (SL) SECTLED=N (SL) SECSTMT = N - Division is not on the Statement Screen</p>
+        <p class="Body">(GL) SECTOR=Y, (SL) SECTLED=N (SL) SECSTMT = Y - Division is on the Statement Screen</p>
+        <p class="code">&#160;</p>
+        <p class="NoteHeader">NOTE:</p>
+        <div class="note">If SL parameter <span class="parameter">MULSECST </span>= N, Select Division in <i><MadCap:variable name="Variables.Sales Ledger caps" /> &gt; Payments &gt;&#160;Print Statements</i> appears as a combo field (<MadCap:xref href="#DivCombo" class="ImageRef"><i>Figure 1:  Division Combo Field</i></MadCap:xref>); if SL parameter <span class="parameter">MULSECST </span>= Y, Division appears as a Division Selection section (<MadCap:xref href="#DivSel" class="ImageRef"><i>Figure 2:  Division Selection</i></MadCap:xref>).
+</div>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="DivCombo"></a>Division Combo Field</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SL/SL004_Images/DivCombo.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="DivSel"></a>Division Selection</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SL/SL004_Images/DivSel.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+    </body>
+</html>

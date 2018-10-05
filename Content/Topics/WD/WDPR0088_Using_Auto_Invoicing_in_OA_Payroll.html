@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Using Auto Invoicing in OA Payroll</h1>
+        <p>***NOTE: THIS IS A US SPECIFIC TOPIC.***</p>
+        <p>You can implement automatic invoicing for Pay Calculations in the OA Payroll module. Once configured, <MadCap:variable name="Variables.Purchase Ledger caps" /> invoices are automatically created when payroll is posted.</p>
+        <p class="todo" MadCap:autonum=" ">How to use auto invoicing:</p>
+        <p>Use the details below to guide you through the implementation of auto invoicing in OA Payroll.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>
+A. Parameters Setup
+        </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The parameters below are used with auto invoicing:</p>
+                <p><span class="parameter">PR/PR-DEFHCODE</span>
+                </p>
+                <p>Complete this parameter if you are planning to put on stop the invoices created during the Payroll post when they are created. The Hold Code must be a valid Commercial Hold Code in <MadCap:variable name="Variables.Purchase Ledger caps" />. Entering a hold reason is not required to create invoices during Payroll post.</p>
+                <p><span class="parameter">PR/PR-GL-WAGECTRL</span>
+                </p>
+                <p>Enter the GL Account to be used on the distribution line of the invoice in <MadCap:variable name="Variables.Purchase Ledger caps" />. A control account is required to create invoices during the Payroll post.</p>
+                <p><span class="parameter">PR/PR-PL-DEPT</span>
+                </p>
+                <p>Enter the Overhead Department as defined in the Procurement module and to be used on Supplier Invoices created during the Payroll post. Entering an Overhead Department is required to create invoices during the Payroll post. You therefore need to enter one of the following to this parameter:</p>
+                <ul>
+                    <li>a <b>currently existing</b> Overhead Department; or</li>
+                    <li>a <b>new</b> Overhead Department. Before doing this, it is recommended that you first add the new Overhead Department to Procurement &gt; Setup &gt; Technical Information &gt; Procurement &gt; Setup &gt; Technical Information System &gt; Overhead Departments.</li>
+                </ul>
+                <p><span class="parameter">PR/PR-PL-TYPE</span>
+                </p>
+                <p>Enter the Transaction Type, as defined in Purchase Ledger, for the batch of invoices created during the Payroll post. A transaction type is required to create invoices during the Payroll post. You therefore need to enter one of the following to this parameter:</p>
+                <ul>
+                    <li>a <b>currently existing</b> Transaction Type; or</li>
+                    <li>a <b>new</b> Transaction Type. Before doing this, it is recommended that you first add the new Transaction Type to <MadCap:variable name="Variables.Purchase Ledger caps" /> &gt; Setup &gt; Setup Maintenance &gt; <MadCap:variable name="Variables.Purchase Ledger caps" /> &gt; Configuration &gt; Transaction Types Maintenance.</li>
+                </ul>
+                <p><span class="parameter">PO/NONPOTTS</span>
+                </p>
+                <p>If your system is configured to require Purchase Order matching on AP Invoices, enter the AP Transaction types that do not require Purchase Orders. This list must contain the transaction type defined in Payroll parameter <span class="parameter">PR-PL-TYPE</span></p> </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>B. Transaction Type Security Setup</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Before you can create <MadCap:variable name="Variables.Purchase Ledger caps" /> invoices, you must set up your User ID to allow you to use all Transaction Types.</p>
+                <p>To do this:</p>
+                <ol>
+                    <li>Go to <MadCap:variable name="Variables.Purchase Ledger caps" /> &gt; Setup &gt; Setup Maintenance &gt; <MadCap:variable name="Variables.Purchase Ledger caps" /> &gt; Security &gt; Transaction Type Security.</li>
+                    <li>Open your User ID.</li>
+                    <li>Enter * in the Transaction types available to <span class="field">User</span> field, as shown in the screen below.<p><img src="../../Resources/Images_P-R/PR/PR_008807.png" class="FullWidth" /></p></li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>C. Supplier Setup</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You need to create suppliers in <MadCap:variable name="Variables.Purchase Ledger caps" /> Generally, these suppliers are Tax Exempt. Complete the Due Type and Number of Days accordingly, to ensure the invoices created during the post are easily selected for payment when due. Suppliers whose invoices are created during the Payroll post cannot require Purchase Orders.</p>
+                <p>Invoices are not created for any supplier that is dormant.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>D. Pay Calculations Setup</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>When you associate a Pay Calculation with an employee, adding a supplier on the Remittance tab of Employee Maintenance &gt; Pay Calculation Summary indicates that an AP Invoice will be created for this calculation.</p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_008801.png" class="FullWidth" />
+                </p>
+                <p>The Member ID field is used to hold the identifier used on the remittance. Examples of an Identifier are a docket number, case number, or account number. This field is not mandatory, but you will receive a warning that the field is incomplete (as shown below). The Employee Name is used as the member ID when the field is left empty.</p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_008802.png" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>E. Payroll Processing</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>1. Validate Batches</p>
+                <p>Payroll is processed as before. However, the Batch Validation process now looks at the elements of the invoices that are created during the payroll process, reports any problems with the invoices, and displays the problems on the report.</p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_008803.png" class="FullWidth" />
+                </p>
+                <p>2. PL Analysis Report</p>
+                <p>The PL Analysis Report is an option on the Choose Action list of the PR Costing Workbench. This report provides you with a list of invoices that are created when the Payroll posts. It generally should be run immediately after Batch Validation, but can be run at any time.</p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_008804.png" class="FullWidth" />
+                </p>
+                <p>3. Post Payroll</p>
+                <p>When payroll is posted, an unposted invoice batch is created in <MadCap:variable name="Variables.Purchase Ledger caps" />. You can view, edit, and post the invoices from <MadCap:variable name="Variables.Purchase Ledger caps" />.</p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_008805.png" />
+                </p>
+                <p>4. AP Payroll Remittances Report</p>
+                <p>The AP Payroll Remittances Report is meant to be used as a remittance advice for <MadCap:variable name="Variables.cheques" /> generated for invoices created during the Payroll post.</p>
+                <p>
+                    <img src="../../Resources/Images_P-R/PR/PR_008806.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>
+            <MadCap:relatedTopics style="mc-label: 'Parameters';mc-help-control-display: list;" target="_popup">
+                <MadCap:relatedTopic src="../Parameters/PR/pr_pr-defhcode.htm" />
+                <MadCap:relatedTopic src="../Parameters/PR/pr_pr-gl-wagectrl.htm" />
+                <MadCap:relatedTopic src="../Parameters/PR/pr_pr-pl-dept.htm" />
+                <MadCap:relatedTopic src="../Parameters/PR/pr_pr-pl-type.htm" />
+                <MadCap:relatedTopic src="../Parameters/PO/po_nonpotts.htm" />
+            </MadCap:relatedTopics>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Functionality</title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Functionality</h1>
+        <h2 MadCap:autonum="1.1 ">Detail Lines</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Bill To </span>field is found on the <MadCap:variable name="Variables.Se Service Order caps" /> Detail Line, as shown in <MadCap:xref href="SE05301_RequiredSetup.htm#BillToInfo" class="ImageRef"><i>Figure 2:  Bill To Information</i></MadCap:xref> above. For example, you can use this field to create Detail Lines for both the home owner and the home warranty company. Some notes about this field are as follows:</p>
+        <ul>
+            <li class="ListBullet1">It defaults the <strong>Bill To Customer </strong>from the <MadCap:variable name="Variables.Se Service Order caps" /> Allowable Work setup as shown in <MadCap:xref href="SE05301_RequiredSetup.htm#BillToInfo" class="ImageRef"><i>Figure 2:  Bill To Information</i></MadCap:xref> above.</li>
+            <li class="ListBullet1">Users are able to select the appropriate Customer using the Customer lookup, which will be limited to the <MadCap:variable name="Variables.Se Service Order caps" />’s <strong>Customer </strong>and the <strong>Bill To Customer</strong>.</li>
+            <li class="ListBullet1">It is only enabled when it equals <strong>C-Customer </strong>and the <MadCap:variable name="Variables.Se Service Order caps" />’s <strong>Customer </strong>is not equal to the <strong>Bill To Customer</strong>.</li>
+        </ul>
+        <h2 MadCap:autonum="1.2 ">Allowable Work</h2>
+        <p class="Body">If an On-Site Payment exists, the <span class="Field">Bill To </span>field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>disabled in the Allowable Work record in <i>Service Management &gt; Locations &gt; Nonagreement Allowable Work Details Tab &gt; Main subtab</i>, as shown in <MadCap:xref href="#DisableBillToField." class="ImageRef"><i>Figure 1:  Disabled Bill To Field</i></MadCap:xref>. This means that you are unable to switch from <strong>C-Customer</strong> to <strong>J-Job</strong> or <strong>N-Nonbillable</strong>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="DisableBillToField."></a>Disabled Bill To Field</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE053_Images/SE053_DisableBillToField.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">On-Site Payments</h2>
+        <p class="Body">A <span class="Field">Customer </span>field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the On-Site Payments screen, as shown in <MadCap:xref href="#OnSitePymtsCust" class="ImageRef"><i>Figure 2:  On-Site Payments Screen</i></MadCap:xref>. You can use this field to designate which Customer the payment was from.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="OnSitePymtsCust"></a>On-Site Payments Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE053_Images/SE053_OnSitePymtScreen.png" class="FullWidth" />
+        </p>
+        <p class="Body">Some notes about this field are as follows:</p>
+        <ul>
+            <li class="ListBullet1">It defaults from the <MadCap:variable name="Variables.Se Service Order caps" /> Customer (such as the home owner). For example, payments received via the mobile device would default as being from the home owner.</li>
+            <li class="ListBullet1">It is only enabled when <span class="Field">Allowable Work Bill To </span>equals <strong>C-Customer </strong>and the <MadCap:variable name="Variables.Se Service Order caps" />’s <strong>Customer </strong>is not equal to the <strong>Bill To Customer</strong>.</li>
+            <li class="ListBullet1">It provides Customer lookup, but only the <MadCap:variable name="Variables.Se Service Order caps" />’s <strong>Customer </strong>and the <strong>Bill To Customer</strong> are shown.</li>
+            <li class="ListBullet1">Validation <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>only accepts the <MadCap:variable name="Variables.Se Service Order caps" />’s <strong>Customer </strong>or the <strong>Bill To Customer</strong>.</li>
+        </ul>
+        <h2 MadCap:autonum="1.4 ">Post On-Site Payments</h2>
+        <p class="Body">The posting routine <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>recogn<MadCap:variable name="Variables.is" />es the Customer on the On-Site Payment record; it does not automatically use the Order’s Customer.</p>
+        <h2 MadCap:autonum="1.5 "><MadCap:variable name="Variables.Se Service Order caps" /> Comments</h2>
+        <p class="Body">Any <MadCap:variable name="Variables.Se Service Order caps" /> Comment that is set up to be a <MadCap:variable name="Variables.Se Service Order caps" /> Invoice Comment is associated with the Bill To Customer Invoice, as shown in <MadCap:xref href="#SOComment" class="Figurenumberonly"><i>Figure 8</i></MadCap:xref>. No changes have been made in this area.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="SOComment"></a><MadCap:variable name="Variables.Se Service Order caps" /> Comments</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE053_Images/SE053_SOComment.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.6 ">Documents to Include in Next Invoice</h2>
+        <p class="Body">All documents selected to <strong>Include in Next Invoice</strong> (<MadCap:xref href="#DocsNextInv" class="ImageRef"><i>Figure 4:  Documents to Include in Next Invoice</i></MadCap:xref>) are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>associated with the Bill To Customer Invoice. No changes have been made in this area.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="DocsNextInv"></a>Documents to Include in Next Invoice</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE053_Images/SE053_DocsNextInv.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.7 ">Generate Invoice</h2>
+        <p class="Body">The <span class="Function">Generate Invoice </span>action in <MadCap:variable name="Variables.Se Service Order caps" />s <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>produces a separate invoice for each Customer referenced on the Detail Lines.</p>
+        <ul>
+            <li class="ListBullet1">The On-Site Payments are applied to the proper invoice.</li>
+            <li class="ListBullet1"><MadCap:variable name="Variables.Se Service Order caps" /> Invoice Comments and Documents to <strong>Include in Next Invoice </strong>are assigned to the Bill To Customer Invoice.</li>
+            <li class="ListBullet1">Both invoices receive one additional Comment showing the value of the Invoice Amount and Payment Amount to the other party.</li>
+        </ul>
+        <h2 MadCap:autonum="1.8 ">Post Processing</h2>
+        <p class="Body">Payroll Post Processing <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>assigns all Bill To <MadCap:variable name="Variables.Se Service Order caps" /> Detail Lines (“SO” only) to equal the <MadCap:variable name="Variables.Se Service Order caps" />’s Bill To. In addition, the <span class="Field">Customer </span>field in all On-Site Payment records is equal to the <MadCap:variable name="Variables.Se Service Order caps" /> Customer.</p>
+    </body>
+</html>

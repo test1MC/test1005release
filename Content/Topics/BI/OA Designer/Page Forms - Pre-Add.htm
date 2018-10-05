@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="577" MadCap:lastWidth="846">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="OA Designer;Topics" />Page Forms - Pre-Add</h1>
+        <p>A Pre-Add form is shown prior to the add form.  It can be used to prompt the user for key data prior to the main form.  This might allow certain key fields to be pre-selected prior to an add and require less field validation to be used on the main page.  Or it might be used to select a record type before creating the record itself allowing a different page layout to be selected or fields to be hidden.</p>
+        <p>After completing the preAdd form the user is taken to the add form proper with the fields entered in the preAdd available in the URL.</p>
+        <p>You can perform validation on the contents of a preAdd page.  The method preAddValidation is called after the preAdd page has been processed, just before the actual add page is requested.</p>
+        <p>The fields on the preAdd page will have been assigned to the fields in the t{&amp;TABLE} record in the RSP.  You should check this record as required and/or the URL contents using getVar() and throwError() as appropriate.</p>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title><MadCap:variable name="Variables.Pc Plant caps" /> Orders</title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" /><MadCap:variable name="Variables.Pc Plant caps" /> Orders</h1>
+        <p>The basic steps in processing <MadCap:variable name="Variables.pc plant" /> orders are as follows: </p>
+        <ol>
+            <li>Enter the order (see <a href="WDPO0402_Entering_Plant_Orders.html">Entering <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Orders			</a>) </li>
+            <li>Commit the order (see <a href="WDPO0351_Committing_Purchase_Orders.html">Committing Purchase Orders</a>) </li>
+            <li>Print the order (see <a href="WDPO0410_Printing_and_Committing_Plant_Orders.html">Printing and Committing <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Orders</a>) </li>
+            <li>If the order uses GRNs, enter the goods received (<MadCap:variable name="Variables.pc plant" /> advice) note&#160;&#160;(see <a href="WDPO0502_Entering_Goods_Received_Notes_(materials_and_Plant).html">Entering Goods Received Notes (Materials and <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />)</a>). This generates a "<MadCap:variable name="Variables.pc plant" /> on site" record. </li>
+            <li>If the order uses <MadCap:variable name="Variables.pc plant" /> allocations, allocate and confirm the <MadCap:variable name="Variables.pc plant" /> sheets (see <a href="WDPO0541_Weekly_Plant_Sheets.html">Weekly <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> Sheets</a>). This generates an accrual. </li>
+            <p>If the order does not use <MadCap:variable name="Variables.pc plant" /> allocations, you only need to <MadCap:variable name="Variables.pc offhire" /> the <MadCap:variable name="Variables.pc plant" /> items.</p>
+            <li>Enter invoices. </li>
+            <li>Match invoices (see <a href="WDPL0311_Invoice_Matching.html">Invoice Matching				</a>) </li>
+        </ol>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDPO0410_Printing_and_Committing_Plant_Orders.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="configuration">
+            <h2 class="print"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> orders configuration</h2>
+            <p>Charges for <MadCap:variable name="Variables.pc plant" /> <MadCap:variable name="Variables.pc hire" /> can be calculated using any of four different methods.&#160; Various parameters need to be set:</p>
+            <p />
+            <ul>
+                <li>Hourly</li>
+                <ul>
+                    <li><span class="parameter">HRSUNITS</span> - Units that represent hours</li>
+                    <li><span class="parameter">HRSDAY</span> - The number of hours in a day</li>
+                    <li><span class="parameter">INCOTHHR</span> - Whether to include 'other' hourly rates from the <MadCap:variable name="Variables.pc hire" /> style</li>
+                </ul>
+                <li>Daily/weekly</li>
+                <ul>
+                    <li><span class="parameter">DLYUNITS</span> - Units that represent <strong>weeks</strong></li>
+                    <li><span class="parameter">DAYUNITS</span> - Units that represent days</li>
+                    <li><span class="parameter">INCOTHWK</span> - Whether to include 'other' weekly rates from the <MadCap:variable name="Variables.pc hire" /> style</li>
+                </ul>
+                <li>Monthly</li>
+                <ul>
+                    <li><span class="parameter">MLYUNITS</span> - Units that represent months</li>
+                </ul>
+                <li>Lump sum</li>
+                <ul>
+                    <li><span class="parameter">LUMPSUM</span> - Units that represent lump sum payments</li>
+                    <li><span class="parameter">GLOBLUMP</span> - Whether lump sum units apply to all commodities</li>
+                </ul>
+            </ul>
+            <p />
+            <p>You need to set up <MadCap:variable name="Variables.pc plant" /> <MadCap:variable name="Variables.pc hire" /> styles to cover the different charging patterns for <MadCap:variable name="Variables.pc plant" />, using <span class="function" title="Function:%WTI2100BTIY"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /><MadCap:variable name="Variables.pc hire" style="text-transform: capitalize;" /> Styles</span>.&#160; Set the default <MadCap:variable name="Variables.pc hire" /> style for each item using <span class="function" title="Function:%WTI100CBTSV"><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /></span>.</p>
+            <p>Depending on the <MadCap:variable name="Variables.pc hire" /> style, <MadCap:variable name="Variables.pc hire" /> charges can apply on holidays or not.&#160; Set up standard holidays using <span class="function" title="Function:%WTI2110BPHO">Holiday Calendar (<MadCap:variable name="Variables.pc hired" style="text-transform: capitalize;" />-in <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />)</span>, and specific holidays that apply to individual <MadCap:variable name="Variables.jc contracts" /> or customers using <span class="Function">Customer/Contract Free Days</span>.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_hrsunits.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_hrsday.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_incothhr.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_dlyunits.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_dayunits.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_incothwk.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_mlyunits.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_lmpunits.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PO/po_globlump.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

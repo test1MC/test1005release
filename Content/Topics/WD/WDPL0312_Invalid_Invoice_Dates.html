@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Invalid Invoice Dates</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Invalid Invoice Dates</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> checks the invoice date (which is the cost-effective date) on an invoice, and if the date is invalid, displays the message:</p>
+    <p>
+      <span class="field">The date on this invoice points to a cost period that is not valid. Please enter a valid cost <MadCap:variable name="Variables.pr effective date" /> __/__/__ </span>
+    </p>
+    <p>An invoice has an invalid date if:</p>
+    <ul>
+      <li>Cost-effective dates are tied to <MadCap:variable name="Variables.financial periods" /> and the invoice date is not within the current <MadCap:variable name="Variables.financial period" /></li>
+      <li>The cost effective period is not open for the <MadCap:variable name="Variables.jc contract" />.</li>
+    </ul>
+    <p>If the date wrong, <MadCap:variable name="General.ProductName" /> tries to suggest a date:</p>
+    <ul>
+      <li>If there is a current week ending date on the <MadCap:variable name="Variables.jc contract" />, <MadCap:variable name="General.ProductName" /> suggests this as the default cost-effective date.</li>
+      <li>If not, <MadCap:variable name="General.ProductName" /> uses the first open cost-effective period date after the invoice date as the default.</li>
+      <li>If <MadCap:variable name="General.ProductName" /> is unable to suggest a date, the field is blank.</li>
+    </ul>
+    <p>You must enter a valid date in order to proceed.</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/JC/jc_fdateloc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

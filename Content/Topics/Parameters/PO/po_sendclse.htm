@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PO/SENDCLSE - Send open orders clauses electronically</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PO/SENDCLSE - </span> Send open orders clauses electronically
+</div>
+<div class="param_def">
+<p>This allows you to control whether COINS sends Open Orders clauses to the <MadCap:variable name="Variables.Pl Supplier caps"/> if <MadCap:variable name="Variables.PL Supplier caps"/> require XML send. Parameter format is <strong>value|mode</strong>. The parameter value can be re-written by <MadCap:variable name="Variables.PL Supplier caps"/> PORD settings <strong>&lt;SendCLSE&gt;</strong> with the same format as in the parameter.</p>
+<p><strong>Value </strong>can be set to the following values:</p>
+<ul>
+<li><strong>A</strong> - send all clauses</li>
+<li><strong>N</strong> - no clauses will be sent</li>
+<li><strong>"Number"</strong> - only top "number" of order clauses will be sent</li>
+</ul>
+<p><strong>Mode </strong>can be set to the following values:</p>
+<ul>
+<li><strong>1</strong> - send clauses once &#8211; it means that clauses will be send once only when the first XML for the order created</li>
+<li><strong>*</strong> - send clauses each time when order XML is created for the order</li>
+</ul>
+<p>E.g. A|1, N|*, 3|*</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../po/po_sendopen.htm" /><MadCap:relatedTopic src="../po/po_sendvos.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

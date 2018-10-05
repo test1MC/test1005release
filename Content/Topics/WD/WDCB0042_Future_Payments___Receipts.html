@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="4206" MadCap:lastWidth="1664">
+  <head>
+    <title>[%=Variables.Future Payments/Receipts caps%]</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">
+      <MadCap:variable name="Variables.future payments/receipts" style="text-transform: capitalize;" />
+    </h1>
+    <p>In the Middle East it is a normal business practice that for substantial purchases, house sales and tenancy agreements a series of Post Dated <MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> (PDCs) is handed over.  For example, for twelve monthly payments a company would send twelve separate <MadCap:variable name="Variables.cheques" /> with dates in the future.  </p>
+    <p>To support this, input functions have been provided to allow the creation of future payment and receipt records in <MadCap:variable name="General.ProductName" />.  These transactions will be dated and have values like <MadCap:variable name="Variables.cheques" /> but will not be stored in the existing payment tables.  There is a procedure that you can run on a regular basis to convert future payments/receipts to payments/receipts in the relevant ledger.</p>
+    <p>For <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>it is possible to associate a future payment with a single invoice that will create the allocation of the payment at the relevant time.  Invoices that are pre-paid in this way will have their status set appropriately so they are not paid automatically during a payment run.</p>
+    <p>For <span class="module">Lettings </span>it is possible to automatically allocate the receipt to a rent charge when the future receipts are processed.   This follows the same logic as the existing <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>standing order functionality which auto allocates standing orders to the relevant rent charge.<br /></p>
+    <div class="process">
+      <p>
+        <strong>Entering <MadCap:variable name="Variables.future payments/receipts" style="text-transform: capitalize;" /></strong>
+      </p>
+      <p />
+      <p>As <MadCap:variable name="Variables.future payments/receipts" /> do not belong to a <MadCap:variable name="Variables.financial period" style="text-transform: capitalize;" /> they do not have to be created in a batch.  <span class="function" title="Function:%WCB2000BCBP">Future Payments/Receipts</span> shows all <MadCap:variable name="Variables.future payments/receipts" />.  From here you can add, update or delete the <MadCap:variable name="Variables.future payments/receipts" />.  Similar functions are available:</p>
+      <ul>
+        <li>for <MadCap:variable name="Variables.future payments" /> in <span class="module" data-mce-mark="1"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>, <span class="module" data-mce-mark="1">Subcontract Ledger </span>and <span class="module" data-mce-mark="1">Lettings Management </span>(for landlord <MadCap:variable name="Variables.future payments" />).</li>
+        <li>for <MadCap:variable name="Variables.future receipts" /> in <span class="module" data-mce-mark="1"><MadCap:variable name="Variables.sales ledger" style="text-transform: capitalize;" /></span>, <span class="module" data-mce-mark="1"><MadCap:variable name="Variables.Contract Sales" style="text-transform: capitalize;" /></span>, <span class="module" data-mce-mark="1">Lettings Management </span>(for tenant <MadCap:variable name="Variables.future receipts" />) and <span class="module" data-mce-mark="1">House Sales </span>(for sales and part exchange <MadCap:variable name="Variables.future receipts" />). </li>
+      </ul>
+      <p>You can enter a single payment or receipt, or create multiple transactions in a single update.</p>
+      <h2>Single Payment/Receipt</h2>
+      <p>The maintenance of a 'single' <MadCap:variable name="Variables.future payment/receipt" /> is generally similar to entering a normal <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>transaction, except that you will also be prompted for the bank account code.</p>
+      <p>For PL transactions, you can specify the invoice to which a payment will be allocated.  Entering a <MadCap:variable name="Variables.future payment" /> against an invoice will automatically give it a Financial Hold Code.</p>
+      <p>If sector processing is enabled, the following fields will also be shown:</p>
+      <ul>
+        <li>Sector - The overhead department to which unallocated cash will be allocated. The field is populated automatically after a <MadCap:variable name="Variables.jc contract" /> or an overhead department has been entered.</li>
+        <li>
+          <MadCap:variable name="Variables.Jc Contract caps" /> - The number (code) of the <MadCap:variable name="Variables.jc contract" />. The field is optional.</li>
+        <li>Department - The overhead department. The field is optional.</li>
+      </ul>
+      <p class="noteheader">NOTE</p>
+      <div class="note">If necessary you can also enter an undated <MadCap:variable name="Variables.cheque" />. These are typically issued by smaller subcontractors who are unable to get bond facilities, so they offer a <MadCap:variable name="Variables.cheque" /> for a high value as a form of substitute, with no date on it so it does not expire. Any <MadCap:variable name="Variables.future payments/receipts" /> with no date are not processed.  Normally they will never be cashed, but if one does need to be cashed, you can enter the date on the <MadCap:variable name="Variables.cheque" /> record and process it as normal.</div>
+      <h2>Multiple Payments/Receipts</h2>
+      <p>For the 'Multi Payment/Receipt' option, you enter the number of transactions, the date of the first transaction, and the frequency of each transaction.</p>
+      <p>You can:</p>
+      <ul>
+        <li>Enter the total amount of the transactions and allow <MadCap:variable name="General.ProductName" /> to calculate the amount of the individual transactions.</li>
+        <li>Enter the total amount and the amount of the individual transactions.</li>
+        <li>Enter the amount of the individual transactions and allow <MadCap:variable name="General.ProductName" /> to calculate the total amount.</li>
+      </ul>
+      <p>If necessary <MadCap:variable name="General.ProductName" /> will adjust the amount of the final transaction.  For example, if you specify twelve transactions of <MadCap:variable name="Variables.$" />100 and a total amount of <MadCap:variable name="Variables.$" />1295, the final transaction will be <MadCap:variable name="Variables.$" />195.</p>
+      <p>As with individual payments, you can allocate payments to a PL invoice, in which case the payments will automatically be given a hold code.</p>
+      <p>When the form is submitted future records will be created according to the rules entered.   </p>
+      <h2>
+        <MadCap:variable name="Variables.cancelling" style="text-transform: capitalize;" /> Future Transactions</h2>
+      <p>You can use the <MadCap:variable name="Variables.cancel" style="text-transform: capitalize;" /> action to <MadCap:variable name="Variables.cancel" /> transactions with a status of Pending or Overdue.  <MadCap:variable name="Variables.cancelled" style="text-transform: capitalize;" /> payments will not be converted to <MadCap:variable name="Variables.cheques" /> in the appropriate ledger.   The Reinstate action reverses the <MadCap:variable name="Variables.cancel" /> action.</p>
+      <p> </p>
+      <p />
+      <p>
+        <strong>Processing <MadCap:variable name="Variables.future payments/receipts" style="text-transform: capitalize;" /></strong>
+      </p>
+      <p />
+      <p>
+        <span class="function" title="Function:%WCB1000RCBP">Process Future Payments</span> converts any <MadCap:variable name="Variables.future payments/receipts" /> with a date equal to or before the Processing Date into <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>transactions. The routine groups appropriate <MadCap:variable name="Variables.future payments/receipts" /> by bank code, allocation flag, etc., and creates one or more CB batches for every set of transactions.</p>
+      <p>A Report Only option allows you to produce a report without creating a CB batch. This can be used as an emulation of the process to check the list of <MadCap:variable name="Variables.future payments/receipts" /> which will be converted and any possible errors.  If you are creating batches, there is an option to post the CB batches which contain converted <MadCap:variable name="Variables.future payments/receipts" />.</p>
+      <p>If a <MadCap:variable name="Variables.future payment" /> has a <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> invoice associated with it, the <MadCap:variable name="Variables.cheque" /> will be allocated to that invoice, irrespective of any hold codes on that invoice (assuming there is a balance remaining on the invoice).</p>
+      <p>If a <MadCap:variable name="Variables.future receipt" /> is associated with a lettings tenancy then the process option will attempt to allocate the cash with an outstanding charge in lettings.  This follows the same rules as <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>standing order processing.</p>
+      <p> </p>
+      <p />
+      <p>
+        <strong>Printing <MadCap:variable name="Variables.future payment" style="text-transform: capitalize;" /><MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /></strong>
+      </p>
+      <p />
+      <p>You can print a <MadCap:variable name="Variables.cheque" /> for the <MadCap:variable name="Variables.future payments" /> entered.  Run this using the Print <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" /> action on the <MadCap:variable name="Variables.future payments/receipts" style="text-transform: capitalize;" /> browse; it works in the same way as the <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span><MadCap:variable name="Variables.cheque" /> print with regard to allocating <MadCap:variable name="Variables.cheque" /> numbers to the selected payments.</p>
+      <p>Once printed the <MadCap:variable name="Variables.future payment" /> is flagged as being printed.</p>
+      <p> </p>
+      <p />
+      <p>
+        <strong>
+          <MadCap:variable name="Variables.future payments/receipts" style="text-transform: capitalize;" />
+          <MadCap:variable name="Variables.ageing" style="text-transform: capitalize;" /> Report</strong>
+      </p>
+      <p />
+      <p>To assist cash flow management and ensure adequate funds are in place to cover the liabilities from <MadCap:variable name="Variables.future payments/receipts" /> you can run <span class="function" title="Function:%WCB3000RCBP"><MadCap:variable name="Variables.future payments/receipts" style="text-transform: capitalize;" /><MadCap:variable name="Variables.ageing" style="text-transform: capitalize;" /> Report</span> to show a breakdown of the <MadCap:variable name="Variables.future payments/receipts" /> due.  You can choose how many periods to show; for each transaction, the amount will be shown under the relevant <MadCap:variable name="Variables.ageing" /> period based on the transaction date.  You can also choose to show a 'Future' column that includes all future transactions dated beyond the last <MadCap:variable name="Variables.ageing" /> period.</p>
+      <ul>
+        <li>The detail report shows details of each individual payment/receipt.</li>
+        <li>The summary report shows a summary for each module.</li>
+      </ul>
+      <p>The final report totals include a total of the payments, receipts and net total.</p>
+      <p> </p>
+      <p />
+      <p>
+        <strong>
+          <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /> Periods</strong>
+      </p>
+      <p />
+      <p>When closing a <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span>period, <MadCap:variable name="General.ProductName" /> shows a warning message if a <MadCap:variable name="Variables.future payment/receipt" /> with a status of overdue or pending exists and the date falls within the period being closed.</p>
+      <p>The same warning also applies when closing the period via the ‘Global Periods’ option in <span class="module">General Ledger</span>.</p>
+    </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics style="mc-help-control-display: list;">
+          <MadCap:relatedTopic src="WDCB5001_Future_Payments___Receipts.html" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

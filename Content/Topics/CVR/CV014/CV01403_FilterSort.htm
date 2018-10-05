@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/Basic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Filtering and Sorting</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 "><MadCap:variable name="Variables.Cv cvr caps" /> Filtering and Sorting</h1>
+        <p class="Body"><MadCap:variable name="Variables.Cv cvr caps" /> Browse Views previously could only be filtered and sorted using source table fields (e.g., Cost Code Section, WBS Code, etc.). You can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>also filter and sort by <MadCap:variable name="Variables.Cv cvr caps" /> Items (for example, to show Cost Codes with forecasted revenue &gt; $100K). </p>
+        <h2 MadCap:autonum="1.1 ">Configuration</h2>
+        <p class="Body">A new <span class="parameter">CV/ITEMFILT</span> parameter lets you decide whether you will allow <MadCap:variable name="Variables.Cv cvr caps" /> Items to be filtered and sorted.</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/Basic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column1" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="TableCell">CV/ITEMFILT</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="TableCell">Allow Filtering and Sorting on <MadCap:variable name="Variables.Cv cvr caps" /> Items?</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 "><MadCap:variable name="Variables.Cv cvr caps" /> Models</h2>
+        <h3 MadCap:autonum="1.2.1 ">Details Tab</h3>
+        <p class="Body">Two <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>fields, <span class="Field">List of Items for Enhanced Filtering </span>and <span class="Field">List of Items for Enhanced Sorting</span>, appear on the<i> Setup &gt; <MadCap:variable name="Variables.Cv cvr caps" /> Models &gt;  Details tab</i> if parameter <span class="parameter">CV/ITEMFILT</span> is set to <strong>Y</strong>, as shown in <MadCap:xref href="#EnhancedFilterSort" class="ImageRef"><i>Figure 1:  Enhanced Filtering/Sorting Fields</i></MadCap:xref>. </p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="EnhancedFilterSort"></a>Enhanced Filtering/Sorting Fields</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV014_Images/EnhancedFilterField.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">List of Items for Enhanced&#160;Filtering</p>
+        <p class="IndentFieldDef">Use this field to enter up to 10 <MadCap:variable name="Variables.Cv cvr caps" /> Item codes.</p>
+        <p class="IndentBold">List of Items for Enhanced Sorting</p>
+        <p class="IndentFieldDef"> Since the information in this field directly corresponds with the information in the<span class="Field"> List of Items for Enhanced&#160;Filtering</span> field, it is automatically filled in  when  <MadCap:variable name="Variables.Cv cvr caps" /> Item codes are entered in that field. It is therefore a View only field.</p>
+        <h3 MadCap:autonum="1.2.2 ">Fields Tab</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field">Sort </span>field is found on the <i>Setup &gt; <MadCap:variable name="Variables.Cv cvr caps" /> Models &gt;  Fields tab</i>, as shown in <MadCap:xref href="#SortField" class="ImageRef"><i>Figure 2:  Sort Field</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="SortField"></a>Sort Field</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV014_Images/SortField.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 "><MadCap:variable name="Variables.Cv cvr caps" /> Workbench</h2>
+        <h3 MadCap:autonum="1.3.1 ">Add New <MadCap:variable name="Variables.Cv cvr caps" /></h3>
+        <p class="Body">Each time a new <MadCap:variable name="Variables.Cv cvr caps" /> is created, new fields cvs_filt_items, cvs_filt_map are populated from the cmh_filt_items and cmh_filt_map fields in <span class="Function"><MadCap:variable name="Variables.Cv cvr caps" /> Models</span>. You cannot change these fields after the <MadCap:variable name="Variables.Cv cvr caps" /> is saved if parameter <span class="parameter">CV/ITEMFILT</span> is set to <strong>Y</strong>.</p>
+    </body>
+</html>

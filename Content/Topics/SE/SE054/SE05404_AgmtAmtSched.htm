@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head />
+    <body>
+        <h1 MadCap:autonum="1 "><MadCap:variable name="Variables.Se Agreement caps" /> Amount Schedule</h1>
+        <h2 MadCap:autonum="1.1 ">Menu Option</h2>
+        <p class="Body">
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A new </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">An </MadCap:conditionalText><span class="Function"><MadCap:variable name="Variables.Se Agreement caps" /> Amount Schedule</span> function is available in <i>Service Management &gt; <MadCap:variable name="Variables.Se Agreements caps" /> &gt; Operational Setup tab</i>, as shown in <MadCap:xref href="#AmgtAmtSchedMenu" class="ImageRef"><i>Figure 1:  Menu Option</i></MadCap:xref>. It can be used to record the future renewal <MadCap:variable name="Variables.Se Agreement caps" /> Amounts for <MadCap:variable name="Variables.Se Agreements caps" /> with a Term that extends beyond the chosen default Renewal Duration (typically 12 months).</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="AmgtAmtSchedMenu"></a>Menu Option</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE054_Images/SE054_AgmtAmtSchedMenu.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 ">Browse Screen</h2>
+        <p class="Body">When you select <span class="Function"><MadCap:variable name="Variables.Se Agreement caps" /> Amount Schedule</span> from the menu, a browse screen appears, as shown in <MadCap:xref href="#AgmtAmtSchedBrowse" class="ImageRef"><i>Figure 2:  Browse Screen</i></MadCap:xref>. This browse is only visible when the following conditions are true:</p>
+        <ul>
+            <li class="ListBullet1">One or more Term records are on file.</li>
+            <li class="ListBullet1">The last Renewal’s End Date is before the last Term’s End Date, and users choose not to use a default Renewal Duration that is less than the Term Duration.</li>
+            <li class="ListBullet1">One or more records are on file.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="AgmtAmtSchedBrowse"></a>Browse Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE054_Images/SE054_AgmtAmtSchedBrowse.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Start Date</p>
+        <p class="IndentFieldDef">This can be a date within any of the Term records on file. When selecting an <MadCap:variable name="Variables.Se Agreement caps" /> for renewal, a record is only used if the <MadCap:variable name="Variables.Se Agreement caps" /> Amount Schedule Start Date matches the Start Date of the new renewal period.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.Se Agreement caps" /> Amount</p>
+        <p class="IndentFieldDef">The Schedule’s <MadCap:variable name="Variables.Se Agreement caps" /> Amount is used when creating the Renewal’s <MadCap:variable name="Variables.Se Agreement caps" /> Amount record.</p>
+        <h2 MadCap:autonum="1.3 ">Column Set</h2>
+        <p class="Body">An <span class="Field"><MadCap:variable name="Variables.Se Agreement caps" /> Amount Schedule RO</span> field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>found on the column set in the main <MadCap:variable name="Variables.Se Agreements caps" /> browse and the <MadCap:variable name="Variables.Se Agreement caps" /> <MadCap:variable name="Variables.Enquiry caps" />. All <MadCap:variable name="Variables.Se Agreement caps" /> Amount Schedule records that fall within the Term Start/End Dates are totalled.</p>
+    </body>
+</html>

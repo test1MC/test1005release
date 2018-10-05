@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Configurable Certificates - Examples</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Configurable Certificates - Examples</h1>
+        <p>Remember that you can use the lookup when adding lines to see which fields are available.</p>
+        <div class="process">
+            <h2 class="print">To print the subcontractor's name and address in the header:</h2>
+            <ol>
+                <li>Add a header line containing the subcontractor's name field <span class="fieldname">RO_sbm_actualName</span>(the example below also prints the subcontract order number on the same line):&#160;
+<p><img src="../../Resources/Images_S-U/SC/SC_000801.gif" /></p></li>
+                <li>Add a second line containing the first line of the subcontractor's address (field <span class="fieldname">RO_sbm_actualAdd__1):</span><p><img src="../../Resources/Images_S-U/SC/SC_000802.gif" /></p></li>
+                <li>Add further lines containing the fields <span class="fieldname">RO_sbm_actualAdd__2</span>, <span class="fieldname">RO_sbm_actualAdd__3</span>, <span class="fieldname">RO_sbm_actualAdd__4</span> and the <MadCap:variable name="Variables.postal code" /> (<span class="fieldname">RO_sbm_actualPcode</span>).</li>
+            </ol>
+            <h2>To print column headings:</h2>
+            <ol>
+                <li>As the last row of the header form, add header lines with a separate field for each column heading. Use the same widths as the fields they correspond to.
+<p><img src="../../Resources/Images_S-U/SC/SC_000803.gif" /></p><p>This prints column headings as shown below:</p></li>
+            </ol>
+            <table width="60%">
+                <tbody>
+                    <tr>
+                        <th width="40%">Description</th>
+                        <th width="20%">Total Certified</th>
+                        <th width="20%">Previously Certified</th>
+                        <th width="20%">Currently Certified</th>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>To print the body of the certificate:</h2>
+            <p>Suppose that in the body of the certificate, you want detail lines showing the current valuation, previous valuation and this period values for each of the following: gross certified, retention, discount, tax, <MadCap:variable name="Variables.vat" /> and payment.</p>
+            <p>You do <em>not</em> need to define a separate line for each of the detail lines you want to print.</p>
+            <ol>
+                <li>Add a body line containing the fields <span class="fieldname">cdf_desc</span> (the line description), <span class="fieldname">scd_cum</span> (cumulative value), <span class="fieldname">scd_prev</span> (previous value) and <span class="fieldname">scd_tp</span> (this period value):
+<p><img src="../../Resources/Images_S-U/SC/SC_000804.gif" /></p></li>
+                <li>To enter the Rate percentage on the line, use the field <span class="fieldname">cdf_rate</span>.
+<p>These fields will be printed for each line specified in the parameter list. In this example, the parameter list would look something like:</p><p><span class="field">Body IDs: </span><span class="parameter">GRC,RET,DIS,TAX,VAT,PAY</span></p><p>depending on the Item IDs you have used.</p></li>
+            </ol>
+            <h2>To use detail amounts in the header or footer:</h2>
+            <p>Suppose you have used the item IDs PAY and RET for payment and retention, and you want to show the 'this period' payment amount in the footer.</p>
+            <ol>
+                <li>Add a footer line containing the field <span class="fieldname">RO_sbp_scd_tp^PAY</span> .
+<p><img src="../../Resources/Images_S-U/SC/SC_000805.gif" /></p>
+In this case, you need to give the Item ID (<span class="screentype">PAY</span>), since the header and footer are not covered by the parameter list.</li>
+                <li>As another example, to include the cumulative retention, enter the field <span class="fieldname">RO_sbp_scd_cum^RET</span>.</li>
+            </ol>
+        </div>
+    </body>
+</html>

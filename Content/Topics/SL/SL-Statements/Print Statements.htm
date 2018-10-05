@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="4998" MadCap:lastWidth="927">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Print Statements</h1>
+        <p>&#160;</p>
+        <p>You can print a statement for one or more customers, either by selecting which customers to print for, or by specifying a statement cycle. You can include future amounts (that is, the total of outstanding invoices whose due date is later than the ageing date).</p>
+        <p>&#160;</p>
+        <p>Navigate to Navigate to <span class="Function"><MadCap:variable name="Variables.Sales Ledger caps" /> &gt; Cash Reciepts &gt; Print Statements</span></p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/SL-Statements-0003-1107.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Form</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Select the document form to use for this print job.<br /><div class="note">Documents are set up using OA Reporting &amp; BI &gt; Document Designer &gt; Document Designer</div></td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Email Template</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>If emailing statements, select the email template to use. See <a href="../Emailing Statements/Emailing SL Statements.htm">Emailing SL Statements</a></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Statement Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The date to appear on the statement. The default is today.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Ageing caps" /> Date</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The date against which aged debts are to be calculated</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Statement Cycle</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p class="TableCell">To print statements for customers belonging to one statement cycle only, enter the statement cycle code. To print statements for all selected customers, leave blank</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Statement By</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Whether to print the statement by customer or contract:</p>
+                        <p>Customer - <MadCap:variable name="General.ProductName" /> prints a single statement for each customer.<br />Contract - <MadCap:variable name="General.ProductName" /> prints statements for each customer, for each contract on a separate page.<br />Sector - <MadCap:variable name="General.ProductName" /> prints statements for each customer, for each sector on a separate page. <span style="color: #ff0000;">This option is only available if parameter SL/SECSTMT is set to Y</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Date Sequence</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Choose to produce statement by Invoice date or by Due date</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Include Non-Contract</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Whether to show <MadCap:variable name="Variables.Purchase Ledger caps" /> invoices that do not have a Contract Analysis on the invoice header. For example, invoices which have an Overhead Department assigned.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Include Customers in Credit?</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Choose whether or not to include customers whose balance less than 0 on the statement</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Include Zero Balance Invoices</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Choose whether or not to include zero balance invoices.</p>
+                        <p>
+                            <div class="note">There is the similar option Show Zero Balance Invoices on the tab Extras of SL Statements print forms. If the option Include Zero Balance Invoices is ticked on the Statement Screen, invoices with zero balance will be printed in spite of value of the option Show Zero Balance Invoices of the tab Extras. If the option Include Zero Balance Invoices is unticked on the Statement Screen, value of the option Show Zero Balance Invoices of the tab Extras will be analysed, and if it?s ticked, invoices with zero balance will be printed.</div>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Include Contract Related Invoices</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Whether to include contract related invoices.</p>
+                        <p>If the option is ticked and CSCERT form is defined on a SL Print Statements form, contract related data will be printed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Cleared Payments after</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>If you are showing cleared cheques on the statement, only cheques dated after this date will be included</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Exclude Statements with Balances less than</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Stop statements with a minimal balance from printing by entering a value here. This is intended to reduce the number of physical statements mailed to clients.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>Select Sector</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The code for the sector to which the transaction belongs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>Customer Print Methods</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>If you <MadCap:variable name="Variables.tick" /> "Email", <MadCap:variable name="General.ProductName" /> will email the invoices to:</p>
+                        <ul>
+                            <li>All the customers whose default print method is EMAIL.</li>
+                            <li>All the customers whose default print method is blank but who have an email address.</li>
+                        </ul>
+                        <p>If you <MadCap:variable name="Variables.tick" /> "Fax", <MadCap:variable name="General.ProductName" /> will fax the remittances to:</p>
+                        <ul>
+                            <li>All the customers whose default print method is FAX.</li>
+                            <li>All the customers whose default print method is blank, and who have no email address but have a FAX number.</li>
+                        </ul>
+                        <p>If you <MadCap:variable name="Variables.tick" /> "Print", <MadCap:variable name="General.ProductName" /> will print the remittances for:</p>
+                        <ul>
+                            <li>All the customers whose default print method is PRINT.</li>
+                            <li>All the customers whose default print method is blank and who have no FAX number or email address.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Select the Customer Selection tab to select statements for printing.</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/SL-Statements-0004-1107.png" class="FullWidth" />
+        </p>
+        <p>Use the lookups in the From and To fields to select a range of invoices by Customer, Status Code, Currency or Customer Name.</p>
+        <p>To print invoices for specific Customers, Status Codes, Currency or Customer Name use the lookup in the Matches field.</p>
+        <p>If Statements by Contract was selected, you will also be offered a contract selection tab</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/SL-Statements-0005-1107.png" class="FullWidth" />
+        </p>
+        <p>Select the Contract Selection tab to select the statement printing using a variety of different criteria relating to the contract.</p>
+        <p>	Select the Output Options tab. </p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SL/SL-Statements-0006-1107.png" class="FullWidth" />
+        </p>
+        <p>Enter a name in the Title field to easily locate it.</p>
+        <p>Select the output type required.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" /></p>
+        <p>This report will be available to view in the Report Status workbench.</p>
+        <p>&#160;</p>
+    </body>
+</html>

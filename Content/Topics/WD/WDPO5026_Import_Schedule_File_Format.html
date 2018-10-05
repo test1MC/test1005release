@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="581" MadCap:lastWidth="1136">
+  <head>
+    <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    <title>Import Resources File Format</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Import Schedule File Format</h1>
+    <p>This file format is used by the <span class="function" title="Function:%WPI1020UPEL">Import Schedule from CSV File</span> option from within a package in <span class="function" title="Function:%WPI2000BPIJ">Projects</span>. The file must be a CSV format file. The first row contains headings and will be ignored. The remaining rows contain resource data with the following columns.</p>
+    <table class="TableStyle-COINSBasicIndented" style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" cellspacing="0">
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+      <thead>
+        <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <strong>Column<br />Number</strong>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+            <strong>Description</strong>
+          </th>
+          <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+            <strong>Data Type</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">1</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Bill Reference (only used if Major Type = TRADE)</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Char</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">2</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Line Type (C=Commodity/​Trade/<MadCap:variable name="Variables.Pc Plant caps" /> Code, S=<MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" />/​Luckins Code), T = Text</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Char</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">3</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Code (that is, Commodity/​Trade/​<MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" />/​<MadCap:variable name="Variables.labour" style="text-transform: capitalize;" /> Code or <MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Item/Luckins Code)</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Char</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p class="TableCell">4</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+            <p class="TableCell">
+              <MadCap:variable name="Variables.Pc Plant caps" /> Y/N</p>
+          </td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+            <p class="TableCell">Logical</p>
+          </td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">5</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Description</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Char</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">6</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Quantity</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Dec</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">7</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Unit</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Char</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">8</td>
+          <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Rate (Internal)</td>
+          <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Dec</td>
+        </tr>
+        <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">9</td>
+          <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Per (if not supplied, this is set to the same as Unit (column 7)</td>
+          <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">Char</td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+  </body>
+</html>

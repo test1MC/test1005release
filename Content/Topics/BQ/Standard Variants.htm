@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 class="h1.">
+            <MadCap:concept term="Topics" />Standard Variant Setup</h1>
+        <p>Standard variants cater for potential variations to the standard specification for a <a href="../WD/WDVP0001_Standard_House_Types.html">standard</a> or <a href="../WD/WDVP0002_Development-Specific_House_Types.html"><MadCap:variable name="Variables.vp site"></MadCap:variable> house type</a>. Examples include: a change of elevational treatment from all brick to half rendered; a change of roof from gable to hipped; a change of internal specification from open market to social housing, a change of all ironmongery to luxury quality, etc. </p>
+        <p>Variants allow you to maintain a single <MadCap:variable name="Variables.bq bill" /> for a house type containing the possible variations, rather than have to setup multiple house types.</p>
+        <p>You can specify which variants should not be used together on the same plot.&#160; For example, a plot might have standard or deluxe sanitary ware, but not both. </p>
+        <p>You specify which variants are relevant to each house type, then for each variant, you build up a list of items that are added to or omitted from the house type if that variant is used.</p>
+        <div class="process">
+            <h2 class="print">To set up variants:</h2>
+            <ol>
+                <li>Navigate to <MadCap:variable name="Variables.Bq Bill of Quantities caps" /> &gt; Setup &gt; Maintenance &gt; BQ Standard Varients</li>
+            </ol>
+            <p>
+                <img src="BOQ Images/Standard Variants_3_1106.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>Click <MadCap:snippetText src="../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></li>
+            </ol>
+            <p>
+                <img src="BOQ Images/Standard Variants_4_1106.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>Set up the code and description to identify the variant.</li>
+                <li>Select any other variants which conflict with the variant you are setting up; that is, variants which should not be included on the same plot.&#160; For example, all brick treatment would conflict with half-rendered treatment.
+</li>
+                <li>
+                    <p>Click <MadCap:snippetText src="../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+                    <p class="noteheader">NOTE</p>
+                    <div class="note">If you add a conflicting variant <em>y</em> to variant <em>x</em>, variant <em>x</em> will also be added as a conflict on variant <em>y</em>; you do not need to add it manually.</div>
+                </li>
+            </ol>
+        </div>
+        <p class="Body">In the following example   a full render  variant has been setup with no conflicts</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">
+            <img src="BOQ Images/Standard Variants_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">In the next example, a half render variant has been set up with  Full Render Variant  moved to the Conflicts With selected box. By doing this the system is being configured so that the front elevation of a house cannot  be both full and half rendered.</p>
+        <p class="Body">&#160;</p>
+        <p class="Body">
+            <img src="BOQ Images/Standard Variants_2_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">.</p>
+        <p class="note">You can have as many conflicts as you need to set up against a variant, this allows you to be able to control what items can be varied and what cannot.</p>
+        <p class="Body">&#160;</p>
+    </body>
+</html>

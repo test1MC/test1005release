@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Employee Termination</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Employee Termination</h1>
+        <h2 MadCap:autonum="1.1 ">Entitlements Layout</h2>
+        <p class="Body">When the employee Termination Type code of Blank (Non ETP) is selected, only the <span class="Field">Leave </span>fields are allowed to be updated in the Entitlements layout in <i>Payroll &gt; Employee Administration &gt; Employee Termination &gt; Termination Details tab</i>. All of the ETP columns (<MadCap:xref href="#EmpTermETP" class="ImageRef"><i> Entitlements Layout</i></MadCap:xref>) are disabled here (ETP Concessional, ETP Untaxed, ETP Taxed, and Total).</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="EmpTermETP"></a>Entitlements Layout</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR106_Images/PR106_EmpTermETP.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:autonum="1.2 ">Details Layout</h2>
+        <p class="Body">An <span class="Field">Under Preservation Age </span>field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>found on the Details layout in <i>Payroll &gt; Employee Administration &gt; Employee Termination &gt; Termination Details tab</i>, as shown in <MadCap:xref href="#DetailsLayout" class="ImageRef"><i> Details Layout</i></MadCap:xref>.  If selected on termination, the age of the person is considered to be ‘under the preservation age’ at the end of the income year that the payment is received.  The employee ETP payment is taxed at 32% up to the capped amount.  If unselected, the employee is considered to be ‘of preservation age or over’ at the end of the income year, and the ETP payment is taxed at 17% up to the capped amount.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><a name="DetailsLayout"></a>Details Layout</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="Body" style="text-align: center;">
+                    <img src="../../../Resources/Images_P-R/PR/PR106_Images/PR106_DetailsLayout.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p class="Body">If the <span class="Field">Death Benefit </span>field is <MadCap:variable name="Variables.tick" />ed, the tax rates are used as shown in the table below.</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 186px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 186px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 186px;" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Termination Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Up to ETP&#160;Cap</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Amount Over ETP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Non <MadCap:variable name="Variables.hr dependant" style="text-transform: capitalize;" /> (N)</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">32%</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">49%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell"><MadCap:variable name="Variables.hr dependant" style="text-transform: capitalize;" /> (D)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">NA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableCell">49%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">Trustee (T)</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">NA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">NA</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

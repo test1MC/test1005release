@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Setting Context Paths on Topics and Launchers</h1>
+        <p>When adding Topics and Step Launchers to your Inline Topics that relate to a specific item on a COINS screen, you will need to ensure that the Topic/Launcher is aware of the COINS function behind the screen to prevent the launcher appearing randomly on other functions.</p>
+        <p>To achieve this, you need to set the relevant Context Paths.</p>
+        <p>For Topics : <a href="https://help.inlinemanual.com/docs/context-urls-explained" target="_blank">https://help.inlinemanual.com/docs/context-urls-explained</a></p>
+        <p>For Launchers : It's important to optimize your launchers, and make sure they only appear where they are needed. If you don't, it will continue checking on every page if it will appear there, and if you had many it could freeze your application.</p>
+        <p><a href="https://help.inlinemanual.com/docs/topic-launcher" target="_blank">https://help.inlinemanual.com/docs/topic-launcher</a>
+        </p>
+        <p>&#160;</p>
+        <p>To identify the function, on a chosen COINS screen, use CtRL-SHIFT and click the logo on the top right of the screen and scroll to the COINSInfo Panel that appears at the bottom of the screen:</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/Inline-1110-0005.png" class="FullWidth" />
+        </p>
+        <p>In the Query path, locate the section that starts MainArea=</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/Inline-1110-0006.png" class="FullWidth" />
+        </p>
+        <p>This needs to be entered into the relevant Context Path setting in the format:</p>
+        <p>*?*MainArea=&lt;function&gt;</p>
+        <p>e.g. *?*MainArea=%25WBQ1010HBQP</p>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Configuration</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">GDPR in <MadCap:variable name="Variables.Marketing" />: </MadCap:conditionalText>Configuration</h1>
+        <p class="Body"> The MK parameters listed in the table below are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available for General Data Protection Regulations (GDPR) functionality. </p>
+        <table style="width: 100%;">
+            <col style="width: 153px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td>
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="TableCell">MK/CONHP</p>
+                    </td>
+                    <td>
+                        <p>Contacts Workbench Hide Parameter. This  allows selections of fields from the Contacts WB to hide.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="TableCell">MK/CONSNOTEW</p>
+                    </td>
+                    <td>
+                        <p>Error/warning if no data consent notes are entered.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="TableCell">MK/CONSUSE</p>
+                    </td>
+                    <td>
+                        <p>Use Consent functionality. This includes a Consent Section on the Contact Details page and shows related maintenance files.  If this is set to N, the standard “Do Not Mail” fields remain on the page.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.1">CONHP Parameter</h2>
+        <p class="Body">The <span class="parameter">MK/CONHP </span>parameter allows you to select which fields on the Contacts Workbench should be hidden. The default is blank (no fields are hidden). It has a predefined list of the following fields that you can select to hide/not hide:</p>
+        <ul>
+            <li class="ListBullet3">Start Date (pcc_start)</li>
+            <li class="ListBullet3">Date of Birth (pcn_dob)</li>
+            <li class="ListBullet3">Fax (ppc_fax)</li>
+            <li class="ListBullet3">Identifying Comments (ppc_indentifier)</li>
+            <li class="ListBullet3">Origin (ppc_origin)</li>
+            <li class="ListBullet3">Personal Assistant (ppc_passist)</li>
+            <li class="ListBullet3">Job Group (ppg_seq)</li>
+            <li class="ListBullet3">Role (ppj_seq)</li>
+        </ul>
+        <h2 MadCap:autonum="1.2">CONSNOTEW Parameter</h2>
+        <p class="Body">The <span class="parameter">MK/CONSNOTEW </span>parameter allows you to choose whether to receive a hard stop (error) or a message (warning) if the consent functionality is in use and the data consent notes are blank. The default is a warning. The parameter is ignored unless the <span class="parameter">MK/CONSUSE </span>parameter is set to <strong>Y</strong>.</p>
+        <h2 MadCap:autonum="1.3">CONSUSE Parameter</h2>
+        <p class="Body">The <span class="parameter">MK/CONSUSE </span>parameter allows you to turn the consent functionality on and off. The default setting is <strong>N</strong>.</p>
+        <p class="Body">
+            <br />
+        </p>
+    </body>
+</html>

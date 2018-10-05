@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2108" MadCap:lastWidth="841">
+  <head>
+    <title>Main Groups and Subgroups</title>
+    <style>/*<![CDATA[*/
+div.group
+{
+	background-color: #FFFFFF;
+	font-size: 0.8em;
+	width: 40mm;
+	height:40mm;
+	position: absolute;
+	border: solid 1px #DC4405;
+	padding: 3px;
+}
+div.main
+{
+	height: 40mm;
+}
+blockquote
+{
+	margin: 2mm 0mm 0mm 2mm;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Main Groups and Subgroups</h1>
+    <p>It is possible to assign the group access permissions by reference to other groups.  A field on <span class="function" title="Function:%WSYBSUR1">Groups</span> allows you to list subgroups for the group.  This means you can create "building blocks" of access permissions (at the subgroup level), that can be combined to create an "access profile" for a main group.  This effectively allows you to set up a main group as a job role or "model user".  You then assign each user to a main group.  The content of the role is independent of the users assigned to it and you can change it without mass changes to the users.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">It is possible to assign users to more than one group.  However the intention if using the main group/subgroup approach is to have a separate group for each job role.  This may be more appropriate for large organ<MadCap:variable name="Variables.is" />ations with clearly defined job roles.</div>
+    <p>For example you might create a main group PL Clerk that is assigned access from two subgroups: PL Input and PL <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" />.  You can set the access permissions for the PL Clerk group by setting the access permissions for PL Input and PL <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /> and setting the PL Clerk group to inherit access from these two subgroups .</p>
+    <p> </p>
+    <p>
+      <img src="../../Resources/Images/Madcap Capture Images/WDSY0141_Groups.bmp" class="FullWidth" />
+    </p>
+    <p> </p>
+    <p>When you have set up the subgroups, you need to run a process to set the access on the main group.  This process evaluates the subgroups in turn (much like the group access is evaluated on a user); as soon as a Y-Allow or N-Deny is found in the subgroups assigned, the Y or N is set on the main group being evaluated.  This is equivalent to compiling the subgroup access to create the main group access.  (You could then modify the main group but we do not recommend this since, if you were to re-run the process, the main group access would again be overwritten by the evaluated subgroup access.)</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">
+      <p>If you change the permissions on a subgroup or change the list of subgroups on the main group, the changes will not apply to the main group until you re-run the process. </p>
+    </div>
+    <p>You can then assign user access by setting the groups on the user.  Either main groups or sub groups can be used for this.</p>
+    <p>If a sub group access is changed, the main group access can be re processed; you do not need to modify the main groups themselves.</p>
+    <p>
+      <MadCap:variable name="General.ProductName" /> only evaluates one level of sub groups during the process; it is not recursive down to further levels of sub group.  (If you choose to build a set of groups from a set of sub groups you could then use the evaluated groups as sub groups to further groups by processing them in order.)</p>
+    <h2>Prime Group</h2>
+    <p>The Prime Group (specified on a user's record) has implications for data security: combined with the user's security level it allows access to other users' batches and reports.  We recommend that you use one set of groups for access to data, and a separate set of groups for function security.</p>
+    <h2>Other Uses of Groups</h2>
+    <p>Groups are also used for Group Field Security and for HS Sales Event Security.  The process of evaluating the group function access also applies these two security models.</p>
+    <p>The process of evaluating these is similar.  The sub groups are processed in turn and the first one that contains a sub group security setting (for fields or sales events) is copied to the equivalent main group setting as though it had been built manually by the user.</p>
+    <div> </div>
+  </body>
+</html>

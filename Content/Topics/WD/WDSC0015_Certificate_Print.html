@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1612" MadCap:lastWidth="1018">
+    <head>
+        <link href="../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Certificate Print</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">SC Certificate Breakdown - </MadCap:conditionalText>Certificate Print</h1>
+        <p>The OA Certificate Print allows printing of breakdown items. The breakdown items are printed as an appendix at the end of the certificate (one appendix for each detail line with a breakdown).</p>
+        <p>Setup is done in the OA <span class="function" title="Function:%WSYBSFS">Document Designer</span>. There are a number of fields for the appendices:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Appendix IDs</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">List of IDs for certificate detail lines with breakdown items. An appendix will be printed for each of these.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Appendix Header Forms</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">List of form codes, one for each ID in the Appendix IDs list.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Appendix Body Forms</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">List of form codes, one for each ID in the Appendix IDs list.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Appendix Footer Forms</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">List of form codes, one for each ID in the Appendix IDs list.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Appendix Rows</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">List of rows (how many body records can fit on a page), one for each ID in the Appendix IDs list.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In the example below, two appendices will be printed at the end of the certificate. The first one is for detail line with ID <strong>GROSS</strong>. This will have a header form of <strong>HEADGROSS</strong>, 36 rows of body form <strong>BODYGROSS</strong> and a footer form of <strong>FOOTGROSS</strong>. </p>
+        <p>
+            <img src="../../Resources/Images_S-U/SC/SC-Cert-Breakdown_2.png" class="HalfWidth" />
+        </p>
+        <p>Each appendix has a header form, a body form, and a footer form. The following tables are available for use in each of these forms:</p>
+        <p />
+        <table class="type1">
+            <tbody>
+                <tr>
+                    <th>Form</th>
+                    <th>Tables </th>
+                </tr>
+                <tr>
+                    <td>Header</td>
+                    <td>sc_certificate, sc_subcon, sc_mast, jc_job, co_config, sc_defn,<br />sc_defndet, sc_certdet</td>
+                </tr>
+                <tr>
+                    <td>Body</td>
+                    <td>As above, plus sc_certitem, po_item, po_line, po_hdr</td>
+                </tr>
+                <tr>
+                    <td>Footer</td>
+                    <td>Same as header</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0501_Configurable_Documents.html" />
+            </MadCap:relatedTopics>
+        </p>
+    </body>
+</html>

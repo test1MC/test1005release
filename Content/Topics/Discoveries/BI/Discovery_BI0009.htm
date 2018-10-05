@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="6514.333" MadCap:lastWidth="644" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0009,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/TableStyles/COINS.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OA Designer - Creating a Dataset</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Dicscovery Heading.flsnp" />
+        <h1>Creating a Dataset</h1>
+        <p>From the Designer menu, navigate to Data Set Definitions.</p>
+        <p>
+            <br />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_2_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_3_1106.png" class="FullWidth" />
+        </p>
+        <p MadCap:conditions="COINS.Pre-v1105">Enter a Data Set name and description for the data set.&#160; For this exercise use your initials followed by M2DS1 (e.g. xxM2DS1)</p>
+        <p>Enter a Data Set name and description for the data set.&#160; For this exercise use your initials followed by BI0009 (e.g. xxBI0009)</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_3.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>The Notes section is there to allow you to document the purposes of the dataset so that you can refer to this in the future. </p>
+        <p>In the Query box, enter:</p>
+        <p class="Example">FOR EACH jc_job WHERE jc_job.kco = {kco}{jobSelect}</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">{jobSelect} is being specified here as we will be creating a page to pass a standard contract selection later on.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_4.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>We need to create an identifier for the Data Set table name.&#160; In this example call your table Contract.&#160; </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_5.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_5_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Save_Both.flsnp" /></p>
+        <p>A Fields Tab will now be available.</p>
+        <h2>Adding the Fields</h2>
+        <p>Click on the Fields Tab.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_6_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> and key in the following field:</p>
+        <table class="TableStyle-COINS" style="mc-table-style: url('../../../Resources/TableStyles/COINS.css');margin-left: 0;margin-right: auto;width: 100%;" cellspacing="0">
+            <col class="TableStyle-COINS-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-COINS-Column-Column1" style="width: 80px;" />
+            <col class="TableStyle-COINS-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-COINS-Column-Column1" style="width: 94px;" />
+            <col class="TableStyle-COINS-Column-Column1" style="width: 132px;" />
+            <thead>
+                <tr class="TableStyle-COINS-Head-Header1">
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Data Type</th>
+                    <th class="TableStyle-COINS-HeadE-Column1-Header1">Format</th>
+                    <th class="TableStyle-COINS-HeadD-Column1-Header1">Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINS-Body-Body1">
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">kco</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">Company</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">Integer</td>
+                    <td class="TableStyle-COINS-BodyB-Column1-Body1">-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9</td>
+                    <td class="TableStyle-COINS-BodyA-Column1-Body1">jc_job.kco</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_7.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_7_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /></p>
+        <p>For the next field we will use an example of assigning a table field to a string variable.</p>
+        <p>&#160;</p>
+        <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;width: 100%;" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 80px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 94px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 132px;" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Data Type</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Format</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" style="font-size: 11pt;">Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">job_num</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">Contract</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">Character</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">x(8)</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1" style="font-size: 11pt;">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>in the Calculation box enter : $job_num = jc_job.job_num;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_8.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_8_1106.png" class="FullWidth" />
+        </p>
+        <p>The third field is another direct source field:</p>
+        <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;width: 100%;" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 80px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 94px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 132px;" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Data Type</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Format</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" style="font-size: 11pt;">Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">job_name</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">Name</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">Character</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1" style="font-size: 11pt;">x(8)</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1" style="font-size: 11pt;">jc_job.job_name</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_11_1106.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /></p>
+        <p>The final three fields are examples of assigning numeric variables and creating a calculation:</p>
+        <p>&#160;</p>
+        <table class="TableStyle-COINSBasic" style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;width: 100%;" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 80px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 94px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 132px;" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Data Type</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1" style="font-size: 11pt;">Format</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1" style="font-size: 11pt;">Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">costs_td</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Costs</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Decimal</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" colspan="5" style="font-size: 11pt;">Calculation: <b>costs_td = jc_job.RO_ContractCosts^TD;</b></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">rev_td</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Revenue</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Decimal</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" colspan="5" style="font-size: 11pt;">Calculation: <b>rev_td = jc_job.RO_ContractRevenue^TD;</b></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">prof_td</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Profit</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">Decimal</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1" style="font-size: 11pt;">-&gt;&gt;&gt;,&gt;&gt;&gt;,&gt;&gt;9</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1" style="font-size: 11pt;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1" colspan="5" style="font-size: 11pt;">Calculation: <b>prof_td = rev_td - costs_td</b></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_9.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M2 Exercises/Data Sets_9_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

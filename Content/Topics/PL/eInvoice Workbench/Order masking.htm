@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="651" MadCap:lastWidth="1267">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Order masking</h1>
+        <p>Which PO numbers are to be treated specially as PINN transtions is determined by setting appropriate masks for the BASDA Invoice record in the “Message Rule” program (ec2034.p).&#160; An &lt;UnverifiedOrderMask&gt; tag with three nested tags, &lt;Company&gt;, &lt;Order&gt; and &lt;PLType&gt; is added to this configuration. Typically,</p>
+        <p>&lt;UnverifiedOrderMask&gt;<br /> &lt;Company&gt;*&lt;/Company&gt;<br /> &lt;Order&gt;M-*,*/*/*&lt;/Order&gt;<br /> &lt;PLType&gt;PINN&lt;/PLType&gt;<br /> &lt;PLCRType&gt;PCRN&lt;/PLCRType&gt;<br />&lt;/UnverifiedOrderMask&gt; </p>
+        <p>Here any transaction with a PO number that begins M- or any transaction with a PO number that has two “/” characters, in any <MadCap:variable name="General.ProductName" /> Company, will be treated as a PINN transaction. The PO Number is compared with each entry in the &lt;Order&gt; list essentially comparing PO number character strings with wildcard masks. Negated masks, masks beginning with the “!” character, may be used at the start of the &lt;Order&gt; list for a small increase in processing time. By definition transactions with PO numbers matched by a negated mask will not be changed from PINV to PINN. The &lt;PLType&gt; tag must be one of the values in the PO/NONPOTTS parameter list. </p>
+        <p>&#160;</p>
+    </body>
+</html>

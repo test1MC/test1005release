@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="839" MadCap:lastWidth="845">
+  <head>
+    <title>Entering Dates</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Entering Dates</h1>
+    <p>To enter a date, you can either use the <a href="WDUG0062_Date_Lookup.html">calendar lookup</a>, or type the date, using the format <span class="sy-webdmy greenc">dd/mm/yy</span><span class="sy-webdmy-n redc">mm/dd/yy</span>.</p>
+    <p>When you type dates, you can enter part of the date and <MadCap:variable name="General.ProductName" /> fills in the missing parts based on today's date.</p>
+    <p>For example, if today's date is 3<sup>rd</sup> February 2012, you can enter the following:</p>
+    <p>
+      <span class="userinput">
+        <span class="sy-webdmy-n redc">/</span>9 </span>
+      <span class="key">Return</span> will give <span class="sy-webdmy greenc" MadCap:conditions="COINS.UKOnly">09/02/12</span><span class="sy-webdmy-n redc" MadCap:conditions="COINS.USOnly">02/09/12</span> (that is, 9<sup>th</sup> of the current month).</p>
+    <p>
+      <span class="userinput">9/4</span><![CDATA[   ]]><span class="key">Return</span> will give <MadCap:conditionalText MadCap:conditions="COINS.UKOnly"><span class="sy-webdmy greenc">09/04/12</span></MadCap:conditionalText><span class="sy-webdmy-n redc" MadCap:conditions="COINS.USOnly">04/09/12</span> (that is, 9<sup>th</sup> April of the current year).</p>
+    <p> </p>
+    <p>You can also enter date calculations:</p>
+    <p>$ represents today's date.  You can enter <span class="userinput">$</span> followed by <span class="userinput">+</span> or - then a number and a unit (<span class="userinput">D </span>= days, <span class="userinput">M </span>= months, <span class="userinput">Y</span>  = years)</p>
+    <p>For example (again, if today's date is 3<sup>rd</sup> February 2012):</p>
+    <p>
+      <span class="userinput">$</span>
+      <span class="key">Return</span> will give <span class="sy-webdmy greenc" MadCap:conditions="COINS.UKOnly">03/02/12</span><span class="sy-webdmy-n redc" MadCap:conditions="COINS.USOnly">02/03/12</span>.</p>
+    <p>
+      <span class="userinput">$+1M</span>
+      <span class="key">Return</span> will give 03/03/12.</p>
+    <p>
+      <span class="userinput">$-1M</span><![CDATA[   ]]><span class="key">Return</span> will give <span class="sy-webdmy greenc" MadCap:conditions="COINS.UKOnly">03/01/12</span><![CDATA[  ]]><MadCap:conditionalText MadCap:conditions="COINS.USOnly"><span class="sy-webdmy-n redc">01/03/12</span></MadCap:conditionalText>.</p>
+    <p>
+      <span class="userinput">$+5D</span><![CDATA[   ]]><span class="key">Return</span> will give <MadCap:conditionalText MadCap:conditions="COINS.UKOnly"><span class="sy-webdmy greenc">08/02/12</span></MadCap:conditionalText><span class="sy-webdmy-n redc" MadCap:conditions="COINS.USOnly">02/08/12</span>.</p>
+    <p>
+      <span class="userinput">$+1Y</span>
+      <span class="key">Return</span> will give <span class="sy-webdmy greenc" MadCap:conditions="COINS.UKOnly">03/02/13</span><span class="sy-webdmy-n redc" MadCap:conditions="COINS.USOnly">02/03/13</span>.</p>
+    <p>Dates before 1<sup>st</sup> January 2000 are not a problem: <MadCap:variable name="General.ProductName" /> will interpret the date <span class="sy-webdmy greenc userinput" MadCap:conditions="COINS.UKOnly">10/01/98</span><span class="sy-webdmy-n redc userinput" MadCap:conditions="COINS.USOnly">1/10/98</span> as 10<sup>th</sup> January 1998, <span class="sy-webdmy greenc userinput" MadCap:conditions="COINS.UKOnly">15/3/05</span><span class="sy-webdmy-n redc userinput" MadCap:conditions="COINS.USOnly">3/15/05</span> as 15<sup>th</sup> March 2005, and so on.</p>
+    <p>Note that when you enter a <strong>period </strong>code, for example <span class="screentype">0998</span>, you do not need to enter the initial 0.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">This assumes that you are set up to use the <span class="sy-webdmy-n redc" MadCap:conditions="COINS.USOnly">MDY </span><MadCap:conditionalText MadCap:conditions="COINS.UKOnly"><span class="sy-webdmy greenc">DMY</span></MadCap:conditionalText><span class="sy-webdmy greenc"></span>date format.  The date format can be set differently for individual users.</div>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDUG0062_Date_Lookup.html" />
+      </MadCap:relatedTopics>
+    </p>
+  </body>
+</html>

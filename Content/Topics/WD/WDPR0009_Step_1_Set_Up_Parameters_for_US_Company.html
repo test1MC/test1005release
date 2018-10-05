@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.USOnly" MadCap:lastBlockDepth="8" MadCap:lastHeight="1381" MadCap:lastWidth="1159">
+  <head>
+    <title>Step 1 - Set Up Parameters for US <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /></title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Step 1 - Set Up Parameters for US <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /></h1>
+    <table class="SpecificTopic">
+      <tbody>
+        <tr>
+          <td class="Edge"> </td>
+          <td>
+            <span class="Stars">***</span>NOTE: THIS IS A US SPECIFIC TOPIC.<span class="Stars">***</span></td>
+          <td class="Edge"> </td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+    <p>Before using the <span class="module">Payroll</span> module, there are a number of steps that should be performed initially to set it up in effective working order. Step 1 is outlined below.</p>
+    <p>After you have performed these initial steps, you are ready to process Payroll (see <a href="WDPR0004_Processing_Payroll.html">Processing Payroll</a>).</p>
+    <div class="process">
+      <h2 class="print">How to set up parameters for a US <MadCap:variable name="Variables.kco company" />:</h2>
+      <p dir="ltr">
+        <MadCap:snippetBlock src="../../Resources/Snippets/paramwarn.flsnp" />
+      </p>
+      <p>If you need to set any of the parameters below differently for an individual <MadCap:variable name="Variables.kco company" /> (such as a specific US <MadCap:variable name="Variables.kco company" />), you must do the following: (1) select the <MadCap:variable name="Variables.kco company" />; (2) select the parameters; (3) select <span class="userinput">Create <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Specific</span> from the <span class="null"><span class="field">Choose Action </span></span>list; (4) set the parameter values while in the US <MadCap:variable name="Variables.kco company" /> you selected in (1) above.</p>
+      <ol>
+        <li>In <span class="function" title="Function:%WCO0000BSYP"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Parameters</span>:</li>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Set the parameter <span class="parameter">COMPLOC </span>to <span class="userinput">USA</span>.</li>
+              <li>Set the parameter <span class="parameter">CURDEC </span>to <span class="userinput">CENTS</span> (include space at beginning of word).</li>
+              <li>Set the parameter <span class="parameter">CURPLU </span>to <span class="userinput">Y</span>.</li>
+              <li>Set the parameter <span class="parameter">CURUNIT </span>to <span class="userinput">DOLLAR </span>(include space at beginning of word).</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol start="2">
+        <li>In <span class="function" title="Function:%WAT0000BSYP">Attribute Parameters</span>:</li>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Set the parameter <span class="parameter">SORTCODE </span>to <span class="userinput">FORMAT=999999999|LABEL=Routing</span>.</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol start="3">
+        <li>In <span class="function" title="Function:%WSY0000BSYP">SY Parameters</span>:</li>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Verify that the <span class="parameter">TERMCODE </span>parameter is set to <strong>%US</strong>.</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol start="4">
+        <li>In <span class="function" title="Function:%WPR000BSYP">Parameters</span>:</li>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Set the parameter <span class="parameter">NINOFRMT </span>to <span class="userinput">999-99-9999</span>.</li>
+              <li>Set the parameter <span class="parameter">FIRSTDAY </span>to the first day of the pay week. If left blank, the first day is Monday.</li>
+              <li>Set the parameter <span class="parameter">JOBLOCAT </span>to <span class="userinput">N</span>.</li>
+              <li>Set the parameter <span class="parameter">PRYEARS </span>to <span class="userinput">2010 </span>(you may add all of the years that payroll is being processed for, separated by commas).</li>
+              <li>Set the parameter <span class="parameter">FUTUSER </span>with a comma separated list of users who can only access future payroll periods.</li>
+              <li>Set the parameter <span class="parameter">TERMUSER </span>with a comma separated list of users who can pay terminated employees.</li>
+              <li>Set the parameter <span class="parameter">SUTADIR </span>with the directory to hold the Electronic Suta File (usually /$BASE).</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <ol start="5">
+        <li>To maintain essential parameters for <MadCap:variable name="Variables.eft" /> payments, go to <strong>Setup &gt; Parameters</strong> for each pay cycle (Weekly, Monthly, <MadCap:variable name="Variables.2-weekly" style="text-transform: capitalize;" />, <MadCap:variable name="Variables.4-weekly" style="text-transform: capitalize;" />):</li>
+      </ol>
+      <ul>
+        <ul>
+          <ul>
+            <ul>
+              <li>Set the parameter <span class="parameter">BACSEXEC </span>to <span class="userinput">chmod 777 $BACSFILE</span>.</li>
+              <li>Set the parameter <span class="parameter">BACSFILE </span>to <strong>/$BASE/prwbacs.txt</strong> (The <strong>prwbacs.txt</strong> file name given here is an example only, where <strong>w</strong> = weekly. You can use a different file name, but make sure it is unique for each pay frequency.)</li>
+              <li>Set the parameter <span class="parameter">BACSMED </span>to <span class="userinput">16</span>.</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+    </div>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/AT/at_bankacc.htm" />
+          <MadCap:relatedTopic src="../Parameters/AT/at_sortcode.htm" />
+          <MadCap:relatedTopic src="../Parameters/CO/co_comploc.htm" />
+          <MadCap:relatedTopic src="../Parameters/CO/co_curdec.htm" />
+          <MadCap:relatedTopic src="../Parameters/CO/co_curplu.htm" />
+          <MadCap:relatedTopic src="../Parameters/CO/co_curunit.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_firstday.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_futuser.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_joblocat.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_pryears.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_sutadir.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_termuser.htm" />
+          <MadCap:relatedTopic src="../Parameters/PR/pr_ninofrmt.htm" />
+        </MadCap:relatedTopics>
+      </p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: 'Frequency-Specific Parameters';mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/P0/p0_bacsexec.htm" />
+          <MadCap:relatedTopic src="../Parameters/P0/p0_bacsfile.htm" />
+          <MadCap:relatedTopic src="../Parameters/P0/p0_bacsmed.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

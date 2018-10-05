@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="212" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../../../PR CE Doc Projects/Content/Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">Configuration</h1>
+        <p class="Body">The three JC parameters listed below were added to accommodate <MadCap:variable name="Variables.Labour caps" /> Accrual Reporting in <MadCap:variable name="Variables.Contract caps" /> Status.<br /><br /></p>
+        <table style="width: 100%;mc-table-style: url('../../../../../PR CE Doc Projects/Content/Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>JC/LABACCR</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p><MadCap:variable name="Variables.Labour caps" /> Accrual Reporting</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableCell">JC/INJCTACCR</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Include JC Timesheets in <MadCap:variable name="Variables.Labour caps" /> Accruals</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">JC/CDRSTAT</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p>List of CDR Status codes to be included in <MadCap:variable name="Variables.Labour caps" /> Accruals</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 MadCap:autonum="2">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="2.1"><a name="Accrual"></a><MadCap:variable name="Variables.Labour caps" /> Accrual Rate Types</h2>
+        <p class="Body">A <span class="Function"><MadCap:variable name="Variables.Labour caps" /> Accrual Rate Types</span> function is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the <MadCap:variable name="Variables.Contract caps" /> Status menu at <i>Setup &gt; Setup Maintenance</i>. When selected, it displays the browse screen shown in <MadCap:xref href="#LaborAccrualRateTypes" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. You can use this browse screen to set up and maintain <MadCap:variable name="Variables.Labour caps" /> Accrual Rate Types.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="LaborAccrualRateTypes"></a> <MadCap:variable name="Variables.Labour caps" /> Accrual Rate Types</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC022_Images/LaborAccrualRateTypes.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.2"><MadCap:variable name="Variables.Contracts caps" /> Maintenance</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Field"><MadCap:variable name="Variables.Labour caps" /> Accrual Rate Type</span> field is found in the Configuration tab of <MadCap:variable name="Variables.Contracts caps" /> Maintenance, as shown in <MadCap:xref href="#JobMaintConfigTab" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>. This field is only visible and enabled when the JC/LABACCR parameter is set. It lists all non-dormant <MadCap:variable name="Variables.Labour caps" /> Accrual Rate Types, which are set up in the <span class="Function"><MadCap:variable name="Variables.Labour caps" /> Accrual Rate Types</span> function (see Section <MadCap:xref href="#Accrual" class="Figurenumberonly"><i>2.1</i></MadCap:xref>).</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="JobMaintConfigTab"></a>Configuration Tab</p>
+        <p style="text-align: center;">
+            <img src="../../../Resources/Images/JC022_Images/JobMaintConfigTab.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="2.3"><MadCap:variable name="Variables.Labour caps" /> Accrual Amount Calculation</h2>
+        <p class="Body">The <MadCap:variable name="Variables.Labour caps" /> Accrual Amount is calculated from the following records:</p>
+        <ul>
+            <li class="ListBullet1">Unposted PR&#160;Timecards.</li>
+            <li class="ListBullet1">Unposted JC Timesheets when the JC/INJCTACCR parameter is set.</li>
+            <li class="ListBullet1">The <MadCap:variable name="Variables.gang" style="text-transform: capitalize;" /> Daily Reports with statuses, as listed in the JC/CDRSTAT parameter, which have not been transferred to Payroll.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <h2 MadCap:autonum="2.4"><MadCap:variable name="Variables.Labour caps" /> Accrual Amount</h2>
+        <p class="Body">The <MadCap:variable name="Variables.Labour caps" /> Accrual Amount now appears on the following <MadCap:variable name="Variables.enquiries" />:</p>
+        <ul>
+            <li class="ListBullet1">Costs by <MadCap:variable name="Variables.Contract caps" /></li>
+            <li><MadCap:variable name="Variables.Contract caps" />/Phase Costs by Activity</li>
+            <li><MadCap:variable name="Variables.Contract caps" />/Phase Costs by Section</li>
+            <li><MadCap:variable name="Variables.Contract caps" />/Phase Costs by WBS</li>
+            <li>Costs by Cost Code</li>
+            <li><MadCap:variable name="Variables.Contract caps" />/Phase Costs by <MadCap:variable name="Variables.Cost Head caps" /> Analysis set 1</li>
+            <li><MadCap:variable name="Variables.Contract caps" />/Phase Costs by Cost Code</li>
+            <li><MadCap:variable name="Variables.Contract caps" />/Phase Costs by Cost Code Analysis set 1</li>
+        </ul>
+        <p class="Body">When you drill down on the <span class="Field"><MadCap:variable name="Variables.Labour caps"></MadCap:variable> Accrual Amount</span> field, you will see the details of the records that have been used for calculating that amount.</p>
+    </body>
+</html>

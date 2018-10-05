@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="238" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/Basic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Screen and Processing Changes</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles: </MadCap:conditionalText>Configuration</h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>CV parameter lets you choose whether to use Model specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles.</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/Basic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-Basic" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column1" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="TableCell">CV/ITEMMODL</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p>Use Model specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h1 MadCap:autonum="2">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles: </MadCap:conditionalText><MadCap:variable name="Variables.CVR caps" /> Setup</h1>
+        <p class="Body">This section includes information about functions found on the <i><MadCap:variable name="Variables.CVR caps" /> &gt;&#160;<MadCap:variable name="Variables.CVR caps" /> Setup</i> menu that were modified in v11.09 to allow the use of Model specific Items and Styles.
+</p>
+        <h2 MadCap:autonum="2.1"><MadCap:variable name="Variables.CVR caps" /> Items and Styles</h2>
+        <p class="Body">If <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, the <MadCap:variable name="Variables.CVR caps" /> Items and  <MadCap:variable name="Variables.CVR caps" /> Styles workbenches on the <i> <MadCap:variable name="Variables.CVR caps" /> &gt; Setup </i>menu are suppressed. However, you can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>perform maintenance for Items and Styles in <span class="Function"><MadCap:variable name="Variables.CVR caps" /> Models</span>.</p>
+        <h2 MadCap:autonum="2.2"><MadCap:variable name="Variables.CVR caps" /> Models</h2>
+        <h3 MadCap:autonum="2.2.1">Items Tab</h3>
+        <p class="Body">If <span class="parameter">CV/ITEMMODL </span>is set to <strong>Y</strong>, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Items </strong>tab appears on the <MadCap:variable name="Variables.CVR caps" /> Models browse, as shown in <MadCap:xref href="#CVRModelItemsTab" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. This tab shows a browse screen of <MadCap:variable name="Variables.CVR caps" /> Items with a set of Model specific <MadCap:variable name="Variables.CVR caps" /> Items.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="CVRModelItemsTab"></a>Items Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRModelItemsTab.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">As with other existing workbenches, you can add/update/delete Items, copy Items (also copying from an Item of another Model) on this browse.</p>
+        <h4 MadCap:autonum="2.2.1.1">Named Filters</h4>
+        <p class="Body">Groups of named filters are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the Items browse for both <span class="parameter">ITEMMODL </span>settings (Y or N), as shown below.</p>
+        <p class="IndentBold">1st Named Filter (by Model):</p>
+        <p class="IndentFieldDef"><i>This Model Items</i>
+            <br /><i>Company Specific Items</i>
+            <br /><i>All Items</i>
+        </p>
+        <p class="IndentBold">3rd Named Filter:</p>
+        <p class="IndentFieldDef"><i>All Items</i>
+            <br /><i>Active Items</i>
+            <br /><i>Retired Items</i>
+            <br /><i>Unused Items</i> - only appears if <strong>This Model Items</strong> option has been selected in the 1st Named Filter. If selected, this filter shows <MadCap:variable name="Variables.CVR caps" /> Items that are not used in the current Model.</p>
+        <p class="IndentBold">4th Named Filter (by Item attributes):</p>
+        <p class="IndentFieldDef"><i>All<br></br>Manual Input Items<br></br>Breakdown Items<br></br>Snapshot Items<br></br><MadCap:variable name="Variables.CVR caps"></MadCap:variable> Items<br></br>Post Journal Items<br></br>Post Budget Items<br></br>Post Data Store Items</i>
+        </p>
+        <h4 MadCap:autonum="2.2.1.2">Column Sets</h4>
+        <p class="Body">Column sets functionality is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in the <MadCap:variable name="Variables.CVR caps" /> Items browse.</p>
+        <h4 MadCap:autonum="2.2.1.3">Transfer <MadCap:variable name="Variables.CVR caps" /> Items</h4>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Transfer <MadCap:variable name="Variables.CVR caps" /> Items </strong>action appears on the Model specific <MadCap:variable name="Variables.CVR caps" /> Items browse if parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>. This action allows multiple Items to be transferred (copied or moved) to selected Model(s). If selected, the selection screen is displayed, as shown in <MadCap:xref href="#TransferCVRItems" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "> <a name="TransferCVRItems"></a>Transfer <MadCap:variable name="Variables.CVR caps" /> Items</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_TransferCVRItems.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.CVR caps" /> Items</p>
+        <p class="IndentFieldDef">The list of <MadCap:variable name="Variables.CVR caps" /> Items (Item Code and Description) you selected for transferring.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.CVR caps" /> Model</p>
+        <p class="IndentFieldDef">The Available list shows all Models in the Company  (including the current one); the Selected list shows any Models you have selected for the Transfer process. By default, no Models are selected.</p>
+        <p class="IndentBold">Action</p>
+        <p class="IndentFieldDef">Indicate whether you wish to <strong>Copy </strong>or <strong>Move </strong>the <MadCap:variable name="Variables.CVR caps" /> Items to the selected Model(s).</p>
+        <p class="IndentBold">If Already Exists?</p>
+        <p class="IndentFieldDef">If an Item being transferred already exists in a selected Model, indicate whether you want to <strong>Overwrite </strong>it or <strong>Skip </strong>it.</p>
+        <p class="IndentBold">If Does not Exist?</p>
+        <p class="IndentFieldDef">If an Item being transferred does not exist in a selected Model, indicate whether you want to <strong>Copy </strong>it or <strong>Skip </strong>it.</p>
+        <p class="Body">When you click the <span class="button">Next </span>button to continue, the selected options are validated, and a warning about possible data loss is displayed regarding if you selected either of the following:</p>
+        <ul>
+            <li class="ListBullet4"><span class="Field">Action </span>- <strong>Move </strong>selected</li>
+            <li class="ListBullet4"><span class="Field">If Already Exists </span>– <strong>Overwrite </strong>selected</li>
+        </ul>
+        <h3 MadCap:autonum="2.2.2">Styles Tab</h3>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Styles </strong>tab appears on the <MadCap:variable name="Variables.CVR caps" /> Models browse, as shown in <MadCap:xref href="#CVRModelStylesTab" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>. This tab is a browse showing a set of Model specific <MadCap:variable name="Variables.CVR caps" /> Styles.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="CVRModelStylesTab"></a>Styles Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRModelStylesTab.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">As with other existing workbenches, you can add/update/delete Styles, as well as copy Styles (also copying from a Style of another Model) on this browse.</p>
+        <h4 MadCap:autonum="2.2.2.1">Named Filters</h4>
+        <p class="Body">Groups of named filters are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available on the Styles browse, as shown below.</p>
+        <p class="IndentBold">1st Named Filter (by Model):</p>
+        <p class="IndentFieldDef"><i>This Model Styles</i>
+            <br /><i>Company Specific Styles - </i>only shown if there is at least one <MadCap:variable name="Variables.CVR caps" /> Style with a blank Model code. It allows you to easily select company specific Styles and copy/move them to any Model using the <span class="Function"><strong>Transfer <MadCap:variable name="Variables.CVR caps" /> Styles</strong></span> action.<br /><i>All Styles</i></p>
+        <p class="IndentBold">2nd Named Filter:</p>
+        <p class="IndentFieldDef"><i>All Styles</i>
+            <br /><i>Active Styles</i>
+            <br /><i>Retired Styles - </i>only appears if there are Styles marked as Retired<br /><i>Unused Styles - </i>only appears if <strong>This Model Styles</strong> option has been selected in the 1st Named Filter. If selected, this filter shows <MadCap:variable name="Variables.CVR caps" /> Styles that are not used in the current Model.</p>
+        <h4 MadCap:autonum="2.2.2.2">Column Sets</h4>
+        <p class="Body">Column sets functionality is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>available in the <MadCap:variable name="Variables.CVR caps" /> Styles browse.</p>
+        <h4 MadCap:autonum="2.2.2.3">Transfer <MadCap:variable name="Variables.CVR caps" /> Styles</h4>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><strong>Transfer <MadCap:variable name="Variables.CVR caps" /> Styles </strong>action appears on the Model specific <MadCap:variable name="Variables.CVR caps" /> Styles browse if parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>. This action allows multiple Styles to be transferred (copied or moved) to selected Model(s). If selected, the selection screen is displayed, as shown in <MadCap:xref href="#TransferCVRStyles" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="TransferCVRStyles"></a>Transfer <MadCap:variable name="Variables.CVR caps" /> Styles</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_TransferCVRStyles.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.CVR caps" /> Styles</p>
+        <p class="IndentFieldDef">The list of <MadCap:variable name="Variables.CVR caps" /> Styles (Style Code and Description) you selected for transferring.</p>
+        <p class="IndentBold"><MadCap:variable name="Variables.CVR caps" /> Model</p>
+        <p class="IndentFieldDef">The Available list shows all Models in the Company  (including the current one); the Selected list shows any Models you have selected for the Transfer process. By default, no Models are selected.</p>
+        <p class="IndentBold">Action</p>
+        <p class="IndentFieldDef">Indicate whether you wish to <strong>Copy </strong>or <strong>Move </strong>the <MadCap:variable name="Variables.CVR caps" /> Styles to the selected Model(s).</p>
+        <p class="IndentBold">If Already Exists?</p>
+        <p class="IndentFieldDef">If a Style being transferred already exists in a selected Model, indicate whether you want to <strong>Overwrite </strong>it or <strong>Skip </strong>it.</p>
+        <p class="IndentBold">If Does not Exist?</p>
+        <p class="IndentFieldDef">If a Style being transferred does not exist in a selected Model, indicate whether you want to <strong>Copy </strong>it or <strong>Skip </strong>it.</p>
+        <p class="Body">When you click the <span class="button">Next </span>button to continue, the selected <MadCap:variable name="Variables.CVR caps" /> Styles are copied/moved to another Model(s).</p>
+        <h3 MadCap:autonum="2.2.3">Fields Tab</h3>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, the <span class="Field"><MadCap:variable name="Variables.CVR caps" /> Item/<MadCap:variable name="Variables.CVR caps"></MadCap:variable> Style </span>field on the Fields tab will only handle Items/Styles specific to the parent Model.</p>
+        <h3 MadCap:autonum="2.2.4">Proration Tab</h3>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, only Model specific Items/Styles are maintained on the Proration tab.</p>
+        <h3 MadCap:autonum="2.2.5">Copy <MadCap:variable name="Variables.CVR caps" /> Model</h3>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, and you copy a <MadCap:variable name="Variables.CVR caps" /> Model to a new one, all original Model <MadCap:variable name="Variables.CVR caps" /> Items and Styles are also copied to the new Model.</p>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is not set to <strong>Y</strong>, <strong>Copy <MadCap:variable name="Variables.CVR caps" /> Model </strong>skips copying the Items and Styles, even if the original Model has its own Items/Styles.</p>
+        <h1 MadCap:autonum="3">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles: </MadCap:conditionalText>Export/Import <MadCap:variable name="Variables.CVR caps" /> Setup</h1>
+        <p class="Body">This section includes information about functions found on the <i><MadCap:variable name="Variables.CVR caps" /> &gt;&#160;<MadCap:variable name="Variables.CVR caps" /> Setup</i> menu that were modified in v11.09 to allow the use of Model specific Items and Styles.
+</p>
+        <h2 MadCap:autonum="3.1">Export <MadCap:variable name="Variables.CVR caps" /> Setup</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, the<span class="Function"> Export <MadCap:variable name="Variables.CVR caps" /> Setup</span> function in <i><MadCap:variable name="Variables.CVR caps" /> &gt;&#160;Setup </i>selects Model specific Items and Styles for export. Otherwise, it only works with Company specific Items and Styles in the Model and disregards any Model specific Items/Styles.</p>
+        <h2 MadCap:autonum="3.2">Import <MadCap:variable name="Variables.CVR caps" /> Setup</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, the<span class="Function"> Import <MadCap:variable name="Variables.CVR caps" /> Setup</span> function in <i><MadCap:variable name="Variables.CVR caps" /> &gt;&#160;Setup</i> assigns a Model code to the Items and Styles.</p>
+        <h1 MadCap:autonum="4">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles: </MadCap:conditionalText><MadCap:variable name="Variables.CVR caps" /> Administration</h1>
+        <p class="Body">This section includes information about functions found on the <i><MadCap:variable name="Variables.CVR caps" /> &gt;&#160;<MadCap:variable name="Variables.CVR caps" /> Administration</i> menu that were modified in v11.09 to allow the use of Model specific Items and Styles.
+</p>
+        <h2 MadCap:autonum="4.1"><MadCap:variable name="Variables.CVR caps" /> Items Snapshot</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, Items selection on the<span class="Function"> <MadCap:variable name="Variables.CVR caps" /> Item Snapshot</span> screen includes all Items specific to any of the existing Models valid for the Company.</p>
+        <h2 MadCap:autonum="4.2">Populate Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, and at least one <MadCap:variable name="Variables.CVR caps" /> Item/Style exists in the Company with a blank Model key, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Populate Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles </span>function is shown on the Administration menu. It allows Company specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles to be copied to each <MadCap:variable name="Variables.CVR caps" /> Model,  then deleted.</p>
+        <p class="Body">When you select this function from the menu, the screen displays a warning message, as shown in <MadCap:xref href="#PopulateModelItemsStyles" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="PopulateModelItemsStyles"></a>Populate Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_PopulateModelSpecificCVRItemsStyles.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Click the <span class="button">Next </span>button to proceed.</p>
+        <p class="Body">&#160;</p>
+        <ul>
+            <li class="ListBullet3">If the Item/Style exists in a Model with the same code, it is deleted and overridden by the Company specific Item/Style.</li>
+            <li class="ListBullet3">If copied successfully, all Company specific Items and Styles are deleted.</li>
+        </ul>
+        <h2 MadCap:autonum="4.3">Populate Company Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</h2>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is not set to <strong>Y</strong>, and at least one <MadCap:variable name="Variables.CVR caps" /> Item/Style exists in the Company with a non-blank Model key, a <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Populate Company Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles </span>function is shown on the Administration menu. It allows Model specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles to be moved to the Company level.</p>
+        <p class="Body">When you select this function from the menu, the screen displays a warning message, as shown in <MadCap:xref href="#PopulateCoCVRItemsStyles" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="PopulateCoCVRItemsStyles"></a>Populate Company Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_PopulateCoSpecificCVRItemsStyles.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">Click the <span class="button">Next </span>button to proceed.</p>
+        <ul>
+            <li class="ListBullet3">If a Company specific Item/Style exists with the same code, it is deleted and overridden by the Model specific Item/Style.</li>
+            <li class="ListBullet3">If copied successfully, all Company specific Styles are deleted.</li>
+            <li class="ListBullet3">Processing generates a detailed report.</li>
+        </ul>
+        <h2 MadCap:autonum="4.4"><MadCap:variable name="Variables.CVR caps" /> Items and Styles Usage Reports</h2>
+        <p class="Body"><span class="Function"><MadCap:variable name="Variables.CVR caps" /> Items Usage Report </span>(see Section <MadCap:xref href="#Styles" class="Figurenumberonly"><i>4.4.1</i></MadCap:xref>) and <span class="Function"><MadCap:variable name="Variables.CVR caps" /> Styles Usage Report</span> (see Section <MadCap:xref href="#Items" class="Figurenumberonly"><i>4.4.2</i></MadCap:xref>) functions are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>found on the<i> <MadCap:variable name="Variables.CVR caps" /> &gt; Administration</i> menu. These reports are always available, irrespective of the <span class="parameter">CV/ITEMMODL</span> parameter setting.</p>
+        <h3 MadCap:autonum="4.4.1"><a name="Styles"></a><MadCap:variable name="Variables.CVR caps" /> Styles Usage Report</h3>
+        <p class="Body">The new <span class="Function"><MadCap:variable name="Variables.CVR caps" /> Styles Usage Report </span>function allows you to select multiple Styles to report on. The selection screen is shown in <MadCap:xref href="#CVRStylesUsageRpt" class="Figurenumberonly"><i>Figure 7</i></MadCap:xref>, and a sample Report is shown in <MadCap:xref href="#CVRStylesSampleRpt" class="Figurenumberonly"><i>Figure 8</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 7: "><a name="CVRStylesUsageRpt"></a><MadCap:variable name="Variables.CVR caps" /> Styles Usage Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRStyleUsageRpt.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">List</p>
+        <p class="IndentFieldDef">Select whether you wish to display an <strong>All </strong>or <strong>Overlapping </strong>(the default) list on the report.</p>
+        <p class="IndentBold">Field Set</p>
+        <p class="IndentFieldDef">Select the Field Set that you wish to display on the report. Field sets are set up in <i>OA&#160;Reporting &amp;&#160;BI &gt;&#160;Field Sets &gt;&#160;Report Field Sets</i>.</p>
+        <p class="Caption" MadCap:autonum="Figure 8: "><a name="CVRStylesSampleRpt"></a>Sample Report</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_UsageStylesRptSample.png" class="MaxPrintWidth" />
+        </p>
+        <h3 MadCap:autonum="4.4.2"><a name="Items"></a><MadCap:variable name="Variables.CVR caps" /> Items Usage Report</h3>
+        <p class="Body">The new <span class="Function"><MadCap:variable name="Variables.CVR caps" /> Items Usage Report </span>function allows you to select multiple Items to report on. The selection screen is shown in <MadCap:xref href="#CVRItemsUsageRpt" class="Figurenumberonly"><i>Figure 9</i></MadCap:xref>, and a sample Report is shown in <MadCap:xref href="#CVRItemsSampleRpt" class="Figurenumberonly"><i>Figure 10</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 9: "><a name="CVRItemsUsageRpt"></a><MadCap:variable name="Variables.CVR caps" /> Items Usage Selection Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRItemsUsageRpt.png" class="MaxPrintWidth" />
+        </p>
+        <p class="IndentBold">List</p>
+        <p class="IndentFieldDef">Select whether you wish to display an <strong>All </strong>or <strong>Overlapping </strong>(the default) list on the report.</p>
+        <ul>
+            <li class="ListBullet4"><strong>All </strong>- contains all Items (used, unused)</li>
+            <li class="ListBullet4"><strong>Overlapping </strong>- Items that are not used or only used in a single Model will not appear in the list</li>
+        </ul>
+        <p class="IndentBold">Field Set</p>
+        <p class="IndentFieldDef">Select the Field Set that you wish to display on the report. Field sets are set up in <i>OA&#160;Reporting &amp;&#160;BI &gt;&#160;Field Sets &gt;&#160;Report Field Sets</i>.</p>
+        <p class="Caption" MadCap:autonum="Figure 10: "><a name="CVRItemsSampleRpt"></a>Sample Report</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRItemsUsageSampleRpt.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Body">The Item Code may be used in three different ways on this report, as follows:</p>
+        <ul>
+            <li class="ListBullet3">Used in multiple Models (there can be different setups in each Model in CV/ITEMMODL=Y configuration, or just reused with the same setup in any configuration.</li>
+            <li class="ListBullet3">Used in a single Model in any configuration</li>
+            <li class="ListBullet3">Not used for either configuration (exists but not used on fields)</li>
+        </ul>
+        <h1 MadCap:autonum="5">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles: </MadCap:conditionalText><MadCap:variable name="Variables.CVR caps" /> Workbench</h1>
+        <p class="Body">If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, Model specific Styles are used on the <MadCap:variable name="Variables.CVR caps" /> browse screen.</p>
+        <p>&#160;</p>
+        <h1 MadCap:autonum="6">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Model Specific <MadCap:variable name="Variables.CVR caps" /> Items and Styles: </MadCap:conditionalText>Other Module <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">Changes</MadCap:conditionalText></h1>
+        <p class="Body">This section includes information about functions found on other modules that were modified in v11.09 to allow the use of Model specific Items and Styles.
+</p>
+        <h2 MadCap:autonum="6.1">Contract Default WBS Codes</h2>
+        <p class="Body">In<i> <MadCap:variable name="Variables.Contract caps" /> Status &gt; <MadCap:variable name="Variables.Contracts caps" /> &gt; Default WBS Codes</i>, the <span class="Field"><MadCap:variable name="Variables.CVR caps" /> Journals</span> field (see <MadCap:xref href="#CVRJournalsLookup" class="Figurenumberonly"><i>Figure 11</i></MadCap:xref>) lookup <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>shows <MadCap:variable name="Variables.CVR caps" /> Items. If parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>, these Items come from the <MadCap:variable name="Variables.CVR caps" /> Model used in the <MadCap:variable name="Variables.Contract caps" />; otherwise, Company specific Items are used.</p>
+        <p class="Caption" MadCap:autonum="Figure 11: "><a name="CVRJournalsLookup"></a><MadCap:variable name="Variables.CVR caps" /> Journals Lookup</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_CVRJournalsLookup.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="6.2">Company-wide <MadCap:variable name="Variables.CVR caps" /> Items Lookup</h2>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>lookup browse is used outside the <MadCap:variable name="Variables.CVR caps" /> Module if parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong> to allow for the selection of any <MadCap:variable name="Variables.CVR caps" /> Item existing in a Company. This lookup looks the same as the regular <MadCap:variable name="Variables.CVR caps" /> Items browse, except that a <strong>Model </strong>column has been added after the Item column, as shown in <MadCap:xref href="#OtherCVRLookups" class="Figurenumberonly"><i>Figure 12</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 12: "><a name="OtherCVRLookups"></a>Other <MadCap:variable name="Variables.CVR caps" /> Items Lookups [need screen with Model column]</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_OtherCVRItemsLookup.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="6.3">Forecasting Contract Items <span style="color: #ff0000;">[not sure if this info is right]</span></h2>
+        <p class="Body">The <span class="Function">Contract Items </span>screen in <i>Forecasting &gt; Setup</i> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>has <MadCap:variable name="Variables.CVR caps" /> Item properties, as shown in <MadCap:xref href="#FOCVRItems" class="Figurenumberonly"><i>Figure 13</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 13: "><a name="FOCVRItems"></a>Contract Item Properties</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_FOCVRItems.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="6.4">House Sales Journal Maintenance</h2>
+        <p class="Body">In <i>House Sales &gt; Financials &gt; Setup &gt; Journal Maintenance</i>, the <span class="Field"><MadCap:variable name="Variables.CVR caps" /> Item</span> lookup on the Journal Line now uses a company-wide lookup type, as shown in <MadCap:xref href="#HSCVRItem" class="Figurenumberonly"><i>Figure 14</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 14: "><a name="HSCVRItem"></a>Journal Line CVR&#160;Item</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_HSCVRItem.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="6.5">Land Appraisal <MadCap:variable name="General.ProductName" /> Links Configuration</h2>
+        <p class="Body">In <i>Land Appraisal &gt; Setup &gt; <MadCap:variable name="General.ProductName" />&#160;Link Configuration</i>, the<span class="Field"> <MadCap:variable name="Variables.CVR caps" /> Plot Items for Build Cost</span> field <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>has a company-wide lookup that uses multi-selection options, as shown in <MadCap:xref href="#COINSLinksConfigScreen" class="Figurenumberonly"><i>Figure 15</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 15: "><a name="COINSLinksConfigScreen"></a><MadCap:variable name="General.ProductName" /> Links Configuration Screen</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_LACVRPlotItemsLookup.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="6.6">Land Appraisal Section Input</h2>
+        <p class="Body">In <i>Land Appraisal &gt; Setup &gt; Template Configuration</i>, the <span class="Field"><MadCap:variable name="Variables.CVR caps" /> Cost Recovery Items</span> field <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>has a company-wide lookup that uses multi-selection options, as shown in <MadCap:xref href="#LATemplateConfig" class="Figurenumberonly"><i>Figure 16</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 16: "><a name="LATemplateConfig"></a>LA Template Configuration</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/CV/CV023_Images/CV023_LACVRCostRecovery.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="6.7">House Building Forecast Matrices</h2>
+        <p class="Body"><MadCap:variable name="Variables.Cost Head caps" /> Analysis, Plot <MadCap:variable name="Variables.Cost Head caps" />, Tick Group, and Payment Stage Matrices used in the House Building module now support Model specific items if parameter <span class="parameter">CV/ITEMMODL</span> is set to <strong>Y</strong>.</p>
+    </body>
+</html>

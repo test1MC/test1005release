@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="21457" MadCap:lastWidth="1266" style="mc-master-page: url('..\..\..\Resources\MasterPages\OtherTopics.flmsp');" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Pages</h1>
+        <p>Within <MadCap:variable name="General.ProductName" />, pages allow the maintenance of data through Add, Update and Delete functionality.&#160; This functionality can be replicated by Web Services.&#160; </p>
+        <p>The user-defined page maintenance webservice capability is intended to be used for straight-forward maintenance of setup tables etc. where there are relatively few fields or no fields with dependencies.&#160; </p>
+        <p>For areas such as supplier maintenance etc. there are hard-coded services for this type of functionality.&#160; </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Before embarking on designing your own page maintenance webservice it is recommended you seek advice from <MadCap:variable name="General.ProductName" /> to check there is not already a service available that will fulfil your needs.</p>
+        <p>For a page webservice, two design components are required, the function(s) and a page.&#160; It is important that the function(s) and page have the same name.</p>
+        <p>In this example, we will use the name NLWSEX2 and we will design a page that will allow the maintenance of <MadCap:variable name="General.ProductName" /> UserID’s.</p>
+        <h2>Function</h2>
+        <p>Create the function called NLWSEX2 with Category of SER – Service and program of syesb004.&#160; The Context of the function will determine the description that will appear later on the Web Services menu.&#160; </p>
+        <p>Since the table sysuser holds both groups and users, and we only want to access users for this example, we need to set a parameter on the function to ensure we maintain the correct records.&#160; Add the parameter su-type=no</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_1106.png" class="FullWidth" />
+        </p>
+        <h2>Page</h2>
+        <p>The page controls the record access, the Input and the Output messages.&#160; These are specified using the following forms:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>Body</td>
+                    <td>Defines the fields that uniquely identify the record</td>
+                </tr>
+                <tr>
+                    <td>Update</td>
+                    <td>Defines the Input Schema</td>
+                </tr>
+                <tr>
+                    <td>Detail</td>
+                    <td>Defines the output Schema</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Create new page called NLWSEX2.&#160; </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">The body table should be set to the <MadCap:variable name="General.ProductName" /> database table that is to be maintained – in this example the table is sysuser.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_1_1106.png" class="FullWidth" />
+        </p>
+        <p>Add the forms Body, Detail and Update</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_2_1106.png" class="FullWidth" />
+        </p>
+        <h3>Body Form</h3>
+        <p>The Body Form is used to define which fields will be used to uniquely identify the record when Adding, Updating or Deleting.&#160; For sysuser the key field is the userid (su-userid).&#160; Other tables may have more than one field as part of the key – all should be added to ensure the correct record is accessed.</p>
+        <p>Add field su-userid to the Body Form.&#160; </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Make sure that the Add and Update fields are ticked to indicate that this is a key field.&#160; </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_3_1106.png" class="FullWidth" />
+        </p>
+        <h3>Update Form</h3>
+        <p>The update Form is used to define the Input Schema and should contain all the fields that will be maintained by the web service.&#160; </p>
+        <p>If records will be added by the Web service it is important to include all required fields (i.e. all fields that would be mandatory if added through a standard <MadCap:variable name="General.ProductName" /> page) as the business logic will not allow records to be Added without these fields.&#160; </p>
+        <p>For user records, the required fields are the User ID, the User Name and the Prime Company and a comma separated list of Companies the user can access.&#160; Our example web service will also maintain the Name User field.&#160; So our list of fields will be:</p>
+        <p>su-userid </p>
+        <p>su-name</p>
+        <p>sur-primeco </p>
+        <p>su-cos </p>
+        <p>su-gui</p>
+        <p>Add these fields to the Update Form.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_4_1106.png" class="FullWidth" />
+        </p>
+        <h3>Detail Form</h3>
+        <p>The Detail Form defines the Output Schema and you may include any fields that you wish to see as confirmation of the record maintenance.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_5.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_5_1106.png" class="FullWidth" />
+        </p>
+        <h2>Adding the Function to the Web services Menu</h2>
+        <p>To run the Page Web Service, first check that the menu function UWXSYESB004 exists.&#160; If it does not exist, then you need to create it.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_6.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_6_1106.png" class="FullWidth" />
+        </p>
+        <p>Open the Function and select the Menu Items Tab.&#160; If the function already exists, there may already be entries on this tab relating to Standard Used Defined Services issued by <MadCap:variable name="General.ProductName" /> (prefixed with %) or other User Defined Services created by your company.</p>
+        <p>Click Add and enter the name of your new User Defined Services Function (in our example NLWSEX1).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_7.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_7_1106.png" class="FullWidth" />
+        </p>
+        <p>Navigate back to the <MadCap:variable name="General.ProductName" /> Services Menu and select the SY – System Hyperlink.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_7.png" style="left: 0;" class="HalfWidth" />
+            <br />
+        </p>
+        <p>Locate the SYESB00 entries.&#160; You new Function will be in this group.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_8.png" style="left: 0;" class="HalfWidth" />
+            <br />
+        </p>
+        <p>Select the Hyperlink to view the service schema.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_9.png" class="FullWidth" />
+        </p>
+        <p>The Input Schema – defined by the Update form of the page will look something like this:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_10.png" class="HalfWidth" />
+        </p>
+        <p>The Output Schema – defined by the Detail Form of the page will look something like this:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_11.png" class="HalfWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>Testing the Service</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_12.png" style="left: 0;" class="HalfWidth" />
+            <br />Create a new soapUI project and from the Service Schema copy the WSDL shortcut link and paste this into the Initial WSDL field </p>
+        <p>&#160;</p>
+        <p>Click OK</p>
+        <p>Once the project has been created, run Request 1 in the editor.&#160; Replace the Input message with the simplified one from the Input Schema from the Web service.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_13.png" class="FullWidth" />
+        </p>
+        <p>Enter the hostname, Environment and username/password details.</p>
+        <p>Delete the lines for Group, extUser and extAuth</p>
+        <p>In the &lt;Body&gt; Section you will notice a new line</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_14.png" class="HalfWidth" />
+        </p>
+        <p>This “Row” record must contain a valid rsp_action of one of the following:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>Add</td>
+                </tr>
+                <tr>
+                    <td>U</td>
+                    <td>Update</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>Delete</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The id field can contain an id record that will be useful for identifying issues when updating more than one record.&#160; We will use this later in the exercise.</p>
+        <p>Specify an rsp_action of A and then fill in the appropriate user details into the remaining Body Fields.</p>
+        <p>For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_15.png" class="HalfWidth" />
+        </p>
+        <p>Send the message and correct any exceptions if they occur.</p>
+        <p>If all is correct, a RESPONSE message should be returned.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_16.png" class="FullWidth" />
+        </p>
+        <p>However,&#160; if we check the User records in User Maintenance, no new User has been created.</p>
+        <p>If we look at the Input Message again, at the top of the message is another new line:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_17.png" class="HalfWidth" />
+        </p>
+        <p>If this is set to “true”, the details will be sent and validated but no record maintenance will take place.&#160; This allows us to test the message without affecting any data.&#160; Only when this is set to “false” will record maintenance take effect.</p>
+        <p>Set this to false and send the message again.</p>
+        <p>This time, when we check user maintenance, we should see a new user record:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_18.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_18_1106.png" class="FullWidth" />
+        </p>
+        <p>Experiment now with the rsp_actions of A, U and D to see the changes in the record and messages that appear in the output message.&#160; Try adding a record with the same userid for example or add a new user but leave the user name blank.</p>
+        <h3>Using the ID field when adding multiple records</h3>
+        <p>We can maintain more than one record at a time by duplicating the block of lines within the Body section of the Input Message.&#160; For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_19.png" class="FullWidth" />
+        </p>
+        <p>In the above example, in the id field of each block I have entered a unique reference for each record. </p>
+        <p>In the message I have specified an Add of two new records, but one of the userid’s already exists in the User records.&#160; When I then send the message one of the updates will fail.&#160; In the output message I will get an exception:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Pages_20.png" class="FullWidth" />
+        </p>
+        <p>The exception will always give the row number that failed, but with an ID specified, the ID will also appear in the exception making it easier for me to identify the record that needs to be amended.&#160; Only when all records in the input message are correct will any changes be applied to the database.</p>
+    </body>
+</html>

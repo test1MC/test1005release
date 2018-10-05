@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="698" MadCap:lastWidth="600">
+    <head>
+        <link href="../TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p class="Body">Changes have been made to the <MadCap:variable name="SnippetVariables.SCPL" />&#160;payment run to allow <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> contra invoices to be included. If contra invoices are included, the payment amounts are reduced by the contra invoice values, and these transactions are marked as paid.</p>
+        <h2 MadCap:autonum="0.1">Select/Deselect <MadCap:variable name="SnippetVariables.Inv/Cert" />s (Batch)</h2>
+        <p class="Body">The option to Include <span class="module"><MadCap:variable name="Variables.Sales Ledger caps"></MadCap:variable></span> contra invoices is controlled by the setting of the <span class="parameter"><MadCap:variable name="SnippetVariables.SCPL"></MadCap:variable>/CONTBPAY</span> parameter. If <span class="parameter">CONTBPAY</span> is set to <span class="userinput">Always</span> or <span class="userinput">Prompt</span>, a new <MadCap:variable name="Variables.tick"></MadCap:variable>box is shown on the <span class="Function">Select/Deselect <MadCap:variable name="SnippetVariables.inv/cert" style="text-transform: capitalize;"></MadCap:variable>s (Batch)</span>&#160;screen.</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Include Contras	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>If <span class="parameter">CONTBPAY</span> is set to <span class="userinput">Always</span>, this is <MadCap:variable name="Variables.tick"></MadCap:variable>ed and cannot be updated; if <span class="parameter">CONTBPAY</span> is set to <span class="userinput">Prompt</span>, this is <MadCap:variable name="Variables.tick"></MadCap:variable>ed but can be changed.</p>
+                    <p>If a <MadCap:variable name="SnippetVariables.Supplier/Subcontractor" /> has any <MadCap:variable name="SnippetVariables.inv/cert" />s selected for payment and this is <MadCap:variable name="Variables.tick" />ed, any contra invoices for the <MadCap:variable name="SnippetVariables.Supplier/Subcontractor" /> will also be included.</p>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum="0.2">Select/Deselect <MadCap:variable name="SnippetVariables.Inv/Cert" />s (Manual)</h2>
+        <p class="Body">If the <MadCap:variable name="SnippetVariables.SCPL"></MadCap:variable> parameter <span class="parameter">CONTMPAY</span> is set to <span class="userinput">Y</span>, an additional column is shown on the <span class="Function">Select/Deselect <MadCap:variable name="SnippetVariables.inv/cert" style="text-transform: capitalize;"></MadCap:variable>s (Manual)</span> screen.</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Contra	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This shows the contra amount offset against the payment.</p>
+                </div>
+            </div>
+        </div>
+        <p class="Body">When the <span class="Function">Pay Certificate</span> action is run, or a payment amount entered against the <MadCap:variable name="SnippetVariables.inv/cert" />, any open <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> contra invoices will be offset  against the payment.</p>
+        <h2 MadCap:autonum="0.3">Payment Run</h2>
+        <p class="Body">If  <span class="parameter">SC/CONTMPAY</span> is set to <span class="userinput">Y</span> and <span class="Function">Pay <MadCap:variable name="SnippetVariables.Inv/Cert"></MadCap:variable></span> is run, or the <span class="Field">Include Contras</span> <MadCap:variable name="Variables.tick" />box is <MadCap:variable name="Variables.tick" />ed when <span class="Function">Select/Deselect <MadCap:variable name="SnippetVariables.Inv/Cert" />s (Batch)</span> is run, any open <span class="module"><MadCap:variable name="Variables.Sales Ledger caps" /></span> contra invoices (that is, invoices that have the transaction type specified by <span class="parameter">SL/CONTTYP</span>) are offset against the payments to the corresponding <MadCap:variable name="SnippetVariables.Supplier/Subcontractor" /> (that is, the <MadCap:variable name="SnippetVariables.Supplier/Subcontractor" /> with the same account as the <span class="module">Sales Ledger</span> account on the invoice). </p>
+        <table style="width: 100%;mc-table-style: url('../TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" style="width: 7em;" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" style="width: 7em;" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" style="width: 7em;" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Type</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader"><MadCap:variable name="SnippetVariables.Inv/Cert" /> Due After Tax</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Contra Invoice(s)</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Balance on Contra Invoice</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">No Contras</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">1000</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">0</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">0</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p><MadCap:variable name="SnippetVariables.Inv/Cert" /> paid in the normal way.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Contra Less than <MadCap:variable name="SnippetVariables.Inv/Cert" /></td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">1000</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">500</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">0
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">The <MadCap:variable name="SnippetVariables.inv/cert" /> will be offset by the contra so that the actual payment due will be 500. The tax will be calculated based on the full amount before offsetting against the contra.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">Contra Greater than <MadCap:variable name="SnippetVariables.Inv/Cert" /></td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">1000</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">1500</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">			500</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">The <MadCap:variable name="SnippetVariables.inv/cert" /> will be cleared but the payment amount will be zero because it was offset by the contra invoice.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">When the payment batch is posted, the <span class="module"><MadCap:variable name="Variables.Cash Book caps"></MadCap:variable></span> interface batch contains an analysis line to show the amount of the contra adjustment; this uses the transaction type specified by the SL parameter <span class="parameter">CONCASHT</span>.</p>
+        <h2 MadCap:autonum="0.4">Payment List</h2>
+        <p class="Body">The Payment List print includes a new column <span class="Field">Contra</span> which shows any contra amounts against the payments.</p>
+    </body>
+</html>

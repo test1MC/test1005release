@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="2952" MadCap:lastWidth="1214">
+    <head><title>Role-Based Licensing</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Role-Based Licensing</h1>
+        <p>Many users will use only a few <MadCap:variable name="General.ProductName" /> functions and, maybe, only occasionally. Role-based licensing provides a cost-effective way of giving access for large numbers of users to small but important parts of <MadCap:variable name="General.ProductName" />.&#160; Role-based licensing uses the concept of "named role" users; these do not count as regular concurrent licensed users.&#160; Your <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.licence" /> determines the number of "named role" users you can have.&#160; </p>
+        <p>Roles are pre-defined by Construction Industry Solutions, and issued as part of standard data.&#160; Each role has a limited number of functions that it provides access to.&#160; Each "named role" user can be assigned to one or more roles (thus giving them access to one or more groups of functions); they will only be allowed to run the functions associated with those roles.&#160; You must give them access (using <a href="WDSY0004_Function_Access_Security.html">standard function access</a>) to the top-level module menu for any functions they will need to run (for example, %WPL for any <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span>functions), but <MadCap:variable name="General.ProductName" /> automatically gives access to any submenus needed.&#160; You can use standard function access to prevent "named role" users from accessing specific functions within the role; however, you cannot grant them access to additional functions outside their role.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">Named role users always have access to basic lookups, some system functions such as <span class="function" title="Function:%WSYBCRR">Report Status</span> and <span class="function" title="Function:%WHS1150SHSA">Activity Workbench</span>, and the documentation.&#160; See <a href="WDSY0135_Access_to_Mandatory_Functions.html">Access to Mandatory Functions</a>.</div>
+        <p>You cannot change which standard (%) functions belong to a role, but you can add non-standard (that is, user-defined) functions to existing roles, up to the number allowed by your <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.licence" />.</p>
+        <h2>Using roles to allow access for named users</h2>
+        <p>You can also assign roles to standard named users, to grant them access to the functions of the role in addition to other group and function access.&#160; These users will be counted against the concurrent user count, and the number of concurrent users you can assign each role to is determined by your <MadCap:variable name="Variables.licence" />.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">If the role is being used to grant access to a concurrent user, <MadCap:variable name="General.ProductName" /> will NOT recogn<MadCap:variable name="Variables.is" />e which parts of the menu tree are needed to access a function, so you will need to configure these using standard function access methods.</div>
+        <h2 class="print">Setting up role-based licensing</h2>
+        <ol>
+            <li>In <span class="function" title="Function:%WSYBMNP">Module/<MadCap:variable name="Variables.licence" style="text-transform: capitalize;" /> Maintenance</span>, there is a Roles tab, which lists the available roles; enter the number of users (role-based and concurrent) licensed for each role and the number of user-defined functions that can be assigned to it, as shown on your <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.licence" />.
+<p><img src="../../Resources/Images/SY/SY_011401.png" class="FullWidth" /></p><p>You can also access this using <span class="key">F10</span> - Role in the <span class="field">Named Users </span>field via <MadCap:snippetBlock src="../../Resources/Snippets/COINSplus.flsnp" />/COINSadmin.</p></li>
+            <li>In <span class="function" title="Function:%WSYBSUR">Users</span>, for each user you want to set up as a "named role" user, open the user record and click the Details tab, and <MadCap:variable name="Variables.tick" /> the <span class="field">Named Role </span><MadCap:variable name="Variables.tick" />box.&#160; (The <span class="field">Named User </span><MadCap:variable name="Variables.tick" />box&#160;must also be <MadCap:variable name="Variables.tick" />ed.)
+<p><img src="../../Resources/Images/SY/SY_011402.png" class="FullWidth" /></p></li>
+            <li>Then click the Groups tab and <MadCap:variable name="Variables.tick" /> each role you want to assign to them.
+<p><img src="../../Resources/Images/SY/SY_011403.png" class="FullWidth" /></p></li>
+        </ol>
+        <h2>Adding user-defined functions to a role</h2>
+        <p>If you have set up user-defined functions, you can add these to a role, to allow any users who are assigned to that role to run them in addition to the standard functions associated with the role.&#160; The number of user-defined functions you can add to each role is determined by your <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.licence" />.</p>
+        <ol>
+            <li>Go to <span class="function" title="Function:%WSYBMNP">Module/<MadCap:variable name="Variables.Licence caps" /> Maintenance</span>.</li>
+            <li>Click the link for the role you want to add functions to.</li>
+            <li>Click the User Defined tab.</li>
+            <li>Add the user-defined functions.</li>
+        </ol>
+    </body>
+</html>

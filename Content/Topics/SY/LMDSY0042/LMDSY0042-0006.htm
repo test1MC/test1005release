@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+        <meta name="description" content="Create a System DSN" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Create a System DSN</h1>
+        <p>System DSN’s register ODBC data sources with the Microsoft Windows operating system. Application software will typically expose System DSN’s as data sources that can be chosen when data is required by the application.</p>
+        <p>On the Microsoft Windows platform, DSNs are registered in different areas within the system registry for the different application bit widths. If installing the 32 bit SQL Client Access product on a 64 bit Windows operating system, the default ODBC Data Sources Administrator cannot be used to configure the System DSN. Instead you must manually invoke the 32 bit ODBC Data Source Administrator from C:\Windows\SysWOW64\odbcad32.exe.</p>
+        <p>This task explains how to configure a System DSN, using the OpenEdge SQL Client Access software that was previously installed.</p>
+        <p>The following steps will be performed using a Microsoft Windows computer.</p>
+        <ul>
+            <li>From the Start Menu, open the computer’s Control Panel.</li>
+            <li>Within the control panel, open Administrative Tools.</li>
+            <li>Within the Administrative Tools, open Data Sources (ODBC).<br />Note: If the 32 bit SQL Client Access product was install on a 64 bit Windows operating system, you must manually invoke C:\Windows\SysWOW64\odbcad32.exe<br />The ODBC Data Source Administrator window will open, as shown below.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0009.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>Select the System DSN tab as shown below.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0010.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>Select the Add button. The Create New Data Source window will open as shown below.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0011.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>If you do not see the Progress OpenEdge &lt;version&gt; Driver ODBC driver, then the installation of the Progress OpenEdge SQL Client Access software was not successfully completed and you cannot continue with this task.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0012.png" />
+        </p>
+        <ul>
+            <li>Highlight the Progress OpenEdge &lt;version&gt; Driver line and select the Finish button.<br />The ODBC Progress OpenEdge Wire Protocol Driver Setup window will open as shown below.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0013.png" />
+        </p>
+        <ul>
+            <li>Complete all of the display fields as follows:</li>
+        </ul>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Data Source Name</p>
+                    </td>
+                    <td>
+                        <p>A unique identifier for this data source. The value entered here will be shown when choosing a data source in an application, so ensure that you provide adequate detail to identify this data source.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Description</p>
+                    </td>
+                    <td>
+                        <p>A more detailed description of the data accessible via this data source.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Host Name</p>
+                    </td>
+                    <td>
+                        <p>The fully qualified domain name (FQDN) of your <MadCap:variable name="General.ProductName" /> server, provided by your COINS System Administrator.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Port Number</p>
+                    </td>
+                    <td>
+                        <p>The port number to use to connect to your <MadCap:variable name="General.ProductName" /> database, on the COINS server, provided by your COINS System Administrator.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Database Name</p>
+                    </td>
+                    <td>
+                        <p>Should always be coins.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>User ID</p>
+                    </td>
+                    <td>
+                        <p>Your <MadCap:variable name="General.ProductName" /> ODBC user identifier provided by your COINS System Administrator.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>A completed example is shown below:</p>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0014.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>Select the Advanced tab and alter the Default Isolation Level so that it is set to READ_UNCOMMITTED as shown below.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0015.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>Return to the General tab and select the Test Connect button. A new Logon window will open as shown below. You will be prompted for your <MadCap:variable name="General.ProductName" /> ODBC password, which was provided to you by your COINS System Administrator.</li>
+            <li>Enter your password and select the OK button.</li>
+            <li>If all of your connection settings are correct, then window shown here will be displayed.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/LMDSY0042/LMDSY0042-0016.png" class="HalfWidth" />
+        </p>
+        <p class="note">If you receive any errors, please contact your <MadCap:variable name="General.ProductName" /> System Administrator for assistance in determining the cause of the displayed error(s).</p>
+        <ul>
+            <li>Select the OK button to close the Test Connect window.</li>
+            <li>Select the OK button on the ODBC Progress OpenEdge Wire Protocol Driver Setup window. This will return you to the ODBC Data Source Administrator window where your new <MadCap:variable name="General.ProductName" /> data source will be displayed, as shown below.</li>
+            <li>At this point, if you need to configure more <MadCap:variable name="General.ProductName" /> data sources, maybe for different COINS environments, you can repeat these steps from step <MadCap:xref href="#_Ref388349611" class="ParaTextOnly">Select the Add button. The Create New Data Source window will open as shown below.If you do not see the Progress OpenEdge &lt;version&gt; Driver ODBC driver, then the installation of the Progress OpenEdge SQL Client Access software was not successfully completed and you cannot continue with this task.</MadCap:xref>. If you are finished, proceed to the next step.</li>
+            <li>Close the ODBC Data Source Administrator by selecting the OK button.</li>
+        </ul>
+        <p>You have now successfully configured ODBC data sources for your <MadCap:variable name="General.ProductName" /> environment(s). These data source should now be accessible from within other applications, like Excel, for extracting data directly from your COINS environment.</p>
+        <p>&#160;</p>
+    </body>
+</html>

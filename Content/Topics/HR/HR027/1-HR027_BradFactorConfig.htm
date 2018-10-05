@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Bradford Factor Configuration</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Bradford Factor Calculation: </MadCap:conditionalText>Bradford Factor Configuration</h1>
+        <p class="Body">A <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="Function">Bradford Factor Configuration </span>page is found under the <i>Human Resources &gt; HR Maintenance menu</i>, as shown in <MadCap:xref href="#BradfordConfig" class="ImageRef"><i>Figure 1:  Bradford Factor Configuration Screen</i></MadCap:xref>. It allows you to predefine an ordered list of time intervals to be used for Bradford Factor calculation, which are displayed in the HR <span class="Function">Personnel Workbench</span>.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="BradfordConfig"></a>Bradford Factor Configuration Screen</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_G-I/HR/HR027_Images/HR027_BradfordConfig.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions</p>
+        <p class="IndentBold">Label</p>
+        <p class="IndentFieldDef">The label to be used for the time interval in the <span class="Function">Personnel Workbench </span>and the <span class="Function">Bradford Factor Report</span>.</p>
+        <p class="IndentBold">Absence Reasons</p>
+        <p class="IndentFieldDef">A comma-separated list of absence reasons to include when calculating the Bradford Factor.</p>
+        <p class="IndentBold">Extensions Allowed Absence Reasons</p>
+        <p class="IndentFieldDef">A comma-separated list of absence reasons where any immediately following absence is taken as an extension of this absence period, rather than as a separate period of absence.</p>
+        <p class="IndentBold">Start Date</p>
+        <p class="IndentFieldDef">The start date of the range for calculating the Bradford Factor. See<MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"> the <span class="Emphasis">Setting Up Start/End Dates</span> Section</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> Section <MadCap:xref href="#Setting" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref></MadCap:conditionalText> for more information on setting up this date.</p>
+        <p class="IndentBold">Calced Start Date</p>
+        <p class="IndentFieldDef">The system-generated start date that results from the value in the Start Date column.</p>
+        <p class="IndentBold">End Date</p>
+        <p class="IndentFieldDef">The end date of the range for calculating the Bradford Factor. See<MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"> the <span class="Emphasis">Setting Up Start/End Dates</span> Section</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly"> Section <MadCap:xref href="#Setting" class="Figurenumberonly"><i>1.1.1</i></MadCap:xref></MadCap:conditionalText></MadCap:conditionalText> for more information on setting up this date.</p>
+        <p class="IndentBold">Calced End Date</p>
+        <p class="IndentFieldDef">The system-generated end date that results from the value in the End Date column.</p>
+        <p class="IndentBold">Dormant</p>
+        <p class="IndentFieldDef">Whether this Bradford Factor is dormant.</p>
+        <h2 MadCap:autonum="1.1 "><a name="Setting"></a>Setting Up Start/End Dates</h2>
+        <p class="Body">The Start and End Dates set up in Configuration can simply be specific dates, or they can be expressions that evaluate to dates. These expressions can consist of adding/subtracting days, weeks, months, or years to/from a date. You can convert dates to <MadCap:variable name="Variables.Financial Periods caps" />, add/subtract <MadCap:variable name="Variables.Financial Periods caps" /> on the result, and finally convert back to a date for the start or end of the <MadCap:variable name="Variables.Financial Period caps" /> or <MadCap:variable name="Variables.Financial Year caps" />. Any combination of these is permitted as long as the final result is a valid date.</p>
+        <MadCap:pageBreak />
+        <p class="Body">The summary of the syntax given below directs you on how to set up these dates correctly.</p>
+        <table style="width: 100%;">
+            <col style="width: 227px;" />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="TableHeader_1">Syntax</p>
+                    </td>
+                    <td>
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="TableCell">A specific date, for example 01/01/2017	</p>
+                    </td>
+                    <td>
+                        <p class="TableCell">The date should be in the format defined for the current company (such as DD/MM/YYYY for a UK company and MM/DD/YYYY for a US company). It is actually stored in the database as a numerical equivalent so it can be displayed and work correctly regardless of which company you are in.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>TODAY</p>
+                    </td>
+                    <td>
+                        <p>Today's date</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>nD</p>
+                    </td>
+                    <td>
+                        <p>n days, where n is an integer</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>nW</p>
+                    </td>
+                    <td>
+                        <p>n weeks, where n is an integer</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>nM</p>
+                    </td>
+                    <td>
+                        <p>n months, where n is an integer</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>nY</p>
+                    </td>
+                    <td>
+                        <p>n years, where n is an integer</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

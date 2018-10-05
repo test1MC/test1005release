@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('..\..\..\Resources\MasterPages\OtherTopics.flmsp');" MadCap:lastBlockDepth="5" MadCap:lastHeight="613" MadCap:lastWidth="601" MadCap:onlyLocalStylesheets="False">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Calculation Programs</h1>
+        <p><MadCap:variable name="General.ProductName" /> provides the functionality for user-defined programs to be created and called by Web services offering greater flexibility for data manipulation and retrieval.</p>
+        <h2 MadCap:autonum="1.1 ">Defining the Calculation</h2>
+        <p>Calculation Programs may be defined using the Calculation Program option under OA Reporting &amp; BI Setups in the OA Reporting &amp; BI Module. </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_1_1106.png" class="FullWidth" />
+        </p>
+        <p>To create a new program, click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_3_1106.png" class="FullWidth" />
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Program</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">This is the name by which the calculation will be referenced.&#160; It is recommended that this name is meaningful enough for its purpose to be easily inferred when debugging in the future.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Give a brief description of the purpose of the calculation here.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The next box is for the calculation.&#160; The calculation syntax used follows <MadCap:variable name="General.ProductName" /> OA standard syntax, with numerical variables for the various parameters. Each numerical variable is encased in curly braces e.g. {1}</p>
+        <p>For example, if we wanted a calculation to multiply two different numbers, we would write this as:</p>
+        <p>{1} * {2}</p>
+        <p>Once a variable is defined, it can be re-used in a calculation and therefore need only be passed into the calculation once.</p>
+        <p>e.g. {1} *{1} * {1}</p>
+        <p>Three examples of a calculation program definition are shown below:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_4.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_4_1106.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_5.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_5_1106.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_6.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_6_1106.png" class="FullWidth" />
+        </p>
+        <p>The calculation code can run other user defined calculation programs in the same way as any other calculation.</p>
+        <p>If the program is run without passing the required {} parameters then they will be replaced in the calculation with blanks.</p>
+        <p>Variables defined before the calculation is run can be accessed.&#160; Variables defined or updated in the calculation program will be available following the call to the calculation program.</p>
+        <p>The Notes section allows a more detailed description of the calculation to be entered.</p>
+        <h2 MadCap:autonum="1.2 ">Testing Calculation Programs (run, run$)</h2>
+        <p>Once a calculation has been saved then it can be run by using:</p>
+        <p><b>run('calc',var1,var2)</b> for numerical values </p>
+        <p>or </p>
+        <p><b>$run$('calc',var1,var2)</b> for character values</p>
+        <p>Calculations may be tested in the Calculation editor prior to use to check they work as expected.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_7.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_7_1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Calculation programs can be defined to both use and create variables.&#160; For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_8.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_8_1106.png" class="FullWidth" />
+        </p>
+        <p>This will store the value of {1} + {2} in a variable called result.&#160; This can then be used directly in subsequent calculations.</p>
+        <p>The name of the Calculation program to be called may also be passed as a variable. </p>
+        <p>Examples of these are shown below:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_9.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_9_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>It is also possible to use calculation programs directly within other calculations:</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_10.png" class="HalfWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_10_1106.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">Using Calculation Programs with Web Services</h2>
+        <p>For this example, we are going to setup a calculation program to modify the hold code on an invoice.&#160; The program in this example is called NLWSEX3 and has been defined as follows:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_11.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_11_1106.png" class="FullWidth" />
+        </p>
+        <p>The program will accept 5 input variables</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>{1}</td>
+                    <td>The <MadCap:variable name="General.ProductName" /> Company</td>
+                </tr>
+                <tr>
+                    <td>{2}</td>
+                    <td>The Supplier Number of the Invoice</td>
+                </tr>
+                <tr>
+                    <td>{3}</td>
+                    <td>The Invoice Number</td>
+                </tr>
+                <tr>
+                    <td>{4}</td>
+                    <td>The Hold flag (yes or no)</td>
+                </tr>
+                <tr>
+                    <td>{5}</td>
+                    <td>The hold code</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The calculation will look up the appropriate invoice, set the hold flag and code, and return two variables which will be used in the output message as confirmation of the changes.</p>
+        <h3 MadCap:autonum="1.3.1 ">Create the Function</h3>
+        <p>Create the function called NLWSEX3 with Category of SER – Service and program of syesb005.&#160; The Context of the function will determine the description that will appear later on the Web Services menu.&#160; </p>
+        <p>Add the parameter program=NLWSEX3</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_12.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_12_1106.png" class="FullWidth" />
+        </p>
+        <p>The program parameter allows you to specify the name of the calculation program to be used.&#160; Whilst it is not necessary to call the Calculation Programs the same name as the functions etc.&#160; it is probably less confusing if you do keep all the names consistent.&#160; The page and the function MUST have the same name.</p>
+        <h3 MadCap:autonum="1.3.2 ">Create the Page</h3>
+        <p>The Page will have two Forms.&#160; The Update Form will define the Input Message </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_13.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_13_1106.png" class="FullWidth" />
+        </p>
+        <p>The fields will relate to the input parameters in the calculation program and should be defined in the sequence they are used {1}=kco, {2}=avm_num etc…</p>
+        <p>The Detail Form defines the Output message and will return the variables set by the Calculation Program.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_14.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_14_1106.png" class="FullWidth" />
+        </p>
+        <h3 MadCap:autonum="1.3.3 ">Adding the Function to the Web services Menu</h3>
+        <p>To run the Page Web Service, first check that the menu function UWXSYESB005 exists.&#160; If it does not exist, then you need to create it.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_15.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_15_1106.png" class="FullWidth" />
+        </p>
+        <p>Open the Function and select the Menu Items Tab.&#160; If the function already exists, there may already be entries on this tab relating to Standard Used Defined Services issued by <MadCap:variable name="General.ProductName" /> (prefixed with %) or other User Defined Services created by your company.</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> and enter the name of your new User Defined Services Function (in our example NLWSEX3).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_16.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_16_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <p>Navigate back to the <MadCap:variable name="General.ProductName" /> Services Menu and select the SY – System Hyperlink.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Datasets_7.png" style="left: 0;" class="HalfWidth" />
+            <br />
+        </p>
+        <p>Locate the SYESB00 entries.&#160; You new Function will be in this group.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_17.png" style="left: 0;" class="HalfWidth" />
+            <br />
+        </p>
+        <p>Select the Hyperlink to view the service schema.</p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_18.png" class="FullWidth" />
+        </p>
+        <p>The Input Schema – defined by the Update form of the page will look something like this:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_19.png" class="FullWidth" />
+        </p>
+        <p>The Output Schema – defined by the Detail Form of the page will look something like this:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_20.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4 ">Testing the Service</h2>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_21.png" style="left: 0;" class="FullWidth" />
+            <br />Create a new soapUI project and from the Service Schema copy the WSDL shortcut link and paste this into the Initial WSDL field </p>
+        <p>Click OK</p>
+        <p>Once the project has been created, run Request 1 in the editor.&#160; Replace the Input message with the simplified one from the Input Schema from the Web service.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_22.png" class="FullWidth" />
+        </p>
+        <p>Enter the hostname, Environment and username/password details.</p>
+        <p>Delete the lines for Group, extUser and extAuth</p>
+        <p>Fill in the appropriate Company, Supplier, Invoice and Hold code details for a suitable test invoice.&#160; For example:</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_23.png" class="FullWidth" />
+        </p>
+        <p>Send the message and correct any exceptions if they occur.</p>
+        <p>If all is correct, a RESPONSE message should be returned.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/User Defined Webservices/Calculation Programs_24.png" class="FullWidth" />
+        </p>
+        <p class="note">Once you are happy with the response, you can set the testMsg to “false” to apply the change to the database.</p>
+        <p>Check the invoice in <MadCap:variable name="General.ProductName" /> to verify the changes are taking place as expected.</p>
+    </body>
+</html>

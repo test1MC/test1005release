@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>How Function Access Works</title>
+    <style>/*<![CDATA[*/
+td.yes
+{
+	vertical-align: top;
+	background-color: #7dd995;
+	/* width:103px;*/
+}
+td.no
+{
+	vertical-align: top;
+	color: #FFFFFF;
+	background-color: #c00000;
+	/* width:103px;*/
+}
+td.group
+{
+	vertical-align: top;
+	background-color: #fb8353;
+	/* width:103px;*/
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">How Function Access Works</h1>
+    <p>When a user attempts to access a function: </p>
+    <ol>
+      <li>
+        <MadCap:variable name="General.ProductName" /> checks the <a href="WDSY0018_User_Access_Permissions.html">access permissions</a> for the user (as set up in <span class="function" title="Function:%WMS2034BMSF">User Function Access</span>). If the user has explicitly been allowed or denied access, this overrides any group permissions that may have been set up. </li>
+      <li>
+        <span class="new">If you are using <a href="WDSY0138_Menu_Item_Security.html">Menu Item Security</a>, <MadCap:variable name="General.ProductName" /> checks the parent function, which is an item on the <MadCap:variable name="General.ProductName" /> menu, to see whether the user has access and the function is of the correct access type.  </span>
+      </li>
+      <ul>
+        <li>
+          <span class="new">If the user has access to the parent, they have access to the child function by default, unless the permission has been explicitly overridden.  </span>
+        </li>
+        <li>
+          <span class="new">If the function is a menu, container or tab function, and the user has access to a function on that menu, container or tab, then the menu, container or tab is available.</span>
+        </li>
+      </ul>
+      <li>If the <strong>user's</strong> permission is <strong>G-Group</strong> access (the default), <MadCap:variable name="General.ProductName" /> checks the permissions for each <strong>group</strong> that the user belongs to, in the order the groups are defined on the user record, beginning with the Prime Group. </li>
+      <ol>
+        <li>
+          <MadCap:variable name="General.ProductName" /> checks the can-do lists of functions and role types that are allowed or denied on the group.  If the function is included in any of these lists, the user is allowed or denied access accordingly.  (Within the same group, deny takes priority over allow.) </li>
+        <li>
+          <MadCap:variable name="General.ProductName" /> then looks at the permissions for specific functions set up on the group record.  If the group is allowed or denied access then that is the result. </li>
+        <li class="new">
+          <span class="new">If you are using Menu Item Security, </span>
+          <MadCap:variable name="General.ProductName" /> then checks the group access for the parent function; if the group is allowed access to the parent and the access type of the parent is the correct type, then the user is allowed access. </li>
+        <li>If the group record indicates G-Group access, <MadCap:variable name="General.ProductName" /> checks the next group. </li>
+      </ol>
+      <p class="noteheader">NOTE</p>
+      <div class="note">Because <MadCap:variable name="General.ProductName" /> evaluates the permissions on each group in turn, the sequence of the groups on a user's record is important.  If a group denies access to a function, the user will not be able to access the function, even if a later group would allow access.</div>
+      <li>Finally, if you have <a href="WDSY0114_Role-Based_Licensing.html">role-based licensing</a> and your <MadCap:variable name="Variables.licence" /> includes roles that are appropriate, you can use these to grant access to users. If the user is not a "named role" user <MadCap:variable name="General.ProductName" /> checks any roles assigned to the user:</li>
+      <ul>
+        <li>If the function is included in the "Allow" can-do lists of functions or role types on any of the roles, the user is allowed access unless explicitly denied by user or group access permissions.</li>
+        <li>If the function is denied by the role, <MadCap:variable name="General.ProductName" /> continues by checking the user and group permissions.  The user may still have access if allowed by user or group access permissions.  
+<p class="noteheader">NOTE</p><div class="note">If the user is a "named role" user, they will ONLY be able to access functions allowed by their roles; see <a href="WDSY0114_Role-Based_Licensing.html">Role-Based Licensing</a>.</div></li>
+      </ul>
+      <p>If none of the groups or roles explicitly allows access then the user is not allowed access.</p>
+    </ol>
+    <p>When you create a new user record, all the permissions for that user are set to <strong>G-Group</strong>, so they only have access to those procedures and menus permitted for their group, until you explicitly change their access permission. Similarly, when you create a new group, all the permissions are <strong>G-Group</strong>. This means that, if you were to create a new group, and assign users to that group, without explicitly granting access permissions for either the group or the users, the users in that group would not be allowed access to anything.</p>
+    <p>
+      <MadCap:variable name="General.ProductName" /> always has a <a href="WDSY0131_SYSAdmin_Login.html">user called "SYSAdmin"</a> and a group called "root". The SYSAdmin user has permission to do anything, as does any user who is in the root group who is not explicitly denied access. </p>
+    <h2>
+      <MadCap:variable name="Variables.enquiring" style="text-transform: capitalize;" /> on function access</h2>
+    <p>You can <MadCap:variable name="Variables.enquire" /> on what access a user has to a function:</p>
+    <ol>
+      <li>In <span class="function" title="Function:%WSYBSUR">Users</span>, click the link in the <span class="field">User ID </span>column.</li>
+      <li>Click the <span class="function" title="Function:%WSYSSURT1">User Function Access</span> tab.</li>
+      <li>Filter on the function you want to <MadCap:variable name="Variables.enquire" /> about. 
+<p>The <span class="field">Allowed </span>column is <MadCap:variable name="Variables.tick" />ed if the user has access to the function.  The <span class="field">Access</span>, <span class="field">Group </span>and <span class="field">Role </span>columns show whether the access or denial comes from the user function permissions, from a group, or from a role.</p></li>
+    </ol>
+    <p> </p>
+    <p>The following illustration shows how group access permissions affect the access of individual users.  For a particular function, group A allows access, group B denies access, and group C specifies group access:</p>
+    <p align="center" />
+    <table border="1" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="103">
+            <p />
+          </td>
+          <th valign="top" width="103">
+            <p align="center">User Function Access </p>
+          </th>
+          <th valign="top" width="103">
+            <p align="center">First Group </p>
+          </th>
+          <th valign="top" width="103">
+            <p align="center">Second Group </p>
+          </th>
+          <th valign="top" width="103">
+            <p align="center">Role </p>
+          </th>
+          <th valign="top" width="103">
+            <p align="center">Does the user have access?</p>
+          </th>
+        </tr>
+        <tr>
+          <td valign="top" width="103">
+            <p align="right">User 1  </p>
+          </td>
+          <td class="no">
+            <p align="center">N</p>
+          </td>
+          <td class="yes">
+            <p align="center">Group A (Y) </p>
+          </td>
+          <td class="group">
+            <p align="center">Group C (G) </p>
+          </td>
+          <td valign="top" width="103">
+            <p> </p>
+          </td>
+          <td class="no">
+            <p align="center">No</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="103">
+            <p align="right">User 2  </p>
+          </td>
+          <td class="group">
+            <p align="center">G </p>
+          </td>
+          <td class="yes">
+            <p align="center">Group A (Y) </p>
+          </td>
+          <td class="no">
+            <p align="center">Group B (N) </p>
+          </td>
+          <td valign="top" width="103">
+            <p> </p>
+          </td>
+          <td class="yes">
+            <p align="center">Yes</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="103">
+            <p align="right">User 3  </p>
+          </td>
+          <td class="group">
+            <p align="center">G </p>
+          </td>
+          <td class="no">
+            <p align="center">Group B (N) </p>
+          </td>
+          <td class="yes">
+            <p align="center">Group A (Y) </p>
+          </td>
+          <td valign="top" width="103">
+            <p> </p>
+          </td>
+          <td class="no">
+            <p align="center">No</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="103">
+            <p align="right">User 4  </p>
+          </td>
+          <td class="group">
+            <p align="center">G </p>
+          </td>
+          <td class="group">
+            <p align="center">Group C (G) </p>
+          </td>
+          <td valign="top" width="103">
+            <p> </p>
+          </td>
+          <td valign="top" width="103">
+            <p> </p>
+          </td>
+          <td class="no">
+            <p align="center">No</p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="103">
+            <p align="right">User 5  </p>
+          </td>
+          <td class="group">
+            <p align="center">G </p>
+          </td>
+          <td class="group">
+            <p align="center">Group C (G) </p>
+          </td>
+          <td valign="top" width="103">
+            <p> </p>
+          </td>
+          <td class="yes">
+            <p align="center">Role R (Y) </p>
+          </td>
+          <td class="yes">
+            <p align="center">Yes </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="noteheader">NOTE</p>
+    <div class="note">
+      <p class="new">If you are using <a href="WDSY0138_Menu_Item_Security.html">Menu Item Security</a>:</p>
+      <ul class="new">
+        <li>If a function is a menu, the user may be allowed access because they have been given access to a menu item on that menu.</li>
+        <li>If the function is a child, the user may be allowed access because they have been given access to  the parent function.</li>
+      </ul>
+    </div>
+    <p>
+      <MadCap:relatedTopics style="mc-help-control-display: list;">
+        <MadCap:relatedTopic src="WDSY0066_Setting_Function_Access.html" />
+        <MadCap:relatedTopic src="WDSY0018_User_Access_Permissions.html" />
+        <MadCap:relatedTopic src="WDSY0019_Group_Access_Permissions.html" />
+        <MadCap:relatedTopic src="WDSY0031_Delegated_Security.html" />
+        <MadCap:relatedTopic src="WDSY0404_Exporting_and_Importing_Function_Security.html" />
+      </MadCap:relatedTopics>
+    </p>
+  </body>
+</html>

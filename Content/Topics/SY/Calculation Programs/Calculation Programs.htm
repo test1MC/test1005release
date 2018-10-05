@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3258" MadCap:lastWidth="1186">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Calculation Programs</h1>
+        <p>This section describes the new capability for the user to store programs (effectively user defined functions) for use in calculations throughout <MadCap:variable name="General.ProductName" />.</p>
+        <p>The standard <MadCap:variable name="General.ProductName" /> syntax is used in the stored program and it can take input parameters from the calculation from which it is called.</p>
+        <p>User defined functions can call other user defined functions recursively.</p>
+        <p>The variables used and set in the original calculation and all the user defined functions are globally shared.  So a variable set in a user defined program is then available in the calculations that follow it.</p>
+        <h2>Creating Calculation Programs</h2>
+        <p>You can define user defined programs using the Calculation Programs maintenance function in <span class="Emphasis">System &gt; Misc Maintenance</span> (also available via <span class="Emphasis">OA Reporting and BI &gt; OA and BI Setups</span>).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Calculation Programs_1_1105.png" class="FullWidth" />
+        </p>
+        <p>To create a new program, click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /></p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Designer/Calculation Programs_2_1105.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The program name is unique and is the code by which the function will be run when used in a calculation.</li>
+            <li>The description and notes are for information only, they do not affect the use and are there for you to document what the function does and how it should be used.</li>
+            <li>The calculation code field is the calculation that will run when the program is called.  This can contain	{n} where n is a number.  These will be replaced with the values of the parameters passed to the function at run time.  The calculation code can run other user defined calculation programs in the same way that any other calculation.</li>
+        </ul>
+        <p>If the program is run without passing the required {} parameters then they will be replaced in the calculation with blanks.</p>
+        <p>Variables defined before the calculation is run can be accessed.  Variables defined or updated in the calculation program will be available following the call to the calculation program.</p>
+        <h2>Calling Calculation Programs</h2>
+        <p>The calculation programs can be called by any calculation in <MadCap:variable name="General.ProductName" /> e.g. report field calculations or workflow initialisation calculations etc.</p>
+        <p>The calculations defined can be run by using the new calculation keyword RUN or RUN$.</p>
+        <p>RUN runs a calculation program returning the last decimal value from that calculation whereas RUN$ expects a string to be returned.</p>
+        <p>If a calculation program called CALCTEST is defined with the following calculation code:</p>
+        <p class="Example">theSum={1} + {2}</p>
+        <p>then it can be run in a calculation as follows:</p>
+        <p class="Example">run(‘CALCTEST’,’5’,’7’)</p>
+        <p>this would return the answer 12 and could take part in a further calculation e.g.</p>
+        <p class="Example">grandTotal = 10 + run(‘CALCTEST’,’5’,’7’) + 8</p>
+        <p>this would return 30</p>
+        <p>The calls to the programs can also use variables</p>
+        <p class="Example">A=5<br />B=7<br />$PROG=”CALCTEST”<br />Run(PROG,A,B)<br />theSum</p>
+        <p>This would also return 12.</p>
+        <p>By constructing appropriate functions and/or programs in this way it will make using complex features much easier to maintain by placing the complexity in a reusable function.</p>
+    </body>
+</html>

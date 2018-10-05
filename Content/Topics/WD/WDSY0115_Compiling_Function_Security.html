@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Compiling Function Security</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Compiling Function Security</h1>
+    <p>In certain circumstances you can improve performance by compiling the user/function security settings.</p>
+    <p>If you have assigned a large number of <a href="WDSY0049_User_Groups.html">user groups</a> to each user, or if you otherwise have a complicated user access set-up, each time a user tries to run a function, <MadCap:variable name="General.ProductName" /> has to check each user group in turn until it finds whether the user is allowed to run that function. By compiling the user/function security settings, the first time a user tries to access a function, <MadCap:variable name="General.ProductName" /> evaluates whether they are allowed to run the function, and records this. Subsequently <MadCap:variable name="General.ProductName" /> refers to this record to determine whether the user is allowed to run the function.</p>
+    <p>The SY parameter <span class="parameter">UFACCESS </span>controls whether you are using this method.</p>
+    <p>One thing to be aware of is that if you make any changes to the user/function access settings, these will not take effect unless you re-set the <span class="parameter">UFACCESS </span>parameter.</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_ufaccess.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

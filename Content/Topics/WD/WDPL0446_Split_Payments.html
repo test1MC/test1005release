@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Split [%=Variables.Pl Supplier caps%] Payments</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Split <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> Payments</h1>
+Sometimes payments to <MadCap:variable name="Variables.pl suppliers" /> need to be separated either for <MadCap:variable name="Variables.jc contract" /> or individual invoices.  You can control payments to <MadCap:variable name="Variables.pl suppliers" /> such that payment by <MadCap:variable name="Variables.pl supplier" />, by <MadCap:variable name="Variables.jc contract" /> or by transaction are possible.  You can set up defaults on <MadCap:variable name="Variables.pl supplier" /> records, which will default down to the invoice record where it will also be updateable.
+
+    <div class="process"><h2 class="print">To process split payments:</h2><ol><li>In <span class="function" title="Function:%WPL2000BAVM"><MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /></span>, on the <span class="function" title="Function:%WPL2000BAVMT3">Payment Method</span> tab, set the <span class="field">Payment Type </span>field as follows:
+<p class="yesnolist"><span class="userinput"><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /></span>= payment for each <MadCap:variable name="Variables.pl supplier" /> ? this will be default value and also the value used if the feature is suppressed.</p><p class="yesnolist"><span class="userinput"><MadCap:variable name="Variables.Jc Contract caps" /></span> = Separate payments for each <MadCap:variable name="Variables.jc contract" />.</p><p class="yesnolist"><span class="userinput">Separate</span> = Separate payments for each transaction (invoice).</p></li><li>When you enter an invoice, you can specify how to pay that invoice using the <span class="field">Payment Type </span>field on the invoice record.</li><li>When you freeze the payment batch, <MadCap:variable name="General.ProductName" /> creates one payment record for each invoice or <MadCap:variable name="Variables.jc contract" /> as required by the payment type set on the invoice. </li></ol></div><div class="configuration"><p><MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;"><MadCap:relatedTopic src="../Parameters/PL/pl_paytype.htm" /></MadCap:relatedTopics></p></div></body>
+</html>

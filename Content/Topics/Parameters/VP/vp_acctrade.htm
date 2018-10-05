@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>VP/ACCTRADE - Source of trade code to use for accruals</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">VP/ACCTRADE - </span> Source of trade code to use for accruals
+</div>
+<div class="param_def">
+<p>The source of the trade code to be used by the VAP specific accruals calculation.</p>
+<p class="yesnolist"><strong>COSTHEAD</strong> = Use the trade from the <MadCap:variable name="Variables.cost head"/>.</p>
+<p class="yesnolist"><strong>ORDER</strong> = Use the trade from the order.</p>
+<p>For trades included in parameter <span class="parameter">VP/MUTRADE</span> the accrual is based on budget less certified; for other trades the accrual is based on total orders less certified amounts. </p>
+<p>If this parameter is set to <span class="userinput">COSTHEAD</span> then accruals on <MadCap:variable name="Variables.cost heads"/> which have a default trade which is a multi-order trade but order values from orders which have a different trade on the subcontract record then the accrual calculation will assume that the budget is the maximum total liability and will deduct certified amounts from this.</p>
+<p>If this parameter is set to <span class="userinput">ORDER</span> then accruals on <MadCap:variable name="Variables.cost heads"/> which have a default trade which is a multi-order trade but order values from orders which have a different trade on the subcontract record then the accrual calculation will assume that those order values from the other trade are in addition to the budget so that the maximum total liability is the budget plus thus additional order values and will deduct certified amounts from this.</p>
+<p>The recommended setting for most situations is <span class="userinput">COSTHEAD</span>.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../vp/vp_mutrade.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

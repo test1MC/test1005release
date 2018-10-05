@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Call-Off Orders</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Call-Off Orders</h1>
+    <p>There are two types of call-off orders in <MadCap:variable name="General.ProductName" />:</p>
+    <ul>
+      <li>Call-off orders without quantity are for placing orders with agreed prices, but no quantity. They are typically for orders of <MadCap:variable name="Variables.sundry" /> goods.</li>
+      <li>Orders requiring call-offs are typically used with housebuilders schedules. The quantities are specified on the order, but are called off as needed for different plots. You must record the call off in <MadCap:variable name="General.ProductName" />.</li>
+    </ul>
+    <h2>Call-off orders without quantity</h2>
+    <p>Call-off orders allow you to place an initial order with agreed prices for different items, which you can then 'call off' as they are needed. </p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">A call-off order is one with quantity class H (hidden). Order types are defined using <span class="function" title="Function:%WPO2010BPOT">Purchase Order Types</span>. </div>
+    <p>When printed, the initial order has wording such as Item in place of quantity details.  Unlike normal orders, it is not marked as complete when invoices for the ordered amount have been received - you must complete it manually (using <span class="function" title="Function:%WPO101ABPHL">Material Orders</span>).</p>
+    <p>Entering a call off order is very similar to entering a normal order. The differences are:</p>
+    <ul>
+      <li>In the <span class="field">Type </span>field, enter the code for call-off orders (for example, <strong>C</strong>).</li>
+      <li>You do not need to enter a due date.</li>
+      <li>You do not need to enter a quantity. If you do enter a quantity (for example, an estimate) it will not be shown on the purchase order, but it will be shown on the GRN entry frame.</li>
+    </ul>
+    <h2>Orders requiring call offs</h2>
+    <p>Orders requiring call offs allow you to place an initial order for goods (usually these are specified by plot), and then use <MadCap:variable name="General.ProductName" /> to record when the goods for specific plots are called off. </p>
+    <p>Entering an order that requires call-offs is very similar to entering a normal order:</p>
+    <ul>
+      <li>If you want to record call offs against the order, <MadCap:variable name="Variables.tick" /> the <span class="field">Allow Call Offs </span>field.  You will not be able to record GRNs against this order until you have recorded the call offs.</li>
+      <li>If you do not want to record the call offs, clear the <span class="field">Allow Call Offs </span>field.  You can enter GRNs or run invoice matching against this order directly.</li>
+    </ul>
+    <p>When you enter the call offs, you can either just record the call off, or you can enter the call off and print or fax it.</p>
+    <div class="configuration">
+      <h2 class="print">Call-off orders</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PO/po_itemdesc.htm" />
+          <MadCap:relatedTopic src="../Parameters/PO/po_usecos.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

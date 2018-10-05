@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="2526" MadCap:lastWidth="773">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Workflow Roles </h1>
+        <p class="Body">As part of the design of a workflow, it is necessary to define who in an organisation is going to be responsible for all or part of the workflow processes.&#160; Typically a role will fall to a business role such as a Financial Manager or <MadCap:variable name="Variables.Purchase Ledger caps" /> Supervisor, or indeed a team of people such as a Buying Team.&#160; </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">Create a Workflow Role by assigning a code and description. The workflow roles will require a responsibility type and where appropriate a key or keys. </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles_1.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles_1_1106.png" class="FullWidth" />
+        </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');margin-left: 0;margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="Body">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="Body">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="Body">Role</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="Body">The workflow role code.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="Body">Description</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="Body">The description of the workflow role</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="Body">Group</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="Body">The workflow group code (see Workflow Groups). Use this code to group roles and workflow templates. May be left blank</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="Body">Responsibility Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="Body">This code allows you to specify, for this role, what is the workflow going to use for routing.</p>
+                        <p class="Body">DO NOT use either CONTRACT or COMPANY as a responsibility type as these are reserved words with a specific use within Workflow setup.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="Body">Key</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="Body">The key that corresponds to the responsibility table keys. The keys must be defined as variables in the workflow to allow the correct allocation of people to stages.&#160; </p>
+                        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">Where the Responsibility Type relates to a group, then the key may be left blank </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="Heading2">Example Roles</h2>
+        <p class="Body">In this example, the Responsibility Type has been defined as LOCATION and the key has defined as jcl_loc (Contract Location). </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles_2_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">This will allow the workflow to determine the responsibility from the Contract Location code on a transaction.</p>
+        <p class="Body">In the second example, the role of Site Manager is defined as using Contract information to route the workflow by use of the job_num field on a transaction.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles_3.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Roles_3_1106.png" class="FullWidth" />
+        </p>
+        <p class="Body">Please remember DO NOT use either CONTRACT or COMPANY as a responsibility type as these are reserved words with a specific use within Workflow setup.</p>
+    </body>
+</html>

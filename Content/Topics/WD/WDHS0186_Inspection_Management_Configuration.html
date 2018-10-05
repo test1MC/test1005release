@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Inspection Management Configuration</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Inspection Management Configuration</h1>
+    <p>You need to set up the reporting calendar, which determines the end dates for each of the reporting periods.</p>
+    <ul>
+      <li>Use <span class="function" title="Function:%WHS2060BCTA">Reporting Calendar Types</span> to set up a calendar type.</li>
+      <li>Use <span class="function" title="Function:%WHS2060BHCX">Reporting Calendar</span> to set up the periods and period-end dates for the calendar type.</li>
+    </ul>
+    <p>You need to set up the status codes that will be used to identify whether an inspection has been booked and the results of inspections, and the <MadCap:variable name="Variables.colours" /> to use on the management reports for each status.  Use <span class="function" title="Function:%WHS1500BCOI">Inspection Status Codes</span>.</p>
+    <p>Use <span class="function" title="Function:%WHS1500BHIC">Inspection Types</span> to set up the different types of inspection that are required.  Each type of inspection can be set up to be a given number of working days after the previous type.  Specify which forecast dates are required for each type, and which plot sales classifications the inspection applies to.  For example, this allows you to set up Blue Card inspections that are forecast for 10 working days after the forecast date of White Card inspections, and only apply to 'housing association' plots.</p>
+    <p>Specify which users can update blank and existing forecast dates, using the parameters <span class="parameter">HS/UBLNKLST </span>and <span class="parameter">HS/UXSTLST</span>.</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/HS/hs_ublnklst.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_uxstlst.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_repcal.htm" />
+          <MadCap:relatedTopic src="../Parameters/HS/hs_fststage.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

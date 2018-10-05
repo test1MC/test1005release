@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1010" MadCap:lastWidth="948" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');">
+    <head>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Variables</h1>
+        <p>Values can be assigned to variables so that they can be used in a later calculation.</p>
+        <p>To assign a value to a variable use the format:</p>
+        <p><b>Variablename=&lt;value or calculation&gt;</b>
+        </p>
+        <p class="Example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">
+            <br />jToDat =‘01/01/11’;<br />dProfit=dRevenue – dCosts;<br /><br /></p>
+        <p><b>'this'</b> is a reserved word which will enable you to assign the current field value to a variable. </p>
+        <p class="Example" MadCap:autonum="&lt;b&gt;Example: &lt;/b&gt;">
+            <br />dValue=this;<br /></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">
+            <br />DO use standard naming conventions, examples used by the BI Team and <MadCap:variable name="General.ProductName" /> Developers are :<br /><br />jDate - A		 prefix dates with j<br />iCount		- prefix integers with i<br />dCosts		- prefix decimal values with d<br />cText		- prefix text/character values with c<br />lComp		 - prefix logical values with l<br /><br />Using a convention like this should also prevent you hitting on the major Don'ts (using dictionary words as variable names).<br /><br />DO always qualify fields when using them in the calculation fields within DataSets and Calculate Conditions.	 Eg.	jc_job.RO_ContractCosts^TD</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #bed230;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">
+            <br />
+            <br />DON'T prefix any variable name with a numeral - it will fail.<br /><br />DON'T use dictionary words as variable names, they may be commands in <MadCap:variable name="General.ProductName" /> or PROGRESS, examples that will fail include Group, Type, Index, Count, Total - if you use prefixes as noted in the DOs above - you can use cGroup.</p>
+    </body>
+</html>

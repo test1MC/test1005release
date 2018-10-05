@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>Print Invoices</title>
+        <link href="../../../Resources/Stylesheets/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">Print Invoices</h1>
+        <p class="Body">If you wish to use the Taxable % process, you must have your Invoice Documents modified. This is due to the <span class="Function">Print Invoices </span>function only printing one line for all Scheduled Billings Detail Lines on a <MadCap:variable name="Variables.Se Service Order caps" /> if the <MadCap:variable name="Variables.Se Service Order caps" />’s <span class="Field">Allowable Work Taxable %</span> is not 100 (or 0).</p>
+        <p class="Body">RO fields <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>on the Invoice header contain the <span class="Field">Invoice Taxable Amount </span>(RO_sei_TaxableAmt) and <span class="Field">Invoice Nontaxable Amount</span> (RO_sei_NontaxableAmt). You may want to have your Invoice Documents adjusted to print the breakout of Taxable and Nontaxable amounts.</p>
+        <ul>
+            <li class="ListBullet1">If the Invoice Line’s Tax value is &lt;&gt; 0, the Line’s <strong>Taxable Amount </strong>is calculated. <strong>Note:</strong> Retention is not considered as Taxable.</li>
+            <li class="ListBullet1">The difference between the Line’s Amount and the <strong>Taxable Amount </strong>is reported as the Nontaxable Amount.</li>
+        </ul>
+    </body>
+</html>

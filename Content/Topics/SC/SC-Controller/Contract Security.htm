@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="4" MadCap:lastHeight="6971" MadCap:lastWidth="1191">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Contract Security</h1>
+        <p>&#160;</p>
+        <h2>Contract Security OA Configuration</h2>
+        <p>The following OA JC parameters should be taken into account - JOBSEC,COSECDEF</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security.png" class="FullWidth" />
+        </p>
+        <p>-- COSECDEF – controls how to proceed blank values (Y – blank value means no access, N – blank value means access to all contracts)</p>
+        <p>-- JOBSEC – specifies which field <MadCap:variable name="General.ProductName" /> uses to control contract security (which job field is copied to the job_security field). Enter one of the following or leave blank for no contract security:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">job_num for contract code</li>
+            <li style="list-style-type: disc;">jgr_group for contract group code</li>
+            <li style="list-style-type: disc;">jty_type for contract type code</li>
+            <li style="list-style-type: disc;">jcl_loc for contract location code</li>
+            <li style="list-style-type: disc;">job_fore for contract manager</li>
+            <li style="list-style-type: disc;">rcm_num for customer</li>
+            <li style="list-style-type: disc;">job_anal[1] for contract analysis set 1</li>
+            <li style="list-style-type: disc;">job_anal[2] for contract analysis set 2 - 4.</li>
+            <li style="list-style-type: disc;">job_anal2[1] for contract analysis set 5, etc.</li>
+        </ul>
+        <p>For example, if it is jcl_loc, it means that Job Location of the contract will be copied to the job_security field.</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_1.png" class="FullWidth" />
+        </p>
+        <p>If you change this parameter, to enable contract security or change which field governs contract security after the system has been set up, you need to run Contract Status &gt; Administration &gt; Regenerate Data &gt; Contract Security.</p>
+        <h2>Contract Security Logic</h2>
+        <p>Contract Security is stored on the user bases<br />when setting Contract Security for the user, you can enter 2 fields: Security List and/or Code<br />-- Security List – additional condition depending on JC / JOBSEC parameter. If the parameter is set to jcl_loc, Contract Location(s) can be entered.<br />-- Code – the Contract(s) you need to grant the access to</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_2.png" class="FullWidth" />
+        </p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_3.png" class="FullWidth" />
+        </p>
+        <p>To setup Contract Security for Construction Cloud user follow the steps below:</p>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;"><a href="https://coins.visualstudio.com/COINS-Global/Applications-Certificates/_wiki/wikis/COINS-Global.wiki#Map-Construction-Cloud-user-to-valid-and-unique-COINS-OA-user?wikiVersion=GBwikiMaster&amp;pagePath=%2FConstruction%20Cloud%20Apps%2FSC%20Portal%20Team%20Space%2FKnowledge%20Base%2FSet%20Contract%20Security%20for%20COINS%20OA%20user" class="Hyperlink">Map Construction Cloud User to valid and unique <MadCap:variable name="General.ProductName" /> OA user</a>.</li>
+            <li style="list-style-type: disc;"><a href="https://coins.visualstudio.com/COINS-Global/Applications-Certificates/_wiki/wikis/COINS-Global.wiki#Set-Contract-Security-for-COINS-OA-user?wikiVersion=GBwikiMaster&amp;pagePath=%2FConstruction%20Cloud%20Apps%2FSC%20Portal%20Team%20Space%2FKnowledge%20Base%2FSet%20Contract%20Security%20for%20COINS%20OA%20user" class="Hyperlink">Set Contract Security for <MadCap:variable name="General.ProductName" /> OA user</a>
+            </li>
+        </ul>
+        <h3>Map Construction Cloud user to valid and unique <MadCap:variable name="General.ProductName" /> OA user</h3>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Open <MadCap:variable name="General.ProductName" /> OA &gt; System &gt; User Maintenance &gt; Users. Find or create required <MadCap:variable name="General.ProductName" /> OA user which has not been mapped to Construction Cloud User yet</li>
+        </ol>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_4.png" class="FullWidth" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="2">
+            <li>Open <MadCap:variable name="General.ProductName" /> OA &gt; Central Repository &gt; Personnel. Find required Construction Cloud using Filters at the bottom of the browse and click the 'Open' button</li>
+        </ol>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_5.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="3">
+            <li>Enter <MadCap:variable name="General.ProductName" /> OA user to the 'Userid' field and save the changes.<br />Note: The relationship between <MadCap:variable name="General.ProductName" /> OA and Construction Cloud user should be 1:1 (<MadCap:variable name="General.ProductName" /> OA user should not be mapped to other Construction Cloud Users)</li>
+        </ol>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_6.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="4">
+            <li>Open Construction Cloud &gt; Administration application &gt; Users &gt; required user &gt; Modify option<br />If mapping is correct, no error is shown for "<MadCap:variable name="General.ProductName" /> OA User ID" field. Otherwise, you need to re-map it properly follow the steps above.<br />Note: currently the error is shown that this <MadCap:variable name="General.ProductName" /> OA User ID is already used even if it is mapped to current user only. In this case, you can ignore this error</li>
+        </ol>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_7.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h3>Set Contract Security for <MadCap:variable name="General.ProductName" /> OA user</h3>
+        <p>-- Open <MadCap:variable name="General.ProductName" /> OA &gt; Contract Status &gt; Setup &gt; Setup Maintenance &gt; Security &gt; Contract Security<br />-- Find <MadCap:variable name="General.ProductName" /> OA user mapped to Construction Cloud User<br />-- Update 'Security List' and 'Code' fields <br />-- Save the record</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_8.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <h2>MS Test Environment</h2>
+        <p>&#160;</p>
+        <p>Connection:</p>
+        <ol style="list-style-type: decimal;margin-left: 36pt;" start="1">
+            <li>Citrix (see details in RF) via Internet Explorer</li>
+            <li><a href="http://10.100.112.32/cgi-bin/ci-scportal-ws/wocoins.p" class="Hyperlink">http://10.100.112.32/cgi-bin/ci-scportal-ws/wocoins.p</a> from IA via Citrix (see step 1)</li>
+        </ol>
+        <p>Username: CSUPPORT</p>
+        <p>Password: Saturday1!</p>
+        <p>&#160;</p>
+        <p>Configuration</p>
+        <p>kco DB publish (sysdb.COINSAppStudio)</p>
+        <p>Kco 80:</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_9.png" class="FullWidth" />
+        </p>
+        <p>Kco 55:</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_10.png" class="FullWidth" />
+        </p>
+        <p>ci_company DB publish (sysdb.COINSAppStudio)</p>
+        <p>Kco 80:</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_11.png" class="FullWidth" />
+        </p>
+        <p>Kco 55:</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_12.png" class="FullWidth" />
+        </p>
+        <p>ci_office (updating CiOffice) – dependent on CiCompany - doesn’t work yet</p>
+        <p>
+            <img src="../../../Resources/Images_S-U/SC/SC-Controller/Contract Security_13.png" class="FullWidth" />
+        </p>
+        <p>jc_job (updating Contract) – dependent on OperatingCompany</p>
+        <p>department (updating BusinessDepartments) – dependent on OperatingCompany</p>
+        <p>pr_dcost (enhancing BusinessDepartments) - dependent on BusinessDepartments</p>
+        <p>cr_table (updating Grade) – dependent on OperatingCompany</p>
+        <p>pr_locat (updating Location) – dependent on OperatingCompany</p>
+        <p>co_currency (updating Currency) – dependent on OperatingCompany</p>
+        <p>co_config (enhancing OperatingCompany) - dependent on OperatingCompany, Currency</p>
+        <p>co_vat (updating Vat) - dependent on OperatingCompany</p>
+        <p>pp_organisation (updating Person) – dependent on OperatingCompany, Grade, Location, BusinessDepartments</p>
+        <p>sc_defn (updating SubcontractCertificateDefinition) – dependent on OperatingCompany</p>
+        <p>sc_defndet (updating SubcontractCertificateDefinitionLine) – dependent on SubcontractCertificateDefinition</p>
+        <p>&#160;</p>
+    </body>
+</html>

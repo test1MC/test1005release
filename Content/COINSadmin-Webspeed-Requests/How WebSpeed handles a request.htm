@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2726" MadCap:lastWidth="854">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>How WebSpeed handles a request</h1>
+        <p>This section describes how the components of the WebSpeed Transaction Server interact to respond to a request from a client browser.</p>
+        <ul>
+            <li>The Web server receives the request from a Web browser. Each request is in the form of a URL, as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832992284.image" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The Web server sends the request to a WebSpeedMessenger (Apache) as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request_1.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832992842.image" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The WebSpeed Messenger communicates with the NameServer, requesting an appropriate WebSpeed broker, as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request_2.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832993412.image" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The Messenger initiates a connection to the WebSpeed broker at the address returned by the NameServer and forwards the request to that broker, as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request_3.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832993922.image" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The WebSpeed broker consults its pool of WebSpeed agents and assigns the request to an idle agent, as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request_4.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832994461.image" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The WebSpeed agent and the WebSpeed Messenger establish a connection. The Web object name and the environment for the request are passed to the agent, as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request_5.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832994897.image" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The WebSpeed agent executes the Web object. It also performs the necessary reads from and writes to a data source. Notice that the WebSpeed agent maintains its connection with the WebSpeed Messenger while the Web object is executing, as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request_6.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832995510.image" class="FullWidth" />
+        </p>
+        <ul>
+            <li>The WebSpeed agent passes the generated HTML Web Page to the Messenger, which sends it to the browser through the Web Server, as shown:</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images_A-C/COINSadmin-Webspeed-Requests/How WebSpeed handles a request_7.png" alt="https://documentation.progress.com/output/ua/OpenEdge_latest/gsais/images/rfi1378832996145.image" class="FullWidth" />
+        </p>
+        <p>The agent disconnects from the Messenger, and it updates its availability with the broker. No context for the transaction is maintained and the agent is free to service another request. </p>
+        <p>&#160;</p>
+    </body>
+</html>

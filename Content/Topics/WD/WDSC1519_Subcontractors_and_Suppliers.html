@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Subcontractors and <MadCap:variable name="Variables.Pl Suppliers caps" /></title>
+    </head>
+    <body>
+        <h1 class="print">
+            <MadCap:concept term="Topics" />Subcontractors and <MadCap:variable name="Variables.Pl Suppliers caps" /></h1>
+        <p>When setting up a subcontractor, you need to specify the withholding tax treatment for that subcontractor.&#160;</p>
+        <p>On the Tax &amp;&#160;<MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> tab, set the <span class="field">Tax Scheme </span>field as follows:</p>
+        <table class="type1">
+            <tbody>
+                <tr>
+                    <td>
+                        <p>T</p>
+                    </td>
+                    <td>
+                        <p>Taxable: Withholding tax is liable to be applied to transactions for this subcontractor (although not all transactions will necessarily be taxed dependent on the rate code applied to each transaction).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>U</p>
+                    </td>
+                    <td>
+                        <p>Unknown: The withholding tax status of this subcontractor is unknown.&#160; No payments can be made for the subcontractor until this status is changed.&#160; This can be used during initial loading of data in the <MadCap:variable name="General.ProductName" /> implementation and/or when adding new subcontractors during 'business as usual'.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>V</p>
+                    </td>
+                    <td>
+                        <p>Valid: The subcontractor holds a tax card.&#160; Transactions are not liable to withholding tax unless this has expired.&#160; Details of the Tax Card would be input as detailed below.&#160; This would be used in Qatar but not in Oman or Saudi Arabia.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>X</p>
+                    </td>
+                    <td>
+                        <p>Exempt: None of the transactions for this subcontractor are liable to withholding tax.&#160; This may be due to the residency of the subcontractor or the type of transactions (but not due to the holding of a tax card&#160;- see V above).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Subcontractors Liable to Withholding Tax</h2>
+        <p>For subcontractors liable to withholding tax (Tax Scheme = T), select the default tax rate for the subcontractor.&#160;</p>
+        <p />
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">Subcontractor Tax &amp; <MadCap:variable name="Variables.Vat caps" /> Tab</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images_S-U/SC/SC_151901.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>This acts as the default rate for all new subcontracts for this subcontractor and for all new invoices on any linked <MadCap:variable name="Variables.pl supplier" /> account ? this will save time and ensure consistency where all or most of the transactions for a subcontractor have the same tax treatment.&#160;</p>
+        <p>If there are likely to be a mixture of different tax treatments, leave the default rate blank&#160;- this will force the user to make a selection on the subcontract or invoice.</p>
+        <h2>Subcontractors with a Tax Card</h2>
+        <p>For subcontractors with a valid tax card (Tax Scheme = V), record details of the Tax Card.&#160;</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Subcontractor Tax Card Maintenance</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../Resources/Images_S-U/SC/SC_151902.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Subcontract Certificates</h2>
+        <p>For subcontracts where the subcontractor has a tax scheme of T, the tax rate on the subcontract will default from the default rate set against the subcontractor (unless this has been left blank).&#160; This will then act as the rate for all certificates for this subcontract.&#160;&#160;</p>
+        <p>If the rate on the subcontract is changed then the new rate will be applied to certificates input after this change has been made.&#160; If parameter <span class="parameter">SC/TAXATPAY </span>is set to <span class="userinput">Y </span>then the new rate will also be applied to certificates already input but paid after this change (by recalculating the tax during the payment run, either at the point of freezing the payment batch or at the point of producing the payment dependent on the setting of parameter <span class="parameter">SC/TAXSTAGE</span>).</p>
+        <h2><MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" />
+        </h2>
+        <p>For any <MadCap:variable name="Variables.pl supplier" /> to which withholding tax will apply, set up a linked subcontractor account.&#160; All necessary details for withholding tax will then be maintained on the subcontractor record for <MadCap:variable name="Variables.pl suppliers" /> in the same way as for subcontractors.&#160;</p>
+        <ol>
+            <li>First create the subcontractor record for the company.</li>
+            <li>Then create a <MadCap:variable name="Variables.pl supplier" /> record with the same account code.</li>
+            <li>On the <MadCap:variable name="Variables.pl supplier" /> record, <MadCap:variable name="Variables.tick" /> the <span class="field">Subject to Withholding Tax </span><MadCap:variable name="Variables.tick" />box.</li>
+        </ol>
+    </body>
+</html>

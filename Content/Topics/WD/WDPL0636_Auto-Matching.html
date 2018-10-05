@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Auto-Matching Electronic Invoices</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Auto-Matching Electronic Invoices</h1>
+        <p>When 3-way matching Purchase Orders to GRNs to Invoices, or 2-way matching POs to Invoices there are seven criteria that are vital in the auto-matching process:</p>
+        <ul>
+            <li>The Purchase Order number</li>
+            <li>Product Code&#160;</li>
+            <li>Delivery ticket number&#160;</li>
+            <li>Delivery date</li>
+            <li>Quantity</li>
+            <li>Price</li>
+            <li>Line Amount</li>
+        </ul>
+        <p>Apart from the order number, any of these checks can be disabled (either for all invoices or for individual <MadCap:variable name="Variables.pl suppliers" />).</p>
+        <h2>2-Way Auto Matching</h2>
+        <p>The 2-way match process is invoked if the accrual method for the <MadCap:variable name="Variables.jc contract" /> when the order is created, possibly modified by the <MadCap:variable name="Variables.pl supplier" />'s office, is Order or Neither, and if 2-way matching for electronic invoices is switched on.&#160; A 2-way match is attempted for every invoice when the <span class="userinput" data-mce-mark="1">Create Batch</span> action is run.&#160;</p>
+        <h2>3-Way Auto-Matching</h2>
+        <p>A 3-way match can be attempted using <span class="function" title="Function:%WPO3640RAIN">eCommerce Invoices Automatch Costing</span> or by running <span class="function" title="Function:%WPO3610RAVM">E-Invoices for Matching Report</span>.</p>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>Any of the invoice matching criteria (except the Purchase Order number) can be turned off using the parameter <span class="parameter">PO/AUTCHK</span>. This parameter holds a pipe-separated list of options. For example:</p>
+            <div class="code">ARTCODE=Y|SUPREF=Y|DELDATE=Y|QTYEXP=Y|PRICEEXP=N|AMTEXP=Y</div>
+            <p>Here all criteria are checked except for the expected price. If the parameter is blank, all checks are made.</p>
+            <p><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> by <MadCap:variable name="Variables.pl supplier" /> these settings can be overridden in the <span class="function" title="Function:%WCI1010SCIF">Organ<MadCap:variable name="Variables.is" />ation Setup</span> PLINV record.</p>
+            <p>
+                <img src="../../Resources/Images_P-R/PL/PL_063601.png" />
+            </p>
+            <p>Here the Delivery Date criterion has been relaxed for Acme Open Order Limited.</p>
+            <h3>GRN considerations</h3>
+            <p>The matching process is determined by configuration. For material orders, the <span class="parameter">JC/ACCMETH </span>states what accrual methods are valid; choose from any or all of these values:</p>
+            <p>O Order<br />G&#160;GRN<br />Z&#160;Neither</p>
+            <p>The <MadCap:variable name="Variables.jc contract" /> will then have one of the valid accrual methods.</p>
+            <p>The <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span><MadCap:variable name="Variables.pl supplier" /> details record can override this accrual method using one of the valid values. The <MadCap:variable name="Variables.jc contract" /> might normally use G for all <MadCap:variable name="Variables.pl suppliers" />, but a particular <MadCap:variable name="Variables.pl supplier" /> record (in the Company Information Workbench) might have O to accrue PO values not GRNs.</p>
+            <p>Where O is used and the <span class="parameter">PL/AUTOINVM </span>parameter is set to <span class="userinput">2</span>, it is possible for an eInvoice to go straight to approval if all the matching criteria described above are met.</p>
+            <h3>2-way Auto-Matching</h3>
+            <p>2-way matching of eInvoices is enabled if the <span class="parameter">PL/AUTOINVM</span> parameter is set to <span class="userinput">2</span>.&#160;</p>
+            <p>The 2-way match process can be restricted to specific <MadCap:variable name="Variables.jc contracts" /> or overhead departments using the PL parameters <span class="parameter">AMJOBS </span>and <span class="parameter">AMDEPTS</span>.</p>
+            <p>For example, if <span class="parameter">PL/AUTOINVM </span>is set to <span class="userinput">N</span> (that is, by default, we do not want to 2-way match), setting <span class="parameter">PL/AMJOBS </span>to <span class="userinput">A*|2,B*|2,C*|0 </span>will attempt to 2-way match invoices for any <MadCap:variable name="Variables.jc contract" /> whose number begins with A or B but will not attempt to 2-way match for <MadCap:variable name="Variables.jc contracts" /> beginning C.</p>
+            <p>This could get more elaborate because the parameter is read from left to right. So setting <span class="parameter">PL/AMJOBS </span>to <span class="userinput">AA*|0,A*|2,B*|2 </span>will not try to two-way match anything beginning AA but will attempt anything else beginning A, and try to match anything beginning B. As a belt and braces measure you could add <span class="userinput">*|0</span> as another value at the end of the list but this is implied by the setting of <span class="parameter">PL/AUTOINVM</span>. (For consistency with the <span class="parameter">PL/AUTOINVM </span>parameter, you can use <span class="userinput">N</span> in <span class="parameter">PL/AMJOBS </span>if you wish instead of <span class="userinput">0</span>.)</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/PO/po_autchk.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_autoinvm.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_amjobs.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_amdepts.htm" />
+                    <MadCap:relatedTopic src="../Parameters/PL/pl_etolamt.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2333" MadCap:lastWidth="917">
+  <head>
+    <title>Menu Item Security</title>
+    <style>/*<![CDATA[*/
+div.callcanvas
+{
+	position: relative;
+}
+div.callout
+{
+	position: absolute;
+}
+div.left
+{
+	text-align: left;
+	border-bottom: 2px #DC4405 solid;
+}
+div.right
+{
+	text-align: right;
+	border-bottom: 2px #DC4405 solid;
+}
+div.top
+{
+	text-align: left;
+	border-left: 2px #DC4405 solid;
+	padding-left: 5px;
+}
+div.bottoml
+{
+	text-align: left;
+	vertical-align: bottom;
+	border-left: 2px #DC4405 solid;
+	padding-left: 5px;
+}
+div.bottomr
+{
+	text-align: right;
+	border-right: 2px #DC4405 solid;
+	padding-right: 5px;
+}
+div.bottomr td
+{
+	vertical-align: bottom;
+}
+div.bottoml td
+{
+	vertical-align: bottom;
+}
+div.callcanvas span.function,
+div.callcanvas a.function
+{
+	font-weight: normal;
+	color: black;
+	border-bottom: none;
+	cursor: default;
+}
+div.menuitem
+{
+	border: solid 1px black;
+	margin-left: 1cm;
+}
+div.childitem
+{
+	margin-left: 1cm;
+	border-right: solid 10px #DC4405;
+}
+span.allowed a.function
+{
+	color: #DC4405;
+	font-weight: bold;
+}
+
+/*]]>*/</style>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Menu Item Security</h1>
+    <p>Menu Item Security is an optional way of configuring function security. The main features of this method are:</p>
+    <ul>
+      <li>Access can be set at the level of menu items; all individual functions (tabs, buttons, options) within the menu item inherit the permissions from the menu item.</li>
+      <li>Access to menus is automatically granted if the user has access to any item on the menu.</li>
+      <li>Users can be granted "read only" or "update" access to a function.</li>
+    </ul>
+    <p>The benefits of this approach include:</p>
+    <ul>
+      <li>Less maintenance: setting permissions at the level of menu items means there are far fewer functions you need to consider.</li>
+      <li>When new features are added to existing menu items they will automatically inherit the permissions from the menu item, so you will not need to set the permissions for them. This greatly reduces the effort in assessing new functions at each release.</li>
+      <li>You can give different types of users "read only" and "update" access to the same menu item, without needing to worry about setting permissions for individual buttons and update functions.</li>
+      <li>You can prevent access to selected sub-functions (such as delete or bulk-update).</li>
+    </ul>
+    <p>Menu Item Security is optional; if you choose not to turn it on, function access security will work as before. If you do turn Menu Item Security on, previous methods of setting access permissions are still available and can be used to fine-tune the permissions if necessary.</p>
+    <h2>How Menu Item Security Works</h2>
+    <p>Every function in the system is associated with a parent menu function (see <a href="WDSY0144_Parent_and_Child_Functions.html">Parent and Child Functions</a>), and has an access type indicator to show whether it gives update access or read only access. <MadCap:variable name="General.ProductName" /> Menu Item Security allows you to set access permissions for functions in <MadCap:variable name="General.ProductName" /> OA based on the menu item they belong to, and to grant either read only or update access for all the options that fall underneath that menu option. This is much simpler and quicker than setting permission for individual functions.</p>
+    <div class="callcanvas" style="height: 150px;">
+      <img src="../../Resources/Images/plus1.gif" />
+      <img src="../../Resources/Images/men1.gif" />
+      <span class="function" title="Function:%WPL1">Input</span>
+      <div class="menuitem" style="width: 9cm;">
+        <img src="../../Resources/Images/mnt1.gif" />
+        <span class="function" title="Function:%WPL1050BCOB">Manual Payments</span>
+        <div class="childitem" style="width: 7cm;">
+          <span class="function" title="Function:%WPL1050BACSA">Add Payment</span>
+          <br />
+          <span class="function" title="Function:%WPL1050BAPYU">Update Payment</span>
+          <br />
+          <span class="function" title="Function:%WPL1050BAPYD">Delete Payments</span>
+          <br />
+          <span class="function" title="Function:%WPL1050BAPY">Allocation</span>
+          <br />
+          <span class="function" title="Function:%WPL1050SACST3">Allocated</span>
+          <br />... etc</div>
+      </div>
+      <div class="callout right" style="width: 250px;height: 30px;top: 0px;left: 290px;">Grant access to the<br />menu item ...</div>
+      <div class="callout right" style="padding-left: 15mm;width: 200px;height: 30px;top: 60px;left: 340px;">... access to the sub­ordinate items is automatic</div>
+    </div>
+    <p> </p>
+    <p>You can still define detailed function security at a group or individual level if required.</p>
+    <h3>Menus, Tabs and Containers</h3>
+    <p>When using Menu Item Security, you do not need to set security for Menu, Tab and Container functions. They will be made available if they contain anything to which the user has access. However, the user will not automatically have access to the other contained functions.</p>
+    <p>For example, if a user has access to the <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /><MadCap:variable name="Variables.pl suppliers" style="text-transform: capitalize;" /><MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /> (%WPL5100BAVM), they automatically have access to the PL <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /> menu, which contains it, but they do not automatically have access to the Invoices <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /> or the Payments <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" /> which are also on the PL <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /> menu.</p>
+    <div class="callcanvas">
+      <img src="../../Resources/Images/plus1.gif" />
+      <img src="../../Resources/Images/men1.gif" />
+      <span class="allowed">
+        <span class="function" title="Function:%WPL5">{Enquiries}</span>
+      </span>
+      <div class="childitem">
+        <img src="../../Resources/Images/enq1.gif" />
+        <span class="allowed">
+          <span class="function" title="Function:%WPL5100BAVM">
+            <MadCap:variable name="Variables.Pl Suppliers caps" />
+          </span>
+        </span>
+        <br />
+        <img src="../../Resources/Images/enq1.gif" />
+        <span class="function" title="Function:%WPL5010BAIN">Invoices</span>
+        <br />
+        <img src="../../Resources/Images/enq1.gif" />
+        <span class="function" title="Function:%WPL5050BACS">Payments</span>
+        <br />
+        <img src="../../Resources/Images/enq1.gif" />
+        <span class="function" title="Function:%WPL5500BCOB">Batches</span>
+      </div>
+    </div>
+    <p>Similarly, if a user has access to the <span class="function" title="Function:%WMK1630BPIJ">My <MadCap:variable name="Variables.mk projects" style="text-transform: capitalize;" /></span> tab which belongs to the <span class="function" title="Function:%WMK1600HMKC">My <MadCap:variable name="Variables.marketing" /></span> container, they automatically have access to <span class="function" title="Function:%WMK1600HMKC">My <MadCap:variable name="Variables.marketing" /></span> from the menu, but they do not automatically have access to the other functions (<span class="function" title="Function:%WMK1610BHSA">My <MadCap:variable name="Variables.mk journals" style="text-transform: capitalize;" /></span>, <span class="function" title="Function:%WMK1620BCIM">My Companies</span> and so on).</p>
+    <p>However, if a user has explicitly been granted access to a container or tab function (such as <span class="function" title="Function:%WMK1600HMKC">My <MadCap:variable name="Variables.marketing" /></span>), they automatically have access to all the functions it contains (this only applies to container and tab functions, not to menus).</p>
+    <h3>Access Type</h3>
+    <p>Each function has an access type indicator: either Read Only or Update. This is determined by <MadCap:variable name="General.ProductName" /> so that any function that updates the application database will be identified as an update. (Note: all functions update system logs etc. and these updates are ignored for this purpose.)</p>
+    <p>For example, a browse screen would be Read Only access, as would the function that enables the export button on that browse, but the functions that enable the add and update buttons would be Update access.</p>
+    <p>If Menu Item Security is switched on, users are able to set security at the menu item level, and the access options will change from Group/Yes/No to Group/Yes/Yes-Update/No. <span class="new">In this way, a user who is given Yes (that is, read-only) access to a parent function will only be allowed access to the child functions whose access type is Read Only.</span></p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">Existing Access=Y will be considered to be Read Only. If Menu Item Security is switched on, you will need to consider your existing groups carefully.</div>
+    <p> </p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_menusec.htm" />
+          <MadCap:relatedTopic src="../Parameters/SY/sy_menuexc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

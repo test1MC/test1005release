@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="3500" MadCap:lastWidth="841">
+    <head><title>Trading Agreements</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Trading Agreements</h1>
+        <p>&#160;</p>
+        <p>Trading agreements provide a method of coordinating and controlling supply chain policies.&#160; They are designed to control the raising of purchase orders for a specific commodity or trade, and provide retrospective monitoring of non-compliance within these agreements.&#160; You can <MadCap:variable name="Variables.enquire" /> on non-compliant order lines using the Non-Compliance subtab on the Trading Agreements tab in <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>.</p>
+        <p>You can set up agreements either to warn of breaches, or prevent breaches at point of order. For example, if you decide that Vodafone is your sole mobile phone <MadCap:variable name="Variables.pl supplier" />, you can have a restricted agreement set up against the mobile phone commodity code for Vodafone; this would prevent orders from being raised against other <MadCap:variable name="Variables.pl suppliers" />. However, if you decide that Vodafone is your recommended <MadCap:variable name="Variables.pl supplier" />, but you still want to allow mobile phone orders to be raised against other <MadCap:variable name="Variables.pl suppliers" />, you would have a recommended agreement. </p>
+        <p><MadCap:variable name="General.ProductName" /> provides the facility for agreements with up to five levels of detail (from group-wide down to <MadCap:variable name="Variables.jc contract" /> level).&#160; When someone raises an order line for a commodity or trade for which an agreement exists, <MadCap:variable name="General.ProductName" /> checks whether there is an agreement for the <MadCap:variable name="Variables.jc contract" />, then for the branch, and so on up to the general (group-wide) level.&#160; <MadCap:variable name="General.ProductName" /> applies the lowest-level agreement that exists, and prevents the line, warns that there is an agreement, or allows the line, depending on the rule that applies for that agreement.</p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">The Trading Agreement tabs are not restricted to companies in your user view.</div>
+        <h2>Non-compliance</h2>
+        <p>If you allow orders that are in breach of a trading agreement (whether or not <MadCap:variable name="General.ProductName" /> warns about them), <MadCap:variable name="General.ProductName" /> records any order lines that breach an agreement as being non-compliant.&#160; You can <MadCap:variable name="Variables.enquire" /> on any non-compliant lines: on the <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span> Trading Agreements tab, the Non-Compliance tabs show any order lines that are in breach of a current trading agreement, and you can dig deeper to show the details of the order.</p>
+        <div class="process">
+            <h2 class="print">To set up trading agreements:</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>.</li>
+                <li>Click the Trades, Materials or <MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> tab.</li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_S-U/SRM/SRM-0004-1107.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>On the Main subtab, click the link for the trade, commodity or <MadCap:variable name="Variables.pc plant" /> item for which you want to set up an agreement.</li>
+                <li>On the Trading Agreements tab - Agreement Levels subtab, use the Add Type drop-down to choose the level at which you want to set up the agreement, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.</li>
+                <li>If relevant at that level, select the company, region or branch to which the agreement level applies.</li>
+                <li>Select the rule for the agreement level.&#160; This determines whether <MadCap:variable name="General.ProductName" /> allows non-compliant orders, and whether or not a warning is issued. 
+<p /></li>
+            </ol>
+            <p>
+                <img src="../../Resources/Images_S-U/SRM/SRM-0005-1107.png" class="FullWidth" />
+            </p>
+            <ol MadCap:continue="true">
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />. 
+<p class="noteheader">NOTE</p><div class="note">The Trading Agreements tab on the main <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span> allows you to maintain and add new trading agreements for trades and commodities for which trading agreements already exist, but not to add trading agreements for "new" trades or commodities.</div></li>
+            </ol>
+            <h2>To add <MadCap:variable name="Variables.pl suppliers" /> or subcontractors to an agreement level:</h2>
+            <ol>
+                <li>On the Agreement Level tab, click the link in the row for the agreement level you want to add the <MadCap:variable name="Variables.pl supplier" /> to.&#160; The link is in the column that represents the level to which the agreement applies.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />.</li>
+                <li>Use the lookup to select the <MadCap:variable name="Variables.pl supplier" /> or subcontractor.</li>
+                <li>Complete the other fields.</li>
+                <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/save.svg" class="button" />.</li>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Although trading agreements must be set up using <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" />, <MadCap:variable name="General.ProductName" /> also checks for agreements when raising orders using <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />.</div>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Trading agreements - configuration</h2>
+            <p>You need to set up the rules that can apply to trading agreements, using <span class="function" title="Function:%WTI1510BSTE">Trading Agreement Rules</span>.</p>
+            <p>You can set up trading agreements at any of five levels: Group (that is, across <MadCap:variable name="Variables.kco companies" />), <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />, "Region", "Branch" and <MadCap:variable name="Variables.Jc Contract caps" />.&#160; The two levels above <MadCap:variable name="Variables.jc contract" /> are configurable, and relate to the "buying region" and "branch" that are set up using JC parameters <span class="parameter">JOBREG </span>and <span class="parameter">JOBBR</span>.&#160; These denote which fields on the <MadCap:variable name="Variables.jc contract" /> record <MadCap:variable name="General.ProductName" /> uses to identify the region and branch a <MadCap:variable name="Variables.jc contract" /> belongs to.</p>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Trading agreements apply to <MadCap:variable name="Variables.jc contract" />-related orders (material, <MadCap:variable name="Variables.pc plant" /> and subcontract) and also to overhead orders - though overhead orders cannot reference regional and branch agreements).</div>
+            <p>The field that identifies "region" would normally be the same across all <MadCap:variable name="Variables.kco companies" />.&#160; However, you could use different fields in different <MadCap:variable name="Variables.kco companies" />, and set <span class="parameter">JC/JOBREG </span>as a <MadCap:variable name="Variables.kco company" />-specific parameter.&#160; If a <MadCap:variable name="Variables.kco company" /> does not have the concept of region, leave <span class="parameter">JC/JOBREG </span>blank for that <MadCap:variable name="Variables.kco company" />.&#160;&#160;The same applies to "branch".</p>
+            <p>The SRM parameter <span class="parameter">TASCOPLB </span>allows you to set the labels to use in <span class="module">SRM</span> for the "region" and "branch" entities.&#160;</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_TASCOPLB.htm" />
+                    <MadCap:relatedTopic src="../Parameters/JC/jc_jobreg.htm" />
+                    <MadCap:relatedTopic src="../Parameters/JC/jc_jobbr.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

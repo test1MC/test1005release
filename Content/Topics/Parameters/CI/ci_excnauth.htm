@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>CI/EXCNAUTH - Authentication token for Exchange Server contacts replication</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">CI/EXCNAUTH - </span> Authentication token for Exchange Server contacts replication
+</div>
+<div class="param_def">
+<p>The authentication token for Exchange contacts replication.</p>
+<p class="noteheader">NOTE</p>
+<div class="note">This applies to the 'old' method of contact replication using WebDAV.  It is not required if using EWS.  See <span style="color: #000000;"><span class="parameter">CI/EXCNMETH</span>.</span></div>
+<p>The Authentication Token is an encoded version of the user name and password for the replication user account. This is passed with every single replication request between COINS and the Exchange server. The information is encoded using a weak algorithm and can be reversed, so it is important that a special user account be created and that this account is given restricted access.</p>
+<p>Use <span class="function" title="Function:%WCI7060FPCN">Generate Authentication Token</span> to generate the token. See <a href="http://www.coins-global.com/cp_root/storage/documents/CIW-Exchange-Replication.pdf" target="_blank">How to Configure Exchange Contact Replication</a> for more information.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameters ;mc-help-control-display: list;"><MadCap:relatedTopic src="../ci/ci_excnrepl.htm" /><MadCap:relatedTopic src="../ci/ci_excnmeth.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

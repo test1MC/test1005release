@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="334" MadCap:lastWidth="622" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head />
+    <body>
+        <h1 MadCap:autonum="1">Screen and Processing Changes</h1>
+        <h2 MadCap:autonum="1.1"><MadCap:variable name="Variables.Se Agreement caps" /> Inception Date</h2>
+        <p class="Body">The <MadCap:variable name="Variables.Se Agreement caps" /> Inception Date was changed from being an Add-only field to a field that can be accessed in Update mode, as shown in <MadCap:xref href="#InceptionDateUpdate" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>. Any changes are carried to all the appropriate fields throughout the <MadCap:variable name="Variables.Se Agreement caps" />.</p>
+        <p class="Body">The criteria in which the Inception Date cannot be changed (it is disabled) in Update mode are:</p>
+        <ul>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Agreement caps" /> has been selected for Renewal.</li>
+            <li class="ListBullet3">The <MadCap:variable name="Variables.Se Agreement caps" /> has been renewed.</li>
+        </ul>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="InceptionDateUpdate"></a>Inception Date in Update Mode</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE058_Images/SE058_AgmtInceptionDate.png" alt="" title="" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2">Validation Updates</h2>
+        <p class="Body">Since changes to the <MadCap:variable name="Variables.Se Agreement caps" /> Inception Date are carried to all appropriate fields throughout the <MadCap:variable name="Variables.Se Agreement caps" />, certain validation processes have been updated to avoid errors that could occur. These validation processes are described in this section.</p>
+        <h3 MadCap:autonum="1.2.1"><MadCap:variable name="Variables.Se Agreement caps" /> Amount - <MadCap:variable name="Variables.Pr Effective Date caps" /> and First Billing Date</h3>
+        <p class="Body">  The goal of this validation update is to retain the original date order, but still pass all required validation.</p>
+        <p class="Body">The <MadCap:variable name="Variables.Pr Effective Date caps" /> and First Billing Date are changed for all Location/Service Department records where the <MadCap:variable name="Variables.Pr Effective Date caps" /> equals the old Inception Date (there could be more than one, since the <MadCap:variable name="Variables.Se Agreement caps" /> can reference multiple Locations/Service Departments).</p>
+        <p class="Body"> If the <MadCap:variable name="Variables.Se Agreement caps" /> has subsequent <MadCap:variable name="Variables.Se Agreement caps" /> Amount record(s) on file for a Location/Service Department with <MadCap:conditionalText MadCap:conditions="COINS.USOnly">a</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">an</MadCap:conditionalText> <MadCap:variable name="Variables.Pr Effective Date caps" /> that will conflict with the change made to the first record, any subsequent records are also adjusted.   All subsequent records are moved one day forward until there are no conflicts in the date. </p>
+        <h3 MadCap:autonum="1.2.2"><MadCap:variable name="Variables.Se Agreement caps" /> Billing Schedule – Scheduled Bill Date</h3>
+        <p class="Body">There is no validation on the Scheduled Bill Date referenced within the Billing Schedule.   Users must adjust any data.</p>
+        <h3 MadCap:autonum="1.2.3"><MadCap:variable name="Variables.Se Agreement caps" /> Revenue Schedule – <MadCap:variable name="Variables.Financial Period caps" /></h3>
+        <p class="Body">There is no validation on the <MadCap:variable name="Variables.Financial Period caps" /> referenced within the Revenue Schedule.    Users must adjust any data.</p>
+        <h3 MadCap:autonum="1.2.4"><MadCap:variable name="Variables.Se Agreement caps" /> Renewals – Start Date</h3>
+        <p class="Body">The Start Date is changed for the first Renewal record where the Start Date equals the old Inception Date.   Users must change the End Date.</p>
+        <p class="NoteHeader">NOTES:</p>
+        <ul>
+            <li class="ListBullet1"> Any Planned Inspections and Covered Asset Inspections with a date outside the range of the Renewal Period are removed.    Users must adjust the tasking data.</li>
+        </ul>
+        <ul>
+            <li class="ListBullet1">The Cost Schedule and Cost Budgets contain validation to prevent non-zero values for <MadCap:variable name="Variables.Financial Periods caps" /> out of the Renewal date range.   Users must remove any values  covered by the new Inception Date prior to changing the Inception Date.</li>
+        </ul>
+        <h3 MadCap:autonum="1.2.5"><MadCap:variable name="Variables.Se Agreement caps" /> Term – Start Date</h3>
+        <p class="Body">The Start Date is changed for the first <MadCap:variable name="Variables.Se Agreement caps" /> Term record where the Start Date equals the old Inception Date. The End Date is automatically recalculated when the Start Date is changed, and the Duration remains unchanged.</p>
+        <p class="Body"> If the resulting dates overlap other Term records, users must adjust the other records to provide no overlap in coverage dates.</p>
+        <h3 MadCap:autonum="1.2.6"><MadCap:variable name="Variables.Se Agreement caps" /> Type – <MadCap:variable name="Variables.Pr Effective Date caps" /></h3>
+        <p class="Body">  The goal of this validation update is to retain the original date order, but still pass all required validation.</p>
+        <p class="Body">The <MadCap:variable name="Variables.Pr Effective Date caps" /> is changed for the first <MadCap:variable name="Variables.Se Agreement caps" /> Type record where the <MadCap:variable name="Variables.Pr Effective Date caps" /> equals the old Inception Date.</p>
+        <p class="Body">If the <MadCap:variable name="Variables.Se Agreement caps" /> has subsequent <MadCap:variable name="Variables.Se Agreement caps" /> Type record(s) on file with <MadCap:conditionalText MadCap:conditions="COINS.USOnly">a</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">an</MadCap:conditionalText> <MadCap:variable name="Variables.Pr Effective Date caps" /> that will conflict with the change to the first record, any subsequent records are also adjusted. All subsequent records are moved one day forward until there are no conflicts in the date.</p>
+        <h3 MadCap:autonum="1.2.7"><MadCap:variable name="Variables.Se Agreement caps" /> <MadCap:variable name="Variables.Mk Marketeer caps" /> – <MadCap:variable name="Variables.Pr Effective Date caps" /></h3>
+        <p class="Body">  The goal of this validation update is to retain the original date order, but still pass all required validation.</p>
+        <p class="Body">The <MadCap:variable name="Variables.Pr Effective Date caps" /> is changed for all Location/Service Department records where the <MadCap:variable name="Variables.Pr Effective Date caps" /> equals the old Inception Date (there could be more than one, since the <MadCap:variable name="Variables.Se Agreement caps" /> can reference multiple Locations/Service Departments).</p>
+        <p class="Body"> If the <MadCap:variable name="Variables.Se Agreement caps" /> has subsequent <MadCap:variable name="Variables.Mk Marketeer caps" /> record(s) on file for a Location/Service Department with <MadCap:conditionalText MadCap:conditions="COINS.USOnly">a</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.UKOnly">an</MadCap:conditionalText> <MadCap:variable name="Variables.Pr Effective Date caps" /> that will conflict with the change made to the first record, any subsequent records are also adjusted.   All subsequent records are moved one day forward until there are no conflicts in the date. </p>
+    </body>
+</html>

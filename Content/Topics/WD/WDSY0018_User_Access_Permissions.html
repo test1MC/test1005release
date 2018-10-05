@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1464" MadCap:lastWidth="904">
+    <head><title>Setting Function Access for a User</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Setting Function Access for a User</h1>
+        <p>The function access permissions on a user's record are the "first port of call"; <MadCap:variable name="General.ProductName" /> evaluates these first when determining whether to allow a user access to a function. The settings allow a user to be explicitly granted access to a function, or denied access, or access can be determined by <a href="WDSY0019_Group_Access_Permissions.html">user groups</a>.</p>
+        <p>
+            <MadCap:relatedTopics style="mc-help-control-display: list;">
+                <MadCap:relatedTopic src="WDSY0143_Overview.html" />
+            </MadCap:relatedTopics>
+        </p>
+        <div class="process">
+            <h2 class="print">To change a user's access permissions</h2>
+            <ol>
+                <li>Go to <span class="function" title="Function:%WSYBSUR">Users</span>.</li>
+                <li>Click the link in the <span class="field">User ID </span>column of the user whose access permissions you want to change.
+<p class="noteheader">NOTE</p><div class="note">You cannot change the access rights for the Root group or SYSAdmin user.</div></li>
+                <li>Click the User Function Access tab.
+<p><img src="../../Resources/Images/SY/SY_001801.gif" /></p></li>
+                <li>
+                    <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the function or functions you want to set permissions for.</li>
+                <li>In the Choose Action list, select:&#160;</li>
+                <ul>
+                    <li><span class="userselect">Set Access to Yes </span>to allow access (or to allow read only access if using <a href="WDSY0138_Menu_Item_Security.html">Menu Item Security</a>)</li>
+                    <li><span class="userselect">Set Access to Yes-Update </span>to allow update access (only available if you are using Menu Item Security)</li>
+                    <li><span class="userselect">Set Access to No</span> to prevent access.</li>
+                    <li><span class="userselect">Set Access to Group </span>to use the setting from the groups in the user's list. See <a href="WDSY0019_Group_Access_Permissions.html">Setting Function Access for a Group</a>.</li>
+                </ul>
+            </ol>
+            <p class="noteheader">NOTE</p>
+            <div class="note">Unless you are using Menu Item Security, allowing access to a menu function does not automatically allow access to options below it in the hierarchy. If you allow access to a menu, but do not allow access to any of the functions on that menu, when the user selects the menu, they see a blank frame. </div>
+            <p>HINT: To change the permissions for a screen you also need to change the permissions for any associated functions (such as buttons, or options on the Choose Action menu). One way to do find out which functions are used is to press <span class="key">Ctrl</span>+<span class="key">Shift</span>+<span class="key">C</span> to display the COINSinfo frame below the page. Scroll down to the list of Functions Used and copy the comma-separated function list. You can then paste this list into the simple filter in <span class="function" title="Function:%WMS2034BMSF">User Function Access</span> and set the access for all the functions.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDSY0067_Interactive_Function_Security_Maintenance.html" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

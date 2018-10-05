@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SY/ESBRESP - ESB response ID reference</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SY/ESBRESP - </span> ESB response ID reference
+</div>
+<div class="param_def">
+<p>The path of the ID reference in the XML returned from the send service when sending ESB messages out of COINS.  This allows you to record in COINS some reference from the receiving script as proof that the message was received.</p>
+<P>If <SPAN class="parameter">ESBRESP </SPAN>is set, the response is expected to be an XML document, and <FONT color="#000000"><SPAN class="parameter">ESBRESP </SPAN>holds the path of the ID to return to the <SPAN class="field">ESB ID </SPAN>field in COINS.  For example if the response is</FONT></P>
+<P><FONT color="#000000">&lt;root&gt;&lt;id&gt;12345678&lt;/id&gt;&lt;/root&gt;</FONT></P>
+<P><FONT color="#000000">then a value of /root/id would retrieve the 12345678 string from this response and store it in the ESB id in COINS.</FONT></P>
+<P>If <FONT color="#000000"><SPAN class="parameter">ESBRESP </SPAN>is blank, the return value of the script in </FONT><FONT color="#000000"><SPAN class="parameter">ESBSEND </SPAN>will be stored in the <SPAN class="field">ESB ID </SPAN>field.</FONT></P>
+</div>
+</body>
+</html>

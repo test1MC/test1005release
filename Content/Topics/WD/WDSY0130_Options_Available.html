@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Integrating <MadCap:variable name="General.ProductName" /> with Exchange</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Integrating <MadCap:variable name="General.ProductName" /> with Exchange</h1>
+    <p>
+      <strong>Exchange Server 2010 Integration (using Web Services) </strong>allows you to integrate various features of <MadCap:variable name="General.ProductName" /> with Microsoft Exchange.</p>
+    <ul>
+      <li>You can copy tasks and appointments between the <MadCap:variable name="General.ProductName" /><span class="function" title="Function:%WHS1150SHSA">Activity Workbench</span> and Microsoft Exchange.</li>
+      <li>You can copy contact details from <MadCap:variable name="General.ProductName" /> to Exchange contacts.</li>
+      <li>You can copy emails about projects to <MadCap:variable name="General.ProductName" /><span class="module">Project Management</span>.</li>
+      <li>You can use emails to run workflow actions. </li>
+    </ul>
+    <p>Copying emails and workflow replies requires public folders with an associated email address; replicating contacts, appointments and tasks is done by running a scheduled task on a Windows server.  This requires <MadCap:variable name="General.ProductName" /> 10.23 or later; Exchange Server 2010 (or 2007 with service pack 1 or later).</p>
+    <p>See <a href="WDSY0148_Exchange_2010_Integration_(using_Web_Services).html">Exchange 2010 Integration (using Web Services)</a>.</p>
+    <p> </p>
+    <p>If you are using Exchange Server 2003 or 2007, see the following:</p>
+    <ul>
+      <li>
+        <p>
+          <strong>Exchange Integration (using CDOEX)</strong> allows you to replicate tasks and appointments that originate in <MadCap:variable name="General.ProductName" />, to import emails for projects, and to import and process workflow emails.  This works using a scheduled task on the Exchange server.  (Requires <MadCap:variable name="General.ProductName" /> v10.21 or later; Exchange Server 2003 or 2007.)</p>
+        <p>See <a href="WDSY0122_Exchange_Integration_(using_CDOEX).html">Exchange Integration (using CDOEX)</a>.</p>
+        <p>The following table shows which options are compatible with different versions of Exchange Server:</p>
+        <p />
+        <table style="WIDTH: 90%;" class="type1">
+          <tbody>
+            <tr>
+              <td valign="top">
+                <p />
+              </td>
+              <td valign="top" colspan="2">
+                <p align="center">
+                  <strong>
+                    <MadCap:variable name="General.ProductName" /> version</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <p> </p>
+              </td>
+              <td valign="top">
+                <p>
+                  <strong>Prior to 10.23</strong>
+                </p>
+              </td>
+              <td valign="top">
+                <p>
+                  <strong>10.23 and later</strong>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <p>
+                  <strong>Exchange 2003</strong>
+                </p>
+              </td>
+              <td valign="top">
+                <p>Available.  Uses 32-bit CDOEX library.  Requires OpenEdge Client Networking installed on each Exchange Client Access Server. See <a href="WDSY0122_Exchange_Integration_(using_CDOEX).html">Exchange Integration (using CDOEX)</a>.</p>
+              </td>
+              <td valign="top">
+                <p>Available.  Uses 32-bit CDOEX library.  Requires OpenEdge Client Networking installed on each Exchange Client Access Server.  See <a href="WDSY0122_Exchange_Integration_(using_CDOEX).html">Exchange Integration (using CDOEX)</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <p>
+                  <strong>Exchange 2007</strong>
+                </p>
+              </td>
+              <td valign="top">
+                <p>Available.  Uses 64-bit CDOEX library.  Requires 64-bit OpenEdge Appserver installed on each Exchange Client Access Server.  See <a href="WDSY0122_Exchange_Integration_(using_CDOEX).html">Exchange Integration (using CDOEX)</a>.</p>
+              </td>
+              <td valign="top">
+                <p>Available.  Requires at least service pack 1 for Exchange.  Uses Exchange Web Services.  Replication process can run on any Windows server. See <a href="WDSY0148_Exchange_2010_Integration_(using_Web_Services).html">Exchange 2010 Integration (using Web Services)</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <p>
+                  <strong>Exchange 2010</strong>
+                </p>
+              </td>
+              <td valign="top">
+                <p>Not Available.</p>
+              </td>
+              <td valign="top">
+                <p>Available.  Uses Exchange Web Services.  Replication process can run on any Windows server.  See <a href="WDSY0148_Exchange_2010_Integration_(using_Web_Services).html">Exchange 2010 Integration (using Web Services)</a>.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <p>
+          <strong>Exchange Contact Replication</strong> allows you to copy contacts from <MadCap:variable name="General.ProductName" /> to Exchange, and also copy any updates made in <MadCap:variable name="General.ProductName" /> to Exchange.  This works using a replication process run from <MadCap:variable name="General.ProductName" /> (either manually or scheduled).  (Requires <MadCap:variable name="General.ProductName" /> v10.11.0711 or later; Exchange Server 2003 or 2007.)</p>
+        <p>See <a href="WDSY0129_Contact_Replication.html">Exchange Contact Replication</a>.</p>
+      </li>
+      <li>
+        <p>
+          <strong>Outlook Integration</strong> allows you to create tasks and appointments in either <MadCap:variable name="General.ProductName" /> or Outlook, and synchron<MadCap:variable name="Variables.is" />e them so that any changes are copied.  This works using a plug-in to Outlook, and has to be set up on each user's PC.  (Requires <MadCap:variable name="General.ProductName" /> v10.11 or later; Outlook 2003 or 2007.)</p>
+        <p>See <a href="WDSY9902_Outlook_Integration.html">How To Set Up Outlook Integration</a>.</p>
+      </li>
+    </ul>
+  </body>
+</html>

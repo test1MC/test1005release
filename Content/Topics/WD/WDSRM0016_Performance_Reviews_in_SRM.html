@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Performance Reviews in SRM</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Performance Reviews in SRM</h1>
+        <p><MadCap:variable name="General.ProductName" /> can inform you when performance reviews are required for companies based on their approval level or the value of orders with them.&#160; For example, you may want to always review your preferred and partner <MadCap:variable name="Variables.pl suppliers" /> or subcontractors, so you would specify that orders for companies with the relevant approval levels (status codes) would require reviews.&#160; You may also decide to always review performance on high value orders, regardless of which <MadCap:variable name="Variables.pl supplier" /> or subcontractor they are with, so you would set a limit - orders above this value would require reviews.</p>
+        <p><strong>Health and safety</strong>
+        </p>
+        <p>You can focus on health and safety issues in subcontractor performance reviews by identifying review criteria that relate to health and safety, and show a separate total for these.</p>
+        <p>
+            <img src="../../Resources/Images_S-U/SRM/SRM_001601.gif" />
+        </p>
+        <p class="noteheader">NOTE</p>
+        <div class="note">When you dig deeper to <MadCap:variable name="Variables.enquire" /> on the reviews, this shows the reviews for all orders placed on the company&#160;- it is not restricted to your user view.</div>
+        <p><strong>Weighted reviews</strong>
+        </p>
+        <p>You can set up review styles, which allow you to apply different weightings against each review question, and omit questions that aren't relevant, depending on the type of order.</p>
+        <p><strong>Single entry</strong>
+        </p>
+        <p>To reinforce the importance of reviews, you can prevent users from updating a review once they have entered it.</p>
+        <p><strong>Review comments</strong>
+        </p>
+        <p>You can enter comments against individual review questions, and you can set up <MadCap:variable name="General.ProductName" /> so that comments are required if the reviewer enters&#160;a score that is lower than a set level.</p>
+        <p>See also: <a href="WDPO0011_Performance_Reviews.html">Performance Reviews</a> in Procurement.</p>
+        <div class="configuration">
+            <h2 class="print">Performance reviews - configuration</h2>
+            <p>To choose how <MadCap:variable name="General.ProductName" /> decides whether performance reviews are required, use <span class="parameter">SRM/POREVMTH </span>and <span class="parameter">SRM/SCREVMTH</span>.</p>
+            <p>If either of these are set to <span class="userinput">AUTO</span>:</p>
+            <ul>
+                <li>Use <span class="parameter">SRM/POREVLIM </span>and <span class="parameter">SRM/SCREVLIM </span>to set the value over which orders require a review.</li>
+                <li>Use <span class="parameter">SRM/REVSTAT </span>to determine which <MadCap:variable name="Variables.pl suppliers" /> and subcontractors normally require reviews.</li>
+                <li>Use <span class="parameter">SRM/POREVMIN </span>and <span class="parameter">SRM/SCREVMIN </span>to exclude low-value orders for <MadCap:variable name="Variables.pl suppliers" /> and subcontractors who normally require reviews.</li>
+            </ul>
+            <p>To specify which review criteria releate to health and safety, use <span class="parameter">SRM/SCREVH&amp;S</span>.</p>
+            <p>To set up weighted reviews:</p>
+            <ul>
+                <li>Set <span class="parameter">SRM/POREVMTH </span>or <span class="parameter">SRM/SCREVMTH </span>to <span class="userinput">WEIGHTED </span>or <span class="userinput">WEIGHTED-OV</span>.</li>
+                <li>Use <span class="function" title="Function:%WTI2510BPVS">Performance Review Styles</span> to set up the review styles for different types of order.</li>
+            </ul>
+            <p>To prevent users updating reviews after they have entered them, use <span class="parameter">SRM/POREVLVL </span>or <span class="parameter">SRM/SCREVLVL</span>.</p>
+            <p>To enable comments for individual review questions, use <span class="parameter">SRM/POREVCOM </span>or <span class="parameter">SRM/SCREVCOM</span>, and to enforce comments for low scores, use <span class="parameter">SRM/POREVLOW </span>or <span class="parameter">SRM/SCREVLOW</span>.</p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_POREVMTH.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCREVMTH.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_POREVLIM.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCREVLIM.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_REVSTAT.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_POREVMIN.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCREVMIN.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCREVH_26S.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_POREVLVL.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCREVLVL.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_POREVCOM.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCREVCOM.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_POREVLOW.htm" />
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_SCREVLOW.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

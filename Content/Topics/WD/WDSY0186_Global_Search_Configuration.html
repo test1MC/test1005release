@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2521" MadCap:lastWidth="1753">
+    <head><title>Global Search Configuration</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Global Search Configuration</h1>
+        <p><a href="WDUG0101_Global_Search.html">Global Search</a> allows users to search for records in the <MadCap:variable name="General.ProductName" /> database (for example, <MadCap:variable name="Variables.pl suppliers" />, customers, subcontractors or <MadCap:variable name="Variables.jc contracts" />), and also to find and run <MadCap:variable name="General.ProductName" /> functions.&#160; The search is configurable, so you can choose which tables, and which fields on those tables, to include in the search.</p>
+        <p class="warningheader">WARNING</p>
+        <div class="warning">Ideally you should make configuration changes with no one else on the system.</div>
+        <div class="process">
+            <h2 class="print">To configure Global Search:</h2>
+            <ol>
+                <li>Before making any changes, stop the search index process: run&#160;<strong>syusrch_stop.sh</strong> in $BASE/bin.<br /><p class="noteheader">NOTE</p><div class="note">You do not need to stop the search index process if you are <strong><em>only</em></strong> making changes to the <span class="field">Label</span>, <span class="field">Link</span>, <span class="field">Open In</span>, <span class="field">Foreground</span>, <span class="field">Background</span>, <span class="field">Detail</span>, <span class="field">Icon</span>, or <span class="field">Security RSP</span> fields.</div></li>
+                <li>Go to <span class="function" title="Function:%WSY9090BSTE">Global Search Configuration</span>.</li>
+                <li>Global Search comes with several standard search configuration records. &#160;If you want to use one of these standard searches, open the record and <MadCap:variable name="Variables.tick" /> the <span class="field">Use</span> box.</li>
+                <li>If you want Global Search to search for something that is not included as standard, add a new search configuration record. &#160;Refer to the side-frame help for details.
+<p class="noteheader">NOTE</p><div class="note">Global Search is intended for data that is relatively stable, such as <MadCap:variable name="Variables.pl suppliers" /> or <MadCap:variable name="Variables.jc contracts" />; it has not been tested with transactional data such as invoices.&#160; If you intend using it to search transactions, be aware that this will significantly increase the size of the database, and that the number of possible search results may make it impractical.</div></li>
+                <li>When you have made the additions or changes you need, <MadCap:snippetText src="../../Resources/Snippets/select.flsnp" style="text-transform: lowercase;" /> all the lines you have changed and run the Build Data action.</li>
+                <li><MadCap:variable name="Variables.tick" style="text-transform: capitalize;" /> the <span class="field">Initial<MadCap:variable name="Variables.is" />e</span> box.</li>
+                <li>If you have changed the search conditions or want to remove existing indexed records, <MadCap:variable name="Variables.tick" /><span class="field">Delete</span>.</li>
+                <li>&#160;Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+                <li>When the build data process has completed, restart the search index process: run <strong>syusrch_start.sh</strong> in $BASE/bin.</li>
+                <li>Restart&#160;the webspeed agents, appserver agents and report agents.
+<p>Whenever any of the tables that are included in the search are changed (records added, updated or deleted), the search data will automatically be updated to reflect the change.&#160; You only need to rebuild the data if you change the configuration (specifically, if you change any of the following:&#160;<span class="field">Table</span>, <span class="field">Condition Field</span>, <span class="field">Key Fields</span>, <span class="field">Condition Value</span>, <span class="field"><MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Field</span>, <span class="field">ID Fields</span> or <span class="field">Search Fields</span>).</p></li>
+                <li>To enable Global Search, set the <span class="parameter">SY/GLOBSRCH</span> parameter to <span class="userinput">Y</span>.</li>
+            </ol>
+            <h2>To configure the function search:</h2>
+            <p>Function search uses a different set of data, which needs to be generated separately. &#160;Use <span class="function" title="Function:%WSY3090RMSF">Build Function Search Data</span> to generate the initial data, and run it again whenever changes have been made to functions or menus.</p>
+        </div>
+        <div class="configuration">
+            <h2 class="print">Scripts and Parameters</h2>
+            <h3>Start and Stop Scripts</h3>
+            <p>The scripts to start and stop the indexing process can be added to the database start and stop scripts. On the COINSAdmin Environment Setup page, enter&#160;Y against the <span class="field">Search</span> field.</p>
+            <p>
+                <img src="../../Resources/Images/SY/SY_018603.png" class="FullWidth" />
+            </p>
+            <MadCap:relationshipsProxy class="relatedTopics" />
+        </div>
+    </body>
+</html>

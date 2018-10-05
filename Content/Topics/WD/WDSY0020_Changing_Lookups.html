@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="785" MadCap:lastWidth="601">
+  <head>
+    <title>Changing Lookups</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Changing Lookups</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> provides the option of having a lookup (activated by clicking <img src="../../Resources/Images/COINS Graphics/SVG buttons/lfield.svg" class="button" /> or pressing <span class="key">Ctrl</span>+<span class="key">Shift</span>+<span class="User">L</span>) on each field that has a table of validated data. Normally, the same field in different situations will have the same lookup. If a lookup has been specified for a field, then wherever that field occurs, the lookup will be available. <MadCap:variable name="General.ProductName" /> also automatically makes the lookup available for "report selection" versions of the field. For example, if a lookup exists for avm_num, then report selections that use the field "RS_avm_num" will also have that lookup. It is possible to modify the lookup, or to specify a different lookup in particular situations.</p>
+    <div class="process">
+      <h2 class="print" MadCap:autonum="1.1 ">To change a lookup:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WSYBSYH">Lookup Maintenance</span>.</li>
+        <li>Add or modify the record for the field you want to provide the lookup for (in the example above it would be <span class="screentype">avm_num</span>).</li>
+        <li>To provide different lookups for the same field on different functions, enter separate records with the function code in the <span class="field">Function </span>field. If the <span class="field">Function </span>field is blank, <MadCap:variable name="General.ProductName" /> uses this as the default lookup for the field.</li>
+        <li>Enter or change the lookup function. This is the function to call to provide the lookup data. This could be a standard browse or <MadCap:variable name="Variables.enquiry" /> function, or one specially written for the lookup. The <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> lookup is %WPL5100BAVM.</li>
+        <li>If necessary, enter the <a href="WDSY0021_Lookup_Parameters.html">parameters for the lookup</a>.
+<p class="noteheader">NOTE</p><div class="note">The lookup settings are issued as part of standard data.  Be aware that if you make changes to the setttings for standard (%) functions, these will be overwritten when <MadCap:variable name="General.ProductName" /> is upgraded.</div></li>
+      </ol>
+    </div>
+  </body>
+</html>

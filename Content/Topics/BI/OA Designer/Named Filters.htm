@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1934" MadCap:lastWidth="1023">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Named Filters</h1>
+        <p>Named Filters provide a drop-down selector that allows the user to select records that match a pre-defined query (for example: all, posted or unposted batches). Usually Named filters extend the Body Query specified on the page decreasing the number of output records.</p>
+        <h2>Replacing body query</h2>
+        <p>Also you can specify a named filter that replaces the Body Query on the page rather than adding to it (it is possible to change body table as well). If the query you set on the Named Filter begins "FOR " then it will replace entirely the query specified in the query on the page section. This can allow you to use different tables in your query. Example where this came up was a list of suppliers where the normal query on the page section was:</p>
+        <p class="Example">FOR EACH ap_vendor WHERE ap_vendor.kco = {kco}</p>
+        <p>We can then add a named filter with a query avm_sclab = YES to give a filter on those that supply SC labour and another with a query</p>
+        <p class="Example">FOR EACH ap_vendor WHERE ap_vendor.kco = {kco}, FIRST ap_invoice OF ap_vendor WHERE ap_invoice.ain_entry = 1</p>
+        <p>which will give all suppliers where they have an invoice that is costed to a contract.</p>
+        <h2>Linked Named Filters</h2>
+        <p>You can link named filters. If you have standard filters that need to be applied to a number of different but similar pages you can now link (as well as the forms which has been available for some time) the named filters. There are two fields on the page section maintenance to allow you to specify the page section to use to retrieve the named filters. If you leave them blank then it will use the filters defined on the current page section.</p>
+        <h2>Multiple Named Filters</h2>
+        <p>It is possible to have multiple named filters that are applied to the query together. If you select the New field on the named filter then this will start a new named filter combo from that named filter onwards. The query condition on the first (existing) set of filters can start with a replacement for the main body query FOR EACH. Subsequent named filters can only append addtional query conditions to this. In this way you can build a matrix of filters that can be applied separately or together rather than having a large list of all combinations in the single combo as we had to previously do.</p>
+        <h2>Named Filter Query Conditions</h2>
+        <p>You can now override the query condition function on the body query on a named filter. There is a new field Query Condition on the named filter. If this is non blank then it will be used in preference to the one specified in stn_qcondition on the page section. If you are using multiple named filter combos then the query condition can only be applied to filters in the first combo which are the root query to be used (same as overriding the FOR EACH in the query)</p>
+        <h2>Using Named Filters to define what fields are built on a form</h2>
+        <p>You can now use Named Filters in conjunction with Build Conditions to determine what fields are built on a form.</p>
+        <h3>Parameters:</h3>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="2" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Mandatory:</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"><b>Name</b>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>	The name of your filter how it'd appear in the combo-box ("All" to show all entries)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td colspan="2" class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p>Optional</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"><b>Table</b>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The name(code) of the table for the query</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1"><b>Build</b>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">RSP-function to build field</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1"><b>Query	String</b>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">appended to your query</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><![CDATA[	]]></p>
+        <p><![CDATA[	]]></p>
+        <p>, </p>
+    </body>
+</html>

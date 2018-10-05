@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>SW/AUTSCHEM - Automatically schedule Emergency Jobs</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">SW/AUTSCHEM - </span> Automatically schedule Emergency Jobs
+</div>
+<div class="param_def">
+<p>Whether to schedule emergency <MadCap:variable name="Variables.fm jobs"/> automatically (<span class="userinput">Y</span> or <span class="userinput">N</span>).</p>
+<p>If this is set to Y, then when a <MadCap:variable name="Variables.fm job"/> is added with a response code which is marked as an Emergency Response and with a <MadCap:variable name="Variables.fm job"/> type; then COINS will attempt to automatically schedule the tasks which were added.   COINS looks at each <MadCap:variable name="Variables.operative"/> in turn whose Primary Trade matches the trade of the task, looking for <MadCap:variable name="Variables.operatives"/> marked as Preferred first. If a <MadCap:variable name="Variables.operative"/> has availability within the Target Start and Target Complete DateTimes on the <MadCap:variable name="Variables.fm job"/>, the task will automatically be assigned to that <MadCap:variable name="Variables.operative"/>. If the <MadCap:variable name="Variables.operative"/> is not available, COINS looks at the next <MadCap:variable name="Variables.operative"/>.</p>
+<p>If no <MadCap:variable name="Variables.operatives"/> are configured to pick up emergencies for this <MadCap:variable name="Variables.jc contract"/>, area and trade, COINS displays a warning indicating this.   If the <span class="parameter" data-mce-mark="1">AUTSCHWF</span> parameter is set, the specified workflow will be started.</p>
+<p>If there are <MadCap:variable name="Variables.operatives"/> configured, but none of them are available (either due to <MadCap:variable name="Variables.holidays"/> booked or other tasks scheduled), COINS displays a warning indicating that the <MadCap:variable name="Variables.fm job"/> could not be automatically scheduled. If the <span class="parameter">AUTSCHWF</span> parameter is set, then the specified workflow will be started.</p>
+<p>
+<MadCap:relatedTopics target="_self" style="mc-label: Related Parameter ;mc-help-control-display: list;"><MadCap:relatedTopic src="../sw/sw_autschwf.htm" /></MadCap:relatedTopics>
+</p>
+</div>
+</body>
+</html>

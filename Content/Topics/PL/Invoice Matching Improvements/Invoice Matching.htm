@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="7" MadCap:lastHeight="816" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Invoice Matching</h1>
+        <h2 MadCap:autonum="1.1 ">Brief Mode</h2>
+        <p>If the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PO parameter <span class="parameter">IMSTYLE</span> is set to <span class="userselect">BRIEF</span>, a tab selector allows you to select the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>Brief mode of invoice matching.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Invoice Matching Improvements/Brief-Detail Selector.png" />
+        </p>
+        <p>Brief mode shows only item lines, and credit lines entered against item lines (that is, it does not show additional charges). A limited set of fields are available on the browse; concurrent update allows you to update several lines together.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Invoice Matching Improvements/Brief Matching Browse.png" class="FullWidth" />
+        </p>
+        <p>Other details can be viewed using the <img src="../../../Resources/Images/COINS Graphics/SVG buttons/detail.svg" class="icon24px" />Detail button. The <img src="../../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="icon24px" />Add button only allows you to add simple credit lines. Other fields, which in Detail mode are available when updating a record or viewing details, are available on column sets in Brief mode.</p>
+        <p>If the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>PO parameter <span class="parameter">DEFOVVAL</span> is set to <span class="userselect">Yes</span>, the <span class="field">Override Value</span> <MadCap:variable name="Variables.tick" />box on the matching lines is <MadCap:variable name="Variables.tick" />ed by default, and the <span class="userselect">Value Invoiced</span> field is available to update. If <span class="parameter">DEFOVVAL</span> is set to <span class="userselect">No</span>, the <span class="field">Override Value</span> <MadCap:variable name="Variables.tick" />box on the lines is un<MadCap:variable name="Variables.tick" />ed, and the <span class="field">Quantity Invoiced</span>, <span class="field">Invoice Price</span> and <span class="field">Disc%</span> fields are available to update.</p>
+        <h2 MadCap:autonum="1.2 ">Unmatch and Register Invoice</h2>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">A  new option, </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">The </MadCap:conditionalText><span class="function">Unmatch and Register Invoice</span>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">, has been added to the Options menu. This </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly"> option </MadCap:conditionalText>allows you to unmatch items and set the hold codes on a single screen. Choosing this option brings up the Unmatch and Register Invoice screen.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PL/Invoice Matching Improvements/Unmatch and Register Screen.png" class="FullWidth" />
+        </p>
+        <p>This provides three actions:</p>
+        <ul>
+            <li><span class="userselect">Unmatch my last changes</span> - This marks as unmatched any items you matched today. This is useful if more than one person has matched invoices to an order, and you undo any changes you have made without affecting what others have done.</li>
+            <li><span class="userselect">Unmatch all changes</span> - This marks all matched items as unmatched and sets the invoice back to Registered.</li>
+            <li><span class="userselect">Retain matched items</span> - This keeps all matched items, and sets the invoice to Registered.</li>
+        </ul>
+        <p>If the invoice is being costed in a cost batch, there is an option on this screen to remove the invoice from the cost batch:</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Delete from batch if no matched items</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This is <MadCap:variable name="Variables.tick" />ed by default. If you do not un<MadCap:variable name="Variables.tick" /> this, and if no matched lines still exist after the action, the invoice is deleted from the cost batch.</p>
+                </div>
+            </div>
+        </div>
+        <p><MadCap:variable name="Variables.Tick caps" />boxes allow you to put the invoice on commercial or financial hold. </p>
+        <h2 MadCap:autonum="1.3 "><MadCap:variable name="Variables.Pc Plant caps" /> Matching</h2>
+        <p>The <span class="field">Covering Period From</span> and <span class="field">Covering Period To</span> input fields have been moved to the Invoice tab. The Covering Period fields on the Covering tab are now display only.</p>
+    </body>
+</html>

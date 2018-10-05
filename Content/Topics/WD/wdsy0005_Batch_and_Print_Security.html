@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="423" MadCap:lastWidth="1188">
+  <head>
+    <title>Batch and Print Security</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Batch and Print Security</h1>
+    <p>Each user has a security level, which controls whether they have access to other users' batches and print requests.</p>
+    <p>In many <MadCap:variable name="General.ProductName" /> modules, transactions are entered in batches. <MadCap:variable name="General.ProductName" /> stamps each batch with the User ID of the user who created it. Other users are prevented from changing batches, with the following exception:</p>
+    <p>A user may see and update another user's batch if they have a higher security level than the other user and if the other user's prime group is one of the groups the user has access to. The security level is indicated on the user record (9 highest, 0 lowest). By giving a <MadCap:variable name="Variables.hr supervisor" /> the same group code as their clerks but a higher security level, the <MadCap:variable name="Variables.hr supervisor" /> can change and post the clerks' batches.</p>
+    <p>If you also want clerks to be able to change and post each other's work, set the system parameter <span class="parameter">EQACCESS </span>to <span class="userinput">Y</span>, using <span class="function" title="Function:%WSYBSYP">Parameter Maintenance</span>. The same hierarchy of group access is also applied to amending, viewing and reprinting reports in <span class="function" title="Function:%WSYBCRR">Report Status</span>. For further information on how to set up users and groups, see <a href="WDSY0050_Adding_Users_or_Groups.html">Adding a New User or Group to <MadCap:variable name="General.ProductName" /></a>.</p>
+    <div class="configuration">
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/SY/sy_eqaccess.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

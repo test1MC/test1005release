@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Configuration</h1>
+        <p class="Body"> JC parameter <span class="parameter">JOBCH </span>was added in v11.04 to allow <MadCap:variable name="Variables.jc contracts" /> to be configured using <MadCap:variable name="Variables.Jc Contract caps" /> Specific <MadCap:variable name="Variables.Cost Heads caps" />.<br /><br /></p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="TableHeader_1">Parameter</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="TableHeader_1">Description</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="TableCell">JC/JOBCH</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="TableCell">Allow <MadCap:variable name="Variables.jc contract" /> specific <MadCap:variable name="Variables.cost heads" /></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Example</h2>
+        <p class="Body">As an example of how this parameter is used, consider the following scenario:</p>
+        <ul>
+            <li><span class="parameter">JC/JOBCH</span> is set to Yes;</li>
+            <li>The option <span class="Field">Allow Non-Standard </span>for <MadCap:variable name="Variables.Cost Head caps" /> 62 with the description <strong>Safety <MadCap:variable name="Variables.Labour caps" /></strong> is <MadCap:variable name="Variables.tick" />ed;</li>
+            <li><MadCap:variable name="Variables.Cost Head caps" /> 62 for <MadCap:variable name="Variables.Jc Contract caps" /> 000007 has non-standard description <strong>Safety <MadCap:variable name="Variables.Labour caps" /> NON-STANDARD</strong>.</li>
+        </ul>
+        <p class="Body">In this case, for <MadCap:variable name="Variables.Jc Contract caps" /> 000007 for <MadCap:variable name="Variables.Cost Head caps" /> 62 in the lookups and Payroll Timesheet entry functions, the <MadCap:variable name="Variables.Jc Contract caps" /> Group and <MadCap:variable name="Variables.Jc Contract caps" /> Group PR Redirection Info <MadCap:variable name="Variables.Jc Contract caps" /> 000007 specific description <strong>Safety <MadCap:variable name="Variables.Labour caps" /> NON-STANDARD</strong> will appear instead of the standard description <strong>Safety <MadCap:variable name="Variables.Labour caps" /></strong>.</p>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xml:lang="en">
+    <head><title></title>
+        <link href="../../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 " xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <MadCap:concept term="Topics" />Statement Items Browse (%WCB1060BCBL)</h1>
+        <p class="Body">Two new columns have been added to the browse.</p>
+        <p class="screenshot">
+            <img src="../../../../Resources/Images_A-C/CB/Bank Reconciliation Improvements/Statement Items Browser WCB1060BCBL.png" style="width: 601px; height: 160px;" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Marked Items<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Each row shows the value of all <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items that have been ‘marked’ against the statement item.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Status<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>This shows the status for statement items that have marked items. </p>
+                    <ul class="no-indent">
+                        <li style="list-style-type: disc;">Ready to Reconcile - The value of all marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items equals the statement item value.</li>
+                        <li style="list-style-type: disc;">Items Marked - The value of all marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items is not equal to the statement item value.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2 MadCap:autonum="1.1 " xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Marked Items Page Filter</h2>
+        <p class="Body">A new page filter with a label of ‘Marked Items’ shows only those open statement details records with marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items.</p>
+        <p class="screenshot">
+            <img src="../../../../Resources/Images_A-C/CB/Bank Reconciliation Improvements/Statement Items Browser WCB1060BCBL_1.png" style="width: 601px; height: 126px;" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2 " xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Statement Items Actions</h2>
+        <p class="Body">Two new statement item actions have been added.</p>
+        <h3 MadCap:autonum="1.2.1 " xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Reconcile Marked Items</h3>
+        <p class="Body">This action allows a user to reconcile a single statement item to marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items. </p>
+        <p class="Body">Only one statement item at a time can be selected.</p>
+        <p class="Body">If the user tags an item with no marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items then an error message will be displayed.</p>
+        <p class="Body">If the total value of the marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items equals the value of the statement item, then the action will reconcile the <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items to the statement item.</p>
+        <p class="Body">If the total value of the marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items does not equal the value of the statement item, a warning or error message may be displayed depending on the new CB parameter <span class="parameter">MRKVALEW</span> (see <MadCap:xref href="Configuration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"> 1, <i>Configuration</i></MadCap:xref>). The action will reconcile the <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items to the statement item and also display a variance screen in which the user will be able to write the difference off to a variance account.</p>
+        <p class="screenshot">
+            <img src="../../../../Resources/Images_A-C/CB/Bank Reconciliation Improvements/Statement Items Browser WCB1060BCBL_2.png" style="width: 602px; height: 232px;" class="FullWidth" />
+        </p>
+        <h3 MadCap:autonum="1.2.2 " xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Deselect Marked Items</h3>
+        <p class="Body">This action will deselect all <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items that are marked to the statement item. </p>
+        <h3 MadCap:autonum="1.2.3 " xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Existing Statement Actions</h3>
+        <p class="Body">If a statement item is tagged that has marked <MadCap:variable name="General.ProductName" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /> items, it will not be possible to use the existing statement actions namely; ‘Unreconcile Item’, ‘Reconcile Unmatched Item’ and ‘Enter Missing Items’. If the user tries to use these actions then an error message will be displayed.</p>
+    </body>
+</html>

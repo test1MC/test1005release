@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="511" MadCap:lastWidth="661">
+  <head>
+    <title>Combining Configurable Document Fields</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Combining Configurable Document Fields</h1>
+    <p>You can append one data field to another, using a calculation. For example, you might want to print all the address fields on a single line, or print the <MadCap:variable name="Variables.jc contract" /> number and <MadCap:variable name="Variables.jc contract" /> name as if they were a single field.</p>
+    <div class="process">
+      <h2 class="print">To enter a calculation:</h2>
+      <ol>
+        <li>Add a new line. </li>
+        <li>Leave the <span class="Field">Field</span> field blank. </li>
+        <li>Enter the calculation in the <span class="Field">Calculation</span> field. Put a <span class="screentype">$</span> before each part of a calculation that involves text strings; use the full table and fieldname. </li>
+        <p>For example: <br /><span class="screentype">     $a=jc_job.job_num; $b=" (" + jc_job.job_name + ")"; $a + b </span><br />will display the contract number, followed by the contract name in brackets. </p>
+        <ol></ol>
+      </ol>
+    </div>
+  </body>
+</html>

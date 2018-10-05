@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3038" MadCap:lastWidth="1024">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Maintain Employee Pension Schemes</h1>
+        <p>&#160;</p>
+        <p>This topic details the steps required to maintain the pension scheme(s) the employee is a member of.</p>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/PR-Emp-Maint.flsnp" />
+        <p>Select the employee record to be maintained by clicking on the employee number hyperlink.</p>
+        <p>Select the Pensions tab.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PR/Employee Maintenance/PR-EM-0014-1107.png" class="FullWidth" />
+        </p>
+        <p>To join an employee to a new pension scheme Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" /> and fill in the details of the appropriate fields. Or use the Open button <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Open.flsnp" /> on the line of the pension scheme you need to edit.</p>
+        <p>
+            <img src="../../../Resources/Images_P-R/PR/Employee Maintenance/PR-EM-0015-1107.png" class="FullWidth" />
+        </p>
+        <p class="note">When Pension Auto Enrolment is correctly setup on <MadCap:variable name="General.ProductName" />, the auto enrolment scheme is added automatically. <br />Also when adding the Pension Auto-Enrolment scheme for employee, who is opting in, please consider adding the pension via Opt-In Notification on the Employee Notifications screen (the notification will automatically add the pension scheme on the employee record and populate the Joined date). <br />This is mandatory to display correct data in the Payment Data File Output (as well as keeping records of processes within pension auto-enrolment), as is creating an Opt-Out Notification for employees opting out of the autoenrolment scheme (the notification automatically populates the Left date on the pension scheme) opposed to just entering the Left date manually.</p>
+        <p>&#160;</p>
+        <p>When adding a new pension the pension scheme Number and the pension Joined date are mandatory fields.</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: 0; margin-right: auto;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Number</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Pension scheme number.  You can use the lookup option to find the appropriate pension scheme. When Pension Auto Enrolment is correctly set up, the auto-enrolment pension scheme is added automatically.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The pension scheme description.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Membership</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The employee's membership ID on this pension scheme.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Joined</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The date the employee joined the scheme. When creating an Opt-In Notification, the join date is automatically populated.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Left</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">The date the employee left the scheme.  When creating an Opt-Out Notification, the Left date is automatically populated.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">EE Fixed</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">If the employee’s pension contribution is a fixed amount each payroll period, enter a gross pension contribution to be deducted. The same applies to a salary sacrifice (salary exchange) contribution.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">EE %</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">If the employee’s pension contribution each payroll period is calculated based on a percentage, enter the percentage of pension contribution. The same applies to a salary sacrifice (salary exchange) contribution.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ER Fixed</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">If the employer’s pension contribution is a fixed amount each payroll period, enter a gross pension contribution to be deducted.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ER %</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">If the employer’s pension contribution each payroll period is calculated based on a percentage, enter the percentage of pension contribution.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">AVC</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Additional Voluntary Contribution. If the associated pension scheme allows AVC from an employee, enter a gross additional contribution to be deducted each payroll period, as a top up to a regular pension contribution.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">AVC %</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">If the associated pension scheme allows AVC from an employee, enter the percentage for the additional contribution to be deducted each payroll period, as a top up to a regular pension contribution.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p class="note">Any combination of the pension contributions can be entered when fields are available for update (defined by the pension scheme configuration). Keep in mind, when adding both EE Fixed and EE % values, <MadCap:variable name="General.ProductName" /> will deduct both.</p>
+        <p>&#160;</p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> at the beginning of the line to store the entered data.</p>
+        <p>We suggest you end a membership in a pension scheme (enter Left date or create an Opt-Out Notification) every time the conditions of the membership change. [You might need to create a new pension scheme to do that – enquire about <MadCap:variable name="General.ProductName" /> consultancy or refer to the guideHow to Configure Pensions].</p>
+        <p>&#160;</p>
+        <p class="note">To keep historical records, we advise against deleting pension schemes even though Delete button is available.</p>
+        <p>&#160;</p>
+    </body>
+</html>

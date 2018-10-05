@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108" MadCap:lastBlockDepth="7" MadCap:lastHeight="843" MadCap:lastWidth="601">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">
+                <MadCap:concept term="Topics" />Plot Billing - </MadCap:conditionalText>Configuration</h1>
+        <h2 MadCap:autonum="1.1 ">Parameters</h2>
+        <p>The following <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>VAP parameters affect plot billing:</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasicIndented-Head-Header1">
+                    <th class="TableStyle-COINSBasicIndented-HeadE-Column1-Header1">
+                        <p class="TableHeader">Parameter</p>
+                    </th>
+                    <th class="TableStyle-COINSBasicIndented-HeadD-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>BILLCSTA</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>The transaction type for <MadCap:variable name="Variables.Contract Sales" /> applications created using <span class="Function">Generate Plot Billing</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>BILLCSTC</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>	The transaction type for <MadCap:variable name="Variables.Contract Sales" /> certificates created using <span class="Function">Generate Plot Billing</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>BILLPCR</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Whether <MadCap:variable name="Variables.Contract Sales" /> revenue is plot costed. If this is set to Y and the revenue head from the series is set up to be plot costed (mandatory or optional), the revenue analysis will be costed to the relevant section.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>BILLPOST</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>	Whether <MadCap:variable name="Variables.Contract Sales" /> batches generated using <span class="function">Generate Plot Billing</span> are automatically posted.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+                        <p>BILLVAL</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">
+                        <p>Whether to generate billing from the <MadCap:variable name="Variables.tick" /> group valuation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+                        <p>BILLVAP</p>
+                    </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">
+                        <p>Whether to use Plot Billing via <MadCap:variable name="Variables.Contract Sales" />.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:autonum="1.2 ">Billing Stage Types</h2>
+        <p style="page-break-after: avoid;page-break-inside: avoid;"><span class="function">Billing Stage Types</span> allows you to configure the <MadCap:variable name="Variables.Contract Sales" /> application and certificate lines that will be populated with the plot billing amounts.  These also determine whether the stage is for detailed variations or a lump sum amount.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/Contract Sales/Plot Billing/Billing Stage Types.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.3 ">Standard Billing Stages</h2>
+        <p style="page-break-inside: avoid;"><span class="function">Standard Billing Stages</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to configure sets of billing stages which can be used on new series. You can create one or more sets of standard stages at <MadCap:variable name="Variables.kco company" /> level, or create separate sets for individual <MadCap:variable name="Variables.sl customer" />s.</p>
+        <p>You can identify one set of company stages, and one set for each <MadCap:variable name="Variables.sl customer" />, as the default. When a new series is created, the stages from the default set will be copied to it: if a default set for the <MadCap:variable name="Variables.sl customer" /> exists, this will be copied, otherwise the default <MadCap:variable name="Variables.kco company" /> set will be copied.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/Contract Sales/Plot Billing/Standard Billing Stages - Customer.png" class="FullWidth" />
+        </p>
+        <p>The link on the <span class="field">Ref</span> column takes you to a screen that allows you to set up the individual billing stages.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/Contract Sales/Plot Billing/Standard Billing Stages.png" class="FullWidth" />
+        </p>
+        <h2 MadCap:autonum="1.4 ">Application and Certificate Print</h2>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">New fields </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Fields </MadCap:conditionalText>on the Extras tab of the configurable application and certificate documents allow you to specify the forms used to print out details of the matrix stages/plots and variations that are included in the application or certificate. </p>
+    </body>
+</html>

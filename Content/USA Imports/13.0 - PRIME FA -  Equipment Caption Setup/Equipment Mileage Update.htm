@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Equipment Mileage Update</h1>
+        <h2>Module: Fixed Assets</h2>
+        <p>Updating Asset fields can easily be accomplished using the Configurable Fixed Asset Load, and that process will be explained and outlined here, as it is used for updating an Asset’s Mileage field. If the caption does not currently exist, see the Equipment Caption Setup document to learn how to create a new one</p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>The process begins with finding the field name to be updated.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>Navigate to the page in question, here it’s Fixed Assets &gt; FA Asset Workbench &gt; Details Tab &gt; Captions Sub-Tab.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>Use keyboard the shortcut to activate the Debug mode: [Ctrl+Shift+C], and hover over the blue “I” circle next to the appropriate field to read the field name.</li>
+        </ol>
+        <p class="caption">Figure 1: Mouse Hover over Blue Circle next to Mileage Field on Asset Record</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Mileage Update.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 332px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>This field reads as “RW_faa_caption|N^80”</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>Using this field, and the filed name for the Asset Code itself (faa_code), wil be used to create a CSV file. This file will be uploaded into OA as a configurable load.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>In Excel, create a new spreadsheet and enter the following:</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Row 1: field labels for the Asset Code and the Mileage</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Faa_code</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">RW_faa_caption|N^80</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 54pt;">
+            <li style="list-style-type: disc;">Row 2 and onward: the actual Asset Code and the actual Mileage (example below)</li>
+        </ul>
+        <p class="caption">Figure 2: Spreadsheet of Configurable Asset Load Format</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Mileage Update_1.png" style="visibility: visible;mso-wrap-style: square;width: 208px;height: 77px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="7">
+            <li>After adding all of the assets to the spreadsheet with the appropriate dates, save the file as a CSV (Comma Delimited).</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="8">
+            <li>Navigate to Fixed Assets &gt; Administration &gt; Fixed Asset Load, and choose the file created in the previous step.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="9">
+            <li>Choose Validate as the Upload Mode, with the following settings:</li>
+        </ol>
+        <p class="caption">Figure 3: Configurable Load Validation Settings</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Mileage Update_2.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 250px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="10">
+            <li>Click “Next”, and then click OK on the pop-up warning to acknowledge that one file is being validated.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="11">
+            <li>After the process completes, check the report printer for the Fixed Asset Load report that was created. Make sure there are no errors, and all lines were counted and checked successfully.</li>
+        </ol>
+        <p class="caption">Figure 4: Asset Load Validation Report</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Mileage Update_3.png" style="visibility: visible;mso-wrap-style: square;width: 417px;height: 285px;" />
+        </p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="12">
+            <li>When everything is confirmed good, repeat Step #9 (Figure 3) but change the Upload Mode to Load.</li>
+        </ol>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="13">
+            <li>Back on the Asset record, confirm the Mileage field has updated as expected.</li>
+        </ol>
+        <p class="caption">Figure 5: Updated Mileage field on Asset Record</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Mileage Update_4.png" style="visibility: visible;mso-wrap-style: square;width: 449px;height: 341px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="14">
+            <li>Use the hyperlink on the mileage to see the update history.</li>
+        </ol>
+        <p class="caption">Figure 6: Asset Record Mileage History</p>
+        <p>
+            <img src="../../Resources/Images/13.0 - PRIME FA -  Equipment Caption Setup/Equipment Mileage Update_5.png" style="visibility: visible;mso-wrap-style: square;width: 452px;height: 184px;" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types," MadCap:onlyLocalStylesheets="True">
+    <head><title>Cost Code Maintenance</title>
+        <link href="../../../Resources/Stylesheets/CEDoc_PDF.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">Quick Budget Entry: </MadCap:conditionalText>Cost Code Maintenance</h1>
+        <p class="Body">The <span class="Function">Cost Codes </span>function is found in <i><MadCap:variable name="Variables.Contract caps" /> Status &gt; <MadCap:variable name="Variables.Contracts caps" /> &gt;&#160;Cost Code Maintenance with WBS&#160;tab</i>. It allows you to configure the  Budget Input Method and Rate Source overriding the <MadCap:variable name="Variables.Cost Head caps" /> settings. This can be done at either the Cost Code level (<span class="parameter">JC/USECCCAT</span> set to <strong>Not Used</strong>) or the Cost Code - Category level (<span class="parameter">JC/USECCCAT</span> set to <strong>Used </strong>or <strong>All</strong>).</p>
+        <h2 MadCap:autonum="1.1">Browse Screen</h2>
+        <p class="Body">The&#160;<span class="Function">Cost Code Maintenance</span> browse screen <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>includes <span class="button">MULTI </span>(multiple update) and <span class="button">BULK </span>(bulk update) buttons at the bottom of the screen (<MadCap:xref href="#MultiBulkUpdates" class="Figurenumberonly"><i>Figure 1</i></MadCap:xref>).</p>
+        <p class="Caption" MadCap:autonum="Figure 1: "><a name="MultiBulkUpdates"></a>Multi and Bulk Buttons</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC038_Images/JC038_MultiBulkUpdates.png" />
+        </p>
+        <p class="Body">Also, if <span class="parameter">JC/USECCCAT</span> is set to <strong>Not Used</strong>, the columns <strong>Budget Input Method </strong>and <strong>Rate Source</strong> can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>be shown on the screen (<MadCap:xref href="#CCMaintBrowse" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>).</p>
+        <p class="Caption" MadCap:autonum="Figure 2: "><a name="CCMaintBrowse"></a>Cost Code Maintenance Browse</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC038_Images/JC038_CCMaintBrowse.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.2">Main Tab</h2>
+        <p class="Body">When you open a Cost Code from the Cost Code maintenance browse screen (<MadCap:xref href="#CCMaintBrowse" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>) and then click the Main tab, the properties for that tab are displayed, as shown in <MadCap:xref href="#CCMainTab" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: "><a name="CCMainTab"></a>Cost Code Main Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC038_Images/JC038_CCMainTab.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Fields)</p>
+        <p class="IndentBold">Budget Input Method</p>
+        <p class="IndentFieldDef">If <span class="parameter">JC/USECCCAT</span> is set to <strong>Not Used</strong>, the <span class="Field">Budget Input Method</span> field is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>shown on the Main tab of the Cost Code Maintenance screen (<MadCap:xref href="#CCMainTab" class="Figurenumberonly"><i>Figure 3</i></MadCap:xref>). This field has four options: </p>
+        <ul>
+            <li class="ListBullet5"><strong>None</strong>
+            </li>
+            <li class="ListBullet5"><strong>Value</strong>
+            </li>
+            <li class="ListBullet5"><strong>Hours Input </strong>(labeled as <strong>Hours </strong>in previous versions)</li>
+            <li class="ListBullet5"><strong>Quantity Input </strong>(labeled as <strong>Quantity </strong>in previous versions)</li>
+        </ul>
+        <p class="IndentFieldDef">If a specific Category has been set up, the following two <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>options are also shown:</p>
+        <li class="ListBullet5"><strong>Hours Based</strong>
+        </li>
+        <li class="ListBullet5"><strong>Quantity Based</strong>
+        </li>
+        <p class="IndentBold">[Enter by]</p>
+        <p class="IndentFieldDef">This <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>unlabeled field is found to the right of the <span class="Field">Budget Input Method </span>field. It has the following options, as shown in <MadCap:xref href="#BudgetInputMethod" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>:</p>
+        <ul>
+            <li class="ListBullet5"><strong>At Completion </strong>(the default, which comes from the <MadCap:variable name="Variables.Cost Head caps" />)</li>
+            <li class="ListBullet5"><strong>To Complete</strong>
+            </li>
+        </ul>
+        <p class="IndentFieldDef">This field is disabled when <span class="Field">Budget Input Method </span>is set to <strong>None</strong>.</p>
+        <p class="Caption" MadCap:autonum="Figure 4: "><a name="BudgetInputMethod"></a>Budget Input Method (JC/USECCCAT=Not Used)</p>
+        <p class="screenshot">
+            <img src="../../../Resources/Images/JC038_Images/JC038_BudInputMethod.png" alt="" title="" />
+        </p>
+        <h2 MadCap:autonum="1.3">Forecasting Tab</h2>
+        <p class="Body">When you open a Cost Code from the Cost Code maintenance browse screen (<MadCap:xref href="#CCMaintBrowse" class="Figurenumberonly"><i>Figure 2</i></MadCap:xref>) and then click the Forecasting tab, the properties for that tab are displayed, as shown in <MadCap:xref href="#CCForecastTab" class="Figurenumberonly"><i>Figure 5</i></MadCap:xref>.</p>
+        <p class="Body">If <span class="parameter">JC/USECCCAT</span> is set to <strong>Used </strong>or <strong>All</strong>, Cost Code Budget Input Methods on this screen can be configured for each Category.</p>
+        <p class="Caption" MadCap:autonum="Figure 5: "><a name="CCForecastTab"></a>Forecasting Tab</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC038_Images/JC038_CCForecastTab.png" class="MaxPrintWidth" />
+        </p>
+        <p class="Subtitle">Field Definitions (Selected Field)</p>
+        <p class="IndentBold">Enter By</p>
+        <p class="IndentFieldDef">This <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText>field is found to the right of the <span class="Field">Method </span>field. It has the following options, as shown in <MadCap:xref href="#BudgetInputMethod" class="Figurenumberonly"><i>Figure 4</i></MadCap:xref>:</p>
+        <ul>
+            <li class="ListBullet5"><strong>At Completion </strong>(the default)</li>
+            <li class="ListBullet5"><strong>To Complete</strong>
+            </li>
+        </ul>
+        <p class="IndentFieldDef">This field is disabled when <span class="Field">Method </span>is set to <strong>None</strong>.</p>
+        <h2 MadCap:autonum="1.4">Create Cost Codes Processing</h2>
+        <h3 MadCap:autonum="1.4.1">Auto Generate Cost Codes</h3>
+        <p class="Body">When a new Cost Code is created by the <span class="Function">Create Cost Codes </span>process, any <span class="Field">Enter By </span>field on the new Cost Code is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>assigned from the <span class="Field">Enter By </span>field on the <MadCap:variable name="Variables.Cost Head caps" /> used for creating the Cost Code.</p>
+        <h3 MadCap:autonum="1.4.2">Automatic Cost Code Creation</h3>
+        <p class="Body">A Cost Code can <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>be created automatically during either of the processes listed below.</p>
+        <ol>
+            <li>During user input from various areas, such as: <MadCap:variable name="Variables.Commercial Manager caps" /> <MadCap:variable name="Variables.Sv Variation caps" /> Resource input when parameter <span class="parameter">SV/VOAUTOCH</span> is set to <strong>Y</strong>.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>During XML Spreadsheet processing (load <MadCap:variable name="Variables.Sv Variation caps" /> Items / Resources). Processing will be modified consistently.</li>
+        </ol>
+        <h2 MadCap:autonum="1.5">Regenerate Cost Code Data</h2>
+        <p class="Body">The Main tab of the <span class="Function">Cost Code Data</span> utility in<i> <MadCap:variable name="Variables.Contract caps" /> Status &gt;&#160;Administration &gt; Rengerate Data </i><MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>has a <span class="Field">Budget Enter By </span><MadCap:variable name="Variables.tick" />box, as shown in <MadCap:xref href="#BudgetEnterBy" class="Figurenumberonly"><i>Figure 6</i></MadCap:xref>. If this field is <MadCap:variable name="Variables.tick" />ed, selected Cost Codes are updated from the <MadCap:variable name="Variables.Cost Head caps" />.</p>
+        <p class="Caption" MadCap:autonum="Figure 6: "><a name="BudgetEnterBy"></a>Budget Enter By Field</p>
+        <p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images/JC038_Images/JC038_BudgetEnterBy.png" class="MaxPrintWidth" />
+        </p>
+        <h2 MadCap:autonum="1.6">Generate Cost Code - Category Data</h2>
+        <p class="Body">Budget Input <span class="Field">Enter By </span>options are <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>copied to Cost Code – Category records created by the <span class="Function">Generate Cost Code – Category Data</span> report utility.  Any further updates in the Cost Code <span class="Field">Enter By </span>fields are automatically reflected in the Cost Code – Category records.</p>
+        <h2 MadCap:autonum="1.7">Cost Code Billing Item Label</h2>
+        <p class="Body">The label for the Cost Code <span class="Field">Billing Item </span>field (jcc_svitemid)[1..6] is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>labeled<span class="Field"> <MadCap:variable name="Variables.boq" /> Item ID</span> in the areas discussed below. This field is used to link any <MadCap:variable name="Variables.boq" /> Items to the Cost Code for Cost Based Billing purposes.</p>
+        <ul>
+            <ul>
+                <li class="ListBullet3">If parameter <span class="parameter">JC/CATCCBOQ</span> is set to <strong>N</strong>, a <span class="Field">Billing Item </span>field labeled <span class="Field"><MadCap:variable name="Variables.boq" /> Item ID</span> field <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>appears on the Main tab of the Cost Code properties. The label of this field is supported by a Lookup that uses a standard <span class="Field">Item ID </span>label.</li>
+            </ul>
+        </ul>
+        <ul>
+            <li class="ListBullet3">If parameter <span class="parameter">JC/CATCCBOQ</span> is set to <strong>Y</strong>, the <span class="Field"><MadCap:variable name="Variables.boq" /> Item ID</span> field is suppressed on the Main tab of the Cost Code properties. Instead, the Billing Items section that has been relabeled as<strong> <MadCap:variable name="Variables.boq" /> Item IDs </strong>is <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>used as the tab option.</li>
+        </ul>
+        <p class="screenshot">&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

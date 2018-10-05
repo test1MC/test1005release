@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="286" MadCap:lastWidth="601">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1 ">
+            <MadCap:concept term="Topics" />Setting Up <MadCap:variable name="Variables.St Stock caps" /> Assembly Items</h1>
+        <p class="Body">A new tab, Assembly, is available when maintaining <MadCap:snippetText src="../../../Resources/Snippets/a[UK]-an[US].flsnp" /> <MadCap:variable name="Variables.st stock" /> item in <span class="Function"><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /> Item Maintenance</span>. Here you define the type of assembly (how the item behaves), a table of parts and optionally a calculation.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Stock Item Maintenance - Assembly Tab</p>
+        <p class="screenshot">
+            <img src="../../../Images/Stock Assemblies/Stock Assembly Tab.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Fields</p>
+        <p class="FieldLabel">Assembly Type  </p>
+        <p class="IndentFieldDef">This can be one of:</p>
+        <ul class="IndentedFieldDef">
+            <li>Normal. This is the default (for items with no assembly components). It can also be used with assembly components for items that are pre-assembled (for example, roof trusses); only the assembled item will appear on the issue.</li>
+            <li>Site. This is used for items with assembly components if you want to charge for the individual components. When the assembly item is entered on the issue, the required components are added to the issue, and these are what are charged for. </li>
+            <li>On Issue. This is used for items with assembly components if you want to charge for the assembly item. When the assembly item is entered on the issue, the required components are added to the issue, but the assembly item is the item charged for and the customer won't see the detail. </li>
+        </ul>
+        <p class="IndentFieldDef">If the assembly type is Site or On Issue, the item cannot belong to a group that allows the item to be <MadCap:variable name="Variables.pc hired" />. <MadCap:variable name="General.ProductName" />&#160;issues an error if you try to save a <MadCap:variable name="Variables.pc hireable" /> item with a type of Site or On Issue.</p>
+        <p class="Caption" MadCap:autonum="Figure 2: ">Item Can Be <MadCap:variable name="Variables.pc hired" style="text-transform: capitalize" /> Error</p>
+        <p class="screenshot">
+            <img src="../../../Images/Stock Assemblies/Stock Assembly Item - Cannot Hire Error.png" MadCap:conditions="COINS.UKOnly" />
+            <img src="../../../Images/Stock Assemblies/Stock Assembly Item - Cannot Hire Error-US.png" MadCap:conditions="COINS.USOnly" />
+        </p>
+        <p class="FieldLabel">Calculation  </p>
+        <p class="IndentFieldDef">This allows you to calculate the quantities of the individual components if they are not a fixed ratio. The example below shows a calculation for a guardrail.</p>
+        <p class="screenshot">
+            <img src="../../../Images/Stock Assemblies/Stock Assembly Calculation.png" />
+        </p>
+        <p class="IndentFieldDef">A variable called "quantity" is populated with the amount of the assembly item entered on the transaction. The code populates other variables for the amounts of individual components, which are specified on the component records.</p>
+        <p class="IndentFieldDef">For an example, see <MadCap:xref href="Assembly Items - Example Calculation.htm">1, Assembly Items - Example Calculation</MadCap:xref>.</p>
+        <h2 MadCap:autonum="1.1 ">Component Browse</h2>
+        <p class="Body">The component browse allows you to specify the individual components that make up the assembly item.</p>
+        <p class="Caption" MadCap:autonum="Figure 3: ">Assembly Item Component Browse</p>
+        <p class="screenshot">
+            <img src="../../../Images/Stock Assemblies/Stock Assembly Compontent Browse.png" class="FullWidth" />
+        </p>
+        <p class="Subtitle">Component Browse Fields</p>
+        <p class="FieldLabel">Item </p>
+        <p class="IndentFieldDef">The <MadCap:variable name="Variables.st stock" /> item used as part of the assembly.</p>
+        <p class="FieldLabel">Description </p>
+        <p class="IndentFieldDef">The description of the <MadCap:variable name="Variables.st stock" /> item.</p>
+        <p class="FieldLabel">Fixed </p>
+        <p class="IndentFieldDef">The fixed quantity. If the component item is not used in the calculation, this is the quantity of the component item per single assembly item. If a calculation variable applies to the component item, and the fixed quantity is non-zero, the calculated value is multiplied by the fixed quantity to give the quantity of the component item.</p>
+        <p class="FieldLabel">Variable</p>
+        <p class="IndentFieldDef">The calculation variable that determines the quantity of this item. </p>
+    </body>
+</html>

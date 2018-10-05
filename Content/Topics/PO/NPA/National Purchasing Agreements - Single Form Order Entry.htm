@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="638" MadCap:lastWidth="600">
+    <head>
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />
+            <MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">National Purchasing Agreements - </MadCap:conditionalText>Single Form Order Entry</h1>
+        <p class="Body">If the CI parameter <span class="parameter">USENPA</span> is set to Y, two additional columns appear at the right-hand end of each order line.</p>
+        <p class="Caption" MadCap:autonum="Figure 1: ">Single Form Order Entry Line - NPA&#160;Fields</p>
+        <p class="Body" style="text-align: right;">
+            <img src="../../../Resources/Images/Single Form Order Entry NPA Fields.png" />
+        </p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>NPA<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether this line is covered by a National Purchasing Agreement.</p>
+                    <p>This is <MadCap:variable name="Variables.tick" />ed, by default, if the supplier entered on the order header is marked as having a National Purchasing Agreement.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Eligible Manufacturer	</p>
+                </div>
+                <div class="FieldDef">
+                    <p>This field is optional.  If there is a National Purchasing Agreement in place with the manufacturer of the goods (as opposed to the supplier of the goods), choose the manufacturer. This denotes that this line should be marked as being eligible.</p>
+                    <p>The lookup displays a list of manufacturers from the Central Repository with whom you have a National Purchasing Agreement.  A manufacturer, in Central Repository terms, is company whose lists of Company Types includes the value set against the CI parameter <span class="parameter">COT-MANU</span>.  Typically, this parameter is set to “MANUF” or something similar.  Only manufacturers that also have the <span class="Field">National Purchasing Agreement</span> field <MadCap:variable name="Variables.tick"></MadCap:variable>ed appear in the lookup list .</p>
+                </div>
+            </div>
+        </div>
+        <p class="Body">If the line type is either “Text” or “Clause”, these fields are hidden.</p>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="6" MadCap:lastHeight="1544" MadCap:lastWidth="773">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="Heading1">
+            <MadCap:concept term="Topics" />Workflow Responsibilities</h1>
+        <p class="Body">Once Roles have been defined within the system, their responsibilities within the workflow may be configured. Workflow Responsibilities are used to convert roles set in a workflow to actual user IDs.</p>
+        <p>In Role Maintenance a role is associated with a type and up to 3 variables (These variables are defined within a workflow).</p>
+        <p>In Responsibility Maintenance a series of records are created that map possible values of these variables to one or more user IDs.  When the role is used in a workflow stage and the values match then the user IDs are used.</p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Responsibilities.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <table style="mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 104px;" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="Body">Field</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="Body">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="Body">Type</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="Body">This code is referenced when setting up a workflow role. Use Workflow Responsibility to set up different responsibilities depending on the value of a variable defined in the workflow.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="Body">Keys 1 – 3</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="Body">The appropriate values of the Role key.</p>
+                        <p>The value in these key fields corresponds to the variable set in the equivalent key of the role that is linked to this responsibility (see role maintenance).</p>
+                        <p>If the value of this variable set at the workflow stage where the associated role is used matches this responsibility value (along with the other two key fields) then the user ids configured on this responsibility are used in that workflow stage.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p class="Body">Role</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">
+                        <p class="Body">The person who must action this stage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">
+                        <p class="Body">Users</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">
+                        <p class="Body">The user or users who are responsible for this role in a workflow.&#160; These must be users’ setup already within the <MadCap:variable name="General.ProductName" /> system.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="Heading2">Example Responsibilities</h2>
+        <p class="Body">In this example, the role of JOBMAN has been defined in the Workflow Roles with job_num as a key. </p>
+        <p class="Body">In the Responsibility setup JOBMAN is defined  with the key set to 1000 and a user list entered.&#160; This indicates that a task referencing Contract 1000 will be routed to the users <b>niglon</b> and <b>kerbro</b></p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Responsibilities_2.png" class="FullWidth" MadCap:conditions="COINS.Pre-v1105" />
+        </p>
+        <p class="Body">
+            <img src="../../../Resources/Images_A-C/BI/OA Workflow/Workflow Responsibilities_2_1106.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterPageLayout="/Content/Resources/PageLayouts/CEDoc_PDF-UK.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/OnlineHelp.css"
+  PatchHeadingLevels="true"
+  ConditionTagExpression="include[COINS.PrintOnly or COINS.UKOnly or COINS.v1105 or Documents.NotReleaseOverview] exclude[COINS.Internal or COINS.Pre-v1105 or COINS.Redacted or COINS.ScreenOnly or &quot;COINS.Superseded in 1107&quot; or &quot;COINS.Superseded in 1108&quot; or &quot;COINS.Superseded in 1109&quot; or COINS.SupersededIn1105 or COINS.USOnly or Documents.ReleaseOverview] "
+  conditions="COINS.UKOnly"
+  Medium="print"
+  OutputFile="[%=Document Variables.Document Reference%]-[%=Document Variables.File Name%]-UK"
+  InjectEmptyPages="false"
+  InjectBookHeadings="true"
+  MasterToc="/Project/TOCs/HS/HS Choices (24716).fltoc">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Variables>
+    <Variable
+      Name="Variables/aged debt">aged debt</Variable>
+    <Variable
+      Name="Variables/Document Title">Navigate COINS OA</Variable>
+    <Variable
+      Name="Document Variables/Document Title">House Sales Choices</Variable>
+    <Variable
+      Name="Document Variables/Document Reference">OA-CE-HS021</Variable>
+    <Variable
+      Name="Document Variables/File Name">HSChoices</Variable>
+    <Variable
+      Name="Document Variables/Modules">House Sales</Variable>
+    <Variable
+      Name="Document Variables/PDR">24716</Variable>
+    <Variable
+      Name="Document Variables/Version">11.09</Variable>
+    <Variable
+      Name="Document Variables/Doc Version">1.0</Variable>
+    <Variable
+      Name="Document Variables/Draft?"> </Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/Exchange UK CE Documents.fldes" />
+  </Destinations>
+  <PDF
+    ShowUsedBookmarks="false" />
+</CatapultTarget>

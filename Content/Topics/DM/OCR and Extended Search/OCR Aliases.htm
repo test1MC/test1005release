@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1108">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />OCR Aliases</h1>
+        <p><span class="function">Alias Groups</span> <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">is a new function that </MadCap:conditionalText>allows you to associate text labels on a scanned image with <MadCap:variable name="General.ProductName" />&#160;database fields, so that when <MadCap:variable name="General.ProductName" /> processes a scanned image, it can automatically build a template for that image layout (see <MadCap:xref href="OCR Invoices - OCR Layouts.htm">1 - Document Management OCR Invoices - OCR&#160;Layouts</MadCap:xref>). Currently this only works for <MadCap:variable name="Variables.Purchase Ledger caps" /> invoices.</p>
+        <p>The initial browse allows you to create the alias group. For <MadCap:variable name="Variables.Purchase Ledger caps" /> invoices, create a group named OCRTBL:AP_INVOICE.</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:autonum="Screenshot: ">OCR&#160;Alias Groups Browse</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_D-F/DM/DM OCR Invoices/Alias Groups.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>The link on the <span class="field">Group</span> field opens the <span class="Function">Alias Details</span> browse.</p>
+        <p class="Subtitle">Fields</p>
+        <div class="FieldTable">
+            <div class="ListHead">
+                <div class="ColHead">Field</div>
+                <div class="ColHead">Description</div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Source<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The <MadCap:variable name="General.ProductName" /> database field you want to create an alias for.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Target<![CDATA[	]]></p>
+                </div>
+                <div class="FieldDef">
+                    <p>The text of the label that identifies the data on the scanned image. For example, the label <b>Inv Date</b> might indicate that the following text is the invoice date (ain_idate). </p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Format</p>
+                </div>
+                <div class="FieldDef">
+                    <p>How you expect the information on the scanned image to be formatted. For example: <b>XX999</b> (two characters followed by three digits) or <b>&#8209;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;9.99</b> (a decimal value).</p>
+                    <p>The format allows the OCR process to judge if what it has read alongside the target is what is expected. If it fails, it will look up to three lines below the target for text or numbers that match the format.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Data Type</p>
+                </div>
+                <div class="FieldDef">
+                    <p>The data type of the data (usually the same as the data type of the <MadCap:variable name="General.ProductName" /> field). Values are IN for integer, DE for decimal, DA for date, and CH for character.</p>
+                </div>
+            </div>
+            <div class="FieldBlock">
+                <div class="FieldLabel">
+                    <p>Allow Spaces</p>
+                </div>
+                <div class="FieldDef">
+                    <p>Whether spaces or other separator characters are expected within the text read from the image. </p>
+                    <p>The OCR process treats text surrounded by white space as a “box” of text. If this is <MadCap:variable name="Variables.tick" />ed, the OCR&#160;process will append additional “boxes” to the right of the initial “box” until it matches the expected format.</p>
+                </div>
+            </div>
+        </div>
+        <p>You can set up multiple aliases for the same database field. For example, the invoice date might be <MadCap:variable name="Variables.labelled" /> “Inv. Date”, “Invoice Date” or “Date of Invoice”
+on invoices from different suppliers, so you could set up three different aliases.</p>
+        <div class="NoteIndent1">
+            <div class="notelabel">
+                <p class="NoteHeader">NOTE</p>
+            </div>
+            <div class="notebody">
+                <p>If you find that the OCR process often misinterprets specific characters, you can set up additional aliases to compensate. For example, if “ic” is interpreted as “k”, you could set up an alias to associate ain_idate with “Invoke Date” as well as with “Invoice Date”.</p>
+            </div>
+        </div>
+        <p>You must set up at least one record to identify the supplier’s <MadCap:variable name="Variables.Vat caps" /> registration number or ABN number (avm_vatregno). Examples of aliases for avm_vatregno could be:</p>
+        <MadCap:dropDown class="screenshot">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Aliases for avm_vatregno</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>
+                    <img src="../../../Resources/Images_D-F/DM/DM OCR Invoices/OCR Aliases.png" class="FullWidth" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>The OCR&#160;process assumes that the data you are looking for is to the right of the target, but if it cannot find data that matches the format you specify, it will attempt to find the data below the target.</p>
+    </body>
+</html>

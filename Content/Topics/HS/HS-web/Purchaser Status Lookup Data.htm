@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="2" MadCap:lastHeight="1897" MadCap:lastWidth="1521" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Purchaser Status Lookup Data</h1>
+        <p>&#160;</p>
+        <p>A sample XML message to send a query to <MadCap:variable name="General.ProductName" /> to access purchaser status lookup information is shown below:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;login&gt;</p>
+        <p class="code">&lt;user&gt;xxxxxx&lt;/user&gt; </p>
+        <p class="code">&lt;password&gt;xxxxxx&lt;/password&gt; </p>
+        <p class="code">&lt;/login&gt;</p>
+        <p class="code">&lt;call object="hswssys1" method="dbquery" </p>
+        <p class="code">pcQuery="FOR EACH co_table WHERE co_table.kco = 1 AND co_table.cta_rtype = 'HSPURSTAT'" pcFields="kco,cta_code,cta_desc" /&gt; </p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+        <p>&#160;</p>
+        <p>The above request would retrieve all purchaser status lookup codes and descriptions in <MadCap:variable name="General.ProductName" /> company 1.</p>
+        <p>This would return a XML message with the following format:</p>
+        <p>&#160;</p>
+        <p class="code">&lt;?xml version="1.0" encoding="utf-8" ?&gt; </p>
+        <p class="code">&lt;env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"&gt;</p>
+        <p class="code">&lt;env:Body&gt;</p>
+        <p class="code">&lt;call object="hswssys1" method="dbquery" </p>
+        <p class="code">pcQuery="FOR EACH co_table WHERE co_table.kco = 1 AND co_table.cta_rtype = 'HSPURSTAT'" pcFields="kco,cta_code,cta_desc"&gt;</p>
+        <p class="code">&lt;record co_tableRowid="0x00091f25"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;cta_code&gt;FTB&lt;/cta_code&gt; </p>
+        <p class="code">&lt;cta_desc&gt;First Time Buyer&lt;/cta_desc&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;record co_tableRowid="0x00b3fbe4"&gt;</p>
+        <p class="code">&lt;kco&gt;1&lt;/kco&gt; </p>
+        <p class="code">&lt;cta_code&gt;INVEST&lt;/cta_code&gt; </p>
+        <p class="code">&lt;cta_desc&gt;Investor&lt;/cta_desc&gt; </p>
+        <p class="code">&lt;/record&gt;</p>
+        <p class="code">&lt;returnvalue&gt;&lt;/returnvalue&gt; </p>
+        <p class="code">&lt;/call&gt;</p>
+        <p class="code">&lt;/env:Body&gt;</p>
+        <p class="code">&lt;/env:Envelope&gt;</p>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" style="mc-master-page: url('../../../Resources/MasterPages/OtherTopics.flmsp');" MadCap:lastBlockDepth="4" MadCap:lastHeight="2019" MadCap:lastWidth="610" MadCap:onlyLocalStylesheets="False">
+    <head><title></title>
+        <link href="" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Access to Fields</h1>
+        <p>If a user has access to a database table (see Table Access Security), by default they have access to all the fields in that table. You can control the access that users have to specific fields, using <span class="Function">Field Access Maintenance</span>.</p>
+        <p>You can prevent a user from being able to see or access the field at all, or you can allow them only to view the field but not update it, or only to add new data but not change existing data.</p>
+        <p>You can control the access for an individual user, or for all users. </p>
+        <p class="Example">For example, if you only want two users to be able to update the Account Closed field on <MadCap:variable name="Variables.Purchase Ledger caps" /> &gt; Suppliers &gt; Suppliers, you could set one Read Only access record for all users, and two Update access records for the users you want to be able to update the field:</p>
+        <h2>Hiding Fields Across All Screens </h2>
+        <p>First you need to find the field name of the text you want to hide:</p>
+        <ul>
+            <li>Type &amp;helpmode=prompt at the end of the URL: </li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Hide Fields.png" class="FullWidth" />
+        </p>
+        <ul>
+            <li>Navigate to the screen you want to make changes to and select the Side-frame Help button in the global shortcuts bar.select the Toggle Help option from the User Menu</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Hide Fields_1_1105.png" class="FullWidth" />
+        </p>
+        <p>The field you require is now in the help screen. Highlight and copy the field name (the name shown within the brackets) you want to hide.</p>
+        <p>Navigate to <span class="Emphasis">System, System Setup, Field Access Maintenance.</span></p>
+        <p>Before you can hide a field you need to create a base record for Company 0. </p>
+        <ul>
+            <li>Select the Add button to add a new field and copy the field code and set the access to update.</li>
+            <li>Now enter the company for which you want to change the access for the field. Select Hidden from the drop-down menu. Press Save.</li>
+            <li>Add subsequent lines for the company(s) you want to hide.</li>
+        </ul>
+        <p>
+            <img src="../../../Resources/Images/SY/Maintain Users and Groups/Hide Fields_2_1105.png" class="FullWidth" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: Orange;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If the function field is left blank, the field will be hidden in all occurrences</p>
+        <p class="Example">The example above shows all access to all companies except company 20 and 50</p>
+        <h2>Group Field Access</h2>
+        <p>You can also set up field access for groups:</p>
+        <p>In <span class="Emphasis">System &gt; System Setup &gt; Field Access Maintenance</span>, set up the access for the field, entering a group code in the User column.</p>
+        <p>Run <span class="Emphasis">System &gt; System Setup &gt; Group Field Access</span> and select the group.</p>
+        <p>This creates a copy of the group's field access record for each user that belongs to the group.</p>
+    </body>
+</html>

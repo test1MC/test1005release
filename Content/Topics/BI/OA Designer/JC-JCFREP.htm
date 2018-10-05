@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Contract Status - JCFREP</h1>
+        <p>Program : jcfrep.p</p>
+        <table style="width: 100%; mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css'); margin-left: auto; margin-right: 0;" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" style="width: 154px;" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Description</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Tables</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">
+                        <p class="TableHeader">Page Generate</p>
+                    </th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">
+                        <p class="TableHeader">Query Replace</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Batch</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">co_batch</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">cobSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{cobSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Contract</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jc_job</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jobSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{jobSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Phase</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jc_costcode,jc_phase</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jphSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{jphSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">CostCode</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jc_costcode</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jccSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{jccSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Source</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">co_vat,cb_tdet,co_batch, gl_trans, jc_inctrans, jc_costtran</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">cojSelectionGenerate </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{cojSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">WBS</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jc_wbs</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jwbSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{jwbSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">CostHead</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jc_stndcc, vp_wbsbud</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jscSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{jscSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Section</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>generate por3017</p>
+                        <p>ttOrder</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jcsSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{POStatusJcsSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Activity</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jc_jactivity</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jcaSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{jcaSelect}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Sector</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">
+                        <p>ap_invoice<br />ap_invopen<br />ap_chqopen<br />sc_chqopen<br />sc_certopen</p>
+                    </td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">ganSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">{ganSelect}<br />{ganSelectInvOpen<br />{ganSelectChqOpen}<br />{ganSelectChq}<br />{ganSelectCertOpen}</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Used with generate programs for Sort Order</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">jobSortSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Contact</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">pp_contact</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">pcnSelectionGenerate</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">{pcnSelect}</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb" MadCap:lastBlockDepth="5" MadCap:lastHeight="6099" MadCap:lastWidth="1117" MadCap:snippetVariables="Topic Variables.Discovery Number:BI0002.2," class="topic">
+    <head>
+        <link href="../../../Resources/TableStyles/COINSBasic.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>OA Designer - Enhancing the Contract Browse Screen</title>
+        <link href="../../../Resources/Stylesheets/OnlineHelp.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Discovery BI0002.2 - Enhancing the Contract Browse Screen</h1>
+        <p>&#160;</p>
+        <p>This exercise is to modify the contract browse screen created in Discovery BI0002 to include financial information.</p>
+        <h2>Modifying the Page Section</h2>
+        <p>In Page Designer, click your pages hyperlink.</p>
+        <p>Select Field Tab, In the FORM selector at the bottom of the page, select Body and click Apply Filter.</p>
+        <p>Click Add to add some more fields to the Enquiry screen. Add the following fields – for each of these also <MadCap:variable name="Variables.tick" /> the Total box</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0001-1107.png" class="FiftyPercentMaxWidth" />
+        </p>
+        <p>
+        </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Label</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Width</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_job_sln_debtors</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Extended SL Net debtors</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">10</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">RO_job_pln_register</td>
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Extended PL Net&#160; Registered Creditors</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">10</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">RO_job_pln_costed</td>
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Extended PL Net&#160; Costed Creditors</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">10</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Click Save after adding each field.</p>
+        <p>Now adjust the field widths of the other fields to get back to 100 as the total width of all fields.</p>
+        <h2>Adding Totals to the Page</h2>
+        <p>To add totals to a page, a Total Form is required. Create a new form on the Page by selecting the Forms Tab and click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Add_Both.flsnp" />.</p>
+        <p>Enter the following details :</p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Form</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Select Totals.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">Field Type</td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">Select Totals.</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Linked To</td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">Leave blank</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0002-1107.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_LineSave_Both.flsnp" /> save the new form.</p>
+        <p>The next stage is to add Fields to the Total Form; Select the Fields Tab from the drop-down menu.</p>
+        <p>In the Fields selector at the bottom of the page, select Body and click Apply Filter.</p>
+        <p>NOTE : You should always do this to ensure you are adding fields to the correct form – adding fields to an incorrect form will mean that they do not display.</p>
+        <p>Select each of the fields listed below as a group </p>
+        <table style="width: 100%;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-COINSBasic-Head-Header1">
+                    <th class="TableStyle-COINSBasic-HeadD-Column1-Header1">Fields</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">RO_job_sln_debtors</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">RO_job_pln_register</td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">RO_job_pln_costed</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>With the three fields highlighted select to action Transfer Fields and select the <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Enhancing the Contract Browse_4.png" style="visibility: visible;mso-wrap-style: square;width: 27px;height: 26px;" /> icon to apply the action.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0003-1107.png" class="FullWidth" />
+        </p>
+        <p>Select Copy, and specify the Totals Form as the destination</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0004-1107.png" class="FullWidth" />
+        </p>
+        <p>Click <MadCap:snippetText src="../../../Resources/Snippets/Button Snippets/Button_Next_Both.flsnp" /></p>
+        <p>Run the function again.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0005-1107.png" class="FullWidth" />
+        </p>
+        <p>A sum <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/Enhancing the Contract Browse_8.png" style="visibility: visible;mso-wrap-style: square;width: 25px;height: 25px;" alt="total" />icon will be displayed on the footer of the browse, click on it to get totals for the fields entered on the whole record set on the browse (or the record set within the current Filter).</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0006-1107.png" class="FullWidth" />
+        </p>
+        <h2>Adding an Excel Output Function to the Page</h2>
+        <p>It is possible to add additional functionality on a page. To do this create or copy the Function and apply the same name as the original function; however add an "X" to the end of the function name and change the Program from wou005 to X (this is required for any clients using system Parameter MENUSEC, but good practice for all clients.)</p>
+        <p>&#160;</p>
+        <table style="width: 100%;caption-side: top;mc-table-style: url('../../../Resources/TableStyles/COINSBasic.css');" class="TableStyle-COINSBasic" cellspacing="0">
+            <caption>Example</caption>
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <col class="TableStyle-COINSBasic-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyE-Column1-Body1">FunctionName </td>
+                    <td class="TableStyle-COINSBasic-BodyD-Column1-Body1">xxM1Exercise1<br /></td>
+                </tr>
+                <tr class="TableStyle-COINSBasic-Body-Body1">
+                    <td class="TableStyle-COINSBasic-BodyB-Column1-Body1">Excel Export Function </td>
+                    <td class="TableStyle-COINSBasic-BodyA-Column1-Body1">xxM1Exercise1X</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0007-1107.png" class="FullWidth" />
+        </p>
+        <p><MadCap:variable name="General.ProductName" /> will automatically add an <img src="../../../Resources/Images/COINS Graphics/SVG buttons/export.svg" class="icon24px" /> Excel export button, the <img src="../../../Resources/Images/COINS Graphics/SVG buttons/print.svg" class="icon24px" /> PDF Report Button and a <img src="../../../Resources/Images/COINS Graphics/SVG buttons/all.svg" class="icon24px" /> Show All icon to the footer of the browse screen. </p>
+        <p>
+            <img src="../../../Resources/Images_A-C/BI/BI M1 Exercises/BI0002-2-0008-1107.png" class="FullWidth" />
+        </p>
+        <p>&#160;</p>
+        <MadCap:relationshipsProxy class="relatedTopics" />
+    </body>
+</html>

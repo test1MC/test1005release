@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Printing the Order Value in Words</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Printing the Order Value in Words</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> provides special fields that allow you to print the value of the order in words. These fields use the appropriate wording for the currency (for example, Dollars and Cents or Pounds and Pence).</p>
+    <div class="process">
+      <h2 class="print">To print the order value in words</h2>
+      <p>On the purchase order document, add one of the following fields:</p>
+      <ul>
+        <li>
+          <span class="fieldname">RO_poh_amount_words</span> - The total order amount in words</li>
+        <li>
+          <span class="fieldname">RO_poh_famount_words</span> - The total order amount in the order currency, in words</li>
+        <li>
+          <span class="fieldname">RO_Order_FAmount_words</span> - The total order amount in the order currency including charges and tax, in words</li>
+      </ul>
+      <p>The following fields are also available for printing the value of an order line in words:</p>
+      <ul>
+        <li>
+          <span class="fieldname">RO_pol_amount_words</span> - The order line amount in words</li>
+        <li>
+          <span class="fieldname">RO_pol_famount_words</span> - The order line amount in the order currency, in words</li>
+        <li>
+          <span class="fieldname">RO_Line_Ftotal_words</span> - The order line amount in the order currency including charges and tax, in words</li>
+      </ul>
+      <p>Note that the wording for currency units and subunits needs to be set correctly in <span class="function" title="Function:%WCO2001BCUR">Currencies</span>.</p>
+      <p>If the order value is zero, the text "THIS ORDER HAS A VALUE OF ZERO" is returned.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109" MadCap:lastBlockDepth="4" MadCap:lastHeight="800" MadCap:lastWidth="1132">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Entering Receipts by Invoice Number</h1>
+        <p>In <span class="function">Quick Cash Entry</span>, <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">a new </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="COINS.ScreenOnly">the </MadCap:conditionalText>Enter by Invoice Number tab allows you to enter and allocate cash using the invoice number or certificate reference.</p>
+        <p>
+            <img src="../../../Resources/Images_A-C/CB/Enter Receipts by Invoice/Enter_by_Inv_No_Tab.png" class="FullWidth" />
+        </p>
+        <p>The top panel allows you to enter the <MadCap:variable name="Variables.cheque" /> number, <MadCap:variable name="Variables.cheque" /> date, deposit date, reference, <MadCap:variable name="Variables.cheque" /> amount, sector (if configured) and currency. Fields on the right-hand side show the allocated and unallocated amounts. This panel corresponds to the <MadCap:variable name="Variables.cheque" /> header.</p>
+        <p>Beneath this is a panel that allows you to enter the <MadCap:variable name="Variables.cheque" /> analysis lines. For each line:</p>
+        <ol>
+            <li>Enter an invoice number. <MadCap:variable name="General.ProductName" /> validates this against the available open SL invoices and CS certificates.  If there is more than one open invoice or certificate with the invoice number you entered, you must use the lookup to select the invoice or certificate.</li>
+            <li>Enter values for the amount to be applied, the discount to be taken, and (for SL invoices only) the discount GL account. You can use the action <span class="function">Pay Invoice or Certificate</span> to auto-fill the amount and discount fields. </li>
+        </ol>
+        <p>When you have entered all the analysis lines, click Save.</p>
+        <ul>
+            <li>If the allocation results in the receipt being over-allocated, an error message will be displayed.</li>
+            <li>If the receipt is partially allocated, a warning message will be displayed to inform you that pressing Continue will create a customer cash record for the portion of the receipt that has not been allocated. (If the new CB parameter <span class="parameter">SECTUNAL</span> = Y and <span class="parameter">SL/SECTLED</span> = N, enter the sector that will be assigned to the customer cash record.)</li>
+        </ul>
+        <p>You can allocate multiple receipts to a single invoice or certificate in the same batch. The value of the un-posted payments allocated against the invoice or certificate will be summed and displayed, and if the value exceeds the balance of the invoice or certificate an error message will be displayed.</p>
+    </body>
+</html>

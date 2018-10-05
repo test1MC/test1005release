@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="833" MadCap:lastWidth="601">
+  <head>
+    <title>Setting Up <MadCap:variable name="General.ProductName" /> to Use Price [%=Variables.Enquiry caps%] Functionality</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print" MadCap:autonum="1 ">Setting Up <MadCap:variable name="General.ProductName" /> to Use Price <MadCap:variable name="Variables.Enquiry caps" /> Functionality</h1>
+    <p>Price <MadCap:variable name="Variables.enquiry" /> functionality in <MadCap:variable name="General.ProductName" /> allows you to build schedules of items and/or work that you want to request quotations for, select companies to send the <MadCap:variable name="Variables.enquiries" /> to, and record and compare the quotations you receive.  You can do this (separately) for projects that are at both <MadCap:variable name="Variables.tender" /> and <MadCap:variable name="Variables.jc contract" /> stage. For projects at <MadCap:variable name="Variables.jc contract" /> stage, you can raise orders based on the winning quotation.</p>
+    <p>The names of the events are configured using <span class="function" title="Function:%WTI2106BCAP">Material Package Captions</span>. </p>
+    <h2 MadCap:autonum="1.1 ">Spreadsheets</h2>
+    <p>You can send <MadCap:variable name="Variables.enquiries" /> in the form of a spreadsheet, which the <MadCap:variable name="Variables.pl supplier" /> can fill in and return to you.  You can then load the details of the quotation into <MadCap:variable name="General.ProductName" /> for comparison with other quotations.  This feature requires the following:</p>
+    <ul>
+      <li>The office to which you want to send the <MadCap:variable name="Variables.enquiry" /> spreadsheet must have a contact that has a category of <MadCap:variable name="Variables.enquiry" style="text-transform: capitalize;" />, and a valid email address.</li>
+      <li>The following PI parameters must be set to <span class="userinput">Y</span> to enable the Schedule and Comparison tabs for each type of package:
+<table class="type1" border="0"><tbody><tr><td>Material packages</td><td><span class="parameter">USESCHMA</span></td></tr><tr><td><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /> packages</td><td><span class="parameter">USESCHPL</span></td></tr><tr><td>Subcontract packages</td><td><span class="parameter">USESCHSC</span></td></tr></tbody></table></li>
+      <li>There must be XML templates for the spreadsheet in <span class="wrap">$BASE/ var/ spreadsheets/ templates/</span>.  </li>
+      <li>The following PI parameters must be filled in with the filename of the spreadsheet templates:
+<table class="type1" border="0"><tbody><tr><td> </td><td><MadCap:variable name="Variables.tender" style="text-transform: capitalize;" /> stage</td><td><MadCap:variable name="Variables.Jc Contract caps" /> stage</td></tr><tr><td>Material <MadCap:variable name="Variables.enquiries" /></td><td><span class="parameter" data-mce-mark="1">TMPLTMAT</span> </td><td><span class="parameter" data-mce-mark="1">TMPLCMAT</span></td></tr><tr><td><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /><MadCap:variable name="Variables.enquiries" /></td><td><span class="parameter" data-mce-mark="1">TMPLTPLT</span> </td><td><span class="parameter" data-mce-mark="1">TMPLCPLT</span> </td></tr><tr><td>Subcontract <MadCap:variable name="Variables.enquiries" /></td><td><span class="parameter" data-mce-mark="1">TMPLTSUB</span> </td><td><span class="parameter" data-mce-mark="1">TMPLCSUB</span> </td></tr></tbody></table></li>
+    </ul>
+    <h2 MadCap:autonum="1.2 ">Mail Merge</h2>
+    <p>Use <span class="function" title="Function:%WSY2380BCXC">Merge File Maintenance</span> to set up the <MadCap:variable name="Variables.enquiry" /> letter against function <span class="nw">%WPIBCTG1</span>, and use the <span class="field">Method</span> <span class="userinput nw">ctg-rsp.letterSent</span> so that <MadCap:variable name="General.ProductName" /> records the date when the <MadCap:variable name="Variables.enquiry" /> is sent.  See <a href="wdsy0025_Setting_Up_a_Generic_Mail_Merge.html">Setting Up a Generic Mail Merge</a>.  You can use fields from the following tables: pi_project, pi_package, ci_company, ci_office.</p>
+    <h2 MadCap:autonum="1.3 ">Workflow</h2>
+    <p>You can set up a <MadCap:variable name="General.ProductName" /> workflow to control the process of selecting a winner and raising an order, in which case instead of a <span class="userselect">Set to Winner</span> option, users will see a <span class="userselect">Set to Recommended</span> option, which triggers the workflow.  This feature requires the following:</p>
+    <ul>
+      <li>The PI parameter <span class="parameter">PIWFLOW</span> must be set to Y.</li>
+      <li>The following PI parameters must be filled in with the name of the workflow templates to use:
+<table class="type1" border="0"><tbody><tr><td> </td><td><MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /> from requisitions</td><td><MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /> from schedules</td></tr><tr><td>Material <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /></td><td> <span class="parameter">PIWFEMA</span></td><td><span class="parameter">PIWFMA</span></td></tr><tr><td><MadCap:variable name="Variables.pc plant" style="text-transform: capitalize;" /><MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /></td><td> <span class="parameter">PIWFEPL</span></td><td><span class="parameter">PIWFPL </span></td></tr><tr><td>Subcontract <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /></td><td> <span class="parameter">PIWFESC</span></td><td><span class="parameter">PIWFSC </span></td></tr><tr><td>Overhead <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /></td><td> <span class="parameter">PIWFEOV</span></td><td> </td></tr><tr><td><MadCap:variable name="Variables.st stock" style="text-transform: capitalize;" /><MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /></td><td> <span class="parameter">PIWFEST</span></td><td> </td></tr><tr><td>Workshop Job <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /></td><td> <span class="parameter">PIWFEWS</span></td><td> </td></tr><tr><td>Asset <MadCap:variable name="Variables.enquiries" style="text-transform: capitalize;" /></td><td> <span class="parameter">PIWFEAS</span></td><td> </td></tr></tbody></table></li>
+    </ul>
+    <h2 MadCap:autonum="1.4 ">Recording Responses</h2>
+    <p>
+      <span class="function" title="Function:%WTI2140BCTA">Reasons for Declining (Project Enqs)</span> allows you to set up a list of the reasons why <MadCap:variable name="Variables.pl suppliers" /> have declined to provide a quote for a project <MadCap:variable name="Variables.enquiry" />. These are used when recording responses to <MadCap:variable name="Variables.enquiries" />.</p>
+    <div class="configuration">
+      <h2 class="print" MadCap:autonum="1.5 ">Parameters</h2>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/PI/pi_tmpltmat.htm" />
+          <MadCap:relatedTopic src="../Parameters/PI/pi_tmplcmat.htm" />
+          <MadCap:relatedTopic src="../Parameters/PI/pi_tmpltplt.htm" />
+          <MadCap:relatedTopic src="../Parameters/PI/pi_tmplcplt.htm" />
+          <MadCap:relatedTopic src="../Parameters/PI/pi_tmpltsub.htm" />
+          <MadCap:relatedTopic src="../Parameters/PI/pi_tmplcsub.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

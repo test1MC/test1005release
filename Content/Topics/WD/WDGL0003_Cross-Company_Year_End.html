@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="939" MadCap:lastWidth="1015">
+  <head>
+    <title>Cross-<MadCap:variable name="Variables.Kco Company caps" /> Year End</title>
+  </head>
+  <body>
+    <h1 class="print">
+      <MadCap:concept term="Topics" />Cross-<MadCap:variable name="Variables.Kco Company caps" /> Year End</h1>
+    <p>
+      <span class="module">General Ledger</span> allows transactions to be posted to two <MadCap:variable name="Variables.financial years" /> (24 or 26 periods, depending on how many periods per year are being used). To move the available periods for several <MadCap:variable name="Variables.kco companies" /> forward by 12 months, run <span class="function" title="Function:%WGL2012BGLPYE">GL Year End (Cross-<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />)</span> (not necessarily at the end of a <MadCap:variable name="Variables.financial year" />; in fact it is more likely to be run mid-year). The procedure does not delete any information, it changes the current year on the GL configuration record. You have the option to carry budgets over to the new open year.</p>
+    <p class="noteheader">NOTE</p>
+    <div class="note">Once you close a year (that is, move the periods on), you can no longer post to it; you can only report on it.</div>
+    <p>You can select the <MadCap:variable name="Variables.kco companies" /> for which the year-end is to be run; <MadCap:variable name="General.ProductName" /> will submit separate year-end runs for each <MadCap:variable name="Variables.kco company" />.</p>
+    <div class="process">
+      <h2 class="print">To run GL Year End:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WGL2012BGLPYE">GL Year End (Cross-<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />)</span>.
+<p>You can only run the year end routine for a <MadCap:variable name="Variables.kco company" /> if the <span class="field">Status Msg</span> column is not <MadCap:variable name="Variables.tick" />ed, that is:</p><ul><li>All periods have been set up for the current year.</li><li>All module periods for the current year are closed.</li><li>All batches have been posted.</li><li>The clearing account balance is zero.</li><li>The year end process is not currently being run. </li></ul><p>If any of the above conditions is not met, the <span class="field">Status Msg</span> column is <MadCap:variable name="Variables.tick" />ed.  To see which condition has not been met, click <img src="../../Resources/Images/COINS Graphics/SVG buttons/detail.svg" class="button" /> on the relevant line. You will need to take the appropriate action before you can run Year End.</p></li>
+        <li>
+          <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the <MadCap:variable name="Variables.kco companies" /> for which you want to run the GL Year End procedure.</li>
+        <li>From the action menu, select <span class="userinput">GL Year End </span>and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />.</li>
+        <li>Indicate that a backup has been made and that you are ready to run the Year End procedure.  If you want to copy the GL budgets over to the new year, <MadCap:variable name="Variables.tick" /> the <span class="field">Copy Budgets? </span>box.</li>
+        <li>Click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+        <li>Click <span class="key">Yes</span> to confirm that you want to run the year end.
+<p>When complete, <MadCap:variable name="General.ProductName" /> displays a message to tell you how many <MadCap:variable name="Variables.kco companies" /> have been successfully processed. </p></li>
+      </ol>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>List of Lettings Management Control Accounts (Including Setup and Usage)</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">List of Lettings Management Control Accounts (Including Setup and Usage)</h1>
+    <p>The letters and numbers in brackets refer to the <a href="WDLM0013_Lettings_Account_Entries.html">Lettings Accounting Entries</a>.</p>
+    <p>
+      <strong>1 Tenant Control</strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This GL account should balance to the total of the tenant balances in <span class="module">Lettings Management</span>: it represents the unpaid amounts due from tenants; thus it is essentially a balance sheet debtor. It is posted to by the rent run (tenants) (Ai), manual charges/adjustments (E), recharge batches (G) and cash receipts/payments (B). </p>
+    <p>
+      <strong>2 Rent Transaction Category Account </strong>
+    </p>
+    <p>This is set up on the transaction category of type 'Rent' (in <span class="function" title="Function:%WLM2240BLMT">Transaction Categories</span>). This represents rents due from tenants that have yet to be transferred to landlords; thus it is essentially a balance sheet accrual. It is posted to by the rent run (tenants (Ai) and landlords (Aii)) and manual charges/adjustments (E). </p>
+    <p>
+      <strong>3 Landlord Control </strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This GL account should balance to the total of the landlord balances in <span class="module">Lettings Management</span>: it represents the amounts due to be paid over to landlords; thus it is essentially a balance sheet creditor. Rents are only credited to this account in the rent run once payment has been received from the tenant. It is posted to by the rent run (landlords) (Aii, Aiii &amp;Aiv), manual charges/adjustments (E), recharge batches (G), the landlord payment run (D) and cash receipts/payments (D). </p>
+    <p>
+      <strong>4 Management Fee Transaction Category Account </strong>
+    </p>
+    <p>This is set up on the transaction category of type 'Management Fee' (in <span class="function" title="Function:%WLM2240BLMT">Transaction Categories</span>). This represents management fees deducted from rents paid to landlords; thus it is essentially P&amp;L income. It is posted to by the rent run (landlords) (Aii) and manual charges/adjustments (E). </p>
+    <p>
+      <strong>5 <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> Control </strong>
+    </p>
+    <p>This is set up on the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> code. It is potentially posted to by the rent run (tenants (Ai) and landlords (Aii)), manual charges/adjustments (E) and recharge batches (G). For manual charges/adjustments and recharge batches the user can select the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> code. For the rent run, the <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> code is taken from the transaction category where tenant and landlord <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> codes are set. A default <MadCap:variable name="Variables.vat" style="text-transform: capitalize;" /> code is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. </p>
+    <p>
+      <strong>6 Tax Transaction Category Account </strong>
+    </p>
+    <p>This is set up on the transaction category of type 'Tax' (in <span class="function" title="Function:%WLM2240BLMT">Transaction Categories</span>). This represents withholding tax (deducted from non-resident landlords) which needs to be paid to the tax authorities; thus it is essentially a balance sheet creditor. It is posted to by the rent run (landlords) (Aiii) and manual charges/adjustments (E). </p>
+    <p>
+      <strong>7 Internal Landlord Control </strong>
+    </p>
+    <p>This is set up on the internal landlord. This represents the transfer of rents received to an internal landlord (similar to paying over the rent to an external landlord). This is most applicable where the landlord is a different group <MadCap:variable name="Variables.kco company" /> and this posting is inter-<MadCap:variable name="Variables.kco company" />. It is posted to by the rent run (internal landlords) (Aiv). </p>
+    <p>
+      <strong>8 Bank </strong>
+    </p>
+    <p>This is set up on the bank account in <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" />. It is posted to by the landlord payment run (D), cash receipts and cash payments (B, C &amp; D). </p>
+    <p>
+      <strong>9 Unallocated Tenant Cash </strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This is a balance sheet clearing account which should clear to zero when all cash has been allocated. It is posted to by cash receipts and cash payments (where tenant cash is not matched to tenant transactions) (B). </p>
+    <p>
+      <strong>10 Deposit Control </strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This GL account should balance to the total of the tenant deposits in <span class="module">Lettings Management</span>: it represents the tenants' deposits held; thus it is essentially a balance sheet creditor. It is posted to by cash receipts (B), cash payments (B) and manual charges/adjustments (E). </p>
+    <p>
+      <strong>11 Transaction Category Account </strong>
+    </p>
+    <p>This is set up on each transaction category (in <span class="function" title="Function:%WLM2240BLMT">Transaction Categories</span>). Different transaction categories represent different types of entry - some will be balance sheet debtors or creditors while others will be P&amp;L revenues or expenses. Specific postings to certain transaction categories are covered elsewhere. There is a general facility to post to any transaction category from manual charges/adjustments (E). </p>
+    <p>
+      <strong>12 Recharges Control Account </strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This GL account should balance to the total of the recharges balances in <span class="module">Lettings Management</span>. It represents pending recharges: that is costs which have yet to be either recharged or written off; thus it is essentially a balance sheet asset. It is posted to by costing entries from <MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" />, Subcontract Ledger and <MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /> (F), GL Journals (F) and recharge batches (G). </p>
+    <p>
+      <strong>13 <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />/Subcontractor </strong>
+    </p>
+    <p>Other ledgers in <MadCap:variable name="General.ProductName" /> financials allow entries to be costed to <span class="module">Lettings Management</span> recharges. These other ledgers will include the setup of the relevant control accounts for the other side of these entries. </p>
+    <p>
+      <strong>14 Recharges Writeoff Account </strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This represents costs which have been written off rather than being recharged to tenants or landlords; thus it is essentially a P&amp;L expense account. It is posted to by recharge batches (G). </p>
+    <p>
+      <strong>15 Recharges Uplift Account </strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This represents amounts added to costs recharged to tenants and/or landlords as a handling or administration charge; thus it is essentially a P&amp;L revenue account. It is posted to by recharge batches (G). </p>
+    <p>
+      <strong>16 Unallocated Landlord Cash </strong>
+    </p>
+    <p>This is set up on the <span class="module">Lettings Management</span><span class="function" title="Function:%WLM0010SLMF">Module Configuration</span> screen. This is a balance sheet clearing account which should clear to zero when all cash has been allocated. It is posted to by manual cash receipts and cash payments (where landlord cash is not matched to landlord transactions) (D). </p>
+  </body>
+</html>

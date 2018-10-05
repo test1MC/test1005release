@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Cross-<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Period Maintenance</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Cross-<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Period Maintenance</h1>
+    <p>Each financial ledger has a maintenance function that allows you to open and close <MadCap:variable name="Variables.financial periods" /> (see <a href="WDUG0050_Financial_Periods.html"><MadCap:variable name="Variables.financial periods" style="text-transform: capitalize;" /></a>).  In addition, <span class="function" title="Function:%WGL2010BGLP">Global Periods Maintenance</span> allows you to maintain the periods for all the ledgers.  These functions only affect the ledger periods in the current <MadCap:variable name="Variables.kco company" />.  </p>
+    <p>If you have a number of <MadCap:variable name="Variables.kco companies" />, you can also maintain the <MadCap:variable name="Variables.financial periods" /> for several <MadCap:variable name="Variables.kco companies" /> at once, using <span class="function" title="Function:%WGL2012BGLP">GL Periods (Cross-<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />)</span>.</p>
+    <div class="process">
+      <h2 class="print">To maintain periods for several <MadCap:variable name="Variables.kco companies" />:</h2>
+      <ol>
+        <li>Go to <span class="function" title="Function:%WGL2012BGLP">GL Periods (Cross-<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" />)</span>.
+<p>There are two tabs:</p></li>
+        <ul>
+          <li>Period view allows you to see and update all your valid <MadCap:variable name="Variables.kco companies" /> at the same time. You can add, update, and delete GL periods and open or close modules.</li>
+          <li>
+            <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> view shows all the valid <MadCap:variable name="Variables.kco companies" /> along with the current year and number of periods, and the financial end dates for the year selected in the body selector. There is also a flag to show whether there is any further information in the body detail.</li>
+        </ul>
+        <li>You can add, amend and delete periods on the Period View tab using the standard <img src="../../Resources/Images/COINS Graphics/SVG buttons/add.svg" class="button" />, <img src="../../Resources/Images/COINS Graphics/SVG buttons/open.svg" class="button" /> and <img src="../../Resources/Images/COINS Graphics/SVG buttons/del.svg" class="button" /> buttons.</li>
+        <li>To open or close <MadCap:variable name="Variables.financial periods" /> in all ledgers, or set them to current, for several <MadCap:variable name="Variables.kco companies" />:</li>
+        <ol>
+          <li>Click the Period View tab.</li>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the <MadCap:variable name="Variables.kco companies" /> and periods you want to set.</li>
+          <li>Select <span class="userinput">Set All Ledgers Open</span>, <span class="userinput">Set All Ledgers Closed </span>or <span class="userinput">Set All Ledgers Current </span>from the action menu and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />. </li>
+        </ol>
+        <li>To add the same <MadCap:variable name="Variables.financial period" /> to several <MadCap:variable name="Variables.kco companies" /> by a single action:</li>
+        <ol>
+          <li>Click the <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> View tab.</li>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the <MadCap:variable name="Variables.kco companies" /> for which you want to add the new period.</li>
+          <li>Select <span class="userinput">Maintain Periods </span>from the action menu and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />. </li>
+          <li>On the Maintain Periods screen, select the period to add from the drop-down list, enter the period end date, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+        </ol>
+        <li>To update an existing <MadCap:variable name="Variables.financial period" /> end date for several <MadCap:variable name="Variables.kco companies" />:</li>
+        <ol>
+          <li>Click the <MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> View tab.</li>
+          <li>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Select.flsnp" /> the <MadCap:variable name="Variables.kco companies" /> for which you want to update the period.</li>
+          <li>Select <span class="userinput">Maintain Periods </span>from the action menu and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/actiongo.svg" class="button" />. </li>
+          <li>On the Maintain Periods screen, select the period to add from the drop-down list and enter the period end date.</li>
+          <li>
+            <MadCap:variable name="Variables.tick" style="text-transform: capitalize;" />
+            <span class="field">Overwrite existing</span>, and click <img src="../../Resources/Images/COINS Graphics/SVG buttons/forward.svg" class="button" />.</li>
+        </ol>
+      </ol>
+    </div>
+    <div class="configuration">
+      <p>You can only see and work with <MadCap:variable name="Variables.kco companies" /> for which you have security access, as defined on your user record.</p>
+      <p>The modules you can amend are set in the GL parameter <span class="parameter">LDGPDS </span>for the <MadCap:variable name="Variables.kco company" />.</p>
+      <p>If the JC parameter <span class="parameter">FDATELOC </span>is set, the JC global valuation dates (that is, cost-<MadCap:variable name="Variables.pr effective date" />s) will be synchron<MadCap:variable name="Variables.is" />ed with the GL <MadCap:variable name="Variables.financial period" /> end dates. You will only be able to update the periods in GL.</p>
+      <p>
+        <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+          <MadCap:relatedTopic src="../Parameters/GL/gl_ldgpds.htm" />
+          <MadCap:relatedTopic src="../Parameters/JC/jc_fdateloc.htm" />
+        </MadCap:relatedTopics>
+      </p>
+    </div>
+  </body>
+</html>

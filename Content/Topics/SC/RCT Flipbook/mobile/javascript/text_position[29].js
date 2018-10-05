@@ -1,0 +1,1 @@
+﻿positionForPages[29]={page:29,positions:[{word:"RCT",left:0.080030,top:0.049536,width:0.036881,height:0.014925},{word:"© Construction Industry Solutions 2013",left:0.076603,top:0.967032,width:0.297360,height:0.011736}]};

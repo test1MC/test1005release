@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+<head>
+<title>PL/ACCNODEF - Account Number Default in Invoice Workbench</title>
+</head>
+<body>
+<div class="param_id">
+<MadCap:concept term="Parameters"/>
+<span class="parameter">PL/ACCNODEF - </span> Account Number Default in Invoice Workbench
+</div>
+<div class="param_def">
+<p>How COINS determines the account number of invoices received electronically: 
+<P></P>
+<P class="yesnolist"><SPAN class="userinput">PO</SPAN> = COINS uses the account number stamped on the purchase order.</P>
+<P class="yesnolist"><SPAN class="userinput">MSG</SPAN> = COINS uses the account number found in the <MadCap:variable name="Variables.pl supplier"/>'s XML message <SPAN class="screentype">&lt;SuppliersCodeForBuyer&gt;</SPAN> tag and does not attempt to override it with any account number found on the purchase order.</P></p>
+<p>This parameter can be overridden on a <MadCap:variable name="Variables.pl supplier"/>-by-<MadCap:variable name="Variables.pl supplier"/> basis by giving the <SPAN class="screentype">&lt;AccountNumberDefault&gt;</SPAN> tag in the eCommerce Configuration HUB record a <MadCap:variable name="Variables.pl supplier"/>-specific value.</p>
+</div>
+</body>
+</html>

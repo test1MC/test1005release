@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-gb">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Methods of Timesheet Entry</h1>
+        <h2>Module: Multiple Modules [11.07]</h2>
+        <p>COINS allows for various types of time to be entered into the accounting system. This is to be considered a complete list, which gives a brief overview on each of the various time entry methods. These are:</p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Payroll</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Employee Self Service (ESS)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Service Timecards</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Crew Daily Reports (CDR/mCDR)</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Job Status Timesheets </li>
+        </ul>
+        <p>&#160;</p>
+        <p>Payroll</p>
+        <p>Payroll allows for time to be entered for employees into the OA system, and then the corresponding costs to be allocated, resulting in a paycheck for the employees and the expenses distributed to the correct GL accounts.</p>
+        <p>&#160;</p>
+        <p>Payroll Timesheets</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="1">
+            <li>Timesheet – by Job</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Job-centric time entry method. Allows user to create, update, and review weekly timesheets by job. Once a New Job Timesheet is added, inside of that job the user can add all employees working that job to have time costed to that job. Column Sets can be created for more efficient timecard entry.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Timecards can be created into regular or future time periods for a specific job, giving an overview by job for a pay period.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="2">
+            <li>Timesheet – by Multiple Employee </li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Allows user to create, update, and review weekly timesheets by employee. When a new employee timesheet is added, users can enter all transactions by individual employee. This displays all timesheets and where they are costed to for every employee. Giving a breakdown of every employee timecard entered (amount of hours) and where they have been allocated to (job/GL/asset). Column Sets can be created for more efficient timecard entry.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="3">
+            <li>Timesheets - Timesheet Input allows you to enter employee timesheet information. This is the typical and recommended way to enter time into the system. </li>
+        </ol>
+        <p class="caption">Figure 1: Payroll Timesheet Entry</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 300px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="4">
+            <li>Manual Check Calculator – This allows for a one-off check to be created outside of a regular payroll period in the system, without going through the regular payroll process. This creates a manual check that can be used to pay employees in the field or to pay for hours missed, etc.</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">A future period is created which is hidden from the main payroll run. This will calculate an employee check and determine gross to net and gross to burden values. In short, the system will run calculations and compute the value to be used for a check. These values can then be supplied to off-site locations, or simply written by hand on a check. It will also account for the check being used, by posting to the GL independently.</li>
+        </ul>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Manual checks are not processed with, and have no bearing on, the main payroll run. This information can be completely deleted after being processed and reviewed. NOTE: this means it will not affect reporting and is not a recommended way to produce checks, although it is a solution to print a check in the system immediately without having to go through the regular payroll process. Documentation for Manual Checks.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="5">
+            <li>Convert future Timesheets</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Pulls future timesheets into a regular or adjusting payroll run. NOTE: For the Convert process to run, the Period End Date of the Future Period must match the Period End Date of the open Regular or Adjusting Period.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="6">
+            <li>Convert from Recurring Timesheets</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">If a recurring timecard has been created previously, this action will copy all recurring timecards, creating regular timecards in the regular open payroll period.</li>
+        </ul>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="7">
+            <li>Load Timesheets (data load file) – This file must be converted to a csv file to be uploaded. Be careful when saving a .csv file that any leading “0”s will not be dropped.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_1.png" style="width: 103px;height: 66px;" />
+        </p>
+        <p>ESS Timesheets (Employee Self Service)</p>
+        <p>Allows employees to enter timecards independently outside of the OA Payroll module. Allows a user to cost the hours worked for each day independently, from any location. Once submitted this time can be reviewed and approved by a supervisor, and then passed on into Payroll. The ESS Portal also allows the user to view a variety of read only fields that display relevant employee information (i.e. Benefits, Contact Info, Holidays, if applicable).</p>
+        <p class="caption">Figure 2: ESS Timecard Entry</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_2.png" style="visibility: visible;mso-wrap-style: square;width: 576px;height: 300px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="8">
+            <li>Inside of Payroll the Transfer Employee Self Service Timesheets function will pull in any submitted and approved ESS timecards. Once the ESS Portal is configured, this action will convert ESS Portal timecards to Payroll timecards. </li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>Service Timecards</p>
+        <p>Allow users (typically technicians/field workers) to enter time in from a mobile device (iPad) outside of the COINS OA, once properly configured in the Service Management module. Allows a user to cost the hours worked for each day independently, from any location. Once submitted, this time can be reviewed and approved by a supervisor, and then passed on into Payroll. Additionally, Service also allows for technician to create billings.</p>
+        <p class="caption">Figure 3: Mobile Service Timecards - Summary</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_3.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 367px;" />
+        </p>
+        <p>&#160;</p>
+        <p class="caption">Figure 4: Mobile Service Timecards – Daily Timesheets</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_4.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 136px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="9">
+            <li>Inside of the OA Payroll module the Transfer SE Visit Details function will pull in any submitted and approved Service timecards. Once the Service Module is configured, this action will convert Service timecards to Payroll timecards.</li>
+        </ol>
+        <p>Crew Daily Reports (CDR/mCDR)</p>
+        <p>Crew Daily Reports allow for a user (typically a foreman) to enter labor time records for a crew of workers for a single day. Miscellaneous payroll transactions (such as reimbursables, per diem pay, etc.) can also be entered through CDRs. This process streamlines labor time to Payroll and reduces double-entry and the risk of inaccuracy.</p>
+        <p>In addition to labor time entry, quantities installed, inventory transactions, and equipment transactions can be inputted via Crew Daily Reports.</p>
+        <p>&#160;</p>
+        <p class="caption">Figure 5: OA Crew Daily Reports – Labor Quick Add</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_5.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 301px;" />
+        </p>
+        <p>&#160;</p>
+        <p class="caption">Figure 6: OA Crew Daily Reports – Add Miscellaneous Payroll</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_6.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 145px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">Crew Daily Reports can also be entered via the mCDR iPad app. This gives foreman the flexibility to enter daily reports in the field, without a computer.</li>
+        </ul>
+        <p class="caption">Figure 7: Mobile Crew Daily Reports (mCDR)</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_7.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 396px;" />
+        </p>
+        <p>&#160;</p>
+        <ol style="list-style-type: decimal;margin-left: 54pt;" start="10">
+            <li>Transfer Daily Reports</li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 72pt;">
+            <li style="list-style-type: disc;">After the Crew Daily Reports (CDR’s) and/or Mobile Crew Daily Reports (mCDR’s) have been submitted and approved, running Transfer Daily Reports in the Payroll module will convert them into unposted timecards in the Payroll module.</li>
+        </ul>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>Job Status Timesheets</p>
+        <p>Allows entry of time for employees and non-employees. Costs can be allocated to jobs in a more timely fashion, which will present a more accurate depiction of a project’s cost. You can record time against jobs for professional or salaried staff weekly, while not affecting the payroll cycle for those employees. This functionality can also be used as a reconciliation tool for subcontracted labor.</p>
+        <p>Job Status Timesheets are designed to allocate time at a standard rate to Jobs or General Ledger accounts, Assets, or Workshops. Time is entered for individuals on a weekly basis, uses a review and approval process, and can be posted without regard to payroll processing. Standard activity based rates can be set up by grade or by employee.</p>
+        <p>A limitation of this functionality is that it does not directly connect to the Payroll module, which means that calculations and deductions are not factored in when processed/posted. Employees cannot be paid directly through Job Status Timesheets.</p>
+        <p>&#160;</p>
+        <p class="caption">Figure 8: Job Status Timesheet Entry</p>
+        <p>
+            <img src="../../Resources/Images/50.0 - INFO - Analysis Sets/Methods of Timesheet Entry_8.png" style="visibility: visible;mso-wrap-style: square;width: 528px;height: 301px;" />
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="648" MadCap:lastWidth="528">
+  <head>
+    <title>Format E (Royal Bank of Scotland)</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Format E (Royal Bank of Scotland)</h1>
+    <p>
+      <span style="PADDING-BOTTOM: 3px;BACKGROUND-COLOR: #003481;PADDING-LEFT: 3px;PADDING-RIGHT: 3px;FLOAT: right;COLOR: white;PADDING-TOP: 3px;">
+        <img src="../../Resources/Images/RBS.gif" />
+      </span>Fields in Royal Bank of Scotland statement files are standard CSV format (comma-separated, quote delimited). The fields are as follows: </p>
+    <ul>
+      <li>ignored field,</li>
+      <li>
+        <MadCap:variable name="Variables.sort code" />,</li>
+      <li>account number,</li>
+      <li>transaction date,</li>
+      <li>transaction type,</li>
+      <li>value,</li>
+      <li>sign (+ or -),</li>
+      <li>description,</li>
+      <li>narrative,</li>
+      <li>ignored field </li>
+    </ul>
+    <p>
+      <span class="function" title="Function:%CB105">Load Bank Statement</span> combines the description and narrative fields into the <span class="module"><MadCap:variable name="Variables.cash book" style="text-transform: capitalize;" /></span> description field, and combines the value and sign fields. If the transaction type is a string of zeros, the transaction is a <MadCap:variable name="Variables.cheque" />; <span class="function" title="Function:%CB105">Load Bank Statement</span> enters the transaction type as CHQ and takes the <MadCap:variable name="Variables.cheque" /> number from the description field. </p>
+  </body>
+</html>

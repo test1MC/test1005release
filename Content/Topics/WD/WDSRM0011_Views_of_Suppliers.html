@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2456" MadCap:lastWidth="896">
+    <head><title>Views of [%=Variables.Pl Supplier caps%]s</title>
+        <style>/*<![CDATA[*/
+table.org
+{
+	border-collapse: collapse;
+}
+table.org td,
+table.org th
+{
+	style: ;
+}
+.nobottom
+{
+	border-bottom: none;
+}
+.silverbottom
+{
+	border-bottom: solid silver 2px;
+}
+.top1
+{
+	border-top: solid red 2px;
+}
+.right1
+{
+	border-right: solid red 2px;
+}
+.bottom1
+{
+	border-bottom: solid red 2px;
+}
+.left1
+{
+	border-left: solid red 2px;
+}
+.top2
+{
+	border-top: solid silver 2px;
+}
+.right2
+{
+	border-right: solid silver 2px;
+}
+.bottom2
+{
+	border-bottom: solid silver 2px;
+}
+.left2
+{
+	border-left: solid silver 2px;
+}
+
+/*]]>*/</style>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Views of <MadCap:variable name="Variables.Pl Supplier caps" />s</h1>
+        <p>&#160;</p>
+        <p>One of the key decisions when implementing SRM is the level at which you want to set the status code.&#160; </p>
+        <p>If your business manages your supply chain centrally, you can assign status codes to a <MadCap:variable name="Variables.pl supplier" /> or subcontractor at a group level. This "Group Status Code" will be displayed in the Company Workbenches and lookups, and will be visible by users in each <MadCap:variable name="Variables.kco company" /> you have set up.</p>
+        <p>You will then also be able to assign a status code to the <MadCap:variable name="Variables.pl supplier" /> or subcontractor that is specific to your <MadCap:variable name="General.ProductName" /> <MadCap:variable name="Variables.kco company" />. This is the "<MadCap:variable name="Variables.kco company" style="text-transform: capitalize;" /> Status Code".</p>
+        <p>For example, the codes could be set at division level, to set the relationship with the <MadCap:variable name="Variables.pl supplier" /> or subcontractor for the entire division:</p>
+        <div style="BACKGROUND-COLOR: #fff8c5;WIDTH: 12cm;">
+            <p align="center"><strong>Division level relationship with "Southern Brick Supplies"</strong>
+            </p>
+            <p align="center">
+                <img src="../../Resources/Images_S-U/SRM/SRM_001102.gif" />
+            </p>
+            <p align="center">The relationship is determined by the division, so all lower levels in the organ<MadCap:variable name="Variables.is" />ation have the same relationship with the <MadCap:variable name="Variables.pl supplier" />.</p>
+        </div>
+        <p />
+        <p>Alternatively, if your supply chain is managed locally, (for example by Region or Office), each region or office would set the status code, to indicate their relationship with the <MadCap:variable name="Variables.pl supplier" /> or subcontractor:</p>
+        <div style="BACKGROUND-COLOR: #fff8c5;WIDTH: 12cm;">
+            <p align="center"><strong>Office level relationship with "Southern Brick Supplies"</strong>
+            </p>
+            <p />
+            <table align="center" style="border-collapse: collapse; font-size: 80%">
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <tbody>
+                    <tr>
+                        <td colspan="3" align="middle">South Region</td>
+                        <td />
+                        <td align="middle">East Region</td>
+                    </tr>
+                    <tr>
+                        <th style="color: #333333" class="left2 top2">Slough</th>
+                        <th style="color: #333333" class="top2">Guildford</th>
+                        <th style="color: #333333" class="top2 right2">Winchester</th>
+                        <th style="color: #333333; BACKGROUND-COLOR: transparent;" />
+                        <th style="color: #333333" class="right2 top2 left2">Ipswich</th>
+                    </tr>
+                    <tr>
+                        <td class="left2 bottom2" align="center">Preferred <br /><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /></td>
+                        <td class="bottom2" align="center">Supply Chain<br />Partner
+                            </td>
+                        <td class="bottom2 right2" align="center">Supply Chain<br />Partner
+                            </td>
+                        <td />
+                        <td class="left2 bottom2 right2" align="center">Approved<br /><MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p align="center">Each office can have a different relationship with the <MadCap:variable name="Variables.pl supplier" />.</p>
+        </div>
+        <p />
+        <p>In this case, if you view the <MadCap:variable name="Variables.pl supplier" /> at a higher level, <MadCap:variable name="General.ProductName" /> applies an "upward cascade" to determine which status code to assign the company to (and therefore which tab to show the company on).&#160; <MadCap:variable name="General.ProductName" /> applies the lowest-ranking status from among the status codes at the level below.</p>
+        <div style="BACKGROUND-COLOR: #fff8c5;WIDTH: 12cm;">
+            <p align="center"><strong>"Upward Cascade"</strong>
+            </p>
+            <p align="center">
+                <img src="../../Resources/Images_S-U/SRM/SRM_001103.gif" />
+            </p>
+            <p align="center">Although the Winchester and Guildford offices view the <MadCap:variable name="Variables.pl supplier" /> as a supply chain partner, because the Slough office only views it as a preferred <MadCap:variable name="Variables.pl supplier" />, that is the view the South Region inherits.&#160; Similarly, because the East Region only views the company as an approved <MadCap:variable name="Variables.pl supplier" />, that is the view the Division inherits.</p>
+        </div>
+        <p />
+        <p>Alternatively, you could choose not to set the status at a particular level.&#160; This would allow you to use separate group and company Status Codes.</p>
+        <div class="process">
+            <h2 class="print">Setting your view level</h2>
+Because all the screens in <span class="module">SRM </span>need to show a consistent view, rather than setting your user view using a selector on the browse, you need to use <span class="function" title="Function:%WCI4000FXXX">Select Level </span> to change your view level; any <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span> screen that relies on view levels then uses this view level until you change it. This only affects your own view in <span class="function" title="Function:%WCI1030SXXX">SRM Workbench</span>: it does not affect other users' views, and does not affect your user view outside <span class="module">SRM</span>.
+</div>
+        <div class="configuration">
+            <h2 class="print">Views of <MadCap:variable name="Variables.pl suppliers" /></h2>
+            <p>Use <span class="function" title="Function:%WSYBSUR2">Maintain User Views</span> to set up user views.</p>
+            <p>Set the SRM parameter <span class="parameter">STATVIEW </span>to the level at which you want to update status codes. When this is set, only users viewing a company at that level can update a status code.</p>
+            <p>For <MadCap:variable name="General.ProductName" /> to be able to cascade the lowest status code to levels above, define your organ<MadCap:variable name="Variables.is" />ational structure using <span class="function" title="Function:%WCI9001BCRG">Organ<MadCap:variable name="Variables.is" />ation Structure</span>.</p>
+            <p>Set up the status codes using <span class="function" title="Function:%WCI2130BCCA">Status Codes (Group Wide)</span>. The "lowest" status codes are any inactive ones, followed by active ones, then followed by the status codes dictated by the parameters <span class="parameter">SCD-REG</span>, <span class="parameter">SCD-APP</span>, <span class="parameter">SCD-PRF </span>and finally <span class="parameter">SCD-SCP</span>, which is the highest.</p>
+            <p>
+                <MadCap:relatedTopics style="mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="WDCI5002_User_View_Set_Up.html" />
+                </MadCap:relatedTopics>
+            </p>
+            <p>
+                <MadCap:relatedTopics target="_popup" style="mc-label: Parameters;mc-help-control-display: list;">
+                    <MadCap:relatedTopic src="../Parameters/SRM/srm_STATVIEW.htm" />
+                </MadCap:relatedTopics>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1591" MadCap:lastWidth="1077">
+    <head><title>Faxing <MadCap:variable name="Variables.Purchase Ledger caps" /> Remittances in COINSplus</title>
+    </head>
+    <body>
+        <MadCap:concept term="Topics" />
+        <h1 class="print">Faxing <MadCap:variable name="Variables.Purchase Ledger caps" /> Remittances in COINSplus</h1>
+        <p>
+            <MadCap:snippetBlock src="../../Resources/Snippets/c+TOPIC.flsnp" />
+        </p>
+        <p><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /> remittances can be automatically faxed or printed according to default print method of the <MadCap:variable name="Variables.pl supplier" />.</p>
+        <p>When running <span class="function" title="Function:%PL199-C">Print Remittances</span> function for any <MadCap:variable name="Variables.pl supplier" /> whose preferred/default print method is FAX, you will see the screen below at run-time:&#160;&#160;</p>
+        <p>
+            <img src="../../Resources/Images/SY/SY_008701.png" />
+        </p>
+        <div class="configuration">
+            <h2 class="print">Configuration</h2>
+            <p>In addition to any overlay or attachment configuration, the option to send PL Remittances via Fax is enabled by using a fourth function parameter against the Print <MadCap:variable name="Variables.cheque" style="text-transform: capitalize;" />/Remittance option in <span class="module"><MadCap:variable name="Variables.purchase ledger" style="text-transform: capitalize;" /></span> (pl199.p).</p>
+            <p>The function parameters should be defined as follows :</p>
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Print Form Name:</td>
+                        <td>REM (Mandatory) 
+<p class="noteheader">NOTE</p><div class="note">The faxing option can only be used against a configurable form which has a parameter of REM (that is, it will not work for either CHQ or COMB).</div></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Payment Type (Optional):</td>
+                        <td>'B' (<MadCap:variable name="Variables.eft" /> payments only - Optional)<br />'C' (<MadCap:variable name="Variables.cheques" style="text-transform: capitalize;" /> only - Optional)<br />blank to make all payments"</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Billing Type (Optional):</td>
+                        <td>ASI or * or BLANK (Optional)</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Auto Fax (Optional):</td>
+                        <td>'Y' to only filter Accounts with Fax Numbers"<br />'N' to only filter Accounts without Fax numbers"</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Reprint (Optional):</td>
+                        <td>'RPR' to reprint posted payments or BLANK</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Today's Password (Optional) </td>
+                        <td />
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Default Print (Optional):</td>
+                        <td>DEFPRN or BLANK (references Print Method field on <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" /> and Subcontractor records)</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Fax Options (Optional):</td>
+                        <td>
+                            <p>'Y' override default fax options for each <MadCap:variable name="Variables.pl supplier" style="text-transform: capitalize;" />, <br />'N' Keep default fax options</p>
+                            <p>Parameter 8 when set to Y allows you to override the default fax options as below when the print program is run. Leaving the 8th parameter blank or set to N means that all faxing will be automatic.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>FAX Delay: </td>
+                        <td>
+                            <p>Default number of hours to delay fax</p>
+                            <p>Parameter 9 allows you to enter a default number of hours delay up to 24 hours.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <br />If the 8th parameter is not set but the 9th has a non-zero value, then the delay will work in automatic mode.</p>
+        </div>
+    </body>
+</html>

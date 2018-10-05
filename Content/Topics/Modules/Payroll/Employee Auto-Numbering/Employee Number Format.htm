@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="751" MadCap:lastWidth="600">
+    <head>
+        <link href="../../../../Resources/TableStyles/COINSBasicIndented.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1 MadCap:autonum="1">
+            <MadCap:concept term="Topics" />Employee Auto-Number Format Details</h1>
+        <p class="Body">The following characters can be used in the <span class="parameter">EMPCODEF</span> parameters in Payroll and HR: </p>
+        <table style="width: 100%;mc-table-style: url('../../../../Resources/TableStyles/COINSBasicIndented.css');" class="TableStyle-COINSBasicIndented" cellspacing="0">
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <col class="TableStyle-COINSBasicIndented-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">9</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A digit (if auto-numbering, the first number which results in a unique code will be used - see below).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+I</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A digit (if auto-numbering, the next available number will be used).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">Z</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A digit which will be blank for a leading zero (if the string of ‘Z’s is followed by an ‘I’ then it will be an ‘I’ type number, otherwise it will be a ‘9’ type number).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+X</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Any character (if auto-numbering this will be taken as a literal ’X’ as it is really to cater for manual input which does not fit a definable rule).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">A</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">Any letter (if auto-numbering this will be taken as a literal ‘A’ as it is really to cater for manual input which does not fit a definable rule).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">F</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A character from the first name (initial characters used).
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">M</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A character from the middle name (initial characters used).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+L</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A character from the last name (initial characters used).
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">
+N</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A character from the NI/social security/national ID number (final characters used).
+</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyE-Column1-Body1">D</td>
+                    <td class="TableStyle-COINSBasicIndented-BodyD-Column1-Body1">A character from the department code (initial characters used).</td>
+                </tr>
+                <tr class="TableStyle-COINSBasicIndented-Body-Body1">
+                    <td class="TableStyle-COINSBasicIndented-BodyB-Column1-Body1">
+P </td>
+                    <td class="TableStyle-COINSBasicIndented-BodyA-Column1-Body1">A character from the pay frequency description (initial characters used).</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Body">For options X, A, F, M, L, N, D or P, any lower case letters will be converted to upper case. However if the lower case equivalents (x, a, f, m, l, n, d or p) are used in the format then both lower and upper case letters are allowed.
+
+</p>
+        <p class="Body">Any other character will be a literal. To specify the literal text for one of the special characters above an escape code character ‘~’ can be used before it. When using characters from other fields, any characters not allowed in key fields according to normal <MadCap:variable name="General.ProductName" /> logic will be skipped.
+
+</p>
+        <p class="Body">To demonstrate the difference between ‘9’ and ‘I’ consider the formats ‘LLL999’ and ‘LLLIII’. If you first add an employee John Smith both of these will give the same result: SMI001. But if you then add Sarah Jones ‘LLL999’ will give JON001 whilst ‘LLLIII’ will give JON002.</p>
+        <p class="Body">Common examples:
+
+</p>
+        <ol style="list-style-type: lower-roman;">
+            <li>‘999999’ – a 6 digit number including leading zeros (for example 000150).<![CDATA[
+]]></li>
+            <li> ‘ZZZZZ9’ – a 6 digit number without leading zeros (for example 150).</li>
+            <li> ‘LLL999’ – the first 3 characters of the last name followed by 3 digits to make it unique (for example SMI001).
+</li>
+        </ol>
+    </body>
+</html>

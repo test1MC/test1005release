@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html lang="en" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+  <head>
+    <title>Conditional Messages</title>
+  </head>
+  <body>
+    <MadCap:concept term="Topics" />
+    <h1 class="print">Conditional Messages</h1>
+    <p>
+      <MadCap:variable name="General.ProductName" /> allows you to configure a set of conditional messages relevant to <MadCap:variable name="Variables.pl suppliers" /> of subcontract <MadCap:variable name="Variables.labour" />. You can print these messages in the header and/or footer of <MadCap:variable name="Variables.cheques" /> and/or remittances if the relevant condition is met. For example, you can print a warning if a subcontractor's insurance is due to expire or has expired.</p>
+    <div class="process">
+      <h2 class="print">To use conditional messages:</h2>
+      <ol>
+        <li>Enter the field names <span class="screentype">RO_sbm_letterCondMsg__1 </span>to <span class="screentype">RO_sbm_letterCondMsg__10</span>. If you use several different <span class="screentype">RO_sbm_letterCondMsg</span> fields on different lines, the message will print on the line for which it is defined.</li>
+        <li>To print the conditional messages on consecutive lines, enter the condition numbers of all the messages you want to print on each line. For example, if you wanted to print any of messages 1,2,5 and 6, you would enter four lines, each with the field <span class="screentype">RO_sbm_letterCondMsg^1256</span>. Then if only conditions 1 and 6 apply, <MadCap:variable name="General.ProductName" /> automatically selects those messages and prints them on the first two lines.</li>
+      </ol>
+      <p>For details of these and other conditional messages used in <MadCap:variable name="General.ProductName" />, refer to the <a href="WDSC1466_Conditional_Messages.html"><MadCap:variable name="General.ProductName" /> Subcontractors Ledger Guide</a>. </p>
+    </div>
+    <div class="configuration">
+      <h2 class="print">Conditional messages</h2>
+Currently you can only set up PL <MadCap:variable name="Variables.cheque" /> and remittance messages in <MadCap:snippetBlock src="../../Resources/Snippets/coinsplus.flsnp" />, using <span class="function" title="Function:%SC222-F">Cheque/Remittance Messages</span>; however you can use them on <MadCap:snippetBlock src="../../Resources/Snippets/coinsoa.flsnp" /> configurable <MadCap:variable name="Variables.cheque" />/remittance documents.
+</div>
+  </body>
+</html>

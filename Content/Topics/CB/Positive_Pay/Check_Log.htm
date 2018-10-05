@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="COINS.v1109">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" /><MadCap:variable name="Variables.Cheque caps" /> Log</h1>
+        <p>If the CB&#160;parameter <span class="parameter">USEPOSPY</span> = Y, a new <MadCap:variable name="Variables.cheque" /> log table is populated with details of  payments from bank accounts that have the <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">new </MadCap:conditionalText><span class="field">Export <MadCap:variable name="Variables.Cheques caps" /></span> box <MadCap:variable name="Variables.tick" />ed (see <MadCap:xref href="Bank_Accounts.htm">Positive Pay – Bank Accounts</MadCap:xref>). This is used by the Positive Pay process and reports.</p>
+        <p>Payments are added to the <MadCap:variable name="Variables.cheque" /> log as follows:</p>
+        <ul>
+            <li>When payment batches in <span class="module"><MadCap:variable name="Variables.Purchase Ledger caps" /></span> and <span class="module">Subcontract Ledger</span> are posted. </li>
+            <li>When <span class="module"><MadCap:variable name="Variables.Cash Book caps" /></span> payment batches are posted (only <span class="module"><MadCap:variable name="Variables.Purchase Ledger caps" /></span> and <span class="module">Subcontract Ledger</span> payments are added).</li>
+            <li>When <span class="module">Payroll</span> <MadCap:variable name="Variables.cheques" /> are posted in the <span class="module">Payroll</span> module. </li>
+            <li>Depending on the setting of the <span class="field">Export Unposted Payroll</span> field on the bank account record, a <MadCap:variable name="Variables.cheque" /> log record can be created when a <span class="module">Payroll</span> <MadCap:variable name="Variables.cheque" /> is calculated or printed in the <span class="module">Payroll</span> module.</li>
+        </ul>
+        <p>The log also includes details of exceptions, such as duplicate <MadCap:variable name="Variables.cheque" /> numbers, negative <MadCap:variable name="Variables.cheques" />, or <MadCap:variable name="Variables.cheques" /> that have been reported previously with different information.</p>
+        <p MadCap:conditions="COINS.Redacted"><MadCap:variable name="Variables.Cheque caps" /> posting and printing routines have been modified to update the log.</p>
+    </body>
+</html>

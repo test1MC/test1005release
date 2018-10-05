@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Topics" />Installing Certificates for <MadCap:variable name="General.ProductName" /></h1>
+        <p>Once all required Certificate Authorities certificates have been transferred to the <MadCap:variable name="General.ProductName" /> server, you must make them available to <MadCap:variable name="General.ProductName" /> so that <MadCap:variable name="General.ProductName" /> is able to trust the Secure Sockets Layer connection to the Corporate Directory servers.
+</p>
+        <p>Perform the following steps using the <MadCap:variable name="General.ProductName" /> administration account on your <MadCap:variable name="General.ProductName" /> server. You must be logged into the <MadCap:variable name="General.ProductName" /> server using the server’s root account.
+</p>
+        <ol>
+            <li>Log into the <MadCap:variable name="General.ProductName" /> server using the administrative account login details.
+</li>
+            <li>Create a directory to store the approved set of Certificate Authority certificates. <MadCap:variable name="General.ProductName" /> recommends the creation of: /usr/local/etc/coins/certs
+<p><img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0033.png" class="FullWidth" /></p></li>
+            <li>Move the certificate files into the <MadCap:variable name="General.ProductName" /> certificate repository and enter the certificate repository.<p><img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0034.png" class="FullWidth" /></p></li>
+            <li>If you have extracted the certificate files from a Microsoft Active Directory server, then you will need to convert the certificates from DER encoding to PEM encoding. If the certificate files are already PEM encoded, then you can skip to step 5, otherwise convert each certificate by:<p><img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0035.png" class="FullWidth" /></p><p>Replace &lt;certfile&gt; with the name of the certificate file (without the .cer extension) and repeat this process for each of the loaded certificate files.</p></li>
+            <li>Now you have PEM encoded certificate files. For <MadCap:variable name="General.ProductName" /> to be able to successfully match the directory server’s certificate to a certificate file in the repository, each certificate must be referenced by its unique hash key. This requires the determination of the correct hash key for each certificate file and the creation of a symbolic link to that hash key.<p><img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0036.png" class="FullWidth" /></p><p class="note">The symbolic link file should be named as the output hash value (from the first command) with a .0 file extension. Repeat this process for each of the PEM encoded certificate files in the <MadCap:variable name="General.ProductName" /> certificate repository.</p></li>
+            <li>The file permissions on the certificate files need to be altered to allow the coins account to access them.<p><img src="../../../Resources/Images/SY/Configuring LDAP/SY-LDAP-0037.png" class="FullWidth" /></p><p>Once all certificates have been installed, converted and renamed ready for use by <MadCap:variable name="General.ProductName" />, we recommend that you test the certificates to ensure that the secure sockets layer can be initiated between <MadCap:variable name="General.ProductName" /> and the LDAP directory servers.</p></li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[COINS.USOnly]" MadCap:snippetVariables="Variables.Document Title:Job Specific Cost Types,">
+    <head><title>[%=Variables.Se Service Order caps%] Detail Lines</title>
+    </head>
+    <body>
+        <h1><MadCap:variable name="Variables.Se Service Order caps" /> Detail Lines</h1>
+        <p class="Body">You can access the <span class="Field">Ready for Invoicing </span>flag (<MadCap:xref href="#SODetailLines" class="ImageRef"><i>Figure 1:  [%=Variables.Se Service Order caps%] Detail Lines</i></MadCap:xref>) in both Add and Update mode on <MadCap:variable name="Variables.Se Service Order caps" /> Detail Lines (unless the <span class="Field">Billing Method </span>is <strong>NB-Nonbillable</strong>). This flag can be manually <MadCap:variable name="Variables.tick" />ed (set to <strong>Y</strong>), even when the <span class="Field">Subtotal Amount </span>is $0.</p>
+        <MadCap:dropDown class="screenshot"><MadCap:dropDownHead><MadCap:dropDownHotspot MadCap:autonum="Screenshot: "><a name="SODetailLines"></a><MadCap:variable name="Variables.Se Service Order caps" /> Detail Lines</MadCap:dropDownHotspot></MadCap:dropDownHead><MadCap:dropDownBody><p class="Body" style="text-align: center;">
+            <img src="../../../Resources/Images_S-U/SE/SE041_Images/SODetLines.png" class="FullWidth" />
+        </p></MadCap:dropDownBody></MadCap:dropDown>
+        <div class="notelabel" MadCap:conditions="COINS.PrintOnly">NOTE:</div>
+        <div class="note">When saving a record for a Detail Line referencing the <strong>NB-Nonbillable Billing Method</strong>, the process behaves as previously by setting the <span class="Field">Ready for Invoicing </span>flag to un<MadCap:variable name="Variables.tick" />ed and not displaying it on the screen.</div>
+        <p class="Body">The process <MadCap:conditionalText MadCap:conditions="COINS.PrintOnly">now </MadCap:conditionalText>does the following:</p>
+        <ul>
+            <li>If you add a <MadCap:variable name="Variables.Se Service Order caps" /> Detall Line and have a non-zero Subtotal Amount, the <span class="Field">Ready for Invoicing </span><MadCap:variable name="Variables.tick" />box is <MadCap:variable name="Variables.tick" />ed.</li>
+            <li>If you add a <MadCap:variable name="Variables.Se Service Order caps" /> Detail Line and have a zero Subtotal Amount, the <span class="Field">Ready for Invoicing </span><MadCap:variable name="Variables.tick" />box may be <MadCap:variable name="Variables.tick" />ed.</li>
+            <li>If you update a <MadCap:variable name="Variables.Se Service Order caps" /> Detail Line that has a zero Subtotal Amount by changing the <span class="Field">Billing Method</span> to <strong>NB-Nonbillable</strong>, the <span class="Field">Ready for Invoicing </span><MadCap:variable name="Variables.tick" />box is reset to un<MadCap:variable name="Variables.tick" />ed and does not appear on the screen when saved.</li>
+        </ul>
+    </body>
+</html>
